@@ -1,0 +1,354 @@
+========================================================================
+PART 1: Mirror-pair Translation Group T = ⟨O, M, I⟩
+========================================================================
+
+|T| = 8
+T is abelian: True
+Element orders: [1, 2, 2, 2, 2, 2, 2, 2]
+All order ≤ 2: True
+T ≅ Z₂³: True
+
+The 7 nonzero XOR masks in T:
+  O        = 100001 = 33
+  M        = 010010 = 18
+  I        = 001100 = 12
+  O⊕M      = 110011 = 51
+  O⊕I      = 101101 = 45
+  M⊕I      = 011110 = 30
+  O⊕M⊕I    = 111111 = 63
+
+O⊕M⊕I = 63 = σ₁ (complement)? ✓
+
+Orbits of T on {0,...,63}: 8 orbits
+Orbit sizes: [8, 8, 8, 8, 8, 8, 8, 8]
+All size 8 (T acts freely): True
+
+T as subgroup of Z₂⁶: [0, 12, 18, 30, 33, 45, 51, 63]
+  = {0, O, M, I, OM, OI, MI, OMI} = {0, 33, 18, 12, 51, 45, 30, 63}
+
+The 8 T-orbits (cosets of T in Z₂⁶):
+  Orbit 0: rep=0(000000): 0(000000), 12(001100), 18(010010), 30(011110), 33(100001), 45(101101), 51(110011), 63(111111)
+  Orbit 1: rep=1(000001): 1(000001), 13(001101), 19(010011), 31(011111), 32(100000), 44(101100), 50(110010), 62(111110)
+  Orbit 2: rep=2(000010): 2(000010), 14(001110), 16(010000), 28(011100), 35(100011), 47(101111), 49(110001), 61(111101)
+  Orbit 3: rep=3(000011): 3(000011), 15(001111), 17(010001), 29(011101), 34(100010), 46(101110), 48(110000), 60(111100)
+  Orbit 4: rep=4(000100): 4(000100), 8(001000), 22(010110), 26(011010), 37(100101), 41(101001), 55(110111), 59(111011)
+  Orbit 5: rep=5(000101): 5(000101), 9(001001), 23(010111), 27(011011), 36(100100), 40(101000), 54(110110), 58(111010)
+  Orbit 6: rep=6(000110): 6(000110), 10(001010), 20(010100), 24(011000), 39(100111), 43(101011), 53(110101), 57(111001)
+  Orbit 7: rep=7(000111): 7(000111), 11(001011), 21(010101), 25(011001), 38(100110), 42(101010), 52(110100), 56(111000)
+
+Orbit-trigram identification:
+  Each orbit is a coset h + T in Z₂⁶.
+  The coset is determined by the 'residual' bits not affected by T.
+  T acts on mirror pairs: {L1,L6}, {L2,L5}, {L3,L4}.
+  Within each pair, T can flip both bits simultaneously.
+  The residual = the XOR within each pair: L1⊕L6, L2⊕L5, L3⊕L4.
+
+  Orbit residuals:
+    Orbit 0: residual = 000 (0)
+    Orbit 1: residual = 100 (4)
+    Orbit 2: residual = 010 (2)
+    Orbit 3: residual = 110 (6)
+    Orbit 4: residual = 001 (1)
+    Orbit 5: residual = 101 (5)
+    Orbit 6: residual = 011 (3)
+    Orbit 7: residual = 111 (7)
+
+  The residual (L1⊕L6, L2⊕L5, L3⊕L4) encodes whether each mirror
+  pair is 'same' (0) or 'different' (1). This is exactly the signature
+  of the hexagram under the OMI decomposition.
+  Palindromes have residual 000 (all pairs same).
+  Anti-palindromes have residual 111 (all pairs different).
+
+  Do orbits correspond to upper trigram?
+    Orbit 0: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 1: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 2: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 3: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 4: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 5: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 6: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+    Orbit 7: upper trigrams = [0, 1, 2, 3, 4, 5, 6, 7], lower trigrams = [0, 1, 2, 3, 4, 5, 6, 7]
+
+  Neither upper nor lower trigram is constant within a T-orbit.
+  This is expected: O flips both L1 and L6, crossing the
+  upper/lower boundary. T acts on mirror pairs, not on trigrams.
+
+========================================================================
+PART 2: G_ext = ⟨O, M, I, σ₂⟩
+========================================================================
+
+Commutation check (σ₂ with mask generators):
+  σ₂∘O∘σ₂ = O ✓ (commutes)
+  σ₂∘M∘σ₂ = M ✓ (commutes)
+  σ₂∘I∘σ₂ = I ✓ (commutes)
+
+|G_ext| = 16
+G_ext is abelian: True
+G_ext is solvable: True
+
+Expected |T × ⟨σ₂⟩| = |T| × |⟨σ₂⟩| = 8 × 2 = 16
+Actual |G_ext| = 16
+G_ext = T × ⟨σ₂⟩ ≅ Z₂⁴: True
+
+Orbits of G_ext on {0,...,63}: 8 orbits
+Orbit sizes: [8, 8, 8, 8, 8, 8, 8, 8]
+
+Does σ₂ map each T-orbit to itself?
+  Orbit 0 → Orbit 0 ✓
+  Orbit 1 → Orbit 1 ✓
+  Orbit 2 → Orbit 2 ✓
+  Orbit 3 → Orbit 3 ✓
+  Orbit 4 → Orbit 4 ✓
+  Orbit 5 → Orbit 5 ✓
+  Orbit 6 → Orbit 6 ✓
+  Orbit 7 → Orbit 7 ✓
+σ₂ preserves all T-orbits: True
+
+========================================================================
+PART 3: Action on 8 T-orbits (quotient)
+========================================================================
+
+σ₂ acts trivially on T-orbits (fixes each orbit).
+T acts regularly on itself (transitive on each orbit).
+The quotient action of G_ext on the 8 orbits is trivial.
+This is the key structural difference from n=3:
+  At n=3, the additional involutions acted NONTRIVIALLY on blocks.
+  At n=6, σ₂ acts trivially because reversal commutes with all
+  mirror-pair masks. We need a different generator.
+
+========================================================================
+PART 4: Trigram Swap σ₄
+========================================================================
+
+σ₄: swap upper (L1,L2,L3) ↔ lower (L4,L5,L6)
+σ₄ order: 2
+Fixed points: 8
+  (hexagrams where upper = lower trigram)
+  0(000000): upper=Kun, lower=Kun
+  9(001001): upper=Gen, lower=Gen
+  18(010010): upper=Kan, lower=Kan
+  27(011011): upper=Xun, lower=Xun
+  36(100100): upper=Zhen, lower=Zhen
+  45(101101): upper=Li, lower=Li
+  54(110110): upper=Dui, lower=Dui
+  63(111111): upper=Qian, lower=Qian
+Cycle structure: {1: 8, 2: 28}
+
+Conjugation: σ₄ on T generators:
+  σ₄∘O∘σ₄ = I
+  σ₄∘M∘σ₄ = M
+  σ₄∘I∘σ₄ = O
+
+  σ₄ acts on {O,M,I} as: O ↔ I, M ↔ M
+  This is the transposition (O I) fixing M.
+  σ₄ normalizes T but permutes its generators.
+
+σ₄ commutes with σ₂: True
+σ₄∘σ₂ == σ₂∘σ₄: True
+ord(σ₄∘σ₂) = 2
+
+σ₄ action on T-orbits:
+  Orbit 0 (res=000) → Orbit 0 (res=000)
+  Orbit 1 (res=100) → Orbit 4 (res=001)
+  Orbit 2 (res=010) → Orbit 2 (res=010)
+  Orbit 3 (res=110) → Orbit 6 (res=011)
+  Orbit 4 (res=001) → Orbit 1 (res=100)
+  Orbit 5 (res=101) → Orbit 5 (res=101)
+  Orbit 6 (res=011) → Orbit 3 (res=110)
+  Orbit 7 (res=111) → Orbit 7 (res=111)
+
+σ₄ orbit permutation: [0, 4, 2, 6, 1, 5, 3, 7]
+Order on orbits: 2
+Cyclic form on orbits: [[1, 4], [3, 6]]
+
+========================================================================
+PART 5: G_full = ⟨O, M, I, σ₂, σ₄⟩
+========================================================================
+
+|G_full| = 32
+G_full is abelian: False
+G_full is solvable: True
+G_full is nilpotent: True
+
+Orbits on {0,...,63}: 6 orbits
+Orbit sizes: [8, 8, 8, 8, 16, 16]
+  Orbit 0 (size 8): [0, 12, 18, 30, 33, 45, 51, 63]
+  Orbit 1 (size 16): [1, 4, 8, 13, 19, 22, 26, 31]...
+  Orbit 2 (size 8): [2, 14, 16, 28, 35, 47, 49, 61]
+  Orbit 3 (size 16): [3, 6, 10, 15, 17, 20, 24, 29]...
+  Orbit 4 (size 8): [5, 9, 23, 27, 36, 40, 54, 58]
+  Orbit 5 (size 8): [7, 11, 21, 25, 38, 42, 52, 56]
+
+|Z(G_full)| = 8
+|[G_full, G_full]| = 2
+|G_full/[G_full,G_full]| = 16
+
+Group identification (order 32):
+  Element order distribution: {1: 1, 2: 23, 4: 8}
+
+Quotient action of G_full on the 8 T-orbits:
+  σ₂ on orbits: [0, 1, 2, 3, 4, 5, 6, 7] (trivial: True)
+  σ₄ on orbits: [0, 4, 2, 6, 1, 5, 3, 7]
+
+  Quotient group on orbits:
+  |G_quotient| = 2
+  G_quotient is abelian: True
+
+========================================================================
+PART 6: Mirror-pair Partition Group G_384
+========================================================================
+
+The 384-element group from the opposition theory is (Z₂ ≀ S₃) × Z₂³,
+the stabilizer of the mirror-pair partition in B₆ (hyperoctahedral group).
+
+Its generators in B₆ (signed permutations of 6 coordinates):
+  - Z₂³ = pair-value flips: O, M, I (XOR masks)
+  - Z₂³ = within-pair position swaps: swap L1↔L6, swap L2↔L5, swap L3↔L4
+  - S₃ = permutations of the 3 mirror pairs AS UNITS
+
+The within-pair swaps and XOR masks all commute (both act independently
+on each mirror pair). These give Z₂⁶ (order 64). The S₃ factor permutes
+the 3 pairs, giving the wreath product structure.
+
+S₃ generators on mirror pairs:
+  swap_OM (O↔M, I fixed) order: 2
+  cycle_OMI (O→M→I→O) order: 3
+
+  σ₄ == pair_swap O↔I? False
+
+Conjugation by swap_OM:
+  swap_OM ∘ O ∘ swap_OM = M
+  swap_OM ∘ M ∘ swap_OM = O
+  swap_OM ∘ I ∘ swap_OM = I
+
+Conjugation by cycle_OMI:
+  cycle_OMI ∘ O ∘ cycle_OMI⁻¹ = M
+  cycle_OMI ∘ M ∘ cycle_OMI⁻¹ = I
+  cycle_OMI ∘ I ∘ cycle_OMI⁻¹ = O
+
+Building G_384 = ⟨O, M, I, swap_L1L6, swap_L2L5, swap_L3L4, swap_OM, cycle_OMI⟩
+|G_384| = 384
+Expected 384: True
+G_384 is abelian: False
+G_384 is solvable: True
+
+|⟨O, M, I, swap_OM, cycle_OMI⟩| (T ⋊ S₃, no pos swaps) = 48
+Expected Z₂³ ⋊ S₃ = Z₂ ≀ S₃ = 48: True
+|⟨swaps, S₃_pairs⟩| (position ops only) = 48
+
+σ₂ ∈ G_384? True
+σ₄ ∈ G_384? True
+
+|Z(G_384)| = 4
+|[G_384, G_384]| = 48
+|G_384/[G_384,G_384]| = 8
+
+Action of S₃ pair-permutations on T-orbits:
+  swap_OM on orbits: [0, 2, 1, 3, 4, 6, 5, 7]
+  cycle_OMI on orbits: [0, 2, 4, 6, 1, 3, 5, 7]
+  swap_L1L6 on orbits: [0, 1, 2, 3, 4, 5, 6, 7]
+
+  Residual-level interpretation:
+    Orbit 0: residual 000
+    Orbit 1: residual 100
+    Orbit 2: residual 010
+    Orbit 3: residual 110
+    Orbit 4: residual 001
+    Orbit 5: residual 101
+    Orbit 6: residual 011
+    Orbit 7: residual 111
+
+  Quotient group (G_384 on 8 T-orbits):
+  |G_quotient| = 6
+  Is it S₃? True
+
+========================================================================
+PART 7: Macro-orbits under G_384 (expected: 4 orbits)
+========================================================================
+
+Orbits of G_384: 4
+Orbit sizes: [8, 8, 24, 24]
+
+  Macro-orbit 0 (size 8):
+    Elements: [0, 12, 18, 30, 33, 45, 51, 63]
+    Binary: 000000, 001100, 010010, 011110, 100001, 101101, 110011, 111111
+    Yang count range: [0, 2, 4, 6]
+    Palindromes: 8, Anti-palindromes: 0
+    Residuals: ['000']
+
+  Macro-orbit 1 (size 8):
+    Elements: [7, 11, 21, 25, 38, 42, 52, 56]
+    Binary: 000111, 001011, 010101, 011001, 100110, 101010, 110100, 111000
+    Yang count range: [3]
+    Palindromes: 0, Anti-palindromes: 8
+    Residuals: ['111']
+
+  Macro-orbit 2 (size 24):
+    Elements: [1, 2, 4, 8, 13, 14, 16, 19, 22, 26, 28, 31, 32, 35, 37, 41, 44, 47, 49, 50, 55, 59, 61, 62]
+    Binary: 000001, 000010, 000100, 001000, 001101, 001110, 010000, 010011, 010110, 011010, 011100, 011111, 100000, 100011, 100101, 101001, 101100, 101111, 110001, 110010, 110111, 111011, 111101, 111110
+    Yang count range: [1, 3, 5]
+    Palindromes: 0, Anti-palindromes: 0
+    Residuals: ['001', '010', '100']
+
+  Macro-orbit 3 (size 24):
+    Elements: [3, 5, 6, 9, 10, 15, 17, 20, 23, 24, 27, 29, 34, 36, 39, 40, 43, 46, 48, 53, 54, 57, 58, 60]
+    Binary: 000011, 000101, 000110, 001001, 001010, 001111, 010001, 010100, 010111, 011000, 011011, 011101, 100010, 100100, 100111, 101000, 101011, 101110, 110000, 110101, 110110, 111001, 111010, 111100
+    Yang count range: [2, 4]
+    Palindromes: 0, Anti-palindromes: 0
+    Residuals: ['011', '101', '110']
+
+T-orbit → macro-orbit mapping:
+  T-orbit 0 (res=000) → macro-orbit 0 (size 8)
+  T-orbit 1 (res=100) → macro-orbit 2 (size 24)
+  T-orbit 2 (res=010) → macro-orbit 2 (size 24)
+  T-orbit 3 (res=110) → macro-orbit 3 (size 24)
+  T-orbit 4 (res=001) → macro-orbit 2 (size 24)
+  T-orbit 5 (res=101) → macro-orbit 3 (size 24)
+  T-orbit 6 (res=011) → macro-orbit 3 (size 24)
+  T-orbit 7 (res=111) → macro-orbit 1 (size 8)
+
+========================================================================
+PART 8: Summary & Cross-Scale Comparison
+========================================================================
+
+=== Group hierarchy at n=6 ===
+
+  T = ⟨O, M, I⟩ ≅ Z₂³           |T| = 8
+    Acts by XOR on mirror pairs
+    8 orbits of size 8 (free action)
+    Orbits indexed by residual (L1⊕L6, L2⊕L5, L3⊕L4) ∈ Z₂³
+
+  G_ext = ⟨T, σ₂⟩ ≅ Z₂⁴          |G_ext| = 16
+    σ₂ commutes with T (direct product)
+    σ₂ fixes all T-orbits → trivial quotient action
+
+  G_full = ⟨T, σ₂, σ₄⟩            |G_full| = 32
+    σ₄ normalizes T, permuting O↔I
+    σ₄ acts nontrivially on T-orbits
+
+  G_384 = full mirror-pair group    |G_384| = 384
+    = (Z₂ ≀ S₃) × Z₂³
+    Adds S₃ pair-permutations + within-pair swaps
+    4 macro-orbits (sizes [8, 8, 24, 24])
+
+=== Structural parallel with n=3 ===
+
+  n=3: Z₂³ acting on itself (8 trigrams) = regular representation
+    - 1 orbit (the whole set)
+    - The 3 masks ι₁, ι₂, ι₃ ARE the generators of Z₂³
+    - Block system: 4 blocks of 2 → S₄ action
+    - S₄ came from the CHOICE of masks + additional structure
+
+  n=6: Z₂³ (via mirror-pair masks) acting on Z₂⁶
+    - T = ⟨O,M,I⟩ ≅ Z₂³ as a SUBGROUP of Z₂⁶ (index 8)
+    - 8 orbits of size 8 (cosets Z₂⁶/T)
+    - The 8 cosets ARE a copy of Z₂³ (indexed by residual)
+    - The residual (L1⊕L6, L2⊕L5, L3⊕L4) is the trigram-level signature
+    - S₃ pair permutations act on residuals, merging T-orbits into macro-orbits
+
+  Bridge: The quotient Z₂⁶/⟨O,M,I⟩ ≅ Z₂³ IS the trigram-signature space.
+    Each hexagram maps to a 3-bit "signature" = its mirror-pair residual.
+    The mirror-pair translation group erases the distinction between
+    hexagrams that differ only in mirror-pair values.
+    The S₃ pair permutations then act on this Z₂³ quotient.
+

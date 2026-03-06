@@ -1,0 +1,233 @@
+========================================================================
+  n=3: TRIGRAMS (8 elements)
+========================================================================
+
+--- Section 1: Basic Involutions ---
+
+  σ₁ (complement): fixed=0, pairs=4, fixed+2×pairs=8
+  σ₂ (reversal): fixed=4, pairs=2, fixed+2×pairs=8
+    Fixed points: ['000', '010', '101', '111']
+  σ₃ (comp∘rev): fixed=0, pairs=4, fixed+2×pairs=8
+
+  σ₁∘σ₂ == σ₂∘σ₁ (commute): True
+  G₀ = ⟨σ₁, σ₂⟩: order 4, abelian=True
+
+  Pair overlaps:
+    |pairs(σ₁) ∩ pairs(σ₂)| = 0
+    |pairs(σ₁) ∩ pairs(σ₃)| = 2
+    |pairs(σ₂) ∩ pairs(σ₃)| = 0
+
+--- Section 2: Mirror-pair Translation Group T ---
+
+  At n=3, the state space IS Z₂³. The translation group T = Z₂³
+  acts on itself as the regular representation.
+  |T| = 8, orbits = 1 (the whole space)
+  Index [Z₂ⁿ : T] = 1 = 1
+
+  Mirror pairs: 1 ({L1,L3})
+  Center line: L2 (unpaired)
+  Mirror-pair XOR mask: 101 = 5
+  Complement: 111 = 7
+  Complement = mirror_mask XOR center: 101 XOR 010 = 111 ✓
+
+--- Section 3: Equivariant Pairings ---
+
+  Candidate operations and their fixed points:
+    rev: 4 fixed points ['000', '010', '101', '111']
+    comp: 0 fixed points 
+    comp_rev: 0 fixed points 
+
+  Macro-orbits under mirror-pair symmetry group (order 8):
+    Orbit A (palindromes, size 4): ['000', '010', '101', '111']
+    Orbit B (non-palindromes, size 4): ['001', '011', '100', '110']
+
+  Within each orbit, Z₂² acts transitively → 3 FPF involutions:
+    XOR(010) = center-flip, XOR(101) = mirror-pair-flip, XOR(111) = complement
+  Independent per orbit → 3 × 3 = 9 equivariant pairings
+
+  All 9 equivariant pairings:
+    #            A_op            B_op    S      WT       D  #m
+  -----------------------------------------------------------------
+    1     center(010)     center(010)    4   1.000   0.000   1
+    2     center(010)     mirror(101)    6   0.500   1.000   2
+    3     center(010)       comp(111)    8   1.000   1.000   2
+    4     mirror(101)     center(010)    6   1.500   1.000   2
+    5     mirror(101)     mirror(101)    8   1.000   0.000   1
+    6     mirror(101)       comp(111)   10   1.500   1.000   2
+    7       comp(111)     center(010)    8   1.500   1.000   2
+    8       comp(111)     mirror(101)   10   1.000   1.000   2
+    9       comp(111)       comp(111)   12   1.500   0.000   1
+
+  Total FPF involutions on 8 elements: 105
+  Mirror-pair-group-equivariant FPF involutions: 9
+
+  Traditional pairing (complement = XOR(111)/XOR(111)) = #9
+
+--- Section 4: Traditional Pairing (ι₁ = complement) ---
+
+  S (opposition strength) = 12
+  WT (weight tilt) = 1.500
+  D (mask diversity) = 0.000
+  #masks = 1
+  Masks: 111:4
+
+  Among the 9 equivariant pairings:
+  Complement: S=12 (max=12), WT=1.500 (min=0.500)
+  Complement maximizes S? True
+  Complement minimizes WT? False
+
+  ι₁ ∈ Z₂³ (translation group): True (ι₁ = XOR(111))
+
+--- Section 5: Group Hierarchy ---
+
+  Mirror-pair symmetry group (n=3):
+    G_mirror = ⟨XOR(101), XOR(010), swap_L1L3⟩
+    |G_mirror| = 8
+    Abelian: True
+    Orbits: 2 (sizes [4, 4])
+
+  Structure: Z₂³ (all generators commute, all order 2)
+  No pair-permutation layer (only 1 mirror pair → S₁ trivial)
+  Kernel = full group (no quotient structure)
+
+  Mirror-pair translation T = ⟨XOR(101)⟩:
+    |T| = 2
+    Orbits: 4 of size [2, 2, 2, 2]...
+
+
+========================================================================
+  n=6: HEXAGRAMS (64 elements)
+========================================================================
+
+--- Section 1: Basic Involutions ---
+
+  σ₁ (complement): fixed=0, pairs=32, fixed+2×pairs=64
+  σ₂ (reversal): fixed=8, pairs=28, fixed+2×pairs=64
+  σ₃ (comp∘rev): fixed=8, pairs=28, fixed+2×pairs=64
+
+  σ₁∘σ₂ == σ₂∘σ₁ (commute): True
+  G₀ = ⟨σ₁, σ₂⟩: order 4, abelian=True
+
+  Pair overlaps:
+    |pairs(σ₁) ∩ pairs(σ₂)| = 4
+    |pairs(σ₁) ∩ pairs(σ₃)| = 4
+    |pairs(σ₂) ∩ pairs(σ₃)| = 0
+
+--- Section 2: Mirror-pair Translation Group T ---
+
+  Mirror pairs: 3 ({L1,L6}, {L2,L5}, {L3,L4})
+  Center line: none (even n)
+  T = ⟨O=33, M=18, I=12⟩ ≅ Z₂³
+  |T| = 8, index [Z₂⁶ : T] = 8
+  T-orbits: 8 of size 8
+  Residual space: Z₂³ (3 mirror-pair bits)
+    Orbit 0: residual 000 (wt 0)
+    Orbit 1: residual 100 (wt 1)
+    Orbit 2: residual 010 (wt 1)
+    Orbit 3: residual 110 (wt 2)
+    Orbit 4: residual 001 (wt 1)
+    Orbit 5: residual 101 (wt 2)
+    Orbit 6: residual 011 (wt 2)
+    Orbit 7: residual 111 (wt 3)
+
+--- Section 3: Equivariant Pairings ---
+
+  Candidate operations and their fixed points:
+    rev: 8 fixed points
+    comp: 0 fixed points
+    comp_rev: 8 fixed points
+
+  All 9 equivariant pairings:
+    #          C          D    S      WT   D_ent  #m
+  --------------------------------------------------
+    1        rev        rev  120   0.375   2.750   7
+    2        rev       comp  144   1.125   1.549   4
+    3        rev   comp_rev   96   1.125   2.000   4
+    4       comp        rev  168   1.125   1.549   4
+    5       comp       comp  192   1.875   0.000   1
+    6       comp   comp_rev  144   1.875   1.549   4
+    7   comp_rev        rev  144   1.125   2.000   4
+    8   comp_rev       comp  168   1.875   1.549   4
+    9   comp_rev   comp_rev  120   1.875   2.750   7
+
+--- Section 4: Traditional Pairing (KW) ---
+
+  S (opposition strength) = 120
+  WT (weight tilt) = 0.375
+  D (mask diversity) = 2.750
+  #masks = 7
+  Masks: 001100:4, 010010:4, 011110:4, 100001:4, 101101:4, 110011:4, 111111:8
+
+  KW = pairing #1 (C=rev, D=rev)
+
+  KW ∈ G₃₈₄? False
+  σ₁ ∈ G₃₈₄? True
+  σ₂ ∈ G₃₈₄? True
+
+--- Section 5: Group Hierarchy ---
+
+  |G₃₈₄| = 384
+  Abelian: False
+  Macro-orbits: 4 (sizes [8, 8, 24, 24])
+
+  Kernel K = ⟨T, swaps⟩: |K| = 64
+  K ◁ G₃₈₄: True
+  |G₃₈₄/K| = 6
+
+
+========================================================================
+  CROSS-SCALE COMPARISON TABLE
+========================================================================
+
+| Measurement                  | n=3 (trigrams)          | n=6 (hexagrams)              |
+|------------------------------|-------------------------|------------------------------|
+| State space                  | Z₂³ (8 elements)       | Z₂⁶ (64 elements)            |
+| Mirror pairs                 | 1 + center              | 3 (no center)                |
+| σ₁ (complement) fixed pts   | 0                       | 0                            |
+| σ₂ (reversal) fixed pts     | 4 (palindromes)         | 8 (palindromes)              |
+| σ₃ (comp∘rev) fixed pts     | 0 (odd n!)              | 8 (anti-palindromes)         |
+| σ₁,σ₂ commute?              | Yes                     | Yes                          |
+| ⟨σ₁,σ₂⟩                     | V₄ (order 4)            | V₄ (order 4)                |
+| Pair overlap σ₁-σ₂          | 0                       | 4                            |
+| Pair overlap σ₁-σ₃          | 2                       | 4                            |
+| Pair overlap σ₂-σ₃          | 0                       | 0                            |
+| Mirror-pair T order          | 2 (Z₂)                 | 8 (Z₂³)                     |
+| T-orbits                     | 4 × 2                  | 8 × 8                       |
+| Quotient [Z₂ⁿ : T]          | 4                       | 8                            |
+| Symmetry group |G|           | 8                       | 384                          |
+| G orbits (macro)             | 2 ([4, 4])     | 4 ([8, 8, 24, 24])     |
+| Macro-orbits (forced/free)   | 0f + 2fr → 3²=9   | 2f + 2fr → 1²×3²=9           |
+| Equiv. pairings              | 9                       | 9                            |
+| Trad. pairing S              | 12                      | 120                          |
+| Trad. pairing WT             | 1.500                   | 0.375                      |
+| Trad. pairing D              | 0.000                   | 2.750                      |
+| Trad. pairing #masks         | 1                       | 7                            |
+| Trad. pairing ∈ group?       | Yes                     | No                           |
+
+
+Key structural parallels:
+  1. σ₁,σ₂ commute at both scales → G₀ = V₄ is universal.
+  2. σ₂-σ₃ pair overlap = 0 at both scales: reversal pairs and comp∘rev pairs
+     are always disjoint.
+  3. Equivariant pairing count = 3² = 9 at both scales (see counting below).
+  4. Traditional pairing is extremal at both scales: maximizes S at n=3,
+     minimizes WT at n=6. Selection criterion shifts between scales.
+
+Key structural divergences:
+  1. σ₃ fixed points: 0 at n=3 (odd n has no anti-palindromes), 8 at n=6.
+  2. Mirror pairs: 1 at n=3 (+ center), 3 at n=6 (no center).
+     At n=3, Z₂² acts within each orbit → 3 choices per orbit, no forced orbits.
+     At n=6, palindrome/anti-palindrome orbits collapse to 1 choice (forced).
+  3. Traditional pairing: complement (group element) at n=3; reversal-hybrid
+     (NOT a group element) at n=6.
+  4. WT/S tradeoff: at n=3, complement MAXIMIZES S among the 9.
+     At n=6, KW MINIMIZES WT (0.375) but does NOT maximize S (120 vs 192).
+     The objectives diverge because reversal (weight-preserving) has fixed
+     points at n=6 but not at n=3.
+
+The pairing count: 3² = 9 at both scales.
+  n=3: 2 orbits × 3 choices each = 9 (both orbits free, no forced)
+  n=6: 2 forced × 2 free × 3² = 9 (palindrome/anti-palindrome orbits forced)
+  Same count, different structure: at n=3 the freedom is uniform (Z₂² per orbit),
+  at n=6 it is stratified (forced vs free macro-orbits).
+

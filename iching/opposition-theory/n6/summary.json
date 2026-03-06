@@ -1,0 +1,37 @@
+{
+  "kw_pairing": {
+    "strength": 120,
+    "diversity": 2.75,
+    "weight_tilt": 0.375,
+    "weight_corr": 0.515789
+  },
+  "shao_yong_pairing": {
+    "strength": 192,
+    "diversity": 0.0,
+    "weight_tilt": 1.875,
+    "weight_corr": -1.0
+  },
+  "sample_correlations": {
+    "strength_diversity": -0.001896,
+    "strength_weight_corr": -0.482299,
+    "strength_weight_tilt": 0.313599,
+    "diversity_weight_corr": 0.004909,
+    "diversity_weight_tilt": -0.002688
+  },
+  "sample_size": 100000,
+  "n_orbits": 20,
+  "orbit_sizes": {
+    "2": 8,
+    "4": 12
+  },
+  "palindromes": [
+    "000000",
+    "001100",
+    "010010",
+    "011110",
+    "100001",
+    "101101",
+    "110011",
+    "111111"
+  ]
+}

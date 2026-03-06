@@ -1,0 +1,325 @@
+KW baseline: f1=1.7667, H(k)=2.940, H(k|k_prev)=1.609, MI=1.331
+
+================================================================================
+COMPUTATION 1: MI NULL DISTRIBUTION (1M random trials)
+================================================================================
+  ... 200000/1000000
+  ... 400000/1000000
+  ... 600000/1000000
+  ... 800000/1000000
+  ... 1000000/1000000
+
+--- Overall distribution ---
+  f1: mean=1.4939, std=0.1583, min=0.7667, max=2.2667
+  MI: mean=1.1411, std=0.1684, min=0.2387, max=1.9819
+  KW f1=1.7667 (percentile: 96.64%)
+  KW MI=1.3308 (percentile: 87.94%)
+
+--- Correlation ---
+  Pearson r(f1, MI) = 0.1154
+
+--- Mean MI per f1 bin ---
+            f1 range    count   mean MI    std MI
+  [0.767, 0.842)       12    1.1245    0.2319
+  [0.842, 0.917)      102    1.1900    0.2123
+  [0.917, 0.992)      497    1.1577    0.1968
+  [0.992, 1.067)     1841    1.1467    0.1887
+  [1.067, 1.142)    12284    1.1334    0.1853
+  [1.142, 1.217)    24904    1.1237    0.1829
+  [1.217, 1.292)    51759    1.1216    0.1764
+  [1.292, 1.367)    90280    1.1218    0.1728
+  [1.367, 1.442)   209119    1.1252    0.1700
+  [1.442, 1.517)   166357    1.1324    0.1667
+  [1.517, 1.592)   157000    1.1406    0.1644
+  [1.592, 1.667)   124215    1.1525    0.1617
+  [1.667, 1.742)   108884    1.1696    0.1595
+  [1.742, 1.817)    32194    1.1951    0.1567
+  [1.817, 1.892)    13670    1.2169    0.1556
+  [1.892, 1.967)     5944    1.2482    0.1536
+  [1.967, 2.042)      723    1.2812    0.1471
+  [2.042, 2.117)      182    1.3260    0.1527
+  [2.117, 2.192)       27    1.3668    0.1599
+  [2.192, 2.267)        6    1.4121    0.1095
+
+--- Conditional analysis (f1 ≥ 1.70) ---
+  Trials with f1 ≥ 1.70: 115358 (11.54%)
+  MI among high-f1 trials:
+    Mean: 1.1905
+    Std:  0.1592
+    Min:  0.3460
+    Max:  1.8428
+    KW MI = 1.3308
+    KW conditional percentile: 81.69%
+
+--- Conditional analysis (f1 ≥ 1.60) ---
+  Trials with f1 ≥ 1.60: 285845 (28.58%)
+  MI mean: 1.1693, std: 0.1613
+  KW MI conditional percentile: 84.87%
+
+================================================================================
+COMPUTATION 2: SECOND-ORDER KERNELS (TRANSITION DELTAS)
+================================================================================
+
+--- KW transition delta sequence (30 deltas) ---
+  δ 1:     O  (    M → OM   )
+  δ 2:     I  (   OM → OMI  )
+  δ 3:    MI  (  OMI → O    )
+  δ 4:    MI  (    O → OMI  )
+  δ 5:   OMI  (  OMI → id   )
+  δ 6:    OI  (   id → OI   )
+  δ 7:   OMI  (   OI → M    )
+  δ 8:    OM  (    M → O    )
+  δ 9:   OMI  (    O → MI   )
+  δ10:    MI  (   MI → id   )
+  δ11:   OMI  (   id → OMI  )
+  δ12:   OMI  (  OMI → id   )
+  δ13:     I  (   id → I    )
+  δ14:   OMI  (    I → OM   )
+  δ15:    id  (   OM → OM   )
+  δ16:     M  (   OM → O    )
+  δ17:     M  (    O → OM   )
+  δ18:     I  (   OM → OMI  )
+  δ19:     M  (  OMI → OI   )
+  δ20:    id  (   OI → OI   )
+  δ21:     I  (   OI → O    )
+  δ22:   OMI  (    O → MI   )
+  δ23:     M  (   MI → I    )
+  δ24:    OI  (    I → O    )
+  δ25:    OM  (    O → M    )
+  δ26:     M  (    M → id   )
+  δ27:    MI  (   id → MI   )
+  δ28:    OM  (   MI → OI   )
+  δ29:     I  (   OI → O    )
+  δ30:   OMI  (    O → MI   )
+
+--- Delta frequency distribution ---
+     id:  2  ██
+      O:  1  █
+      M:  5  █████
+      I:  5  █████
+     OM:  3  ███
+     OI:  2  ██
+     MI:  4  ████
+    OMI:  8  ████████
+
+  id (repeats): 2
+  Absent deltas: none
+
+  Shannon entropy of deltas: 2.774 bits (max 3.000)
+  Normalized: 0.925
+
+--- Third-order: consecutive delta distances ---
+  Mean: 1.448
+  Std:  0.813
+  Distribution: {0: 3, 1: 13, 2: 10, 3: 3}
+
+--- Delta statistics: null model (100,000 trials) ---
+  Delta entropy: KW=2.774, null mean=2.818 ± 0.099
+    KW percentile: 28.62%
+  Delta id-count (repeats): KW=2, null mean=3.83 ± 1.84
+    KW percentile: 24.61%
+  Third-order mean distance: KW=1.448, null mean=1.499 ± 0.161
+    KW percentile: 41.72%
+
+  Per-delta-type: KW count vs null mean ± std
+       id: KW=2, null=3.83±1.84, pctile=24.6%, z=-1.00
+        O: KW=1, null=3.75±1.81, pctile=9.8%, z=-1.52
+        M: KW=5, null=3.75±1.81, pctile=83.6%, z=+0.69
+        I: KW=5, null=3.74±1.81, pctile=83.6%, z=+0.70
+       OM: KW=3, null=3.75±1.81, pctile=47.3%, z=-0.41
+       OI: KW=2, null=3.75±1.81, pctile=25.9%, z=-0.96
+       MI: KW=4, null=3.74±1.82, pctile=68.2%, z=+0.14
+      OMI: KW=8, null=3.69±1.80, pctile=99.2%, z=+2.39
+
+================================================================================
+COMPUTATION 3: RUNNING-PRODUCT PATH — COSET STRUCTURE
+================================================================================
+
+--- Returns to identity ---
+  Positions (0-indexed): [4, 5, 9, 10, 14, 27]
+  KW pair numbers: [5, 6, 10, 11, 15, 28]
+  Gaps between returns: [1, 4, 1, 4, 13]
+  Gap mean: 4.60, std: 4.41
+
+--- First occurrence of each element in running product ---
+     id: position 4 (bridge 5)
+      O: position 1 (bridge 2)
+      M: position 0 (bridge 1)
+      I: position 24 (bridge 25)
+     OM: position 13 (bridge 14)
+     OI: position 6 (bridge 7)
+     MI: position 2 (bridge 3)
+    OMI: position 3 (bridge 4)
+
+--- All occurrences of each element ---
+     id: positions [4, 5, 9, 10, 14, 27] (count=6)
+      O: positions [1, 17, 22] (count=3)
+      M: positions [0, 16, 30] (count=3)
+      I: positions [24, 29] (count=2)
+     OM: positions [13, 15, 19] (count=3)
+     OI: positions [6, 23, 28] (count=3)
+     MI: positions [2, 8, 18, 20, 25, 26] (count=6)
+    OMI: positions [3, 7, 11, 12, 21] (count=5)
+
+--- Subgroup residence fractions (31 positions) ---
+
+  Order-4 subgroups (7 total):
+    {I, M, MI, id}: 17/31 = 0.548 (expected 0.500)
+    {I, O, OI, id}: 14/31 = 0.452 (expected 0.500)
+    {I, OM, OMI, id}: 16/31 = 0.516 (expected 0.500)
+    {M, O, OM, id}: 15/31 = 0.484 (expected 0.500)
+    {M, OI, OMI, id}: 17/31 = 0.548 (expected 0.500)
+    {MI, O, OMI, id}: 20/31 = 0.645 (expected 0.500)
+    {MI, OI, OM, id}: 18/31 = 0.581 (expected 0.500)
+
+  Subgroup containing {id, MI}: {I, M, MI, id}
+    Residence: 17/31 = 0.548
+
+  Subgroup containing {id, MI}: {MI, O, OMI, id}
+    Residence: 20/31 = 0.645
+
+  Subgroup containing {id, MI}: {MI, OI, OM, id}
+    Residence: 18/31 = 0.581
+
+================================================================================
+COMPUTATION 4: TRIGRAM-PAIR STRUCTURE OF THE SEQUENCE
+================================================================================
+
+--- Trigram decomposition of KW pairs ---
+  Pair    Hex   Lower1   Upper1   Lower2   Upper2
+  -------------------------------------------------------
+     0  (1,2)   Heaven   Heaven    Earth    Earth
+     1  (3,4)  Thunder    Water    Water Mountain
+     2  (5,6)   Heaven    Water    Water   Heaven
+     3  (7,8)    Water    Earth    Earth    Water
+     4 (9,10)   Heaven     Wind     Lake   Heaven
+     5 (11,12)   Heaven    Earth    Earth   Heaven
+     6 (13,14)     Fire   Heaven   Heaven     Fire
+     7 (15,16) Mountain    Earth    Earth  Thunder
+     8 (17,18)  Thunder     Lake     Wind Mountain
+     9 (19,20)     Lake    Earth    Earth     Wind
+    10 (21,22)  Thunder     Fire     Fire Mountain
+    11 (23,24)    Earth Mountain  Thunder    Earth
+    12 (25,26)  Thunder   Heaven   Heaven Mountain
+    13 (27,28)  Thunder Mountain     Wind     Lake
+    14 (29,30)    Water    Water     Fire     Fire
+    15 (31,32) Mountain     Lake     Wind  Thunder
+    16 (33,34) Mountain   Heaven   Heaven  Thunder
+    17 (35,36)    Earth     Fire     Fire    Earth
+    18 (37,38)     Fire     Wind     Lake     Fire
+    19 (39,40) Mountain    Water    Water  Thunder
+    20 (41,42)     Lake Mountain  Thunder     Wind
+    21 (43,44)   Heaven     Lake     Wind   Heaven
+    22 (45,46)    Earth     Lake     Wind    Earth
+    23 (47,48)    Water     Lake     Wind    Water
+    24 (49,50)     Fire     Lake     Wind     Fire
+    25 (51,52)  Thunder  Thunder Mountain Mountain
+    26 (53,54) Mountain     Wind     Lake  Thunder
+    27 (55,56)     Fire  Thunder Mountain     Fire
+    28 (57,58)     Wind     Wind     Lake     Lake
+    29 (59,60)    Water     Wind     Lake    Water
+    30 (61,62)     Lake     Wind Mountain  Thunder
+    31 (63,64)     Fire    Water    Water     Fire
+
+--- Upper trigram pairs ---
+  Distinct upper-trigram pairs: 30
+  Sequence:
+    Pair  0: (Heaven, Earth)
+    Pair  1: (Water, Mountain)
+    Pair  2: (Water, Heaven)
+    Pair  3: (Earth, Water)
+    Pair  4: (Wind, Heaven)
+    Pair  5: (Earth, Heaven)
+    Pair  6: (Heaven, Fire)
+    Pair  7: (Earth, Thunder)
+    Pair  8: (Lake, Mountain)
+    Pair  9: (Earth, Wind)
+    Pair 10: (Fire, Mountain)
+    Pair 11: (Mountain, Earth)
+    Pair 12: (Heaven, Mountain)
+    Pair 13: (Mountain, Lake)
+    Pair 14: (Water, Fire)
+    Pair 15: (Lake, Thunder)
+    Pair 16: (Heaven, Thunder)
+    Pair 17: (Fire, Earth)
+    Pair 18: (Wind, Fire)
+    Pair 19: (Water, Thunder)
+    Pair 20: (Mountain, Wind)
+    Pair 21: (Lake, Heaven)
+    Pair 22: (Lake, Earth)
+    Pair 23: (Lake, Water)
+    Pair 24: (Lake, Fire)
+    Pair 25: (Thunder, Mountain)
+    Pair 26: (Wind, Thunder)
+    Pair 27: (Thunder, Fire)
+    Pair 28: (Wind, Lake)
+    Pair 29: (Wind, Water)
+    Pair 30: (Wind, Thunder)
+    Pair 31: (Water, Fire)
+
+  Distinct lower-trigram pairs: 30
+
+--- Trigram transitions between consecutive pairs ---
+  (Exit hex upper trig → Entry hex upper trig)
+  Upper trigram same across bridge: 4/31 (12.9%)
+  Lower trigram same across bridge: 5/31 (16.1%)
+
+  Upper trigram transition matrix (exit → entry):
+             Earth Mountain    Water     Wind  Thunder     Fire     Lake   Heaven
+     Earth        0        0        1        1        0        0        1        1
+  Mountain        1        2        1        1        0        0        0        0
+     Water        0        0        0        2        0        0        1        0
+      Wind        0        0        0        0        0        1        1        0
+   Thunder        0        1        1        0        1        1        1        1
+      Fire        1        0        1        1        1        0        1        0
+      Lake        0        0        1        1        0        0        0        0
+    Heaven        2        0        0        0        0        0        1        1
+
+  Lower trigram transition matrix (exit → entry):
+             Earth Mountain    Water     Wind  Thunder     Fire     Lake   Heaven
+     Earth        0        0        0        0        3        1        0        1
+  Mountain        0        1        0        1        0        1        0        0
+     Water        0        0        1        0        0        0        1        1
+      Wind        1        1        2        0        1        1        1        0
+   Thunder        0        0        0        0        1        0        0        1
+      Fire        1        1        0        0        0        1        0        0
+      Lake        0        1        1        0        0        1        1        1
+    Heaven        1        1        0        0        1        0        0        0
+
+--- Same-trigram clustering between consecutive pairs ---
+  Consecutive pairs sharing any trigram: 20/31 (64.5%)
+  Distinct trigrams per pair: mean=2.88, min=2, max=4
+
+================================================================================
+COMPUTATION 5: BIAS-CORRECTED MI + SHUFFLE NULL
+================================================================================
+
+--- Raw MI ---
+  H(k) = 2.9396
+  H(k|k_prev) = 1.6088
+  MI_raw = 1.3308
+
+--- Miller-Madow correction ---
+  Nonzero cells in transition matrix: 25
+  Nonzero 'from' states: 8
+  Nonzero 'to' states: 8
+  Bias estimate: 0.4088 bits
+  MI_corrected = 0.9220
+
+--- Shuffle null (100,000 shuffles) ---
+  Shuffle MI: mean=1.2789, std=0.1200
+  Shuffle MI 95th percentile: 1.4826
+  Shuffle MI 99th percentile: 1.5899
+  KW MI_raw = 1.3308, percentile in shuffle null: 70.37%
+  KW MI_corrected = 0.9220, percentile in shuffle null: 0.01%
+
+--- Summary ---
+  MI_raw:       1.3308
+  Bias:        -0.4088
+  MI_corrected: 0.9220
+  Shuffle null mean: 1.2789
+  MI excess over shuffle null: 0.0519 (0.43 σ)
+
+================================================================================
+DONE
+================================================================================

@@ -1,0 +1,1035 @@
+{
+  "kw_baseline": {
+    "chi2": 2.290322580645161,
+    "kernel_autocorr_1": -0.46437136627906966,
+    "weight_ordering_bias": 0
+  },
+  "exp1_single_bit_gradient": [
+    {
+      "bit_index": 0,
+      "pairs": [
+        0
+      ],
+      "type": "A",
+      "description": "pair 0",
+      "kernel_autocorr_1": -0.4531397459165153,
+      "d_kac": 0.011231620362554373,
+      "chi2": 3.32258064516129,
+      "d_chi2": 1.032258064516129,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 1,
+      "pairs": [
+        1
+      ],
+      "type": "A",
+      "description": "pair 1",
+      "kernel_autocorr_1": -0.4623193277310924,
+      "d_kac": 0.002052038547977253,
+      "chi2": 4.870967741935484,
+      "d_chi2": 2.580645161290323,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 2,
+      "pairs": [
+        2
+      ],
+      "type": "A",
+      "description": "pair 2",
+      "kernel_autocorr_1": -0.458638287279064,
+      "d_kac": 0.005733079000005636,
+      "chi2": 2.8064516129032255,
+      "d_chi2": 0.5161290322580645,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 3,
+      "pairs": [
+        3
+      ],
+      "type": "A",
+      "description": "pair 3",
+      "kernel_autocorr_1": -0.38746342112263904,
+      "d_kac": 0.07690794515643062,
+      "chi2": 2.290322580645161,
+      "d_chi2": 0.0,
+      "pareto": "KW-dominated"
+    },
+    {
+      "bit_index": 4,
+      "pairs": [
+        4
+      ],
+      "type": "A",
+      "description": "pair 4",
+      "kernel_autocorr_1": -0.29159350891194474,
+      "d_kac": 0.17277785736712492,
+      "chi2": 2.290322580645161,
+      "d_chi2": 0.0,
+      "pareto": "KW-dominated"
+    },
+    {
+      "bit_index": 5,
+      "pairs": [
+        5
+      ],
+      "type": "A",
+      "description": "pair 5",
+      "kernel_autocorr_1": -0.30141109496124024,
+      "d_kac": 0.16296027131782942,
+      "chi2": 2.290322580645161,
+      "d_chi2": 0.0,
+      "pareto": "KW-dominated"
+    },
+    {
+      "bit_index": 6,
+      "pairs": [
+        6
+      ],
+      "type": "A",
+      "description": "pair 6",
+      "kernel_autocorr_1": -0.439245945291697,
+      "d_kac": 0.025125420987372638,
+      "chi2": 2.8064516129032255,
+      "d_chi2": 0.5161290322580645,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 7,
+      "pairs": [
+        7
+      ],
+      "type": "A",
+      "description": "pair 7",
+      "kernel_autocorr_1": -0.4443497913769123,
+      "d_kac": 0.02002157490215739,
+      "chi2": 4.870967741935484,
+      "d_chi2": 2.580645161290323,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 8,
+      "pairs": [
+        8
+      ],
+      "type": "A",
+      "description": "pair 8",
+      "kernel_autocorr_1": -0.3701946472019465,
+      "d_kac": 0.09417671907712316,
+      "chi2": 2.8064516129032255,
+      "d_chi2": 0.5161290322580645,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 9,
+      "pairs": [
+        9
+      ],
+      "type": "A",
+      "description": "pair 9",
+      "kernel_autocorr_1": -0.449714611872146,
+      "d_kac": 0.014656754406923655,
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 10,
+      "pairs": [
+        10
+      ],
+      "type": "A",
+      "description": "pair 10",
+      "kernel_autocorr_1": -0.3203385312541651,
+      "d_kac": 0.14403283502490455,
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 11,
+      "pairs": [
+        11
+      ],
+      "type": "A",
+      "description": "pair 11",
+      "kernel_autocorr_1": -0.4231293842556508,
+      "d_kac": 0.04124198202341889,
+      "chi2": 4.354838709677419,
+      "d_chi2": 2.064516129032258,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 12,
+      "pairs": [
+        12
+      ],
+      "type": "A",
+      "description": "pair 12",
+      "kernel_autocorr_1": -0.3482268121590023,
+      "d_kac": 0.11614455412006736,
+      "chi2": 4.354838709677419,
+      "d_chi2": 2.064516129032258,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 13,
+      "pairs": [
+        15
+      ],
+      "type": "A",
+      "description": "pair 15",
+      "kernel_autocorr_1": -0.37039586919104994,
+      "d_kac": 0.09397549708801972,
+      "chi2": 6.419354838709678,
+      "d_chi2": 4.129032258064517,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 14,
+      "pairs": [
+        16
+      ],
+      "type": "A",
+      "description": "pair 16",
+      "kernel_autocorr_1": -0.42326000931098706,
+      "d_kac": 0.0411113569680826,
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 15,
+      "pairs": [
+        17
+      ],
+      "type": "A",
+      "description": "pair 17",
+      "kernel_autocorr_1": -0.4159828128782379,
+      "d_kac": 0.04838855340083176,
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 16,
+      "pairs": [
+        18
+      ],
+      "type": "A",
+      "description": "pair 18",
+      "kernel_autocorr_1": -0.5926766729205754,
+      "d_kac": -0.1283053066415057,
+      "chi2": 4.354838709677419,
+      "d_chi2": 2.064516129032258,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 17,
+      "pairs": [
+        21
+      ],
+      "type": "A",
+      "description": "pair 21",
+      "kernel_autocorr_1": -0.4612062812276946,
+      "d_kac": 0.0031650850513750828,
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 18,
+      "pairs": [
+        22
+      ],
+      "type": "A",
+      "description": "pair 22",
+      "kernel_autocorr_1": -0.40226344452008167,
+      "d_kac": 0.062107921758987994,
+      "chi2": 2.290322580645161,
+      "d_chi2": 0.0,
+      "pareto": "KW-dominated"
+    },
+    {
+      "bit_index": 19,
+      "pairs": [
+        23
+      ],
+      "type": "A",
+      "description": "pair 23",
+      "kernel_autocorr_1": -0.3323806163255704,
+      "d_kac": 0.13199074995349924,
+      "chi2": 3.838709677419355,
+      "d_chi2": 1.548387096774194,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 20,
+      "pairs": [
+        24
+      ],
+      "type": "A",
+      "description": "pair 24",
+      "kernel_autocorr_1": -0.43231339823829384,
+      "d_kac": 0.03205796804077582,
+      "chi2": 2.806451612903226,
+      "d_chi2": 0.516129032258065,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 21,
+      "pairs": [
+        31
+      ],
+      "type": "A",
+      "description": "pair 31",
+      "kernel_autocorr_1": -0.3988326610438822,
+      "d_kac": 0.06553870523518746,
+      "chi2": 3.8387096774193545,
+      "d_chi2": 1.5483870967741935,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 22,
+      "pairs": [
+        13,
+        14
+      ],
+      "type": "B",
+      "description": "component (13,14)",
+      "kernel_autocorr_1": -0.3425609312477263,
+      "d_kac": 0.12181043503134337,
+      "chi2": 2.290322580645161,
+      "d_chi2": 0.0,
+      "pareto": "KW-dominated"
+    },
+    {
+      "bit_index": 23,
+      "pairs": [
+        19,
+        20
+      ],
+      "type": "B",
+      "description": "component (19,20)",
+      "kernel_autocorr_1": -0.5757259206798865,
+      "d_kac": -0.11135455440081682,
+      "chi2": 6.419354838709678,
+      "d_chi2": 4.129032258064517,
+      "pareto": "trade-off"
+    },
+    {
+      "bit_index": 24,
+      "pairs": [
+        25,
+        26
+      ],
+      "type": "B",
+      "description": "component (25,26)",
+      "kernel_autocorr_1": -0.4737620235126468,
+      "d_kac": -0.009390657233577127,
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "pareto": "cone-escape"
+    },
+    {
+      "bit_index": 25,
+      "pairs": [
+        27,
+        28
+      ],
+      "type": "B",
+      "description": "component (27,28)",
+      "kernel_autocorr_1": -0.3470864197530862,
+      "d_kac": 0.11728494652598348,
+      "chi2": 3.8387096774193545,
+      "d_chi2": 1.5483870967741935,
+      "pareto": "double-degrade"
+    },
+    {
+      "bit_index": 26,
+      "pairs": [
+        29,
+        30
+      ],
+      "type": "B",
+      "description": "component (29,30)",
+      "kernel_autocorr_1": -0.4726385914822748,
+      "d_kac": -0.008267225203205109,
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "pareto": "cone-escape"
+    }
+  ],
+  "exp2_additivity": [
+    {
+      "bits": [
+        3,
+        26
+      ],
+      "kac": -0.3963136641917417,
+      "d_kac": 0.06805770208732798,
+      "exp_kac": -0.39573064632584415,
+      "int_kac": -0.0005830178658975393,
+      "chi2": 1.2580645161290323,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        5,
+        24
+      ],
+      "kac": -0.31399477496734357,
+      "d_kac": 0.1503765913117261,
+      "exp_kac": -0.31080175219481737,
+      "int_kac": -0.0031930227725261995,
+      "chi2": 1.7741935483870968,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        2,
+        4
+      ],
+      "kac": -0.40991786447638606,
+      "d_kac": 0.0544535018026836,
+      "exp_kac": -0.2858604299119391,
+      "int_kac": -0.12405743456444696,
+      "chi2": 2.8064516129032255,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        6,
+        25
+      ],
+      "kac": -0.30531577663984394,
+      "d_kac": 0.15905558963922573,
+      "exp_kac": -0.32196099876571355,
+      "int_kac": 0.016645222125869608,
+      "chi2": 5.387096774193548,
+      "int_chi2": 1.032258064516129
+    },
+    {
+      "bits": [
+        6,
+        9
+      ],
+      "kac": -0.42341571609632456,
+      "d_kac": 0.04095565018274511,
+      "exp_kac": -0.42458919088477337,
+      "int_kac": 0.001173474788448814,
+      "chi2": 2.290322580645161,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        21,
+        24
+      ],
+      "kac": -0.3976807478404922,
+      "d_kac": 0.06669061843857749,
+      "exp_kac": -0.40822331827745933,
+      "int_kac": 0.010542570436967158,
+      "chi2": 2.8064516129032255,
+      "int_chi2": -0.5161290322580645
+    },
+    {
+      "bits": [
+        18,
+        19
+      ],
+      "kac": -0.3041354663036078,
+      "d_kac": 0.16023589997546184,
+      "exp_kac": -0.2702726945665824,
+      "int_kac": -0.0338627717370254,
+      "chi2": 2.290322580645161,
+      "int_chi2": -1.548387096774194
+    },
+    {
+      "bits": [
+        9,
+        20
+      ],
+      "kac": -0.4168725775193797,
+      "d_kac": 0.04749878875968999,
+      "exp_kac": -0.4176566438313702,
+      "int_kac": 0.0007840663119905167,
+      "chi2": 3.3225806451612905,
+      "int_chi2": 1.0322580645161286
+    },
+    {
+      "bits": [
+        7,
+        17
+      ],
+      "kac": -0.44166097060833914,
+      "d_kac": 0.02271039567073052,
+      "exp_kac": -0.4411847063255372,
+      "int_kac": -0.00047626428280195254,
+      "chi2": 3.8387096774193545,
+      "int_chi2": -4.440892098500626e-16
+    },
+    {
+      "bits": [
+        1,
+        16
+      ],
+      "kac": -0.5941378507393179,
+      "d_kac": -0.12976648446024824,
+      "exp_kac": -0.590624634372598,
+      "int_kac": -0.0035132163667198624,
+      "chi2": 7.967741935483871,
+      "int_chi2": 1.032258064516129
+    },
+    {
+      "bits": [
+        2,
+        19
+      ],
+      "kac": -0.33393574297188755,
+      "d_kac": 0.1304356233071821,
+      "exp_kac": -0.3266475373255648,
+      "int_kac": -0.007288205646322765,
+      "chi2": 4.35483870967742,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        15,
+        19
+      ],
+      "kac": -0.27226489757914346,
+      "d_kac": 0.1921064686999262,
+      "exp_kac": -0.28399206292473866,
+      "int_kac": 0.011727165345595203,
+      "chi2": 1.7741935483870968,
+      "int_chi2": -1.0322580645161292
+    },
+    {
+      "bits": [
+        14,
+        25
+      ],
+      "kac": -0.3217360114777619,
+      "d_kac": 0.1426353548013078,
+      "exp_kac": -0.3059750627850036,
+      "int_kac": -0.015760948692758292,
+      "chi2": 3.32258064516129,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        2,
+        18
+      ],
+      "kac": -0.39529795158286785,
+      "d_kac": 0.06907341469620182,
+      "exp_kac": -0.39653036552007603,
+      "int_kac": 0.0012324139372081877,
+      "chi2": 1.7741935483870968,
+      "int_chi2": -1.0322580645161288
+    },
+    {
+      "bits": [
+        21,
+        25
+      ],
+      "kac": -0.291764705882353,
+      "d_kac": 0.17260666039671668,
+      "exp_kac": -0.28154771451789873,
+      "int_kac": -0.010216991364454253,
+      "chi2": 6.419354838709678,
+      "int_chi2": 1.03225806451613
+    },
+    {
+      "bits": [
+        5,
+        18
+      ],
+      "kac": -0.24961992285001128,
+      "d_kac": 0.2147514434290584,
+      "exp_kac": -0.23930317320225225,
+      "int_kac": -0.010316749647759027,
+      "chi2": 2.290322580645161,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        9,
+        19
+      ],
+      "kac": -0.3121279212792128,
+      "d_kac": 0.15224344499985687,
+      "exp_kac": -0.31772386191864677,
+      "int_kac": 0.005595940639433972,
+      "chi2": 4.35483870967742,
+      "int_chi2": 1.032258064516129
+    },
+    {
+      "bits": [
+        5,
+        12
+      ],
+      "kac": -0.17345414393348915,
+      "d_kac": 0.2909172223455805,
+      "exp_kac": -0.1852665408411729,
+      "int_kac": 0.011812396907683737,
+      "chi2": 4.354838709677419,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        0,
+        15
+      ],
+      "kac": -0.40898603521554344,
+      "d_kac": 0.05538533106352622,
+      "exp_kac": -0.40475119251568353,
+      "int_kac": -0.004234842699859909,
+      "chi2": 2.290322580645161,
+      "int_chi2": 0.0
+    },
+    {
+      "bits": [
+        17,
+        18
+      ],
+      "kac": -0.4612062812276946,
+      "d_kac": 0.0031650850513750828,
+      "exp_kac": -0.3990983594687066,
+      "int_kac": -0.062107921758987994,
+      "chi2": 1.2580645161290323,
+      "int_chi2": 0.0
+    }
+  ],
+  "exp3_pareto_2bit": [
+    {
+      "bits": [
+        3,
+        10
+      ],
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "kac": -0.21858747044917248,
+      "d_kac": 0.24578389582989718,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        4,
+        10
+      ],
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "kac": -0.11209367612293139,
+      "d_kac": 0.3522776901561383,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        5,
+        10
+      ],
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "kac": -0.1410235905637745,
+      "d_kac": 0.32334777571529516,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        9,
+        10
+      ],
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "kac": -0.3267426362788219,
+      "d_kac": 0.13762873000024778,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        10,
+        15
+      ],
+      "chi2": 0.7419354838709677,
+      "d_chi2": -1.5483870967741933,
+      "kac": -0.26508443026193323,
+      "d_kac": 0.19928693601713643,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        10,
+        26
+      ],
+      "chi2": 0.7419354838709677,
+      "d_chi2": -1.5483870967741933,
+      "kac": -0.3338893249607535,
+      "d_kac": 0.13048204131831614,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        0,
+        17
+      ],
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "kac": -0.44697938877043353,
+      "d_kac": 0.017391977508636136,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        2,
+        17
+      ],
+      "chi2": 1.7741935483870968,
+      "d_chi2": -0.5161290322580643,
+      "kac": -0.4605308324138777,
+      "d_kac": 0.003840533865191953,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        3,
+        17
+      ],
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "kac": -0.3837957535495637,
+      "d_kac": 0.08057561272950597,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        4,
+        17
+      ],
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "kac": -0.28991142373322915,
+      "d_kac": 0.17445994254584052,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        5,
+        17
+      ],
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "kac": -0.3011539376635737,
+      "d_kac": 0.16321742861549599,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        9,
+        17
+      ],
+      "chi2": 0.7419354838709677,
+      "d_chi2": -1.5483870967741933,
+      "kac": -0.4466766243465273,
+      "d_kac": 0.01769474193254239,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        11,
+        17
+      ],
+      "chi2": 2.290322580645161,
+      "d_chi2": 0.0,
+      "kac": -0.42052752293577994,
+      "d_kac": 0.04384384334328972,
+      "pareto": "KW-dominated"
+    },
+    {
+      "bits": [
+        15,
+        17
+      ],
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "kac": -0.4073745265151516,
+      "d_kac": 0.05699683976391806,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        17,
+        22
+      ],
+      "chi2": 1.2580645161290323,
+      "d_chi2": -1.0322580645161288,
+      "kac": -0.3325701100461483,
+      "d_kac": 0.13180125623292138,
+      "pareto": "trade-off"
+    },
+    {
+      "bits": [
+        10,
+        17
+      ],
+      "chi2": 0.7419354838709677,
+      "d_chi2": -1.5483870967741933,
+      "kac": -0.32131737310308744,
+      "d_kac": 0.14305399317598222,
+      "pareto": "trade-off"
+    }
+  ],
+  "exp4_weight_ordering": [
+    {
+      "bit_index": 0,
+      "pairs": [
+        0
+      ],
+      "description": "pair 0",
+      "weight_ordering_bias": -2,
+      "d_wob": -2
+    },
+    {
+      "bit_index": 1,
+      "pairs": [
+        1
+      ],
+      "description": "pair 1",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 2,
+      "pairs": [
+        2
+      ],
+      "description": "pair 2",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 3,
+      "pairs": [
+        3
+      ],
+      "description": "pair 3",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 4,
+      "pairs": [
+        4
+      ],
+      "description": "pair 4",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 5,
+      "pairs": [
+        5
+      ],
+      "description": "pair 5",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 6,
+      "pairs": [
+        6
+      ],
+      "description": "pair 6",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 7,
+      "pairs": [
+        7
+      ],
+      "description": "pair 7",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 8,
+      "pairs": [
+        8
+      ],
+      "description": "pair 8",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 9,
+      "pairs": [
+        9
+      ],
+      "description": "pair 9",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 10,
+      "pairs": [
+        10
+      ],
+      "description": "pair 10",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 11,
+      "pairs": [
+        11
+      ],
+      "description": "pair 11",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 12,
+      "pairs": [
+        12
+      ],
+      "description": "pair 12",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 13,
+      "pairs": [
+        15
+      ],
+      "description": "pair 15",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 14,
+      "pairs": [
+        16
+      ],
+      "description": "pair 16",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 15,
+      "pairs": [
+        17
+      ],
+      "description": "pair 17",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 16,
+      "pairs": [
+        18
+      ],
+      "description": "pair 18",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 17,
+      "pairs": [
+        21
+      ],
+      "description": "pair 21",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 18,
+      "pairs": [
+        22
+      ],
+      "description": "pair 22",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 19,
+      "pairs": [
+        23
+      ],
+      "description": "pair 23",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 20,
+      "pairs": [
+        24
+      ],
+      "description": "pair 24",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 21,
+      "pairs": [
+        31
+      ],
+      "description": "pair 31",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 22,
+      "pairs": [
+        13,
+        14
+      ],
+      "description": "component (13,14)",
+      "weight_ordering_bias": 4,
+      "d_wob": 4
+    },
+    {
+      "bit_index": 23,
+      "pairs": [
+        19,
+        20
+      ],
+      "description": "component (19,20)",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 24,
+      "pairs": [
+        25,
+        26
+      ],
+      "description": "component (25,26)",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 25,
+      "pairs": [
+        27,
+        28
+      ],
+      "description": "component (27,28)",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    },
+    {
+      "bit_index": 26,
+      "pairs": [
+        29,
+        30
+      ],
+      "description": "component (29,30)",
+      "weight_ordering_bias": 0,
+      "d_wob": 0
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+KW baseline: f1=1.7667, H-residence=20/31=0.6452
+Upper Canon: f1=2.1538, H=11/14, tc=0.3571, wd=2.2857, hd=2.8571
+Lower Canon: f1=1.4667, H=8/16, tc=0.2500, wd=1.3750, hd=3.0000
+
+================================================================================
+COMPUTATION 1: JOINT CONSTRAINT TIGHTNESS (1M trials)
+================================================================================
+  ... 200000/1000000
+  ... 400000/1000000
+  ... 600000/1000000
+  ... 800000/1000000
+  ... 1000000/1000000
+
+--- Correlation ---
+  Pearson r(f1, H-residence) = -0.0010
+
+--- Individual constraints ---
+  f1 ≥ 1.70:         115358 (11.5358%)
+  H-res ≥ 20/31:      70951 (7.0951%)
+  Repeats ≤ 2:       245651 (24.5651%)
+  Types ≥ 8:         870824 (87.0824%)
+
+--- Pairwise constraints ---
+  f1 ∧ H-res:          8642 (0.8642%)
+  Product of marginals: 0.8185%
+  Ratio (joint/product): 1.0559
+
+--- Progressive constraints ---
+  f1 ∧ H-res:                         8642 (0.8642%)
+  f1 ∧ H-res ∧ Rep≤2:                 5067 (0.5067%)
+  f1 ∧ H-res ∧ Rep≤2 ∧ Types=8:       4646 (0.4646%)
+  + OMI≥8:                              830 (0.0830%)
+
+--- Upper Canon percentiles ---
+  KW upper f1 = 2.1538, percentile: 99.84%
+  KW upper H = 11/14, percentile: 99.42%
+  Upper f1: null mean=1.4940 ± 0.2406
+  Upper H:  null mean=6.99 ± 1.85
+
+--- Lower Canon percentiles ---
+  KW lower f1 = 1.4667, percentile: 51.17%
+  KW lower H = 8/16, percentile: 60.21%
+  Lower f1: null mean=1.4937 ± 0.2236
+  Lower H:  null mean=7.99 ± 1.97
+
+================================================================================
+COMPUTATION 2: WHAT DOES THE LOWER CANON OPTIMIZE?
+================================================================================
+  ... 20000/100000
+  ... 40000/100000
+  ... 60000/100000
+  ... 80000/100000
+  ... 100000/100000
+
+--- a. Trigram continuity (mean matching trigram slots per bridge) ---
+  Upper Canon:
+    KW:   0.3571
+    Null: 0.2259 ± 0.1113
+    Pctile: 92.69%
+  Lower Canon:
+    KW:   0.2500
+    Null: 0.2254 ± 0.1040
+    Pctile: 71.63%
+
+--- b. Yang-line weight smoothness (mean |Δweight| per bridge) ---
+  Upper Canon:
+    KW:   2.2857
+    Null: 1.3910 ± 0.2919
+    Pctile: 99.89%
+  Lower Canon:
+    KW:   1.3750
+    Null: 1.3912 ± 0.2652
+    Pctile: 52.84%
+
+--- c. Raw 6-bit Hamming distance (mean per bridge) ---
+  Upper Canon:
+    KW:   2.8571
+    Null: 3.0362 ± 0.3108
+    Pctile: 32.32%
+  Lower Canon:
+    KW:   3.0000
+    Null: 3.0364 ± 0.2896
+    Pctile: 49.21%
+
+--- d. Trigram distribution entropy per canon ---
+  Upper Canon (30 hexagrams):
+    Upper trigram entropy: 2.7974 bits (max 3.000)
+    Lower trigram entropy: 2.7974 bits
+    Upper trigram distribution: {'Earth': 6, 'Fire': 3, 'Heaven': 6, 'Lake': 2, 'Mountain': 6, 'Thunder': 1, 'Water': 4, 'Wind': 2}
+    Lower trigram distribution: {'Earth': 6, 'Fire': 3, 'Heaven': 6, 'Lake': 2, 'Mountain': 1, 'Thunder': 6, 'Water': 4, 'Wind': 2}
+  Lower Canon (34 hexagrams):
+    Upper trigram entropy: 2.8439 bits (max 3.000)
+    Lower trigram entropy: 2.8439 bits
+    Upper trigram distribution: {'Earth': 2, 'Fire': 5, 'Heaven': 2, 'Lake': 6, 'Mountain': 2, 'Thunder': 7, 'Water': 4, 'Wind': 6}
+    Lower trigram distribution: {'Earth': 2, 'Fire': 5, 'Heaven': 2, 'Lake': 6, 'Mountain': 7, 'Thunder': 2, 'Water': 4, 'Wind': 6}
+
+================================================================================
+COMPUTATION 3: TRIGRAM-LEVEL BRIDGE TRANSITIONS
+================================================================================
+
+--- Trigram change pattern (all 31 bridges) ---
+       neither: 0
+    lower_only: 4
+    upper_only: 5
+          both: 22
+
+--- Per-canon breakdown ---
+          Type  Upper(14)  Lower(16)   Cross(1)
+       neither          0          0          0
+    lower_only          3          1          0
+    upper_only          2          3          0
+          both          9         12          1
+
+--- Single-trigram-change bridges ---
+  B 3 (upper_only): (Water,Heaven) → (Water,Earth)  kernel=OMI
+  B 6 (lower_only): (Earth,Heaven) → (Fire,Heaven)  kernel=id
+  B11 (lower_only): (Fire,Mountain) → (Earth,Mountain)  kernel=id
+  B12 (upper_only): (Thunder,Earth) → (Thunder,Heaven)  kernel=OMI
+  B13 (lower_only): (Heaven,Mountain) → (Thunder,Mountain)  kernel=id
+  B18 (upper_only): (Fire,Earth) → (Fire,Wind)  kernel=OM
+  B26 (upper_only): (Mountain,Mountain) → (Mountain,Wind)  kernel=M
+  B27 (lower_only): (Lake,Thunder) → (Fire,Thunder)  kernel=id
+  B30 (upper_only): (Lake,Water) → (Lake,Wind)  kernel=O
+
+--- Null comparison (100,000 trials) ---
+          Type   KW  Null mean  Null std   Pctile
+       neither    0       0.00      0.00  100.00%
+    lower_only    4       3.50      1.78   73.10%
+    upper_only    5       3.49      1.78   86.84%
+          both   22      24.01      2.34   25.21%
+
+================================================================================
+COMPUTATION 4: TRIGRAM-REVERSE PROXIMITY
+================================================================================
+
+--- Trigram-reverse partners ---
+  Hexagrams with distinct trigram-reverse partner: 56
+  Self-trigram-reverse (lower == upper): 8
+  Total hexagrams with partner: 64
+
+--- Trigram-reverse distances in KW sequence ---
+    Hex  5 (Xu) ↔ Hex  6 (Song): distance 1
+    Hex  7 (Shi) ↔ Hex  8 (Bi): distance 1
+    Hex 11 (Tai) ↔ Hex 12 (Pi): distance 1
+    Hex 13 (Tong Ren) ↔ Hex 14 (Da You): distance 1
+    Hex 15 (Qian) ↔ Hex 23 (Bo): distance 8
+    Hex 16 (Yu) ↔ Hex 24 (Fu): distance 8
+    Hex 26 (Da Chu) ↔ Hex 33 (Dun): distance 7
+    Hex 35 (Jin) ↔ Hex 36 (Ming Yi): distance 1
+    Hex 63 (Ji Ji) ↔ Hex 64 (Wei Ji): distance 1
+
+  Total trigram-reverse pairs: 28
+  Distance distribution:
+    Within  1 positions: 6/28
+    Within  2 positions: 6/28
+    Within  4 positions: 6/28
+    Within  8 positions: 9/28
+    Within 16 positions: 16/28
+    Within 32 positions: 18/28
+
+--- Null comparison (100,000 random orderings of 64 hexagrams) ---
+     k   KW  Null mean  Null std   Pctile
+     1    6       0.87      0.93  100.00%
+     2    6       1.73      1.28   99.88%
+     4    6       3.42      1.74   95.23%
+     8    9       6.62      2.24   89.79%
+    16   16      12.33      2.57   94.69%
+
+================================================================================
+DONE
+================================================================================

@@ -1,0 +1,215 @@
+========================================================================
+PART 1: The 9 Equivariant Pairings
+========================================================================
+
+For each of 9 pairings: operation for macro-orbit C, operation for macro-orbit D.
+Macro-orbits A and B always use complement (forced).
+
+ #       C_op       D_op     S      WT  D(bits) #masks
+-------------------------------------------------------
+ 1        rev        rev   120   0.375    2.750      7
+ 2        rev       comp   144   1.125    1.549      4
+ 3        rev   comp_rev    96   1.125    2.000      4
+ 4       comp        rev   168   1.125    1.549      4
+ 5       comp       comp   192   1.875    0.000      1
+ 6       comp   comp_rev   144   1.875    1.549      4
+ 7   comp_rev        rev   144   1.125    2.000      4
+ 8   comp_rev       comp   168   1.875    1.549      4
+ 9   comp_rev   comp_rev   120   1.875    2.750      7
+
+========================================================================
+PART 2: The Actual King Wen Pairing
+========================================================================
+
+KW pairs (32 total):
+     h  partner    XOR   Δw   H   res  orbit         op
+-------------------------------------------------------
+000000   111111 111111    6   6   000      A       comp
+000001   100000 100001    0   2   100      C        rev
+000010   010000 010010    0   2   010      C        rev
+000011   110000 110011    0   4   110      D        rev
+000100   001000 001100    0   2   001      C        rev
+000101   101000 101101    0   4   101      D        rev
+000110   011000 011110    0   4   011      D        rev
+000111   111000 111111    0   6   111      B        rev
+001001   100100 101101    0   4   101      D        rev
+001010   010100 011110    0   4   011      D        rev
+001011   110100 111111    0   6   111      B        rev
+001100   110011 111111    2   6   000      A       comp
+001101   101100 100001    0   2   100      C        rev
+001110   011100 010010    0   2   010      C        rev
+001111   111100 110011    0   4   110      D        rev
+010001   100010 110011    0   4   110      D        rev
+010010   101101 111111    2   6   000      A       comp
+010011   110010 100001    0   2   100      C        rev
+010101   101010 111111    0   6   111      B        rev
+010110   011010 001100    0   2   001      C        rev
+010111   111010 101101    0   4   101      D        rev
+011001   100110 111111    0   6   111      B        rev
+011011   110110 101101    0   4   101      D        rev
+011101   101110 110011    0   4   110      D        rev
+011110   100001 111111    2   6   000      A       comp
+011111   111110 100001    0   2   100      C        rev
+100011   110001 010010    0   2   010      C        rev
+100101   101001 001100    0   2   001      C        rev
+100111   111001 011110    0   4   011      D        rev
+101011   110101 011110    0   4   011      D        rev
+101111   111101 010010    0   2   010      C        rev
+110111   111011 001100    0   2   001      C        rev
+
+KW measures: S=120, WT=0.375, D=2.750
+Distinct XOR masks: 7
+Mask distribution: {'001100': 4, '010010': 4, '011110': 4, '100001': 4, '101101': 4, '110011': 4, '111111': 8}
+
+Matching KW against the 9 equivariant pairings:
+  KW matches pairing #1: C=rev, D=rev ✓
+
+========================================================================
+PART 3: KW Pairing as Group Element
+========================================================================
+
+KW permutation order: 2
+Cycle structure: {2: 32}
+Fixed points: 0
+2-cycles: 32
+
+KW ∈ G_384? False
+
+Explanation:
+  The KW pairing applies reversal on non-palindromes and complement on
+  palindromes. A group element must apply a SINGLE algebraic operation
+  uniformly. The KW hybrid uses different operations on different orbits,
+  so it cannot be a group element unless the two operations happen to
+  coincide on the relevant orbits (they don't — reversal and complement
+  are distinct permutations).
+
+Pure involutions in G_384:
+  σ₁ (complement) ∈ G_384? True
+  σ₂ (reversal) ∈ G_384? True
+  σ₃ (comp∘rev) ∈ G_384? True
+
+========================================================================
+PART 4: Palindromes and Anti-palindromes
+========================================================================
+
+8 Palindromes (rev(h) = h, all mirror pairs 'same'):
+  Binary  Dec   w  Upper  Lower
+-----------------------------------
+  000000    0   0    Kun    Kun
+  001100   12   2    Gen   Zhen
+  010010   18   2    Kan    Kan
+  011110   30   4    Xun    Dui
+  100001   33   2   Zhen    Gen
+  101101   45   4     Li     Li
+  110011   51   4    Dui    Xun
+  111111   63   6   Qian   Qian
+
+8 Anti-palindromes (rev(h) = comp(h), all mirror pairs 'different'):
+  Binary  Dec   w  Upper  Lower
+-----------------------------------
+  000111    7   3    Kun   Qian
+  001011   11   3    Gen    Xun
+  010101   21   3    Kan     Li
+  011001   25   3    Xun    Gen
+  100110   38   3   Zhen    Dui
+  101010   42   3     Li    Kan
+  110100   52   3    Dui   Zhen
+  111000   56   3   Qian    Kun
+
+KW pairs among palindromes (forced complement):
+  000000 ↔ 111111  (Kun/Kun ↔ Qian/Qian)
+  001100 ↔ 110011  (Gen/Zhen ↔ Dui/Xun)
+  010010 ↔ 101101  (Kan/Kan ↔ Li/Li)
+  011110 ↔ 100001  (Xun/Dui ↔ Zhen/Gen)
+
+KW pairs among anti-palindromes (rev=comp, so KW uses reversal=complement):
+  000111 ↔ 111000  (Kun/Qian ↔ Qian/Kun)
+  001011 ↔ 110100  (Gen/Xun ↔ Dui/Zhen)
+  010101 ↔ 101010  (Kan/Li ↔ Li/Kan)
+  011001 ↔ 100110  (Xun/Gen ↔ Zhen/Dui)
+
+========================================================================
+PART 5: Kernel of G₃₈₄ → S₃ (quotient action)
+========================================================================
+
+K = ⟨O, M, I, swap_L1L6, swap_L2L5, swap_L3L4⟩
+|K| = 64
+Expected 384/6 = 64: True
+K is abelian: True
+K ≅ Z₂⁶: True
+K ◁ G_384 (normal): True
+
+swap_OM ∈ K? False
+cycle_OMI ∈ K? False
+
+Verify K preserves all T-orbits:
+  All elements of K preserve all T-orbits: True
+
+|G_384/K| = 6 (should be 6 = |S₃|)
+
+K structure:
+  K = T × ⟨swaps⟩ where:
+  T = ⟨O, M, I⟩ ≅ Z₂³ (pair-value flips)
+  ⟨swaps⟩ = ⟨swap_L1L6, swap_L2L5, swap_L3L4⟩ ≅ Z₂³ (within-pair position swaps)
+  K ≅ Z₂³ × Z₂³ ≅ Z₂⁶ (order 64)
+
+  |T| = 8, |Swaps| = 8
+  |T| × |Swaps| = 64 = |K|? True
+  T and Swaps commute: True → K = T × Swaps (direct product)
+
+========================================================================
+PART 6: Summary — n=3 vs n=6
+========================================================================
+
+| Property                    | n=3                     | n=6                              |
+|-----------------------------|-------------------------|----------------------------------|
+| State space                 | Z₂³ (8 elements)        | Z₂⁶ (64 elements)               |
+| Translation group T         | Z₂³ (full, regular rep) | Z₂³ (subgroup, index 8)         |
+| T-orbits                    | 1 (whole space)         | 8 (size 8 each)                  |
+| Quotient Z/T                | trivial                 | Z₂³ (residual space)             |
+| Ambient symmetry group      | ...                     | G₃₈₄ = (Z₂≀S₃)×Z₂³             |
+| Quotient action             | S₄ on 4 blocks          | S₃ on 8 orbits → 4 macro-orbits |
+| Macro-orbits                | 4 blocks of 2           | 4 orbits (8, 8, 24, 24)         |
+| Kernel of quotient map      | ...                     | K ≅ Z₂⁶ (order 64)              |
+| Equivariant pairings        | 9 (under Z₂²)          | 9 (under G₃₈₄)                  |
+| Traditional pairing         | complement (ι₁)         | rev + comp hybrid (KW)           |
+| Trad. pairing ∈ group?      | Yes (ι₁ ∈ Z₂³)         | No (KW ∉ G₃₈₄)                 |
+| KW pairing: C_op / D_op    | —                       | rev / rev                        |
+| KW S (opposition strength)  | —                       |                              120 |
+| KW WT (weight tilt)         | —                       |                            0.375 |
+| KW D (mask diversity, bits) | —                       |                            2.750 |
+
+========================================================================
+PART 7: Detailed View of All 9 Pairings
+========================================================================
+
+ #       C_op       D_op     S      WT       D #masks  KW?
+----------------------------------------------------------
+ 1        rev        rev   120   0.375   2.750      7    ✓
+ 2        rev       comp   144   1.125   1.549      4     
+ 3        rev   comp_rev    96   1.125   2.000      4     
+ 4       comp        rev   168   1.125   1.549      4     
+ 5       comp       comp   192   1.875   0.000      1     
+ 6       comp   comp_rev   144   1.875   1.549      4     
+ 7   comp_rev        rev   144   1.125   2.000      4     
+ 8   comp_rev       comp   168   1.875   1.549      4     
+ 9   comp_rev   comp_rev   120   1.875   2.750      7     
+
+Extremes:
+  Max S (opposition strength): 192 (pairing #5)
+  Min S: 96 (pairing #3)
+  Min WT (weight tilt): 0.375 (pairing #1)
+  Max D (diversity): 2.750 (pairing #1)
+
+  KW (pairing #1): S=120, WT=0.375, D=2.750
+  KW has min WT? True
+  KW has max S? False
+
+KW mask vocabulary:
+  001100 = I       : 4 pairs
+  010010 = M       : 4 pairs
+  011110 = M⊕I     : 4 pairs
+  100001 = O       : 4 pairs
+  101101 = O⊕I     : 4 pairs
+  110011 = O⊕M     : 4 pairs
+  111111 = O⊕M⊕I   : 8 pairs
