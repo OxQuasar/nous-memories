@@ -85,8 +85,7 @@ def extract_qihou(text):
                 kua_pos = prefix.rfind('卦')
                 after_kua = prefix[kua_pos + 1:]
                 if '〉' not in after_kua:
-                    # 卦 is in main text, not parenthetical → skip
-                continue
+                    continue  # 卦 in main text → references another hexagram
             ctx = text[max(0, start - 5) : m.end() + 10]
             return NUM_MAP[num_str], label, ctx
     return None, None, None

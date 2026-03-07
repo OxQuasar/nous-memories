@@ -2,20 +2,21 @@
 
 ## 1. Extraction Results
 
-Extracted 氣候分數 for **63/64** hexagrams.
+Extracted 氣候分數 for **62/64** hexagrams.
 
 | Value | Count |
 |------:|------:|
 | 28 | 29 |
-| 36 | 32 |
+| 36 | 31 |
 | 38 | 2 |
 
-**Missing (1):** KW#1 Qian
+**Missing (2):** KW#40 Xie, KW#1 Qian
 
 **Anomalies (38):** KW#54 Gui Mei, KW#32 Heng
 
 ### Missing entries
 
+- **KW#40 Xie** (001010): Number occurrences in text: [(209, '三十六')]
 - **KW#1 Qian** (111111): Number occurrences in text: []
 
 ## 2. Full Extraction Table
@@ -32,7 +33,7 @@ Extracted 氣候分數 for **63/64** hexagrams.
 | 11 | 000111 | Tai | 28 | Kun ☷ | 三世 | Cycle | 3 | 0 |
 | 16 | 001000 | Yu | 28 | Zhen ☳ | 一世 | Cycle | 1 | 0 |
 | 51 | 001001 | Zhen | 36 | Zhen ☳ | 本宮 | Cycle | 2 | 1 |
-| 40 | 001010 | Xie | 36 | Zhen ☳ | 二世 | Cycle | 2 | 1 |
+| 40 | 001010 | Xie | ? | Zhen ☳ | 二世 | Cycle | 2 | 1 |
 | 54 | 001011 | Gui Mei | 38 | Dui ☱ | 歸魂 | Cycle | 3 | 0 |
 | 62 | 001100 | Xiao Guo | 36 | Dui ☱ | 游魂 | Qian | 2 | 0 |
 | 55 | 001101 | Feng | 28 | Kan ☵ | 五世 | Qian | 3 | 1 |
@@ -89,41 +90,41 @@ Extracted 氣候分數 for **63/64** hexagrams.
 
 ## 3. Mutual Information Ranking
 
-H(Q) = 1.1696 bits
+H(Q) = 1.1726 bits
 
 | Feature | MI (bits) | MI / H(Q) | Deterministic? |
 |---------|----------:|----------:|:--------------:|
-| rank | 0.4387 | 0.375 |  |
-| yang_count | 0.3789 | 0.324 |  |
-| upper_trig_elem | 0.0699 | 0.060 |  |
-| shi_elem | 0.0577 | 0.049 |  |
-| basin | 0.0491 | 0.042 |  |
-| palace_elem | 0.0443 | 0.038 |  |
-| lower_trig_elem | 0.0385 | 0.033 |  |
-| palace_yy | 0.0016 | 0.001 |  |
-| b0_xor_b5 | 0.0016 | 0.001 |  |
-| parity_b0b1 | 0.0016 | 0.001 |  |
-| b0 | 0.0016 | 0.001 |  |
+| rank | 0.4417 | 0.377 |  |
+| yang_count | 0.3745 | 0.319 |  |
+| upper_trig_elem | 0.0753 | 0.064 |  |
+| shi_elem | 0.0561 | 0.048 |  |
+| basin | 0.0537 | 0.046 |  |
+| palace_elem | 0.0460 | 0.039 |  |
+| lower_trig_elem | 0.0410 | 0.035 |  |
+| palace_yy | 0.0030 | 0.003 |  |
+| b0_xor_b5 | 0.0030 | 0.003 |  |
+| b0 | 0.0008 | 0.001 |  |
+| parity_b0b1 | 0.0008 | 0.001 |  |
 
 ## 4. Key Findings
 
 ### Finding 1: Distribution
 
-28 appears 29 times, 36 appears 32 times, 38 appears 2 times.
-28 + 36 + 38 = 63 (with 1 missing).
+28 appears 29 times, 36 appears 31 times, 38 appears 2 times.
+28 + 36 + 38 = 62 (with 2 missing).
 
 ### Finding 2: Best predictor
 
-The feature with highest mutual information is **rank** (MI = 0.4387 bits, 37.5% of H(Q)).
+The feature with highest mutual information is **rank** (MI = 0.4417 bits, 37.7% of H(Q)).
 
 ### Finding 3: No single feature perfectly predicts Q
 
 ### Finding 4: Parity analysis
 
 - b₀⊕b₁ = 0: {36: 15, 28: 15, 38: 1}
-- b₀⊕b₁ = 1: {28: 14, 36: 17, 38: 1}
+- b₀⊕b₁ = 1: {28: 14, 36: 16, 38: 1}
 
 ### Finding 5: Palace yin/yang
 
-- yang palaces: {28: 15, 36: 15, 38: 1}
+- yang palaces: {28: 15, 36: 14, 38: 1}
 - yin palaces: {36: 17, 28: 14, 38: 1}
