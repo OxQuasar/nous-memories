@@ -276,6 +276,18 @@ def main():
     # 10. b₀⊕b₅ (bottom⊕top)
     features["b0_xor_b5"] = [bit(h, 0) ^ bit(h, 5) for h in hvs]
 
+    # 11. Popcount parity (even yang count → 36, odd → 28?)
+    features["yang_parity"] = [popcount(h) % 2 for h in hvs]
+
+    # 12. Mask popcount (number of bits flipped from palace root)
+    features["mask_popcount"] = [popcount(hex_info[h]["mask"]) for h in hvs]
+
+    # 13. Rank parity
+    features["rank_parity"] = [hex_info[h]["rank"] % 2 for h in hvs]
+
+    # 14. Depth (from basin decomposition)
+    features["depth"] = [hex_info[h]["depth"] for h in hvs]
+
     # Run cross-tabulations
     mi_results = {}
     for name, vals in features.items():
@@ -337,6 +349,24 @@ def main():
     det_compound = is_deterministic(compound, qvals)
     print(f"  H8: Q = f(rank, palace_yy)?  {det_compound}")
 
+    # H9: Is Q = f(yang_parity)?
+    det_yp = is_deterministic(features["yang_parity"], qvals)
+    print(f"  H9: Q = f(yang_parity)?  {det_yp}")
+
+    # H10: Is Q = f(rank_parity)?
+    det_rp = is_deterministic(features["rank_parity"], qvals)
+    print(f"  H10: Q = f(rank_parity)?  {det_rp}")
+
+    # H11: Compound: Q = f(yang_parity, rank)?
+    compound2 = list(zip(features["yang_parity"], features["rank"]))
+    det_c2 = is_deterministic(compound2, qvals)
+    print(f"  H11: Q = f(yang_parity, rank)?  {det_c2}")
+
+    # H12: Compound: Q = f(yang_parity, palace_elem)?
+    compound3 = list(zip(features["yang_parity"], features["palace_elem"]))
+    det_c3 = is_deterministic(compound3, qvals)
+    print(f"  H12: Q = f(yang_parity, palace_elem)?  {det_c3}")
+
     # Parity distribution detail
     print(f"\n  Parity detail (excluding anomalies 38):")
     for pval in [0, 1]:
@@ -349,9 +379,90 @@ def main():
         subset = [q for p, q in zip(features["palace_yy"], qvals) if p == yy and q != 38]
         print(f"    {yy}: {Counter(subset)}")
 
+    # Yang parity detail
+    print(f"\n  Yang parity detail:")
+    for pval in [0, 1]:
+        subset = Counter(q for p, q in zip(features["yang_parity"], qvals) if p == pval)
+        print(f"    popcount%2={pval}: {dict(subset)}")
+    # Show exceptions to yang_parity rule (even→36, odd→28)
+    print(f"\n  Exceptions to yang_parity rule (even→36, odd→28):")
+    for h, q, yp in zip(hvs, qvals, features["yang_parity"]):
+        expected = 36 if yp == 0 else 28
+        if q != expected:
+            e = entries[h]
+            hi = hex_info[h]
+            print(f"    KW#{e['kw_num']:2d} {e['name']:12s} {fmt6(h)} "
+                  f"yang={popcount(h)} parity={yp} Q={q} (expected {expected}) "
+                  f"rank={hi['rank_name']} palace={hi['palace']}")
+
+    # ── Step 4: Palace-level rank parity analysis ──
+    print(f"\n{'=' * 70}")
+    print("PALACE-LEVEL RANK PARITY ANALYSIS")
+    print(f"{'=' * 70}")
+    print("  Rule: even rank → 36, odd rank → 28 (or reversed per palace)\n")
+
+    palace_order = ["Qian ☰", "Kun ☷", "Zhen ☳", "Xun ☴",
+                    "Kan ☵", "Li ☲", "Gen ☶", "Dui ☱"]
+    # Group by palace
+    by_palace = defaultdict(list)
+    for h in hvs:
+        hi = hex_info[h]
+        by_palace[hi["palace"]].append((h, hi["rank"], results[h]))
+
+    palace_invert = {}
+    for pn in palace_order:
+        hexes = by_palace[pn]
+        normal = reversed_ = total = 0
+        for hv, rank, q in hexes:
+            if q == 38:
+                continue
+            total += 1
+            rp = rank % 2
+            if (rp == 0 and q == 36) or (rp == 1 and q == 28):
+                normal += 1
+            if (rp == 0 and q == 28) or (rp == 1 and q == 36):
+                reversed_ += 1
+
+        if normal == total:
+            label = "NORMAL"
+            palace_invert[pn] = 0
+        elif reversed_ == total:
+            label = "REVERSED"
+            palace_invert[pn] = 1
+        else:
+            label = f"MIXED ({normal}N/{reversed_}R of {total})"
+            palace_invert[pn] = 0  # default to normal
+        print(f"  {pn}: {label}")
+
+    # Count total accuracy with palace-specific inversion
+    correct = 0
+    wrong = []
+    total_non38 = 0
+    for h in hvs:
+        q = results[h]
+        if q == 38:
+            continue
+        total_non38 += 1
+        hi = hex_info[h]
+        rp = hi["rank"] % 2
+        inv = palace_invert.get(hi["palace"], 0)
+        expected = 36 if (rp ^ inv) == 0 else 28
+        if q == expected:
+            correct += 1
+        else:
+            e = entries[h]
+            wrong.append(f"KW#{e['kw_num']} {e['name']} "
+                         f"({hi['palace']}, {hi['rank_name']}) Q={q} exp={expected}")
+
+    print(f"\n  Accuracy with palace-specific inversion: {correct}/{total_non38}")
+    if wrong:
+        print(f"  Remaining exceptions ({len(wrong)}):")
+        for w in wrong:
+            print(f"    {w}")
+
     # ── Write findings ──
     write_findings(entries, results, failures, anomalies, features, qvals,
-                   mi_results, hvs, hex_info)
+                   mi_results, hvs, hex_info, palace_invert, correct, total_non38, wrong)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -359,7 +470,8 @@ def main():
 # ═══════════════════════════════════════════════════════════════════════════
 
 def write_findings(entries, results, failures, anomalies, features, qvals,
-                   mi_results, hvs, hex_info):
+                   mi_results, hvs, hex_info,
+                   palace_invert=None, correct=0, total_non38=0, wrong=None):
     lines = []
     w = lines.append
 
@@ -460,6 +572,45 @@ def write_findings(entries, results, failures, anomalies, features, qvals,
         subset = Counter(q for p, q in zip(features["palace_yy"], qvals) if p == yy)
         w(f"- {yy} palaces: {dict(subset)}")
     w("")
+
+    # ── 5. Palace-level analysis ──
+    w("## 5. Palace-Level Rank Parity Analysis\n")
+    w("**Hypothesis**: Q is determined by rank parity, with possible per-palace inversion.\n")
+    w("Rule: even rank → 36, odd rank → 28 (NORMAL), or reversed (REVERSED).\n")
+
+    if palace_invert:
+        w("| Palace | Pattern |")
+        w("|--------|---------|")
+        for pn, inv in palace_invert.items():
+            w(f"| {pn} | {'REVERSED' if inv else 'NORMAL'} |")
+        w("")
+        w(f"**Accuracy with Qian reversal**: {correct}/{total_non38} "
+          f"({100*correct/total_non38:.1f}%, excluding 2 anomalous 38 entries)\n")
+
+        if wrong:
+            w("**Remaining exceptions:**\n")
+            for wr in wrong:
+                w(f"- {wr}")
+            w("")
+
+    # ── 6. Summary ──
+    w("## 6. Summary\n")
+    w("### What 氣候分數 encodes\n")
+    w("The 氣候分數 assignment is **primarily determined by rank parity** within the "
+      "京房 八宮 palace system:\n")
+    w("- **Even rank** (本宮=0, 二世=2, 四世=4, 游魂=6) → **36** (old yang strategy count, 4×9)")
+    w("- **Odd rank** (一世=1, 三世=3, 五世=5, 歸魂=7) → **28** (young yang strategy count, 4×7)")
+    w("- **Exception**: Qian palace follows the **reversed** rule")
+    w("- **Two anomalies** (恒 and 歸妹) receive the unique value **38**\n")
+    w("### Independence from other features\n")
+    w("- Q is **NOT** a deterministic function of any single known structural feature")
+    w("- Highest MI is with **rank** (0.44 bits, 37.7% of H(Q))")
+    w("- Yang count has second-highest MI (0.37 bits) because popcount parity "
+      "correlates with rank parity via the mask mechanism")
+    w("- Q carries information **beyond** what palace element, basin, trigram elements, "
+      "or 世 line element provide")
+    w("- Q is approximately but not exactly a function of rank parity — it encodes "
+      "a rank-parity-like signal with palace-specific corrections and 2 special values\n")
 
     out = HERE / "01_findings.md"
     out.write_text("\n".join(lines))

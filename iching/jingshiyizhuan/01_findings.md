@@ -95,12 +95,16 @@ H(Q) = 1.1726 bits
 | Feature | MI (bits) | MI / H(Q) | Deterministic? |
 |---------|----------:|----------:|:--------------:|
 | rank | 0.4417 | 0.377 |  |
+| mask_popcount | 0.4216 | 0.360 |  |
 | yang_count | 0.3745 | 0.319 |  |
+| yang_parity | 0.3346 | 0.285 |  |
+| rank_parity | 0.3346 | 0.285 |  |
 | upper_trig_elem | 0.0753 | 0.064 |  |
 | shi_elem | 0.0561 | 0.048 |  |
 | basin | 0.0537 | 0.046 |  |
 | palace_elem | 0.0460 | 0.039 |  |
 | lower_trig_elem | 0.0410 | 0.035 |  |
+| depth | 0.0371 | 0.032 |  |
 | palace_yy | 0.0030 | 0.003 |  |
 | b0_xor_b5 | 0.0030 | 0.003 |  |
 | b0 | 0.0008 | 0.001 |  |
@@ -128,3 +132,78 @@ The feature with highest mutual information is **rank** (MI = 0.4417 bits, 37.7%
 
 - yang palaces: {28: 15, 36: 14, 38: 1}
 - yin palaces: {36: 17, 28: 14, 38: 1}
+
+## 5. Palace-Level Rank Parity Analysis
+
+**Hypothesis**: Q is determined by rank parity, with possible per-palace inversion.
+
+Rule: even rank → 36, odd rank → 28 (NORMAL), or reversed (REVERSED).
+
+| Palace | Pattern |
+|--------|---------|
+| Qian ☰ | REVERSED |
+| Kun ☷ | NORMAL |
+| Zhen ☳ | NORMAL |
+| Xun ☴ | NORMAL |
+| Kan ☵ | NORMAL |
+| Li ☲ | NORMAL |
+| Gen ☶ | NORMAL |
+| Dui ☱ | NORMAL |
+
+**Accuracy with Qian reversal**: 56/60 (93.3%, excluding 2 anomalous 38 entries)
+
+**Remaining exceptions:**
+
+- KW#45 Cui (Dui ☱, 二世) Q=28 exp=36
+- KW#31 Xian (Dui ☱, 三世) Q=36 exp=28
+- KW#26 Da Chu (Gen ☶, 二世) Q=28 exp=36
+- KW#56 Lu (Li ☲, 一世) Q=36 exp=28
+
+## 6. Summary
+
+### What 氣候分數 encodes
+
+The 氣候分數 assignment is **primarily determined by rank parity** within the 京房 八宮 palace system:
+
+- **Even rank** (本宮=0, 二世=2, 四世=4, 游魂=6) → **36** (old yang strategy count, 4×9)
+- **Odd rank** (一世=1, 三世=3, 五世=5, 歸魂=7) → **28** (young yang strategy count, 4×7)
+- **Exception**: Qian palace follows the **reversed** rule
+- **Two anomalies** (恒 and 歸妹) receive the unique value **38**
+
+### Independence from other features
+
+- Q is **NOT** a deterministic function of any single known structural feature
+- Highest MI is with **rank** (0.44 bits, 37.7% of H(Q))
+- Yang count has second-highest MI (0.37 bits) because popcount parity correlates with rank parity via the mask mechanism
+- Q carries information **beyond** what palace element, basin, trigram elements, or 世 line element provide
+- Q is approximately but not exactly a function of rank parity — it encodes a rank-parity-like signal with palace-specific corrections and 2 special values
+
+## 7. Algebraic Identity and Interpretation
+
+### yang_parity ≡ rank_parity (theorem)
+
+All palace roots are doubled trigrams → yang_count(root) = 2 × popcount(trigram) → always even. Since mask_popcount parity = rank parity (verified by enumeration), and yang_count(root ⊕ mask) parity = root_yang_parity ⊕ mask_popcount_parity = 0 ⊕ rank_parity = rank_parity. QED.
+
+This means yang_parity and rank_parity are not merely correlated — they are **algebraically identical** for all 64 hexagrams. The MI analysis confirms this (both have MI = 0.3346 bits with Q).
+
+### The Qian inversion: yang potency vs. yang quantity
+
+For 7 palaces: even rank (root-proximal, less mutated) → 36. Root-like hexagrams get the yang-dominant count.
+
+For Qian: odd rank (more mutated from root) → 36. Departures from the all-yang root get the yang-dominant count.
+
+Interpretation: 氣候分數 measures **yang potency** (whether yang energy is operative), not yang quantity. In Qian palace, the root is already maximally yang — proximity to it is saturation, not strength. The departures from 乾 are where yang *acts* (interacting with newly introduced yin), hence they receive 36.
+
+Kun follows the normal rule because Kun's even-rank assignments (36 to root-proximal) already measure yang contrast in a yin context — yang potency is strongest near the yin root where any yang is active.
+
+### 38 anomalies: likely corruption of 28
+
+恒 (Zhen ☳, 三世) and 歸妹 (Dui ☱, 歸魂) are trigram-complement palaces, both odd rank → expected 28. The scribal error 二十八 → 三十八 (二→三 in cursive) is graphically plausible and produces a cleaner system (58/60 accuracy vs 56/60).
+
+### Adjacent-rank swap in Dui palace
+
+Cui (rank 2, Q=28) and Xian (rank 3, Q=36) — swapping their values makes both correct. Likely scribal transposition of adjacent entries.
+
+### Assessment
+
+氣候分數 is the **shallowest** of the five dropped layers. It is a parity decoration on the palace walk, not an independent coordinate. The sole structural content beyond rank parity is the Qian inversion, encoding yang potency vs. quantity. It does **not** resolve the 2/5 seasonal ceiling from huozhulin probe 6.
