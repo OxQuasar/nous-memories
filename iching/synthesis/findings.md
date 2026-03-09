@@ -6,7 +6,11 @@ Structure → incompleteness → curvature → specificity → meaning.
 
 The hexagram system (Z₂⁶) supports exactly two primitive projections — shell (trigram pair) and core (nuclear overlap) — proven algebraically, confirmed historically. Two divination traditions (火珠林, 梅花) exhaust these projections. They are orthogonal instruments that cannot see each other's signals. The system creates structured incompleteness at every level — missing types, seasonal ceilings, rotating shadows — and this incompleteness is the mechanism of discrimination, not a defect.
 
-One bridge connects the algebra to the oldest textual layer: 凶 (irreversible misfortune) maps to algebraic irreversibility (convergence to absorbing attractor). This is the single point where mathematical structure touches semantic content.
+Two bridges connect the algebra to the oldest textual layer:
+1. **凶×basin** (core channel): algebraic irreversibility (convergence to absorbing attractor) maps to textual irreversibility (凶). p=0.0002.
+2. **吉×生体** (shell channel): receiving generation (用 nourishes 體) maps to auspiciousness (吉). p=0.007, basin-independent.
+
+Both bridges encode *process* (convergence, generation), not *state* (element identity, category membership). The texts track the direction of flow, not the labels on the nodes.
 
 ---
 
@@ -14,7 +18,7 @@ One bridge connects the algebra to the oldest textual layer: 凶 (irreversible m
 
 ### Decision: MIXED — Layer-Dependent
 
-The oldest textual layers of the I Ching partially encode algebraic structure, but only through a single narrow channel: the placement of 凶. All deeper algebraic constructs are invisible to the texts at the semantic level.
+The oldest textual layers of the I Ching partially encode algebraic structure, but only through two narrow channels: the placement of 凶 and the distribution of 吉 relative to 體/用 flow direction. All deeper algebraic constructs are invisible to the texts at the semantic level.
 
 ### Confirmed Results
 
@@ -31,7 +35,7 @@ The algebraic structure of the binary encoding does not predict what the judgmen
 - 吉 × line: p=0.0002; 凶 × line: p=0.0013; 无咎 × line: p=0.034; 厲 × line: p=0.047
 - Line position carries valence meaning — well-known in the tradition (初=beginning, 上=excess, 二/五=central).
 
-**凶 × algebraic coordinates: The standout bridge.**
+**凶 × algebraic coordinates: The core bridge.**
 - 凶 × basin: χ²=17.44, p=0.0002
 - 凶 × I-component: χ²=16.22, p=0.0001
 - Basin and I-component are **identical partitions** on Z₂⁶: I=0 ↔ {Kun, Qian} basins, I=1 ↔ Cycle basin
@@ -83,13 +87,36 @@ The 凶 rate within I=0 follows a non-monotonic depth gradient (χ²=8.63, p=0.0
 
 **Structural reading:** The attractors are not dangerous because they *are* stasis — danger is past. Depth-1 hexagrams are the boundary layer where absorption is imminent but not yet complete; every depth-1 hexagram has 凶 in at least one line (range: 1–3 of 6 lines). The six depth-1 hexagrams (剝 復 頤 大過 夬 姤) are traditionally recognized as liminal or extreme — the depth gradient confirms this is algebraically grounded, not merely interpretive convention.
 
+### Depth Boundary: Distributional, Not Thematic (Probe 7)
+
+The 凶×basin signal is **distributional** — WHERE 凶 appears — not **thematic** — what the 凶 texts SAY. Analysis of word frequencies in 凶 texts by depth category shows no significant differentiation:
+
+| Word group | depth-1 rate | others rate | p-value |
+|------------|-------------|-------------|---------|
+| threshold (終, 極, 窮, 盡) | 0.143 | 0.000 | 0.069 |
+| irreversibility (不可, 滅, 亡) | 0.071 | 0.105 | 1.000 |
+| transformation (反, 復, 變) | 0.143 | 0.026 | 0.173 |
+| excess (過, 大, 盈) | 0.143 | 0.158 | 1.000 |
+
+Threshold words (終, 極, 窮) show a marginal trend (p=0.069) but with only 52 total 凶 texts, statistical power is limited. The depth-1 凶 texts are dominated by 剝 (3 凶 lines: systematic peeling away) and 頤 (3 凶 lines: nourishment extremes) — both thematically liminal, but this is circumstantial, not statistically confirmed.
+
+The bridge from algebra to text is through *placement frequency*, not through *content modulation*. The algebra constrains WHERE 凶 concentrates; the specific imagery within 凶 texts is textually determined.
+
 ---
 
 ## 2. The Curvature of the Reading Space
 
-### The Orthogonality Wall (Probe 2)
+### The Orthogonality Wall (Probe 2) — Refined
 
-The contextual obstruction measure (dark contexts where F=0 for a given season × 用神 pair) does not correlate with 凶. All three measures — n_zero, F_variance, F_total — fail to reach significance. But the *reason* they fail is the most important finding.
+**The wall holds at the 納甲 level, not the element level.** This distinction matters:
+
+- **納甲** branch assignments factor through trigram *identity* — they read bits [0:2] and [3:5] independently as trigram labels, then assign branches by lookup. The branch system is **perfectly orthogonal** to the inner bits (b₁..b₄) that determine basin and depth.
+
+- **Trigram elements** are a coarser projection that maps 8 trigrams → 5 elements. Because elements are determined by all 3 bits of each trigram, the element assignment carries partial information about the boundary bits b₂ and b₃ that also determine basin membership. The 體/用 relation (which uses trigram elements) **leaks approximately 7% basin information** through these shared boundary bits.
+
+Concretely: 比和 hexagrams (same element in both trigrams) are enriched in fixed-point basins (57.1% vs 50% baseline), while 生体/体生用 hexagrams are depleted (41.7%). This leakage means any signal through 體/用 must be checked for basin confounding before being called independent.
+
+The contextual obstruction measure (dark contexts where F=0 for a given season × 用神 pair) does not correlate with 凶. All three measures — n_zero, F_variance, F_total — fail to reach significance. The *reason* they fail is the orthogonality wall:
 
 **F_total = 12 for all 64 hexagrams.** A conservation law: each line's element is 旺/相 in exactly 2 of 5 seasons, and each line belongs to exactly one 六親 type. So 6 lines × 2 seasons = 12 active slots, invariant across hexagrams.
 
@@ -101,14 +128,12 @@ The contextual obstruction measure (dark contexts where F=0 for a given season �
 - n_zero by basin: H=2.95, p=0.23
 - F_variance by basin: H=2.08, p=0.35
 
-**The wall.** The null result is predicted by the 納甲 ⊥ 互卦 orthogonality discovered in the huozhulin workflow:
+**The wall.** The null result is predicted by the 納甲 ⊥ 互卦 orthogonality:
 
 - **凶 lives in the inner bits** (b₂, b₃): basin, depth, I-component
 - **六親 × 旺相 lives in the trigram pair** (outer projection): 納甲 assigns branch elements based on trigram identity, which reads bits [0:3] and [3:6] independently
 
 These are **algebraically orthogonal projections** of Z₂⁶. No measure built from 六親 × seasonal strength can access basin/depth information, because the 火珠林 operational layer is structurally blind to the inner-bit dynamics that govern 凶 placement.
-
-This confirms and extends the huozhulin finding: the two divination traditions (梅花 = inner-bit reader, 火珠林 = outer-bit reader) are not just different lenses on the same structure, they are **orthogonal instruments** that cannot see each other's signals.
 
 ### Three Sources of Curvature
 
@@ -394,7 +419,104 @@ As a function (not partition), complement preserves ALL 五行 information: MI =
 
 ---
 
-## 6. The Unified Picture: What Does the Hexagram System Model?
+## 6. The Second Bridge: 吉×生体 (Probe 8)
+
+### The Shell Channel
+
+The 體/用 five-phase relation — computed for each of 384 (hexagram, line) states by treating the given line as 動爻 — significantly predicts 吉 distribution:
+
+| Relation | n | 吉 | 吉 rate | 凶 | 凶 rate |
+|----------|---|---|---------|---|---------|
+| 比和 | 84 | 19 | 0.226 | 17 | 0.202 |
+| 生体 | 72 | 32 | **0.444** | 5 | 0.069 |
+| 体生用 | 72 | 23 | 0.319 | 6 | 0.083 |
+| 克体 | 78 | 21 | 0.269 | 11 | 0.141 |
+| 体克用 | 78 | 23 | 0.295 | 13 | 0.167 |
+
+**生体** (用 nourishes 體) carries the highest 吉 rate (44.4%), nearly double the 比和 rate (22.6%). The signal is significant: 生体 vs all others, Fisher p=0.007, OR=2.10.
+
+### Basin-Independence (Confirmed)
+
+The 比和→凶 trend raised a confound concern: 比和 hexagrams cluster in fixed-point basins (57.1% vs 50% baseline), where 凶 already concentrates. Basin-controlled tests resolve this:
+
+**生体→吉 survives basin stratification:**
+
+| Basin | 生体 吉 rate | Others 吉 rate | OR | Direction |
+|-------|-------------|---------------|-----|-----------|
+| Kun | 46.7% | 25.9% | 2.50 | Same |
+| Qian | 40.0% | 27.0% | 1.80 | Same |
+| Cycle | 45.2% | 31.3% | 1.82 | Same |
+
+The effect is consistent across all three basins with similar odds ratios (1.80–2.50). It is **not a basin confound** — the signal points *against* what basin composition would predict (生体 is depleted in fixed-point basins, yet carries elevated 吉 regardless).
+
+**比和→凶 is confounded:** The elevated 凶 rate in 比和 (20.2%) is at least partly explained by 比和's enrichment in fixed-point basins. Within-basin tests show a residual tendency (same direction, OR 1.38–2.31) but none are individually significant (all p>0.24). Underpowered.
+
+### The Tradition's Interpolation
+
+The 梅花易數 is explicit: "體用比和，則百事順遂" (比和 = all matters proceed smoothly); "比和為吉克為凶" (比和 IS auspicious, 克 IS inauspicious). The data contradicts this.
+
+The tradition got **one thing right**: 生体→吉 (receiving nourishment is favorable). But it collapsed a directional signal into a symmetric schema:
+- **Actual signal**: 生体 (44.4%) ≠ 体生用 (31.9%) for 吉 — *direction matters*
+- **Traditional claim**: 比和 = good, 克 = bad — *category matters, direction doesn't*
+
+The error is specifically **symmetrization**: the 生/克 cycle IS directional (σ is a directed cycle on Z₅), but the traditional schema collapses it into three symmetric categories (比和, 生, 克), then assigns valence to categories rather than directions. The texts track the *directed* relation (who generates whom), not the symmetric category (whether generation or overcoming is occurring).
+
+This is a general pattern: later systematization tends to symmetrize directional signals. The 11th c. 梅花 framework projected state-level categories onto texts that encode process-level directionality. The meaning gap is partly this process/state confusion introduced by systematization.
+
+### Updated Bridge Inventory
+
+| Bridge | Channel | Signal | p-value | Independence |
+|--------|---------|--------|---------|-------------|
+| 凶×basin | Core (inner bits) | Convergence → danger | 0.0002 | — |
+| 吉×生体 | Shell (trigram elements) | Receiving generation → fortune | 0.007 | Basin-independent (confirmed) |
+
+Both bridges encode **process**: convergence (a process toward stasis) maps to 凶; generation flowing toward the 體 (a process of nourishment) maps to 吉. State-level descriptions (which basin, which element) are the algebra's coordinates but not what the texts track. The texts encode the *direction of flow*, not the *identity of kind*.
+
+---
+
+## 7. The King Wen Sequence and 序卦 (Probes 6, 9)
+
+### Algebraic Structure of the KW Sequence (Probe 6)
+
+**Basin locality is significant** (38/63 = 60.3% consecutive pairs in same basin, p<0.0001) **but entirely driven by within-pair structure.** KW partners (reversal or complement) tend to preserve basin by construction. Between-pair transitions (even→odd KW numbers) show **no basin locality** (10/31 = 32.3%, p=0.76).
+
+**Depth transitions** are overwhelmingly Δ=0 (51/63 = 81%), but this is partly explained by the 4:12:48 depth distribution (most hexagrams are depth-2).
+
+**Five-phase relations** between consecutive hexagrams are at chance for both upper and lower trigrams (比和 rate: upper p=0.87, lower p=0.79). The KW sequence is element-neutral in its ordering.
+
+**Conclusion:** The King Wen sequence encodes no algebraic walk beyond the pairing rule. The between-pair ordering is algebraically random.
+
+### 序卦 Narrative Classification (Probe 9)
+
+The 63 transition narratives in the 序卦傳 were classified by reasoning type:
+
+| Category | All (63) | Between-pair (31) | Pattern |
+|----------|---------|-------------------|---------|
+| consequence | 27 | 11 | "X必Y" — X necessarily leads to Y |
+| accumulation | 14 | 9 | "然後/而後" — sequential buildup |
+| reversal | 12 | 5 | "物不可以終X" — cannot remain X forever |
+| negation | 5 | 3 | "不可不/不可以苟" — cannot fail to act |
+| origin | 2 | 1 | Cosmogonic framing |
+| analogy | 2 | 1 | "莫若" — nothing compares to |
+
+**All four cross-tabulations are null** (between-pair transitions only, n=31):
+
+| Test | χ² | p-value |
+|------|-----|---------|
+| Category × basin preservation | 6.74 | 0.35 |
+| Category × depth direction | 8.89 | 0.71 |
+| Category × I-component | 7.89 | 0.25 |
+| Category × meeting-point 五行 | 23.4 | 0.49 |
+
+**Reversal narratives** split cleanly: 7/12 are within-pair (where algebraic reversal IS the construction), 5/12 are between-pair (conceptual reversal without algebraic correspondence). The tradition uses the same rhetorical form ("物不可以終X") regardless of whether the transition involves algebraic reversal, complement, or neither.
+
+**Consequence narratives × 生 relations:** No association. Causal reasoning ("X必Y") does not track five-phase 生 relations between trigrams (Fisher p=1.00 for between-pair).
+
+**Conclusion:** The 序卦傳's reasoning operates in a purely semantic register. The narrative logic (reversal, consequence, accumulation) is independent of the algebraic transition properties (basin, depth, element relation). The commentary tradition's explanation for WHY hexagrams are ordered does not encode the mathematical structure of how they relate.
+
+---
+
+## 8. The Unified Picture: What Does the Hexagram System Model?
 
 ### The Instrument, Not the World
 
@@ -409,7 +531,7 @@ The hexagram system is not a model of the world. It is a model of the **constrai
 
 These are the only two, proven algebraically (closure theorem on Z₂⁶ with 3+3 factorization) and confirmed historically (Chinese sources classify hexagram divination into exactly these two methods).
 
-**Orthogonality:** Shell and core are structurally blind to each other. The 火珠林 operational layer cannot see basin/depth/凶. The 梅花 核 projection cannot see 六親/seasonal strength. They are complementary instruments — each exhausts an independent subspace.
+**Orthogonality — refined:** The orthogonality wall holds at the **納甲 level**: branch assignments factor through trigram *identity*, reading bits [0:2] and [3:5] independently. The 火珠林 operational layer (六親 × 旺相 × 日辰) is perfectly blind to inner-bit dynamics (basin, depth, 凶). However, **trigram elements** (a coarser projection used by 梅花's 體/用 evaluation) share boundary bits (b₂, b₃) with the basin-determining inner space, creating ~7% leakage. The wall's location is at the encoding level (納甲), not the element-projection level (體/用).
 
 **Temporal modulation:** Time enters the two systems at different pipeline stages:
 - 梅花 curves the domain: time selects which hexagram is cast
@@ -427,21 +549,39 @@ Three independent sources of curvature prevent any single reading context from r
 | Seasonal ceiling | Torsion | Z₅ rotation forces width-2 window | Softened to 4/5 by 日辰 (theorem) |
 | 用神 projection | Reduction | Question collapses 5→1 | No — question-fixed |
 
-**用神 projection now quantified (Probe 3).** Of 256 (hexagram × 用神) contexts: 45.3% provide full diagnostics (triad complete), 19.9% are structurally blind (用神 absent), 34.8% are degraded (partial triad). The projection's asymmetric domain weighting (官鬼=8, 妻財=7, 子孫=4, 父母=3, 兄弟=0) concentrates practical impact: Gen palace is dark for 68% of question domains, while palaces with 兄弟 as a missing type have benign darkness.
-
 The residual curvature (1/5 shadow after 日辰) is the minimal aperture: one element always dark, rotating with the day. The system can illuminate everything except one form of the past — either what gave rise to the present (休) or what the present has already overcome (死). Opposition (囚) is always representable.
 
-### The Single Bridge to Meaning
+### Two Bridges to Meaning
 
-The 凶×basin correlation is the one point where algebraic structure touches textual content:
+Two narrow channels connect algebraic structure to the oldest textual layer:
 
-- **Algebraic irreversibility** (convergence to absorbing attractor, I=0) → **textual irreversibility** (凶)
-- **Algebraic dynamism** (oscillation, I=1) → **textual safety** (low 凶)
-- The depth gradient peaks at the boundary layer: depth-1 hexagrams (one step from absorption) carry 36.1% 凶 — the penultimate moment is most dangerous
+**Bridge 1 (Core): Convergence → Danger**
+- Algebraic irreversibility (I=0, convergence to absorbing attractor) → textual irreversibility (凶)
+- p=0.0002; depth gradient peaks at boundary layer (36.1% at depth-1)
+- Never formalized by any tradition — connects structures separated by 700+ years
 
-This bridge is narrow but deep. It connects across 700+ years of independent development (爻辭 ~9th c. BC → algebraic formalization ~1st c. BC). The I-bit partition surfaces through three independent channels: distributional encoding in the line texts, semantic clustering in the 彖傳, and formal mathematical structure in the 京房 palace system.
+**Bridge 2 (Shell): Receiving Generation → Fortune**
+- 體/用 relation where 用 generates 體 (生体) → elevated 吉 (44.4% vs 27.6%)
+- p=0.007; basin-independent (confirmed by stratified analysis)
+- Partially recovered by 梅花 tradition, but distorted by symmetrization (比和→吉 is not in the texts)
 
-**The tautology at the heart:** 易 means "change." The system marks the extinction of change as its deepest danger. Algebraic and textual traditions agree: stasis is where irreversible harm occurs. Creation is a process, never a destination.
+**What they share:** Both bridges encode *process* — convergence, generation — not *state*. The texts track the direction of flow (who converges where, who generates whom), not the labels on the nodes (which basin, which element). This is the system's "theory of value": fortune is flow, misfortune is stasis.
+
+**What floats free:** Everything else. Semantic content, specific imagery, narrative logic, sequence ordering — all algebraically unconstrained. The algebra provides the grammar (curvature, incompleteness, projection); the texts provide the vocabulary (specific situations, advice, imagery). The grammar constrains which vocabularies are compatible (凶 concentrates at convergence boundaries, 吉 tracks generation flow), but does not determine the specific words.
+
+**The four definitive nulls:**
+1. Embedding-space: no algebraic partition predicts textual semantic content (all p>0.4)
+2. Thematic content: 凶 texts don't differ by depth category in what they SAY (all p>0.07)
+3. KW sequence: between-pair ordering is algebraically random (p=0.76)
+4. 序卦 narratives: transition reasoning is independent of algebraic transition types (all p>0.25)
+
+These nulls bound the bridges from above. We know not just where meaning touches algebra, but where it definitively doesn't.
+
+### The Tradition's Interpolation
+
+Later systematization introduces interpretive distortion through **symmetrization of directional signals**. The 生/克 cycle IS directional (σ is a directed cycle on Z₅). The texts track directed relations (生体 ≠ 体生用 for 吉). But the 梅花 tradition collapsed this into symmetric categories (比和 = good, 克 = bad), losing the directional information. The original texts care about *who generates whom*, not *whether generation or overcoming is occurring*.
+
+This process/state confusion is general: the texts encode process (flow direction, convergence trajectory), while later frameworks encode state (element identity, category membership). The gap between original texts and later interpretation is partly this collapse of dynamics into statics.
 
 ### Zero Free Parameters
 
@@ -451,29 +591,33 @@ The system was discovered, not designed.
 
 ---
 
-## 7. What Remains Open
+## 9. What Remains Open
 
 ### Resolved by this workflow
 
-**Q1 (decisive test):** MIXED. The algebra is partially descriptive (凶×basin, trigram-relation clustering) but not fully — deeper constructs (kernel, 互卦, palace) don't predict textual semantics. The bridge is through irreversibility only.
+**Q1 (decisive test):** MIXED — two narrow bridges. The algebra is partially descriptive (凶×basin through core, 吉×生体 through shell) but not fully — deeper constructs (kernel, 互卦, palace) don't predict textual semantics. Both bridges encode process (convergence, generation), not state.
 
-**Q4 (breaking the ceiling):** POSITIVE. 日辰 breaks 2/5 → 4/5 (theorem). Orthogonality wall untouched. Pipeline asymmetry: 梅花 curves domain, 火珠林 curves codomain.
+**Q4 (breaking the ceiling):** POSITIVE. 日辰 breaks 2/5 → 4/5 (theorem). Orthogonality wall untouched at 納甲 level. Pipeline asymmetry: 梅花 curves domain, 火珠林 curves codomain.
 
-**Q2 (curvature):** PARTIALLY RESOLVED. Contextual obstruction measured — F_total = 12 conservation law, orthogonality wall confirmed. Formal H¹ computation not done but the structural picture is clear: three independent curvature sources, none eliminable, now characterized.
+**Q2 (curvature):** PARTIALLY RESOLVED. Contextual obstruction measured — F_total = 12 conservation law, orthogonality wall confirmed at 納甲 level (refined: leaks at element level). Formal H¹ computation not done but the structural picture is clear: three independent curvature sources, none eliminable, now characterized.
 
 **Q5 (用神 mapping):** FORMALIZED. The 用神 projection is structured by the 六親 生/克 cycle. Auxiliary = σ⁻¹, 忌神 = 克-preimage. 兄弟 (self) excluded as reference frame with 0 domains. Domain weighting 8:7:4:3:0 creates differential darkness. Temporal treatment uniform (2/5 suppression). Triad diagnostic gradient: 45.3% full / 19.9% blind / 34.8% degraded. Gen palace darkest (68% of domains unreadable).
 
 **Q6 (S₄ × 五行):** RESOLVED. Complement is an anti-automorphism of the 五行 cycle (π∘σ∘π⁻¹ = σ⁻¹). Preserves parity universally. Preserves 比/生/克 category (0% disruption). Semantic gap tracks concrete identity, not abstract relational structure. MI: 0.750 bits lost = within-pair identity (Layer 2), cosmological choice (Layer 3) preserved. Wood = fixed point of anti-automorphism.
 
+**Q7 (shell bridge):** POSITIVE. 吉×生体 is a genuine second bridge (p=0.007, OR=2.10, basin-independent). The 梅花 tradition partially recovered it but distorted it through symmetrization. 比和→凶 trend is confounded with basin and underpowered.
+
+**Q8 (凶 content at boundary):** NULL. The 凶×basin signal is distributional (WHERE 凶 appears), not thematic (WHAT 凶 says). No word category differentiates by depth at α=0.05.
+
+**Q9 (KW sequence):** NULL. Between-pair ordering is algebraically random. Basin locality is entirely within-pair. 序卦 narrative reasoning is independent of algebraic transitions (all p>0.25).
+
 ### Still open
 
 **H¹ computation.** All three curvature sources are now quantified. A formal H¹ computation would test whether curvature varies with basin, palace rank, or 互 depth. Lower priority given the orthogonality wall — the shell-layer presheaf cannot see core-layer dynamics.
 
-**Is the curvature optimized?** Does the specific combination of Z₅ torsion + palace holes + 用神 projection maximize discriminative power for some natural measure? Or is any nonzero curvature sufficient?
+**Is the curvature optimized?** Does the specific combination of Z₅ torsion + palace holes + 用神 projection maximize discriminative power for some natural measure? Or is any nonzero curvature sufficient? No natural measure of "discriminative power" has been identified to optimize against.
 
-**Cycle basin's updated epistemological status.** Previously "permanently conflicted" (Fire↔Water never simultaneously strong). Now "usually conflicted, resolved 27% of the time by 日辰." Does this change the relative difficulty of reading Cycle-basin hexagrams in practice?
-
-**The 納甲 modification.** 京氏易傳 uses universal upper trigram offset +3 (63/63 match). 火珠林 modified to 乾/坤-only, gaining one unique 六親 word (58→59/64). When and why did this modification occur?
+**The 納甲 modification.** 京氏易傳 uses universal upper trigram offset +3 (63/63 match). 火珠林 modified to 乾/坤-only, gaining one unique 六親 word (58→59/64). When and why did this modification occur? Historical question requiring textual survey of intermediate sources (唐–宋).
 
 ---
 
@@ -481,14 +625,118 @@ The system was discovered, not designed.
 
 | Category | Claims | Status |
 |----------|--------|--------|
-| **Proven** | 4/5 ceiling theorem; shell⊥core orthogonality; F_total=12 conservation; closure to two systems; zero free parameters; 3+3 factorization uniqueness; 五行 three-layer decomposition; basin=I-component identity; complement anti-automorphism (π∘σ∘π⁻¹=σ⁻¹); parity preservation under complement; 用神 temporal symmetry (2/5 suppression uniform) | Exact computation or theorem over finite structures |
-| **Measured** | 凶×basin (p=0.0002); depth gradient (p=0.013); 彖傳×basin clustering (p=0.045); 大象×palace clustering (p=0.027); embedding null results (all p>0.4); 梅花 χ²=481.8 non-uniformity; triad diagnostic gradient (45.3% full / 19.9% blind / 34.8% degraded); Gen palace 68% darkness; domain-weighted blindness equalization (官鬼=80, 子孫=84, 妻財=77, 父母=27) | Statistical tests or exact computation on textual/structural data |
-| **Structural interpretation** | "Irreversibility maps irreversibility"; "curvature is the information channel"; "rotating shadow is mechanism not defect"; pipeline asymmetry framing; "querrent as excluded reference frame"; "concrete > abstract in Tuan semantics"; "Wood as hinge of 生↔克 conjugation" | Pattern descriptions of proven facts — interpretive framing suggested, not proven |
-| **Conjectured** | Curvature is optimized | Consistent with findings but not tested |
+| **Proven** | 4/5 ceiling theorem; 納甲⊥core orthogonality; F_total=12 conservation; closure to two systems; zero free parameters; 3+3 factorization uniqueness; 五行 three-layer decomposition; basin=I-component identity; complement anti-automorphism (π∘σ∘π⁻¹=σ⁻¹); parity preservation under complement; 用神 temporal symmetry (2/5 suppression uniform); 體/用 leaks ~7% basin information through boundary bits | Exact computation or theorem over finite structures |
+| **Measured** | 凶×basin (p=0.0002); 吉×生体 (p=0.007, basin-independent); depth gradient (p=0.013); 彖傳×basin clustering (p=0.045); 大象×palace clustering (p=0.027); embedding null results (all p>0.4); 凶 thematic null (all p>0.07); KW between-pair basin null (p=0.76); 序卦 narrative null (all p>0.25); 比和 basin confound (57.1% vs 50%); 梅花 χ²=481.8 non-uniformity; triad diagnostic gradient (45.3% full / 19.9% blind / 34.8% degraded); Gen palace 68% darkness | Statistical tests or exact computation on textual/structural data |
+| **Structural interpretation** | "Irreversibility maps irreversibility"; "receiving generation maps fortune"; "curvature is the information channel"; "rotating shadow is mechanism not defect"; pipeline asymmetry framing; "querrent as excluded reference frame"; "concrete > abstract in Tuan semantics"; "Wood as hinge of 生↔克 conjugation"; "texts encode process, later frameworks encode state"; "tradition symmetrizes directional signals" | Pattern descriptions of proven facts — interpretive framing suggested, not proven |
+| **Conjectured** | Curvature is optimized; 比和→凶 is a residual signal beyond basin confound (directional but underpowered) | Consistent with findings but not confirmed |
 
 ---
 
-*Scripts: `01_decisive_test.py`, `02_probe1b_dissect.py`, `02b_depth_gradient.py`, `03_presheaf_h1.py`, `04_ceiling_break.py`, `05_s4_wuxing.py`, `05_yongshen.py`*
+*Scripts: `01_decisive_test.py`, `02_probe1b_dissect.py`, `02b_depth_gradient.py`, `03_presheaf_h1.py`, `04_ceiling_break.py`, `05_s4_wuxing.py`, `05_yongshen.py`, `06_meaning_probes.py`, `07_xugua_transitions.py`*
 *Data: `embeddings.npz` (guaci, yaoci, daxiang, tuan embeddings)*
-*Raw results: `probe1_results.md`, `probe1b_results.md`, `probe2_results.md`, `probe3_results.md`, `probe4_results.md`, `probe5_results.md`*
+*Raw results: `probe1_results.md`, `probe1b_results.md`, `probe2_results.md`, `probe3_results.md`, `probe4_results.md`, `probe5_results.md`, `probe6_meaning_results.md`, `probe7_xugua_results.md`*
 *Cross-references: huozhulin/findings.md, wuxing/summary_findings.md, jingshiyizhuan/findings.md*
+
+## Interpretation
+
+ > what is the relation of the 六親 and keyholes to the S4 Z3/Z6 space?
+
+The connection is a chain of projections:                                      
+```                                    
+Z₂⁶ (hexagram, 64 states)            
+  ↓ shell projection                  
+Z₂³ × Z₂³ (trigram pair 8×8)
+  ↓ 五行 map on each trigram                         
+Z₅ × Z₅ (element pair, 5×5)
+  ↓ directed difference on 生克 ring
+Z₅ (六親 type, 5 states)
+  ↓ seasonal width-2 window   
+{lit, dark} (the keyhole view)    
+```                              
+
+ > what is the nature of the Z5 space?                                                                                                            
+It's the space of *ways things can relate through transformation*.    
+
+On the 生 ring: Wood → Fire → Earth → Metal → Water → Wood.
+
+**Next (+1) = what emerges from you.** Your natural product:                                                                                      
+- Wood burns → Fire                                                                                                                               
+- Fire chars → Earth (ash)                                                                                                                        
+- Earth yields → Metal (ore)                                                                                                                      
+- Metal collects → Water (condensation)                                                                                                           
+- Water nourishes → Wood (growth)                                                                                                                 
+                                                                                                                                                  
+**One after next (+2) = what you overpower.** Your target of control:                                                                             
+- Wood penetrates → Earth (roots break soil)                                                                                                      
+- Fire melts → Metal                                                                                                                              
+- Earth dams → Water                                                                                                                              
+- Metal cuts → Wood                                                                                                                               
+- Water extinguishes → Fire 
+
+ > so the divination goes from what is the situation - > what are the relations of control and becoming?                                          
+Exactly. The hexagram is a snapshot — 6 bits, a frozen state. The divination transforms it into a network of directed flows.                      
+                                                                                                                                                  
+**State → Relations → Active relations → Your relation**                                                                                          
+                                                                                                                                                  
+The snapshot tells you nothing by itself. "Lines 1,3,4 are yang, lines 2,5,6 are yin" is just a pattern. The divination pipeline is:              
+                                                                                                                                                  
+1. **What is the situation?** → hexagram (static, 6 bits)                                                                                         
+2. **What are the components?** → 納甲 gives each line an element (still static, but now typed)                                                   
+3. **Who is doing what to whom?** → 六親 maps elements to relational roles on Z₅ (now directional: generating, controlling, yielding, threatening)
+4. **Which flows are active now?** → season/日辰 filters which relations have force right now (temporal)                                          
+5. **Which flow matters to you?** → 用神 selects the one relation relevant to your question (intentional)                                         
+                                                                                                                                                  
+The output isn't "you are in hexagram 23." The output is: "the thing threatening you is strong this season, the thing that could protect you is   
+absent, and the thing you're trying to control is weakened by today's branch."                                                                    
+                                                                                                                                                  
+From a point in Z₂⁶ to a story about flows on Z₅. From *what is* to *what is becoming what, and who has power over whom*.                         
+                                                                                                                                                  
+And the deepest finding confirms this is what the texts always encoded. 凶 = flow stopping (convergence to fixed point). 吉 = flow arriving (receiving generation). The system's value judgment is: flow is good, stasis is dangerous. The divination reads a situation not for what it is, but for where it's going and whether the flows sustain or collapse.
+
+ > 6 elements to  5 transformations
+
+Six lines. Five relation types. The sixth line doesn't add a sixth type — it creates a *duplicate*. Somewhere on the Z₅ ring, two lines occupy the same relational position.                    
+
+**火珠林 pipeline (recap):**                                                                                                                      
+```                                                                                                                                               
+Z₂⁶ → 6 lines → 6 elements (via 納甲) → 6 positions on Z₅ → filter by time → filter by question                                                   
+```                                                                                                                                               
+6 parallel samples of the relational ring. Spatial. All lines active simultaneously.                                                              
+                                                                                                                                                  
+**梅花 pipeline:**           
+**梅花 pipeline:**                                                                                                                                
+```                                                                                                                                               
+Time/observation                                                                                                                                  
+  ↓ modular arithmetic (mod 8, mod 8, mod 6)                                                                                                      
+Z₂⁶ + 動爻 position                                                                                                                               
+  ↓ 動爻 splits hexagram into 體 (self) and 用 (other)                                                                                            
+體 ∈ Z₂³  ←— the reference frame (fixed, like 兄弟)                                                                                               
+  ↓ extract layers                                                                                                                                
+用 ∈ Z₂³     (surface — the other, what you face now)                                                                                             
+互 ∈ Z₂³ × Z₂³  (hidden — the inner structure, lines 2-5)                                                                                         
+變 ∈ Z₂³     (outcome — flip 動爻, where it's going)                                                                                              
+  ↓ 五行 map on each trigram                                                                                                                      
+體 → element₀ ∈ Z₅  (your position on the ring)                                                                                                   
+用 → element₁ ∈ Z₅                                                                                                                                
+互上 → element₂ ∈ Z₅                                                                                                                              
+互下 → element₃ ∈ Z₅                                                                                                                              
+變 → element₄ ∈ Z₅                                                                                                                                
+  ↓ directed difference to 體                                                                                                                     
+5 directed relations on Z₅: each is 生体/体生/克体/体克/比和                                                                                      
+```
+                                                    
+**The structural difference:**
+
+火珠林 takes 6 *line-level* samples of Z₅ simultaneously. It asks: what's the relational landscape right now? All 6 probes active at once,        
+filtered by time and question.           
+
+梅花 takes 4-5 *trigram-level* samples of Z₅ sequentially. It asks: what's the relational trajectory? Each sample is a different *depth layer*:   
+                                                                                                                                                  
+| Layer | What it reads | Temporal meaning |                                                                                                      
+|-------|-------------|-----------------|                                                                                                         
+| 用 | surface trigram | present situation |                                                                                                      
+| 互下 | inner lower | hidden process |                                                                                                           
+| 互上 | inner upper | hidden process |                                                                                                           
+| 變 | flipped trigram | where it's heading |                                                                                                                                                                                                                   
+Each layer yields one relation to 體 on Z₅. The reading is: 用 generates 體 (present nourishes you) but 互 克 體 (hidden structure threatens) and 
+變 generates 體 (outcome favorable). A *trajectory through Z₅ relations*, not a snapshot.        

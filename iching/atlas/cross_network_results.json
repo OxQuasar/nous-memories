@@ -1,0 +1,1437 @@
+{
+  "complement_pairs": [
+    {
+      "h": 0,
+      "c": 63,
+      "h_name": "Kun",
+      "c_name": "Qian",
+      "h_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "c_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 1,
+      "c": 62,
+      "h_name": "Fu",
+      "c_name": "Gou",
+      "h_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "c_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 2,
+      "c": 61,
+      "h_name": "Shi",
+      "c_name": "Tong Ren",
+      "h_cell": [
+        "Water",
+        "Earth"
+      ],
+      "c_cell": [
+        "Fire",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 3,
+      "c": 60,
+      "h_name": "Lin",
+      "c_name": "Dun",
+      "h_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "c_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 4,
+      "c": 59,
+      "h_name": "Qian",
+      "c_name": "Lu",
+      "h_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "c_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 5,
+      "c": 58,
+      "h_name": "Ming Yi",
+      "c_name": "Song",
+      "h_cell": [
+        "Fire",
+        "Earth"
+      ],
+      "c_cell": [
+        "Water",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 6,
+      "c": 57,
+      "h_name": "Sheng",
+      "c_name": "Wu Wang",
+      "h_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "c_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 7,
+      "c": 56,
+      "h_name": "Tai",
+      "c_name": "Pi",
+      "h_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "c_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 8,
+      "c": 55,
+      "h_name": "Yu",
+      "c_name": "Xiao Chu",
+      "h_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "c_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 9,
+      "c": 54,
+      "h_name": "Zhen",
+      "c_name": "Xun",
+      "h_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "c_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 10,
+      "c": 53,
+      "h_name": "Xie",
+      "c_name": "Jia Ren",
+      "h_cell": [
+        "Water",
+        "Wood"
+      ],
+      "c_cell": [
+        "Fire",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 11,
+      "c": 52,
+      "h_name": "Gui Mei",
+      "c_name": "Jian",
+      "h_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "c_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 12,
+      "c": 51,
+      "h_name": "Xiao Guo",
+      "c_name": "Zhong Fu",
+      "h_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "c_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 13,
+      "c": 50,
+      "h_name": "Feng",
+      "c_name": "Huan",
+      "h_cell": [
+        "Fire",
+        "Wood"
+      ],
+      "c_cell": [
+        "Water",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 14,
+      "c": 49,
+      "h_name": "Heng",
+      "c_name": "Yi",
+      "h_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "c_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 15,
+      "c": 48,
+      "h_name": "Da Zhuang",
+      "c_name": "Guan",
+      "h_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "c_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 16,
+      "c": 47,
+      "h_name": "Bi",
+      "c_name": "Da You",
+      "h_cell": [
+        "Earth",
+        "Water"
+      ],
+      "c_cell": [
+        "Metal",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 17,
+      "c": 46,
+      "h_name": "Zhun",
+      "c_name": "Ding",
+      "h_cell": [
+        "Wood",
+        "Water"
+      ],
+      "c_cell": [
+        "Wood",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 18,
+      "c": 45,
+      "h_name": "Kan",
+      "c_name": "Li",
+      "h_cell": [
+        "Water",
+        "Water"
+      ],
+      "c_cell": [
+        "Fire",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 19,
+      "c": 44,
+      "h_name": "Jie",
+      "c_name": "Lu",
+      "h_cell": [
+        "Metal",
+        "Water"
+      ],
+      "c_cell": [
+        "Earth",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 20,
+      "c": 43,
+      "h_name": "Jian",
+      "c_name": "Kui",
+      "h_cell": [
+        "Earth",
+        "Water"
+      ],
+      "c_cell": [
+        "Metal",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 21,
+      "c": 42,
+      "h_name": "Ji Ji",
+      "c_name": "Wei Ji",
+      "h_cell": [
+        "Fire",
+        "Water"
+      ],
+      "c_cell": [
+        "Water",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 22,
+      "c": 41,
+      "h_name": "Jing",
+      "c_name": "Shi He",
+      "h_cell": [
+        "Wood",
+        "Water"
+      ],
+      "c_cell": [
+        "Wood",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 23,
+      "c": 40,
+      "h_name": "Xu",
+      "c_name": "Jin",
+      "h_cell": [
+        "Metal",
+        "Water"
+      ],
+      "c_cell": [
+        "Earth",
+        "Fire"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 24,
+      "c": 39,
+      "h_name": "Cui",
+      "c_name": "Da Chu",
+      "h_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "c_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 25,
+      "c": 38,
+      "h_name": "Sui",
+      "c_name": "Gu",
+      "h_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "c_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 26,
+      "c": 37,
+      "h_name": "Kun",
+      "c_name": "Bi",
+      "h_cell": [
+        "Water",
+        "Metal"
+      ],
+      "c_cell": [
+        "Fire",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 27,
+      "c": 36,
+      "h_name": "Dui",
+      "c_name": "Gen",
+      "h_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "c_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 28,
+      "c": 35,
+      "h_name": "Xian",
+      "c_name": "Sun",
+      "h_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "c_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 29,
+      "c": 34,
+      "h_name": "Ge",
+      "c_name": "Meng",
+      "h_cell": [
+        "Fire",
+        "Metal"
+      ],
+      "c_cell": [
+        "Water",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 30,
+      "c": 33,
+      "h_name": "Da Guo",
+      "c_name": "Yi",
+      "h_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "c_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "pi_verified": true
+    },
+    {
+      "h": 31,
+      "c": 32,
+      "h_name": "Guai",
+      "c_name": "Bo",
+      "h_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "c_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "pi_verified": true
+    }
+  ],
+  "complement_pi": {
+    "Wood": "Wood",
+    "Fire": "Water",
+    "Earth": "Metal",
+    "Metal": "Earth",
+    "Water": "Fire"
+  },
+  "complement_pi_errors": 0,
+  "reverse_palindromes": [
+    {
+      "h": 0,
+      "name": "Kun",
+      "cell": [
+        "Earth",
+        "Earth"
+      ]
+    },
+    {
+      "h": 12,
+      "name": "Xiao Guo",
+      "cell": [
+        "Earth",
+        "Wood"
+      ]
+    },
+    {
+      "h": 18,
+      "name": "Kan",
+      "cell": [
+        "Water",
+        "Water"
+      ]
+    },
+    {
+      "h": 30,
+      "name": "Da Guo",
+      "cell": [
+        "Wood",
+        "Metal"
+      ]
+    },
+    {
+      "h": 33,
+      "name": "Yi",
+      "cell": [
+        "Wood",
+        "Earth"
+      ]
+    },
+    {
+      "h": 45,
+      "name": "Li",
+      "cell": [
+        "Fire",
+        "Fire"
+      ]
+    },
+    {
+      "h": 51,
+      "name": "Zhong Fu",
+      "cell": [
+        "Metal",
+        "Wood"
+      ]
+    },
+    {
+      "h": 63,
+      "name": "Qian",
+      "cell": [
+        "Metal",
+        "Metal"
+      ]
+    }
+  ],
+  "reverse_pairs": [
+    {
+      "h": 1,
+      "r": 32,
+      "h_name": "Fu",
+      "r_name": "Bo",
+      "h_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 2,
+      "r": 16,
+      "h_name": "Shi",
+      "r_name": "Bi",
+      "h_cell": [
+        "Water",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Water"
+      ],
+      "coord_swap": true
+    },
+    {
+      "h": 3,
+      "r": 48,
+      "h_name": "Lin",
+      "r_name": "Guan",
+      "h_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 4,
+      "r": 8,
+      "h_name": "Qian",
+      "r_name": "Yu",
+      "h_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 5,
+      "r": 40,
+      "h_name": "Ming Yi",
+      "r_name": "Jin",
+      "h_cell": [
+        "Fire",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Fire"
+      ],
+      "coord_swap": true
+    },
+    {
+      "h": 6,
+      "r": 24,
+      "h_name": "Sheng",
+      "r_name": "Cui",
+      "h_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 7,
+      "r": 56,
+      "h_name": "Tai",
+      "r_name": "Pi",
+      "h_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "r_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "coord_swap": true
+    },
+    {
+      "h": 9,
+      "r": 36,
+      "h_name": "Zhen",
+      "r_name": "Gen",
+      "h_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "r_cell": [
+        "Earth",
+        "Earth"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 10,
+      "r": 20,
+      "h_name": "Xie",
+      "r_name": "Jian",
+      "h_cell": [
+        "Water",
+        "Wood"
+      ],
+      "r_cell": [
+        "Earth",
+        "Water"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 11,
+      "r": 52,
+      "h_name": "Gui Mei",
+      "r_name": "Jian",
+      "h_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "r_cell": [
+        "Earth",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 13,
+      "r": 44,
+      "h_name": "Feng",
+      "r_name": "Lu",
+      "h_cell": [
+        "Fire",
+        "Wood"
+      ],
+      "r_cell": [
+        "Earth",
+        "Fire"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 14,
+      "r": 28,
+      "h_name": "Heng",
+      "r_name": "Xian",
+      "h_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "r_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 15,
+      "r": 60,
+      "h_name": "Da Zhuang",
+      "r_name": "Dun",
+      "h_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "r_cell": [
+        "Earth",
+        "Metal"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 17,
+      "r": 34,
+      "h_name": "Zhun",
+      "r_name": "Meng",
+      "h_cell": [
+        "Wood",
+        "Water"
+      ],
+      "r_cell": [
+        "Water",
+        "Earth"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 19,
+      "r": 50,
+      "h_name": "Jie",
+      "r_name": "Huan",
+      "h_cell": [
+        "Metal",
+        "Water"
+      ],
+      "r_cell": [
+        "Water",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 21,
+      "r": 42,
+      "h_name": "Ji Ji",
+      "r_name": "Wei Ji",
+      "h_cell": [
+        "Fire",
+        "Water"
+      ],
+      "r_cell": [
+        "Water",
+        "Fire"
+      ],
+      "coord_swap": true
+    },
+    {
+      "h": 22,
+      "r": 26,
+      "h_name": "Jing",
+      "r_name": "Kun",
+      "h_cell": [
+        "Wood",
+        "Water"
+      ],
+      "r_cell": [
+        "Water",
+        "Metal"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 23,
+      "r": 58,
+      "h_name": "Xu",
+      "r_name": "Song",
+      "h_cell": [
+        "Metal",
+        "Water"
+      ],
+      "r_cell": [
+        "Water",
+        "Metal"
+      ],
+      "coord_swap": true
+    },
+    {
+      "h": 25,
+      "r": 38,
+      "h_name": "Sui",
+      "r_name": "Gu",
+      "h_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "r_cell": [
+        "Wood",
+        "Earth"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 27,
+      "r": 54,
+      "h_name": "Dui",
+      "r_name": "Xun",
+      "h_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "r_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 29,
+      "r": 46,
+      "h_name": "Ge",
+      "r_name": "Ding",
+      "h_cell": [
+        "Fire",
+        "Metal"
+      ],
+      "r_cell": [
+        "Wood",
+        "Fire"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 31,
+      "r": 62,
+      "h_name": "Guai",
+      "r_name": "Gou",
+      "h_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "r_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 35,
+      "r": 49,
+      "h_name": "Sun",
+      "r_name": "Yi",
+      "h_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "r_cell": [
+        "Wood",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 37,
+      "r": 41,
+      "h_name": "Bi",
+      "r_name": "Shi He",
+      "h_cell": [
+        "Fire",
+        "Earth"
+      ],
+      "r_cell": [
+        "Wood",
+        "Fire"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 39,
+      "r": 57,
+      "h_name": "Da Chu",
+      "r_name": "Wu Wang",
+      "h_cell": [
+        "Metal",
+        "Earth"
+      ],
+      "r_cell": [
+        "Wood",
+        "Metal"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 43,
+      "r": 53,
+      "h_name": "Kui",
+      "r_name": "Jia Ren",
+      "h_cell": [
+        "Metal",
+        "Fire"
+      ],
+      "r_cell": [
+        "Fire",
+        "Wood"
+      ],
+      "coord_swap": false
+    },
+    {
+      "h": 47,
+      "r": 61,
+      "h_name": "Da You",
+      "r_name": "Tong Ren",
+      "h_cell": [
+        "Metal",
+        "Fire"
+      ],
+      "r_cell": [
+        "Fire",
+        "Metal"
+      ],
+      "coord_swap": true
+    },
+    {
+      "h": 55,
+      "r": 59,
+      "h_name": "Xiao Chu",
+      "r_name": "Lu",
+      "h_cell": [
+        "Metal",
+        "Wood"
+      ],
+      "r_cell": [
+        "Metal",
+        "Metal"
+      ],
+      "coord_swap": false
+    }
+  ],
+  "wuxing_classes_full": {
+    "Earth,Earth|Earth,Earth|Kun|Earth": [
+      0
+    ],
+    "Wood,Earth|Earth,Earth|Kun|Earth": [
+      1
+    ],
+    "Water,Earth|Wood,Earth|Kun|Water": [
+      2
+    ],
+    "Metal,Earth|Wood,Earth|Kun|Earth": [
+      3,
+      35
+    ],
+    "Earth,Earth|Water,Wood|Cycle|Metal": [
+      4
+    ],
+    "Fire,Earth|Water,Wood|Cycle|Water": [
+      5
+    ],
+    "Wood,Earth|Metal,Wood|Cycle|Wood": [
+      6,
+      38
+    ],
+    "Metal,Earth|Metal,Wood|Cycle|Earth": [
+      7,
+      39
+    ],
+    "Earth,Wood|Earth,Water|Cycle|Wood": [
+      8
+    ],
+    "Wood,Wood|Earth,Water|Cycle|Wood": [
+      9
+    ],
+    "Water,Wood|Fire,Water|Cycle|Wood": [
+      10
+    ],
+    "Metal,Wood|Fire,Water|Cycle|Metal": [
+      11
+    ],
+    "Earth,Wood|Wood,Metal|Qian|Metal": [
+      12
+    ],
+    "Fire,Wood|Wood,Metal|Qian|Water": [
+      13
+    ],
+    "Wood,Wood|Metal,Metal|Qian|Wood": [
+      14
+    ],
+    "Metal,Wood|Metal,Metal|Qian|Earth": [
+      15
+    ],
+    "Earth,Water|Earth,Earth|Kun|Earth": [
+      16
+    ],
+    "Wood,Water|Earth,Earth|Kun|Water": [
+      17
+    ],
+    "Water,Water|Wood,Earth|Kun|Water": [
+      18
+    ],
+    "Metal,Water|Wood,Earth|Kun|Water": [
+      19
+    ],
+    "Earth,Water|Water,Fire|Cycle|Metal": [
+      20
+    ],
+    "Fire,Water|Water,Fire|Cycle|Water": [
+      21
+    ],
+    "Wood,Water|Metal,Fire|Cycle|Wood": [
+      22
+    ],
+    "Metal,Water|Metal,Fire|Cycle|Earth": [
+      23
+    ],
+    "Earth,Metal|Earth,Wood|Cycle|Metal": [
+      24,
+      56
+    ],
+    "Wood,Metal|Earth,Wood|Cycle|Wood": [
+      25,
+      57
+    ],
+    "Water,Metal|Fire,Wood|Cycle|Metal": [
+      26
+    ],
+    "Metal,Metal|Fire,Wood|Cycle|Metal": [
+      27
+    ],
+    "Earth,Metal|Wood,Metal|Qian|Metal": [
+      28,
+      60
+    ],
+    "Fire,Metal|Wood,Metal|Qian|Water": [
+      29
+    ],
+    "Wood,Metal|Metal,Metal|Qian|Wood": [
+      30
+    ],
+    "Metal,Metal|Metal,Metal|Qian|Earth": [
+      31
+    ],
+    "Earth,Earth|Earth,Earth|Kun|Metal": [
+      32
+    ],
+    "Wood,Earth|Earth,Earth|Kun|Wood": [
+      33
+    ],
+    "Water,Earth|Wood,Earth|Kun|Fire": [
+      34
+    ],
+    "Earth,Earth|Water,Wood|Cycle|Earth": [
+      36
+    ],
+    "Fire,Earth|Water,Wood|Cycle|Earth": [
+      37
+    ],
+    "Earth,Fire|Earth,Water|Cycle|Metal": [
+      40
+    ],
+    "Wood,Fire|Earth,Water|Cycle|Wood": [
+      41
+    ],
+    "Water,Fire|Fire,Water|Cycle|Fire": [
+      42
+    ],
+    "Metal,Fire|Fire,Water|Cycle|Earth": [
+      43
+    ],
+    "Earth,Fire|Wood,Metal|Qian|Fire": [
+      44
+    ],
+    "Fire,Fire|Wood,Metal|Qian|Fire": [
+      45
+    ],
+    "Wood,Fire|Metal,Metal|Qian|Fire": [
+      46
+    ],
+    "Metal,Fire|Metal,Metal|Qian|Metal": [
+      47
+    ],
+    "Earth,Wood|Earth,Earth|Kun|Metal": [
+      48
+    ],
+    "Wood,Wood|Earth,Earth|Kun|Wood": [
+      49
+    ],
+    "Water,Wood|Wood,Earth|Kun|Fire": [
+      50
+    ],
+    "Metal,Wood|Wood,Earth|Kun|Earth": [
+      51
+    ],
+    "Earth,Wood|Water,Fire|Cycle|Earth": [
+      52
+    ],
+    "Fire,Wood|Water,Fire|Cycle|Wood": [
+      53
+    ],
+    "Wood,Wood|Metal,Fire|Cycle|Wood": [
+      54
+    ],
+    "Metal,Wood|Metal,Fire|Cycle|Wood": [
+      55
+    ],
+    "Water,Metal|Fire,Wood|Cycle|Fire": [
+      58
+    ],
+    "Metal,Metal|Fire,Wood|Cycle|Earth": [
+      59
+    ],
+    "Fire,Metal|Wood,Metal|Qian|Fire": [
+      61
+    ],
+    "Wood,Metal|Metal,Metal|Qian|Metal": [
+      62
+    ],
+    "Metal,Metal|Metal,Metal|Qian|Metal": [
+      63
+    ]
+  },
+  "wuxing_classes_coarse": {
+    "Earth,Earth|Kun": [
+      0,
+      32
+    ],
+    "Wood,Earth|Kun": [
+      1,
+      33
+    ],
+    "Water,Earth|Kun": [
+      2,
+      34
+    ],
+    "Metal,Earth|Kun": [
+      3,
+      35
+    ],
+    "Earth,Earth|Cycle": [
+      4,
+      36
+    ],
+    "Fire,Earth|Cycle": [
+      5,
+      37
+    ],
+    "Wood,Earth|Cycle": [
+      6,
+      38
+    ],
+    "Metal,Earth|Cycle": [
+      7,
+      39
+    ],
+    "Earth,Wood|Cycle": [
+      8,
+      52
+    ],
+    "Wood,Wood|Cycle": [
+      9,
+      54
+    ],
+    "Water,Wood|Cycle": [
+      10
+    ],
+    "Metal,Wood|Cycle": [
+      11,
+      55
+    ],
+    "Earth,Wood|Qian": [
+      12
+    ],
+    "Fire,Wood|Qian": [
+      13
+    ],
+    "Wood,Wood|Qian": [
+      14
+    ],
+    "Metal,Wood|Qian": [
+      15
+    ],
+    "Earth,Water|Kun": [
+      16
+    ],
+    "Wood,Water|Kun": [
+      17
+    ],
+    "Water,Water|Kun": [
+      18
+    ],
+    "Metal,Water|Kun": [
+      19
+    ],
+    "Earth,Water|Cycle": [
+      20
+    ],
+    "Fire,Water|Cycle": [
+      21
+    ],
+    "Wood,Water|Cycle": [
+      22
+    ],
+    "Metal,Water|Cycle": [
+      23
+    ],
+    "Earth,Metal|Cycle": [
+      24,
+      56
+    ],
+    "Wood,Metal|Cycle": [
+      25,
+      57
+    ],
+    "Water,Metal|Cycle": [
+      26,
+      58
+    ],
+    "Metal,Metal|Cycle": [
+      27,
+      59
+    ],
+    "Earth,Metal|Qian": [
+      28,
+      60
+    ],
+    "Fire,Metal|Qian": [
+      29,
+      61
+    ],
+    "Wood,Metal|Qian": [
+      30,
+      62
+    ],
+    "Metal,Metal|Qian": [
+      31,
+      63
+    ],
+    "Earth,Fire|Cycle": [
+      40
+    ],
+    "Wood,Fire|Cycle": [
+      41
+    ],
+    "Water,Fire|Cycle": [
+      42
+    ],
+    "Metal,Fire|Cycle": [
+      43
+    ],
+    "Earth,Fire|Qian": [
+      44
+    ],
+    "Fire,Fire|Qian": [
+      45
+    ],
+    "Wood,Fire|Qian": [
+      46
+    ],
+    "Metal,Fire|Qian": [
+      47
+    ],
+    "Earth,Wood|Kun": [
+      48
+    ],
+    "Wood,Wood|Kun": [
+      49
+    ],
+    "Water,Wood|Kun": [
+      50
+    ],
+    "Metal,Wood|Kun": [
+      51
+    ],
+    "Fire,Wood|Cycle": [
+      53
+    ]
+  },
+  "liuqin_collisions": [
+    {
+      "word": [
+        "妻財",
+        "官鬼",
+        "兄弟",
+        "兄弟",
+        "妻財",
+        "子孫"
+      ],
+      "hexes": [
+        1,
+        7
+      ],
+      "hex_names": [
+        "Fu",
+        "Tai"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "basin",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "父母",
+        "官鬼",
+        "兄弟",
+        "兄弟",
+        "妻財",
+        "子孫"
+      ],
+      "hexes": [
+        3,
+        51
+      ],
+      "hex_names": [
+        "Lin",
+        "Zhong Fu"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "父母",
+        "官鬼",
+        "兄弟",
+        "父母",
+        "子孫",
+        "兄弟"
+      ],
+      "hexes": [
+        4,
+        59
+      ],
+      "hex_names": [
+        "Qian",
+        "Lu"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "palace_element",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "妻財",
+        "父母",
+        "官鬼",
+        "妻財",
+        "父母",
+        "官鬼"
+      ],
+      "hexes": [
+        6,
+        54
+      ],
+      "hex_names": [
+        "Sheng",
+        "Xun"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "父母",
+        "兄弟",
+        "妻財",
+        "妻財",
+        "父母",
+        "官鬼"
+      ],
+      "hexes": [
+        49,
+        55
+      ],
+      "hex_names": [
+        "Yi",
+        "Xiao Chu"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "basin",
+        "inner_val"
+      ]
+    }
+  ]
+}

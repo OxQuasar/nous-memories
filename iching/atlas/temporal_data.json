@@ -1,0 +1,3303 @@
+{
+  "seasons": {
+    "Spring": {
+      "season_element": "Wood",
+      "strengths": {
+        "旺": "Wood",
+        "相": "Fire",
+        "休": "Water",
+        "囚": "Metal",
+        "死": "Earth"
+      },
+      "active_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "excluded_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "dark",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "dark",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "counts": {
+        "active": 4,
+        "partial": 12,
+        "dark": 9
+      }
+    },
+    "Summer": {
+      "season_element": "Fire",
+      "strengths": {
+        "旺": "Fire",
+        "相": "Earth",
+        "休": "Wood",
+        "囚": "Water",
+        "死": "Metal"
+      },
+      "active_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "excluded_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "dark",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "dark",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    "Late_Summer": {
+      "season_element": "Earth",
+      "strengths": {
+        "旺": "Earth",
+        "相": "Metal",
+        "休": "Fire",
+        "囚": "Wood",
+        "死": "Water"
+      },
+      "active_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "excluded_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "dark",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "dark",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    "Autumn": {
+      "season_element": "Metal",
+      "strengths": {
+        "旺": "Metal",
+        "相": "Water",
+        "休": "Earth",
+        "囚": "Fire",
+        "死": "Wood"
+      },
+      "active_elements": [
+        "Metal",
+        "Water"
+      ],
+      "excluded_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "dark",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "dark",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    "Winter": {
+      "season_element": "Water",
+      "strengths": {
+        "旺": "Water",
+        "相": "Wood",
+        "休": "Metal",
+        "囚": "Earth",
+        "死": "Fire"
+      },
+      "active_elements": [
+        "Water",
+        "Wood"
+      ],
+      "excluded_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "dark",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "dark",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "counts": {
+        "active": 4,
+        "partial": 12,
+        "dark": 9
+      }
+    }
+  },
+  "day_branches": {
+    "子": {
+      "element": "Water",
+      "promotes": [
+        "Water",
+        "Wood"
+      ]
+    },
+    "丑": {
+      "element": "Earth",
+      "promotes": [
+        "Earth",
+        "Metal"
+      ]
+    },
+    "寅": {
+      "element": "Wood",
+      "promotes": [
+        "Fire",
+        "Wood"
+      ]
+    },
+    "卯": {
+      "element": "Wood",
+      "promotes": [
+        "Fire",
+        "Wood"
+      ]
+    },
+    "辰": {
+      "element": "Earth",
+      "promotes": [
+        "Earth",
+        "Metal"
+      ]
+    },
+    "巳": {
+      "element": "Fire",
+      "promotes": [
+        "Earth",
+        "Fire"
+      ]
+    },
+    "午": {
+      "element": "Fire",
+      "promotes": [
+        "Earth",
+        "Fire"
+      ]
+    },
+    "未": {
+      "element": "Earth",
+      "promotes": [
+        "Earth",
+        "Metal"
+      ]
+    },
+    "申": {
+      "element": "Metal",
+      "promotes": [
+        "Metal",
+        "Water"
+      ]
+    },
+    "酉": {
+      "element": "Metal",
+      "promotes": [
+        "Metal",
+        "Water"
+      ]
+    },
+    "戌": {
+      "element": "Earth",
+      "promotes": [
+        "Earth",
+        "Metal"
+      ]
+    },
+    "亥": {
+      "element": "Water",
+      "promotes": [
+        "Water",
+        "Wood"
+      ]
+    }
+  },
+  "states": [
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "子",
+      "day_element": "Water",
+      "active_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "丑",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "寅",
+      "day_element": "Wood",
+      "active_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "dark",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "dark",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 4,
+        "partial": 12,
+        "dark": 9
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "卯",
+      "day_element": "Wood",
+      "active_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "dark",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "dark",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 4,
+        "partial": 12,
+        "dark": 9
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "辰",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "巳",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "午",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "未",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "申",
+      "day_element": "Metal",
+      "active_elements": [
+        "Fire",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Earth"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "酉",
+      "day_element": "Metal",
+      "active_elements": [
+        "Fire",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Earth"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "戌",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Spring",
+      "season_element": "Wood",
+      "day_branch": "亥",
+      "day_element": "Water",
+      "active_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "子",
+      "day_element": "Water",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "丑",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "寅",
+      "day_element": "Wood",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "卯",
+      "day_element": "Wood",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Metal",
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "辰",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "巳",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "dark",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "dark",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "午",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "dark",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "dark",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "dark",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "dark",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "未",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "申",
+      "day_element": "Metal",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "dark": 1,
+        "partial": 8,
+        "active": 16
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "酉",
+      "day_element": "Metal",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "dark": 1,
+        "partial": 8,
+        "active": 16
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "戌",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Summer",
+      "season_element": "Fire",
+      "day_branch": "亥",
+      "day_element": "Water",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "子",
+      "day_element": "Water",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "丑",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "dark",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "dark",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "寅",
+      "day_element": "Wood",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "卯",
+      "day_element": "Wood",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Water"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "辰",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "dark",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "dark",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "巳",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "午",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "未",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "dark",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "dark",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "申",
+      "day_element": "Metal",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "酉",
+      "day_element": "Metal",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "戌",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "dark",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "dark",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "dark",
+        "(Water,Fire)": "dark",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "dark"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Late_Summer",
+      "season_element": "Earth",
+      "day_branch": "亥",
+      "day_element": "Water",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "子",
+      "day_element": "Water",
+      "active_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "丑",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "寅",
+      "day_element": "Wood",
+      "active_elements": [
+        "Fire",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Earth"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "卯",
+      "day_element": "Wood",
+      "active_elements": [
+        "Fire",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Earth"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "辰",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "巳",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "dark": 1,
+        "partial": 8,
+        "active": 16
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "午",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "active",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "active",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "dark": 1,
+        "partial": 8,
+        "active": 16
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "未",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "申",
+      "day_element": "Metal",
+      "active_elements": [
+        "Metal",
+        "Water"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "dark",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "dark",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "酉",
+      "day_element": "Metal",
+      "active_elements": [
+        "Metal",
+        "Water"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Earth",
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "dark",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "dark",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 9,
+        "partial": 12,
+        "active": 4
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "戌",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Fire",
+        "Wood"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "dark",
+        "(Wood,Fire)": "dark",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "partial",
+        "(Fire,Wood)": "dark",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "partial",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "dark": 4,
+        "partial": 12,
+        "active": 9
+      }
+    },
+    {
+      "season": "Autumn",
+      "season_element": "Metal",
+      "day_branch": "亥",
+      "day_element": "Water",
+      "active_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "子",
+      "day_element": "Water",
+      "active_elements": [
+        "Water",
+        "Wood"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "dark",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "dark",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 4,
+        "partial": 12,
+        "dark": 9
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "丑",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "寅",
+      "day_element": "Wood",
+      "active_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "卯",
+      "day_element": "Wood",
+      "active_elements": [
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "辰",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "巳",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "午",
+      "day_element": "Fire",
+      "active_elements": [
+        "Earth",
+        "Fire",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "active",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "active",
+        "(Fire,Fire)": "active",
+        "(Fire,Earth)": "active",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "active",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "active",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "active",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": true,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "未",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "申",
+      "day_element": "Metal",
+      "active_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "酉",
+      "day_element": "Metal",
+      "active_elements": [
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 3,
+      "excluded_elements": [
+        "Earth",
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "partial",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "partial",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 9,
+        "partial": 12,
+        "dark": 4
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "戌",
+      "day_element": "Earth",
+      "active_elements": [
+        "Earth",
+        "Metal",
+        "Water",
+        "Wood"
+      ],
+      "active_count": 4,
+      "excluded_elements": [
+        "Fire"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "active",
+        "(Wood,Metal)": "active",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "partial",
+        "(Fire,Metal)": "partial",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "active",
+        "(Earth,Fire)": "partial",
+        "(Earth,Earth)": "active",
+        "(Earth,Metal)": "active",
+        "(Earth,Water)": "active",
+        "(Metal,Wood)": "active",
+        "(Metal,Fire)": "partial",
+        "(Metal,Earth)": "active",
+        "(Metal,Metal)": "active",
+        "(Metal,Water)": "active",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "active",
+        "(Water,Metal)": "active",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 16,
+        "partial": 8,
+        "dark": 1
+      }
+    },
+    {
+      "season": "Winter",
+      "season_element": "Water",
+      "day_branch": "亥",
+      "day_element": "Water",
+      "active_elements": [
+        "Water",
+        "Wood"
+      ],
+      "active_count": 2,
+      "excluded_elements": [
+        "Earth",
+        "Fire",
+        "Metal"
+      ],
+      "cell_status": {
+        "(Wood,Wood)": "active",
+        "(Wood,Fire)": "partial",
+        "(Wood,Earth)": "partial",
+        "(Wood,Metal)": "partial",
+        "(Wood,Water)": "active",
+        "(Fire,Wood)": "partial",
+        "(Fire,Fire)": "dark",
+        "(Fire,Earth)": "dark",
+        "(Fire,Metal)": "dark",
+        "(Fire,Water)": "partial",
+        "(Earth,Wood)": "partial",
+        "(Earth,Fire)": "dark",
+        "(Earth,Earth)": "dark",
+        "(Earth,Metal)": "dark",
+        "(Earth,Water)": "partial",
+        "(Metal,Wood)": "partial",
+        "(Metal,Fire)": "dark",
+        "(Metal,Earth)": "dark",
+        "(Metal,Metal)": "dark",
+        "(Metal,Water)": "partial",
+        "(Water,Wood)": "active",
+        "(Water,Fire)": "partial",
+        "(Water,Earth)": "partial",
+        "(Water,Metal)": "partial",
+        "(Water,Water)": "active"
+      },
+      "fire_water_both": false,
+      "cell_counts": {
+        "active": 4,
+        "partial": 12,
+        "dark": 9
+      }
+    }
+  ],
+  "summary": {
+    "active_size_distribution": {
+      "3": 24,
+      "4": 24,
+      "2": 12
+    },
+    "mean_active_cells": 10.8,
+    "mean_partial_cells": 10.4,
+    "mean_dark_cells": 3.8,
+    "fire_water_both_count": 16,
+    "active_cell_count_dist": {
+      "9": 24,
+      "16": 24,
+      "4": 12
+    }
+  }
+}

@@ -1,0 +1,1701 @@
+{
+  "entropies": {
+    "surface_cell": 4.5,
+    "hu_cell": 3.5,
+    "surface_relation": 2.319477,
+    "hu_relation": 2.048795,
+    "basin": 1.5,
+    "depth": 1.014098,
+    "palace": 3.0,
+    "palace_element": 2.25,
+    "rank": 3.0,
+    "i_component": 1.0,
+    "hu_attractor": 2.0,
+    "inner_val": 4.0,
+    "liuqin_word": 5.84375
+  },
+  "mi_matrix": {
+    "surface_cell": {
+      "surface_cell": 4.5,
+      "hu_cell": 2.5,
+      "surface_relation": 2.319477,
+      "hu_relation": 1.267545,
+      "basin": 0.59375,
+      "depth": 0.475188,
+      "palace": 1.75,
+      "palace_element": 1.46109,
+      "rank": 1.8125,
+      "i_component": 0.1875,
+      "hu_attractor": 1.0625,
+      "inner_val": 3.0,
+      "liuqin_word": 4.34375
+    },
+    "hu_cell": {
+      "surface_cell": 2.5,
+      "hu_cell": 3.5,
+      "surface_relation": 0.616657,
+      "hu_relation": 2.048795,
+      "basin": 1.5,
+      "depth": 0.561278,
+      "palace": 1.17218,
+      "palace_element": 0.719361,
+      "rank": 0.5,
+      "i_component": 1.0,
+      "hu_attractor": 1.89859,
+      "inner_val": 3.5,
+      "liuqin_word": 3.375
+    },
+    "surface_relation": {
+      "surface_cell": 2.319477,
+      "hu_cell": 0.616657,
+      "surface_relation": 2.319477,
+      "hu_relation": 0.294184,
+      "basin": 0.020287,
+      "depth": 0.104305,
+      "palace": 0.179157,
+      "palace_element": 0.069477,
+      "rank": 0.975727,
+      "i_component": 0.012516,
+      "hu_attractor": 0.038837,
+      "inner_val": 0.944477,
+      "liuqin_word": 2.194477
+    },
+    "hu_relation": {
+      "surface_cell": 1.267545,
+      "hu_cell": 2.048795,
+      "surface_relation": 0.294184,
+      "hu_relation": 2.048795,
+      "basin": 0.643156,
+      "depth": 0.110073,
+      "palace": 0.458777,
+      "palace_element": 0.193457,
+      "rank": 0.143156,
+      "i_component": 0.393156,
+      "hu_attractor": 0.775705,
+      "inner_val": 2.048795,
+      "liuqin_word": 1.923795
+    },
+    "basin": {
+      "surface_cell": 0.59375,
+      "hu_cell": 1.5,
+      "surface_relation": 0.020287,
+      "hu_relation": 0.643156,
+      "basin": 1.5,
+      "depth": 0.0,
+      "palace": 0.344361,
+      "palace_element": 0.156861,
+      "rank": 0.0,
+      "i_component": 1.0,
+      "hu_attractor": 1.5,
+      "inner_val": 1.5,
+      "liuqin_word": 1.4375
+    },
+    "depth": {
+      "surface_cell": 0.475188,
+      "hu_cell": 0.561278,
+      "surface_relation": 0.104305,
+      "hu_relation": 0.110073,
+      "basin": 0.0,
+      "depth": 1.014098,
+      "palace": 0.147869,
+      "palace_element": 0.114567,
+      "rank": 0.20282,
+      "i_component": 0.0,
+      "hu_attractor": 0.0,
+      "inner_val": 0.811278,
+      "liuqin_word": 0.982848
+    },
+    "palace": {
+      "surface_cell": 1.75,
+      "hu_cell": 1.17218,
+      "surface_relation": 0.179157,
+      "hu_relation": 0.458777,
+      "basin": 0.344361,
+      "depth": 0.147869,
+      "palace": 3.0,
+      "palace_element": 2.25,
+      "rank": 0.0,
+      "i_component": 0.188722,
+      "hu_attractor": 0.48468,
+      "inner_val": 1.25,
+      "liuqin_word": 2.90625
+    },
+    "palace_element": {
+      "surface_cell": 1.46109,
+      "hu_cell": 0.719361,
+      "surface_relation": 0.069477,
+      "hu_relation": 0.193457,
+      "basin": 0.156861,
+      "depth": 0.114567,
+      "palace": 2.25,
+      "palace_element": 2.25,
+      "rank": 0.0,
+      "i_component": 0.094361,
+      "hu_attractor": 0.266541,
+      "inner_val": 0.77359,
+      "liuqin_word": 2.21875
+    },
+    "rank": {
+      "surface_cell": 1.8125,
+      "hu_cell": 0.5,
+      "surface_relation": 0.975727,
+      "hu_relation": 0.143156,
+      "basin": 0.0,
+      "depth": 0.20282,
+      "palace": 0.0,
+      "palace_element": 0.0,
+      "rank": 3.0,
+      "i_component": 0.0,
+      "hu_attractor": 0.0,
+      "inner_val": 1.0,
+      "liuqin_word": 2.875
+    },
+    "i_component": {
+      "surface_cell": 0.1875,
+      "hu_cell": 1.0,
+      "surface_relation": 0.012516,
+      "hu_relation": 0.393156,
+      "basin": 1.0,
+      "depth": 0.0,
+      "palace": 0.188722,
+      "palace_element": 0.094361,
+      "rank": 0.0,
+      "i_component": 1.0,
+      "hu_attractor": 1.0,
+      "inner_val": 1.0,
+      "liuqin_word": 0.9375
+    },
+    "hu_attractor": {
+      "surface_cell": 1.0625,
+      "hu_cell": 1.89859,
+      "surface_relation": 0.038837,
+      "hu_relation": 0.775705,
+      "basin": 1.5,
+      "depth": 0.0,
+      "palace": 0.48468,
+      "palace_element": 0.266541,
+      "rank": 0.0,
+      "i_component": 1.0,
+      "hu_attractor": 2.0,
+      "inner_val": 1.89859,
+      "liuqin_word": 1.90625
+    },
+    "inner_val": {
+      "surface_cell": 3.0,
+      "hu_cell": 3.5,
+      "surface_relation": 0.944477,
+      "hu_relation": 2.048795,
+      "basin": 1.5,
+      "depth": 0.811278,
+      "palace": 1.25,
+      "palace_element": 0.77359,
+      "rank": 1.0,
+      "i_component": 1.0,
+      "hu_attractor": 1.89859,
+      "inner_val": 4.0,
+      "liuqin_word": 3.84375
+    },
+    "liuqin_word": {
+      "surface_cell": 4.34375,
+      "hu_cell": 3.375,
+      "surface_relation": 2.194477,
+      "hu_relation": 1.923795,
+      "basin": 1.4375,
+      "depth": 0.982848,
+      "palace": 2.90625,
+      "palace_element": 2.21875,
+      "rank": 2.875,
+      "i_component": 0.9375,
+      "hu_attractor": 1.90625,
+      "inner_val": 3.84375,
+      "liuqin_word": 5.84375
+    }
+  },
+  "nmi_matrix": {
+    "surface_cell": {
+      "surface_cell": 1.0,
+      "hu_cell": 0.714286,
+      "surface_relation": 1.0,
+      "hu_relation": 0.618678,
+      "basin": 0.395833,
+      "depth": 0.468582,
+      "palace": 0.583333,
+      "palace_element": 0.649373,
+      "rank": 0.604167,
+      "i_component": 0.1875,
+      "hu_attractor": 0.53125,
+      "inner_val": 0.75,
+      "liuqin_word": 0.965278
+    },
+    "hu_cell": {
+      "surface_cell": 0.714286,
+      "hu_cell": 1.0,
+      "surface_relation": 0.26586,
+      "hu_relation": 1.0,
+      "basin": 1.0,
+      "depth": 0.553475,
+      "palace": 0.390727,
+      "palace_element": 0.319716,
+      "rank": 0.166667,
+      "i_component": 1.0,
+      "hu_attractor": 0.949295,
+      "inner_val": 1.0,
+      "liuqin_word": 0.964286
+    },
+    "surface_relation": {
+      "surface_cell": 1.0,
+      "hu_cell": 0.26586,
+      "surface_relation": 1.0,
+      "hu_relation": 0.143589,
+      "basin": 0.013524,
+      "depth": 0.102855,
+      "palace": 0.07724,
+      "palace_element": 0.030878,
+      "rank": 0.420667,
+      "i_component": 0.012516,
+      "hu_attractor": 0.019419,
+      "inner_val": 0.407194,
+      "liuqin_word": 0.946109
+    },
+    "hu_relation": {
+      "surface_cell": 0.618678,
+      "hu_cell": 1.0,
+      "surface_relation": 0.143589,
+      "hu_relation": 1.0,
+      "basin": 0.428771,
+      "depth": 0.108543,
+      "palace": 0.223925,
+      "palace_element": 0.094425,
+      "rank": 0.069873,
+      "i_component": 0.393156,
+      "hu_attractor": 0.387853,
+      "inner_val": 1.0,
+      "liuqin_word": 0.938989
+    },
+    "basin": {
+      "surface_cell": 0.395833,
+      "hu_cell": 1.0,
+      "surface_relation": 0.013524,
+      "hu_relation": 0.428771,
+      "basin": 1.0,
+      "depth": 0.0,
+      "palace": 0.229574,
+      "palace_element": 0.104574,
+      "rank": 0.0,
+      "i_component": 1.0,
+      "hu_attractor": 1.0,
+      "inner_val": 1.0,
+      "liuqin_word": 0.958333
+    },
+    "depth": {
+      "surface_cell": 0.468582,
+      "hu_cell": 0.553475,
+      "surface_relation": 0.102855,
+      "hu_relation": 0.108543,
+      "basin": 0.0,
+      "depth": 1.0,
+      "palace": 0.145813,
+      "palace_element": 0.112974,
+      "rank": 0.2,
+      "i_component": 0.0,
+      "hu_attractor": 0.0,
+      "inner_val": 0.8,
+      "liuqin_word": 0.969184
+    },
+    "palace": {
+      "surface_cell": 0.583333,
+      "hu_cell": 0.390727,
+      "surface_relation": 0.07724,
+      "hu_relation": 0.223925,
+      "basin": 0.229574,
+      "depth": 0.145813,
+      "palace": 1.0,
+      "palace_element": 1.0,
+      "rank": 0.0,
+      "i_component": 0.188722,
+      "hu_attractor": 0.24234,
+      "inner_val": 0.416667,
+      "liuqin_word": 0.96875
+    },
+    "palace_element": {
+      "surface_cell": 0.649373,
+      "hu_cell": 0.319716,
+      "surface_relation": 0.030878,
+      "hu_relation": 0.094425,
+      "basin": 0.104574,
+      "depth": 0.112974,
+      "palace": 1.0,
+      "palace_element": 1.0,
+      "rank": 0.0,
+      "i_component": 0.094361,
+      "hu_attractor": 0.133271,
+      "inner_val": 0.343818,
+      "liuqin_word": 0.986111
+    },
+    "rank": {
+      "surface_cell": 0.604167,
+      "hu_cell": 0.166667,
+      "surface_relation": 0.420667,
+      "hu_relation": 0.069873,
+      "basin": 0.0,
+      "depth": 0.2,
+      "palace": 0.0,
+      "palace_element": 0.0,
+      "rank": 1.0,
+      "i_component": 0.0,
+      "hu_attractor": 0.0,
+      "inner_val": 0.333333,
+      "liuqin_word": 0.958333
+    },
+    "i_component": {
+      "surface_cell": 0.1875,
+      "hu_cell": 1.0,
+      "surface_relation": 0.012516,
+      "hu_relation": 0.393156,
+      "basin": 1.0,
+      "depth": 0.0,
+      "palace": 0.188722,
+      "palace_element": 0.094361,
+      "rank": 0.0,
+      "i_component": 1.0,
+      "hu_attractor": 1.0,
+      "inner_val": 1.0,
+      "liuqin_word": 0.9375
+    },
+    "hu_attractor": {
+      "surface_cell": 0.53125,
+      "hu_cell": 0.949295,
+      "surface_relation": 0.019419,
+      "hu_relation": 0.387853,
+      "basin": 1.0,
+      "depth": 0.0,
+      "palace": 0.24234,
+      "palace_element": 0.133271,
+      "rank": 0.0,
+      "i_component": 1.0,
+      "hu_attractor": 1.0,
+      "inner_val": 0.949295,
+      "liuqin_word": 0.953125
+    },
+    "inner_val": {
+      "surface_cell": 0.75,
+      "hu_cell": 1.0,
+      "surface_relation": 0.407194,
+      "hu_relation": 1.0,
+      "basin": 1.0,
+      "depth": 0.8,
+      "palace": 0.416667,
+      "palace_element": 0.343818,
+      "rank": 0.333333,
+      "i_component": 1.0,
+      "hu_attractor": 0.949295,
+      "inner_val": 1.0,
+      "liuqin_word": 0.960938
+    },
+    "liuqin_word": {
+      "surface_cell": 0.965278,
+      "hu_cell": 0.964286,
+      "surface_relation": 0.946109,
+      "hu_relation": 0.938989,
+      "basin": 0.958333,
+      "depth": 0.969184,
+      "palace": 0.96875,
+      "palace_element": 0.986111,
+      "rank": 0.958333,
+      "i_component": 0.9375,
+      "hu_attractor": 0.953125,
+      "inner_val": 0.960938,
+      "liuqin_word": 1.0
+    }
+  },
+  "residual": {
+    "h_hexagram": 6.0,
+    "h_joint_profile": 6.0,
+    "residual_bits": 0.0,
+    "distinct_profiles": 64
+  },
+  "identifying_pairs": [
+    [
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "hu_cell",
+      "rank"
+    ],
+    [
+      "palace",
+      "rank"
+    ],
+    [
+      "inner_val",
+      "rank"
+    ],
+    [
+      "inner_val",
+      "liuqin_word"
+    ]
+  ],
+  "identifying_triples_sample": [
+    [
+      "hu_cell",
+      "palace",
+      "surface_cell"
+    ],
+    [
+      "hu_cell",
+      "rank",
+      "surface_cell"
+    ],
+    [
+      "hu_cell",
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "liuqin_word",
+      "surface_cell",
+      "surface_relation"
+    ],
+    [
+      "hu_relation",
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "basin",
+      "palace",
+      "surface_cell"
+    ],
+    [
+      "basin",
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "depth",
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "palace",
+      "rank",
+      "surface_cell"
+    ],
+    [
+      "i_component",
+      "palace",
+      "surface_cell"
+    ],
+    [
+      "hu_attractor",
+      "palace",
+      "surface_cell"
+    ],
+    [
+      "inner_val",
+      "palace",
+      "surface_cell"
+    ],
+    [
+      "liuqin_word",
+      "palace",
+      "surface_cell"
+    ],
+    [
+      "liuqin_word",
+      "palace_element",
+      "surface_cell"
+    ],
+    [
+      "hu_attractor",
+      "rank",
+      "surface_cell"
+    ],
+    [
+      "inner_val",
+      "rank",
+      "surface_cell"
+    ],
+    [
+      "liuqin_word",
+      "rank",
+      "surface_cell"
+    ],
+    [
+      "i_component",
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "hu_attractor",
+      "liuqin_word",
+      "surface_cell"
+    ],
+    [
+      "inner_val",
+      "liuqin_word",
+      "surface_cell"
+    ]
+  ],
+  "forbidden_combinations": {
+    "surface_relation_x_hu_relation": {
+      "possible": 25,
+      "realized": 19,
+      "forbidden": 6,
+      "empty_cells": [
+        [
+          "体克用",
+          "体生用"
+        ],
+        [
+          "体克用",
+          "生体"
+        ],
+        [
+          "体生用",
+          "生体"
+        ],
+        [
+          "克体",
+          "体生用"
+        ],
+        [
+          "克体",
+          "生体"
+        ],
+        [
+          "生体",
+          "体生用"
+        ]
+      ]
+    },
+    "surface_relation_x_basin": {
+      "possible": 15,
+      "realized": 15,
+      "forbidden": 0,
+      "empty_cells": []
+    },
+    "hu_relation_x_basin": {
+      "possible": 15,
+      "realized": 8,
+      "forbidden": 7,
+      "empty_cells": [
+        [
+          "体克用",
+          "Qian"
+        ],
+        [
+          "体生用",
+          "Kun"
+        ],
+        [
+          "体生用",
+          "Qian"
+        ],
+        [
+          "克体",
+          "Kun"
+        ],
+        [
+          "比和",
+          "Cycle"
+        ],
+        [
+          "生体",
+          "Kun"
+        ],
+        [
+          "生体",
+          "Qian"
+        ]
+      ]
+    },
+    "surface_cell_x_hu_cell": {
+      "possible": 300,
+      "realized": 48,
+      "forbidden": 252,
+      "empty_cells": [
+        [
+          "('Earth', 'Earth')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Earth', 'Earth')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Earth', 'Fire')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Earth', 'Metal')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Earth', 'Water')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Earth', 'Wood')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Fire', 'Earth')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Fire', 'Fire')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Fire', 'Metal')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Fire', 'Water')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Fire', 'Wood')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Metal', 'Earth')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Metal', 'Fire')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Metal', 'Metal')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Metal', 'Water')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Metal', 'Wood')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Water', 'Earth')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Water', 'Fire')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Water', 'Metal')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Water', 'Water')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Water', 'Wood')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Wood', 'Earth')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Wood', 'Fire')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Earth', 'Earth')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Metal', 'Fire')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Wood', 'Metal')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Earth', 'Water')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Metal', 'Metal')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Wood', 'Water')",
+          "('Wood', 'Metal')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Earth', 'Wood')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Fire', 'Water')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Fire', 'Wood')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Metal', 'Wood')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Water', 'Fire')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Water', 'Wood')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Wood', 'Earth')"
+        ],
+        [
+          "('Wood', 'Wood')",
+          "('Wood', 'Metal')"
+        ]
+      ]
+    }
+  },
+  "dependency_edges": [
+    [
+      "basin",
+      "i_component"
+    ],
+    [
+      "hu_attractor",
+      "basin"
+    ],
+    [
+      "hu_attractor",
+      "i_component"
+    ],
+    [
+      "hu_cell",
+      "basin"
+    ],
+    [
+      "hu_cell",
+      "hu_relation"
+    ],
+    [
+      "hu_cell",
+      "i_component"
+    ],
+    [
+      "inner_val",
+      "basin"
+    ],
+    [
+      "inner_val",
+      "hu_cell"
+    ],
+    [
+      "inner_val",
+      "hu_relation"
+    ],
+    [
+      "inner_val",
+      "i_component"
+    ],
+    [
+      "palace",
+      "palace_element"
+    ],
+    [
+      "surface_cell",
+      "surface_relation"
+    ]
+  ],
+  "dependency_dag_reduced": {
+    "surface_cell": [
+      "surface_relation"
+    ],
+    "hu_cell": [
+      "basin",
+      "hu_relation"
+    ],
+    "basin": [
+      "i_component"
+    ],
+    "palace": [
+      "palace_element"
+    ],
+    "hu_attractor": [
+      "basin"
+    ],
+    "inner_val": [
+      "hu_cell"
+    ]
+  }
+}

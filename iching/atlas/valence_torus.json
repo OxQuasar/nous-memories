@@ -1,0 +1,482 @@
+{
+  "per_cell": {
+    "(Wood,Wood)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 7,
+      "auspicious_rate": 0.2917,
+      "inauspicious": 7,
+      "inauspicious_rate": 0.2917,
+      "no_blame": 4,
+      "regret": 3,
+      "difficulty": 2,
+      "danger": 2,
+      "basin_distribution": {
+        "Cycle": 12,
+        "Qian": 6,
+        "Kun": 6
+      },
+      "surface_relation": "比和"
+    },
+    "(Wood,Fire)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 4,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 2,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 5,
+      "regret": 1,
+      "difficulty": 1,
+      "danger": 1,
+      "basin_distribution": {
+        "Cycle": 6,
+        "Qian": 6
+      },
+      "surface_relation": "体生用"
+    },
+    "(Wood,Earth)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 9,
+      "auspicious_rate": 0.375,
+      "inauspicious": 4,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 5,
+      "regret": 3,
+      "difficulty": 1,
+      "danger": 3,
+      "basin_distribution": {
+        "Kun": 12,
+        "Cycle": 12
+      },
+      "surface_relation": "体克用"
+    },
+    "(Wood,Metal)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 5,
+      "auspicious_rate": 0.2083,
+      "inauspicious": 5,
+      "inauspicious_rate": 0.2083,
+      "no_blame": 6,
+      "regret": 0,
+      "difficulty": 2,
+      "danger": 1,
+      "basin_distribution": {
+        "Cycle": 12,
+        "Qian": 12
+      },
+      "surface_relation": "克体"
+    },
+    "(Wood,Water)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 3,
+      "auspicious_rate": 0.25,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.0833,
+      "no_blame": 1,
+      "regret": 0,
+      "difficulty": 1,
+      "danger": 0,
+      "basin_distribution": {
+        "Kun": 6,
+        "Cycle": 6
+      },
+      "surface_relation": "生体"
+    },
+    "(Fire,Wood)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 8,
+      "auspicious_rate": 0.6667,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.0833,
+      "no_blame": 2,
+      "regret": 2,
+      "difficulty": 1,
+      "danger": 1,
+      "basin_distribution": {
+        "Qian": 6,
+        "Cycle": 6
+      },
+      "surface_relation": "生体"
+    },
+    "(Fire,Fire)": {
+      "population": 1,
+      "n_yao": 6,
+      "auspicious": 2,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 2,
+      "regret": 0,
+      "difficulty": 0,
+      "danger": 0,
+      "basin_distribution": {
+        "Qian": 6
+      },
+      "surface_relation": "比和"
+    },
+    "(Fire,Earth)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 3,
+      "auspicious_rate": 0.25,
+      "inauspicious": 0,
+      "inauspicious_rate": 0.0,
+      "no_blame": 1,
+      "regret": 0,
+      "difficulty": 1,
+      "danger": 0,
+      "basin_distribution": {
+        "Cycle": 12
+      },
+      "surface_relation": "体生用"
+    },
+    "(Fire,Metal)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 4,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 2,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 2,
+      "regret": 2,
+      "difficulty": 1,
+      "danger": 1,
+      "basin_distribution": {
+        "Qian": 12
+      },
+      "surface_relation": "体克用"
+    },
+    "(Fire,Water)": {
+      "population": 1,
+      "n_yao": 6,
+      "auspicious": 0,
+      "auspicious_rate": 0.0,
+      "inauspicious": 0,
+      "inauspicious_rate": 0.0,
+      "no_blame": 1,
+      "regret": 0,
+      "difficulty": 0,
+      "danger": 1,
+      "basin_distribution": {
+        "Cycle": 6
+      },
+      "surface_relation": "克体"
+    },
+    "(Earth,Wood)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 4,
+      "auspicious_rate": 0.1667,
+      "inauspicious": 5,
+      "inauspicious_rate": 0.2083,
+      "no_blame": 8,
+      "regret": 1,
+      "difficulty": 1,
+      "danger": 2,
+      "basin_distribution": {
+        "Cycle": 12,
+        "Qian": 6,
+        "Kun": 6
+      },
+      "surface_relation": "克体"
+    },
+    "(Earth,Fire)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 4,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.0833,
+      "no_blame": 2,
+      "regret": 2,
+      "difficulty": 1,
+      "danger": 3,
+      "basin_distribution": {
+        "Cycle": 6,
+        "Qian": 6
+      },
+      "surface_relation": "生体"
+    },
+    "(Earth,Earth)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 5,
+      "auspicious_rate": 0.2083,
+      "inauspicious": 3,
+      "inauspicious_rate": 0.125,
+      "no_blame": 4,
+      "regret": 1,
+      "difficulty": 0,
+      "danger": 1,
+      "basin_distribution": {
+        "Kun": 12,
+        "Cycle": 12
+      },
+      "surface_relation": "比和"
+    },
+    "(Earth,Metal)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 10,
+      "auspicious_rate": 0.4167,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.0417,
+      "no_blame": 7,
+      "regret": 3,
+      "difficulty": 2,
+      "danger": 2,
+      "basin_distribution": {
+        "Cycle": 12,
+        "Qian": 12
+      },
+      "surface_relation": "体生用"
+    },
+    "(Earth,Water)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 5,
+      "auspicious_rate": 0.4167,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.0833,
+      "no_blame": 1,
+      "regret": 0,
+      "difficulty": 0,
+      "danger": 0,
+      "basin_distribution": {
+        "Kun": 6,
+        "Cycle": 6
+      },
+      "surface_relation": "体克用"
+    },
+    "(Metal,Wood)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 8,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 3,
+      "inauspicious_rate": 0.125,
+      "no_blame": 3,
+      "regret": 2,
+      "difficulty": 0,
+      "danger": 2,
+      "basin_distribution": {
+        "Cycle": 12,
+        "Qian": 6,
+        "Kun": 6
+      },
+      "surface_relation": "体克用"
+    },
+    "(Metal,Fire)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 3,
+      "auspicious_rate": 0.25,
+      "inauspicious": 0,
+      "inauspicious_rate": 0.0,
+      "no_blame": 6,
+      "regret": 2,
+      "difficulty": 0,
+      "danger": 1,
+      "basin_distribution": {
+        "Cycle": 6,
+        "Qian": 6
+      },
+      "surface_relation": "克体"
+    },
+    "(Metal,Earth)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 10,
+      "auspicious_rate": 0.4167,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.0417,
+      "no_blame": 7,
+      "regret": 0,
+      "difficulty": 1,
+      "danger": 1,
+      "basin_distribution": {
+        "Kun": 12,
+        "Cycle": 12
+      },
+      "surface_relation": "生体"
+    },
+    "(Metal,Metal)": {
+      "population": 4,
+      "n_yao": 24,
+      "auspicious": 5,
+      "auspicious_rate": 0.2083,
+      "inauspicious": 4,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 5,
+      "regret": 3,
+      "difficulty": 0,
+      "danger": 3,
+      "basin_distribution": {
+        "Cycle": 12,
+        "Qian": 12
+      },
+      "surface_relation": "比和"
+    },
+    "(Metal,Water)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 4,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 2,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 3,
+      "regret": 1,
+      "difficulty": 0,
+      "danger": 0,
+      "basin_distribution": {
+        "Kun": 6,
+        "Cycle": 6
+      },
+      "surface_relation": "体生用"
+    },
+    "(Water,Wood)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 4,
+      "auspicious_rate": 0.3333,
+      "inauspicious": 0,
+      "inauspicious_rate": 0.0,
+      "no_blame": 3,
+      "regret": 2,
+      "difficulty": 1,
+      "danger": 0,
+      "basin_distribution": {
+        "Cycle": 6,
+        "Kun": 6
+      },
+      "surface_relation": "体生用"
+    },
+    "(Water,Fire)": {
+      "population": 1,
+      "n_yao": 6,
+      "auspicious": 3,
+      "auspicious_rate": 0.5,
+      "inauspicious": 1,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 1,
+      "regret": 2,
+      "difficulty": 1,
+      "danger": 0,
+      "basin_distribution": {
+        "Cycle": 6
+      },
+      "surface_relation": "体克用"
+    },
+    "(Water,Earth)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 3,
+      "auspicious_rate": 0.25,
+      "inauspicious": 3,
+      "inauspicious_rate": 0.25,
+      "no_blame": 3,
+      "regret": 0,
+      "difficulty": 2,
+      "danger": 0,
+      "basin_distribution": {
+        "Kun": 12
+      },
+      "surface_relation": "克体"
+    },
+    "(Water,Metal)": {
+      "population": 2,
+      "n_yao": 12,
+      "auspicious": 5,
+      "auspicious_rate": 0.4167,
+      "inauspicious": 2,
+      "inauspicious_rate": 0.1667,
+      "no_blame": 1,
+      "regret": 1,
+      "difficulty": 1,
+      "danger": 1,
+      "basin_distribution": {
+        "Cycle": 12
+      },
+      "surface_relation": "生体"
+    },
+    "(Water,Water)": {
+      "population": 1,
+      "n_yao": 6,
+      "auspicious": 0,
+      "auspicious_rate": 0.0,
+      "inauspicious": 2,
+      "inauspicious_rate": 0.3333,
+      "no_blame": 2,
+      "regret": 0,
+      "difficulty": 0,
+      "danger": 0,
+      "basin_distribution": {
+        "Kun": 6
+      },
+      "surface_relation": "比和"
+    }
+  },
+  "core_bridge": {
+    "chi2": 17.438368860055608,
+    "p": 0.00016342041737192975,
+    "basin_rates": {
+      "Kun": {
+        "total": 96,
+        "xiong": 20,
+        "rate": 0.2083
+      },
+      "Cycle": {
+        "total": 192,
+        "xiong": 12,
+        "rate": 0.0625
+      },
+      "Qian": {
+        "total": 96,
+        "xiong": 20,
+        "rate": 0.2083
+      }
+    }
+  },
+  "shell_bridge": {
+    "fisher_or": 1.8181818181818181,
+    "fisher_p": 0.033098981092921906,
+    "chi2": 13.550583480493001,
+    "chi2_p": 0.008876563767172404,
+    "relation_rates": {
+      "比和": {
+        "total": 84,
+        "ji": 19,
+        "rate": 0.2262
+      },
+      "体克用": {
+        "total": 78,
+        "ji": 29,
+        "rate": 0.3718
+      },
+      "克体": {
+        "total": 78,
+        "ji": 15,
+        "rate": 0.1923
+      },
+      "生体": {
+        "total": 72,
+        "ji": 30,
+        "rate": 0.4167
+      },
+      "体生用": {
+        "total": 72,
+        "ji": 25,
+        "rate": 0.3472
+      }
+    }
+  },
+  "spatial_residual": {
+    "chi2": 19.046153846153842,
+    "p": 0.7495237346973005
+  }
+}

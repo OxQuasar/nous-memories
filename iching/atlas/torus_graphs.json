@@ -1,0 +1,2590 @@
+{
+  "bian_neighborhood": {
+    "(Earth,Earth)": {
+      "hexagrams": [
+        0,
+        4,
+        32,
+        36
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "partial": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ]
+      ]
+    },
+    "(Earth,Fire)": {
+      "hexagrams": [
+        40,
+        44
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Earth,Metal)": {
+      "hexagrams": [
+        24,
+        28,
+        56,
+        60
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "partial": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Metal"
+        ]
+      ]
+    },
+    "(Earth,Water)": {
+      "hexagrams": [
+        16,
+        20
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Water",
+          "Water"
+        ]
+      ]
+    },
+    "(Earth,Wood)": {
+      "hexagrams": [
+        8,
+        12,
+        48,
+        52
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ]
+    },
+    "(Fire,Earth)": {
+      "hexagrams": [
+        5,
+        37
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Fire,Fire)": {
+      "hexagrams": [
+        45
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "partial": []
+    },
+    "(Fire,Metal)": {
+      "hexagrams": [
+        29,
+        61
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Fire,Water)": {
+      "hexagrams": [
+        21
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "partial": []
+    },
+    "(Fire,Wood)": {
+      "hexagrams": [
+        13,
+        53
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Metal,Earth)": {
+      "hexagrams": [
+        3,
+        7,
+        35,
+        39
+      ],
+      "reachable": [
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "universal": [
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Water",
+          "Earth"
+        ]
+      ]
+    },
+    "(Metal,Fire)": {
+      "hexagrams": [
+        43,
+        47
+      ],
+      "reachable": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "universal": [
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Metal,Metal)": {
+      "hexagrams": [
+        27,
+        31,
+        59,
+        63
+      ],
+      "reachable": [
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "universal": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Water",
+          "Metal"
+        ]
+      ]
+    },
+    "(Metal,Water)": {
+      "hexagrams": [
+        19,
+        23
+      ],
+      "reachable": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "universal": [
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Water",
+          "Water"
+        ]
+      ]
+    },
+    "(Metal,Wood)": {
+      "hexagrams": [
+        11,
+        15,
+        51,
+        55
+      ],
+      "reachable": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ]
+    },
+    "(Water,Earth)": {
+      "hexagrams": [
+        2,
+        34
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "partial": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Water"
+        ]
+      ]
+    },
+    "(Water,Fire)": {
+      "hexagrams": [
+        42
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "partial": []
+    },
+    "(Water,Metal)": {
+      "hexagrams": [
+        26,
+        58
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "partial": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Water"
+        ]
+      ]
+    },
+    "(Water,Water)": {
+      "hexagrams": [
+        18
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "partial": []
+    },
+    "(Water,Wood)": {
+      "hexagrams": [
+        10,
+        50
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Earth)": {
+      "hexagrams": [
+        1,
+        6,
+        33,
+        38
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Fire)": {
+      "hexagrams": [
+        41,
+        46
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Wood,Metal)": {
+      "hexagrams": [
+        25,
+        30,
+        57,
+        62
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Water)": {
+      "hexagrams": [
+        17,
+        22
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Water",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Wood)": {
+      "hexagrams": [
+        9,
+        14,
+        49,
+        54
+      ],
+      "reachable": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "universal": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "partial": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ]
+    }
+  },
+  "hu_graph": {
+    "(Earth,Earth)": {
+      "hexagrams": [
+        0,
+        4,
+        32,
+        36
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Earth,Fire)": {
+      "hexagrams": [
+        40,
+        44
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Earth,Metal)": {
+      "hexagrams": [
+        24,
+        28,
+        56,
+        60
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Earth,Water)": {
+      "hexagrams": [
+        16,
+        20
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Earth,Wood)": {
+      "hexagrams": [
+        8,
+        12,
+        48,
+        52
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Fire,Earth)": {
+      "hexagrams": [
+        5,
+        37
+      ],
+      "targets": [
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Fire,Fire)": {
+      "hexagrams": [
+        45
+      ],
+      "targets": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Fire,Metal)": {
+      "hexagrams": [
+        29,
+        61
+      ],
+      "targets": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Fire,Water)": {
+      "hexagrams": [
+        21
+      ],
+      "targets": [
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Fire,Wood)": {
+      "hexagrams": [
+        13,
+        53
+      ],
+      "targets": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Metal,Earth)": {
+      "hexagrams": [
+        3,
+        7,
+        35,
+        39
+      ],
+      "targets": [
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Metal,Fire)": {
+      "hexagrams": [
+        43,
+        47
+      ],
+      "targets": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Metal,Metal)": {
+      "hexagrams": [
+        27,
+        31,
+        59,
+        63
+      ],
+      "targets": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Metal,Water)": {
+      "hexagrams": [
+        19,
+        23
+      ],
+      "targets": [
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Metal,Wood)": {
+      "hexagrams": [
+        11,
+        15,
+        51,
+        55
+      ],
+      "targets": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Water,Earth)": {
+      "hexagrams": [
+        2,
+        34
+      ],
+      "targets": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Water,Fire)": {
+      "hexagrams": [
+        42
+      ],
+      "targets": [
+        [
+          "Fire",
+          "Water"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Water,Metal)": {
+      "hexagrams": [
+        26,
+        58
+      ],
+      "targets": [
+        [
+          "Fire",
+          "Wood"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Water,Water)": {
+      "hexagrams": [
+        18
+      ],
+      "targets": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "well_defined": true,
+      "predicted_well_defined": true
+    },
+    "(Water,Wood)": {
+      "hexagrams": [
+        10,
+        50
+      ],
+      "targets": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Wood,Earth)": {
+      "hexagrams": [
+        1,
+        6,
+        33,
+        38
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Wood,Fire)": {
+      "hexagrams": [
+        41,
+        46
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Wood,Metal)": {
+      "hexagrams": [
+        25,
+        30,
+        57,
+        62
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Wood,Water)": {
+      "hexagrams": [
+        17,
+        22
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    },
+    "(Wood,Wood)": {
+      "hexagrams": [
+        9,
+        14,
+        49,
+        54
+      ],
+      "targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "well_defined": false,
+      "predicted_well_defined": false
+    }
+  },
+  "hu_chains": [
+    {
+      "start": [
+        "Fire",
+        "Earth"
+      ],
+      "path": [
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "multi",
+          [
+            "Water",
+            "Wood"
+          ]
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Fire",
+        "Fire"
+      ],
+      "path": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "multi",
+          [
+            "Wood",
+            "Metal"
+          ]
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Fire",
+        "Metal"
+      ],
+      "path": [
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "multi",
+          [
+            "Wood",
+            "Metal"
+          ]
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Fire",
+        "Water"
+      ],
+      "path": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Water",
+        "Earth"
+      ],
+      "path": [
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "multi",
+          [
+            "Wood",
+            "Earth"
+          ]
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Water",
+        "Fire"
+      ],
+      "path": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Water",
+        "Metal"
+      ],
+      "path": [
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "multi",
+          [
+            "Fire",
+            "Wood"
+          ]
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "start": [
+        "Water",
+        "Water"
+      ],
+      "path": [
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "multi",
+          [
+            "Wood",
+            "Earth"
+          ]
+        ]
+      ],
+      "length": 2
+    }
+  ],
+  "hu_multi_attractors": {
+    "(Earth,Earth)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Earth,Fire)": {
+      "reachable_attractors": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Earth,Metal)": {
+      "reachable_attractors": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Earth,Water)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Earth,Wood)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Fire,Wood)": {
+      "reachable_attractors": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Metal,Earth)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Metal,Fire)": {
+      "reachable_attractors": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ]
+    },
+    "(Metal,Metal)": {
+      "reachable_attractors": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Metal,Water)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Metal,Wood)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ]
+    },
+    "(Water,Wood)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Earth)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Fire)": {
+      "reachable_attractors": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Wood,Metal)": {
+      "reachable_attractors": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    },
+    "(Wood,Water)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ]
+      ]
+    },
+    "(Wood,Wood)": {
+      "reachable_attractors": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ]
+    }
+  }
+}

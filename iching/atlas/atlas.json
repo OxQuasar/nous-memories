@@ -1,0 +1,8114 @@
+{
+  "0": {
+    "hex_val": 0,
+    "binary": "000000",
+    "kw_number": 2,
+    "kw_name": "Kun",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_hex": 0,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 0,
+    "hu_attractor": 0,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Kun",
+    "depth": 0,
+    "inner_val": 0,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "父母",
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 63,
+    "reverse": 0,
+    "rev_comp": 63
+  },
+  "1": {
+    "hex_val": 1,
+    "binary": "000001",
+    "kw_number": 24,
+    "kw_name": "Fu",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_hex": 0,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 0,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Kun",
+    "depth": 1,
+    "inner_val": 0,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 62,
+    "reverse": 32,
+    "rev_comp": 31
+  },
+  "2": {
+    "hex_val": 2,
+    "binary": "000010",
+    "kw_number": 7,
+    "kw_name": "Shi",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Water",
+      "Earth"
+    ],
+    "hu_hex": 1,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 1,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 61,
+    "reverse": 16,
+    "rev_comp": 47
+  },
+  "3": {
+    "hex_val": 3,
+    "binary": "000011",
+    "kw_number": 19,
+    "kw_name": "Lin",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Metal",
+      "Earth"
+    ],
+    "hu_hex": 1,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 1,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 60,
+    "reverse": 48,
+    "rev_comp": 15
+  },
+  "4": {
+    "hex_val": 4,
+    "binary": "000100",
+    "kw_number": 15,
+    "kw_name": "Qian",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_hex": 10,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体生用",
+    "hu_cell": [
+      "Water",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 2,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "父母",
+      "子孫",
+      "兄弟"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 59,
+    "reverse": 8,
+    "rev_comp": 55
+  },
+  "5": {
+    "hex_val": 5,
+    "binary": "000101",
+    "kw_number": 36,
+    "kw_name": "Ming Yi",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Fire",
+      "Earth"
+    ],
+    "hu_hex": 10,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体生用",
+    "hu_cell": [
+      "Water",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 2,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "兄弟",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 58,
+    "reverse": 40,
+    "rev_comp": 23
+  },
+  "6": {
+    "hex_val": 6,
+    "binary": "000110",
+    "kw_number": 46,
+    "kw_name": "Sheng",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_hex": 11,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 3,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "妻財",
+      "父母",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 57,
+    "reverse": 24,
+    "rev_comp": 39
+  },
+  "7": {
+    "hex_val": 7,
+    "binary": "000111",
+    "kw_number": 11,
+    "kw_name": "Tai",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Metal",
+      "Earth"
+    ],
+    "hu_hex": 11,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 3,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "癸",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "癸",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Wood",
+        "name": "桑柘木"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      }
+    ],
+    "complement": 56,
+    "reverse": 56,
+    "rev_comp": 7
+  },
+  "8": {
+    "hex_val": 8,
+    "binary": "001000",
+    "kw_number": 16,
+    "kw_name": "Yu",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_hex": 20,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Earth",
+      "Water"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 4,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "子孫",
+      "兄弟",
+      "父母",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 55,
+    "reverse": 4,
+    "rev_comp": 59
+  },
+  "9": {
+    "hex_val": 9,
+    "binary": "001001",
+    "kw_number": 51,
+    "kw_name": "Zhen",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Wood",
+      "Wood"
+    ],
+    "hu_hex": 20,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Earth",
+      "Water"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 4,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "父母",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫",
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 54,
+    "reverse": 36,
+    "rev_comp": 27
+  },
+  "10": {
+    "hex_val": 10,
+    "binary": "001010",
+    "kw_number": 40,
+    "kw_name": "Xie",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Water",
+      "Wood"
+    ],
+    "hu_hex": 21,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Fire",
+      "Water"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 21,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Cycle",
+    "depth": 1,
+    "inner_val": 5,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 53,
+    "reverse": 20,
+    "rev_comp": 43
+  },
+  "11": {
+    "hex_val": 11,
+    "binary": "001011",
+    "kw_number": 54,
+    "kw_name": "Gui Mei",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_hex": 21,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Fire",
+      "Water"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 21,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 1,
+    "inner_val": 5,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "官鬼",
+      "妻財",
+      "父母",
+      "子孫",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 52,
+    "reverse": 52,
+    "rev_comp": 11
+  },
+  "12": {
+    "hex_val": 12,
+    "binary": "001100",
+    "kw_number": 62,
+    "kw_name": "Xiao Guo",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_hex": 30,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 6,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "子孫",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 51,
+    "reverse": 12,
+    "rev_comp": 51
+  },
+  "13": {
+    "hex_val": 13,
+    "binary": "001101",
+    "kw_number": 55,
+    "kw_name": "Feng",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Fire",
+      "Wood"
+    ],
+    "hu_hex": 30,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 6,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "妻財",
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 50,
+    "reverse": 44,
+    "rev_comp": 19
+  },
+  "14": {
+    "hex_val": 14,
+    "binary": "001110",
+    "kw_number": 32,
+    "kw_name": "Heng",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Wood",
+      "Wood"
+    ],
+    "hu_hex": 31,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 7,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "父母",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 49,
+    "reverse": 28,
+    "rev_comp": 35
+  },
+  "15": {
+    "hex_val": 15,
+    "binary": "001111",
+    "kw_number": 34,
+    "kw_name": "Da Zhuang",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_hex": 31,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 7,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "兄弟"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "子孫",
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      }
+    ],
+    "complement": 48,
+    "reverse": 60,
+    "rev_comp": 3
+  },
+  "16": {
+    "hex_val": 16,
+    "binary": "010000",
+    "kw_number": 8,
+    "kw_name": "Bi",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Earth",
+      "Water"
+    ],
+    "hu_hex": 32,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 8,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "父母",
+      "官鬼",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 47,
+    "reverse": 2,
+    "rev_comp": 61
+  },
+  "17": {
+    "hex_val": 17,
+    "binary": "010001",
+    "kw_number": 3,
+    "kw_name": "Zhun",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Wood",
+      "Water"
+    ],
+    "hu_hex": 32,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 8,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "子孫",
+      "官鬼",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 46,
+    "reverse": 34,
+    "rev_comp": 29
+  },
+  "18": {
+    "hex_val": 18,
+    "binary": "010010",
+    "kw_number": 29,
+    "kw_name": "Kan",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Water",
+      "Water"
+    ],
+    "hu_hex": 33,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 9,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 45,
+    "reverse": 18,
+    "rev_comp": 45
+  },
+  "19": {
+    "hex_val": 19,
+    "binary": "010011",
+    "kw_number": 60,
+    "kw_name": "Jie",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Metal",
+      "Water"
+    ],
+    "hu_hex": 33,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 9,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "子孫",
+      "官鬼",
+      "子孫",
+      "官鬼",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 44,
+    "reverse": 50,
+    "rev_comp": 13
+  },
+  "20": {
+    "hex_val": 20,
+    "binary": "010100",
+    "kw_number": 39,
+    "kw_name": "Jian",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Earth",
+      "Water"
+    ],
+    "hu_hex": 42,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Water",
+      "Fire"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 42,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 1,
+    "inner_val": 10,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "父母",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 43,
+    "reverse": 10,
+    "rev_comp": 53
+  },
+  "21": {
+    "hex_val": 21,
+    "binary": "010101",
+    "kw_number": 63,
+    "kw_name": "Ji Ji",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Fire",
+      "Water"
+    ],
+    "hu_hex": 42,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Water",
+      "Fire"
+    ],
+    "hu_depth": 0,
+    "hu_attractor": 21,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 0,
+    "inner_val": 10,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 42,
+    "reverse": 42,
+    "rev_comp": 21
+  },
+  "22": {
+    "hex_val": 22,
+    "binary": "010110",
+    "kw_number": 48,
+    "kw_name": "Jing",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Wood",
+      "Water"
+    ],
+    "hu_hex": 43,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Metal",
+      "Fire"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 11,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 41,
+    "reverse": 26,
+    "rev_comp": 37
+  },
+  "23": {
+    "hex_val": 23,
+    "binary": "010111",
+    "kw_number": 5,
+    "kw_name": "Xu",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Metal",
+      "Water"
+    ],
+    "hu_hex": 43,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Metal",
+      "Fire"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 11,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      }
+    ],
+    "complement": 40,
+    "reverse": 58,
+    "rev_comp": 5
+  },
+  "24": {
+    "hex_val": 24,
+    "binary": "011000",
+    "kw_number": 45,
+    "kw_name": "Cui",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Earth",
+      "Metal"
+    ],
+    "hu_hex": 52,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 12,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "妻財",
+      "官鬼",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 39,
+    "reverse": 6,
+    "rev_comp": 57
+  },
+  "25": {
+    "hex_val": 25,
+    "binary": "011001",
+    "kw_number": 17,
+    "kw_name": "Sui",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_hex": 52,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 12,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "子孫",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 38,
+    "reverse": 38,
+    "rev_comp": 25
+  },
+  "26": {
+    "hex_val": 26,
+    "binary": "011010",
+    "kw_number": 47,
+    "kw_name": "Kun",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Water",
+      "Metal"
+    ],
+    "hu_hex": 53,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "生体",
+    "hu_cell": [
+      "Fire",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 13,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "官鬼",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 37,
+    "reverse": 22,
+    "rev_comp": 41
+  },
+  "27": {
+    "hex_val": 27,
+    "binary": "011011",
+    "kw_number": 58,
+    "kw_name": "Dui",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_hex": 53,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "生体",
+    "hu_cell": [
+      "Fire",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 13,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "官鬼",
+      "妻財",
+      "父母",
+      "官鬼",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 36,
+    "reverse": 54,
+    "rev_comp": 9
+  },
+  "28": {
+    "hex_val": 28,
+    "binary": "011100",
+    "kw_number": 31,
+    "kw_name": "Xian",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Earth",
+      "Metal"
+    ],
+    "hu_hex": 62,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 14,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "官鬼",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 35,
+    "reverse": 14,
+    "rev_comp": 49
+  },
+  "29": {
+    "hex_val": 29,
+    "binary": "011101",
+    "kw_number": 49,
+    "kw_name": "Ge",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Fire",
+      "Metal"
+    ],
+    "hu_hex": 62,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 14,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_missing": [
+      "父母"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 34,
+    "reverse": 46,
+    "rev_comp": 17
+  },
+  "30": {
+    "hex_val": 30,
+    "binary": "011110",
+    "kw_number": 28,
+    "kw_name": "Da Guo",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_hex": 63,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 63,
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Qian",
+    "depth": 1,
+    "inner_val": 15,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "子孫",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 33,
+    "reverse": 30,
+    "rev_comp": 33
+  },
+  "31": {
+    "hex_val": 31,
+    "binary": "011111",
+    "kw_number": 43,
+    "kw_name": "Guai",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_hex": 63,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 63,
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Qian",
+    "depth": 1,
+    "inner_val": 15,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "父母",
+      "官鬼",
+      "兄弟"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      }
+    ],
+    "complement": 32,
+    "reverse": 62,
+    "rev_comp": 1
+  },
+  "32": {
+    "hex_val": 32,
+    "binary": "100000",
+    "kw_number": 23,
+    "kw_name": "Bo",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_hex": 0,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 0,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Kun",
+    "depth": 1,
+    "inner_val": 0,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "妻財",
+      "父母",
+      "官鬼",
+      "兄弟"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 31,
+    "reverse": 1,
+    "rev_comp": 62
+  },
+  "33": {
+    "hex_val": 33,
+    "binary": "100001",
+    "kw_number": 27,
+    "kw_name": "Yi",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_hex": 0,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 0,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Kun",
+    "depth": 1,
+    "inner_val": 0,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 30,
+    "reverse": 33,
+    "rev_comp": 30
+  },
+  "34": {
+    "hex_val": 34,
+    "binary": "100010",
+    "kw_number": 4,
+    "kw_name": "Meng",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Water",
+      "Earth"
+    ],
+    "hu_hex": 1,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 1,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "兄弟",
+      "子孫",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 29,
+    "reverse": 17,
+    "rev_comp": 46
+  },
+  "35": {
+    "hex_val": 35,
+    "binary": "100011",
+    "kw_number": 41,
+    "kw_name": "Sun",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Metal",
+      "Earth"
+    ],
+    "hu_hex": 1,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 1,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "父母",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 28,
+    "reverse": 49,
+    "rev_comp": 14
+  },
+  "36": {
+    "hex_val": 36,
+    "binary": "100100",
+    "kw_number": 52,
+    "kw_name": "Gen",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_hex": 10,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体生用",
+    "hu_cell": [
+      "Water",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 2,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "父母",
+      "子孫",
+      "兄弟",
+      "父母",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財",
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 27,
+    "reverse": 9,
+    "rev_comp": 54
+  },
+  "37": {
+    "hex_val": 37,
+    "binary": "100101",
+    "kw_number": 22,
+    "kw_name": "Bi",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Fire",
+      "Earth"
+    ],
+    "hu_hex": 10,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体生用",
+    "hu_cell": [
+      "Water",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 2,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "兄弟",
+      "父母",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 26,
+    "reverse": 41,
+    "rev_comp": 22
+  },
+  "38": {
+    "hex_val": 38,
+    "binary": "100110",
+    "kw_number": 18,
+    "kw_name": "Gu",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_hex": 11,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 3,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "妻財",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 25,
+    "reverse": 25,
+    "rev_comp": 38
+  },
+  "39": {
+    "hex_val": 39,
+    "binary": "100111",
+    "kw_number": 26,
+    "kw_name": "Da Chu",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Metal",
+      "Earth"
+    ],
+    "hu_hex": 11,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 3,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "父母",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      }
+    ],
+    "complement": 24,
+    "reverse": 57,
+    "rev_comp": 6
+  },
+  "40": {
+    "hex_val": 40,
+    "binary": "101000",
+    "kw_number": 35,
+    "kw_name": "Jin",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Earth",
+      "Fire"
+    ],
+    "hu_hex": 20,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Earth",
+      "Water"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 4,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "妻財",
+      "妻財",
+      "父母",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 23,
+    "reverse": 5,
+    "rev_comp": 58
+  },
+  "41": {
+    "hex_val": 41,
+    "binary": "101001",
+    "kw_number": 21,
+    "kw_name": "Shi He",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Wood",
+      "Fire"
+    ],
+    "hu_hex": 20,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Earth",
+      "Water"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 4,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "兄弟",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫",
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 22,
+    "reverse": 37,
+    "rev_comp": 26
+  },
+  "42": {
+    "hex_val": 42,
+    "binary": "101010",
+    "kw_number": 64,
+    "kw_name": "Wei Ji",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Water",
+      "Fire"
+    ],
+    "hu_hex": 21,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Fire",
+      "Water"
+    ],
+    "hu_depth": 0,
+    "hu_attractor": 42,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 0,
+    "inner_val": 5,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "兄弟",
+      "父母",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 21,
+    "reverse": 21,
+    "rev_comp": 42
+  },
+  "43": {
+    "hex_val": 43,
+    "binary": "101011",
+    "kw_number": 38,
+    "kw_name": "Kui",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Metal",
+      "Fire"
+    ],
+    "hu_hex": 21,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Fire",
+      "Water"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 21,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 1,
+    "inner_val": 5,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "官鬼",
+      "兄弟",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 20,
+    "reverse": 53,
+    "rev_comp": 10
+  },
+  "44": {
+    "hex_val": 44,
+    "binary": "101100",
+    "kw_number": 56,
+    "kw_name": "Lu",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Earth",
+      "Fire"
+    ],
+    "hu_hex": 30,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 6,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "兄弟",
+      "妻財",
+      "父母",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 19,
+    "reverse": 13,
+    "rev_comp": 50
+  },
+  "45": {
+    "hex_val": 45,
+    "binary": "101101",
+    "kw_number": 30,
+    "kw_name": "Li",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Fire",
+      "Fire"
+    ],
+    "hu_hex": 30,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 6,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "官鬼",
+      "父母",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 18,
+    "reverse": 45,
+    "rev_comp": 18
+  },
+  "46": {
+    "hex_val": 46,
+    "binary": "101110",
+    "kw_number": 50,
+    "kw_name": "Ding",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Wood",
+      "Fire"
+    ],
+    "hu_hex": 31,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 7,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "官鬼",
+      "妻財",
+      "父母",
+      "子孫",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 17,
+    "reverse": 29,
+    "rev_comp": 34
+  },
+  "47": {
+    "hex_val": 47,
+    "binary": "101111",
+    "kw_number": 14,
+    "kw_name": "Da You",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Metal",
+      "Fire"
+    ],
+    "hu_hex": 31,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 7,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "妻財",
+      "父母",
+      "妻財",
+      "父母",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      }
+    ],
+    "complement": 16,
+    "reverse": 61,
+    "rev_comp": 2
+  },
+  "48": {
+    "hex_val": 48,
+    "binary": "110000",
+    "kw_number": 20,
+    "kw_name": "Guan",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_hex": 32,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 8,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "妻財",
+      "父母",
+      "子孫",
+      "兄弟"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 15,
+    "reverse": 3,
+    "rev_comp": 60
+  },
+  "49": {
+    "hex_val": 49,
+    "binary": "110001",
+    "kw_number": 42,
+    "kw_name": "Yi",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Wood",
+      "Wood"
+    ],
+    "hu_hex": 32,
+    "hu_lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Earth",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 8,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "妻財",
+      "父母",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 14,
+    "reverse": 35,
+    "rev_comp": 28
+  },
+  "50": {
+    "hex_val": 50,
+    "binary": "110010",
+    "kw_number": 59,
+    "kw_name": "Huan",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Water",
+      "Wood"
+    ],
+    "hu_hex": 33,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 9,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 13,
+    "reverse": 19,
+    "rev_comp": 44
+  },
+  "51": {
+    "hex_val": 51,
+    "binary": "110011",
+    "kw_number": 61,
+    "kw_name": "Zhong Fu",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_hex": 33,
+    "hu_lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Wood",
+      "Earth"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 0,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Kun",
+    "depth": 2,
+    "inner_val": 9,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 12,
+    "reverse": 51,
+    "rev_comp": 12
+  },
+  "52": {
+    "hex_val": 52,
+    "binary": "110100",
+    "kw_number": 53,
+    "kw_name": "Jian",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_hex": 42,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Water",
+      "Fire"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 42,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 1,
+    "inner_val": 10,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "父母",
+      "子孫",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 11,
+    "reverse": 11,
+    "rev_comp": 52
+  },
+  "53": {
+    "hex_val": 53,
+    "binary": "110101",
+    "kw_number": 37,
+    "kw_name": "Jia Ren",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Fire",
+      "Wood"
+    ],
+    "hu_hex": 42,
+    "hu_lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "体克用",
+    "hu_cell": [
+      "Water",
+      "Fire"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 42,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Cycle",
+    "depth": 1,
+    "inner_val": 10,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "兄弟",
+      "妻財",
+      "父母",
+      "妻財",
+      "父母",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 10,
+    "reverse": 43,
+    "rev_comp": 20
+  },
+  "54": {
+    "hex_val": 54,
+    "binary": "110110",
+    "kw_number": 57,
+    "kw_name": "Xun",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Wood",
+      "Wood"
+    ],
+    "hu_hex": 43,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Metal",
+      "Fire"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 11,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "妻財",
+      "父母",
+      "官鬼",
+      "妻財",
+      "父母",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "兄弟",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 9,
+    "reverse": 27,
+    "rev_comp": 36
+  },
+  "55": {
+    "hex_val": 55,
+    "binary": "110111",
+    "kw_number": 9,
+    "kw_name": "Xiao Chu",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Metal",
+      "Wood"
+    ],
+    "hu_hex": 43,
+    "hu_lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Metal",
+      "Fire"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 21,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 11,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "妻財",
+      "父母",
+      "官鬼"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      }
+    ],
+    "complement": 8,
+    "reverse": 59,
+    "rev_comp": 4
+  },
+  "56": {
+    "hex_val": 56,
+    "binary": "111000",
+    "kw_number": 12,
+    "kw_name": "Pi",
+    "lower_trigram": {
+      "val": 0,
+      "name": "Kun ☷",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Earth",
+      "Metal"
+    ],
+    "hu_hex": 52,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 3,
+    "rank_name": "三世",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 12,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "乙",
+        "branch": "未",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "乙",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "乙",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "妻財",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "沙中金"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 7,
+    "reverse": 7,
+    "rev_comp": 56
+  },
+  "57": {
+    "hex_val": 57,
+    "binary": "111001",
+    "kw_number": 25,
+    "kw_name": "Wu Wang",
+    "lower_trigram": {
+      "val": 1,
+      "name": "Zhen ☳",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_hex": 52,
+    "hu_lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Earth",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "rank": 4,
+    "rank_name": "四世",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 12,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "庚",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "庚",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "庚",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "妻財"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Wood",
+        "name": "松柏木"
+      },
+      {
+        "element": "Metal",
+        "name": "白蠟金"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 6,
+    "reverse": 39,
+    "rev_comp": 24
+  },
+  "58": {
+    "hex_val": 58,
+    "binary": "111010",
+    "kw_number": 6,
+    "kw_name": "Song",
+    "lower_trigram": {
+      "val": 2,
+      "name": "Kan ☵",
+      "element": "Water"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "生体",
+    "surface_cell": [
+      "Water",
+      "Metal"
+    ],
+    "hu_hex": 53,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "生体",
+    "hu_cell": [
+      "Fire",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 6,
+    "rank_name": "游魂",
+    "shi": 4,
+    "ying": 1,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 13,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "戊",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "戊",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "戊",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "兄弟",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "官鬼"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Wood",
+        "name": "大林木"
+      },
+      {
+        "element": "Fire",
+        "name": "天上火"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 5,
+    "reverse": 23,
+    "rev_comp": 40
+  },
+  "59": {
+    "hex_val": 59,
+    "binary": "111011",
+    "kw_number": 10,
+    "kw_name": "Lu",
+    "lower_trigram": {
+      "val": 3,
+      "name": "Dui ☱",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_hex": 53,
+    "hu_lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "hu_upper_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_relation": "生体",
+    "hu_cell": [
+      "Fire",
+      "Wood"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 42,
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "rank": 5,
+    "rank_name": "五世",
+    "shi": 5,
+    "ying": 2,
+    "basin": "Cycle",
+    "depth": 2,
+    "inner_val": 13,
+    "i_component": 1,
+    "najia": [
+      {
+        "stem": "丁",
+        "branch": "巳",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丁",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "丁",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "父母",
+      "子孫",
+      "兄弟"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Fire",
+        "name": "爐中火"
+      },
+      {
+        "element": "Water",
+        "name": "澗下水"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 4,
+    "reverse": 55,
+    "rev_comp": 8
+  },
+  "60": {
+    "hex_val": 60,
+    "binary": "111100",
+    "kw_number": 33,
+    "kw_name": "Dun",
+    "lower_trigram": {
+      "val": 4,
+      "name": "Gen ☶",
+      "element": "Earth"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "体生用",
+    "surface_cell": [
+      "Earth",
+      "Metal"
+    ],
+    "hu_hex": 62,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 2,
+    "rank_name": "二世",
+    "shi": 2,
+    "ying": 5,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 14,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "丙",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "丙",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "丙",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "官鬼",
+      "兄弟",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財",
+      "子孫"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "沙中土"
+      },
+      {
+        "element": "Water",
+        "name": "天河水"
+      },
+      {
+        "element": "Fire",
+        "name": "山下火"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 3,
+    "reverse": 15,
+    "rev_comp": 48
+  },
+  "61": {
+    "hex_val": 61,
+    "binary": "111101",
+    "kw_number": 13,
+    "kw_name": "Tong Ren",
+    "lower_trigram": {
+      "val": 5,
+      "name": "Li ☲",
+      "element": "Fire"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "体克用",
+    "surface_cell": [
+      "Fire",
+      "Metal"
+    ],
+    "hu_hex": 62,
+    "hu_lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "克体",
+    "hu_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_depth": 2,
+    "hu_attractor": 63,
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "rank": 7,
+    "rank_name": "歸魂",
+    "shi": 3,
+    "ying": 6,
+    "basin": "Qian",
+    "depth": 2,
+    "inner_val": 14,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "己",
+        "branch": "卯",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "己",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "己",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "官鬼",
+      "兄弟",
+      "妻財",
+      "子孫"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "城頭土"
+      },
+      {
+        "element": "Fire",
+        "name": "霹靂火"
+      },
+      {
+        "element": "Wood",
+        "name": "平地木"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 2,
+    "reverse": 47,
+    "rev_comp": 16
+  },
+  "62": {
+    "hex_val": 62,
+    "binary": "111110",
+    "kw_number": 44,
+    "kw_name": "Gou",
+    "lower_trigram": {
+      "val": 6,
+      "name": "Xun ☴",
+      "element": "Wood"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "克体",
+    "surface_cell": [
+      "Wood",
+      "Metal"
+    ],
+    "hu_hex": 63,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 1,
+    "hu_attractor": 63,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 1,
+    "rank_name": "一世",
+    "shi": 1,
+    "ying": 4,
+    "basin": "Qian",
+    "depth": 1,
+    "inner_val": 15,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "辛",
+        "branch": "丑",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "辛",
+        "branch": "亥",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "辛",
+        "branch": "酉",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "父母",
+      "子孫",
+      "兄弟",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [
+      "妻財"
+    ],
+    "nayin": [
+      {
+        "element": "Earth",
+        "name": "壁上土"
+      },
+      {
+        "element": "Metal",
+        "name": "釵釧金"
+      },
+      {
+        "element": "Wood",
+        "name": "石榴木"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 1,
+    "reverse": 31,
+    "rev_comp": 32
+  },
+  "63": {
+    "hex_val": 63,
+    "binary": "111111",
+    "kw_number": 1,
+    "kw_name": "Qian",
+    "lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "surface_relation": "比和",
+    "surface_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_hex": 63,
+    "hu_lower_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_upper_trigram": {
+      "val": 7,
+      "name": "Qian ☰",
+      "element": "Metal"
+    },
+    "hu_relation": "比和",
+    "hu_cell": [
+      "Metal",
+      "Metal"
+    ],
+    "hu_depth": 0,
+    "hu_attractor": 63,
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "rank": 0,
+    "rank_name": "本宮",
+    "shi": 6,
+    "ying": 3,
+    "basin": "Qian",
+    "depth": 0,
+    "inner_val": 15,
+    "i_component": 0,
+    "najia": [
+      {
+        "stem": "甲",
+        "branch": "子",
+        "branch_element": "Water"
+      },
+      {
+        "stem": "甲",
+        "branch": "寅",
+        "branch_element": "Wood"
+      },
+      {
+        "stem": "甲",
+        "branch": "辰",
+        "branch_element": "Earth"
+      },
+      {
+        "stem": "壬",
+        "branch": "午",
+        "branch_element": "Fire"
+      },
+      {
+        "stem": "壬",
+        "branch": "申",
+        "branch_element": "Metal"
+      },
+      {
+        "stem": "壬",
+        "branch": "戌",
+        "branch_element": "Earth"
+      }
+    ],
+    "liuqin_word": [
+      "子孫",
+      "妻財",
+      "父母",
+      "官鬼",
+      "兄弟",
+      "父母"
+    ],
+    "liuqin_present": [
+      "兄弟",
+      "妻財",
+      "子孫",
+      "官鬼",
+      "父母"
+    ],
+    "liuqin_missing": [],
+    "nayin": [
+      {
+        "element": "Metal",
+        "name": "海中金"
+      },
+      {
+        "element": "Water",
+        "name": "大溪水"
+      },
+      {
+        "element": "Fire",
+        "name": "覆燈火"
+      },
+      {
+        "element": "Wood",
+        "name": "楊柳木"
+      },
+      {
+        "element": "Metal",
+        "name": "劍鋒金"
+      },
+      {
+        "element": "Water",
+        "name": "大海水"
+      }
+    ],
+    "complement": 0,
+    "reverse": 63,
+    "rev_comp": 0
+  }
+}

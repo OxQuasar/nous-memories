@@ -1,0 +1,5216 @@
+{
+  "cells": {
+    "(Wood,Wood)": {
+      "cell": [
+        "Wood",
+        "Wood"
+      ],
+      "population": 4,
+      "hexagrams": [
+        9,
+        14,
+        49,
+        54
+      ],
+      "surface_relation": "比和",
+      "basin_distribution": {
+        "Cycle": 2,
+        "Qian": 1,
+        "Kun": 1
+      },
+      "depth_distribution": {
+        "2": 4
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Zhen ☳": 2,
+        "Xun ☴": 2
+      },
+      "hu_attractor_distribution": {
+        "42": 1,
+        "63": 1,
+        "0": 1,
+        "21": 1
+      },
+      "is_diagonal": true,
+      "complement_cell": "(Wood,Wood)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hex_names": [
+        "Zhen",
+        "Heng",
+        "Yi",
+        "Xun"
+      ],
+      "valence": {
+        "auspicious": 7,
+        "ausp_rate": 0.2917,
+        "inauspicious": 7,
+        "inausp_rate": 0.2917,
+        "no_blame": 4,
+        "regret": 3,
+        "difficulty": 2,
+        "danger": 2
+      },
+      "bian_reachable": [
+        "(Earth,Wood)",
+        "(Fire,Wood)",
+        "(Metal,Wood)",
+        "(Water,Wood)",
+        "(Wood,Earth)",
+        "(Wood,Fire)",
+        "(Wood,Metal)",
+        "(Wood,Water)"
+      ],
+      "bian_universal": [
+        "(Earth,Wood)",
+        "(Metal,Wood)",
+        "(Wood,Earth)",
+        "(Wood,Metal)"
+      ],
+      "bian_partial": [
+        "(Fire,Wood)",
+        "(Water,Wood)",
+        "(Wood,Fire)",
+        "(Wood,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Wood,Fire)": {
+      "cell": [
+        "Wood",
+        "Fire"
+      ],
+      "population": 2,
+      "hexagrams": [
+        41,
+        46
+      ],
+      "surface_relation": "体生用",
+      "basin_distribution": {
+        "Cycle": 1,
+        "Qian": 1
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Xun ☴": 1,
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 1,
+        "63": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Wood,Water)",
+      "reverse_cells": [
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ]
+      ],
+      "hex_names": [
+        "Shi He",
+        "Ding"
+      ],
+      "valence": {
+        "auspicious": 4,
+        "ausp_rate": 0.3333,
+        "inauspicious": 2,
+        "inausp_rate": 0.1667,
+        "no_blame": 5,
+        "regret": 1,
+        "difficulty": 1,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Fire)",
+        "(Fire,Fire)",
+        "(Metal,Fire)",
+        "(Water,Fire)",
+        "(Wood,Earth)",
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Fire)",
+        "(Metal,Fire)",
+        "(Wood,Earth)",
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Fire,Fire)",
+        "(Water,Fire)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Wood,Earth)": {
+      "cell": [
+        "Wood",
+        "Earth"
+      ],
+      "population": 4,
+      "hexagrams": [
+        1,
+        6,
+        33,
+        38
+      ],
+      "surface_relation": "体克用",
+      "basin_distribution": {
+        "Kun": 2,
+        "Cycle": 2
+      },
+      "depth_distribution": {
+        "1": 2,
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "palace_distribution": {
+        "Kun ☷": 1,
+        "Zhen ☳": 1,
+        "Xun ☴": 2
+      },
+      "hu_attractor_distribution": {
+        "0": 2,
+        "21": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Wood,Metal)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hex_names": [
+        "Fu",
+        "Sheng",
+        "Yi",
+        "Gu"
+      ],
+      "valence": {
+        "auspicious": 9,
+        "ausp_rate": 0.375,
+        "inauspicious": 4,
+        "inausp_rate": 0.1667,
+        "no_blame": 5,
+        "regret": 3,
+        "difficulty": 1,
+        "danger": 3
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Fire,Earth)",
+        "(Metal,Earth)",
+        "(Water,Earth)",
+        "(Wood,Earth)",
+        "(Wood,Fire)",
+        "(Wood,Water)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Metal,Earth)",
+        "(Wood,Earth)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Fire,Earth)",
+        "(Water,Earth)",
+        "(Wood,Fire)",
+        "(Wood,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Wood,Metal)": {
+      "cell": [
+        "Wood",
+        "Metal"
+      ],
+      "population": 4,
+      "hexagrams": [
+        25,
+        30,
+        57,
+        62
+      ],
+      "surface_relation": "克体",
+      "basin_distribution": {
+        "Cycle": 2,
+        "Qian": 2
+      },
+      "depth_distribution": {
+        "1": 2,
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Zhen ☳": 2,
+        "Xun ☴": 1,
+        "Qian ☰": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 2,
+        "63": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Wood,Earth)",
+      "reverse_cells": [
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hex_names": [
+        "Sui",
+        "Da Guo",
+        "Wu Wang",
+        "Gou"
+      ],
+      "valence": {
+        "auspicious": 5,
+        "ausp_rate": 0.2083,
+        "inauspicious": 5,
+        "inausp_rate": 0.2083,
+        "no_blame": 6,
+        "regret": 0,
+        "difficulty": 2,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Metal)",
+        "(Fire,Metal)",
+        "(Metal,Metal)",
+        "(Water,Metal)",
+        "(Wood,Fire)",
+        "(Wood,Metal)",
+        "(Wood,Water)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Metal)",
+        "(Metal,Metal)",
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Fire,Metal)",
+        "(Water,Metal)",
+        "(Wood,Fire)",
+        "(Wood,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Wood,Water)": {
+      "cell": [
+        "Wood",
+        "Water"
+      ],
+      "population": 2,
+      "hexagrams": [
+        17,
+        22
+      ],
+      "surface_relation": "生体",
+      "basin_distribution": {
+        "Kun": 1,
+        "Cycle": 1
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1,
+        "Zhen ☳": 1
+      },
+      "hu_attractor_distribution": {
+        "0": 1,
+        "21": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Wood,Fire)",
+      "reverse_cells": [
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Metal"
+        ]
+      ],
+      "hex_names": [
+        "Zhun",
+        "Jing"
+      ],
+      "valence": {
+        "auspicious": 3,
+        "ausp_rate": 0.25,
+        "inauspicious": 1,
+        "inausp_rate": 0.0833,
+        "no_blame": 1,
+        "regret": 0,
+        "difficulty": 1,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Water)",
+        "(Fire,Water)",
+        "(Metal,Water)",
+        "(Water,Water)",
+        "(Wood,Earth)",
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Water)",
+        "(Metal,Water)",
+        "(Wood,Earth)",
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Fire,Water)",
+        "(Water,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Fire,Wood)": {
+      "cell": [
+        "Fire",
+        "Wood"
+      ],
+      "population": 2,
+      "hexagrams": [
+        13,
+        53
+      ],
+      "surface_relation": "生体",
+      "basin_distribution": {
+        "Qian": 1,
+        "Cycle": 1
+      },
+      "depth_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1,
+        "Xun ☴": 1
+      },
+      "hu_attractor_distribution": {
+        "63": 1,
+        "42": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Water,Wood)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "hex_names": [
+        "Feng",
+        "Jia Ren"
+      ],
+      "valence": {
+        "auspicious": 8,
+        "ausp_rate": 0.6667,
+        "inauspicious": 1,
+        "inausp_rate": 0.0833,
+        "no_blame": 2,
+        "regret": 2,
+        "difficulty": 1,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Wood)",
+        "(Fire,Earth)",
+        "(Fire,Fire)",
+        "(Fire,Metal)",
+        "(Fire,Water)",
+        "(Metal,Wood)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Wood)",
+        "(Fire,Earth)",
+        "(Fire,Metal)",
+        "(Metal,Wood)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Fire,Fire)",
+        "(Fire,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Fire,Fire)": {
+      "cell": [
+        "Fire",
+        "Fire"
+      ],
+      "population": 1,
+      "hexagrams": [
+        45
+      ],
+      "surface_relation": "比和",
+      "basin_distribution": {
+        "Qian": 1
+      },
+      "depth_distribution": {
+        "2": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "63": 1
+      },
+      "is_diagonal": true,
+      "complement_cell": "(Water,Water)",
+      "reverse_cells": [
+        [
+          "Fire",
+          "Fire"
+        ]
+      ],
+      "hex_names": [
+        "Li"
+      ],
+      "valence": {
+        "auspicious": 2,
+        "ausp_rate": 0.3333,
+        "inauspicious": 1,
+        "inausp_rate": 0.1667,
+        "no_blame": 2,
+        "regret": 0,
+        "difficulty": 0,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Fire)",
+        "(Fire,Earth)",
+        "(Fire,Metal)",
+        "(Fire,Wood)",
+        "(Metal,Fire)",
+        "(Wood,Fire)"
+      ],
+      "bian_universal": [
+        "(Earth,Fire)",
+        "(Fire,Earth)",
+        "(Fire,Metal)",
+        "(Fire,Wood)",
+        "(Metal,Fire)",
+        "(Wood,Fire)"
+      ],
+      "bian_partial": [],
+      "hu_targets": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Fire,Earth)": {
+      "cell": [
+        "Fire",
+        "Earth"
+      ],
+      "population": 2,
+      "hexagrams": [
+        5,
+        37
+      ],
+      "surface_relation": "体生用",
+      "basin_distribution": {
+        "Cycle": 2
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1,
+        "Gen ☶": 1
+      },
+      "hu_attractor_distribution": {
+        "21": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Water,Metal)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "hex_names": [
+        "Ming Yi",
+        "Bi"
+      ],
+      "valence": {
+        "auspicious": 3,
+        "ausp_rate": 0.25,
+        "inauspicious": 0,
+        "inausp_rate": 0.0,
+        "no_blame": 1,
+        "regret": 0,
+        "difficulty": 1,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Fire,Earth)",
+        "(Fire,Fire)",
+        "(Fire,Water)",
+        "(Fire,Wood)",
+        "(Metal,Earth)",
+        "(Wood,Earth)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Fire,Earth)",
+        "(Fire,Wood)",
+        "(Metal,Earth)",
+        "(Wood,Earth)"
+      ],
+      "bian_partial": [
+        "(Fire,Fire)",
+        "(Fire,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Fire,Metal)": {
+      "cell": [
+        "Fire",
+        "Metal"
+      ],
+      "population": 2,
+      "hexagrams": [
+        29,
+        61
+      ],
+      "surface_relation": "体克用",
+      "basin_distribution": {
+        "Qian": 2
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1,
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "63": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Water,Earth)",
+      "reverse_cells": [
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ]
+      ],
+      "hex_names": [
+        "Ge",
+        "Tong Ren"
+      ],
+      "valence": {
+        "auspicious": 4,
+        "ausp_rate": 0.3333,
+        "inauspicious": 2,
+        "inausp_rate": 0.1667,
+        "no_blame": 2,
+        "regret": 2,
+        "difficulty": 1,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Metal)",
+        "(Fire,Fire)",
+        "(Fire,Metal)",
+        "(Fire,Water)",
+        "(Fire,Wood)",
+        "(Metal,Metal)",
+        "(Wood,Metal)"
+      ],
+      "bian_universal": [
+        "(Earth,Metal)",
+        "(Fire,Metal)",
+        "(Fire,Wood)",
+        "(Metal,Metal)",
+        "(Wood,Metal)"
+      ],
+      "bian_partial": [
+        "(Fire,Fire)",
+        "(Fire,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Fire,Water)": {
+      "cell": [
+        "Fire",
+        "Water"
+      ],
+      "population": 1,
+      "hexagrams": [
+        21
+      ],
+      "surface_relation": "克体",
+      "basin_distribution": {
+        "Cycle": 1
+      },
+      "depth_distribution": {
+        "0": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1
+      },
+      "hu_attractor_distribution": {
+        "21": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Water,Fire)",
+      "reverse_cells": [
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hex_names": [
+        "Ji Ji"
+      ],
+      "valence": {
+        "auspicious": 0,
+        "ausp_rate": 0.0,
+        "inauspicious": 0,
+        "inausp_rate": 0.0,
+        "no_blame": 1,
+        "regret": 0,
+        "difficulty": 0,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Water)",
+        "(Fire,Earth)",
+        "(Fire,Metal)",
+        "(Fire,Wood)",
+        "(Metal,Water)",
+        "(Wood,Water)"
+      ],
+      "bian_universal": [
+        "(Earth,Water)",
+        "(Fire,Earth)",
+        "(Fire,Metal)",
+        "(Fire,Wood)",
+        "(Metal,Water)",
+        "(Wood,Water)"
+      ],
+      "bian_partial": [],
+      "hu_targets": [
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Earth,Wood)": {
+      "cell": [
+        "Earth",
+        "Wood"
+      ],
+      "population": 4,
+      "hexagrams": [
+        8,
+        12,
+        48,
+        52
+      ],
+      "surface_relation": "克体",
+      "basin_distribution": {
+        "Cycle": 2,
+        "Qian": 1,
+        "Kun": 1
+      },
+      "depth_distribution": {
+        "1": 1,
+        "2": 3
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Zhen ☳": 1,
+        "Dui ☱": 1,
+        "Qian ☰": 1,
+        "Gen ☶": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 2,
+        "63": 1,
+        "0": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Metal,Wood)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Yu",
+        "Xiao Guo",
+        "Guan",
+        "Jian"
+      ],
+      "valence": {
+        "auspicious": 4,
+        "ausp_rate": 0.1667,
+        "inauspicious": 5,
+        "inausp_rate": 0.2083,
+        "no_blame": 8,
+        "regret": 1,
+        "difficulty": 1,
+        "danger": 2
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Earth,Fire)",
+        "(Earth,Metal)",
+        "(Earth,Water)",
+        "(Earth,Wood)",
+        "(Fire,Wood)",
+        "(Water,Wood)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Earth,Metal)",
+        "(Earth,Wood)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Earth,Fire)",
+        "(Earth,Water)",
+        "(Fire,Wood)",
+        "(Water,Wood)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Earth,Fire)": {
+      "cell": [
+        "Earth",
+        "Fire"
+      ],
+      "population": 2,
+      "hexagrams": [
+        40,
+        44
+      ],
+      "surface_relation": "生体",
+      "basin_distribution": {
+        "Cycle": 1,
+        "Qian": 1
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Qian ☰": 1,
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 1,
+        "63": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Metal,Water)",
+      "reverse_cells": [
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Jin",
+        "Lu"
+      ],
+      "valence": {
+        "auspicious": 4,
+        "ausp_rate": 0.3333,
+        "inauspicious": 1,
+        "inausp_rate": 0.0833,
+        "no_blame": 2,
+        "regret": 2,
+        "difficulty": 1,
+        "danger": 3
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Earth,Fire)",
+        "(Earth,Metal)",
+        "(Earth,Wood)",
+        "(Fire,Fire)",
+        "(Water,Fire)",
+        "(Wood,Fire)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Earth,Fire)",
+        "(Earth,Metal)",
+        "(Earth,Wood)",
+        "(Wood,Fire)"
+      ],
+      "bian_partial": [
+        "(Fire,Fire)",
+        "(Water,Fire)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Earth,Earth)": {
+      "cell": [
+        "Earth",
+        "Earth"
+      ],
+      "population": 4,
+      "hexagrams": [
+        0,
+        4,
+        32,
+        36
+      ],
+      "surface_relation": "比和",
+      "basin_distribution": {
+        "Kun": 2,
+        "Cycle": 2
+      },
+      "depth_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "palace_distribution": {
+        "Kun ☷": 1,
+        "Dui ☱": 1,
+        "Qian ☰": 1,
+        "Gen ☶": 1
+      },
+      "hu_attractor_distribution": {
+        "0": 2,
+        "21": 2
+      },
+      "is_diagonal": true,
+      "complement_cell": "(Metal,Metal)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Kun",
+        "Qian",
+        "Bo",
+        "Gen"
+      ],
+      "valence": {
+        "auspicious": 5,
+        "ausp_rate": 0.2083,
+        "inauspicious": 3,
+        "inausp_rate": 0.125,
+        "no_blame": 4,
+        "regret": 1,
+        "difficulty": 0,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Earth,Fire)",
+        "(Earth,Water)",
+        "(Earth,Wood)",
+        "(Fire,Earth)",
+        "(Water,Earth)",
+        "(Wood,Earth)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Earth,Wood)",
+        "(Wood,Earth)"
+      ],
+      "bian_partial": [
+        "(Earth,Fire)",
+        "(Earth,Water)",
+        "(Fire,Earth)",
+        "(Water,Earth)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Earth,Metal)": {
+      "cell": [
+        "Earth",
+        "Metal"
+      ],
+      "population": 4,
+      "hexagrams": [
+        24,
+        28,
+        56,
+        60
+      ],
+      "surface_relation": "体生用",
+      "basin_distribution": {
+        "Cycle": 2,
+        "Qian": 2
+      },
+      "depth_distribution": {
+        "2": 4
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Dui ☱": 2,
+        "Qian ☰": 2
+      },
+      "hu_attractor_distribution": {
+        "42": 2,
+        "63": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Metal,Earth)",
+      "reverse_cells": [
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Cui",
+        "Xian",
+        "Pi",
+        "Dun"
+      ],
+      "valence": {
+        "auspicious": 10,
+        "ausp_rate": 0.4167,
+        "inauspicious": 1,
+        "inausp_rate": 0.0417,
+        "no_blame": 7,
+        "regret": 3,
+        "difficulty": 2,
+        "danger": 2
+      },
+      "bian_reachable": [
+        "(Earth,Fire)",
+        "(Earth,Metal)",
+        "(Earth,Water)",
+        "(Earth,Wood)",
+        "(Fire,Metal)",
+        "(Water,Metal)",
+        "(Wood,Metal)"
+      ],
+      "bian_universal": [
+        "(Earth,Metal)",
+        "(Earth,Wood)",
+        "(Wood,Metal)"
+      ],
+      "bian_partial": [
+        "(Earth,Fire)",
+        "(Earth,Water)",
+        "(Fire,Metal)",
+        "(Water,Metal)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Earth,Water)": {
+      "cell": [
+        "Earth",
+        "Water"
+      ],
+      "population": 2,
+      "hexagrams": [
+        16,
+        20
+      ],
+      "surface_relation": "体克用",
+      "basin_distribution": {
+        "Kun": 1,
+        "Cycle": 1
+      },
+      "depth_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "palace_distribution": {
+        "Kun ☷": 1,
+        "Dui ☱": 1
+      },
+      "hu_attractor_distribution": {
+        "0": 1,
+        "42": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Metal,Fire)",
+      "reverse_cells": [
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Bi",
+        "Jian"
+      ],
+      "valence": {
+        "auspicious": 5,
+        "ausp_rate": 0.4167,
+        "inauspicious": 1,
+        "inausp_rate": 0.0833,
+        "no_blame": 1,
+        "regret": 0,
+        "difficulty": 0,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Earth,Metal)",
+        "(Earth,Water)",
+        "(Earth,Wood)",
+        "(Fire,Water)",
+        "(Water,Water)",
+        "(Wood,Water)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Earth,Metal)",
+        "(Earth,Water)",
+        "(Earth,Wood)",
+        "(Wood,Water)"
+      ],
+      "bian_partial": [
+        "(Fire,Water)",
+        "(Water,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Fire"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Metal,Wood)": {
+      "cell": [
+        "Metal",
+        "Wood"
+      ],
+      "population": 4,
+      "hexagrams": [
+        11,
+        15,
+        51,
+        55
+      ],
+      "surface_relation": "体克用",
+      "basin_distribution": {
+        "Cycle": 2,
+        "Qian": 1,
+        "Kun": 1
+      },
+      "depth_distribution": {
+        "1": 1,
+        "2": 3
+      },
+      "hu_cells_reachable": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "palace_distribution": {
+        "Dui ☱": 1,
+        "Kun ☷": 1,
+        "Gen ☶": 1,
+        "Xun ☴": 1
+      },
+      "hu_attractor_distribution": {
+        "21": 2,
+        "63": 1,
+        "0": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Earth,Wood)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Gui Mei",
+        "Da Zhuang",
+        "Zhong Fu",
+        "Xiao Chu"
+      ],
+      "valence": {
+        "auspicious": 8,
+        "ausp_rate": 0.3333,
+        "inauspicious": 3,
+        "inausp_rate": 0.125,
+        "no_blame": 3,
+        "regret": 2,
+        "difficulty": 0,
+        "danger": 2
+      },
+      "bian_reachable": [
+        "(Fire,Wood)",
+        "(Metal,Earth)",
+        "(Metal,Fire)",
+        "(Metal,Metal)",
+        "(Metal,Water)",
+        "(Metal,Wood)",
+        "(Water,Wood)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Metal,Earth)",
+        "(Metal,Metal)",
+        "(Metal,Wood)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Fire,Wood)",
+        "(Metal,Fire)",
+        "(Metal,Water)",
+        "(Water,Wood)"
+      ],
+      "hu_targets": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Metal,Fire)": {
+      "cell": [
+        "Metal",
+        "Fire"
+      ],
+      "population": 2,
+      "hexagrams": [
+        43,
+        47
+      ],
+      "surface_relation": "克体",
+      "basin_distribution": {
+        "Cycle": 1,
+        "Qian": 1
+      },
+      "depth_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Gen ☶": 1,
+        "Qian ☰": 1
+      },
+      "hu_attractor_distribution": {
+        "21": 1,
+        "63": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Earth,Water)",
+      "reverse_cells": [
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Kui",
+        "Da You"
+      ],
+      "valence": {
+        "auspicious": 3,
+        "ausp_rate": 0.25,
+        "inauspicious": 0,
+        "inausp_rate": 0.0,
+        "no_blame": 6,
+        "regret": 2,
+        "difficulty": 0,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Fire,Fire)",
+        "(Metal,Earth)",
+        "(Metal,Fire)",
+        "(Metal,Metal)",
+        "(Metal,Wood)",
+        "(Water,Fire)",
+        "(Wood,Fire)"
+      ],
+      "bian_universal": [
+        "(Metal,Earth)",
+        "(Metal,Fire)",
+        "(Metal,Metal)",
+        "(Metal,Wood)",
+        "(Wood,Fire)"
+      ],
+      "bian_partial": [
+        "(Fire,Fire)",
+        "(Water,Fire)"
+      ],
+      "hu_targets": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Metal,Earth)": {
+      "cell": [
+        "Metal",
+        "Earth"
+      ],
+      "population": 4,
+      "hexagrams": [
+        3,
+        7,
+        35,
+        39
+      ],
+      "surface_relation": "生体",
+      "basin_distribution": {
+        "Kun": 2,
+        "Cycle": 2
+      },
+      "depth_distribution": {
+        "2": 4
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "palace_distribution": {
+        "Kun ☷": 2,
+        "Gen ☶": 2
+      },
+      "hu_attractor_distribution": {
+        "0": 2,
+        "21": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Earth,Metal)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Lin",
+        "Tai",
+        "Sun",
+        "Da Chu"
+      ],
+      "valence": {
+        "auspicious": 10,
+        "ausp_rate": 0.4167,
+        "inauspicious": 1,
+        "inausp_rate": 0.0417,
+        "no_blame": 7,
+        "regret": 0,
+        "difficulty": 1,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Fire,Earth)",
+        "(Metal,Earth)",
+        "(Metal,Fire)",
+        "(Metal,Water)",
+        "(Metal,Wood)",
+        "(Water,Earth)",
+        "(Wood,Earth)"
+      ],
+      "bian_universal": [
+        "(Metal,Earth)",
+        "(Metal,Wood)",
+        "(Wood,Earth)"
+      ],
+      "bian_partial": [
+        "(Fire,Earth)",
+        "(Metal,Fire)",
+        "(Metal,Water)",
+        "(Water,Earth)"
+      ],
+      "hu_targets": [
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Metal,Metal)": {
+      "cell": [
+        "Metal",
+        "Metal"
+      ],
+      "population": 4,
+      "hexagrams": [
+        27,
+        31,
+        59,
+        63
+      ],
+      "surface_relation": "比和",
+      "basin_distribution": {
+        "Cycle": 2,
+        "Qian": 2
+      },
+      "depth_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "palace_distribution": {
+        "Dui ☱": 1,
+        "Kun ☷": 1,
+        "Gen ☶": 1,
+        "Qian ☰": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 2,
+        "63": 2
+      },
+      "is_diagonal": true,
+      "complement_cell": "(Earth,Earth)",
+      "reverse_cells": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Dui",
+        "Guai",
+        "Lu",
+        "Qian"
+      ],
+      "valence": {
+        "auspicious": 5,
+        "ausp_rate": 0.2083,
+        "inauspicious": 4,
+        "inausp_rate": 0.1667,
+        "no_blame": 5,
+        "regret": 3,
+        "difficulty": 0,
+        "danger": 3
+      },
+      "bian_reachable": [
+        "(Fire,Metal)",
+        "(Metal,Fire)",
+        "(Metal,Metal)",
+        "(Metal,Water)",
+        "(Metal,Wood)",
+        "(Water,Metal)",
+        "(Wood,Metal)"
+      ],
+      "bian_universal": [
+        "(Metal,Metal)",
+        "(Metal,Wood)",
+        "(Wood,Metal)"
+      ],
+      "bian_partial": [
+        "(Fire,Metal)",
+        "(Metal,Fire)",
+        "(Metal,Water)",
+        "(Water,Metal)"
+      ],
+      "hu_targets": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Metal,Water)": {
+      "cell": [
+        "Metal",
+        "Water"
+      ],
+      "population": 2,
+      "hexagrams": [
+        19,
+        23
+      ],
+      "surface_relation": "体生用",
+      "basin_distribution": {
+        "Kun": 1,
+        "Cycle": 1
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1,
+        "Kun ☷": 1
+      },
+      "hu_attractor_distribution": {
+        "0": 1,
+        "21": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Earth,Fire)",
+      "reverse_cells": [
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Wood"
+        ]
+      ],
+      "hex_names": [
+        "Jie",
+        "Xu"
+      ],
+      "valence": {
+        "auspicious": 4,
+        "ausp_rate": 0.3333,
+        "inauspicious": 2,
+        "inausp_rate": 0.1667,
+        "no_blame": 3,
+        "regret": 1,
+        "difficulty": 0,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Fire,Water)",
+        "(Metal,Earth)",
+        "(Metal,Metal)",
+        "(Metal,Water)",
+        "(Metal,Wood)",
+        "(Water,Water)",
+        "(Wood,Water)"
+      ],
+      "bian_universal": [
+        "(Metal,Earth)",
+        "(Metal,Metal)",
+        "(Metal,Water)",
+        "(Metal,Wood)",
+        "(Wood,Water)"
+      ],
+      "bian_partial": [
+        "(Fire,Water)",
+        "(Water,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Water,Wood)": {
+      "cell": [
+        "Water",
+        "Wood"
+      ],
+      "population": 2,
+      "hexagrams": [
+        10,
+        50
+      ],
+      "surface_relation": "体生用",
+      "basin_distribution": {
+        "Cycle": 1,
+        "Kun": 1
+      },
+      "depth_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "palace_distribution": {
+        "Zhen ☳": 1,
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "21": 1,
+        "0": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Fire,Wood)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Water"
+        ]
+      ],
+      "hex_names": [
+        "Xie",
+        "Huan"
+      ],
+      "valence": {
+        "auspicious": 4,
+        "ausp_rate": 0.3333,
+        "inauspicious": 0,
+        "inausp_rate": 0.0,
+        "no_blame": 3,
+        "regret": 2,
+        "difficulty": 1,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Wood)",
+        "(Metal,Wood)",
+        "(Water,Earth)",
+        "(Water,Fire)",
+        "(Water,Metal)",
+        "(Water,Water)",
+        "(Wood,Wood)"
+      ],
+      "bian_universal": [
+        "(Earth,Wood)",
+        "(Metal,Wood)",
+        "(Water,Earth)",
+        "(Water,Metal)",
+        "(Wood,Wood)"
+      ],
+      "bian_partial": [
+        "(Water,Fire)",
+        "(Water,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_well_defined": false
+    },
+    "(Water,Fire)": {
+      "cell": [
+        "Water",
+        "Fire"
+      ],
+      "population": 1,
+      "hexagrams": [
+        42
+      ],
+      "surface_relation": "体克用",
+      "basin_distribution": {
+        "Cycle": 1
+      },
+      "depth_distribution": {
+        "0": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Fire",
+          "Water"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Fire",
+          "Water"
+        ]
+      ],
+      "palace_distribution": {
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 1
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Fire,Water)",
+      "reverse_cells": [
+        [
+          "Fire",
+          "Water"
+        ]
+      ],
+      "hex_names": [
+        "Wei Ji"
+      ],
+      "valence": {
+        "auspicious": 3,
+        "ausp_rate": 0.5,
+        "inauspicious": 1,
+        "inausp_rate": 0.1667,
+        "no_blame": 1,
+        "regret": 2,
+        "difficulty": 1,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Fire)",
+        "(Metal,Fire)",
+        "(Water,Earth)",
+        "(Water,Metal)",
+        "(Water,Wood)",
+        "(Wood,Fire)"
+      ],
+      "bian_universal": [
+        "(Earth,Fire)",
+        "(Metal,Fire)",
+        "(Water,Earth)",
+        "(Water,Metal)",
+        "(Water,Wood)",
+        "(Wood,Fire)"
+      ],
+      "bian_partial": [],
+      "hu_targets": [
+        [
+          "Fire",
+          "Water"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Water,Earth)": {
+      "cell": [
+        "Water",
+        "Earth"
+      ],
+      "population": 2,
+      "hexagrams": [
+        2,
+        34
+      ],
+      "surface_relation": "克体",
+      "basin_distribution": {
+        "Kun": 2
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1,
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "0": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Fire,Metal)",
+      "reverse_cells": [
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "hex_names": [
+        "Shi",
+        "Meng"
+      ],
+      "valence": {
+        "auspicious": 3,
+        "ausp_rate": 0.25,
+        "inauspicious": 3,
+        "inausp_rate": 0.25,
+        "no_blame": 3,
+        "regret": 0,
+        "difficulty": 2,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Earth)",
+        "(Metal,Earth)",
+        "(Water,Earth)",
+        "(Water,Fire)",
+        "(Water,Water)",
+        "(Water,Wood)",
+        "(Wood,Earth)"
+      ],
+      "bian_universal": [
+        "(Earth,Earth)",
+        "(Metal,Earth)",
+        "(Water,Earth)",
+        "(Water,Wood)",
+        "(Wood,Earth)"
+      ],
+      "bian_partial": [
+        "(Water,Fire)",
+        "(Water,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Water,Metal)": {
+      "cell": [
+        "Water",
+        "Metal"
+      ],
+      "population": 2,
+      "hexagrams": [
+        26,
+        58
+      ],
+      "surface_relation": "生体",
+      "basin_distribution": {
+        "Cycle": 2
+      },
+      "depth_distribution": {
+        "2": 2
+      },
+      "hu_cells_reachable": [
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Fire",
+          "Wood"
+        ]
+      ],
+      "palace_distribution": {
+        "Dui ☱": 1,
+        "Li ☲": 1
+      },
+      "hu_attractor_distribution": {
+        "42": 2
+      },
+      "is_diagonal": false,
+      "complement_cell": "(Fire,Earth)",
+      "reverse_cells": [
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ]
+      ],
+      "hex_names": [
+        "Kun",
+        "Song"
+      ],
+      "valence": {
+        "auspicious": 5,
+        "ausp_rate": 0.4167,
+        "inauspicious": 2,
+        "inausp_rate": 0.1667,
+        "no_blame": 1,
+        "regret": 1,
+        "difficulty": 1,
+        "danger": 1
+      },
+      "bian_reachable": [
+        "(Earth,Metal)",
+        "(Metal,Metal)",
+        "(Water,Fire)",
+        "(Water,Metal)",
+        "(Water,Water)",
+        "(Water,Wood)",
+        "(Wood,Metal)"
+      ],
+      "bian_universal": [
+        "(Earth,Metal)",
+        "(Metal,Metal)",
+        "(Water,Metal)",
+        "(Water,Wood)",
+        "(Wood,Metal)"
+      ],
+      "bian_partial": [
+        "(Water,Fire)",
+        "(Water,Water)"
+      ],
+      "hu_targets": [
+        [
+          "Fire",
+          "Wood"
+        ]
+      ],
+      "hu_well_defined": true
+    },
+    "(Water,Water)": {
+      "cell": [
+        "Water",
+        "Water"
+      ],
+      "population": 1,
+      "hexagrams": [
+        18
+      ],
+      "surface_relation": "比和",
+      "basin_distribution": {
+        "Kun": 1
+      },
+      "depth_distribution": {
+        "2": 1
+      },
+      "hu_cells_reachable": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_cells_unique": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "palace_distribution": {
+        "Kan ☵": 1
+      },
+      "hu_attractor_distribution": {
+        "0": 1
+      },
+      "is_diagonal": true,
+      "complement_cell": "(Fire,Fire)",
+      "reverse_cells": [
+        [
+          "Water",
+          "Water"
+        ]
+      ],
+      "hex_names": [
+        "Kan"
+      ],
+      "valence": {
+        "auspicious": 0,
+        "ausp_rate": 0.0,
+        "inauspicious": 2,
+        "inausp_rate": 0.3333,
+        "no_blame": 2,
+        "regret": 0,
+        "difficulty": 0,
+        "danger": 0
+      },
+      "bian_reachable": [
+        "(Earth,Water)",
+        "(Metal,Water)",
+        "(Water,Earth)",
+        "(Water,Metal)",
+        "(Water,Wood)",
+        "(Wood,Water)"
+      ],
+      "bian_universal": [
+        "(Earth,Water)",
+        "(Metal,Water)",
+        "(Water,Earth)",
+        "(Water,Metal)",
+        "(Water,Wood)",
+        "(Wood,Water)"
+      ],
+      "bian_partial": [],
+      "hu_targets": [
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "hu_well_defined": true
+    }
+  },
+  "reverse_indices": {
+    "by_basin": {
+      "Kun": [
+        0,
+        1,
+        2,
+        3,
+        16,
+        17,
+        18,
+        19,
+        32,
+        33,
+        34,
+        35,
+        48,
+        49,
+        50,
+        51
+      ],
+      "Cycle": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "Qian": [
+        12,
+        13,
+        14,
+        15,
+        28,
+        29,
+        30,
+        31,
+        44,
+        45,
+        46,
+        47,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "by_palace": {
+      "Kun ☷": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        16,
+        23,
+        31
+      ],
+      "Kan ☵": [
+        2,
+        5,
+        13,
+        17,
+        18,
+        19,
+        21,
+        29
+      ],
+      "Dui ☱": [
+        4,
+        11,
+        12,
+        20,
+        24,
+        26,
+        27,
+        28
+      ],
+      "Zhen ☳": [
+        6,
+        8,
+        9,
+        10,
+        14,
+        22,
+        25,
+        30
+      ],
+      "Qian ☰": [
+        32,
+        40,
+        47,
+        48,
+        56,
+        60,
+        62,
+        63
+      ],
+      "Xun ☴": [
+        33,
+        38,
+        41,
+        49,
+        53,
+        54,
+        55,
+        57
+      ],
+      "Li ☲": [
+        34,
+        42,
+        44,
+        45,
+        46,
+        50,
+        58,
+        61
+      ],
+      "Gen ☶": [
+        35,
+        36,
+        37,
+        39,
+        43,
+        51,
+        52,
+        59
+      ]
+    },
+    "by_relation": {
+      "比和": [
+        0,
+        4,
+        9,
+        14,
+        18,
+        27,
+        31,
+        32,
+        36,
+        45,
+        49,
+        54,
+        59,
+        63
+      ],
+      "体克用": [
+        1,
+        6,
+        11,
+        15,
+        16,
+        20,
+        29,
+        33,
+        38,
+        42,
+        51,
+        55,
+        61
+      ],
+      "克体": [
+        2,
+        8,
+        12,
+        21,
+        25,
+        30,
+        34,
+        43,
+        47,
+        48,
+        52,
+        57,
+        62
+      ],
+      "生体": [
+        3,
+        7,
+        13,
+        17,
+        22,
+        26,
+        35,
+        39,
+        40,
+        44,
+        53,
+        58
+      ],
+      "体生用": [
+        5,
+        10,
+        19,
+        23,
+        24,
+        28,
+        37,
+        41,
+        46,
+        50,
+        56,
+        60
+      ]
+    }
+  },
+  "liuqin_collisions": [
+    {
+      "word": [
+        "妻財",
+        "官鬼",
+        "兄弟",
+        "兄弟",
+        "妻財",
+        "子孫"
+      ],
+      "hexes": [
+        1,
+        7
+      ],
+      "hex_names": [
+        "Fu",
+        "Tai"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "basin",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "父母",
+        "官鬼",
+        "兄弟",
+        "兄弟",
+        "妻財",
+        "子孫"
+      ],
+      "hexes": [
+        3,
+        51
+      ],
+      "hex_names": [
+        "Lin",
+        "Zhong Fu"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "父母",
+        "官鬼",
+        "兄弟",
+        "父母",
+        "子孫",
+        "兄弟"
+      ],
+      "hexes": [
+        4,
+        59
+      ],
+      "hex_names": [
+        "Qian",
+        "Lu"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "palace_element",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "妻財",
+        "父母",
+        "官鬼",
+        "妻財",
+        "父母",
+        "官鬼"
+      ],
+      "hexes": [
+        6,
+        54
+      ],
+      "hex_names": [
+        "Sheng",
+        "Xun"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "inner_val"
+      ]
+    },
+    {
+      "word": [
+        "父母",
+        "兄弟",
+        "妻財",
+        "妻財",
+        "父母",
+        "官鬼"
+      ],
+      "hexes": [
+        49,
+        55
+      ],
+      "hex_names": [
+        "Yi",
+        "Xiao Chu"
+      ],
+      "distinguishing_fields": [
+        "surface_cell",
+        "hu_cell",
+        "basin",
+        "inner_val"
+      ]
+    }
+  ],
+  "wuxing_equivalent_pairs": [
+    {
+      "profile": "Metal,Earth|Wood,Earth|Kun|Earth",
+      "hex_ids": [
+        3,
+        35
+      ],
+      "hex_names": [
+        "Lin",
+        "Sun"
+      ]
+    },
+    {
+      "profile": "Wood,Earth|Metal,Wood|Cycle|Wood",
+      "hex_ids": [
+        6,
+        38
+      ],
+      "hex_names": [
+        "Sheng",
+        "Gu"
+      ]
+    },
+    {
+      "profile": "Metal,Earth|Metal,Wood|Cycle|Earth",
+      "hex_ids": [
+        7,
+        39
+      ],
+      "hex_names": [
+        "Tai",
+        "Da Chu"
+      ]
+    },
+    {
+      "profile": "Earth,Metal|Earth,Wood|Cycle|Metal",
+      "hex_ids": [
+        24,
+        56
+      ],
+      "hex_names": [
+        "Cui",
+        "Pi"
+      ]
+    },
+    {
+      "profile": "Wood,Metal|Earth,Wood|Cycle|Wood",
+      "hex_ids": [
+        25,
+        57
+      ],
+      "hex_names": [
+        "Sui",
+        "Wu Wang"
+      ]
+    },
+    {
+      "profile": "Earth,Metal|Wood,Metal|Qian|Metal",
+      "hex_ids": [
+        28,
+        60
+      ],
+      "hex_names": [
+        "Xian",
+        "Dun"
+      ]
+    }
+  ],
+  "hu_flow": {
+    "Wood,Wood": {
+      "Earth,Water": 1,
+      "Metal,Metal": 1,
+      "Earth,Earth": 1,
+      "Metal,Fire": 1
+    },
+    "Wood,Fire": {
+      "Earth,Water": 1,
+      "Metal,Metal": 1
+    },
+    "Wood,Earth": {
+      "Earth,Earth": 2,
+      "Metal,Wood": 2
+    },
+    "Wood,Metal": {
+      "Earth,Wood": 2,
+      "Metal,Metal": 2
+    },
+    "Wood,Water": {
+      "Earth,Earth": 1,
+      "Metal,Fire": 1
+    },
+    "Fire,Wood": {
+      "Wood,Metal": 1,
+      "Water,Fire": 1
+    },
+    "Fire,Fire": {
+      "Wood,Metal": 1
+    },
+    "Fire,Earth": {
+      "Water,Wood": 2
+    },
+    "Fire,Metal": {
+      "Wood,Metal": 2
+    },
+    "Fire,Water": {
+      "Water,Fire": 1
+    },
+    "Earth,Wood": {
+      "Earth,Water": 1,
+      "Wood,Metal": 1,
+      "Earth,Earth": 1,
+      "Water,Fire": 1
+    },
+    "Earth,Fire": {
+      "Earth,Water": 1,
+      "Wood,Metal": 1
+    },
+    "Earth,Earth": {
+      "Earth,Earth": 2,
+      "Water,Wood": 2
+    },
+    "Earth,Metal": {
+      "Earth,Wood": 2,
+      "Wood,Metal": 2
+    },
+    "Earth,Water": {
+      "Earth,Earth": 1,
+      "Water,Fire": 1
+    },
+    "Metal,Wood": {
+      "Fire,Water": 1,
+      "Metal,Metal": 1,
+      "Wood,Earth": 1,
+      "Metal,Fire": 1
+    },
+    "Metal,Fire": {
+      "Fire,Water": 1,
+      "Metal,Metal": 1
+    },
+    "Metal,Earth": {
+      "Wood,Earth": 2,
+      "Metal,Wood": 2
+    },
+    "Metal,Metal": {
+      "Fire,Wood": 2,
+      "Metal,Metal": 2
+    },
+    "Metal,Water": {
+      "Wood,Earth": 1,
+      "Metal,Fire": 1
+    },
+    "Water,Wood": {
+      "Fire,Water": 1,
+      "Wood,Earth": 1
+    },
+    "Water,Fire": {
+      "Fire,Water": 1
+    },
+    "Water,Earth": {
+      "Wood,Earth": 2
+    },
+    "Water,Metal": {
+      "Fire,Wood": 2
+    },
+    "Water,Water": {
+      "Wood,Earth": 1
+    }
+  },
+  "attractor_cells": {
+    "0": [
+      "Earth",
+      "Earth"
+    ],
+    "63": [
+      "Metal",
+      "Metal"
+    ],
+    "21": [
+      "Fire",
+      "Water"
+    ],
+    "42": [
+      "Water",
+      "Fire"
+    ]
+  },
+  "convergence": {
+    "Wood,Wood": {
+      "42": 1,
+      "63": 1,
+      "0": 1,
+      "21": 1
+    },
+    "Wood,Fire": {
+      "42": 1,
+      "63": 1
+    },
+    "Wood,Earth": {
+      "0": 2,
+      "21": 2
+    },
+    "Wood,Metal": {
+      "42": 2,
+      "63": 2
+    },
+    "Wood,Water": {
+      "0": 1,
+      "21": 1
+    },
+    "Fire,Wood": {
+      "63": 1,
+      "42": 1
+    },
+    "Fire,Fire": {
+      "63": 1
+    },
+    "Fire,Earth": {
+      "21": 2
+    },
+    "Fire,Metal": {
+      "63": 2
+    },
+    "Fire,Water": {
+      "21": 1
+    },
+    "Earth,Wood": {
+      "42": 2,
+      "63": 1,
+      "0": 1
+    },
+    "Earth,Fire": {
+      "42": 1,
+      "63": 1
+    },
+    "Earth,Earth": {
+      "0": 2,
+      "21": 2
+    },
+    "Earth,Metal": {
+      "42": 2,
+      "63": 2
+    },
+    "Earth,Water": {
+      "0": 1,
+      "42": 1
+    },
+    "Metal,Wood": {
+      "21": 2,
+      "63": 1,
+      "0": 1
+    },
+    "Metal,Fire": {
+      "21": 1,
+      "63": 1
+    },
+    "Metal,Earth": {
+      "0": 2,
+      "21": 2
+    },
+    "Metal,Metal": {
+      "42": 2,
+      "63": 2
+    },
+    "Metal,Water": {
+      "0": 1,
+      "21": 1
+    },
+    "Water,Wood": {
+      "21": 1,
+      "0": 1
+    },
+    "Water,Fire": {
+      "42": 1
+    },
+    "Water,Earth": {
+      "0": 2
+    },
+    "Water,Metal": {
+      "42": 2
+    },
+    "Water,Water": {
+      "0": 1
+    }
+  },
+  "orbits": {
+    "Wood,Wood": [
+      [
+        "Wood",
+        "Wood"
+      ],
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Wood,Fire": [
+      [
+        "Wood",
+        "Fire"
+      ],
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Wood,Earth": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Wood,Metal": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Wood,Water": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Wood",
+        "Water"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Fire,Wood": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Fire,Fire": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Fire"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Fire,Earth": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Earth"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Fire,Metal": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Fire,Water": [
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Earth,Wood": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Earth,Fire": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Fire"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Earth,Earth": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Earth,Metal": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Metal"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Earth,Water": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Metal,Wood": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Metal,Fire": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Metal,Earth": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Earth"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Metal,Metal": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Metal,Water": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Metal",
+        "Water"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Water,Wood": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Water,Fire": [
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Water",
+        "Fire"
+      ]
+    ],
+    "Water,Earth": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ],
+      [
+        "Water",
+        "Earth"
+      ]
+    ],
+    "Water,Metal": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ],
+      [
+        "Water",
+        "Metal"
+      ]
+    ],
+    "Water,Water": [
+      [
+        "Wood",
+        "Earth"
+      ],
+      [
+        "Wood",
+        "Metal"
+      ],
+      [
+        "Fire",
+        "Wood"
+      ],
+      [
+        "Fire",
+        "Water"
+      ],
+      [
+        "Earth",
+        "Wood"
+      ],
+      [
+        "Earth",
+        "Earth"
+      ],
+      [
+        "Earth",
+        "Water"
+      ],
+      [
+        "Metal",
+        "Wood"
+      ],
+      [
+        "Metal",
+        "Fire"
+      ],
+      [
+        "Metal",
+        "Metal"
+      ],
+      [
+        "Water",
+        "Wood"
+      ],
+      [
+        "Water",
+        "Fire"
+      ],
+      [
+        "Water",
+        "Water"
+      ]
+    ]
+  },
+  "palace_walks": {
+    "Kun ☷": {
+      "palace_element": "Earth",
+      "element_trajectory": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Water"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "体克用",
+        "生体",
+        "生体",
+        "体克用",
+        "比和",
+        "体生用",
+        "体克用"
+      ],
+      "basin_trajectory": [
+        "Kun",
+        "Kun",
+        "Kun",
+        "Cycle",
+        "Qian",
+        "Qian",
+        "Cycle",
+        "Kun"
+      ],
+      "depth_trajectory": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    "Kan ☵": {
+      "palace_element": "Water",
+      "element_trajectory": [
+        [
+          "Water",
+          "Water"
+        ],
+        [
+          "Metal",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Water"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Earth"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "体生用",
+        "生体",
+        "克体",
+        "体克用",
+        "生体",
+        "体生用",
+        "克体"
+      ],
+      "basin_trajectory": [
+        "Kun",
+        "Kun",
+        "Kun",
+        "Cycle",
+        "Qian",
+        "Qian",
+        "Cycle",
+        "Kun"
+      ],
+      "depth_trajectory": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "Dui ☱": {
+      "palace_element": "Metal",
+      "element_trajectory": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Water"
+        ],
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "生体",
+        "体生用",
+        "体生用",
+        "体克用",
+        "比和",
+        "克体",
+        "体克用"
+      ],
+      "basin_trajectory": [
+        "Cycle",
+        "Cycle",
+        "Cycle",
+        "Qian",
+        "Cycle",
+        "Cycle",
+        "Qian",
+        "Cycle"
+      ],
+      "depth_trajectory": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    "Zhen ☳": {
+      "palace_element": "Wood",
+      "element_trajectory": [
+        [
+          "Wood",
+          "Wood"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Water"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "克体",
+        "体生用",
+        "比和",
+        "体克用",
+        "生体",
+        "克体",
+        "克体"
+      ],
+      "basin_trajectory": [
+        "Cycle",
+        "Cycle",
+        "Cycle",
+        "Qian",
+        "Cycle",
+        "Cycle",
+        "Qian",
+        "Cycle"
+      ],
+      "depth_trajectory": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    "Qian ☰": {
+      "palace_element": "Metal",
+      "element_trajectory": [
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Metal"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ],
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "克体",
+        "体生用",
+        "体生用",
+        "克体",
+        "比和",
+        "生体",
+        "克体"
+      ],
+      "basin_trajectory": [
+        "Qian",
+        "Qian",
+        "Qian",
+        "Cycle",
+        "Kun",
+        "Kun",
+        "Cycle",
+        "Qian"
+      ],
+      "depth_trajectory": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    "Xun ☴": {
+      "palace_element": "Wood",
+      "element_trajectory": [
+        [
+          "Wood",
+          "Wood"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Fire",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Wood"
+        ],
+        [
+          "Wood",
+          "Metal"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ],
+        [
+          "Wood",
+          "Earth"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "体克用",
+        "生体",
+        "比和",
+        "克体",
+        "体生用",
+        "体克用",
+        "体克用"
+      ],
+      "basin_trajectory": [
+        "Cycle",
+        "Cycle",
+        "Cycle",
+        "Kun",
+        "Cycle",
+        "Cycle",
+        "Kun",
+        "Cycle"
+      ],
+      "depth_trajectory": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    "Li ☲": {
+      "palace_element": "Fire",
+      "element_trajectory": [
+        [
+          "Fire",
+          "Fire"
+        ],
+        [
+          "Earth",
+          "Fire"
+        ],
+        [
+          "Wood",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Fire"
+        ],
+        [
+          "Water",
+          "Earth"
+        ],
+        [
+          "Water",
+          "Wood"
+        ],
+        [
+          "Water",
+          "Metal"
+        ],
+        [
+          "Fire",
+          "Metal"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "生体",
+        "体生用",
+        "体克用",
+        "克体",
+        "体生用",
+        "生体",
+        "体克用"
+      ],
+      "basin_trajectory": [
+        "Qian",
+        "Qian",
+        "Qian",
+        "Cycle",
+        "Kun",
+        "Kun",
+        "Cycle",
+        "Qian"
+      ],
+      "depth_trajectory": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "Gen ☶": {
+      "palace_element": "Earth",
+      "element_trajectory": [
+        [
+          "Earth",
+          "Earth"
+        ],
+        [
+          "Fire",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Earth"
+        ],
+        [
+          "Metal",
+          "Fire"
+        ],
+        [
+          "Metal",
+          "Metal"
+        ],
+        [
+          "Metal",
+          "Wood"
+        ],
+        [
+          "Earth",
+          "Wood"
+        ]
+      ],
+      "relation_trajectory": [
+        "比和",
+        "体生用",
+        "生体",
+        "生体",
+        "克体",
+        "比和",
+        "体克用",
+        "克体"
+      ],
+      "basin_trajectory": [
+        "Cycle",
+        "Cycle",
+        "Cycle",
+        "Kun",
+        "Cycle",
+        "Cycle",
+        "Kun",
+        "Cycle"
+      ],
+      "depth_trajectory": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ]
+    }
+  },
+  "palace_z5_equivalence_classes": [
+    [
+      "Dui ☱",
+      "Gen ☶",
+      "Kun ☷",
+      "Qian ☰"
+    ],
+    [
+      "Kan ☵",
+      "Li ☲"
+    ],
+    [
+      "Xun ☴",
+      "Zhen ☳"
+    ]
+  ],
+  "complement_anti_automorphism": {
+    "Wood": "Wood",
+    "Fire": "Water",
+    "Earth": "Metal",
+    "Metal": "Earth",
+    "Water": "Fire"
+  },
+  "complement_pi_errors": 0,
+  "valence_summary": {
+    "core_bridge": {
+      "chi2": 17.438368860055608,
+      "p": 0.00016342041737192975,
+      "basin_rates": {
+        "Kun": {
+          "total": 96,
+          "xiong": 20,
+          "rate": 0.2083
+        },
+        "Cycle": {
+          "total": 192,
+          "xiong": 12,
+          "rate": 0.0625
+        },
+        "Qian": {
+          "total": 96,
+          "xiong": 20,
+          "rate": 0.2083
+        }
+      }
+    },
+    "shell_bridge": {
+      "fisher_or": 1.8181818181818181,
+      "fisher_p": 0.033098981092921906,
+      "chi2": 13.550583480493001,
+      "chi2_p": 0.008876563767172404,
+      "relation_rates": {
+        "比和": {
+          "total": 84,
+          "ji": 19,
+          "rate": 0.2262
+        },
+        "体克用": {
+          "total": 78,
+          "ji": 29,
+          "rate": 0.3718
+        },
+        "克体": {
+          "total": 78,
+          "ji": 15,
+          "rate": 0.1923
+        },
+        "生体": {
+          "total": 72,
+          "ji": 30,
+          "rate": 0.4167
+        },
+        "体生用": {
+          "total": 72,
+          "ji": 25,
+          "rate": 0.3472
+        }
+      }
+    },
+    "spatial_residual": {
+      "chi2": 19.046153846153842,
+      "p": 0.7495237346973005
+    }
+  }
+}

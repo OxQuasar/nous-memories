@@ -1,0 +1,72 @@
+{
+  "thematic_screen": {
+    "within_group_sim": {
+      "比和": 0.5487449765205383,
+      "生体": 0.5489907264709473,
+      "克体": 0.5624553561210632,
+      "体生用": 0.5462616086006165,
+      "体克用": 0.5365859866142273
+    },
+    "between_group_mean": 0.5452387452125549,
+    "overall_mean": 0.5459292531013489,
+    "within_minus_between": 0.0033689856529236506,
+    "permutation_p": 0.0,
+    "kruskal_wallis_H": 20.2354736328125,
+    "kruskal_wallis_p": 0.00044868249096907675,
+    "n_permutations": 5000
+  },
+  "nayin_probe": {
+    "n_groups": 23,
+    "baseline_sim": 0.5459292531013489,
+    "kruskal_wallis_H": 57.6671142578125,
+    "kruskal_wallis_p": 4.913368684356101e-05,
+    "verdict": "NULL (at name level)"
+  },
+  "tradition_table": [
+    {
+      "relation": "比和",
+      "tradition_claim": "百事顺遂 (all auspicious)",
+      "tradition_source": "vol2:24 體用比和則百事順遂",
+      "ji_rate": 0.2262,
+      "xiong_rate": 0.2024,
+      "verdict": "Contradicted",
+      "note": "Highest 凶 rate (20.2%), only average 吉 (22.6%)"
+    },
+    {
+      "relation": "生体",
+      "tradition_claim": "有进益之喜 (gains/joy)",
+      "tradition_source": "vol2:24 用生體有進益之喜",
+      "ji_rate": 0.4167,
+      "xiong_rate": 0.0833,
+      "verdict": "Confirmed",
+      "note": "Highest 吉 rate (41.7%), low 凶 (8.3%), OR≈2.1 vs rest"
+    },
+    {
+      "relation": "体生用",
+      "tradition_claim": "有耗失之患 (loss/depletion)",
+      "tradition_source": "vol2:24 體生用有耗失之患",
+      "ji_rate": 0.3472,
+      "xiong_rate": 0.0694,
+      "verdict": "Partial",
+      "note": "吉 34.7% — above average but below 生体. Tradition symmetrizes but texts don't"
+    },
+    {
+      "relation": "克体",
+      "tradition_claim": "诸事凶 (all inauspicious)",
+      "tradition_source": "vol2:24 用克體諸事凶",
+      "ji_rate": 0.1923,
+      "xiong_rate": 0.1667,
+      "verdict": "Weak",
+      "note": "凶 only 16.7%, 吉 19.2% (lowest). Direction correct but magnitude small"
+    },
+    {
+      "relation": "体克用",
+      "tradition_claim": "诸事吉 (all auspicious)",
+      "tradition_source": "vol2:24 體克用諸事吉",
+      "ji_rate": 0.3718,
+      "xiong_rate": 0.141,
+      "verdict": "Contradicted",
+      "note": "吉 37.2% (second highest) — but 凶 14.1% not low. Tradition swaps 克 direction"
+    }
+  ]
+}
