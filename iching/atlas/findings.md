@@ -378,3 +378,15 @@ The torus encodes **when you can see what** (epistemology — the seasonal acces
 3. **納甲 modification history.** When the 京氏 universal offset was replaced by the 火珠林 乾/坤-only rule. Historical-philological question requiring 唐–宋 dynasty intermediate texts.
 4. **Visualizations.** The torus, heatmaps, flow diagrams — sketched in PLAN.md §V.Outputs, not computed. Data is ready; rendering is deferred.
 5. **Temporal × semantic interaction.** Whether valence rates vary by season (does 凶×basin signal change when the basin's element is 旺 vs 死?). Requires temporal.json × valence_torus.json cross-analysis.
+
+---
+
+## The Torus Belongs to Neither System
+
+The atlas `surface_cell` = (upper_element, lower_element) is the natural algebraic projection of the hexagram's trigram pair onto Z₅×Z₅. It determines forbidden combinations, population gradients, seasonal access windows. It is algebraically real. But neither divination system reads it directly.
+
+**火珠林** decomposes *below* the torus. It reads each of 6 lines individually: stem-branch → element → compare against palace element → 六親 type. Six parallel Z₅ comparisons against a fixed reference. The trigram pair is never composed into a 2D coordinate. The torus cell exists in the hexagram's algebra but is invisible to 納甲 practice.
+
+**梅花** reinterprets the torus axes. The two dimensions aren't upper/lower (positional) but 體/用 (relational) — which trigram is self, which is other. Assignment depends on the 動爻 position, so the same hexagram occupies two different cells depending on which line moves. 梅花 reads a *rotated* torus where the axes carry directional meaning (who acts on whom).
+
+The atlas torus is the algebraic ground truth from which both systems project differently. It is the territory; neither system's map matches it exactly. `surface_cell` is a coordinate of the hexagram as a mathematical object — not a coordinate of any practitioner's reading.

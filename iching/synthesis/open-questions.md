@@ -4,11 +4,13 @@
 
 Structure → incompleteness → curvature → specificity → meaning.
 
-The algebraic characterization is complete at this resolution. Z₂⁶ with shell/core projections, 五行 coordinates, basin convergence, palace walks, 六親 near-bijection. Two divination systems exhaust the hexagram's information through the only two primitive projections available (proven algebraically, confirmed historically). Orthogonality between 納甲 and core is confirmed; leakage at the element level is quantified (~7%, which is 2.5/6.0 = 42% at the bit level, collapsing to near-zero through the 五行 quotient). Temporal curvature is characterized: three sources, one softened by 日辰 to a 1/5 residual (proven as theorem). Two bridges connect algebra to text: 凶×basin (core) and 吉×生体 (shell), both encoding process not state. Bridge orthogonality is proven at the perturbation level (atlas workflow).
+The algebraic characterization is complete at this resolution. Z₂⁶ with shell/core projections, 五行 coordinates, basin convergence, palace walks, 六親 near-bijection. Two divination systems exhaust the hexagram's information through the only two primitive projections available (proven algebraically, confirmed historically). Orthogonality between 納甲 and core is confirmed; leakage at the element level is quantified (~7%, which is 2.5/6.0 = 42% at the bit level, collapsing to near-zero through the 五行 quotient). Temporal curvature is characterized: three sources, one softened by 日辰 to a 1/5 residual (proven as theorem). Two bridges connect algebra to text: 凶×basin (core, p=0.0002) and 吉×生体 (shell, p=0.007, basin-independent). Both encode process not state. Bridge orthogonality is proven at the perturbation level (atlas workflow).
 
 The atlas establishes the coordinate system as informationally complete (zero residual: H(hexagram | full profile) = 0.0 bits). Combined with zero free parameters, this means: the encoding is complete in both directions, and uniquely determined. The atlas is the terminal structural computation — remaining questions are queries against it, not new constructions.
 
 The atlas further establishes: the {2,2,2,1,1} partition is the single organizing principle from which all structural properties derive; the torus is the frame (epistemology — when you can see what) while the Z₅ diagonal quotient is where meaning lives (ontology — what things signify); and the core is time-independent (orthogonality wall) while the shell is time-modulated.
+
+**The 梅花 atlas extends this:** The 384-state expansion (64 hexagrams × 6 動爻) projects the hexagram space into a directed, depth-stratified evaluation. Two independent information channels (text ↔ present state, arc ↔ trajectory) operate through the same Z₅×Z₅ geometry but with different axes (positional vs relational). The 體/用 cut converts static algebra into directed reading — "temporal" in 梅花 is structural depth rendered as narrative.
 
 ---
 
@@ -136,6 +138,23 @@ This requires crossing temporal.json (60 states) with valence_torus.json (per-ce
 
 ---
 
+## 6. 火珠林 operational atlas
+
+**Status: open, next major atlas**
+
+The 梅花 atlas mapped one of two operational projections. 火珠林 uses the same hexagram space but evaluates through 六親 × 日辰 activation — a time-dependent 五行 overlay with a floating daily reference (日辰), vs 梅花's fixed 體 reference. The two systems make structurally different cuts through the same algebra.
+
+**What a 火珠林 atlas would map:**
+- 384-state table with 六親 evaluations per line position
+- 用神 activation rules (which line "leads" the reading, by domain)
+- 日辰 × state interaction (how daily element cycles modulate readings)
+- The contrast with 梅花: fixed reference (體) vs floating reference (日辰)
+- Whether 火珠林's 4/5 ceiling (via 日辰) produces a structurally different arc space than 梅花's 2/5 ceiling
+
+**Dependency:** 火珠林 text extraction (partial in sy-divination.md), atlas.json, temporal.json.
+
+---
+
 ## Resolved
 
 ### R1. Do the dropped 京氏 layers carry independent information?
@@ -212,3 +231,21 @@ This requires crossing temporal.json (60 states) with valence_torus.json (per-ce
 
 ### R25. Thematic content by surface relation (atlas)
 **NULL at semantic level.** Surface relation explains <1% of embedding variance despite statistical significance (KW p=0.0004, high power from ~73k comparisons). Confirms synthesis finding — trigram-pair identity drives similarity, not thematic content. (atlas workflow)
+
+### R26. 梅花 torus flow — 互 as vector field on Z₅×Z₅
+**COMPUTED — maximally multi-valued.** 梅花 torus (體,用 axes) has only 2/25 well-defined cells (vs atlas's 8/25). Population follows {2,2,2,1,1} partition (24:12:6 gradient). Wood,Wood reaches 6 互 targets (maximum). The 梅花 torus is a finer-grained but less deterministic view of the same geometry — the line-level expansion (64→384) amplifies multi-valuedness. (mh-atlas workflow)
+
+### R27. 梅花 arc classification
+**COMPUTED — 8 arc types, symmetric with basin dependence.** rescued/betrayed = 56/56, improving/deteriorating = 52/52. Cycle basin concentrates in mixed (76.1%). Mixed has lowest 凶 (7.5%). ti_hu 克-dominance (63%) = perturbation onion L2/L5 at interpretation level. 互 amplifier confirmed (OR=1.96, p=0.007). 183/625 relation vectors realized (29.3%). (mh-atlas workflow)
+
+### R28. 梅花 two-channel architecture
+**CONFIRMED — text ↔ arc are independent channels.** 爻辭 encode present state (ben_relation), 體/用 arc encodes trajectory (本→互→變). 先天 drops text channel; 後天 uses both. Parity wall (192/384 reachable by 先天) biases arc channel (stable_favorable OR=5.23, p=0.0002) but NOT text channel (吉/凶 balanced). The system expects channel disagreement and provides resolution protocol. (mh-atlas workflow)
+
+### R29. 比和 discrepancy at 梅花 level
+**PARTIALLY RESOLVED.** 比和-at-本 凶 elevation (20.2% vs 11.7%) persists within each basin (Kun 29.2%/18.1%, Qian 25.0%/19.4%, Cycle 11.1%/5.1%). Not purely basin confound. 比和-at-本 locked to improving/deteriorating/neutral/mixed (no rescued/betrayed from valence=0). Tradition's "百事順遂" scoped to 体用 only, not full arc. Small within-basin samples prevent definitive statistical closure. (mh-atlas workflow)
+
+### R30. 梅花 18 domain structure
+**ONE ENGINE, 18 SKINS.** All 17 體/用 domains use identical 5-relation evaluation. No domain modifies the 生克 logic. Domain-specific content enters through: (1) semantic binding (what 體/用 represent), (2) trigram imagery, (3) optional sub-systems (present in 3 domains: 婚姻 appearance types, 生產 gender counting, 疾病 3 sub-systems). Six structural clusters: self-vs-other (3), self-vs-asset (4), self-vs-endeavor (4), body-vs-condition (2), self-vs-dwelling (3), self-vs-absent (1). The 18 are explicitly exemplars ("占者以類而推之可也"), not exhaustive. 天時 sole exception (committee reading, no 體/用). (mh-atlas workflow, verified against vol 2 text)
+
+### R31. 先天 parity wall
+**PROVEN — 192/384 reachable.** The 先天 formula has a hard parity constraint: total determines both lower trigram and line position, coupling their parities. Even total → even lower trigram + odd lines only; odd total → odd lower trigram + even lines only. Every hexagram reaches exactly 3 of 6 lines. The unreachable half is arc-biased: stable_favorable vs stable_unfavorable OR=5.23 (p=0.0002), but text-channel valence (吉/凶) is balanced across both halves. 先天 and 後天 operate in structurally complementary state spaces — 後天 is not redundant but necessary for full 384-state coverage. (mh-atlas workflow)

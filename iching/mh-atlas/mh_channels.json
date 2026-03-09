@@ -1,0 +1,122 @@
+{
+  "channels": [
+    {
+      "number": 1,
+      "name": "正应",
+      "source": "本卦",
+      "element_derivation": "algebraic",
+      "description": "體/用 五行 relation of the original hexagram"
+    },
+    {
+      "number": 2,
+      "name": "互应",
+      "source": "互卦",
+      "element_derivation": "algebraic",
+      "description": "Nuclear trigrams evaluated against 體"
+    },
+    {
+      "number": 3,
+      "name": "变应",
+      "source": "变卦",
+      "element_derivation": "algebraic",
+      "description": "Changed hexagram's 用-side trigram vs 體"
+    },
+    {
+      "number": 4,
+      "name": "日应",
+      "source": "日辰",
+      "element_derivation": "calendrical",
+      "description": "Day's earthly branch element vs 體"
+    },
+    {
+      "number": 5,
+      "name": "刻应",
+      "source": "刻 (casting instant)",
+      "element_derivation": "perceptual (三要)",
+      "description": "Omens at the exact moment of casting"
+    },
+    {
+      "number": 6,
+      "name": "外应",
+      "source": "外物",
+      "element_derivation": "perceptual (三要)",
+      "description": "Objects or people appearing at casting"
+    },
+    {
+      "number": 7,
+      "name": "天时应",
+      "source": "天時",
+      "element_derivation": "perceptual (三要)",
+      "description": "Current weather conditions"
+    },
+    {
+      "number": 8,
+      "name": "地理应",
+      "source": "地理",
+      "element_derivation": "perceptual (三要)",
+      "description": "Physical environment at casting location"
+    },
+    {
+      "number": 9,
+      "name": "人事应",
+      "source": "人事",
+      "element_derivation": "perceptual (三要)",
+      "description": "Human activities nearby at casting"
+    },
+    {
+      "number": 10,
+      "name": "方应",
+      "source": "方位",
+      "element_derivation": "perceptual (三要)",
+      "description": "Querent's directional position relative to caster"
+    }
+  ],
+  "channel_classification": {
+    "algebraic": [
+      1,
+      2,
+      3
+    ],
+    "calendrical": [
+      4
+    ],
+    "perceptual": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "note": "Channels 1-3 computed from hexagram. Channel 4 from calendar. Channels 5-10 from 三要 perception. The hexagram provides 3/10 channels; the remaining 7 require observation."
+  },
+  "inversion_rule": {
+    "principle": "Hexagram 生克 overrides perceptual omen sign",
+    "source_quote": "必须以易卦为主，克应次之",
+    "example": "Gold = auspicious in 三要, but if 体 is Wood, Metal 克 Wood = harmful. Coffin = death in 三要, but if 体 is Fire, Wood 生 Fire = recovery.",
+    "priority_order": [
+      "hexagram 体/用 生克",
+      "external 克應 omens",
+      "observer state",
+      "Yi line text (後天 only)"
+    ]
+  },
+  "xiangbei": {
+    "approaching": "favorable sign arriving → good fortune coming; harmful sign arriving → disaster approaching",
+    "departing": "favorable sign leaving → good fortune spent; harmful sign leaving → disaster past",
+    "mechanism": "Adds temporal arrow (approaching/receding) to every 用 input. Direction modifies the temporal dimension of the reading, not the valence."
+  },
+  "boundaries": {
+    "extractable": [
+      "channel → element mapping (algebraic channels fully formalized)",
+      "inversion priority (hexagram > omens)",
+      "向背 sign modifier (directional arrow)",
+      "静占 graceful degradation (drop channels 5-10 when no input)"
+    ],
+    "context_only": [
+      "三要 framework (perceptual theory — 虚灵 cultivation, not algorithm)",
+      "真生真克 intensity gradient (strength of 生克 by seasonal context)",
+      "心易 anti-literalism (trigram→referent is many-to-many, context-selected)"
+    ]
+  }
+}

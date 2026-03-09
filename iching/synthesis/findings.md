@@ -697,16 +697,19 @@ And the deepest finding confirms this is what the texts always encoded. 凶 = fl
 
 Six lines. Five relation types. The sixth line doesn't add a sixth type — it creates a *duplicate*. Somewhere on the Z₅ ring, two lines occupy the same relational position.                    
 
-**火珠林 pipeline (recap):**                                                                                                                      
-```                                                                                                                                               
-Z₂⁶ → 6 lines → 6 elements (via 納甲) → 6 positions on Z₅ → filter by time → filter by question                                                   
-```                                                                                                                                               
+**火珠林 pipeline (recap):**                                                                                                    ```
+1. **Line → 干支** (納甲, Step 3)
+2. **干支 → branch element** (each line gets one element from its 地支)                       
+3. **Branch element vs palace element** → 六親 (Step 4)                                    
+4. **Filter by season** → 旺相休囚死 per element (Step 7)              
+5. **Filter by question** → 用神 selects which 六親 type to focus on (Step 8)
+```
+
 6 parallel samples of the relational ring. Spatial. All lines active simultaneously.                                                              
-                                                                                                                                                  
-**梅花 pipeline:**           
-**梅花 pipeline:**                                                                                                                                
-```                                                                                                                                               
-Time/observation                                                                                                                                  
+                     
+**梅花 pipeline:**                       
+```                        
+Time/observation                    
   ↓ modular arithmetic (mod 8, mod 8, mod 6)                                                                                                      
 Z₂⁶ + 動爻 position                                                                                                                               
   ↓ 動爻 splits hexagram into 體 (self) and 用 (other)                                                                                            

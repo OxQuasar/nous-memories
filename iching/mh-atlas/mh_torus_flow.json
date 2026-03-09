@@ -1,0 +1,873 @@
+{
+  "(Earth,Earth)": {
+    "cell": [
+      "Earth",
+      "Earth"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Earth,Earth)",
+        "(Earth,Earth)"
+      ],
+      [
+        "(Earth,Earth)",
+        "(Earth,Water)"
+      ],
+      [
+        "(Earth,Earth)",
+        "(Earth,Wood)"
+      ],
+      [
+        "(Earth,Water)",
+        "(Earth,Wood)"
+      ],
+      [
+        "(Earth,Wood)",
+        "(Earth,Water)"
+      ]
+    ],
+    "hu_target_count": 5,
+    "well_defined": false,
+    "bian_targets": [
+      "(Earth,Earth)",
+      "(Earth,Fire)",
+      "(Earth,Water)",
+      "(Earth,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 12,
+      "Cycle": 12
+    }
+  },
+  "(Earth,Fire)": {
+    "cell": [
+      "Earth",
+      "Fire"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Earth,Earth)",
+        "(Earth,Water)"
+      ],
+      [
+        "(Earth,Wood)",
+        "(Earth,Metal)"
+      ],
+      [
+        "(Earth,Wood)",
+        "(Earth,Water)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Earth,Earth)",
+      "(Earth,Metal)",
+      "(Earth,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Cycle": 9,
+      "Qian": 3
+    }
+  },
+  "(Earth,Metal)": {
+    "cell": [
+      "Earth",
+      "Metal"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Earth,Earth)",
+        "(Earth,Wood)"
+      ],
+      [
+        "(Earth,Wood)",
+        "(Earth,Metal)"
+      ]
+    ],
+    "hu_target_count": 2,
+    "well_defined": false,
+    "bian_targets": [
+      "(Earth,Fire)",
+      "(Earth,Metal)",
+      "(Earth,Water)",
+      "(Earth,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 6,
+      "Cycle": 12,
+      "Qian": 6
+    }
+  },
+  "(Earth,Water)": {
+    "cell": [
+      "Earth",
+      "Water"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Earth,Earth)",
+        "(Earth,Earth)"
+      ],
+      [
+        "(Earth,Earth)",
+        "(Earth,Wood)"
+      ],
+      [
+        "(Earth,Water)",
+        "(Earth,Fire)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Earth,Earth)",
+      "(Earth,Metal)",
+      "(Earth,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Kun": 9,
+      "Cycle": 3
+    }
+  },
+  "(Earth,Wood)": {
+    "cell": [
+      "Earth",
+      "Wood"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Earth,Earth)",
+        "(Earth,Earth)"
+      ],
+      [
+        "(Earth,Earth)",
+        "(Earth,Water)"
+      ],
+      [
+        "(Earth,Water)",
+        "(Earth,Fire)"
+      ],
+      [
+        "(Earth,Wood)",
+        "(Earth,Metal)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Earth,Earth)",
+      "(Earth,Fire)",
+      "(Earth,Metal)",
+      "(Earth,Water)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 9,
+      "Cycle": 12,
+      "Qian": 3
+    }
+  },
+  "(Fire,Earth)": {
+    "cell": [
+      "Fire",
+      "Earth"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Fire,Metal)",
+        "(Fire,Wood)"
+      ],
+      [
+        "(Fire,Water)",
+        "(Fire,Earth)"
+      ],
+      [
+        "(Fire,Water)",
+        "(Fire,Wood)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Fire,Earth)",
+      "(Fire,Fire)",
+      "(Fire,Water)",
+      "(Fire,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Cycle": 9,
+      "Qian": 3
+    }
+  },
+  "(Fire,Fire)": {
+    "cell": [
+      "Fire",
+      "Fire"
+    ],
+    "population": 6,
+    "hu_target_pairs": [
+      [
+        "(Fire,Metal)",
+        "(Fire,Wood)"
+      ],
+      [
+        "(Fire,Wood)",
+        "(Fire,Metal)"
+      ]
+    ],
+    "hu_target_count": 2,
+    "well_defined": false,
+    "bian_targets": [
+      "(Fire,Earth)",
+      "(Fire,Metal)",
+      "(Fire,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Qian": 6
+    }
+  },
+  "(Fire,Metal)": {
+    "cell": [
+      "Fire",
+      "Metal"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Fire,Metal)",
+        "(Fire,Metal)"
+      ],
+      [
+        "(Fire,Water)",
+        "(Fire,Fire)"
+      ],
+      [
+        "(Fire,Wood)",
+        "(Fire,Metal)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Fire,Fire)",
+      "(Fire,Metal)",
+      "(Fire,Water)",
+      "(Fire,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Qian": 9,
+      "Cycle": 3
+    }
+  },
+  "(Fire,Water)": {
+    "cell": [
+      "Fire",
+      "Water"
+    ],
+    "population": 6,
+    "hu_target_pairs": [
+      [
+        "(Fire,Water)",
+        "(Fire,Fire)"
+      ]
+    ],
+    "hu_target_count": 1,
+    "well_defined": true,
+    "bian_targets": [
+      "(Fire,Earth)",
+      "(Fire,Metal)",
+      "(Fire,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Cycle": 6
+    }
+  },
+  "(Fire,Wood)": {
+    "cell": [
+      "Fire",
+      "Wood"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Fire,Metal)",
+        "(Fire,Metal)"
+      ],
+      [
+        "(Fire,Water)",
+        "(Fire,Earth)"
+      ],
+      [
+        "(Fire,Water)",
+        "(Fire,Fire)"
+      ],
+      [
+        "(Fire,Wood)",
+        "(Fire,Metal)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Fire,Earth)",
+      "(Fire,Fire)",
+      "(Fire,Metal)",
+      "(Fire,Water)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Qian": 6,
+      "Cycle": 6
+    }
+  },
+  "(Metal,Earth)": {
+    "cell": [
+      "Metal",
+      "Earth"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Metal,Metal)",
+        "(Metal,Wood)"
+      ],
+      [
+        "(Metal,Wood)",
+        "(Metal,Earth)"
+      ]
+    ],
+    "hu_target_count": 2,
+    "well_defined": false,
+    "bian_targets": [
+      "(Metal,Earth)",
+      "(Metal,Fire)",
+      "(Metal,Water)",
+      "(Metal,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 6,
+      "Cycle": 12,
+      "Qian": 6
+    }
+  },
+  "(Metal,Fire)": {
+    "cell": [
+      "Metal",
+      "Fire"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Metal,Fire)",
+        "(Metal,Water)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Metal)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Wood)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Metal,Earth)",
+      "(Metal,Metal)",
+      "(Metal,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Qian": 9,
+      "Cycle": 3
+    }
+  },
+  "(Metal,Metal)": {
+    "cell": [
+      "Metal",
+      "Metal"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Metal,Fire)",
+        "(Metal,Wood)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Fire)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Metal)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Wood)"
+      ],
+      [
+        "(Metal,Wood)",
+        "(Metal,Fire)"
+      ]
+    ],
+    "hu_target_count": 5,
+    "well_defined": false,
+    "bian_targets": [
+      "(Metal,Fire)",
+      "(Metal,Metal)",
+      "(Metal,Water)",
+      "(Metal,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Cycle": 12,
+      "Qian": 12
+    }
+  },
+  "(Metal,Water)": {
+    "cell": [
+      "Metal",
+      "Water"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Metal,Metal)",
+        "(Metal,Fire)"
+      ],
+      [
+        "(Metal,Wood)",
+        "(Metal,Earth)"
+      ],
+      [
+        "(Metal,Wood)",
+        "(Metal,Fire)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Metal,Earth)",
+      "(Metal,Metal)",
+      "(Metal,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Kun": 3,
+      "Cycle": 9
+    }
+  },
+  "(Metal,Wood)": {
+    "cell": [
+      "Metal",
+      "Wood"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Metal,Fire)",
+        "(Metal,Water)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Fire)"
+      ],
+      [
+        "(Metal,Metal)",
+        "(Metal,Metal)"
+      ],
+      [
+        "(Metal,Wood)",
+        "(Metal,Earth)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Metal,Earth)",
+      "(Metal,Fire)",
+      "(Metal,Metal)",
+      "(Metal,Water)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Cycle": 12,
+      "Qian": 9,
+      "Kun": 3
+    }
+  },
+  "(Water,Earth)": {
+    "cell": [
+      "Water",
+      "Earth"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Water,Earth)",
+        "(Water,Earth)"
+      ],
+      [
+        "(Water,Fire)",
+        "(Water,Water)"
+      ],
+      [
+        "(Water,Wood)",
+        "(Water,Earth)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Water,Earth)",
+      "(Water,Fire)",
+      "(Water,Water)",
+      "(Water,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 9,
+      "Cycle": 3
+    }
+  },
+  "(Water,Fire)": {
+    "cell": [
+      "Water",
+      "Fire"
+    ],
+    "population": 6,
+    "hu_target_pairs": [
+      [
+        "(Water,Fire)",
+        "(Water,Water)"
+      ]
+    ],
+    "hu_target_count": 1,
+    "well_defined": true,
+    "bian_targets": [
+      "(Water,Earth)",
+      "(Water,Metal)",
+      "(Water,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Cycle": 6
+    }
+  },
+  "(Water,Metal)": {
+    "cell": [
+      "Water",
+      "Metal"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Water,Earth)",
+        "(Water,Wood)"
+      ],
+      [
+        "(Water,Fire)",
+        "(Water,Metal)"
+      ],
+      [
+        "(Water,Fire)",
+        "(Water,Wood)"
+      ]
+    ],
+    "hu_target_count": 3,
+    "well_defined": false,
+    "bian_targets": [
+      "(Water,Fire)",
+      "(Water,Metal)",
+      "(Water,Water)",
+      "(Water,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 3,
+      "Cycle": 9
+    }
+  },
+  "(Water,Water)": {
+    "cell": [
+      "Water",
+      "Water"
+    ],
+    "population": 6,
+    "hu_target_pairs": [
+      [
+        "(Water,Earth)",
+        "(Water,Wood)"
+      ],
+      [
+        "(Water,Wood)",
+        "(Water,Earth)"
+      ]
+    ],
+    "hu_target_count": 2,
+    "well_defined": false,
+    "bian_targets": [
+      "(Water,Earth)",
+      "(Water,Metal)",
+      "(Water,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Kun": 6
+    }
+  },
+  "(Water,Wood)": {
+    "cell": [
+      "Water",
+      "Wood"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Water,Earth)",
+        "(Water,Earth)"
+      ],
+      [
+        "(Water,Fire)",
+        "(Water,Metal)"
+      ],
+      [
+        "(Water,Fire)",
+        "(Water,Water)"
+      ],
+      [
+        "(Water,Wood)",
+        "(Water,Earth)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Water,Earth)",
+      "(Water,Fire)",
+      "(Water,Metal)",
+      "(Water,Water)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Cycle": 6,
+      "Kun": 6
+    }
+  },
+  "(Wood,Earth)": {
+    "cell": [
+      "Wood",
+      "Earth"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Wood,Earth)",
+        "(Wood,Earth)"
+      ],
+      [
+        "(Wood,Fire)",
+        "(Wood,Water)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ],
+      [
+        "(Wood,Water)",
+        "(Wood,Earth)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Wood,Earth)",
+      "(Wood,Fire)",
+      "(Wood,Water)",
+      "(Wood,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Kun": 9,
+      "Cycle": 12,
+      "Qian": 3
+    }
+  },
+  "(Wood,Fire)": {
+    "cell": [
+      "Wood",
+      "Fire"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Wood,Earth)",
+        "(Wood,Water)"
+      ],
+      [
+        "(Wood,Fire)",
+        "(Wood,Water)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Metal)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Wood)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Wood,Earth)",
+      "(Wood,Metal)",
+      "(Wood,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Qian": 6,
+      "Cycle": 6
+    }
+  },
+  "(Wood,Metal)": {
+    "cell": [
+      "Wood",
+      "Metal"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Wood,Earth)",
+        "(Wood,Wood)"
+      ],
+      [
+        "(Wood,Fire)",
+        "(Wood,Metal)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Metal)"
+      ],
+      [
+        "(Wood,Water)",
+        "(Wood,Fire)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Wood,Fire)",
+      "(Wood,Metal)",
+      "(Wood,Water)",
+      "(Wood,Wood)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Cycle": 12,
+      "Qian": 9,
+      "Kun": 3
+    }
+  },
+  "(Wood,Water)": {
+    "cell": [
+      "Wood",
+      "Water"
+    ],
+    "population": 12,
+    "hu_target_pairs": [
+      [
+        "(Wood,Earth)",
+        "(Wood,Earth)"
+      ],
+      [
+        "(Wood,Earth)",
+        "(Wood,Wood)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Fire)"
+      ],
+      [
+        "(Wood,Water)",
+        "(Wood,Fire)"
+      ]
+    ],
+    "hu_target_count": 4,
+    "well_defined": false,
+    "bian_targets": [
+      "(Wood,Earth)",
+      "(Wood,Metal)",
+      "(Wood,Wood)"
+    ],
+    "bian_target_count": 3,
+    "basin_distribution": {
+      "Cycle": 6,
+      "Kun": 6
+    }
+  },
+  "(Wood,Wood)": {
+    "cell": [
+      "Wood",
+      "Wood"
+    ],
+    "population": 24,
+    "hu_target_pairs": [
+      [
+        "(Wood,Earth)",
+        "(Wood,Earth)"
+      ],
+      [
+        "(Wood,Earth)",
+        "(Wood,Water)"
+      ],
+      [
+        "(Wood,Fire)",
+        "(Wood,Metal)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Fire)"
+      ],
+      [
+        "(Wood,Metal)",
+        "(Wood,Metal)"
+      ],
+      [
+        "(Wood,Water)",
+        "(Wood,Earth)"
+      ]
+    ],
+    "hu_target_count": 6,
+    "well_defined": false,
+    "bian_targets": [
+      "(Wood,Earth)",
+      "(Wood,Fire)",
+      "(Wood,Metal)",
+      "(Wood,Water)"
+    ],
+    "bian_target_count": 4,
+    "basin_distribution": {
+      "Cycle": 12,
+      "Qian": 6,
+      "Kun": 6
+    }
+  }
+}

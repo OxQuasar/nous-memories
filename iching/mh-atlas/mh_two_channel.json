@@ -1,0 +1,22 @@
+{
+  "text_channel": {
+    "source": "爻辭 (line texts)",
+    "encodes": "present state (snapshot of the situation at 本卦)",
+    "correlates_with": "ben_relation",
+    "used_in": "後天 only",
+    "vol2_ref": "后天则用爻辞",
+    "evidence": "吉 correlates with 生体-at-本 (44.4%), 凶 correlates with 比和-at-本 (20.2%) and 克体-at-本. Neither tracks arc trajectory."
+  },
+  "arc_channel": {
+    "source": "體/用 五行 生克 across 本→互→變",
+    "encodes": "trajectory (how situation develops through layers)",
+    "used_in": "先天 and 後天",
+    "vol2_ref": "止以卦论，不甚用《易》之爻辞 (先天)",
+    "evidence": "arc_type captures temporal development — rescued/betrayed/improving/deteriorating arc types."
+  },
+  "resolution": {
+    "agreement": "When channels agree: high confidence (both textual and algebraic evidence point same direction)",
+    "disagreement": "When channels disagree: 详审卦辞，及克用体应之类...要在圆机，不可执 (examine carefully, remain flexible, don't be rigid)",
+    "priority": "Arc channel (生克) is primary; text channel is supporting. 先天 explicitly drops text channel entirely."
+  }
+}

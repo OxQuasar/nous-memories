@@ -1,0 +1,42 @@
+{
+  "formula": "timing = base_number × observer_modifier, unit by event type",
+  "arc_position_map": {
+    "本生体": {
+      "label": "immediate (即成)",
+      "meaning": "Favorable force present at surface → fast resolution"
+    },
+    "互生体": {
+      "label": "gradual (渐成)",
+      "meaning": "Favorable force in nuclear layer → middling resolution"
+    },
+    "變生体": {
+      "label": "slow (稍迟)",
+      "meaning": "Favorable force only in outcome → delayed resolution"
+    }
+  },
+  "observer_state_map": {
+    "walking (行)": {
+      "modifier": 0.5,
+      "meaning": "fast response → halve the number"
+    },
+    "standing (立)": {
+      "modifier": 1.0,
+      "meaning": "moderate → use number as-is"
+    },
+    "sitting (坐)": {
+      "modifier": 2.0,
+      "meaning": "slow response → double the number"
+    }
+  },
+  "base_number": "全卦之数 — total number from the casting arithmetic",
+  "unit_selection": {
+    "ephemeral": "days",
+    "medium": "months",
+    "durable": "years",
+    "note": "Practitioner judgment. No algorithm for unit selection."
+  },
+  "two_channel_note": {
+    "xiantian": "先天: uses arc layer only (止以卦論，不甚用易之爻辭). Timing from 卦气 (trigram-associated stems/branches).",
+    "houtian": "後天: uses arc + 爻辭 text layer. Timing from total number + observer state."
+  }
+}

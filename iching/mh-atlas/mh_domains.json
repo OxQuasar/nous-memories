@@ -1,0 +1,245 @@
+{
+  "domains": [
+    {
+      "number": 1,
+      "domain": "天時 (Weather)",
+      "domain_zh": "天时占第一",
+      "ti_meaning": null,
+      "yong_meaning": "all trigrams vote as committee",
+      "special_rules": "No 體/用 split. Multiple trigrams of one type amplify (重坎=heavy rain). Trigrams suppress by 克. Read entire hexagram as weather panel. 離多主晴，坎多主雨，坤乃陰晦，乾主晴明，震多雷轰，巽多風烈，艮多久雨必晴，兌多不雨亦陰.",
+      "weather_exception": true,
+      "uses_tiyong": false
+    },
+    {
+      "number": 2,
+      "domain": "人事 (Human affairs)",
+      "domain_zh": "人事占第二",
+      "ti_meaning": "self",
+      "yong_meaning": "situation/event",
+      "special_rules": "Standard 生克. Template domain — all others follow this pattern with domain-specific semantic bindings.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 3,
+      "domain": "家宅 (Household fortune)",
+      "domain_zh": "家宅占第三",
+      "ti_meaning": "self/family",
+      "yong_meaning": "the household",
+      "special_rules": "Standard. 体生用=耗散，防失盗. 用生体=進益，有馈送之喜. Pure-yang/pure-yin structural override (西林寺: all 比和 but 群陰剥陽 = structural contradiction).",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 4,
+      "domain": "屋舍 (Dwelling construction)",
+      "domain_zh": "屋舍占第四",
+      "ti_meaning": "self/occupant",
+      "yong_meaning": "the building",
+      "special_rules": "Standard. 体克用=居之吉, 用克体=居之凶. 体生用=資財衰退, 用生体=門戶興隆. Distinct from 家宅: focuses on physical structure, not family fortune.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 5,
+      "domain": "婚姻 (Marriage)",
+      "domain_zh": "婚姻占第五",
+      "ti_meaning": "one's own family",
+      "yong_meaning": "other family",
+      "special_rules": "体=所占之家, 用=所婚之家. Trigram 象 gives appearance of spouse. 用生体=婚易成,因婚有得. 体生用=婚難成. Eight trigram appearance types: 乾=端正而長, 坎=邪婬黑色, 艮=色黃多巧, 震=美貌, 巽=髮少稀疏, 離=短赤色, 坤=貌醜大腹, 兌=高長語話喜悅白色.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 6,
+      "domain": "生產 (Childbirth)",
+      "domain_zh": "生产占第六",
+      "ti_meaning": "mother",
+      "yong_meaning": "child",
+      "special_rules": "陽卦陽爻多=boy, 陰卦陰爻多=girl. 体克用=不利於子, 用克体=不利於母. 用生体=利於母, 体生用=利於子. Birth timing: 用卦之氣數.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 7,
+      "domain": "飲食 (Food/drink)",
+      "domain_zh": "饮食占第七",
+      "ti_meaning": "self/diner",
+      "yong_meaning": "the meal",
+      "special_rules": "坎=wine/liquid, 兑=food. 無坎無兌=皆無. 兌坎生体=酒肉醉飽. Trigram images determine cuisine. 互卦 determines dining companions (人事推之).",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 8,
+      "domain": "求謀 (Seeking counsel/stratagem)",
+      "domain_zh": "求谋占第八",
+      "ti_meaning": "self/planner",
+      "yong_meaning": "the plan/scheme",
+      "special_rules": "Standard. 用生体=不謀而成 (succeeds without effort). 体生用=多謀少遂 (much planning, little success).",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 9,
+      "domain": "求名 (Seeking fame/rank)",
+      "domain_zh": "求名占第九",
+      "ti_meaning": "self/candidate",
+      "yong_meaning": "the reputation/position",
+      "special_rules": "体克用=名可成但成遲. 用生体=名易成,因名有得. 体生用=名不可就,因名有喪. 變卦之方道=posting location. 克体之卦=居官見禍(demotion/punishment). Timing: 生体之卦氣.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 10,
+      "domain": "求財 (Seeking wealth)",
+      "domain_zh": "求财占第十",
+      "ti_meaning": "self",
+      "yong_meaning": "money/assets",
+      "special_rules": "Standard. 生体 date = gain; 克体 date = loss. Timing: 生体之卦氣=見財之日, 克体卦氣=破財之日. Multiple 生/克 卦 sources compound.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 11,
+      "domain": "交易 (Transactions)",
+      "domain_zh": "交易占第十一",
+      "ti_meaning": "self/trader",
+      "yong_meaning": "the deal/transaction",
+      "special_rules": "Standard. 用生体=即成,成必有財. 体生用=難成,因交易有失.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 12,
+      "domain": "出行 (Travel)",
+      "domain_zh": "出行占第十二",
+      "ti_meaning": "self/traveler",
+      "yong_meaning": "journey/destination",
+      "special_rules": "体宜乘旺. 体克用=可行,多得意. 用克体=出則有禍. 体生用=破耗之失. 用生体=意外之財. Movement trigrams: 乾震多=主動, 坤艮多=不動. 巽=宜舟行, 離=宜陸行. 坎=妨失脫, 兌=主紛爭.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 13,
+      "domain": "行人 (Absent person)",
+      "domain_zh": "行人占第十三",
+      "ti_meaning": "self/waiting party",
+      "yong_meaning": "the absent person",
+      "special_rules": "体克用=行人歸遲. 用克体=行人不歸. 体生用=行人未歸. 用生体=行人即歸. 用卦 shows person's condition abroad: 逢生=順快, 逢衰受克=災殃. 震多不寧, 艮多有阻, 坎有險難, 兌主紛爭.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 14,
+      "domain": "謁見 (Seeking audience)",
+      "domain_zh": "谒见占第十四",
+      "ti_meaning": "self/visitor",
+      "yong_meaning": "the person sought",
+      "special_rules": "Standard. 体克用=可見. 用克体=不見. 体生用=難見,見之無益. 用生体=可見,見之且有得.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 15,
+      "domain": "失物 (Lost objects)",
+      "domain_zh": "失物占第十五",
+      "ti_meaning": "self/searcher",
+      "yong_meaning": "lost object",
+      "special_rules": "変卦 trigram = search direction. 乾→NW/公榭樓閣/金石/圓器/高亢. 坤→SW/田野/倉禀/稼穡/土窖/瓦器方器. 震→E/山林/叢棘/鐘鼓/鬧市/大途. 巽→SE/山林/寺觀/菜蔬/舟居/木器. 坎→N/水邊/溪井溝渠/酒醋/魚鹽. 離→S/疱廚/爐冶/明窗/虛室/文書/煙火. 艮→NE/山林/路邊/巖石/土穴. 兌→W/澤畔/敗垣破壁/廢井缺沼.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 16,
+      "domain": "疾病 (Illness)",
+      "domain_zh": "疾病占第十六",
+      "ti_meaning": "patient",
+      "yong_meaning": "disease",
+      "special_rules": "Three sub-systems: (1) Standard 生克 prognosis: 体克用=勿藥有喜, 用克体=雖藥無功. (2) Pharmacology: 離生体=熱藥, 坎生体=冷藥, 艮=溫補, 乾兌=涼藥. (3) Spirit diagnosis: 克体 trigram → ghost/deity class by direction (乾=NW兵刀之鬼, 坤=SW曠野之鬼, 震=E妖怪, 巽=SE自縊, 坎=N沒溺, 離=S猛勇之神, 艮=NE山魈, 兌=W陣亡之鬼). (4) 乾坤 walkthrough: same hex (天地否), all 6 lines yield opposite outcomes — proves 384 states are distinct.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 17,
+      "domain": "官訟 (Litigation)",
+      "domain_zh": "官讼占第十七",
+      "ti_meaning": "self/litigant",
+      "yong_meaning": "opponent and legal process",
+      "special_rules": "体宜旺, 用宜衰. 体克用=己勝人. 用克体=人勝己. 体生用=因官有所喪. 用生体=因訟有所得. 比和=最吉,必有主和之義 (settlement).",
+      "weather_exception": false,
+      "uses_tiyong": true
+    },
+    {
+      "number": 18,
+      "domain": "墳墓 (Graves/burial)",
+      "domain_zh": "坟墓占第十八",
+      "ti_meaning": "self/descendants",
+      "yong_meaning": "burial site",
+      "special_rules": "Standard. 用生体=葬之主興隆,有蔭益後嗣. 体生用=葬之主運退. 比和=吉地,大宜葬.",
+      "weather_exception": false,
+      "uses_tiyong": true
+    }
+  ],
+  "total": 18,
+  "source": "梅花易數 vol 2, 体用生克篇, 占例十八章",
+  "note": "上為用體之訣，始發十八章占例。庶務之多，豈止十八占而已乎！此十八占，乃大事之切要者，占者以類而推之可也。",
+  "cross_domain_taxonomy": {
+    "description": "Structural analysis of shared bindings across the 18 domains",
+    "universal_template": "All 17 體/用 domains follow identical 生克 evaluation: 体克用=favorable, 用克体=unfavorable, 用生体=gain, 体生用=loss, 比和=auspicious. Domain-specific content enters only through semantic binding (what 體 and 用 represent) and trigram imagery (what the 8 trigrams mean in context).",
+    "exception": "天時 (domain 1) — no 體/用 split, committee reading.",
+    "structural_clusters": [
+      {
+        "cluster": "self_vs_other_party",
+        "domains": [5, 14, 17],
+        "pattern": "體=self, 用=another person/family. 生克 reads interpersonal power dynamics.",
+        "shared": "All use trigram 象 for characterizing the other party. 比和=mutual benefit."
+      },
+      {
+        "cluster": "self_vs_asset",
+        "domains": [7, 10, 11, 15],
+        "pattern": "體=self, 用=material object (house, money, goods, lost item). 生克 reads acquisition/loss.",
+        "shared": "用生体=gain/recovery, 体生用=loss/drainage. Timing via 卦氣."
+      },
+      {
+        "cluster": "self_vs_endeavor",
+        "domains": [2, 8, 9, 12],
+        "pattern": "體=self, 用=abstract goal (plan, rank, journey). 生克 reads feasibility.",
+        "shared": "用生体=success with ease, 体克用=possible but slow. 變卦 gives direction/location."
+      },
+      {
+        "cluster": "body_vs_condition",
+        "domains": [6, 16],
+        "pattern": "體=physical body (mother/patient), 用=biological process (child/disease). 生克 reads health outcome.",
+        "shared": "体宜旺不宜衰. Additional sub-systems (gender determination, pharmacology, spirit diagnosis)."
+      },
+      {
+        "cluster": "self_vs_dwelling",
+        "domains": [3, 4, 18],
+        "pattern": "體=self/descendants, 用=physical location (household, building, grave). 生克 reads fortune of habitation.",
+        "shared": "用生体=prosperity/flourishing, 体生用=decline. Trigram imagery gives site features."
+      },
+      {
+        "cluster": "self_vs_absent",
+        "domains": [13],
+        "pattern": "體=waiting party, 用=absent person. Unique: 生克 reads return probability, not fortune.",
+        "shared": "用生体=即歸 (immediate return). 用卦 additionally reads the absent person's condition abroad."
+      }
+    ],
+    "findings": {
+      "template_uniformity": "All 17 體/用 domains use the SAME 5-relation evaluation. The only variation is semantic binding (what 體 and 用 represent). No domain modifies the 生克 logic itself.",
+      "cluster_count": 6,
+      "largest_cluster": "self_vs_asset (4 domains)",
+      "unique_features_by_domain": {
+        "5_marriage": "Eight trigram appearance types for spouse characterization",
+        "6_childbirth": "陰/陽 爻 counting for gender determination",
+        "7_food": "坎=wine, 兑=food presence test; 互卦 for dining companions",
+        "12_travel": "Movement trigrams (乾震=go, 坤艮=stay, 巽=boat, 離=land)",
+        "13_absent": "用卦 reads condition abroad (unique dual reading)",
+        "15_lost": "變卦 as spatial compass (8 directions with detail)",
+        "16_illness": "Three sub-systems (prognosis, pharmacology, spirit diagnosis)"
+      },
+      "key_insight": "The 18 domains are NOT 18 different systems. They are 1 system (體/用 生克) with 18 semantic skins. The skins differ in 3 ways: (1) what 體/用 mean, (2) which trigram imagery applies, (3) what additional sub-systems exist. The underlying 五行 engine is invariant."
+    }
+  }
+}
