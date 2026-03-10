@@ -234,3 +234,33 @@ But the **conjunction** of textual bridge + cycle attractor semantics uniquely s
 - B collapses {Kan,Li} Hamming-3 distance into one element, destroying the Fire/Water bridge — the exact locus where Z₂ and Z₅ optimally coincide.
 
 **The singleton-attractor mechanism:** Only assignment A places the 互 cycle attractors (既濟/未濟 = Kan/Li) as singletons. This makes Z₅ injective at the convergence locus — where depth flow terminates, element identity is unambiguous. B pairs them (fiber=2, ambiguous), C makes different trigrams singletons (Gen/Dui, not the attractors). The Fire/Water bridge exists because the singletons ARE the attractors. (deep/01_assignment_test.py, deep/exploration-log.md)
+
+### R33. Why 5 elements (deep)
+**FORCED BY NUMBER THEORY.** Two independent non-degenerate cycles on Z_k require: stride-1 and stride-2 generate the full group (k prime), and stride-2 ≠ stride-1 or its inverse (fails for k=2,3). The smallest viable prime is k=5. (deep/number-structure.md, deep/04_dimensional_forcing.py)
+
+### R34. Why 3 lines per trigram (deep)
+**FORCED BY PIGEONHOLE.** Dimensional forcing theorem: n=3 is the unique dimension where every surjective complement=negation partition Z₂ⁿ → Z₅ has singleton fibers. For n≤2, surjection impossible. For n≥4, singleton-free surjections exist. The singleton bridge (Fire/Water injection points) is structurally guaranteed if and only if n=3. (deep/04_dimensional_forcing.py)
+
+### R35. Why 6 lines per hexagram (deep)
+**FORCED BY 互 DYNAMICS.** n=3 (6 lines) is the largest dimension where 互² = identity on all eventual cycles. At n=4 (8 lines), 3-cycles appear, breaking the 2-cycle attractor structure. (deep/04_dimensional_forcing.py)
+
+### R36. 先天 arrangement uniquely forced (deep)
+**UNIQUE Z₂ OPTIMUM.** Z₂ composite score 6/6 (complement_diameter=4/4, reversal_reflection=2/2). Maximum achievable by any cardinal-aligned arrangement is 3/6. Gap of 3 proves Z₂ geometric coherence and He Tu element alignment are fundamentally incompatible. (deep/02_arrangements.py)
+
+### R37. 後天 arrangement uniquely forced (deep)
+**UNIQUE 2×3×5 TRIPLE JUNCTION.** Among 96 cardinal-aligned arrangements: prime-5 constraints (monotone + elem_pair_coherent) → 8 survivors (exact Z₂³ product, Z₅-orthogonal); prime-2 (yy_balance) → 2; prime-3 (sons_yang_half) → 1 = 後天. Minimal uniqueness set verified. (deep/02_arrangements.py, deep/03_prime_decomposition.py)
+
+### R38. KW pairing uniquely forced (deep)
+**UNIQUE BASIN-PRESERVATION MAXIMUM.** Among 3^12 = 531,441 V₄-compatible pairings, the KW pairing (reversal + complement fallback for palindromes) uniquely maximizes same-basin pairs (28/32). Theorem: reversal preserves all basins; complement and comp∘rev swap Kun↔Qian. (deep/08_pairing_torus.py)
+
+### R39. V₄-equivariance of 互 (deep)
+**PROVEN.** All three V₄ involutions (complement, reversal, comp∘rev) commute with the nuclear transform 互. 20 V₄ orbits on 64 hexagrams: 8 size-2 (4 palindrome pairs + 4 anti-palindrome pairs) + 12 size-4. (deep/06_v4_symmetry.py)
+
+### R40. Line hierarchy encoded in yaoci (deep)
+**MEASURED — p < 0.001.** Algebraic role (outer core / interface / shell) predicts 吉/凶 rates: 吉 × role χ²=15.1, p=0.0005. Line 5 ruler effect OR=2.15, p=0.007. 生体 × line 5 = 75% 吉 (system peak). 体/用 and 世 line are NOT encoded (p > 0.2) — operational overlays absent from ancient text. (deep/09_line_valuations.py)
+
+### R41. KW sequence basin clustering (deep)
+**MEASURED — p < 0.001.** Same-basin transitions: 60% vs 37% expected. 上經/下經 = palindromic/non-palindromic pure partition. All other sequential metrics null (Hamming, element continuity, 先天 correlation). (deep/05_king_wen_sequence.py)
+
+### R42. Two Z₅ incommensurability (deep)
+**PROVEN.** The 生-cycle Z₅ and He Tu Z₅ are incommensurable as algebras (non-affine conjugation γ) and as metric spaces (γ not distance-preserving). Connected through 後天 compass arrangement, not through algebraic structure. (deep/01_assignment_test.py)

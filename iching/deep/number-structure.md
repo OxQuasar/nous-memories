@@ -212,3 +212,91 @@ Their meeting points:
 The hexagram at full resolution lives in Z₂⁶ = Z₂^(2×3) — the combinatorial space with both the binary and positional dimensions encoded. The 五行 projection collapses this to Z₅ × Z₅ — the relational surface. The Lo Shu mediates between the positional (3) and relational (5) dimensions. Fire/Water mediates between the combinatorial (2) and relational (5) dimensions.
 
 The system is the joint product of three independent prime structures, each irreducible, each contributing a different axis of description, with specific bridge points where pairs of primes make contact.
+
+---
+
+## Why 3 Lines: The Dimensional Forcing Theorem
+
+**Theorem.** For surjective f: Z₂ⁿ → Z₅ with f(x̄) = -f(x) mod 5:
+- (a) Such f exists if and only if n ≥ 3
+- (b) For n = 3, every such f has at least two singleton fibers (min(k₁,k₂) = 1)
+- (c) For n ≥ 4, there exist such f with no singleton fibers
+
+**Proof of (b).** The 2^(n-1) = 4 complement pairs distribute across 3 destination types (k₀ to self-conjugate, k₁ to {Fire,Water}, k₂ to {Earth,Metal}) with k₀+k₁+k₂ = 4 and all ≥ 1. If min(k₁,k₂) ≥ 2 then k₁+k₂ ≥ 4, forcing k₀ ≤ 0 — contradiction. □
+
+**Why n=3 is special:** 2^(n-1) = 4 = 3+1. After the surjectivity minimum (one pair per destination), exactly ONE unit of slack remains. It can enlarge only one destination, leaving the other at k=1 = singleton. For n=4: 2^(n-1) = 8 = 3+5, five units of slack — singletons are no longer forced.
+
+n=3 is the unique dimension where the Z₂/Z₅ bridge (singletons = injection points) is structurally guaranteed. The trigram having 3 lines is a mathematical necessity, not a design choice.
+
+**互 involution boundary.** n=3 (6-line hexagrams) is independently the largest dimension where 互² = identity on all eventual cycles. At n=4 (8 lines), 3-cycles appear — breaking the 2-cycle attractor structure that 既濟/未濟 require.
+
+**Reference:** 04_dimensional_forcing.py
+
+---
+
+## The V₄ Symmetry Group
+
+V₄ = {id, complement, reversal, comp∘rev} acts on Z₂⁶:
+
+| Element | Action on bits | Fixed points | Fiber-preserving? | Basin action |
+|---|---|:---:|:---:|---|
+| Complement | XOR all-ones | 0 | ✓ (negation on Z₅) | Kun↔Qian |
+| Reversal | Reverse bit order | 8 (palindromes) | ✗ | All fixed |
+| Comp∘Rev | Reverse + flip | 8 (anti-palindromes) | ✗ | Kun↔Qian |
+
+**V₄-equivariance of 互:** All three involutions commute with the nuclear transform. 互 is maximally symmetric — it respects every involution simultaneously.
+
+**Complement is the unique cross-framework operation.** It is the only V₄ element that descends to Z₅ (preserves element fibers). Reversal is purely Z₂ (opaque to elements). V₄ = Z₂(Z₅-visible) × Z₂(Z₂-only).
+
+**Anti-palindromes = geometric center.** The 8 comp∘rev-fixed hexagrams all have exactly 3 yang lines, all are in the KanLi basin, and include 既濟/未濟. They occupy the exact center of the system in polarity, basin, and convergence.
+
+**Reference:** 06_v4_symmetry.py
+
+---
+
+## The Line Hierarchy
+
+Single-line changes reveal three tiers:
+
+| Tier | Lines | Element change | Basin change | Role |
+|---|---|:---:|:---:|---|
+| Outer core | 1,2,5 | 100% | 0% | Change element, preserve basin |
+| Interface | 3,4 | 50-100% | 100% | Change basin (b₂,b₃ = 互 boundary) |
+| Shell | 6 | 50% | 0% | Palace invariant, intra-fiber discriminator |
+
+The ancient yaoci texts encode this hierarchy: outer core lines carry 39.6% 吉 (most auspicious), interface lines 19.5% (least), shell 26.6% (most 凶-concentrated). χ² p=0.0005.
+
+Basin preservation → textual safety. Element change within a basin is manageable; basin disruption is dangerous.
+
+**Reference:** 07_palaces_transform.py, 09_line_valuations.py
+
+---
+
+## The 後天 Triple Junction (Updated)
+
+The 後天 arrangement is uniquely determined by three constraints, one per prime:
+
+| Stage | Constraint | Prime | Survivors |
+|---|---|---|:---:|
+| 0 | Cardinal alignment (He Tu) | — | 96 |
+| 1 | 生-monotonicity + element pair coherence | **5** | 8 |
+| 2 | Cardinal yin/yang balance [1,1,2,2] | **2** | 2 |
+| 3 | Sons (standard basis vectors) at N/NE/E | **3** | 1 |
+
+The 8 survivors after prime-5 form an exact Z₂³ product (3 independent binary choices within fibers). Z₅ metrics are IDENTICAL across all 8 — the residual is orthogonal to Z₅. Primes 2 and 3 resolve what prime 5 cannot see.
+
+**The 先天 is the Z₂ counterpart:** Z₂ composite 6/6 (complement = diameter, reversal = N-S reflection). No cardinal-aligned arrangement exceeds 3/6. The gap of 3 proves Z₂ geometry and Z₅ alignment are fundamentally incompatible.
+
+**Reference:** 02_arrangements.py, 03_prime_decomposition.py
+
+---
+
+## The KW Pairing as Basin-Preservation Maximum
+
+The KW pairing (reversal + complement fallback for palindromes) is the unique V₄-compatible pairing maximizing same-basin pairs (28/32) among 3^12 = 531,441 options.
+
+**Theorem.** Reversal preserves all basins; complement and comp∘rev swap Kun↔Qian. For each size-4 V₄ orbit, choosing reversal guarantees same-basin pairs. Any other involution introduces cross-basin pairs. □
+
+The tradition pairs hexagrams that share nuclear convergence dynamics. The 4 cross-basin exceptions are the forced palindromic pairs (where reversal = identity).
+
+**Reference:** 08_pairing_torus.py
