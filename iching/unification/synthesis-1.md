@@ -354,6 +354,33 @@ logical forcing.
 
 **Conclusion:** The system has exactly 0.5 bits of genuine freedom.
 
+**Origin of the 0.5 bits (reduction chain from np_landscape analysis).**
+At (3,5), the 192 three-type surjections (partition {2,2,2,1,1}) decompose as:
+
+1. **12 pre-symmetry options.** Each three-type surjection assigns one pair to each of
+   Types 0, 1, 2, with the fourth pair also Type 2. The number of ordered type
+   distributions is C(4,1) × C(3,1) × 1 = 12 (choose Type 0 pair, Type 1 pair,
+   rest are Type 2). Each contains exactly 16 surjections.
+
+2. **3 S₃ orbits.** S₃ acts on {H, P, Q} (the non-frame lines). The 12 distributions
+   split by Frame type: Orbit A (Frame = Type 0, 3 options), Orbit B (Frame = Type 1,
+   3 options), Orbit C (Frame = Type 2, 6 options). Within each orbit, S₃ acts
+   transitively on the non-frame assignments.
+
+3. **1 by structural elimination.** Orbit C (Frame = Type 2) is the unique orbit where
+   the frame pair shares a negation pair with a non-frame pair, matching the I Ching's
+   structure (坤/乾 share {Earth,Metal} with 艮/兌). The other orbits have Frame as
+   Type 0 (坤/乾 both map to 0) or Type 1 (坤/乾 as singletons), which contradicts
+   the 五行 assignment. Orbit C has 6 sub-options.
+
+4. **2 residual choices → 0.5 bits.** Within Orbit C's 6 sub-options, the algebraic
+   structure distinguishes which non-frame pair is Type 0 (the "same-element" doubleton =
+   Wood). This is the choice between H and Q carrying Wood. P is forced to Type 2
+   (shares negation pair with Frame). So: 6 options / S₃ action on the Type 0/1
+   assignment to {H,Q,P} → 2 remaining choices (H=0,Q=1 vs H=1,Q=0) after fixing P=2.
+
+The I Ching picks H=0 (Wood on 互 kernel), Q=1 (Water/Fire singletons on palindromic line).
+
 ---
 
 ## Part V: The Unification Claim

@@ -1,0 +1,2457 @@
+{
+  "entries": [
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "text": "大哉乾元，萬物資始，乃統天。雲行雨施，品物流形。大明始終，六位時成，時乘六龍以御天。乾道變化，各正性命，保合大和，乃利貞。首出庶物，萬國咸寧。",
+      "terms": [
+        {
+          "term": "位",
+          "category": "position",
+          "context": "明始終，六位時成，時乘",
+          "position": 30
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "道變化，各正性命，保合",
+          "position": 48
+        },
+        {
+          "term": "乘",
+          "category": "movement",
+          "context": "位時成，時乘六龍以御天",
+          "position": 35
+        }
+      ]
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "text": "至哉坤元，萬物資生，乃順承天。坤厚載物，德合无疆。含弘光大，品物咸亨。牝馬地類，行地无疆，柔順利貞。君子攸行，先迷失道，後順得常。西南得朋，乃與類行。東北喪朋，乃終有慶。安貞之吉，應地无疆。",
+      "terms": [
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "行地无疆，柔順利貞。君",
+          "position": 45
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "安貞之吉，應地无疆。",
+          "position": 90
+        },
+        {
+          "term": "承",
+          "category": "movement",
+          "context": "資生，乃順承天。坤厚載",
+          "position": 12
+        }
+      ]
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "text": "屯，剛柔始交而難生，動乎險中，大亨貞。雷雨之動滿盈，天造草昧，宜建侯而不寧。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "屯，剛柔始交而難",
+          "position": 2
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "屯，剛柔始交而難生",
+          "position": 3
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "生，動乎險中，大亨貞。",
+          "position": 13
+        }
+      ]
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "text": "蒙，山下有險，險而止，蒙。蒙亨，以亨行時中也。匪我求童蒙，童蒙求我，志應也。初筮告，以剛中也。再三瀆，瀆則不告，瀆蒙也。蒙以養正，聖功也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "初筮告，以剛中也。再三",
+          "position": 43
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "，以亨行時中也。匪我求",
+          "position": 20
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "筮告，以剛中也。再三瀆",
+          "position": 44
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "也。蒙以養正，聖功也。",
+          "position": 63
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "蒙求我，志應也。初筮告",
+          "position": 35
+        },
+        {
+          "term": "初",
+          "category": "line_ref",
+          "context": "，志應也。初筮告，以剛",
+          "position": 38
+        },
+        {
+          "term": "三",
+          "category": "line_ref",
+          "context": "剛中也。再三瀆，瀆則不",
+          "position": 48
+        }
+      ]
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "text": "需，須也。險在前也，剛健而不陷，其義不困窮矣。需有孚，光亨，貞吉，位乎天位，以正中也。利涉大川，往有功也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "險在前也，剛健而不陷，",
+          "position": 10
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "亨，貞吉，位乎天位，以",
+          "position": 33
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "吉，位乎天位，以正中也",
+          "position": 36
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "天位，以正中也。利涉大",
+          "position": 40
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "乎天位，以正中也。利涉",
+          "position": 39
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "利涉大川，往有功也。",
+          "position": 48
+        }
+      ]
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "text": "訟，上剛下險，險而健，訟。訟有孚窒惕中吉，剛來而得中也。終凶，訟不可成也。利見大人，尚中正也。不利涉大川，入于淵也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "訟，上剛下險，險而",
+          "position": 3
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "窒惕中吉，剛來而得中也",
+          "position": 21
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "訟有孚窒惕中吉，剛來而",
+          "position": 18
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "，剛來而得中也。終凶，",
+          "position": 25
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "見大人，尚中正也。不利",
+          "position": 43
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "大人，尚中正也。不利涉",
+          "position": 44
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "惕中吉，剛來而得中也。",
+          "position": 22
+        }
+      ]
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "text": "師，眾也。貞，正也。能以眾正，可以王矣。剛中而應，行險而順。以此毒天下，而民從之，吉又何咎矣。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "可以王矣。剛中而應，行",
+          "position": 20
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "以王矣。剛中而應，行險",
+          "position": 21
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "眾也。貞，正也。能以眾",
+          "position": 7
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "也。能以眾正，可以王矣",
+          "position": 13
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "矣。剛中而應，行險而順",
+          "position": 23
+        }
+      ]
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "text": "比，吉也。比，輔也。下順從也。原筮元永貞，无咎，以剛中也。不寧方來，上下應也。後夫凶，其道窮也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，无咎，以剛中也。不寧",
+          "position": 25
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "无咎，以剛中也。不寧方",
+          "position": 26
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "方來，上下應也。後夫凶",
+          "position": 36
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "也。不寧方來，上下應也",
+          "position": 32
+        }
+      ]
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "text": "小畜，柔得位而上下應之，曰小畜。健而巽，剛中而志行，乃亨。密雲不雨，尚往也。自我西郊，施未行也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "。健而巽，剛中而志行，",
+          "position": 20
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "小畜，柔得位而上下",
+          "position": 3
+        },
+        {
+          "term": "得位",
+          "category": "position",
+          "context": "小畜，柔得位而上下應之",
+          "position": 4
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "小畜，柔得位而上下應之",
+          "position": 5
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "健而巽，剛中而志行，乃",
+          "position": 21
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "得位而上下應之，曰小畜",
+          "position": 9
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "雲不雨，尚往也。自我西",
+          "position": 35
+        }
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "text": "履，柔履剛也。說而應乎乾，是以履虎尾，不咥人，亨。剛中正，履帝位而不疚，光明也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "履，柔履剛也。說而應",
+          "position": 4
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "咥人，亨。剛中正，履帝",
+          "position": 25
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "履，柔履剛也。說",
+          "position": 2
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "中正，履帝位而不疚，光",
+          "position": 31
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "人，亨。剛中正，履帝位",
+          "position": 26
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "，亨。剛中正，履帝位而",
+          "position": 27
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "剛也。說而應乎乾，是以",
+          "position": 9
+        }
+      ]
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "text": "泰，小往大來，吉亨，則是天地交而萬物通也，上下交而其志同也。內陽而外陰，內健而外順，內君子而外小人，君子道長，小人道消也。",
+      "terms": [
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "泰，小往大來，吉亨",
+          "position": 3
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "泰，小往大來，吉亨，則",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "text": "否之匪人，不利君子貞，大往小來。則是天地不交而萬物不通也，上下不交而天下无邦也。內陰而外陽，內柔而外剛，內小人而外君子，小人道長，君子道消也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，內柔而外剛，內小人而",
+          "position": 50
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "而外陽，內柔而外剛，內",
+          "position": 47
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "君子貞，大往小來。則是",
+          "position": 12
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "貞，大往小來。則是天地",
+          "position": 14
+        }
+      ]
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "text": "同人，柔得位得中而應乎乾，曰同人。同人曰，同人于野，亨，利涉大川，乾行也。文明以健，中正而應，君子正也。唯君子為能通天下之志。",
+      "terms": [
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "同人，柔得位得中而",
+          "position": 3
+        },
+        {
+          "term": "得位",
+          "category": "position",
+          "context": "同人，柔得位得中而應乎",
+          "position": 4
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "同人，柔得位得中而應乎",
+          "position": 5
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "，柔得位得中而應乎乾，",
+          "position": 7
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "文明以健，中正而應，君",
+          "position": 42
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "明以健，中正而應，君子",
+          "position": 43
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "而應，君子正也。唯君子",
+          "position": 49
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "得位得中而應乎乾，曰同",
+          "position": 9
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "健，中正而應，君子正也",
+          "position": 45
+        }
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "text": "大有，柔得尊位大中，而上下應之，曰大有。其德剛健而文明，應乎天而時行，是以元亨。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "大有。其德剛健而文明，",
+          "position": 22
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "大有，柔得尊位大中",
+          "position": 3
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "有，柔得尊位大中，而上",
+          "position": 6
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "柔得尊位大中，而上下應",
+          "position": 8
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "中，而上下應之，曰大有",
+          "position": 13
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "健而文明，應乎天而時行",
+          "position": 28
+        }
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "text": "謙，亨，天道下濟而光明，地道卑而上行。天道虧盈而益謙，地道變盈而流謙，鬼神害盈而福謙，人道惡盈而好謙。謙尊而光，卑而不可踰，君子之終也。",
+      "terms": []
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "text": "豫，剛應而志行，順以動，豫。豫順以動，故天地如之，而況建侯行師乎？天地以順動，故日月不過而四時不忒。聖人以順動，則刑罰清而民服。豫之時義大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "豫，剛應而志行，",
+          "position": 2
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "豫，剛應而志行，順",
+          "position": 3
+        },
+        {
+          "term": "四",
+          "category": "line_ref",
+          "context": "日月不過而四時不忒。聖",
+          "position": 45
+        }
+      ]
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "text": "隨，剛來而下柔，動而說，隨。大亨貞，无咎，而天下隨時，隨時之義大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "隨，剛來而下柔，",
+          "position": 2
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "，剛來而下柔，動而說，",
+          "position": 6
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "隨，剛來而下柔，動",
+          "position": 3
+        }
+      ]
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "text": "蠱，剛上而柔下，巽而止，蠱。蠱元亨而天下治也。利涉大川，往有事也。先甲三日，後甲三日，終則有始，天行也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "蠱，剛上而柔下，",
+          "position": 2
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "蠱，剛上而柔下，巽而止",
+          "position": 5
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "利涉大川，往有事也。先",
+          "position": 28
+        },
+        {
+          "term": "三",
+          "category": "line_ref",
+          "context": "事也。先甲三日，後甲三",
+          "position": 35
+        },
+        {
+          "term": "三",
+          "category": "line_ref",
+          "context": "三日，後甲三日，終則有",
+          "position": 40
+        }
+      ]
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "text": "臨，剛浸而長，說而順，剛中而應。大亨以正，天之道也。至于八月有凶，消不久也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "臨，剛浸而長，說",
+          "position": 2
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，說而順，剛中而應。大",
+          "position": 11
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "說而順，剛中而應。大亨",
+          "position": 12
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "應。大亨以正，天之道也",
+          "position": 19
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "順，剛中而應。大亨以正",
+          "position": 14
+        }
+      ]
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "text": "大觀在上，順而巽，中正以觀天下。觀盥而不薦，有孚顒若，下觀而化也。觀天之神道，而四時不忒。聖人以神道設教，而天下服矣。",
+      "terms": [
+        {
+          "term": "中",
+          "category": "position",
+          "context": "，順而巽，中正以觀天下",
+          "position": 9
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "順而巽，中正以觀天下。",
+          "position": 10
+        },
+        {
+          "term": "四",
+          "category": "line_ref",
+          "context": "之神道，而四時不忒。聖",
+          "position": 40
+        }
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "text": "頤中有物，曰噬嗑。噬嗑而亨，剛柔分動而明，雷電合而章。柔得中而上行，雖不當位，利用獄也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "噬嗑而亨，剛柔分動而明",
+          "position": 14
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "嗑而亨，剛柔分動而明，",
+          "position": 15
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "電合而章。柔得中而上行",
+          "position": 27
+        },
+        {
+          "term": "不當位",
+          "category": "position",
+          "context": "而上行，雖不當位，利用獄也",
+          "position": 35
+        },
+        {
+          "term": "當位",
+          "category": "position",
+          "context": "上行，雖不當位，利用獄也",
+          "position": 36
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "行，雖不當位，利用獄也",
+          "position": 37
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "頤中有物，曰噬",
+          "position": 1
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "而章。柔得中而上行，雖",
+          "position": 29
+        }
+      ]
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "text": "賁亨，柔來而文剛，故亨。分剛上而文柔，故小利有攸往。天文也。文明以止，人文也。觀乎天文以察時變，觀乎人文以化成天下。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，柔來而文剛，故亨。分",
+          "position": 7
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，故亨。分剛上而文柔，",
+          "position": 13
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "賁亨，柔來而文剛，",
+          "position": 3
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "分剛上而文柔，故小利有",
+          "position": 17
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "故小利有攸往。天文也。",
+          "position": 24
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "賁亨，柔來而文剛，故",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "text": "剝，剝也，柔變剛也。不利有攸往，小人長也。順而止之，觀象也。君子尚消息盈虛，天行也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "剝也，柔變剛也。不利有",
+          "position": 7
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "剝，剝也，柔變剛也。不",
+          "position": 5
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "。不利有攸往，小人長也",
+          "position": 14
+        }
+      ]
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "text": "復亨，剛反。動而以順行，是以出入无疾，朋來无咎。反復其道，七日來復，天行也。利有攸往，剛長也。復其見天地之心乎？",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "復亨，剛反。動而以",
+          "position": 3
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "利有攸往，剛長也。復其",
+          "position": 43
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "也。利有攸往，剛長也。",
+          "position": 41
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "入无疾，朋來无咎。反復",
+          "position": 20
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "其道，七日來復，天行也",
+          "position": 31
+        }
+      ]
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "text": "无妄，剛自外來而為主於內，動而健，剛中而應，大亨以正，天之命也。其匪正有眚，不利有攸往，无妄之往，何之矣？天命不祐，行矣哉？",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "无妄，剛自外來而為",
+          "position": 3
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，動而健，剛中而應，大",
+          "position": 17
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "動而健，剛中而應，大亨",
+          "position": 18
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "應，大亨以正，天之命也",
+          "position": 25
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "命也。其匪正有眚，不利",
+          "position": 34
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "健，剛中而應，大亨以正",
+          "position": 20
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "，不利有攸往，无妄之往",
+          "position": 42
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "往，无妄之往，何之矣？",
+          "position": 47
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "妄，剛自外來而為主於內",
+          "position": 6
+        }
+      ]
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "text": "大畜，剛健篤實輝光，日新其德。剛上而尚賢，能止健，大正也。不家食吉，養賢也。利涉大川，應乎天也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "大畜，剛健篤實輝光",
+          "position": 3
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "日新其德。剛上而尚賢，",
+          "position": 15
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "能止健，大正也。不家食",
+          "position": 26
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "利涉大川，應乎天也。",
+          "position": 43
+        }
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "text": "頤貞吉，養正則吉也。觀頤，觀其所養也。自求口實，觀其自養也。天地養萬物，聖人養賢以及萬民，頤之時大矣哉！",
+      "terms": [
+        {
+          "term": "正",
+          "category": "position",
+          "context": "頤貞吉，養正則吉也。觀",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "text": "大過，大者過也。棟撓，本末弱也。剛過而中，巽而說行，利有攸往，乃亨。大過之時大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "本末弱也。剛過而中，巽",
+          "position": 16
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "也。剛過而中，巽而說行",
+          "position": 19
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "行，利有攸往，乃亨。大",
+          "position": 29
+        }
+      ]
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "text": "習坎，重險也。水流而不盈，行險而不失其信。維心亨，乃以剛中也。行有尚，往有功也。天險不可升也，地險山川丘陵也。王公設險以守其國，險之時用大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "心亨，乃以剛中也。行有",
+          "position": 27
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "亨，乃以剛中也。行有尚",
+          "position": 28
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "。行有尚，往有功也。天",
+          "position": 35
+        }
+      ]
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "text": "離，麗也。日月麗乎天，百穀草木麗乎土。重明以麗乎正，乃化成天下。柔麗乎中正，故亨。是以畜牝牛吉也。",
+      "terms": [
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "化成天下。柔麗乎中正，",
+          "position": 32
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "下。柔麗乎中正，故亨。",
+          "position": 35
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "重明以麗乎正，乃化成天",
+          "position": 24
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "。柔麗乎中正，故亨。是",
+          "position": 36
+        }
+      ]
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "text": "咸，感也。柔上而剛下，二氣感應以相與，止而說。男下女，是以亨利貞，取女吉也。天地感而萬物化生，聖人感人心而天下和平。觀其所感，而天地萬物之情可見矣！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "也。柔上而剛下，二氣感",
+          "position": 8
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "咸，感也。柔上而剛下，",
+          "position": 5
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "下，二氣感應以相與，止",
+          "position": 14
+        },
+        {
+          "term": "二",
+          "category": "line_ref",
+          "context": "上而剛下，二氣感應以相",
+          "position": 11
+        }
+      ]
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "text": "恆，久也。剛上而柔下，雷風相與，巽而動，剛柔皆應，恆。恆亨无咎利貞，久於其道也。天地之道恆久而不已也。利有攸往，終則有始也。日月得天而能久照，四時變化而能久成，聖人久於其道而天下化成。觀其所恆，而天地萬物之情可見矣！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "恆，久也。剛上而柔下，",
+          "position": 5
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，巽而動，剛柔皆應，恆",
+          "position": 20
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "也。剛上而柔下，雷風相",
+          "position": 8
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "巽而動，剛柔皆應，恆。",
+          "position": 21
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "動，剛柔皆應，恆。恆亨",
+          "position": 23
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "也。利有攸往，終則有始",
+          "position": 54
+        },
+        {
+          "term": "四",
+          "category": "line_ref",
+          "context": "而能久照，四時變化而能",
+          "position": 71
+        }
+      ]
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "text": "遯亨，遯而亨也。剛當位而應，與時行也。小利貞，浸而長也。遯之時義大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "遯而亨也。剛當位而應，",
+          "position": 8
+        },
+        {
+          "term": "當位",
+          "category": "position",
+          "context": "而亨也。剛當位而應，與時",
+          "position": 9
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "亨也。剛當位而應，與時",
+          "position": 10
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "。剛當位而應，與時行也",
+          "position": 12
+        }
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "text": "大壯，大者壯也。剛以動，故壯。大壯利貞，大者正也。正大而天地之情可見矣！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "大者壯也。剛以動，故壯",
+          "position": 8
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "利貞，大者正也。正大而",
+          "position": 22
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "大者正也。正大而天地之",
+          "position": 25
+        }
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "text": "晉，進也。明出地上，順而麗乎大明，柔進而上行，是以康侯用錫馬蕃庶，晝日三接也。",
+      "terms": [
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "麗乎大明，柔進而上行，",
+          "position": 17
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "晉，進也。明出地",
+          "position": 2
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "乎大明，柔進而上行，是",
+          "position": 18
+        },
+        {
+          "term": "三",
+          "category": "line_ref",
+          "context": "蕃庶，晝日三接也。",
+          "position": 35
+        }
+      ]
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "text": "明入地中，明夷。內文明而外柔順，以蒙大難，文王以之。利艱貞，晦其明也，內難而能正其志，箕子以之。",
+      "terms": [
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "內文明而外柔順，以蒙大",
+          "position": 13
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "明入地中，明夷。內",
+          "position": 3
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "，內難而能正其志，箕子",
+          "position": 39
+        }
+      ]
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "text": "家人，女正位乎內，男正位乎外。男女正，天地之大義也。家人有嚴君焉，父母之謂也。父父子子，兄兄弟弟，夫夫婦婦，而家道正。正家而天下定矣。",
+      "terms": [
+        {
+          "term": "位",
+          "category": "position",
+          "context": "家人，女正位乎內，男正",
+          "position": 5
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "乎內，男正位乎外。男女",
+          "position": 11
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "家人，女正位乎內，男",
+          "position": 4
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "位乎內，男正位乎外。男",
+          "position": 10
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "乎外。男女正，天地之大",
+          "position": 17
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "婦，而家道正。正家而天",
+          "position": 57
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "而家道正。正家而天下定",
+          "position": 59
+        }
+      ]
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "text": "睽，火動而上，澤動而下。二女同居，其志不同行。說而麗乎明，柔進而上行，得中而應乎剛，是以小事吉。天地睽而其事同也，男女睽而其志通也，萬物睽而其事類也。睽之時用大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "得中而應乎剛，是以小事",
+          "position": 40
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "而麗乎明，柔進而上行，",
+          "position": 29
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "而上行，得中而應乎剛，",
+          "position": 36
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "行，得中而應乎剛，是以",
+          "position": 38
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "麗乎明，柔進而上行，得",
+          "position": 30
+        },
+        {
+          "term": "二",
+          "category": "line_ref",
+          "context": "澤動而下。二女同居，其",
+          "position": 12
+        }
+      ]
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "text": "蹇，難也，險在前也。見險而能止，知矣哉！蹇利西南，往得中也。不利東北，其道窮也。利見大人，往有功也。當位貞吉，以正邦也。蹇之時用大矣哉！",
+      "terms": [
+        {
+          "term": "當位",
+          "category": "position",
+          "context": "往有功也。當位貞吉，以正",
+          "position": 50
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "有功也。當位貞吉，以正",
+          "position": 51
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "西南，往得中也。不利東",
+          "position": 27
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "位貞吉，以正邦也。蹇之",
+          "position": 56
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "蹇利西南，往得中也。不",
+          "position": 25
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "利見大人，往有功也。當",
+          "position": 45
+        }
+      ]
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "text": "解，險以動，動而免乎險，解。解利西南，往得眾也。其來復吉，乃得中也。有攸往夙吉，往有功也。天地解而雷雨作，雷雨作而百果草木皆甲拆。解之時大矣哉！",
+      "terms": [
+        {
+          "term": "中",
+          "category": "position",
+          "context": "復吉，乃得中也。有攸往",
+          "position": 31
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "解利西南，往得眾也。其",
+          "position": 19
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "中也。有攸往夙吉，往有",
+          "position": 36
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "攸往夙吉，往有功也。天",
+          "position": 40
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "得眾也。其來復吉，乃得",
+          "position": 25
+        }
+      ]
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "text": "損，損下益上，其道上行。損而有孚，元吉，无咎，可貞，利有攸往，曷之用？二簋可用享。二簋應有時，損剛益柔有時，損益盈虛，與時偕行。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "應有時，損剛益柔有時，",
+          "position": 48
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "時，損剛益柔有時，損益",
+          "position": 50
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "用享。二簋應有時，損剛",
+          "position": 43
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "貞，利有攸往，曷之用？",
+          "position": 29
+        },
+        {
+          "term": "二",
+          "category": "line_ref",
+          "context": "，曷之用？二簋可用享。",
+          "position": 35
+        },
+        {
+          "term": "二",
+          "category": "line_ref",
+          "context": "簋可用享。二簋應有時，",
+          "position": 41
+        }
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "text": "益，損上益下，民說无疆。自上下下，其道大光。利有攸往，中正有慶。利涉大川，木道乃行。益動而巽，日進无疆。天施地生，其益无方。凡益之道，與時偕行。",
+      "terms": [
+        {
+          "term": "中",
+          "category": "position",
+          "context": "利有攸往，中正有慶。利",
+          "position": 27
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "有攸往，中正有慶。利涉",
+          "position": 28
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "光。利有攸往，中正有慶",
+          "position": 25
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "動而巽，日進无疆。天施",
+          "position": 48
+        }
+      ]
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "text": "夬，決也，剛決柔也。健而說，決而和。揚于王庭，柔乘五剛也。孚號有厲，其危乃光也。告自邑不利即戎，所尚乃窮也。利有攸往，剛長乃終也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "夬，決也，剛決柔也。健",
+          "position": 5
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "庭，柔乘五剛也。孚號有",
+          "position": 26
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "利有攸往，剛長乃終也。",
+          "position": 59
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "決也，剛決柔也。健而說",
+          "position": 7
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "揚于王庭，柔乘五剛也。",
+          "position": 23
+        },
+        {
+          "term": "乘",
+          "category": "movement",
+          "context": "于王庭，柔乘五剛也。孚",
+          "position": 24
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "也。利有攸往，剛長乃終",
+          "position": 57
+        },
+        {
+          "term": "五",
+          "category": "line_ref",
+          "context": "王庭，柔乘五剛也。孚號",
+          "position": 25
+        }
+      ]
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "text": "姤，遇也，柔遇剛也。勿用取女，不可與長也。天地相遇，品物咸章也。剛遇中正，天下大行也。姤之時義大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "遇也，柔遇剛也。勿用取",
+          "position": 7
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "物咸章也。剛遇中正，天",
+          "position": 32
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "姤，遇也，柔遇剛也。勿",
+          "position": 5
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "章也。剛遇中正，天下大",
+          "position": 34
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "也。剛遇中正，天下大行",
+          "position": 35
+        }
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "text": "萃，聚也。順以說，剛中而應，故聚也。王假有廟，致孝享也。利見大人亨，聚以正也。用大牲吉，利有攸往，順天命也。觀其所聚，而天地萬物之情可見矣。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "。順以說，剛中而應，故",
+          "position": 9
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "順以說，剛中而應，故聚",
+          "position": 10
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "人亨，聚以正也。用大牲",
+          "position": 36
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "說，剛中而應，故聚也。",
+          "position": 12
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "吉，利有攸往，順天命也",
+          "position": 47
+        }
+      ]
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "text": "柔以時升，巽而順，剛中而應，是以大亨。用見大人，勿恤，有慶也。南征吉，志行也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，巽而順，剛中而應，是",
+          "position": 9
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "柔以時升，巽",
+          "position": 0
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "巽而順，剛中而應，是以",
+          "position": 10
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "順，剛中而應，是以大亨",
+          "position": 12
+        }
+      ]
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "text": "困，剛揜也。險以說，困而不失其所亨，其唯君子乎！貞大人吉，以剛中也。有言不信，尚口乃窮也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "困，剛揜也。險以",
+          "position": 2
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "大人吉，以剛中也。有言",
+          "position": 30
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "人吉，以剛中也。有言不",
+          "position": 31
+        }
+      ]
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "text": "巽乎水而上水，井。井養而不窮也。改邑不改井，乃以剛中也。汔至亦未繘井，未有功也。羸其瓶，是以凶也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "改井，乃以剛中也。汔至",
+          "position": 24
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "井，乃以剛中也。汔至亦",
+          "position": 25
+        }
+      ]
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "text": "革，水火相息。二女同居，其志不相得，曰革。巳日乃孚，革而信之。文明以說，大亨以正。革而當，其悔乃亡。天地革而四時成，湯武革命，順乎天而應乎人。革之時大矣哉！",
+      "terms": [
+        {
+          "term": "正",
+          "category": "position",
+          "context": "說，大亨以正。革而當，",
+          "position": 39
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "，順乎天而應乎人。革之",
+          "position": 67
+        },
+        {
+          "term": "二",
+          "category": "line_ref",
+          "context": "水火相息。二女同居，其",
+          "position": 7
+        },
+        {
+          "term": "四",
+          "category": "line_ref",
+          "context": "。天地革而四時成，湯武",
+          "position": 54
+        }
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "text": "鼎，象也。以木巽火，亨飪也。聖人亨以享上帝，而大亨以養聖賢。巽而耳目聰明，柔進而上行，得中而應乎剛，是以元亨。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "得中而應乎剛，是以元亨",
+          "position": 48
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "耳目聰明，柔進而上行，",
+          "position": 37
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "而上行，得中而應乎剛，",
+          "position": 44
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "行，得中而應乎剛，是以",
+          "position": 46
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "目聰明，柔進而上行，得",
+          "position": 38
+        }
+      ]
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "text": "震亨，震來虩虩，恐致福也。笑言啞啞，後有則也。震驚百里，驚遠而懼邇也。出可以守宗廟社稷，以為祭主也。",
+      "terms": [
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "震亨，震來虩虩，恐致",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "text": "艮，止也。時止則止，時行則行，動靜不失其時，其道光明。艮其止，止其所也。上下敵應，不相與也。是以不獲其身，行其庭不見其人，无咎也。",
+      "terms": [
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "也。上下敵應，不相與也",
+          "position": 39
+        }
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "text": "漸之進也，女歸吉也。進得位，往有功也。進以正，可以正邦也。其位剛得中也。止而巽，動不窮也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "邦也。其位剛得中也。止",
+          "position": 31
+        },
+        {
+          "term": "得位",
+          "category": "position",
+          "context": "歸吉也。進得位，往有功也",
+          "position": 11
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "吉也。進得位，往有功也",
+          "position": 12
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "正邦也。其位剛得中也。",
+          "position": 30
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "。其位剛得中也。止而巽",
+          "position": 33
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "功也。進以正，可以正邦",
+          "position": 21
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "以正，可以正邦也。其位",
+          "position": 25
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "。進得位，往有功也。進",
+          "position": 14
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "漸之進也，女歸吉",
+          "position": 2
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "女歸吉也。進得位，往有",
+          "position": 10
+        },
+        {
+          "term": "進",
+          "category": "movement",
+          "context": "往有功也。進以正，可以",
+          "position": 19
+        }
+      ]
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "text": "歸妹，天地之大義也。天地不交而萬物不興。歸妹，人之終始也。說以動，所歸妹也。征凶，位不當也。无攸利，柔乘剛也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "攸利，柔乘剛也。",
+          "position": 52
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "。无攸利，柔乘剛也。",
+          "position": 50
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "也。征凶，位不當也。无",
+          "position": 41
+        },
+        {
+          "term": "乘",
+          "category": "movement",
+          "context": "无攸利，柔乘剛也。",
+          "position": 51
+        }
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "text": "豐，大也。明以動，故豐。王假之，尚大也。勿憂宜日中，宜照天下也。日中則昃，月盈則食，天地盈虛，與時消息，而況於人乎？況於鬼神乎？",
+      "terms": [
+        {
+          "term": "中",
+          "category": "position",
+          "context": "。勿憂宜日中，宜照天下",
+          "position": 24
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "天下也。日中則昃，月盈",
+          "position": 33
+        }
+      ]
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "text": "旅，小亨，柔得中乎外而順乎剛，止而麗乎明，是以小亨旅貞吉也。旅之時義大矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "乎外而順乎剛，止而麗乎",
+          "position": 13
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "旅，小亨，柔得中乎外而",
+          "position": 5
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "小亨，柔得中乎外而順乎",
+          "position": 7
+        }
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "text": "重巽以申命。剛巽乎中正而志行，柔皆順乎剛，是以小亨，利有攸往，利見大人。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "巽以申命。剛巽乎中正而",
+          "position": 6
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，柔皆順乎剛，是以小亨",
+          "position": 19
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "正而志行，柔皆順乎剛，",
+          "position": 15
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "命。剛巽乎中正而志行，",
+          "position": 9
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "。剛巽乎中正而志行，柔",
+          "position": 10
+        },
+        {
+          "term": "往",
+          "category": "movement",
+          "context": "亨，利有攸往，利見大人",
+          "position": 29
+        }
+      ]
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "text": "兌，說也。剛中而柔外，說以利貞，是以順乎天而應乎人。說以先民，民忘其勞。說以犯難，民忘其死。說之大，民勸矣哉！",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "兌，說也。剛中而柔外，",
+          "position": 5
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "也。剛中而柔外，說以利",
+          "position": 8
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "，說也。剛中而柔外，說",
+          "position": 6
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "以順乎天而應乎人。說以",
+          "position": 22
+        }
+      ]
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "text": "渙亨，剛來而不窮，柔得位乎外而上同。王假有廟，王乃在中也。利涉大川，乘木有功也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "渙亨，剛來而不窮，",
+          "position": 3
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "來而不窮，柔得位乎外而",
+          "position": 9
+        },
+        {
+          "term": "得位",
+          "category": "position",
+          "context": "而不窮，柔得位乎外而上同",
+          "position": 10
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "不窮，柔得位乎外而上同",
+          "position": 11
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "廟，王乃在中也。利涉大",
+          "position": 26
+        },
+        {
+          "term": "乘",
+          "category": "movement",
+          "context": "利涉大川，乘木有功也。",
+          "position": 34
+        },
+        {
+          "term": "來",
+          "category": "movement",
+          "context": "渙亨，剛來而不窮，柔",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "text": "節亨，剛柔分而剛得中。苦節不可貞，其道窮也。說以行險，當位以節，中正以通。天地節而四時成，節以制度，不傷財，不害民。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "節亨，剛柔分而剛得",
+          "position": 3
+        },
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，剛柔分而剛得中。苦節",
+          "position": 7
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "節亨，剛柔分而剛得中",
+          "position": 4
+        },
+        {
+          "term": "當位",
+          "category": "position",
+          "context": "說以行險，當位以節，中正",
+          "position": 27
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "以行險，當位以節，中正",
+          "position": 28
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "柔分而剛得中。苦節不可",
+          "position": 9
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "當位以節，中正以通。天",
+          "position": 32
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "位以節，中正以通。天地",
+          "position": 33
+        },
+        {
+          "term": "四",
+          "category": "line_ref",
+          "context": "。天地節而四時成，節以",
+          "position": 41
+        }
+      ]
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "text": "中孚，柔在內而剛得中，說而巽，孚乃化邦也。豚魚吉，信及豚魚也。利涉大川，乘木舟虛也。中孚以利貞，乃應乎天也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "，柔在內而剛得中，說而",
+          "position": 7
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "中孚，柔在內而剛得",
+          "position": 3
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "中孚，柔在內",
+          "position": 0
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "在內而剛得中，說而巽，",
+          "position": 9
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "木舟虛也。中孚以利貞，",
+          "position": 42
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "以利貞，乃應乎天也。",
+          "position": 49
+        },
+        {
+          "term": "乘",
+          "category": "movement",
+          "context": "利涉大川，乘木舟虛也。",
+          "position": 36
+        }
+      ]
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "text": "小過，小者過而亨也。過以利貞，與時行也。柔得中，是以小事吉也。剛失位而不中，是以不可大事也。有飛鳥之象焉，飛鳥遺之音，不宜上宜下，大吉，上逆而下順也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "小事吉也。剛失位而不中",
+          "position": 31
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "與時行也。柔得中，是以",
+          "position": 20
+        },
+        {
+          "term": "失位",
+          "category": "position",
+          "context": "事吉也。剛失位而不中，是",
+          "position": 32
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "吉也。剛失位而不中，是",
+          "position": 33
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "行也。柔得中，是以小事",
+          "position": 22
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "剛失位而不中，是以不可",
+          "position": 36
+        }
+      ]
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "text": "既濟亨，小者亨也。利貞，剛柔正而位當也。初吉，柔得中也。終止則亂，其道窮也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "也。利貞，剛柔正而位當",
+          "position": 12
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "。利貞，剛柔正而位當也",
+          "position": 13
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "也。初吉，柔得中也。終",
+          "position": 23
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "，剛柔正而位當也。初吉",
+          "position": 16
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "初吉，柔得中也。終止則",
+          "position": 25
+        },
+        {
+          "term": "正",
+          "category": "position",
+          "context": "利貞，剛柔正而位當也。",
+          "position": 14
+        },
+        {
+          "term": "初",
+          "category": "line_ref",
+          "context": "而位當也。初吉，柔得中",
+          "position": 20
+        }
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "text": "未濟亨，柔得中也。小狐汔濟，未出中也。濡其尾，无攸利，不續終也。雖不當位，剛柔應也。",
+      "terms": [
+        {
+          "term": "剛",
+          "category": "剛柔",
+          "context": "雖不當位，剛柔應也。",
+          "position": 37
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "未濟亨，柔得中也。小",
+          "position": 4
+        },
+        {
+          "term": "柔",
+          "category": "剛柔",
+          "context": "不當位，剛柔應也。",
+          "position": 38
+        },
+        {
+          "term": "不當位",
+          "category": "position",
+          "context": "續終也。雖不當位，剛柔應也",
+          "position": 33
+        },
+        {
+          "term": "當位",
+          "category": "position",
+          "context": "終也。雖不當位，剛柔應也",
+          "position": 34
+        },
+        {
+          "term": "位",
+          "category": "position",
+          "context": "也。雖不當位，剛柔應也",
+          "position": 35
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "濟亨，柔得中也。小狐汔",
+          "position": 6
+        },
+        {
+          "term": "中",
+          "category": "position",
+          "context": "汔濟，未出中也。濡其尾",
+          "position": 16
+        },
+        {
+          "term": "應",
+          "category": "correspondence",
+          "context": "當位，剛柔應也。",
+          "position": 39
+        }
+      ]
+    }
+  ],
+  "frequency_summary": {
+    "三": {
+      "total": 4,
+      "n_hexagrams": 3
+    },
+    "不當位": {
+      "total": 2,
+      "n_hexagrams": 2
+    },
+    "中": {
+      "total": 50,
+      "n_hexagrams": 39
+    },
+    "乘": {
+      "total": 5,
+      "n_hexagrams": 5
+    },
+    "二": {
+      "total": 5,
+      "n_hexagrams": 4
+    },
+    "五": {
+      "total": 1,
+      "n_hexagrams": 1
+    },
+    "位": {
+      "total": 20,
+      "n_hexagrams": 17
+    },
+    "來": {
+      "total": 12,
+      "n_hexagrams": 11
+    },
+    "初": {
+      "total": 2,
+      "n_hexagrams": 2
+    },
+    "剛": {
+      "total": 60,
+      "n_hexagrams": 46
+    },
+    "四": {
+      "total": 5,
+      "n_hexagrams": 5
+    },
+    "失位": {
+      "total": 1,
+      "n_hexagrams": 1
+    },
+    "往": {
+      "total": 24,
+      "n_hexagrams": 20
+    },
+    "得位": {
+      "total": 4,
+      "n_hexagrams": 4
+    },
+    "應": {
+      "total": 27,
+      "n_hexagrams": 25
+    },
+    "承": {
+      "total": 1,
+      "n_hexagrams": 1
+    },
+    "柔": {
+      "total": 39,
+      "n_hexagrams": 33
+    },
+    "正": {
+      "total": 35,
+      "n_hexagrams": 25
+    },
+    "當位": {
+      "total": 5,
+      "n_hexagrams": 5
+    },
+    "進": {
+      "total": 8,
+      "n_hexagrams": 5
+    }
+  }
+}

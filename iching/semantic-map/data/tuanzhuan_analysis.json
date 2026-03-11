@@ -1,0 +1,354 @@
+{
+  "gang_rou": {
+    "correct": 13,
+    "total": 23,
+    "examples": [
+      {
+        "hex": "蒙",
+        "line": 1,
+        "text_fragment": "初筮告，以剛",
+        "claimed": "剛",
+        "actual": "陽",
+        "correct": true
+      },
+      {
+        "hex": "蒙",
+        "line": 3,
+        "text_fragment": "剛中也。再三",
+        "claimed": "剛",
+        "actual": "陰",
+        "correct": false
+      },
+      {
+        "hex": "比",
+        "line": 6,
+        "text_fragment": "剛中也。不寧方來，上",
+        "claimed": "剛",
+        "actual": "陰",
+        "correct": false
+      },
+      {
+        "hex": "小畜",
+        "line": 6,
+        "text_fragment": "柔得位而上",
+        "claimed": "柔",
+        "actual": "陽",
+        "correct": false
+      },
+      {
+        "hex": "大有",
+        "line": 6,
+        "text_fragment": "柔得尊位大中，而上",
+        "claimed": "柔",
+        "actual": "陽",
+        "correct": false
+      },
+      {
+        "hex": "蠱",
+        "line": 6,
+        "text_fragment": "剛上",
+        "claimed": "剛",
+        "actual": "陰",
+        "correct": false
+      },
+      {
+        "hex": "蠱",
+        "line": 6,
+        "text_fragment": "上而柔",
+        "claimed": "柔",
+        "actual": "陰",
+        "correct": true
+      },
+      {
+        "hex": "賁",
+        "line": 6,
+        "text_fragment": "剛，故亨。分剛上",
+        "claimed": "剛",
+        "actual": "陽",
+        "correct": true
+      },
+      {
+        "hex": "賁",
+        "line": 6,
+        "text_fragment": "上而文柔",
+        "claimed": "柔",
+        "actual": "陽",
+        "correct": false
+      },
+      {
+        "hex": "咸",
+        "line": 2,
+        "text_fragment": "剛下，二",
+        "claimed": "剛",
+        "actual": "陽",
+        "correct": true
+      }
+    ]
+  },
+  "zhong": {
+    "剛中": 16,
+    "柔中": 5,
+    "total_with_zhong": 39,
+    "contexts": [
+      {
+        "type": "剛中",
+        "line2_yang": 0,
+        "line5_yang": 1,
+        "hex": "蒙"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 0,
+        "line5_yang": 1,
+        "hex": "師"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 1,
+        "line5_yang": 0,
+        "hex": "比"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 1,
+        "line5_yang": 1,
+        "hex": "小畜"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 1,
+        "line5_yang": 1,
+        "hex": "履"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 0,
+        "line5_yang": 1,
+        "hex": "臨"
+      },
+      {
+        "type": "柔中",
+        "line2_yang": 0,
+        "line5_yang": 0,
+        "hex": "噬嗑"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 1,
+        "line5_yang": 0,
+        "hex": "无妄"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 1,
+        "line5_yang": 1,
+        "hex": "坎"
+      },
+      {
+        "type": "剛中",
+        "line2_yang": 1,
+        "line5_yang": 0,
+        "hex": "萃"
+      }
+    ]
+  },
+  "ying": {
+    "n_hexagrams": 25,
+    "details": [
+      {
+        "hex": "坤",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": false
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 0
+      },
+      {
+        "hex": "蒙",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": true
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": true
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 2
+      },
+      {
+        "hex": "師",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": true
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "比",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": true
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "小畜",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": false
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": true
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "履",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": true
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": false
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "同人",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": true
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "大有",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": true
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": false
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "豫",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": false
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": true
+          }
+        ],
+        "n_responding": 1
+      },
+      {
+        "hex": "臨",
+        "correspondences": [
+          {
+            "pair": "1↔4",
+            "has_ying": false
+          },
+          {
+            "pair": "2↔5",
+            "has_ying": true
+          },
+          {
+            "pair": "3↔6",
+            "has_ying": true
+          }
+        ],
+        "n_responding": 2
+      }
+    ]
+  },
+  "algebra_crosstab": {
+    "gang_rou_basin": {
+      "H": 1.1281158020603401,
+      "p": 0.568895850569676
+    },
+    "density_icomp": {
+      "U": 531.0,
+      "p": 0.7990809843999742
+    },
+    "wanglai_srel": {
+      "H": 2.534066938545955,
+      "p": 0.6385461456394763
+    }
+  }
+}

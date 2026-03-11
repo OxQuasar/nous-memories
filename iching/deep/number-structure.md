@@ -224,6 +224,8 @@ The system is the joint product of three independent prime structures, each irre
 
 **Proof of (b).** The 2^(n-1) = 4 complement pairs distribute across 3 destination types (k₀ to self-conjugate, k₁ to {Fire,Water}, k₂ to {Earth,Metal}) with k₀+k₁+k₂ = 4 and all ≥ 1. If min(k₁,k₂) ≥ 2 then k₁+k₂ ≥ 4, forcing k₀ ≤ 0 — contradiction. □
 
+**Partition correction (from np_landscape computation).** The partition has exactly 2 shapes at (3,5): {2,2,2,1,1} (80%, 192/240 surjections) and {4,1,1,1,1} (20%, 48/240 surjections). What is forced is the presence of at least 2 singletons, not the partition shape. The {4,1,1,1,1} shape arises when m₀ = 2 complement pairs map to 0, with the remaining 2 pairs each singly covering a negation pair (producing 4 singletons). This generalizes: every (n, 2^n − 3) point in the singleton-forcing family exhibits this same 2-shape dichotomy.
+
 **Why n=3 is special:** 2^(n-1) = 4 = 3+1. After the surjectivity minimum (one pair per destination), exactly ONE unit of slack remains. It can enlarge only one destination, leaving the other at k=1 = singleton. For n=4: 2^(n-1) = 8 = 3+5, five units of slack — singletons are no longer forced.
 
 n=3 is the unique dimension where the Z₂/Z₅ bridge (singletons = injection points) is structurally guaranteed. The trigram having 3 lines is a mathematical necessity, not a design choice.

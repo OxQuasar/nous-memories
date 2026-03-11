@@ -12,6 +12,10 @@ The atlas further establishes: the {2,2,2,1,1} partition is the single organizin
 
 **The 梅花 atlas extends this:** The 384-state expansion (64 hexagrams × 6 動爻) projects the hexagram space into a directed, depth-stratified evaluation. Two independent information channels (text ↔ present state, arc ↔ trajectory) operate through the same Z₅×Z₅ geometry but with different axes (positional vs relational). The 體/用 cut converts static algebra into directed reading — "temporal" in 梅花 is structural depth rendered as narrative.
 
+**The semantic map completes the empirical side:** Bottom-up characterization of all textual layers confirms the residual is thick (89% for 爻辭). The text-algebra interface is bounded: two distributional bridges (marker placement) plus shared positional hierarchy (from the 3+3 factorization). 89% of textual semantic content is orthogonal to algebraic structure. The commentary tradition (小象/彖傳/大象) sees binary structure (Z₂) and positional hierarchy but not the pentadic algebra (Z₅) — the 五行 formalization is a separate layer, not a reading of the earlier tradition.
+
+**The unification program (R43-R52) completes the number-theoretic foundation:** The (n,p) = (3,5) uniqueness is now proven as a triple resonance theorem — singleton forcing + three-type partition + Fano geometry intersect at exactly one point. The selection chain 240→2 traces how 240 complement-respecting surjections reduce to the I Ching's specific 五行 assignment through structural forcing (theorems) + one observational compatibility (P→H nuclear coherence) + one irreducible choice (0.5-bit V₄ kernel). The hexagram-level Z₅ structure reduces entirely to the trigram-level compass (Hexagram Reduction Theorem). The 互 transition eigenstructure (spectral gap ≈ 0.71) confirms cascade depth = 3. The P-coset alignment is exact (F(同)=1, F(克)=1/13), not approximate. The framework's boundary is precisely identified: algebra ends at the 0.5-bit (V₄ kernel), reversal is Z₅-opaque (S₃ type-crossing), KW ordering is outside PG(2,F₂). See unification/synthesis-2.md for the complete account.
+
 ---
 
 ## 1. Formal H¹ computation
@@ -44,47 +48,27 @@ When did this modification occur? Answering requires surveying intermediate text
 
 ## 4. Semantic mapping — text-first characterization
 
-**Status: open, foundational**
+**Status: RESOLVED → semantic-map workflow**
 
-All prior semantic work approached from algebra → text: does algebraic position predict textual content? The answer is mostly null (R25: <1% variance, R22: 納音 null, R12: thematic null). But this tested the wrong direction. We never characterized the texts *on their own terms* to discover their intrinsic structure, then compared with algebra.
+Bottom-up characterization of all textual layers completed. Key findings:
 
-### What's missing
+1. **Thick residual (89% for 爻辭, ≥64% for 卦辭).** The texts have rich independent structure that algebra cannot predict. The two bridges (凶×basin, 吉×生体) are distributional constraints on marker placement, not determinants of semantic content. No hidden systematic text-algebra alignment was found by exhaustive bottom-up search.
 
-**The 卦辭 corpus as a semantic object.** 64 short texts describing situations, imagery, judgments. What themes recur? What situations cluster? Is there an intrinsic semantic structure — groups of hexagrams that talk about similar things — independent of any algebraic coordinate?
+2. **Positional dominance.** The 384 爻辭 organize by line position, not by parent hexagram. k=3 clusters cut across hexagrams (χ²=37.2, p=0.0001). The dominant textual structure is positional — "64 instances of 6 roles" rather than "6 lines per 64 situations."
 
-**The 爻辭 corpus.** 384 line texts. Beyond valence markers (吉/凶/悔/吝), the content is untouched. What do lines at nuclear positions (2-5) talk about vs outer lines (1,6)? Do initial lines (初) share themes across hexagrams? Do top lines (上) share themes? Is there a positional semantic signature?
+3. **小象 vocabulary encodes the algebraic 3-layer hierarchy (χ²=125, p=5×10⁻²⁶).** Three vocabulary groups {上+下+初, 中, 位+當} map to the three algebraic layers {outer, interface, core}. Both tradition and algebra read the same hierarchy forced by the 3+3 factorization — not convergent recognition but two descriptions of one structural fact.
 
-**The 象傳 layer.** 64 大象 (hexagram-level images) explicitly describe trigram interaction ("天行健" = heaven moves vigorously for 乾). These are the interpretive layer closest to the shell projection. Do 大象 descriptions correlate with surface 五行 relations? They should — they're literally describing the trigram pair. The question is whether they do so through 五行 language or through independent imagery.
+4. **Commentary layers are non-algebraic.** 大象: imagistic (no 五行 vocabulary). 彖傳: binary-structural (Z₂, not Z₅). 小象: positional (no algebraic signal beyond position). The 五行 formalization is a separate layer imposed later.
 
-**The 彖傳 layer.** Hexagram commentaries that explicitly discuss trigram relationships. Do they use 生/克 language? Do they reference upper/lower interaction in terms that map to the directed relation (生体 vs 体生用)?
+5. **Both bridges survive position control (CMH).** 凶×basin: OR=4.25, p=0.00002 after stratifying by position. 吉×生体: OR=2.19, p=0.004. The two bridges are genuinely independent of position — three layers of text-algebra contact: position, basin (core), 体用 (shell).
 
-**Cross-text consistency.** Do 卦辭, 彖傳, and 象傳 agree on the same hexagram? Disagreements would reveal where different textual layers encode different aspects — potentially mapping to the shell/core distinction.
+**Sub-questions resolved:**
+- The text corpus has its own semantic structure that algebra is largely orthogonal to (thick residual)
+- The 象傳/彖傳 do NOT encode 五行 relations — they use independent imagery (大象) and binary structural vocabulary (彖傳)
+- Line position carries semantic weight independent of algebra — it IS the dominant organizing principle of the text corpus
+- I.4 imagery taxonomy deferred — unlikely to shift residual thickness
 
-**火珠林 domain sections.** The 用神 mapping (30+ domains → 六親 types) has never been extracted or formalized. This is the practitioner's semantic layer — the bridge from human concerns to algebraic positions.
-
-**梅花易數 worked examples.** Shao Yong's actual readings. What reasoning pattern does he follow? Does his interpretation trace the core projection (體→互→變) or does he use shell-level reasoning?
-
-### Approach: text → structure → compare
-
-1. **Characterize the 卦辭 independently.** Cluster the 64 texts by semantic similarity (embeddings exist). Identify the natural groupings. Label the clusters by dominant theme/imagery. This produces a *text-derived* partition of the 64 hexagrams.
-2. **Compare text-derived partition against algebraic partitions.** MI between text clusters and (basin, palace, kernel, surface relation, depth relation). If MI > 0 for any algebraic coordinate, the text encodes that coordinate — but discovered bottom-up rather than imposed top-down.
-3. **Characterize 爻辭 by line position.** Pool all 初 lines, all 二 lines, ..., all 上 lines. Does each position have a semantic signature? Traditional commentary says yes (初=beginning, 上=excess). Test whether this is in the texts or only in the commentary.
-4. **Extract 象傳 trigram language.** The 大象 texts describe trigram-pair interactions in natural language. Parse these into relation categories. Compare with the algebraic surface relation. This is where shell-level algebra should be *most* visible in text.
-5. **Extract 彖傳 五行 language.** Search for generation/destruction vocabulary in the commentaries. Map occurrences to the algebraic 生/克 classification. Test agreement.
-6. **Formalize the 用神 mapping.** Extract from 火珠林 text: domain → 六親 type → element. Build the complete practitioner's lookup table. Test internal structure (do related domains map to 生克-adjacent types?).
-
-### What this would resolve
-
-- Whether the text corpus has its own semantic structure that algebra partially captures (descriptive) or that algebra is orthogonal to (notational)
-- Whether the 象傳/彖傳 explicitly encode 五行 relations — which would date the shell projection's recognition
-- Whether the practitioner's 用神 mapping is structured or arbitrary
-- Whether line position carries semantic weight independent of algebra — this would be evidence for a third organizing principle beyond shell and core
-
-### Dependencies
-- Embeddings exist (synthesis/embeddings.npz) for 卦辭, 爻辭, 大象, 彖傳
-- Atlas coordinates exist (atlas/atlas.json) for all 64 hexagrams
-- 火珠林 text exists (texts/huozhulin/huozhulin.md) for 用神 extraction
-- 梅花易數 text exists (texts/meihuajingshu/) for worked examples
+**Full findings:** `semantic-map/findings.md`
 
 ---
 
@@ -115,6 +99,38 @@ The 梅花 atlas mapped one of two operational projections. 火珠林 uses the s
 
 ---
 
+## 7. Three-register temporal architecture
+
+**Status: new, from semantic map**
+
+The semantic map revealed three historical layers operating in three different registers:
+
+| Layer | Period | Register | What it sees |
+|-------|--------|----------|-------------|
+| 爻辭 | ~9th c. BC | Situational/imagistic | Positions, processes |
+| 小象/彖傳 | ~5th-3rd c. BC | Binary-structural | Yang/yin, centrality, correspondence |
+| 五行 formalization | ~1st c. BC | Pentadic-algebraic | Elements, basins, surface relations |
+
+These registers suggestively map to the three primes of PG(2,2): prime 2 (binary polarity), prime 3 (positional hierarchy), prime 5 (cyclic dynamics). The commentary tradition sees primes 2 and 3 but not prime 5. The 五行 formalization sees prime 5.
+
+**Open question:** Is the register → prime mapping coincidence or structure? Would need historical analysis of when specific structural concepts first appear in the commentary tradition to test whether the temporal sequence follows the prime ordering.
+
+**Epistemic status:** Pattern observation (suggestive), not measured.
+
+---
+
+## 8. 彖傳 as anomaly detector
+
+**Status: new, from semantic map**
+
+The 彖傳 comments on what is noteworthy/unusual, not what is dominant. Kun basin (predominantly yin) has the highest 剛/柔 ratio (2.14) — more 剛 references where 剛 is rare. This is the same information-theoretic stance as the depth gradient: information concentrates at boundaries (depth-1 peak in 凶, not at attractors).
+
+**Open question:** Is this anomaly-detection stance systematic across the 彖傳, or just an artifact of the 剛/柔 count? Would need fine-grained analysis: for each hexagram, does the 彖傳 preferentially comment on the structurally unusual lines?
+
+**Epistemic status:** Single observation (measured), generalization (conjectured).
+
+---
+
 ## Resolved
 
 ### R1. Do the dropped 京氏 layers carry independent information?
@@ -135,6 +151,8 @@ The 梅花 atlas mapped one of two operational projections. 火珠林 uses the s
 ### R6. The decisive test — text ↔ algebra
 **MIXED — two bridges.** The oldest textual layers partially encode algebraic structure through two narrow channels: 凶×basin (core, p=0.0002) and 吉×生体 (shell, p=0.007, basin-independent). Both encode process not state. Deeper constructs (kernel, palace, I-component on embeddings) are null. Four definitive nulls bound the bridges: embedding-space (p>0.4), thematic content (p>0.07), KW between-pair ordering (p=0.76), 序卦 narratives (p>0.25). (synthesis Probes 1, 7, 8, 9)
 
+**Updated by semantic map:** Both bridges survive position control (CMH: 凶×basin p=0.00002, 吉×生体 p=0.004). Residual thickness confirmed thick (89%). Commentary layers non-algebraic. (semantic-map/findings.md)
+
 ### R7. Does 日辰 break the 2/5 ceiling?
 **Yes — proven as theorem.** Maximum rises from 2/5 to 4/5. The excluded element alternates between 休 (exhausted source) and 死 (conquered object). 囚 (opposition) is always representable. 梅花 inherits 2/5. Pipeline asymmetry: 梅花 curves domain, 火珠林 curves codomain. Orthogonality wall untouched. (synthesis Probe 4)
 
@@ -150,8 +168,12 @@ The 梅花 atlas mapped one of two operational projections. 火珠林 uses the s
 ### R11. Shell bridge (體/用 × valence)
 **POSITIVE — 吉×生体 is genuine.** 生体 (用 nourishes 體) carries 44.4% 吉 vs 27.6% baseline (Fisher p=0.007, OR=2.10). Signal is basin-independent (same direction and magnitude in all three basins). 比和→凶 trend is confounded with basin and underpowered. The 梅花 tradition partially recovered 生体→吉 but distorted through symmetrization. (synthesis Probes 8, basin-controlled test)
 
+**Updated by semantic map:** Survives position control (CMH OR=2.19, p=0.004). Effect unchanged by stratification — genuinely independent of line position. (semantic-map/findings.md F7)
+
 ### R12. 凶 content at depth boundary
 **NULL — distributional not thematic.** Depth-1 hexagrams carry more 凶 (19.4% vs 12.8%), but 凶 text content doesn't systematically differ by depth. No word category reaches significance (best: threshold p=0.069). (synthesis Probe 7)
+
+**Confirmed by semantic map:** 89% of 爻辭 embedding variance is text-intrinsic. The bridges are distributional (WHERE markers appear), not thematic (WHAT texts say). (semantic-map/findings.md F6)
 
 ### R13. KW sequence algebraic structure
 **NULL beyond pairing.** Between-pair ordering is algebraically random (p=0.76). Five-phase relations at chance. (synthesis Probe 6)
@@ -259,8 +281,40 @@ But the **conjunction** of textual bridge + cycle attractor semantics uniquely s
 ### R40. Line hierarchy encoded in yaoci (deep)
 **MEASURED — p < 0.001.** Algebraic role (outer core / interface / shell) predicts 吉/凶 rates: 吉 × role χ²=15.1, p=0.0005. Line 5 ruler effect OR=2.15, p=0.007. 生体 × line 5 = 75% 吉 (system peak). 体/用 and 世 line are NOT encoded (p > 0.2) — operational overlays absent from ancient text. (deep/09_line_valuations.py)
 
+**Extended by semantic map:** Positional hierarchy is the dominant organizing principle of the entire 爻辭 corpus (not just valence markers). k=3 embedding clusters separate by position (χ²=37.2, p=0.0001). L2↔L5 closest centroid pair (cosine=0.013). 小象 vocabulary independently confirms the same 3-layer hierarchy (χ²=125, p=5×10⁻²⁶). (semantic-map/findings.md F3, F5, F8)
+
 ### R41. KW sequence basin clustering (deep)
 **MEASURED — p < 0.001.** Same-basin transitions: 60% vs 37% expected. 上經/下經 = palindromic/non-palindromic pure partition. All other sequential metrics null (Hamming, element continuity, 先天 correlation). (deep/05_king_wen_sequence.py)
 
 ### R42. Two Z₅ incommensurability (deep)
 **PROVEN.** The 生-cycle Z₅ and He Tu Z₅ are incommensurable as algebras (non-affine conjugation γ) and as metric spaces (γ not distance-preserving). Connected through 後天 compass arrangement, not through algebraic structure. (deep/01_assignment_test.py)
+
+### R43. (n,p) singleton-forcing landscape (unification)
+**PROVEN.** Singleton forcing in complement-respecting surjections Z₂ⁿ → Z_p occurs iff p > 2^(n-1). The family is infinite (Bertrand's postulate guarantees primes in every window). Verified exhaustively for 27 (n,p) cases across n ∈ {3,4,5,6}. (unification/np_landscape.py)
+
+### R44. Triple resonance uniqueness of (3,5) (unification)
+**PROVEN.** (3,5) is the unique (n,p) satisfying: singleton forcing (p > 2^(n-1)) + three-type partition possible (p < 2^n − 1) + Fano geometry (n = 3). The three conditions intersect at exactly one point: n=3, 4 < p < 7, p prime → p = 5. (unification/np_landscape.py)
+
+### R45. Shape count formula (unification)
+**PROVEN.** In the singleton-forcing regime, # partition shapes = Σ_{k=0}^{E} p(k), where E = 2^(n-1) − (p+1)/2 is the excess and p(k) is the integer partition function. Verified for all 16 forcing cases. Generating function: (1/(1-x)) × Π_{k≥1} 1/(1-x^k). (unification/np_landscape.py)
+
+### R46. Surjection count ratio at E=1 (unification)
+**PROVEN.** At E=1 (p = 2^n − 3), the ratio of spread to concentrated surjections is exactly N_A/N_B = p − 1. Verified at (3,5): 192/48 = 4; (4,13): 12:1; (5,29): 28:1; (6,61): 60:1. (unification/orbit_c_nuclear.py)
+
+### R47. Selection chain 240 → 2 (unification)
+**CHARACTERIZED.** The I Ching's 五行 assignment emerges from: 240 surjections → 192 (three-type shape, 80%) → 96 (Orbit C: Frame=Type 2, forced by 五行 data) → 16 (P→H nuclear coherence, observational) → 4 (Aut(Z₅) quotient) → 2 (0.5-bit residual). Steps 1-2 and 4-5 are theorems; step 3 is observational. (unification/orbit_c_nuclear.py, synthesis-2.md Part II)
+
+### R48. Hexagram Z₅ Reduction (unification)
+**PROVEN.** All hexagram-level 五行 quantities (relation type d, 互 transition, complement action) are determined by the trigram-level surjection f and the F₂-linear (lower, upper) decomposition. The hexagram level adds no additional Z₅ data. d(h) = f(upper) − f(lower) mod 5. (unification/hexagram_wuxing.py)
+
+### R49. Complement theorem on hexagrams (unification)
+**PROVEN.** d(~h) = −d(h) mod 5. Complement maps 同→同, 生↔被生, 克↔被克. Follows directly from f(~x) = −f(x). Reversal does NOT descend to Z₅: d(h̄) = −d(h) in only 24/64 cases (reversal splits doubleton fibers). (unification/hexagram_wuxing.py)
+
+### R50. 互 transition eigenstructure (unification)
+**VERIFIED.** The 5×5 Markov transition matrix T[d→d'] has spectrum {1, 1/6, −1/13, (157 ± i√75815)/1092}. Spectral gap 1 − √(23/273) ≈ 0.71. Stationary distribution π = (28/87, 8/145, 247/870, 247/870, 8/145) concentrates 89% on {同,克,被克}. Antisymmetric block is upper triangular: zero flow from stride-2 to stride-1 (克 never produces 生 under 互). Mixing in 3-5 iterations confirms cascade depth. (unification/eigenstructure.py)
+
+### R51. Exact P-coset alignment formula (unification)
+**PROVEN.** Each Z₅ fiber is P-homogeneous: {Wood, Fire, Water} all P-odd; {Earth, Metal} all P-even. The P-even fraction F(d) is an exact convolution: F(同)=1, F(生)=F(被生)=2/3, F(克)=F(被克)=1/13. Not an approximation — deterministic from fiber partition {2,2,2,1,1} and P-parity structure. (unification/eigenstructure.py)
+
+### R52. 0.5-bit irreducibility (unification)
+**PROVEN.** The V₄ kernel of Stab(111) acts within Fano lines, fixing all line-level structure. Both candidate doubleton XOR vectors (I and OM) lie in ker(P). No F₂-linear, Z₅-cyclic, or parity constraint can distinguish them. The 0.5-bit marks the boundary between algebraic determination and cosmological tradition. (unification/synthesis-2.md Part V)

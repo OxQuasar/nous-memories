@@ -1,0 +1,5090 @@
+{
+  "marker_matrix": [
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "line": 0,
+      "label": "初九",
+      "text": "潛龍勿用。",
+      "markers": []
+    },
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "line": 1,
+      "label": "九二",
+      "text": "見龍在田，利見大人。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "line": 2,
+      "label": "九三",
+      "text": "君子終日乾乾，夕惕若；厲，无咎。",
+      "markers": [
+        "无咎",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "line": 3,
+      "label": "九四",
+      "text": "或躍在淵，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "line": 4,
+      "label": "九五",
+      "text": "飛龍在天，利見大人。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 63,
+      "kw_number": 1,
+      "name": "乾",
+      "line": 5,
+      "label": "上九",
+      "text": "亢龍，有悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "line": 0,
+      "label": "初六",
+      "text": "履霜，堅冰至。",
+      "markers": []
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "line": 1,
+      "label": "六二",
+      "text": "直方大，不習无不利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "line": 2,
+      "label": "六三",
+      "text": "含章，可貞。或從王事，无成有終。",
+      "markers": [
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "line": 3,
+      "label": "六四",
+      "text": "括囊，无咎无譽。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "line": 4,
+      "label": "六五",
+      "text": "黃裳，元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 0,
+      "kw_number": 2,
+      "name": "坤",
+      "line": 5,
+      "label": "上六",
+      "text": "龍戰于野，其血玄黃。",
+      "markers": []
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "line": 0,
+      "label": "初九",
+      "text": "磐桓，利居貞，利建侯。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "line": 1,
+      "label": "六二",
+      "text": "屯如邅如，乘馬班如，匪寇婚媾，女子貞不字，十年乃字。",
+      "markers": [
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "line": 2,
+      "label": "六三",
+      "text": "即鹿无虞，惟入于林中，君子幾不如舍，往吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "line": 3,
+      "label": "六四",
+      "text": "乘馬班如，求婚媾，往，吉无不利。",
+      "markers": [
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "line": 4,
+      "label": "九五",
+      "text": "屯其膏；小貞吉，大貞凶。",
+      "markers": [
+        "吉",
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 17,
+      "kw_number": 3,
+      "name": "屯",
+      "line": 5,
+      "label": "上六",
+      "text": "乘馬班如，泣血漣如。",
+      "markers": []
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "line": 0,
+      "label": "初六",
+      "text": "發蒙，利用刑人，用說桎梏，以往吝。",
+      "markers": [
+        "吝",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "line": 1,
+      "label": "九二",
+      "text": "包蒙吉，納婦吉，子克家。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "line": 2,
+      "label": "六三",
+      "text": "勿用取女，見金夫，不有躬，无攸利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "line": 3,
+      "label": "六四",
+      "text": "困蒙，吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "line": 4,
+      "label": "六五",
+      "text": "童蒙，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 34,
+      "kw_number": 4,
+      "name": "蒙",
+      "line": 5,
+      "label": "上九",
+      "text": "擊蒙，不利為寇，利禦寇。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "line": 0,
+      "label": "初九",
+      "text": "需于郊，利用恆，无咎。",
+      "markers": [
+        "无咎",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "line": 1,
+      "label": "九二",
+      "text": "需于沙，小有言，終吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "line": 2,
+      "label": "九三",
+      "text": "需于泥，致寇至。",
+      "markers": []
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "line": 3,
+      "label": "六四",
+      "text": "需于血，出自穴。",
+      "markers": []
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "line": 4,
+      "label": "九五",
+      "text": "需于酒食，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 23,
+      "kw_number": 5,
+      "name": "需",
+      "line": 5,
+      "label": "上六",
+      "text": "入于穴，有不速之客三人來，敬之終吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "line": 0,
+      "label": "初六",
+      "text": "不永所事，小有言，終吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "line": 1,
+      "label": "九二",
+      "text": "不克訟，歸而逋，其邑人三百戶无眚。",
+      "markers": []
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "line": 2,
+      "label": "六三",
+      "text": "食舊德，貞厲，終吉。或從王事，无成。",
+      "markers": [
+        "吉",
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "line": 3,
+      "label": "九四",
+      "text": "不克訟，復即命渝，安貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "line": 4,
+      "label": "九五",
+      "text": "訟，元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 58,
+      "kw_number": 6,
+      "name": "訟",
+      "line": 5,
+      "label": "上九",
+      "text": "或錫之鞶帶，終朝三褫之。",
+      "markers": []
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "line": 0,
+      "label": "初六",
+      "text": "師出以律，否臧，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "line": 1,
+      "label": "九二",
+      "text": "在師中吉，无咎；王三錫命。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "line": 2,
+      "label": "六三",
+      "text": "師或輿尸，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "line": 3,
+      "label": "六四",
+      "text": "師左次，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "line": 4,
+      "label": "六五",
+      "text": "田有禽，利執言，无咎。長子帥師，弟子輿尸，貞凶。",
+      "markers": [
+        "无咎",
+        "凶",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 2,
+      "kw_number": 7,
+      "name": "師",
+      "line": 5,
+      "label": "上六",
+      "text": "大君有命，開國承家，小人勿用。",
+      "markers": []
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "line": 0,
+      "label": "初六",
+      "text": "有孚，比之，无咎。有孚盈缶，終來有它，吉。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "line": 1,
+      "label": "六二",
+      "text": "比之自內，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "line": 2,
+      "label": "六三",
+      "text": "比之匪人。",
+      "markers": []
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "line": 3,
+      "label": "六四",
+      "text": "外比之，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "line": 4,
+      "label": "九五",
+      "text": "顯比。王用三驅，失前禽，邑人不誡，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 16,
+      "kw_number": 8,
+      "name": "比",
+      "line": 5,
+      "label": "上六",
+      "text": "比之无首，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "line": 0,
+      "label": "初九",
+      "text": "復自道，何其咎，吉。",
+      "markers": [
+        "吉",
+        "咎"
+      ]
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "line": 1,
+      "label": "九二",
+      "text": "牽復，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "line": 2,
+      "label": "九三",
+      "text": "輿說輻，夫妻反目。",
+      "markers": []
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "line": 3,
+      "label": "六四",
+      "text": "有孚，血去惕出，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "line": 4,
+      "label": "九五",
+      "text": "有孚攣如，富以其鄰。",
+      "markers": []
+    },
+    {
+      "hex_val": 55,
+      "kw_number": 9,
+      "name": "小畜",
+      "line": 5,
+      "label": "上九",
+      "text": "既雨既處，尚德載，婦貞厲，月幾望，君子征凶。",
+      "markers": [
+        "凶",
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "line": 0,
+      "label": "初九",
+      "text": "素履，往无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "line": 1,
+      "label": "九二",
+      "text": "履道坦坦，幽人貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "line": 2,
+      "label": "六三",
+      "text": "眇能視，跛能履，履虎尾，咥人，凶。武人為于大君。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "line": 3,
+      "label": "九四",
+      "text": "履虎尾，愬愬終吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "line": 4,
+      "label": "九五",
+      "text": "夬履，貞厲。",
+      "markers": [
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 59,
+      "kw_number": 10,
+      "name": "履",
+      "line": 5,
+      "label": "上九",
+      "text": "視履考祥，其旋元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "line": 0,
+      "label": "初九",
+      "text": "拔茅茹以其彙，征吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "line": 1,
+      "label": "九二",
+      "text": "包荒。用馮河，不遐遺；朋亡。得尚于中行。",
+      "markers": []
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "line": 2,
+      "label": "九三",
+      "text": "无平不陂，无往不復，艱貞无咎。勿恤其孚，于食有福。",
+      "markers": [
+        "无咎",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "line": 3,
+      "label": "六四",
+      "text": "翩翩，不富以其鄰；不戒以孚。",
+      "markers": []
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "line": 4,
+      "label": "六五",
+      "text": "帝乙歸妹，以祉，元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 7,
+      "kw_number": 11,
+      "name": "泰",
+      "line": 5,
+      "label": "上六",
+      "text": "城復于隍，勿用師，自邑告命，貞吝。",
+      "markers": [
+        "吝",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "line": 0,
+      "label": "初六",
+      "text": "拔茅茹以其彙，貞吉。亨。",
+      "markers": [
+        "吉",
+        "亨",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "line": 1,
+      "label": "六二",
+      "text": "包承，小人吉，大人否。亨。",
+      "markers": [
+        "吉",
+        "亨"
+      ]
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "line": 2,
+      "label": "六三",
+      "text": "包羞。",
+      "markers": []
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "line": 3,
+      "label": "九四",
+      "text": "有命，无咎，疇離祉。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "line": 4,
+      "label": "九五",
+      "text": "休否，大人吉。其亡其亡，繫于苞桑。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 56,
+      "kw_number": 12,
+      "name": "否",
+      "line": 5,
+      "label": "上九",
+      "text": "傾否，先否後喜。",
+      "markers": []
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "line": 0,
+      "label": "初九",
+      "text": "同人于門，無咎。",
+      "markers": [
+        "咎"
+      ]
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "line": 1,
+      "label": "六二",
+      "text": "同人于宗，吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "line": 2,
+      "label": "九三",
+      "text": "伏戎于莽，升其高陵，三歲不興。",
+      "markers": []
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "line": 3,
+      "label": "九四",
+      "text": "乘其墉，弗克，攻吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "line": 4,
+      "label": "九五",
+      "text": "同人，先號啕而后笑。大師克相遇。",
+      "markers": []
+    },
+    {
+      "hex_val": 61,
+      "kw_number": 13,
+      "name": "同人",
+      "line": 5,
+      "label": "上九",
+      "text": "同人于郊，無悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "line": 0,
+      "label": "初九",
+      "text": "无交害，匪咎，艱則无咎。",
+      "markers": [
+        "无咎",
+        "咎"
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "line": 1,
+      "label": "九二",
+      "text": "大車以載，有攸往，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "line": 2,
+      "label": "九三",
+      "text": "公用亨于天子，小人弗克。",
+      "markers": [
+        "亨"
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "line": 3,
+      "label": "九四",
+      "text": "匪其彭，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "line": 4,
+      "label": "六五",
+      "text": "厥孚交如，威如；吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 47,
+      "kw_number": 14,
+      "name": "大有",
+      "line": 5,
+      "label": "上九",
+      "text": "自天佑之，吉无不利。",
+      "markers": [
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "line": 0,
+      "label": "初六",
+      "text": "謙謙君子，用涉大川，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "line": 1,
+      "label": "六二",
+      "text": "鳴謙，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "line": 2,
+      "label": "九三",
+      "text": "勞謙君子，有終吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "line": 3,
+      "label": "六四",
+      "text": "无不利，撝謙。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "line": 4,
+      "label": "六五",
+      "text": "不富，以其鄰，利用侵伐，无不利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 4,
+      "kw_number": 15,
+      "name": "謙",
+      "line": 5,
+      "label": "上六",
+      "text": "鳴謙，利用行師，征邑國。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "line": 0,
+      "label": "初六",
+      "text": "鳴豫，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "line": 1,
+      "label": "六二",
+      "text": "介于石，不終日，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "line": 2,
+      "label": "六三",
+      "text": "盱豫，悔。遲有悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "line": 3,
+      "label": "九四",
+      "text": "由豫，大有得。勿疑。朋盍簪。",
+      "markers": []
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "line": 4,
+      "label": "六五",
+      "text": "貞疾，恆不死。",
+      "markers": [
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 8,
+      "kw_number": 16,
+      "name": "豫",
+      "line": 5,
+      "label": "上六",
+      "text": "冥豫，成有渝，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "line": 0,
+      "label": "初九",
+      "text": "官有渝，貞吉。出門交有功。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "line": 1,
+      "label": "六二",
+      "text": "系小子，失丈夫。",
+      "markers": []
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "line": 2,
+      "label": "六三",
+      "text": "系丈夫，失小子。隨，有求得利，居貞。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "line": 3,
+      "label": "九四",
+      "text": "隨有獲，貞凶。有孚在道，以明，何咎。",
+      "markers": [
+        "凶",
+        "咎",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "line": 4,
+      "label": "九五",
+      "text": "孚于嘉，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 25,
+      "kw_number": 17,
+      "name": "隨",
+      "line": 5,
+      "label": "上六",
+      "text": "拘系之，乃從維之。王用亨于西山。",
+      "markers": [
+        "亨"
+      ]
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "line": 0,
+      "label": "初六",
+      "text": "幹父之蠱，有子考，无咎，厲終吉。",
+      "markers": [
+        "无咎",
+        "吉",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "line": 1,
+      "label": "九二",
+      "text": "幹母之蠱，不可貞。",
+      "markers": [
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "line": 2,
+      "label": "九三",
+      "text": "幹父之蠱，小有悔，无大咎。",
+      "markers": [
+        "悔",
+        "咎"
+      ]
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "line": 3,
+      "label": "六四",
+      "text": "裕父之蠱，往見吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "line": 4,
+      "label": "六五",
+      "text": "幹父之蠱，用譽。",
+      "markers": []
+    },
+    {
+      "hex_val": 38,
+      "kw_number": 18,
+      "name": "蠱",
+      "line": 5,
+      "label": "上九",
+      "text": "不事王侯，高尚其事。",
+      "markers": []
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "line": 0,
+      "label": "初九",
+      "text": "咸臨，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "line": 1,
+      "label": "九二",
+      "text": "咸臨，吉无不利。",
+      "markers": [
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "line": 2,
+      "label": "六三",
+      "text": "甘臨，无攸利。既憂之，无咎。",
+      "markers": [
+        "无咎",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "line": 3,
+      "label": "六四",
+      "text": "至臨，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "line": 4,
+      "label": "六五",
+      "text": "知臨，大君之宜，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 3,
+      "kw_number": 19,
+      "name": "臨",
+      "line": 5,
+      "label": "上六",
+      "text": "敦臨，吉无咎。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "line": 0,
+      "label": "初六",
+      "text": "童觀，小人无咎，君子吝。",
+      "markers": [
+        "无咎",
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "line": 1,
+      "label": "六二",
+      "text": "窺觀，利女貞。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "line": 2,
+      "label": "六三",
+      "text": "觀我生，進退。",
+      "markers": []
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "line": 3,
+      "label": "六四",
+      "text": "觀國之光，利用賓于王。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "line": 4,
+      "label": "九五",
+      "text": "觀我生，君子无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 48,
+      "kw_number": 20,
+      "name": "觀",
+      "line": 5,
+      "label": "上九",
+      "text": "觀其生，君子无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "line": 0,
+      "label": "初九",
+      "text": "屨校滅趾，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "line": 1,
+      "label": "六二",
+      "text": "噬膚滅鼻，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "line": 2,
+      "label": "六三",
+      "text": "噬臘肉，遇毒；小吝，无咎。",
+      "markers": [
+        "无咎",
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "line": 3,
+      "label": "九四",
+      "text": "噬乾胏，得金矢，利艱貞，吉。",
+      "markers": [
+        "吉",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "line": 4,
+      "label": "六五",
+      "text": "噬乾肉，得黃金，貞厲，无咎。",
+      "markers": [
+        "无咎",
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 41,
+      "kw_number": 21,
+      "name": "噬嗑",
+      "line": 5,
+      "label": "上九",
+      "text": "何校滅耳，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "line": 0,
+      "label": "初九",
+      "text": "賁其趾，舍車而徒。",
+      "markers": []
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "line": 1,
+      "label": "六二",
+      "text": "賁其須。",
+      "markers": []
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "line": 2,
+      "label": "九三",
+      "text": "賁如濡如，永貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "line": 3,
+      "label": "六四",
+      "text": "賁如皤如，白馬翰如，匪寇婚媾。",
+      "markers": []
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "line": 4,
+      "label": "六五",
+      "text": "賁於丘園，束帛戔戔，吝，終吉。",
+      "markers": [
+        "吉",
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 37,
+      "kw_number": 22,
+      "name": "賁",
+      "line": 5,
+      "label": "上九",
+      "text": "白賁，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "line": 0,
+      "label": "初六",
+      "text": "剝牀以足，蔑貞凶。",
+      "markers": [
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "line": 1,
+      "label": "六二",
+      "text": "剝牀以辨，蔑貞凶。",
+      "markers": [
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "line": 2,
+      "label": "六三",
+      "text": "剝之，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "line": 3,
+      "label": "六四",
+      "text": "剝牀以膚，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "line": 4,
+      "label": "六五",
+      "text": "貫魚，以宮人寵，无不利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 32,
+      "kw_number": 23,
+      "name": "剝",
+      "line": 5,
+      "label": "上九",
+      "text": "碩果不食，君子得輿，小人剝廬。",
+      "markers": []
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "line": 0,
+      "label": "初九",
+      "text": "不復遠，无袛悔，元吉。",
+      "markers": [
+        "吉",
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "line": 1,
+      "label": "六二",
+      "text": "休復，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "line": 2,
+      "label": "六三",
+      "text": "頻復，厲无咎。",
+      "markers": [
+        "无咎",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "line": 3,
+      "label": "六四",
+      "text": "中行獨復。",
+      "markers": []
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "line": 4,
+      "label": "六五",
+      "text": "敦復，无悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 1,
+      "kw_number": 24,
+      "name": "復",
+      "line": 5,
+      "label": "上六",
+      "text": "迷復，凶，有災眚。用行師，終有大敗，以其國君，凶；至于十年，不克征。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "line": 0,
+      "label": "初九",
+      "text": "无妄，往吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "line": 1,
+      "label": "六二",
+      "text": "不耕穫，不菑畬，則利有攸往。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "line": 2,
+      "label": "六三",
+      "text": "无妄之災，或系之牛，行人之得，邑人之災。",
+      "markers": []
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "line": 3,
+      "label": "九四",
+      "text": "可貞，无咎。",
+      "markers": [
+        "无咎",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "line": 4,
+      "label": "九五",
+      "text": "无妄之疾，勿藥有喜。",
+      "markers": []
+    },
+    {
+      "hex_val": 57,
+      "kw_number": 25,
+      "name": "无妄",
+      "line": 5,
+      "label": "上九",
+      "text": "无妄，行有眚，无攸利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "line": 0,
+      "label": "初九",
+      "text": "有厲利已。",
+      "markers": [
+        "厲",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "line": 1,
+      "label": "九二",
+      "text": "輿說輹。",
+      "markers": []
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "line": 2,
+      "label": "九三",
+      "text": "良馬逐，利艱貞。曰閑輿衛，利有攸往。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "line": 3,
+      "label": "六四",
+      "text": "童牛之牿，元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "line": 4,
+      "label": "六五",
+      "text": "豶豕之牙，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 39,
+      "kw_number": 26,
+      "name": "大畜",
+      "line": 5,
+      "label": "上九",
+      "text": "何天之衢，亨。",
+      "markers": [
+        "亨"
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "line": 0,
+      "label": "初九",
+      "text": "舍爾靈龜，觀我朵頤，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "line": 1,
+      "label": "六二",
+      "text": "顛頤，拂經，于丘頤，征凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "line": 2,
+      "label": "六三",
+      "text": "拂頤，貞凶，十年勿用，无攸利。",
+      "markers": [
+        "凶",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "line": 3,
+      "label": "六四",
+      "text": "顛頤吉，虎視眈眈，其欲逐逐，无咎。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "line": 4,
+      "label": "六五",
+      "text": "拂經，居貞吉，不可涉大川。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 33,
+      "kw_number": 27,
+      "name": "頤",
+      "line": 5,
+      "label": "上九",
+      "text": "由頤，厲吉，利涉大川。",
+      "markers": [
+        "利涉大川",
+        "吉",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "line": 0,
+      "label": "初六",
+      "text": "藉用白茅，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "line": 1,
+      "label": "九二",
+      "text": "枯楊生稊，老夫得其女妻，无不利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "line": 2,
+      "label": "九三",
+      "text": "棟橈，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "line": 3,
+      "label": "九四",
+      "text": "棟隆，吉。有它吝。",
+      "markers": [
+        "吉",
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "line": 4,
+      "label": "九五",
+      "text": "枯楊生華，老婦得其士夫，无咎无譽。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 30,
+      "kw_number": 28,
+      "name": "大過",
+      "line": 5,
+      "label": "上六",
+      "text": "過涉滅頂，凶，无咎。",
+      "markers": [
+        "无咎",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "line": 0,
+      "label": "初六",
+      "text": "習坎，入于坎窞，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "line": 1,
+      "label": "九二",
+      "text": "坎有險，求小得。",
+      "markers": []
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "line": 2,
+      "label": "六三",
+      "text": "來之坎坎，險且枕，入于坎窞，勿用。",
+      "markers": []
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "line": 3,
+      "label": "六四",
+      "text": "樽酒簋貳，用缶，納約自牖，終无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "line": 4,
+      "label": "九五",
+      "text": "坎不盈，祗既平，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 18,
+      "kw_number": 29,
+      "name": "坎",
+      "line": 5,
+      "label": "上六",
+      "text": "係用徽纆，寘于叢棘，三歲不得，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "line": 0,
+      "label": "初九",
+      "text": "履錯然，敬之无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "line": 1,
+      "label": "六二",
+      "text": "黃離，元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "line": 2,
+      "label": "九三",
+      "text": "日昃之離，不鼓缶而歌，則大耋之嗟，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "line": 3,
+      "label": "九四",
+      "text": "突如其來如，焚如，死如，棄如。",
+      "markers": []
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "line": 4,
+      "label": "六五",
+      "text": "出涕沱若，戚嗟若，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 45,
+      "kw_number": 30,
+      "name": "離",
+      "line": 5,
+      "label": "上九",
+      "text": "王用出征，有嘉折首，獲匪其醜，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "line": 0,
+      "label": "初六",
+      "text": "咸其拇。",
+      "markers": []
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "line": 1,
+      "label": "六二",
+      "text": "咸其腓，凶，居吉。",
+      "markers": [
+        "吉",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "line": 2,
+      "label": "九三",
+      "text": "咸其股，執其隨，往吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "line": 3,
+      "label": "九四",
+      "text": "貞吉悔亡，憧憧往來，朋從爾思。",
+      "markers": [
+        "悔亡",
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "line": 4,
+      "label": "九五",
+      "text": "咸其脢，无悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 28,
+      "kw_number": 31,
+      "name": "咸",
+      "line": 5,
+      "label": "上六",
+      "text": "咸其輔，頰，舌。",
+      "markers": []
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "line": 0,
+      "label": "初六",
+      "text": "浚恆，貞凶，无攸利。",
+      "markers": [
+        "凶",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "line": 1,
+      "label": "九二",
+      "text": "悔亡。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "line": 2,
+      "label": "九三",
+      "text": "不恆其德，或承之羞，貞吝。",
+      "markers": [
+        "吝",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "line": 3,
+      "label": "九四",
+      "text": "田无禽。",
+      "markers": []
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "line": 4,
+      "label": "六五",
+      "text": "恆其德，貞，婦人吉，夫子凶。",
+      "markers": [
+        "吉",
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 14,
+      "kw_number": 32,
+      "name": "恆",
+      "line": 5,
+      "label": "上六",
+      "text": "振恆，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "line": 0,
+      "label": "初六",
+      "text": "遯尾，厲，勿用有攸往。",
+      "markers": [
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "line": 1,
+      "label": "六二",
+      "text": "執之用黃牛之革，莫之勝說。",
+      "markers": []
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "line": 2,
+      "label": "九三",
+      "text": "系遯，有疾厲，畜臣妾吉。",
+      "markers": [
+        "吉",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "line": 3,
+      "label": "九四",
+      "text": "好遯君子吉，小人否。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "line": 4,
+      "label": "九五",
+      "text": "嘉遯，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 60,
+      "kw_number": 33,
+      "name": "遯",
+      "line": 5,
+      "label": "上九",
+      "text": "肥遯，无不利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "line": 0,
+      "label": "初九",
+      "text": "壯于趾，征凶，有孚。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "line": 1,
+      "label": "九二",
+      "text": "貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "line": 2,
+      "label": "九三",
+      "text": "小人用壯，君子用罔，貞厲。羝羊觸藩，羸其角。",
+      "markers": [
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "line": 3,
+      "label": "九四",
+      "text": "貞吉悔亡，藩決不羸，壯于大輿之輹。",
+      "markers": [
+        "悔亡",
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "line": 4,
+      "label": "六五",
+      "text": "喪羊于易，无悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 15,
+      "kw_number": 34,
+      "name": "大壯",
+      "line": 5,
+      "label": "上六",
+      "text": "羝羊觸藩，不能退，不能遂，无攸利，艱則吉。",
+      "markers": [
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "line": 0,
+      "label": "初六",
+      "text": "晉如，摧如，貞吉。罔孚，裕无咎。",
+      "markers": [
+        "无咎",
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "line": 1,
+      "label": "六二",
+      "text": "晉如，愁如，貞吉。受茲介福，于其王母。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "line": 2,
+      "label": "六三",
+      "text": "眾允，悔亡。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "line": 3,
+      "label": "九四",
+      "text": "晉如鼫鼠，貞厲。",
+      "markers": [
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "line": 4,
+      "label": "六五",
+      "text": "悔亡，失得勿恤，往吉无不利。",
+      "markers": [
+        "悔亡",
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 40,
+      "kw_number": 35,
+      "name": "晉",
+      "line": 5,
+      "label": "上九",
+      "text": "晉其角，維用伐邑，厲吉无咎，貞吝。",
+      "markers": [
+        "无咎",
+        "吉",
+        "吝",
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "line": 0,
+      "label": "初九",
+      "text": "明夷于飛，垂其翼。君子于行，三日不食，有攸往，主人有言。",
+      "markers": []
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "line": 1,
+      "label": "六二",
+      "text": "明夷，夷于左股，用拯馬壯，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "line": 2,
+      "label": "九三",
+      "text": "明夷于南狩，得其大首，不可疾貞。",
+      "markers": [
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "line": 3,
+      "label": "六四",
+      "text": "入于左腹，獲明夷之心，于出門庭。",
+      "markers": []
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "line": 4,
+      "label": "六五",
+      "text": "箕子之明夷，利貞。",
+      "markers": [
+        "利貞"
+      ]
+    },
+    {
+      "hex_val": 5,
+      "kw_number": 36,
+      "name": "明夷",
+      "line": 5,
+      "label": "上六",
+      "text": "不明晦，初登于天，后入于地。",
+      "markers": []
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "line": 0,
+      "label": "初九",
+      "text": "閑有家，悔亡。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "line": 1,
+      "label": "六二",
+      "text": "无攸遂，在中饋，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "line": 2,
+      "label": "九三",
+      "text": "家人嗃嗃，悔厲吉；婦子嘻嘻，終吝。",
+      "markers": [
+        "吉",
+        "悔",
+        "吝",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "line": 3,
+      "label": "六四",
+      "text": "富家，大吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "line": 4,
+      "label": "九五",
+      "text": "王假有家，勿恤。吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 53,
+      "kw_number": 37,
+      "name": "家人",
+      "line": 5,
+      "label": "上九",
+      "text": "有孚威如，終吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "line": 0,
+      "label": "初九",
+      "text": "悔亡，喪馬勿逐，自復；見惡人无咎。",
+      "markers": [
+        "无咎",
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "line": 1,
+      "label": "九二",
+      "text": "遇主于巷，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "line": 2,
+      "label": "六三",
+      "text": "見輿曳，其牛掣，其人天且劓，无初有終。",
+      "markers": []
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "line": 3,
+      "label": "九四",
+      "text": "睽孤，遇元夫，交孚，厲无咎。",
+      "markers": [
+        "无咎",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "line": 4,
+      "label": "六五",
+      "text": "悔亡，厥宗噬膚，往何咎。",
+      "markers": [
+        "悔亡",
+        "咎"
+      ]
+    },
+    {
+      "hex_val": 43,
+      "kw_number": 38,
+      "name": "睽",
+      "line": 5,
+      "label": "上九",
+      "text": "睽孤， 見豕負涂，載鬼一車， 先張之弧，后說之弧，匪寇婚媾，往遇雨則吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "line": 0,
+      "label": "初六",
+      "text": "往蹇，來譽。",
+      "markers": []
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "line": 1,
+      "label": "六二",
+      "text": "王臣蹇蹇，匪躬之故。",
+      "markers": []
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "line": 2,
+      "label": "九三",
+      "text": "往蹇來反。",
+      "markers": []
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "line": 3,
+      "label": "六四",
+      "text": "往蹇來連。",
+      "markers": []
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "line": 4,
+      "label": "九五",
+      "text": "大蹇朋來。",
+      "markers": []
+    },
+    {
+      "hex_val": 20,
+      "kw_number": 39,
+      "name": "蹇",
+      "line": 5,
+      "label": "上六",
+      "text": "往蹇來碩，吉；利見大人。",
+      "markers": [
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "line": 0,
+      "label": "初六",
+      "text": "无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "line": 1,
+      "label": "九二",
+      "text": "田獲三狐，得黃矢，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "line": 2,
+      "label": "六三",
+      "text": "負且乘，致寇至，貞吝。",
+      "markers": [
+        "吝",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "line": 3,
+      "label": "九四",
+      "text": "解而拇，朋至斯孚。",
+      "markers": []
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "line": 4,
+      "label": "六五",
+      "text": "君子維有解，吉；有孚于小人。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 10,
+      "kw_number": 40,
+      "name": "解",
+      "line": 5,
+      "label": "上六",
+      "text": "公用射隼，于高墉之上，獲之，无不利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "line": 0,
+      "label": "初九",
+      "text": "已事遄往，无咎，酌損之。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "line": 1,
+      "label": "九二",
+      "text": "利貞，征凶，弗損益之。",
+      "markers": [
+        "利貞",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "line": 2,
+      "label": "六三",
+      "text": "三人行，則損一人；一人行，則得其友。",
+      "markers": []
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "line": 3,
+      "label": "六四",
+      "text": "損其疾，使遄有喜，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "line": 4,
+      "label": "六五",
+      "text": "或益之，十朋之龜弗克違，元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 35,
+      "kw_number": 41,
+      "name": "損",
+      "line": 5,
+      "label": "上九",
+      "text": "弗損益之，无咎，貞吉，利有攸往，得臣无家。",
+      "markers": [
+        "无咎",
+        "吉",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "line": 0,
+      "label": "初九",
+      "text": "利用為大作，元吉，无咎。",
+      "markers": [
+        "无咎",
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "line": 1,
+      "label": "六二",
+      "text": "或益之，十朋之龜弗克違，永貞吉。王用享于帝，吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "line": 2,
+      "label": "六三",
+      "text": "益之用凶事，无咎。有孚中行，告公用圭。",
+      "markers": [
+        "无咎",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "line": 3,
+      "label": "六四",
+      "text": "中行，告公從。利用為依遷國。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "line": 4,
+      "label": "九五",
+      "text": "有孚惠心，勿問元吉。有孚惠我德。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 49,
+      "kw_number": 42,
+      "name": "益",
+      "line": 5,
+      "label": "上九",
+      "text": "莫益之，或擊之，立心勿恆，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "line": 0,
+      "label": "初九",
+      "text": "壯于前趾，往不勝為咎。",
+      "markers": [
+        "咎"
+      ]
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "line": 1,
+      "label": "九二",
+      "text": "惕號，莫夜有戎，勿恤。",
+      "markers": []
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "line": 2,
+      "label": "九三",
+      "text": "壯于頄，有凶。君子夬夬，獨行遇雨，若濡有慍，无咎。",
+      "markers": [
+        "无咎",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "line": 3,
+      "label": "九四",
+      "text": "臀无膚，其行次且。牽羊悔亡，聞言不信。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "line": 4,
+      "label": "九五",
+      "text": "莧陸夬夬，中行无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 31,
+      "kw_number": 43,
+      "name": "夬",
+      "line": 5,
+      "label": "上六",
+      "text": "无號，終有凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "line": 0,
+      "label": "初六",
+      "text": "系于金柅，貞吉，有攸往，見凶，羸豕孚踟躅。",
+      "markers": [
+        "吉",
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "line": 1,
+      "label": "九二",
+      "text": "包有魚，无咎，不利賓。",
+      "markers": [
+        "无咎",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "line": 2,
+      "label": "九三",
+      "text": "臀无膚，其行次且，厲，无大咎。",
+      "markers": [
+        "咎",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "line": 3,
+      "label": "九四",
+      "text": "包无魚，起凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "line": 4,
+      "label": "九五",
+      "text": "以杞包瓜，含章，有隕自天。",
+      "markers": []
+    },
+    {
+      "hex_val": 62,
+      "kw_number": 44,
+      "name": "姤",
+      "line": 5,
+      "label": "上九",
+      "text": "姤其角，吝，无咎。",
+      "markers": [
+        "无咎",
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "line": 0,
+      "label": "初六",
+      "text": "有孚不終，乃亂乃萃，若號一握為笑，勿恤，往无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "line": 1,
+      "label": "六二",
+      "text": "引吉，无咎，孚乃利用禴。",
+      "markers": [
+        "无咎",
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "line": 2,
+      "label": "六三",
+      "text": "萃如，嗟如，无攸利，往无咎，小吝。",
+      "markers": [
+        "无咎",
+        "吝",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "line": 3,
+      "label": "九四",
+      "text": "大吉，无咎。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "line": 4,
+      "label": "九五",
+      "text": "萃有位，无咎。匪孚，元永貞，悔亡。",
+      "markers": [
+        "无咎",
+        "悔亡",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 24,
+      "kw_number": 45,
+      "name": "萃",
+      "line": 5,
+      "label": "上六",
+      "text": "齎咨涕洟，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "line": 0,
+      "label": "初六",
+      "text": "允升，大吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "line": 1,
+      "label": "九二",
+      "text": "孚乃利用禴，无咎。",
+      "markers": [
+        "无咎",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "line": 2,
+      "label": "九三",
+      "text": "升虛邑。",
+      "markers": []
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "line": 3,
+      "label": "六四",
+      "text": "王用亨于岐山，吉无咎。",
+      "markers": [
+        "无咎",
+        "吉",
+        "亨"
+      ]
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "line": 4,
+      "label": "六五",
+      "text": "貞吉，升階。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 6,
+      "kw_number": 46,
+      "name": "升",
+      "line": 5,
+      "label": "上六",
+      "text": "冥升，利于不息之貞。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "line": 0,
+      "label": "初六",
+      "text": "臀困于株木，入于幽谷，三歲不覿。",
+      "markers": []
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "line": 1,
+      "label": "九二",
+      "text": "困于酒食，朱紱方來，利用亨祀，征凶，无咎。",
+      "markers": [
+        "无咎",
+        "凶",
+        "亨",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "line": 2,
+      "label": "六三",
+      "text": "困于石，據于蒺藜，入于其宮，不見其妻，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "line": 3,
+      "label": "九四",
+      "text": "來徐徐，困于金車，吝，有終。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "line": 4,
+      "label": "九五",
+      "text": "劓刖，困于赤紱，乃徐有說，利用祭祀。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 26,
+      "kw_number": 47,
+      "name": "困",
+      "line": 5,
+      "label": "上六",
+      "text": "困于葛藟，于臲卼，曰動悔。有悔，征吉。",
+      "markers": [
+        "吉",
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "line": 0,
+      "label": "初六",
+      "text": "井泥不食，舊井无禽。",
+      "markers": []
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "line": 1,
+      "label": "九二",
+      "text": "井谷射鮒，瓮敝漏。",
+      "markers": []
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "line": 2,
+      "label": "九三",
+      "text": "井渫不食，為我心惻，可用汲，王明，并受其福。",
+      "markers": []
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "line": 3,
+      "label": "六四",
+      "text": "井甃，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "line": 4,
+      "label": "九五",
+      "text": "井冽，寒泉食。",
+      "markers": []
+    },
+    {
+      "hex_val": 22,
+      "kw_number": 48,
+      "name": "井",
+      "line": 5,
+      "label": "上六",
+      "text": "井收勿幕，有孚元吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "line": 0,
+      "label": "初九",
+      "text": "鞏用黃牛之革。",
+      "markers": []
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "line": 1,
+      "label": "六二",
+      "text": "己日乃革之，征吉，无咎。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "line": 2,
+      "label": "九三",
+      "text": "征凶，貞厲，革言三就，有孚。",
+      "markers": [
+        "凶",
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "line": 3,
+      "label": "九四",
+      "text": "悔亡，有孚改命，吉。",
+      "markers": [
+        "悔亡",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "line": 4,
+      "label": "九五",
+      "text": "大人虎變，未占有孚。",
+      "markers": []
+    },
+    {
+      "hex_val": 29,
+      "kw_number": 49,
+      "name": "革",
+      "line": 5,
+      "label": "上六",
+      "text": "君子豹變，小人革面，征凶，居貞吉。",
+      "markers": [
+        "吉",
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "line": 0,
+      "label": "初六",
+      "text": "鼎顛趾，利出否，得妾以其子，无咎。",
+      "markers": [
+        "无咎",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "line": 1,
+      "label": "九二",
+      "text": "鼎有實，我仇有疾，不我能即，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "line": 2,
+      "label": "九三",
+      "text": "鼎耳革，其行塞，雉膏不食，方雨虧悔，終吉。",
+      "markers": [
+        "吉",
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "line": 3,
+      "label": "九四",
+      "text": "鼎折足，覆公餗，其形渥，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "line": 4,
+      "label": "六五",
+      "text": "鼎黃耳金鉉，利貞。",
+      "markers": [
+        "利貞"
+      ]
+    },
+    {
+      "hex_val": 46,
+      "kw_number": 50,
+      "name": "鼎",
+      "line": 5,
+      "label": "上九",
+      "text": "鼎玉鉉，大吉，无不利。",
+      "markers": [
+        "吉",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "line": 0,
+      "label": "初九",
+      "text": "震來虩虩，后笑言啞啞，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "line": 1,
+      "label": "六二",
+      "text": "震來厲，億喪貝，躋于九陵，勿逐，七日得。",
+      "markers": [
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "line": 2,
+      "label": "六三",
+      "text": "震蘇蘇，震行无眚。",
+      "markers": []
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "line": 3,
+      "label": "九四",
+      "text": "震遂泥。",
+      "markers": []
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "line": 4,
+      "label": "六五",
+      "text": "震往來厲，億无喪，有事。",
+      "markers": [
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 9,
+      "kw_number": 51,
+      "name": "震",
+      "line": 5,
+      "label": "上六",
+      "text": "震索索，視矍矍，征凶。震不于其躬，于其鄰，无咎。婚媾有言。",
+      "markers": [
+        "无咎",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "line": 0,
+      "label": "初六",
+      "text": "艮其趾，无咎，利永貞。",
+      "markers": [
+        "无咎",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "line": 1,
+      "label": "六二",
+      "text": "艮其腓，不拯其隨，其心不快。",
+      "markers": []
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "line": 2,
+      "label": "九三",
+      "text": "艮其限，列其夤，厲薰心。",
+      "markers": [
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "line": 3,
+      "label": "六四",
+      "text": "艮其身，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "line": 4,
+      "label": "六五",
+      "text": "艮其輔，言有序，悔亡。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 36,
+      "kw_number": 52,
+      "name": "艮",
+      "line": 5,
+      "label": "上九",
+      "text": "敦艮，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "line": 0,
+      "label": "初六",
+      "text": "鴻漸于干，小子厲，有言，无咎。",
+      "markers": [
+        "无咎",
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "line": 1,
+      "label": "六二",
+      "text": "鴻漸于磐，飲食衎衎，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "line": 2,
+      "label": "九三",
+      "text": "鴻漸于陸，夫征不復，婦孕不育，凶；利禦寇。",
+      "markers": [
+        "凶",
+        "利"
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "line": 3,
+      "label": "六四",
+      "text": "鴻漸于木，或得其桷，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "line": 4,
+      "label": "九五",
+      "text": "鴻漸于陵，婦三歲不孕，終莫之勝，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 52,
+      "kw_number": 53,
+      "name": "漸",
+      "line": 5,
+      "label": "上九",
+      "text": "鴻漸于陸，其羽可用為儀，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "line": 0,
+      "label": "初九",
+      "text": "歸妹以娣，跛能履，征吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "line": 1,
+      "label": "九二",
+      "text": "眇能視，利幽人之貞。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "line": 2,
+      "label": "六三",
+      "text": "歸妹以須，反歸以娣。",
+      "markers": []
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "line": 3,
+      "label": "九四",
+      "text": "歸妹愆期，遲歸有時。",
+      "markers": []
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "line": 4,
+      "label": "六五",
+      "text": "帝乙歸妹，其君之袂，不如其娣之袂良，月幾望，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 11,
+      "kw_number": 54,
+      "name": "歸妹",
+      "line": 5,
+      "label": "上六",
+      "text": "女承筐无實，士刲羊无血，无攸利。",
+      "markers": [
+        "利"
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "line": 0,
+      "label": "初九",
+      "text": "遇其配主，雖旬无咎，往有尚。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "line": 1,
+      "label": "六二",
+      "text": "豐其蔀，日中見斗，往得疑疾，有孚發若，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "line": 2,
+      "label": "九三",
+      "text": "豐其沛，日中見沫，折其右肱，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "line": 3,
+      "label": "九四",
+      "text": "豐其蔀，日中見斗，遇其夷主，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "line": 4,
+      "label": "六五",
+      "text": "來章，有慶譽，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 13,
+      "kw_number": 55,
+      "name": "豐",
+      "line": 5,
+      "label": "上六",
+      "text": "豐其屋，蔀其家，窺其戶，闃其无人，三歲不觌，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "line": 0,
+      "label": "初六",
+      "text": "旅瑣瑣，斯其所取災。",
+      "markers": []
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "line": 1,
+      "label": "六二",
+      "text": "旅即次，懷其資，得童僕貞。",
+      "markers": [
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "line": 2,
+      "label": "九三",
+      "text": "旅焚其次，喪其童僕，貞厲。",
+      "markers": [
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "line": 3,
+      "label": "九四",
+      "text": "旅于處，得其資斧，我心不快。",
+      "markers": []
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "line": 4,
+      "label": "六五",
+      "text": "射雉一矢亡，終以譽命。",
+      "markers": []
+    },
+    {
+      "hex_val": 44,
+      "kw_number": 56,
+      "name": "旅",
+      "line": 5,
+      "label": "上九",
+      "text": "鳥焚其巢，旅人先笑后號咷。喪牛于易，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "line": 0,
+      "label": "初六",
+      "text": "進退，利武人之貞。",
+      "markers": [
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "line": 1,
+      "label": "九二",
+      "text": "巽在牀下，用史巫紛若，吉无咎。",
+      "markers": [
+        "无咎",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "line": 2,
+      "label": "九三",
+      "text": "頻巽，吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "line": 3,
+      "label": "六四",
+      "text": "悔亡，田獲三品。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "line": 4,
+      "label": "九五",
+      "text": "貞吉悔亡，无不利。无初有終，先庚三日，后庚三日，吉。",
+      "markers": [
+        "悔亡",
+        "吉",
+        "利",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 54,
+      "kw_number": 57,
+      "name": "巽",
+      "line": 5,
+      "label": "上九",
+      "text": "巽在牀下，喪其資斧，貞凶。",
+      "markers": [
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "line": 0,
+      "label": "初九",
+      "text": "和兌，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "line": 1,
+      "label": "九二",
+      "text": "孚兌，吉，悔亡。",
+      "markers": [
+        "悔亡",
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "line": 2,
+      "label": "六三",
+      "text": "來兌，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "line": 3,
+      "label": "九四",
+      "text": "商兌，未寧，介疾有喜。",
+      "markers": []
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "line": 4,
+      "label": "九五",
+      "text": "孚于剝，有厲。",
+      "markers": [
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 27,
+      "kw_number": 58,
+      "name": "兌",
+      "line": 5,
+      "label": "上六",
+      "text": "引兌。",
+      "markers": []
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "line": 0,
+      "label": "初六",
+      "text": "用拯馬壯，吉。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "line": 1,
+      "label": "九二",
+      "text": "渙奔其机，悔亡。",
+      "markers": [
+        "悔亡"
+      ]
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "line": 2,
+      "label": "六三",
+      "text": "渙其躬，无悔。",
+      "markers": [
+        "悔"
+      ]
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "line": 3,
+      "label": "六四",
+      "text": "渙其群，元吉。渙有丘，匪夷所思。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "line": 4,
+      "label": "九五",
+      "text": "渙汗其大號，渙王居，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 50,
+      "kw_number": 59,
+      "name": "渙",
+      "line": 5,
+      "label": "上九",
+      "text": "渙其血，去逖出，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "line": 0,
+      "label": "初九",
+      "text": "不出戶庭，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "line": 1,
+      "label": "九二",
+      "text": "不出門庭，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "line": 2,
+      "label": "六三",
+      "text": "不節若，則嗟若，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "line": 3,
+      "label": "六四",
+      "text": "安節，亨。",
+      "markers": [
+        "亨"
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "line": 4,
+      "label": "九五",
+      "text": "甘節，吉；往有尚。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 19,
+      "kw_number": 60,
+      "name": "節",
+      "line": 5,
+      "label": "上六",
+      "text": "苦節，貞凶，悔亡。",
+      "markers": [
+        "悔亡",
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "line": 0,
+      "label": "初九",
+      "text": "虞吉，有他不燕。",
+      "markers": [
+        "吉"
+      ]
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "line": 1,
+      "label": "九二",
+      "text": "鳴鶴在陰，其子和之，我有好爵，吾與爾靡之。",
+      "markers": []
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "line": 2,
+      "label": "六三",
+      "text": "得敵，或鼓或罷，或泣或歌。",
+      "markers": []
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "line": 3,
+      "label": "六四",
+      "text": "月几望，馬匹亡，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "line": 4,
+      "label": "九五",
+      "text": "有孚攣如，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 51,
+      "kw_number": 61,
+      "name": "中孚",
+      "line": 5,
+      "label": "上九",
+      "text": "翰音登于天，貞凶。",
+      "markers": [
+        "凶",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "line": 0,
+      "label": "初六",
+      "text": "飛鳥以凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "line": 1,
+      "label": "六二",
+      "text": "過其祖，遇其妣；不及其君，遇其臣；无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "line": 2,
+      "label": "九三",
+      "text": "弗過防之，從或戕之，凶。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "line": 3,
+      "label": "九四",
+      "text": "无咎，弗過遇之。往厲必戒，勿用永貞。",
+      "markers": [
+        "无咎",
+        "厲",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "line": 4,
+      "label": "六五",
+      "text": "密云不雨，自我西郊，公弋取彼在穴。",
+      "markers": []
+    },
+    {
+      "hex_val": 12,
+      "kw_number": 62,
+      "name": "小過",
+      "line": 5,
+      "label": "上六",
+      "text": "弗遇過之，飛鳥離之，凶，是謂災眚。",
+      "markers": [
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "line": 0,
+      "label": "初九",
+      "text": "曳其輪，濡其尾，无咎。",
+      "markers": [
+        "无咎"
+      ]
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "line": 1,
+      "label": "六二",
+      "text": "婦喪其茀，勿逐，七日得。",
+      "markers": []
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "line": 2,
+      "label": "九三",
+      "text": "高宗伐鬼方，三年克之，小人勿用。",
+      "markers": []
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "line": 3,
+      "label": "六四",
+      "text": "繻有衣袽，終日戒。",
+      "markers": []
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "line": 4,
+      "label": "九五",
+      "text": "東鄰殺牛，不如西鄰之禴祭，實受其福。",
+      "markers": []
+    },
+    {
+      "hex_val": 21,
+      "kw_number": 63,
+      "name": "既濟",
+      "line": 5,
+      "label": "上六",
+      "text": "濡其首，厲。",
+      "markers": [
+        "厲"
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "line": 0,
+      "label": "初六",
+      "text": "濡其尾，吝。",
+      "markers": [
+        "吝"
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "line": 1,
+      "label": "九二",
+      "text": "曳其輪，貞吉。",
+      "markers": [
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "line": 2,
+      "label": "六三",
+      "text": "未濟，征凶，利涉大川。",
+      "markers": [
+        "利涉大川",
+        "凶"
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "line": 3,
+      "label": "九四",
+      "text": "貞吉，悔亡，震用伐鬼方，三年有賞于大國。",
+      "markers": [
+        "悔亡",
+        "吉",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "line": 4,
+      "label": "六五",
+      "text": "貞吉，无悔，君子之光，有孚，吉。",
+      "markers": [
+        "吉",
+        "悔",
+        "貞"
+      ]
+    },
+    {
+      "hex_val": 42,
+      "kw_number": 64,
+      "name": "未濟",
+      "line": 5,
+      "label": "上九",
+      "text": "有孚于飲酒，无咎，濡其首，有孚失是。",
+      "markers": [
+        "无咎"
+      ]
+    }
+  ],
+  "markers": [
+    "元亨利貞",
+    "利涉大川",
+    "元亨",
+    "利貞",
+    "无咎",
+    "悔亡",
+    "吉",
+    "凶",
+    "悔",
+    "吝",
+    "咎",
+    "厲",
+    "亨",
+    "利",
+    "貞"
+  ],
+  "co_occurrence": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      84,
+      2,
+      14,
+      6,
+      0,
+      5,
+      1,
+      8,
+      2,
+      12,
+      10
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      18,
+      7,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      6
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      14,
+      7,
+      118,
+      5,
+      5,
+      4,
+      1,
+      6,
+      3,
+      12,
+      34
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      6,
+      1,
+      5,
+      52,
+      0,
+      0,
+      1,
+      2,
+      1,
+      5,
+      15
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      13,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      4,
+      0,
+      1,
+      20,
+      0,
+      2,
+      0,
+      2,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      8,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      8,
+      0,
+      6,
+      2,
+      1,
+      2,
+      1,
+      26,
+      0,
+      1,
+      10
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      8,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      12,
+      2,
+      12,
+      5,
+      0,
+      2,
+      0,
+      1,
+      1,
+      51,
+      14
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      10,
+      6,
+      34,
+      15,
+      1,
+      4,
+      1,
+      10,
+      1,
+      14,
+      71
+    ]
+  ],
+  "pmi": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      7.584962500721156,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.7023194513593148,
+      1.8845227825800641,
+      0.0,
+      0.0,
+      0.0,
+      2.884522782580064,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      7.0,
+      0.0,
+      0.0,
+      0.0,
+      1.2995602818589078,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.192645077942396,
+      -0.9772799234999165,
+      -0.8826430493618412,
+      -0.9228321394775401,
+      0.0,
+      0.19264507794239583,
+      -0.807354922057604,
+      0.49220535980130364,
+      0.1926450779423961,
+      0.10518223669205642,
+      -0.6351739466749238
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.9772799234999165,
+      4.415037499278844,
+      0.3397493719746068,
+      -1.2854022188622485,
+      0.0,
+      0.0,
+      1.4150374992788437,
+      0.0,
+      0.0,
+      -0.2573878426926519,
+      0.850252880495318
+    ],
+    [
+      0.0,
+      0.7023194513593148,
+      0.0,
+      0.0,
+      -0.8826430493618412,
+      0.3397493719746068,
+      1.7023194513593147,
+      -1.6761921718944148,
+      0.32380782810558517,
+      -0.6196086435280476,
+      -1.2976805486406853,
+      -0.41315776606062127,
+      0.2872819520804712,
+      -0.3851433898910246,
+      0.6400351731049722
+    ],
+    [
+      0.0,
+      1.8845227825800641,
+      0.0,
+      1.2995602818589078,
+      -0.9228321394775401,
+      -1.2854022188622485,
+      -1.6761921718944148,
+      2.884522782580064,
+      0.0,
+      0.0,
+      -0.1154772174199359,
+      -0.8159169355610281,
+      -0.1154772174199359,
+      -0.46597446450406904,
+      0.6416662586839005
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.32380782810558517,
+      0.0,
+      4.884522782580064,
+      0.5625946876927015,
+      1.8845227825800641,
+      0.1840830644389719,
+      0.0,
+      0.0,
+      -1.265224336924618
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.19264507794239583,
+      0.0,
+      -0.6196086435280476,
+      0.0,
+      0.5625946876927015,
+      4.2630344058337934,
+      0.0,
+      0.5625946876927015,
+      0.0,
+      -0.409390936137702,
+      0.11328728632911163
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.807354922057604,
+      1.4150374992788437,
+      -1.2976805486406853,
+      -0.1154772174199359,
+      1.8845227825800641,
+      0.0,
+      5.584962500721156,
+      0.8845227825800641,
+      0.0,
+      0.0,
+      -0.5647846187835261
+    ],
+    [
+      0.0,
+      2.884522782580064,
+      0.0,
+      0.0,
+      0.49220535980130364,
+      0.0,
+      -0.41315776606062127,
+      -0.8159169355610281,
+      0.1840830644389719,
+      0.5625946876927015,
+      0.8845227825800641,
+      3.884522782580064,
+      0.0,
+      -1.7879025593914315,
+      1.0567037579627443
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1926450779423961,
+      0.0,
+      0.2872819520804712,
+      -0.1154772174199359,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      5.584962500721156,
+      -0.08746284125033926,
+      -0.5647846187835261
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.10518223669205642,
+      -0.2573878426926519,
+      -0.3851433898910246,
+      -0.46597446450406904,
+      0.0,
+      -0.409390936137702,
+      0.0,
+      -1.7879025593914315,
+      -0.08746284125033926,
+      2.9125371587496605,
+      0.5701449613025825
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.6351739466749238,
+      0.850252880495318,
+      0.6400351731049722,
+      0.6416662586839005,
+      -1.265224336924618,
+      0.11328728632911163,
+      -0.5647846187835261,
+      1.0567037579627443,
+      -0.5647846187835261,
+      0.5701449613025825,
+      2.435215381216474
+    ]
+  ],
+  "pca": {
+    "n_components_90pct": 8,
+    "explained_variance_ratio": [
+      0.24197528449078562,
+      0.16765525663131461,
+      0.14814348054859477,
+      0.11627880198105764,
+      0.09461112485994766,
+      0.05809052351116,
+      0.048859067643273614,
+      0.04102309615278666,
+      0.03133880926707178,
+      0.02006749699981421,
+      0.01944440095683523,
+      0.007565996727343917,
+      0.004946660230014071
+    ],
+    "loadings": {
+      "PC1": [
+        {
+          "marker": "吉",
+          "loading": 0.844819344786791
+        },
+        {
+          "marker": "无咎",
+          "loading": -0.40364858464477965
+        },
+        {
+          "marker": "貞",
+          "loading": 0.3278878552184602
+        },
+        {
+          "marker": "凶",
+          "loading": -0.1082160170715297
+        },
+        {
+          "marker": "悔亡",
+          "loading": 0.040164915792000516
+        }
+      ],
+      "PC2": [
+        {
+          "marker": "无咎",
+          "loading": 0.7244376422119306
+        },
+        {
+          "marker": "凶",
+          "loading": -0.4825646814711212
+        },
+        {
+          "marker": "吉",
+          "loading": 0.39431937173856835
+        },
+        {
+          "marker": "貞",
+          "loading": -0.2863355473277763
+        },
+        {
+          "marker": "利",
+          "loading": -0.05835981440415977
+        }
+      ],
+      "PC3": [
+        {
+          "marker": "貞",
+          "loading": 0.8066108100095186
+        },
+        {
+          "marker": "无咎",
+          "loading": 0.4666127866551261
+        },
+        {
+          "marker": "利",
+          "loading": 0.2895636617322183
+        },
+        {
+          "marker": "凶",
+          "loading": 0.14330335196616362
+        },
+        {
+          "marker": "厲",
+          "loading": 0.13291924014037926
+        }
+      ],
+      "PC4": [
+        {
+          "marker": "利",
+          "loading": 0.8617444441413703
+        },
+        {
+          "marker": "凶",
+          "loading": -0.4275591942637223
+        },
+        {
+          "marker": "无咎",
+          "loading": -0.21010869663707202
+        },
+        {
+          "marker": "厲",
+          "loading": -0.1116440485212068
+        },
+        {
+          "marker": "貞",
+          "loading": -0.10062345335865984
+        }
+      ],
+      "PC5": [
+        {
+          "marker": "凶",
+          "loading": 0.7060804866115672
+        },
+        {
+          "marker": "利",
+          "loading": 0.3607539706238594
+        },
+        {
+          "marker": "吉",
+          "loading": 0.3204039416230049
+        },
+        {
+          "marker": "貞",
+          "loading": -0.30744115562201707
+        },
+        {
+          "marker": "厲",
+          "loading": -0.30189542457895197
+        }
+      ]
+    }
+  },
+  "positional_bias": {
+    "无咎": {
+      "counts_by_position": [
+        21.0,
+        11.0,
+        11.0,
+        19.0,
+        9.0,
+        13.0
+      ],
+      "total": 84,
+      "chi2": 8.428571428571429,
+      "p_value": 0.1341444928166377
+    },
+    "悔亡": {
+      "counts_by_position": [
+        2.0,
+        3.0,
+        1.0,
+        6.0,
+        5.0,
+        1.0
+      ],
+      "total": 18,
+      "chi2": 7.333333333333332,
+      "p_value": 0.1970065602903466
+    },
+    "吉": {
+      "counts_by_position": [
+        20.0,
+        27.0,
+        6.0,
+        19.0,
+        29.0,
+        17.0
+      ],
+      "total": 118,
+      "chi2": 17.050847457627114,
+      "p_value": 0.00440436611414125
+    },
+    "凶": {
+      "counts_by_position": [
+        9.0,
+        6.0,
+        13.0,
+        4.0,
+        3.0,
+        17.0
+      ],
+      "total": 52,
+      "chi2": 17.230769230769234,
+      "p_value": 0.004082306019064948
+    },
+    "悔": {
+      "counts_by_position": [
+        1.0,
+        0.0,
+        5.0,
+        0.0,
+        4.0,
+        3.0
+      ],
+      "total": 13,
+      "chi2": 10.538461538461538,
+      "p_value": 0.061339000623592356
+    },
+    "吝": {
+      "counts_by_position": [
+        3.0,
+        1.0,
+        8.0,
+        4.0,
+        1.0,
+        3.0
+      ],
+      "total": 20,
+      "chi2": 9.999999999999998,
+      "p_value": 0.0752352461465122
+    },
+    "咎": {
+      "counts_by_position": [
+        4.0,
+        0.0,
+        2.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "total": 8,
+      "chi2": 8.5,
+      "p_value": 0.13074778927442537
+    },
+    "厲": {
+      "counts_by_position": [
+        4.0,
+        1.0,
+        10.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "total": 26,
+      "chi2": 10.461538461538462,
+      "p_value": 0.06316539927551276
+    },
+    "亨": {
+      "counts_by_position": [
+        1.0,
+        2.0,
+        1.0,
+        2.0,
+        0.0,
+        2.0
+      ],
+      "total": 8,
+      "chi2": 2.5000000000000004,
+      "p_value": 0.7764950711233226
+    },
+    "利": {
+      "counts_by_position": [
+        9.0,
+        11.0,
+        7.0,
+        5.0,
+        7.0,
+        12.0
+      ],
+      "total": 51,
+      "chi2": 4.176470588235294,
+      "p_value": 0.5242985126463495
+    },
+    "貞": {
+      "counts_by_position": [
+        10.0,
+        16.0,
+        13.0,
+        10.0,
+        13.0,
+        9.0
+      ],
+      "total": 71,
+      "chi2": 2.943661971830985,
+      "p_value": 0.7086712786030708
+    }
+  },
+  "marker_families": {
+    "k2": {
+      "0": [
+        "利涉大川",
+        "利貞",
+        "悔亡",
+        "吉",
+        "凶",
+        "悔",
+        "吝",
+        "咎",
+        "厲",
+        "貞"
+      ],
+      "1": [
+        "无咎",
+        "亨",
+        "利"
+      ]
+    },
+    "k3": {
+      "1": [
+        "利涉大川",
+        "利貞",
+        "凶",
+        "悔",
+        "吝",
+        "咎",
+        "厲"
+      ],
+      "0": [
+        "无咎",
+        "亨",
+        "利"
+      ],
+      "2": [
+        "悔亡",
+        "吉",
+        "貞"
+      ]
+    }
+  }
+}
