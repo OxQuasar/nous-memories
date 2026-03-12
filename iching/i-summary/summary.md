@@ -10,7 +10,9 @@ The texts and the algebra are independent systems sharing a narrow interface: tw
 
 Two operational atlases exhaust the algebraic interpretive surface. Shell (火珠林) and core (梅花) are the only two primitive projections on Z₂⁶ (R5). Their temporal channels are proven orthogonal (MI=0). The representational substrate ({4,2,2,2,2} branch element distribution) constrains the system more than its design choices do.
 
-68 results proven or verified across 7 workflows (atlas, atlas-mh, atlas-hzl, deep, unification phases 1–3, semantic-map). Zero contradictions.
+The (3,5) object is algebraically isolated. "Self-interpreting code" is not a mathematical category — the architecture doesn't generalize. Isolation proven through three levels: char=2 (theorem), |F_q|=2 (GL Maximization), (n,p)=(3,5) (orbit formula). All cross-domain comparisons (genetic code, F₃, F₄) are clean negatives.
+
+76 results proven or verified across 9 workflows (atlas, atlas-mh, atlas-hzl, deep, unification phases 1–3, semantic-map, kw-final, relations). Zero contradictions.
 
 ---
 
@@ -47,6 +49,19 @@ Two operational atlases exhaust the algebraic interpretive surface. Shell (火�
 - **Hexagram Z₅ = pullback** of trigram f×f (no new data at hexagram level).
 - **E=1 family** (3,5), (4,13), (5,29), (6,61): uniform structure, only (3,5) rigid.
 
+### The isolation (relations)
+
+- **"Self-interpreting code" is not a mathematical category.** Verbal analogy only. The architecture doesn't generalize.
+- **Three-level specificity chain proven:**
+  - Char = 2 required: fixed-point-free involutory translations exist only in char 2.
+  - |F_q| = 2 required: GL Maximization Theorem — F₂ has largest symmetry group for any domain size (gap grows super-exponentially: 112× at N=16, >10⁹× at N=256).
+  - (n,p) = (3,5) required: orbit formula = 1 only here.
+- **Surjection count is field-independent:** depends on (R,S,E), not field. F₂⁴ and F₄² → Z₁₃ both have 16,773,120 surjections. Only symmetry differs.
+- **Five-orbit decomposition at (3,5):** [96, 48, 48, 24, 24]. IC orbit = unique free orbit (Frame Type 2, τ-fixing theorem). Free action is generic at larger parameters.
+- **ANF parametrization:** 4 free parameters (a₁,a₂,a₄,a₇) ∈ Z₅⁴. All degree-2 coefficients = 2a₇. Surjectivity locus 240/625.
+- **Genetic code:** exhaustive test (210K pairs). No involutory equivariance. Connection architectural only.
+- **All domain comparisons negative:** F₃ (6 orbits), F₄ (116K orbits), genetic code (no equivariance), design theory (dead end), Fano labeling (dead end).
+
 ### The 梅花 atlas (384 states)
 
 - **8 arc types** with perfect symmetry (rescued/betrayed 56/56, improving/deteriorating 52/52).
@@ -82,7 +97,7 @@ Two operational atlases exhaust the algebraic interpretive surface. Shell (火�
 
 **Q1: 火珠林 operational atlas.** RESOLVED → atlas-hzl workflow. See atlas-hzl/findings.md.
 
-**Q2: KW sequence ordering.** The pairing is explained (orbit class). The linear order 1–64 is not. Confirmed outside PG(2,F₂) (Z < 1.5σ). Basin clustering is the sole sequential signal. What is the organizing principle?
+**Q2: KW sequence ordering.** RESOLVED → kw-final workflow. The pair ordering is **designed but not algebraically determined** — the unique point of human authorship. Monte Carlo (50K orderings) shows no metric discriminates KW under correct null model. Basin clustering was an artifact (R41 corrected). Three soft properties (directional orbit flow, small torus steps, complement proximity) characterize KW's style without determining it. The ordering principle is narrative (序卦傳), not algebraic. See kw-final/findings.md.
 
 **Q3: 納甲 modification history.** When did the 京氏易傳 → 火珠林 rule change occur? Historical-philological.
 
@@ -96,7 +111,11 @@ Two operational atlases exhaust the algebraic interpretive surface. Shell (火�
 
 ### Interpretive
 
-**Q7: Incommensurability as mechanism.** The system's practical function may depend on the incommensurability between Z₂ and Z₅ — enter through binary (casting), exit through pentadic (interpretation). Is the 2/5 visibility ceiling a bug or a feature?
+**Q7: Incommensurability as mechanism.** The system's practical function may depend on the incommensurability between Z₂ and Z₅ — enter through binary (casting), exit through pentadic (interpretation). Is the 2/5 visibility ceiling a bug or a feature? (The relations workflow showed the 2/5 ceiling is extremal within the E=1 family — maximum partial visibility — but trivially forced by smallest p.)
+
+**Q8: The decorated Fano plane in existing mathematics.** Does PG(2,F₂) + Z₅ compass appear in finite geometry, coding theory, or design theory under a different name? Relations workflow tested design theory (not a GDD) and Fano labeling (dead end) but didn't search the broader literature.
+
+**Q9: Observer-participation formalization.** Can "observer = participant" be formalized between verbal analogy and algebraic isomorphism? The strongest domain match (markets) is epistemological, not algebraic. Is there a framework that captures the structural insight without requiring F₂?
 
 ---
 
@@ -115,6 +134,8 @@ Two operational atlases exhaust the algebraic interpretive surface. Shell (火�
 | `atlas-mh/` | 梅花 operational atlas: 384 states, arcs, torus flow, channels, timing. |
 | `atlas-hzl/` | 火珠林 operational atlas: 64 profiles × temporal × 31 domains, network reading. |
 | `semantic-map/` | Text-algebra interface: 89% residual, two bridges, three registers. |
+| `kw-final/` | KW pair ordering investigation: Monte Carlo (50K), joint analysis, R41 correction. |
+| `relations/` | Cross-domain investigation: 6 iterations, 16 computations. "Self-interpreting code" closed as verbal analogy. Three-level specificity chain. R62–R68. |
 | `synthesis/` | Early cross-workflow synthesis. Superseded but data files still referenced. |
 | `huozhulin/` | 火珠林 preliminary: 納甲 map, palace kernel, 六親 algebra. Superseded by atlas-hzl. |
 | `i-summary/` | This file. |

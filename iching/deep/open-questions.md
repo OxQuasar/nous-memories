@@ -134,9 +134,9 @@ Verified at n=3 (rank 6→4→2→2) and n=4 (rank 8→6→4→2→2). General p
 
 ## 10. Is the residual group action free for all (n, p)?
 
-**Status: conjectured, from unification Phase 3**
+**Status: partially resolved (relations workflow)**
 
-The action of (F₂)^{n-1} × Aut(Z_p) on within-type-distribution surjections is free at both (3,5) and (4,13). If free in general, the orbit count formula Orbits = ((p−3)/2)! × 2^{2^{n−1}−1−n} is exact. Freeness at (3,5) follows from regularity (|group| = |set| = 16). Freeness at (4,13) verified exhaustively (all 960 orbits have size 96). General proof not attempted. (unification/within_type_orbits.py)
+Free action at (3,5) proven via Frame Type 2 / τ-fixing argument (R66). Free action at (4,13) confirmed by sampling (300/300 trivial stabilizers). The relations workflow showed free action is GENERIC at larger parameters — not a special property of the IC orbit but the default behavior when the moduli space is large. The orbit formula Orbits = ((p−3)/2)! × 2^{2^{n−1}−1−n} is exact at (3,5) and (4,13); general proof still not attempted.
 
 ---
 
@@ -292,8 +292,8 @@ But the **conjunction** of textual bridge + cycle attractor semantics uniquely s
 
 **Extended by semantic map:** Positional hierarchy is the dominant organizing principle of the entire 爻辭 corpus (not just valence markers). k=3 embedding clusters separate by position (χ²=37.2, p=0.0001). L2↔L5 closest centroid pair (cosine=0.013). 小象 vocabulary independently confirms the same 3-layer hierarchy (χ²=125, p=5×10⁻²⁶). (semantic-map/findings.md F3, F5, F8)
 
-### R41. KW sequence basin clustering (deep)
-**MEASURED — p < 0.001.** Same-basin transitions: 60% vs 37% expected. 上經/下經 = palindromic/non-palindromic pure partition. All other sequential metrics null (Hamming, element continuity, 先天 correlation). (deep/05_king_wen_sequence.py)
+### R41. KW sequence basin clustering (deep) — CORRECTED by kw-final
+**ARTIFACT OF WRONG NULL MODEL.** Original result: same-basin transitions 60% vs 37% expected (p<0.001), measured against fully random permutations (05_king_wen_sequence.py). Under the correct null model (anti-clustering + fixed endpoints), KW's pair-level basin clustering = 0.290, 18th percentile (z = -0.94). The anti-clustering constraint induces basin clustering as a confound via shared inner bits between basin and Z₅ element assignment. The original signal was a shadow of the element constraint, not independent. Other sequential signals (上經/下經 split = palindromic/non-palindromic pure partition) remain valid. (kw-final/findings.md F3)
 
 ### R42. Two Z₅ incommensurability (deep)
 **PROVEN.** The 生-cycle Z₅ and He Tu Z₅ are incommensurable as algebras (non-affine conjugation γ) and as metric spaces (γ not distance-preserving). Connected through 後天 compass arrangement, not through algebraic structure. (deep/01_assignment_test.py)
@@ -368,3 +368,27 @@ Verified: (3,5) → 1 orbit; (4,13) → 960 = 5!×2³; (5,29) → ~6.4×10¹². 
 - §V: 飛伏 diagnostic table (9 cases, 財/鬼 only = 80% coverage by design). 獨發 patterns (兄弟=zero positive domains). 用神 7-step protocol formalized with data file mapping.
 - §VI: 31 domains → 8 structural clusters + 5 special protocols classified by 2D taxonomy (layer×mode). 卦身 conditional sixth variable (41% on-line).
 Central synthesis: tangent vector (梅花) vs local observable (火珠林). Two systems exhaust the hexagram's information through orthogonal temporal channels. (atlas-hzl/findings.md)
+
+### R61. KW pair ordering characterized (kw-final)
+**DESIGNED — NOT FORCED.** The linear ordering of 32 pairs is the unique point of human authorship in the I Ching's structure. Monte Carlo comparison (50,000 valid orderings satisfying fixed endpoints + Z₅×Z₅ anti-clustering) shows: no single metric discriminates KW (all within 2nd-98th percentile); omnibus Σz² = 12.95 (65th percentile, no joint anomaly); basin clustering signal (R41) was an artifact. Three soft properties characterize KW's style without determining it: directional orbit flow (98.3rd %ile), small Z₅ torus steps (9.5th %ile), complement proximity (10.4th %ile). Joint occurrence 7/50,000 but does not survive look-elsewhere correction (Bonferroni p ≈ 3.1%). The constraint space is enormous (~7.2×10³¹ valid orderings). The ordering principle is narrative (序卦傳), not algebraic. (kw-final/findings.md, kw-final/01_ordering_results.md)
+
+### R62. "Self-interpreting code" is not a mathematical category (relations)
+**PROVEN.** The (3,5) architecture does not generalize. Cross-domain comparisons (genetic code, F₃, F₄, design theory, Fano labeling) are all clean negatives. The verbal analogies (markets, biology, QM) share the architectural feature of "surjection from combinatorial to relational space" — which is trivially universal. The specific algebraic properties (complement equivariance, rigid quotient, cyclic group target) are F₂-specific and (3,5)-specific. (relations/findings.md)
+
+### R63. Char-2 uniqueness theorem (relations)
+**PROVEN.** Involutory fixed-point-free translations on F_qⁿ exist iff char(F_q) = 2. Proof: σ(x) = x + a, σ²(x) = x + 2a = x iff 2a = 0 iff char = 2. Consequence: complement-respecting surjections exist only over characteristic-2 fields. In odd char, the analogous involution (negation) is linear, giving fundamentally different orbit geometry. F₃² → Z₇ at E=1: 6 orbits, not rigid. (relations/odd_char_rigidity.py)
+
+### R64. GL Maximization Theorem (relations)
+**PROVEN.** For fixed domain size N = q^m, |GL(m, F_q)| is maximized at q = 2. Proof: |GL(m,F_q)| = ∏(N − q^i). Smaller q → more factors and each factor is larger. Both effects compound. Verified N ∈ {4,...,256}. At N=16: |GL(4,F₂)|/|GL(2,F₄)| = 112. At N=256: ratio > 10⁹. This is why F₂ is uniquely favorable for rigidity: maximum orbit-collapsing symmetry. (relations/gl_maximization.py)
+
+### R65. Surjection count field-independence (relations)
+**PROVEN.** The number of complement-respecting surjections depends only on (R, S, E) — combinatorial parameters of complement pairs and target slots — not on the field. F₂⁴ → Z₁₃ and F₄² → Z₁₃ both have 16,773,120 surjections. The field enters only through the symmetry group. (relations/f4_rigidity.py)
+
+### R66. Five-orbit decomposition and free action theorem (relations)
+**PROVEN.** 240 surjections decompose into 5 orbits: [96, 48, 48, 24, 24]. IC orbit (size 96) is the unique orbit where Stab(111)×Aut(Z₅) acts freely. Mechanism: Frame Type 2 (f(000) ≠ 0) forces τ=id via Aut(Z₅) freeness on Z₅\{0}; three distinct non-Frame pair types lock A=id. Caveat: free action is generic at (4,13) (all 300 sampled trivial), so this is a local distinction within (3,5)'s small orbit space, not a fourth level of uniqueness. (relations/five_orbits.py, relations/free_action_proof.py)
+
+### R67. ANF 4-parameter family (relations)
+**PROVEN.** Every complement-respecting f: F₂³ → Z₅ is determined by 4 parameters (a₁,a₂,a₄,a₇) ∈ Z₅⁴ with a₀ = −(a₁+a₂+a₄+2a₇) mod 5. Universal relation: all degree-2 ANF coefficients = 2a₇ mod 5. Surjectivity locus: 240/625 by inclusion-exclusion (miss(0)=4⁴=256, miss(k≠0)=3⁴=81). The group acts as a 4D indecomposable representation — a₇ is NOT Stab(111)-invariant (correction from iteration 6). (relations/anf_parameter_space.py, relations/boolean_analysis.py)
+
+### R68. Genetic code: no involutory equivariance (relations)
+**PROVEN by exhaustive search.** 210,789 involution pairs tested on F₄³ → 21 amino acids. Only perfect equivariance: U↔C wobble at position 3 (trivial, τ=identity). Best non-trivial: 2/64 violations. Watson-Crick complement: 60/64 violations. Connection to I Ching is architectural (both surjections), not algebraic (no shared structure). (relations/genetic_code_boundary.py)
