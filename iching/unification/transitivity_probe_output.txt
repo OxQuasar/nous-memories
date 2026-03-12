@@ -1,0 +1,289 @@
+========================================================================
+TASK A: DECOMPOSE THE TRANSITIVITY PROOF AT (3,5)
+========================================================================
+
+--- Step 1: Stab(111) action on complement pairs ---
+  |GL(3,F₂)| = 168
+  |Stab(111)| = 24
+  Distinct pair permutations: 6
+  Full S₄ = 24 permutations
+  Stab(111) induced perms = 6 distinct permutations
+  Is it ALL of S₄? False
+  Faithful (each g → unique pair perm)? False
+
+  Key pair permutations (sample):
+    (0, 1, 3, 2)  transposition (Q-pair↔P-pair)  [4 elements]
+    (0, 2, 1, 3)  transposition (H-pair↔Q-pair)  [4 elements]
+    (0, 3, 2, 1)  transposition (H-pair↔P-pair)  [4 elements]
+
+--- Step 2: Transitivity on type patterns ---
+  6 type patterns for (H-type, Q-type, P-type):
+    (Fr=2, H=0, Q=1, P=2)
+    (Fr=2, H=0, Q=2, P=1)
+    (Fr=2, H=1, Q=0, P=2)
+    (Fr=2, H=1, Q=2, P=0)
+    (Fr=2, H=2, Q=0, P=1)
+    (Fr=2, H=2, Q=1, P=0)
+
+  |Stab(Frame) within Stab(111)| = 24
+  Distinct permutations of {H,Q,P}: 6
+  Full S₃ on {0,1,2}? True
+
+  Orbits of S₃ on 6 type patterns: 1
+    Orbit 0: [(0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 2, 0), (2, 0, 1), (2, 1, 0)]
+  ✓ S₃ acts TRANSITIVELY on the 6 type patterns
+
+--- Step 3: Within-pattern transitivity ---
+  Type pattern (H=0, Q=1, P=2):
+  |Stab of all pairs (as sets)| = 4
+    perm: [0, 6, 2, 4, 3, 5, 1, 7]  (swaps: Earth N, H Y, Q N, P Y)
+    perm: [0, 1, 5, 4, 3, 2, 6, 7]  (swaps: Earth N, H N, Q Y, P Y)
+    perm: [0, 1, 2, 3, 4, 5, 6, 7]  (swaps: Earth N, H N, Q N, P N)
+    perm: [0, 6, 5, 3, 4, 2, 1, 7]  (swaps: Earth N, H Y, Q Y, P N)
+
+  Verifying V₄ structure:
+  V₄ has 4 elements, orders: Counter({2: 3, 1: 1})
+  ✓ This is V₄ = Klein four-group (orders {1:1, 2:3})
+
+  Surjections with IC type pattern (2, 0, 1, 2): 16
+    (1, 0, 2, 1, 4, 3, 0, 4)
+    (1, 0, 2, 4, 1, 3, 0, 4)
+    (1, 0, 3, 1, 4, 2, 0, 4)
+    (1, 0, 3, 4, 1, 2, 0, 4)
+    (2, 0, 1, 2, 3, 4, 0, 3)
+    (2, 0, 1, 3, 2, 4, 0, 3)
+    (2, 0, 4, 2, 3, 1, 0, 3)
+    (2, 0, 4, 3, 2, 1, 0, 3)
+    (3, 0, 1, 2, 3, 4, 0, 2)
+    (3, 0, 1, 3, 2, 4, 0, 2)
+    (3, 0, 4, 2, 3, 1, 0, 2)
+    (3, 0, 4, 3, 2, 1, 0, 2)
+    (4, 0, 2, 1, 4, 3, 0, 1)
+    (4, 0, 2, 4, 1, 3, 0, 1)
+    (4, 0, 3, 1, 4, 2, 0, 1)
+    (4, 0, 3, 4, 1, 2, 0, 1)
+
+  Checking if V₄ × Aut(Z₅) acts freely on the 16 IC-type surjections:
+  ✓ Action is FREE (no non-identity element fixes any surjection)
+  Orbit of first surjection under V₄ × Aut(Z₅): size 16
+  Equals full IC-type set? True
+  ✓ V₄ × Aut(Z₅) acts REGULARLY (free + transitive) on the 16 IC-type surjections
+
+--- Step 4: Combine into theorem ---
+  Orbit C: 96 surjections
+  Full orbit from one element: 96
+  Equals Orbit C? True
+
+  Checking freeness of Stab(111) × Aut(Z₅) on Orbit C:
+  Stabilizer of one element: order 1
+  |Group|/|Orbit| = 96/96 = 1.0
+  Free? True
+
+  ═══════════════════════════════════════════════════
+  THEOREM (Orbit C Transitivity):
+  Stab(111) × Aut(Z₅) acts freely and transitively
+  (= regularly) on the 96 Orbit-C surjections.
+
+  PROOF STRUCTURE:
+  1. Stab(111) ≅ S₄ always fixes Frame pair. Quotient on non-Frame pairs ≅ S₃.
+  2. S₃ acts transitively on 6 type patterns of (H-type, Q-type, P-type).
+  3. Kernel V₄ (Klein four, order 4) fixes all pairs as sets (swaps within).
+  4. V₄ × Aut(Z₅) (order 16) acts regularly on 16 same-type surjections.
+  5. Combining: |S₃| × |V₄ × Aut(Z₅)| = 6 × 16 = 96 = |Orbit C|. ∎
+  ═══════════════════════════════════════════════════
+
+========================================================================
+TASK B: TYPE STRUCTURE AT (4,13)
+========================================================================
+
+  n=4, p=13, N=16, R=8 complement pairs
+  Negation pairs in Z₁₃: 6
+  Slots: S=7 (1 zero-slot + 6 negation-pair slots)
+  Excess: E=1
+
+--- Step 1: Partition shapes ---
+  Complement pairs: [(0, 15), (1, 14), (2, 13), (3, 12), (4, 11), (5, 10), (6, 9), (7, 8)]
+
+  Shape A (majority): m₀=1, c_vals=[1, 1, 1, 1, 1, 2]
+    Fiber partition: (2,2,2, 1×10)
+    multi=20160, orderings=6, orient=128
+    Count = 15482880
+  Shape B (minority): m₀=2, c_vals=[1, 1, 1, 1, 1, 1]
+    Fiber partition: (4, 1×12)
+    multi=20160, orderings=1, orient=64
+    Count = 1290240
+  Total: 16773120
+  Ratio A/B = 15482880/1290240 = 12.0 (predicted: p-1=12)
+
+--- Step 2: Type counts for majority shape ---
+  Type 0 (zero pair): 1 pair(s)
+  Type 1 (singleton coverage): 5 pair(s)
+  Type 2 (shared coverage): 2 pair(s)
+  Total: 8 = 8 ✓
+  Three types present: ✓
+
+  Number of type distributions: C(8,1) × C(7,2) = 168
+
+--- Step 3: Compute Stab(1111) ---
+  |GL(4,F₂)| = 20160
+  |Stab(1111)| = 20160 / 15 = 1344
+  Enumerating GL(4,F₂)... found 20160 elements
+  |Stab(1111)| = 1344 (expected 1344)
+
+  Stab(1111) induces 168 distinct permutations on 8 complement pairs
+  |S₈| = 40320 = 40320
+  Is it ALL of S₈? False
+  Orbit of Frame pair under Stab(1111): [0]
+  Transitive on pairs? False
+
+  Cycle types of pair permutations:
+    (1, 1, 1, 1, 1, 1, 1, 1): 1 permutations
+    (2, 2, 1, 1, 1, 1): 21 permutations
+    (3, 3, 1, 1): 56 permutations
+    (4, 2, 1, 1): 42 permutations
+    (7, 1): 48 permutations
+
+--- Step 4: Orbits on type distributions ---
+  Total type distributions: 168
+  Orbits under Stab(1111): 4
+    Orbit 0: size 21, representative: (0, 1, 1, 1, 1, 1, 2, 2)
+    Orbit 1: size 42, representative: (2, 0, 1, 1, 1, 1, 1, 2)
+    Orbit 2: size 21, representative: (1, 0, 1, 1, 1, 1, 2, 2)
+    Orbit 3: size 84, representative: (1, 0, 1, 1, 1, 2, 1, 2)
+
+  |Aut(Z₁₃)| = 12
+  |Stab(1111) × Aut(Z₁₃)| = 1344 × 12 = 16128
+
+  Type distributions with Frame=Type 2 (analog of Orbit C): 42
+  Orbits on Frame=Type2 distributions: 1
+    Orbit 0: size 42, representative: (2, 0, 1, 1, 1, 1, 1, 2)
+
+--- Lines through complement at n=4 ---
+  Lines through 1111 in PG(3,F₂): 7
+    {0, 0001, 1110, 1111} — complement pair (1, 14)
+    {0, 0010, 1101, 1111} — complement pair (2, 13)
+    {0, 0011, 1100, 1111} — complement pair (3, 12)
+    {0, 0100, 1011, 1111} — complement pair (4, 11)
+    {0, 0101, 1010, 1111} — complement pair (5, 10)
+    {0, 0110, 1001, 1111} — complement pair (6, 9)
+    {0, 0111, 1000, 1111} — complement pair (7, 8)
+
+  At n=3: 3 lines through 111 ↔ 3 non-Frame complement pairs
+  At n=4: 7 lines through 1111 ↔ 7 non-Frame complement pairs
+  Key difference: at n=3, 3 objects → S₃ acts transitively
+  At n=4, 7 objects → question is whether Stab(1111) acts transitively on them
+
+========================================================================
+TASK C: 互-ANALOG AT n=4
+========================================================================
+
+--- Definition ---
+  8-line figure: h = (L₁,...,L₈) = (lower 4-gram, upper 4-gram)
+  Nuclear extraction (overlap-2):
+    nuclear_lower = (L₂, L₃, L₄, L₅)
+    nuclear_upper = (L₄, L₅, L₆, L₇)
+    Drops L₁ (bottom) and L₈ (top)
+    Overlap = {L₄, L₅}
+
+--- Standard basis matrix ---
+  nuclear(0) = 0 (should be 0)
+  Linear? True
+
+  Nuclear map matrix M (8×8 over F₂):
+       L1  L2  L3  L4  L5  L6  L7  L8
+  L'1:  0  1  0  0  0  0  0  0
+  L'2:  0  0  1  0  0  0  0  0
+  L'3:  0  0  0  1  0  0  0  0
+  L'4:  0  0  0  0  1  0  0  0
+  L'5:  0  0  0  1  0  0  0  0
+  L'6:  0  0  0  0  1  0  0  0
+  L'7:  0  0  0  0  0  1  0  0
+  L'8:  0  0  0  0  0  0  1  0
+
+--- Rank sequence under iteration ---
+  M^1: rank = 6
+  M^2: rank = 6
+  M^3: rank = 6
+  M^4: rank = 6
+  M^5: rank = 6
+  M^6: rank = 6
+
+  (Recomputing rank sequence properly)
+  M^1: rank = 6
+  M^2: rank = 4
+  M^3: rank = 2
+  M^4: rank = 2
+  M^5: rank = 2
+  M^6: rank = 2
+  M^7: rank = 2
+  M^8: rank = 2
+
+--- Factored basis ---
+  Position: (o, m₁, m₂, i) = (L₁, L₂, L₃, L₄) = lower 4-gram
+  Orbit:    (ō, m̄₁, m̄₂, ī) = (L₁⊕L₈, L₂⊕L₇, L₃⊕L₆, L₄⊕L₅)
+
+  Nuclear map in factored coordinates:
+  Position (o, m₁, m₂, i) → Position' (o', m₁', m₂', i')
+  Orbit (ō, m̄₁, m̄₂, ī) → Orbit' (ō', m̄₁', m̄₂', ī')
+
+  Explicit formulas:
+  L₁=o, L₂=m₁, L₃=m₂, L₄=i, L₅=i⊕ī, L₆=m₂⊕m̄₂, L₇=m₁⊕m̄₁, L₈=o⊕ō
+
+  nuclear_lower = (L₂, L₃, L₄, L₅) = (m₁, m₂, i, i⊕ī)
+  nuclear_upper = (L₄, L₅, L₆, L₇) = (i, i⊕ī, m₂⊕m̄₂, m₁⊕m̄₁)
+
+  New position = nuclear_lower = (m₁, m₂, i, i⊕ī)
+  New orbit = nuclear_lower ⊕ reverse(nuclear_upper)
+             = (m₁⊕m₁⊕m̄₁, m₂⊕m₂⊕m̄₂, i⊕i⊕ī, (i⊕ī)⊕i)
+
+  Factored nuclear map:
+  Position:  o' = m₁,  m₁' = m₂,  m₂' = i,  i' = i⊕ī
+  Orbit:     ō' = m̄₁,  m̄₁' = m̄₂,  m̄₂' = ī,  ī' = ī
+
+  COMPARE with n=3:
+  Position:  o' = m,  m' = i,  i' = i⊕ī
+  Orbit:     ō' = m̄,  m̄' = ī,  ī' = ī
+
+  PATTERN: Same structure with one more 'shift' step!
+  Position shifts o→m₁→m₂→i with shear i⊕ī at the end
+  Orbit shifts ō→m̄₁→m̄₂→ī with projection ī↦ī at the end
+
+  Numerical verification:
+  ✓ All 256 hexagrams match the factored formula
+
+--- Rank and attractor analysis ---
+  (Using already-computed matrix powers)
+  M^1: rank = 6
+  M^2: rank = 4
+  M^3: rank = 2
+  M^4: rank = 2
+  M^5: rank = 2
+  M^6: rank = 2
+  M^7: rank = 2
+  M^8: rank = 2
+
+  COMPARE rank sequences:
+  n=3: 6 → 4 → 2 → 2 (stabilizes at step 2)
+  n=4: 6→ 4→ 2→ 2 (stabilizes at step 4)
+
+--- Fixed subspace and attractors ---
+  Fixed points (nuclear(h) = h): 2
+    h=00000000  pos=0000 orb=0000
+    h=11111111  pos=1111 orb=0000
+
+  2-cycles: 1
+    01010101 ↔ 10101010  (pos 0101↔1010, orb 1111↔1111)
+
+  Stable image (after 10 iterations): 4 elements
+    h=00000000  lower=0000 upper=0000  pos=0000 orb=0000
+    h=01010101  lower=0101 upper=0101  pos=0101 orb=1111
+    h=10101010  lower=1010 upper=1010  pos=1010 orb=1111
+    h=11111111  lower=1111 upper=1111  pos=1111 orb=0000
+
+--- Characterization of stable image ---
+  Expected: pos = (0, 0, i, i⊕ī), orb = (0, 0, ī, ī)
+  Checking:
+    pos=(0,0,0,0) orb=(0,0,0,0)  ✓
+    pos=(1,0,1,0) orb=(1,1,1,1)  ✗
+    pos=(0,1,0,1) orb=(1,1,1,1)  ✗
+    pos=(1,1,1,1) orb=(0,0,0,0)  ✗

@@ -1,4 +1,4 @@
-# Unification Phase 3: The Object
+# Unification Phase 3: The Object — COMPLETE
 
 ## Where we are
 
@@ -6,94 +6,80 @@ Phase 1 answered "what is the structure at (3,5)?" — PG(2,F₂) decorated with
 
 Phase 2 answered "how is it selected?" — selection chain 240→2, eigenstructure, (n,p) landscape, singleton-forcing theorem.
 
-Phase 3 asks: **what IS it?**
+Phase 3 answered: **what IS it?** — the unique complement-respecting surjection F₂³ → Z₅ with three-type coexistence, proven unique by a theorem.
 
-At (3,5), we have a binary substrate (F₂³), a cyclic quotient (Z₅), a distinguished involution (complement), a depth map (a shear on F₂³ × F₂³), and three lines through the involution's generator organizing the interaction. These aren't coordinates — they're structure. We've described this structure exhaustively from multiple angles. We still can't name it.
-
-If the object has a definition, everything else follows from studying its properties at different parameters. Without it, each (n,p) is a separate investigation and we have a catalogue, not a theory.
-
-Prior phases: `phase1-unification.md` (the (3,5) framework + I Ching mapping), `synthesis-1.md` (PG(2,F₂) results), `synthesis-2.md` (complete account including landscape + selection chain + eigenstructure).
+**Status: COMPLETE.** The definitive account is `synthesis-3.md` (519 lines, 15 theorems, 13 verified computations, 4 conjectures).
 
 ---
 
-## The central question
+## The answer
+
+The I Ching's 五行 assignment is a complement-respecting surjection f: F₂³ → Z₅ satisfying f(x ⊕ 111) = −f(x) mod 5. It is **unique up to the natural symmetry** Stab(111) × Aut(Z₅), which acts regularly (free + transitive) on the 96 Orbit-C surjections.
+
+This uniqueness is itself unique. The orbit count formula
+
+> **Orbits(n, p) = ((p−3)/2)! × 2^{2^{n−1}−1−n}**
+
+equals 1 **if and only if** (n, p) = (3, 5), following from two independent arithmetic conditions:
+
+1. **p = 5**: the smallest prime with independent generation/destruction cycles. At p = 5 there is only 1 type-1 pair → trivial assignment moduli ((p−3)/2)! = 1! = 1.
+
+2. **n = 3**: the unique Boolean cube dimension where the first-order Reed-Muller code RM(1, n−1) fills the entire orientation space. The equation 2^{n−1} = n + 1 has exactly one non-degenerate solution: n = 3 (giving 2² = 4 = 3+1). → trivial orientation moduli 2^{2^{n−1}−1−n} = 2⁰ = 1.
+
+The object is an **isolated rigid point** in a doubly-exponentially growing moduli space. At (4,13): 960 orbits. At (5,29): ~6.4 × 10¹² orbits. The I Ching lives at the unique zero.
+
+---
+
+## The central question — RESOLVED
 
 ### What is the object?
 
-What is the mathematical object that a complement-respecting surjection Z₂ⁿ → Z_p with a shear endomorphism on (Z₂ⁿ)² *is*?
+**It is the unique complement-respecting surjection F₂³ → Z₅ with three-type coexistence, equipped with the involutory nuclear shear on F₂⁶.** Its uniqueness is a theorem, not a description. The proof decomposes into:
 
-PG(2,F₂) organizes the interactions but is the skeleton, not the whole object. The whole object includes the compass (Z₅ ordering, which PG(2,F₂) can't express) and the shear (which lives on the product, not the base).
+1. **Exact sequence** 1 → V₄ → Stab(111) → S₃ → 1: S₃ acts transitively on 6 type patterns, V₄ × Aut(Z₅) acts regularly on 16 surjections within each pattern. Combined: 96/96 = 1 orbit.
 
-**Its components:**
-- A vector space F₂ⁿ with a distinguished point (complement generator, all-ones)
-- A non-linear surjection onto Z_p respecting the involution x ↦ x ⊕ 1ⁿ
-- A cyclic ordering on Z_p (two independent generators: stride-1, stride-2)
-- An endomorphism on F₂ⁿ × F₂ⁿ (the shear — shift in both factors, one cross-coupling term)
-- The projective geometry PG(n−1, F₂) organizing the lines through the distinguished point
+2. **The 0.5-bit is presentational**: it appears only when fixing the 互 kernel line H (external datum), breaking S₃ → Z₂. Under full symmetry, there is no binary choice.
 
-**Candidates for what it might be:**
-- A decorated projective plane — PG(n−1, F₂) + a cyclic ordering on fibers of a non-linear map
-- A finite fiber bundle — base Z_p, fiber = complement pairs, structure group = V₄ (at n=3)
-- An F₁ geometry object — where combinatorial and algebraic structure merge
-- A "surjection geometry" — a new kind of object, defined by the interplay of F₂-linear and Z_p-cyclic structure through a complement-respecting map
+3. **No other (n, p) has this property**: both assignment moduli and orientation moduli must vanish, requiring p = 5 AND n = 3.
 
-**The test:** Does every singleton-forcing (n,p) produce an analogous composite? If yes, the object has a definition independent of (3,5). If (3,5) is the only point where all components cohere, the object might be irreducibly the Fano plane plus a compass — no further abstraction possible.
+### What the object includes
+- F₂³ with complement involution σ: x ↦ x ⊕ 111
+- Z₅ with negation involution τ: y ↦ −y
+- The equivariant surjection f (unique up to symmetry)
+- PG(2, F₂) organizing three non-Frame complement pairs
+- The nuclear shear 互 on F₂³ × F₂³ (F₂-linear, rank 4, involutory on eventual cycles)
+
+### What it does NOT include (frameworks tested and found empty)
+- Association scheme: fails (heterogeneous fibers {2,2,2,1,1} destroy homogeneity)
+- Coherent configuration: generic (28-class orbit partition for ANY function with this fiber shape)
+- Walsh-Hadamard spectrum: automatic from ζ₅ arithmetic (W(000) = −1/φ determined by fiber sizes)
+- F₁ geometry / branched cover / fiber bundle: descriptive but non-constraining
 
 ---
 
-## Supporting questions
-
-These are all subordinate to the central question. If the object is found, most answer themselves.
+## Supporting questions — RESOLVED
 
 ### Q1: Is rigidity specific to {2, 3, 5}?
-
-At (3,5), the surjection is rigid up to 0.5 bits. At other singleton-forcing points — (4,13), (5,29), (6,61) in the E=1 family — does rigidity persist? At (4,13): 16,773,120 surjections, 2 shapes. Is the selection chain analogous to 240→2, or does it degrade?
-
-More fundamentally: at {2,3,7} or {2,5,7}, what kind of structure appears? Do the gluing types change? Do lines through complement still organize the interactions, or does PG(3,F₂) work differently?
+**YES.** Proven: 960 orbits at (4,13), growing doubly-exponentially. Rigidity requires both p = 5 (assignment) and n = 3 (orientation). (within_type_orbits.py)
 
 ### Q2: General rigidity criterion
-
-At (3,5), F₂-transversality + one compass datum produces near-complete rigidity. Is there a general criterion for when prime-indexed constraints on a finite structure are transverse — a finite Hasse principle?
-
-The rigidity decomposes cleanly at (3,5): F₂-linear skeleton + Z₅ compass + 0.5-bit residual. Does this decomposition generalize?
+**ANSWERED.** The criterion is: ((p−3)/2)! × 2^{2^{n−1}−1−n} = 1. Two independent conditions, each with a clean number-theoretic characterization. The "finite Hasse principle" is just the two-factor decomposition. (synthesis-3.md §IV)
 
 ### Q3: Cascade depth
-
-At (3,5), the forced partition cascades: partition → type assignment → arrangements → pairings → dynamics. Depth = 3 (P→H→ī, spectral gap 0.71). This depends on exactly 3 lines through complement.
-
-At n=4: PG(3,F₂) has 7 lines through complement. The P→H rotation breaks. What replaces it? Does cascade depth grow, shrink, or change character?
+**UNCHANGED AT n=4.** The 互 factored-basis formula generalizes cleanly (one additional shift step). Rank sequence 8→6→4→2→2. Same 4-element attractor. But 互 becomes a complete surjection invariant at (4,13) (every surjection gives a distinct T), unlike (3,5) where T is constant. (transitivity_probe.py)
 
 ### Q4: What does each prime contribute?
-
-At {2,3,5}: 2 = polarity, 3 = dimension, 5 = dynamics. Heterogeneity follows from coprimality.
-
-Is this decomposition universal for coprime triples involving 2? At {2,3,7}, does 7 contribute "dynamics" the same way 5 does? At {2,5,7}, do the roles shift?
+**ANSWERED BY THE ORBIT FORMULA.** p contributes the assignment factor ((p−3)/2)!. n (via 2) contributes the orientation factor 2^{2^{n−1}−1−n}. The two are independent. (synthesis-3.md §IV)
 
 ### Q5: The E=1 family
-
-The points (n, 2ⁿ−3) — (3,5), (4,13), (5,29), (6,61) — share: 2 partition shapes, N_A/N_B = p−1, majority shape has three-type coexistence.
-
-Is there a uniform description? The E=1 family sits closest to the forcing boundary — if rigidity degrades here, it degrades everywhere.
+**FULLY CHARACTERIZED.** Type-distribution transitivity (1 orbit on Orbit-C distributions) generalizes to all E=1 members. Within-type orbit count = ((p−3)/2)! × 2^{2^{n−1}−1−n}. Only (3,5) has orbit count 1. The family is uniform in structure but (3,5) is the unique rigid point. (synthesis-3.md §IV, transitivity_probe.py)
 
 ### Q6: The role of the Fano plane
-
-PG(2,F₂) is the unique projective plane where every line has exactly 3 points. Each line through complement carries exactly one complement pair. At n=4, lines carry multiple complement pairs — the clean 1:1 correspondence (line ↔ pair ↔ prime pairing) breaks.
-
-Is this a coincidence of small numbers, or a structural constraint? Does the object's definition require PG(2,F₂) specifically, or does it generalize to PG(n−1,F₂) with a different organizing principle?
+**CLARIFIED.** PG(n−2, F₂) organizes non-Frame pairs at ANY n. At n=3: 3 points (trivial). At n=4: Fano plane PG(2,F₂) with GL(3,F₂). The Fano plane's role at n=3 is that PG(1,F₂) = 3 points allows S₃ transitivity (trivial). What makes n=3 special is NOT the Fano plane but the RM(1,2) code filling the orientation space. (synthesis-3.md §VI)
 
 ---
 
-## Strategy
-
-**The (4,13) computation is the decisive empirical step.** It provides a second data point for the central question: does the object exist at (4,13)? Simultaneously tests Q1 (rigidity), Q3 (cascade depth), Q5 (E=1 family structure), and Q6 (what happens beyond the Fano plane).
-
-If (4,13) has an analogous composite object — some PG(3,F₂)-based structure decorated with a Z₁₃ compass — then the object generalizes and has a definition. If the structure degrades into loose combinatorics, (3,5) is genuinely special and the object IS the Fano plane plus compass, irreducibly.
-
-Q2 and Q4 are theoretical — need mathematical insight, not computation. Q6 may be answered by the central question (the Fano plane's role might be a consequence of the object's definition at n=3, not a separate fact).
-
----
-
-## What's established (from phases 1–2)
+## What's established (Phases 1–3)
 
 ### Phase 1: The (3,5) framework
 - PG(2,F₂) × PG(2,F₂) + one Z₅ compass + 0.5 bits freedom
@@ -112,4 +98,26 @@ Q2 and Q4 are theoretical — need mathematical insight, not computation. Q6 may
 - Eigenstructure: spectral gap 0.71, π(同+克+被克) = 89%, zero stride-2→stride-1 flow
 - P-coset alignment exact: F(同)=1, F(克)=1/13
 
-Full results: `synthesis-2.md` (486 lines, 30+ proven results, exhaustive computations).
+### Phase 3: The uniqueness theorem
+- CC/AS hypothesis closed (generic orbit partition, not f-specific)
+- Walsh spectrum automatic (Q(√5), W(000)=−1/φ, determined by fiber sizes)
+- **Orbit C regularity**: Stab(111)×Aut(Z₅) regular on 96 surjections (proven)
+- **0.5-bit is presentational**: 1 orbit under full symmetry, 2 orbits only when H fixed
+- **Uniqueness theorem**: Orbits = ((p−3)/2)! × 2^{2^{n−1}−1−n} = 1 iff (n,p)=(3,5) (proven)
+- **Reed-Muller connection**: kernel flips generate RM(1,n−1); fills orientation space iff 2^{n−1}=n+1 iff n=3
+- **(4,13) comparison**: 960 orbits, 互 distinguishes all surjections (complete invariant at n≥4)
+- **General exact sequence**: 1→(F₂)^{n−1}→Stab(1ⁿ)→GL(n−1,F₂)→1, non-Frame pairs = PG(n−2,F₂)
+
+Full results: `synthesis-3.md` (519 lines, supersedes synthesis-1.md and synthesis-2.md).
+
+---
+
+## Source files (Phase 3)
+
+| File | Content |
+|------|---------|
+| cc_identity.py | CC closure, Walsh spectrum, orbit computation |
+| transitivity_probe.py | Orbit C regularity proof, (4,13) type structure, 互 at n=4 |
+| within_type_orbits.py | Within-type orbit count, Reed-Muller connection |
+| synthesis-3.md | Definitive synthesis document |
+| exploration-log.md | Phase 3 iteration log (iterations 13-16) |

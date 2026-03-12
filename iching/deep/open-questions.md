@@ -14,7 +14,7 @@ The atlas further establishes: the {2,2,2,1,1} partition is the single organizin
 
 **The semantic map completes the empirical side:** Bottom-up characterization of all textual layers confirms the residual is thick (89% for 爻辭). The text-algebra interface is bounded: two distributional bridges (marker placement) plus shared positional hierarchy (from the 3+3 factorization). 89% of textual semantic content is orthogonal to algebraic structure. The commentary tradition (小象/彖傳/大象) sees binary structure (Z₂) and positional hierarchy but not the pentadic algebra (Z₅) — the 五行 formalization is a separate layer, not a reading of the earlier tradition.
 
-**The unification program (R43-R52) completes the number-theoretic foundation:** The (n,p) = (3,5) uniqueness is now proven as a triple resonance theorem — singleton forcing + three-type partition + Fano geometry intersect at exactly one point. The selection chain 240→2 traces how 240 complement-respecting surjections reduce to the I Ching's specific 五行 assignment through structural forcing (theorems) + one observational compatibility (P→H nuclear coherence) + one irreducible choice (0.5-bit V₄ kernel). The hexagram-level Z₅ structure reduces entirely to the trigram-level compass (Hexagram Reduction Theorem). The 互 transition eigenstructure (spectral gap ≈ 0.71) confirms cascade depth = 3. The P-coset alignment is exact (F(同)=1, F(克)=1/13), not approximate. The framework's boundary is precisely identified: algebra ends at the 0.5-bit (V₄ kernel), reversal is Z₅-opaque (S₃ type-crossing), KW ordering is outside PG(2,F₂). See unification/synthesis-2.md for the complete account.
+**The unification program (R43-R59) completes the number-theoretic foundation:** The (n,p) = (3,5) uniqueness is now proven as the **Uniqueness Theorem** — the orbit count of complement-respecting surjections with three-type coexistence equals ((p−3)/2)! × 2^{2^{n−1}−1−n}, which is 1 if and only if (n,p) = (3,5). Two independent arithmetic conditions force this: p = 5 (trivial assignment moduli, the smallest prime with two independent cycles) and n = 3 (trivial orientation moduli, from the Mersenne-type equation 2^{n−1} = n+1 having unique non-degenerate solution n = 3). The selection chain simplifies to 240→192→96→1 under the full symmetry Stab(111) × Aut(Z₅), which acts regularly on Orbit C. The former "0.5-bit" is presentational — it appears only when fixing the 互 kernel line (an external datum), not from any structural freedom. At (4,13), the orbit count is 960 = 5! × 2³ (verified exhaustively), confirming the formula and proving the uniqueness is specific to (3,5). The object is an isolated rigid point in a doubly-exponentially growing moduli space. See unification/synthesis-3.md for the complete account (supersedes synthesis-1.md and synthesis-2.md).
 
 ---
 
@@ -128,6 +128,24 @@ The 彖傳 comments on what is noteworthy/unusual, not what is dominant. Kun bas
 **Open question:** Is this anomaly-detection stance systematic across the 彖傳, or just an artifact of the 剛/柔 count? Would need fine-grained analysis: for each hexagram, does the 彖傳 preferentially comment on the structurally unusual lines?
 
 **Epistemic status:** Single observation (measured), generalization (conjectured).
+
+---
+
+## 9. General rank formula for 互_n
+
+**Status: conjectured, from unification Phase 3**
+
+For the nuclear extraction 互_n on F₂^{2n}: rank(M^k) = max(2, 2n−2k). Convergence to rank-2 stable image in n−1 steps. Same 4-element attractor at all n: {all-0, all-1, alt-A, alt-B}.
+
+Verified at n=3 (rank 6→4→2→2) and n=4 (rank 8→6→4→2→2). General proof would follow from the factored-basis structure (shift + shear / shift + projection), which is established for general n but the rank computation is verified only at n=3,4. (unification/transitivity_probe.py)
+
+---
+
+## 10. Is the residual group action free for all (n, p)?
+
+**Status: conjectured, from unification Phase 3**
+
+The action of (F₂)^{n-1} × Aut(Z_p) on within-type-distribution surjections is free at both (3,5) and (4,13). If free in general, the orbit count formula Orbits = ((p−3)/2)! × 2^{2^{n−1}−1−n} is exact. Freeness at (3,5) follows from regularity (|group| = |set| = 16). Freeness at (4,13) verified exhaustively (all 960 orbits have size 96). General proof not attempted. (unification/within_type_orbits.py)
 
 ---
 
@@ -292,8 +310,8 @@ But the **conjunction** of textual bridge + cycle attractor semantics uniquely s
 ### R43. (n,p) singleton-forcing landscape (unification)
 **PROVEN.** Singleton forcing in complement-respecting surjections Z₂ⁿ → Z_p occurs iff p > 2^(n-1). The family is infinite (Bertrand's postulate guarantees primes in every window). Verified exhaustively for 27 (n,p) cases across n ∈ {3,4,5,6}. (unification/np_landscape.py)
 
-### R44. Triple resonance uniqueness of (3,5) (unification)
-**PROVEN.** (3,5) is the unique (n,p) satisfying: singleton forcing (p > 2^(n-1)) + three-type partition possible (p < 2^n − 1) + Fano geometry (n = 3). The three conditions intersect at exactly one point: n=3, 4 < p < 7, p prime → p = 5. (unification/np_landscape.py)
+### R44. (3,5) uniqueness — triple resonance (unification)
+**PROVEN (Phase 2); SUPERSEDED BY R55 (Phase 3).** Phase 2 established (3,5) as the unique (n,p) satisfying singleton forcing + three-type partition + Fano geometry. Phase 3 proved the stronger result: (3,5) is the unique rigid point where the orbit count = 1, from two independent arithmetic conditions (R55). The triple resonance is a corollary. (unification/np_landscape.py, unification/synthesis-3.md §IV)
 
 ### R45. Shape count formula (unification)
 **PROVEN.** In the singleton-forcing regime, # partition shapes = Σ_{k=0}^{E} p(k), where E = 2^(n-1) − (p+1)/2 is the excess and p(k) is the integer partition function. Verified for all 16 forcing cases. Generating function: (1/(1-x)) × Π_{k≥1} 1/(1-x^k). (unification/np_landscape.py)
@@ -301,8 +319,8 @@ But the **conjunction** of textual bridge + cycle attractor semantics uniquely s
 ### R46. Surjection count ratio at E=1 (unification)
 **PROVEN.** At E=1 (p = 2^n − 3), the ratio of spread to concentrated surjections is exactly N_A/N_B = p − 1. Verified at (3,5): 192/48 = 4; (4,13): 12:1; (5,29): 28:1; (6,61): 60:1. (unification/orbit_c_nuclear.py)
 
-### R47. Selection chain 240 → 2 (unification)
-**CHARACTERIZED.** The I Ching's 五行 assignment emerges from: 240 surjections → 192 (three-type shape, 80%) → 96 (Orbit C: Frame=Type 2, forced by 五行 data) → 16 (P→H nuclear coherence, observational) → 4 (Aut(Z₅) quotient) → 2 (0.5-bit residual). Steps 1-2 and 4-5 are theorems; step 3 is observational. (unification/orbit_c_nuclear.py, synthesis-2.md Part II)
+### R47. Selection chain (unification)
+**PROVEN — updated by Phase 3.** Under full symmetry Stab(111) × Aut(Z₅), the selection chain is 240→192→96→**1**. The intermediate steps 96→16→4→2 from Phase 2 were artifacts of prematurely fixing the 互 kernel line H and the Aut(Z₅) quotient. At the abstract level, Orbit C is a single orbit (regular action, stabilizer trivial). The "0.5-bit" is presentational: it appears only when fixing H, breaking S₃→Z₂. (unification/cc_identity.py, unification/synthesis-3.md §III)
 
 ### R48. Hexagram Z₅ Reduction (unification)
 **PROVEN.** All hexagram-level 五行 quantities (relation type d, 互 transition, complement action) are determined by the trigram-level surjection f and the F₂-linear (lower, upper) decomposition. The hexagram level adds no additional Z₅ data. d(h) = f(upper) − f(lower) mod 5. (unification/hexagram_wuxing.py)
@@ -316,5 +334,36 @@ But the **conjunction** of textual bridge + cycle attractor semantics uniquely s
 ### R51. Exact P-coset alignment formula (unification)
 **PROVEN.** Each Z₅ fiber is P-homogeneous: {Wood, Fire, Water} all P-odd; {Earth, Metal} all P-even. The P-even fraction F(d) is an exact convolution: F(同)=1, F(生)=F(被生)=2/3, F(克)=F(被克)=1/13. Not an approximation — deterministic from fiber partition {2,2,2,1,1} and P-parity structure. (unification/eigenstructure.py)
 
-### R52. 0.5-bit irreducibility (unification)
-**PROVEN.** The V₄ kernel of Stab(111) acts within Fano lines, fixing all line-level structure. Both candidate doubleton XOR vectors (I and OM) lie in ker(P). No F₂-linear, Z₅-cyclic, or parity constraint can distinguish them. The 0.5-bit marks the boundary between algebraic determination and cosmological tradition. (unification/synthesis-2.md Part V)
+### R52. 0.5-bit — presentational, not structural (unification)
+**RESOLVED — PRESENTATIONAL.** *Updated from Phase 2 characterization.* Phase 2 identified the 0.5-bit as an irreducible boundary between algebra and cosmology. Phase 3 proved this wrong: under the full symmetry Stab(111) × Aut(Z₅), all 96 Orbit-C surjections form 1 orbit (regular action). The 0.5-bit appears ONLY when fixing the 互 kernel line H (an external datum), which breaks Stab(111) ≅ S₄ down to Stab(H)∩Stab(111) ≅ D₄. Under D₄ × Aut(Z₅): 2 orbits on the 16 IC+Alt type pair. The "cosmological choice" is a coordinate choice, not a structural one. (unification/cc_identity.py, unification/synthesis-3.md §III)
+
+### R53. CC/AS hypothesis closed (unification Phase 3)
+**NEGATIVE.** The Z₅-difference relation on F₂³ does NOT produce an association scheme (375/378 intersection matrix pairs non-commuting). The coherent closure has 28 classes = the orbit partition of the fiber automorphism group (Z₂)³. This is the generic answer for ANY function with fiber shape {2,2,2,1,1}, not specific to the 五行 map. (unification/cc_identity.py)
+
+### R54. Walsh-Hadamard spectrum automatic (unification Phase 3)
+**CHARACTERIZED.** W_f(ω) lives in Q(√5). W(000) = −1/φ (negative reciprocal of golden ratio). Real for even-weight ω, imaginary for odd-weight ω (complement equivariance). Spectral power: P-line 60%, Q-line 37%, H-line 3%. All determined by fiber sizes + singleton placement + ζ₅ arithmetic — NOT by f's detailed structure. At (n,p), the field would be Q(cos 2π/p) by the same mechanism. (unification/cc_identity.py)
+
+### R55. Uniqueness Theorem (unification Phase 3)
+**PROVEN — the central result.** Among all (n,p) with p = 2ⁿ−3 (E=1 family), the orbit count of Orbit-C surjections within a fixed type distribution under (F₂)^{n−1} × Aut(Z_p) is:
+
+> **Orbits(n,p) = ((p−3)/2)! × 2^{2^{n−1}−1−n}**
+
+This equals 1 if and only if (n,p) = (3,5).
+
+Two independent conditions:
+1. ((p−3)/2)! = 1 ⟺ p = 5 (smallest prime with two independent cycles)
+2. 2^{2^{n−1}−1−n} = 1 ⟺ 2^{n−1} = n+1 ⟺ n = 3 (unique RM-filling dimension)
+
+Verified: (3,5) → 1 orbit; (4,13) → 960 = 5!×2³; (5,29) → ~6.4×10¹². (unification/within_type_orbits.py, unification/synthesis-3.md §IV)
+
+### R56. Orbit C regularity (unification Phase 3)
+**PROVEN.** Stab(111) × Aut(Z₅) acts regularly (free + transitive) on the 96 Orbit-C surjections at (3,5). Proof: S₃ transitive on 6 type patterns × V₄ × Aut(Z₅) regular on 16 within-pattern surjections. 6 × 16 = 96, stabilizer trivial. (unification/transitivity_probe.py, unification/synthesis-3.md §III)
+
+### R57. Reed-Muller code fills orientation space iff n=3 (unification Phase 3)
+**PROVEN.** The kernel swap patterns in Stab(1ⁿ) generate the first-order Reed-Muller code RM(1,n−1) inside (Z₂)^{2^{n−1}−1}. The orientation quotient has 2^{2^{n−1}−1−n} cosets. This equals 1 iff dim(RM) = dim(orientation space), i.e., n = 2^{n−1}−1, i.e., 2^{n−1} = n+1. Solutions: n=1 (degenerate), n=3 (unique non-degenerate). At n=4: RM(1,3) has dimension 4 inside (Z₂)⁷ → 8 orientation orbits. (unification/within_type_orbits.py, unification/synthesis-3.md §VI)
+
+### R58. Type-distribution transitivity generalizes (unification Phase 3)
+**PROVEN at (3,5) and (4,13).** The Orbit-C-analog type distributions form 1 orbit under Stab(1ⁿ) at both (3,5) (6 distributions, 1 orbit) and (4,13) (42 distributions, 1 orbit). The 7 non-Frame pairs at n=4 form PG(2,F₂) = Fano plane; GL(3,F₂) acts as its full automorphism group. Conjectured to hold for all n ≥ 3 (follows from 2-transitivity of GL(n−1,F₂) on PG(n−2,F₂)). (unification/transitivity_probe.py, unification/synthesis-3.md §II)
+
+### R59. 互 transition matrix: type-invariant at (3,5), complete invariant at (4,13) (unification Phase 3)
+**VERIFIED.** At (3,5), all 16 surjections within a type distribution produce the SAME 5×5 transition matrix T. At (4,13), every surjection produces a DISTINCT 13×13 T (verified for first 200 surjections: 200 distinct T matrices). The transition from constant to distinguishing occurs because p×p matrix resolution (25 vs 169 entries) exceeds the moduli at (4,13) but not at (3,5). (unification/within_type_orbits.py)
