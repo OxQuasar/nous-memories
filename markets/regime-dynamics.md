@@ -1,176 +1,114 @@
 # Market Regime Dynamics as Z₅ Relational Structure
 
-## Core Thesis
+## Core Thesis — Updated March 2026
 
-The I Ching's Z₅ transition matrix — with its forced spectral gap, stationary distribution, structural zeros, and visibility ceiling — is a structurally motivated model for market regime dynamics. Not algebraically forced (the relations investigation R62–R68 proved the algebra doesn't generalize beyond F₂), but epistemologically grounded: markets share the same observer-participation architecture, partial visibility, and relational (not absolute) output.
+The I Ching's Z₅ transition matrix was proposed as a structurally motivated, zero-parameter model for market regime dynamics. Not algebraically forced (the relations investigation R62–R68 proved the algebra doesn't generalize beyond F₂), but epistemologically grounded: markets share observer-participation architecture, partial visibility, and relational output.
 
-The right question isn't "does the (3,5) mathematics force market structure?" (no). It's: **given this unique rigid object exists, what does it tell us about markets?**
+**Empirical verdict: the (3,5) model is cleanly refuted for BTC intraday dynamics.** The market has 4 regime equivalence classes, not 5. The complement symmetry prerequisite holds, but K=5 fails across all tested bases and an exhaustive surjection search. See Investigation 1 results below.
+
+**However, the investigation uncovered genuine market structure** that wouldn't have been found without the (3,5)-motivated methodology: complement symmetry (coherence parity), a directed 4-regime cycle with forbidden stage-skipping, and an exit sub-state confirmation signal. The method outlived the hypothesis.
 
 ---
 
-## The Five Relations as Regime Types
+## The Five Relations as Regime Types — Empirical Status
 
-| Z₅ Relation | Market Regime | Character |
+The conjectured mapping of Z₅ relations to market regimes was not confirmed. The market has 4 functional regime types, not 5:
+
+| Empirical Regime | Character | Closest Z₅ analogue (if forced) |
 |---|---|---|
-| 同 (same) | Equilibrium / consolidation | Components in agreement, low vol |
-| 生 (generating) | Trending / momentum | One component feeds another |
-| 克 (overcoming) | Mean-reversion / correction | One component suppresses another |
-| 被生 (receiving generation) | Passive trend-following | Being carried by external momentum |
-| 被克 (receiving overcoming) | Under correction pressure | Being suppressed by external force |
+| C0: Bear | All timescales aligned bearish | 克 (overcoming) |
+| C1: Reversal | Short-term reversal in downtrend | Gateway state (no clean analogue) |
+| C2: Pullback | Short-term pullback in uptrend | Gateway state (no clean analogue) |
+| C3: Bull | All timescales aligned bullish | 生 (generating) |
 
-These are not five independent states — they're positions on two independent cycles (生 stride-1, 克 stride-2) within the same cyclic group. The relations are between components, not absolute labels.
-
----
-
-## Structural Properties That Transfer
-
-### 1. Two independent non-degenerate cycles
-
-生 (stride-1) and 克 (stride-2) both visit all 5 elements, aren't inverses. Market translation: momentum and mean-reversion are independent processes that both visit all regimes. Neither is the reverse of the other. Empirically true — trending and correcting are orthogonal dynamics, not opposites.
-
-### 2. Stationary distribution: π(同+克+被克) = 89%
-
-Most time is spent in equilibrium, correction, or being corrected. Trending (生) is the rare state. Markets: consolidation and mean-reversion dominate; genuine trends are infrequent and transient. The 89% concentration isn't a parameter — it's forced by the transition matrix structure.
-
-### 3. Exact structural zeros
-
-Stride-2 never transitions directly to stride-1. Certain regime transitions are forbidden. Markets: you don't jump from deep mean-reversion directly into momentum without passing through consolidation. The forbidden transitions are structural, not empirical regularities.
-
-### 4. Spectral gap 0.71
-
-Fast mixing — regimes don't persist long. Regime identification is hard precisely because transitions are fast. The gap is determined by the shear's eigenstructure, not fitted.
-
-### 5. The 2/5 visibility ceiling
-
-At any moment, you see 2 of 5 relational states — your current regime and one neighbor. You can't observe the whole relational field simultaneously. This IS the partial information problem in markets: you can identify the current regime and have some visibility into adjacent transitions, but the full regime space exceeds observational capacity.
-
-### 6. Observer-participation (F₂ self-duality)
-
-States = transitions. Choosing a framework to describe the market IS a transformation of the situation. Framing the market as "trending" changes your interaction with it. The observation and the operation are the same object. There is no view from outside.
-
-This is not a nuisance to correct for — it's the architecture. The system is optimized for **orientation** (knowing where you stand in the relational field) not **prediction** (forecasting future states from current observations).
+The 4-state structure is two coupled 2-cycles ({C0↔C1} bearish, {C2↔C3} bullish), not the (3,5) architecture of two independent 5-cycles. The forced mapping to 5 Z₅ relations doesn't work — the market's natural regime count is 4.
 
 ---
 
-## The Temporal Layer: 日辰 as Coupling Modulation
+## What Transferred from (3,5) and What Didn't
 
-A Z₅ temporal structure doesn't map time periods to hexagrams (that's Z₂'s job — Shao Yong's xiantian binary calendar does it correctly). It maps the current temporal coordinate into a **modulation of relational dynamics** — which regime-relations are amplified or suppressed right now.
+### Confirmed
+1. **Complement symmetry.** The F₂³ complement involution (x ↦ x⊕7) IS a symmetry of the empirical transition dynamics. Market-opposite states (all-bearish-decelerating-calm ↔ all-bullish-accelerating-volatile) have identical transition behavior under relabeling. JSD < 0.09 for all 4 complement pairs, algebraically verified via degenerate T₈ eigenvalue pairs. This is "coherence parity": the market distinguishes aligned from misaligned, not up from down.
 
-火珠林's 日辰 layer does exactly this: the daily stem/branch modulates line strength (旺相休囚死 = vigorous/blooming/resting/imprisoned/dead). 768 states = 64 hexagrams × 12 branches. Time doesn't index position in a sequence; time tunes the coupling constants of the relational network.
+2. **Structural zeros.** Certain regime transitions are forbidden. Stage-skipping is structurally blocked: C0↛C3, C1↛C2, C2↛C1, C3↛C0. But these are 4-state zeros in a directed cycle, not the (3,5) stride-2→stride-1 zeros.
 
-Market analogue: calendar effects, macro cycles, liquidity conditions, monetary regime — temporal factors that don't determine the regime but modulate which dynamics are amplified or dampened. The Fed cycle doesn't tell you which regime you're in, but it changes the gain on momentum vs mean-reversion.
+3. **Fast mixing within macro-regimes.** The coherence cycle (Basis D) has spectral gap 0.31. The trend cycle (Basis A) has fast mixing within each macro-pair (bear/reversal and bull/pullback), with slow cross-macro coupling (spectral gap 0.003).
 
----
+### Refuted
+1. **K=5.** Three independent bases all produce K=4 by eigenvalue gap. Exhaustive search of all 240 complement-equivariant surjections: best K=5 has lumpability error 19× worse than K=4 complement pairs.
 
-## The Algebraic Boundary
+2. **Spectral gap ≈ 0.71.** Best K=5 surjection: 0.30. The K=4 complement chain: 0.31.
 
-The uniqueness theorem: Orbits(n,p) = ((p−3)/2)! × 2^{2^{n-1}−1−n} = 1 iff (n,p) = (3,5).
+3. **89% concentration on 3 types.** Best K=5: 68.6% top-3 concentration. K=4 stationary distribution is near-uniform (22–28% per regime).
 
-The relations investigation (R62–R68) proved that "self-interpreting code" is NOT a mathematical category. The algebraic properties (complement equivariance, rigid quotient, cyclic group target) are F₂-specific and (3,5)-specific. Markets have continuous dynamics, infinite dimensionality, and no complement involution in the F₂ sense. The connection is epistemological (both reject passive observation, both have partial visibility, both have observer-participation) not algebraic (no shared equivariance structure).
+4. **Two independent 5-cycles.** One directed 4-cycle instead.
 
-The Z₅ transition matrix is therefore a **structurally motivated model**, not an **algebraically forced structure**. Its properties match market phenomenology, but the uniqueness theorem doesn't apply to markets — it applies to complement-respecting surjections on F₂ⁿ, which markets are not.
-
-This is the honest boundary. Everything below works within it.
-
----
-
-## Investigation 1: Transition Matrix Empirical Test
-
-**Question:** Does the empirical market regime transition matrix match the (3,5) predictions?
-
-The (3,5) matrix has specific, testable, parameter-free predictions:
-- ~5 regimes (not 3, not 7)
-- Two independent cycles visiting all regimes
-- Structural zeros (certain transitions forbidden)
-- Spectral gap ~0.71 (fast mixing)
-- Stationary concentration ~89% on three regime types
-- The rare regime (生/trending) with ~5.5% stationary weight
-
-**Method:**
-1. Take multi-asset returns across timeframes (daily, weekly, monthly)
-2. Estimate regimes empirically (HMM, spectral clustering, or change-point detection — agnostic to the model being tested)
-3. Estimate transition matrix from observed regime sequences
-4. Test predictions: number of regimes (BIC/AIC model selection), spectral gap, stationary distribution, zero structure
-
-**What would confirm:** Empirical matrix with 5 regimes, spectral gap near 0.71, ~89% concentration on three types, structural zeros matching the (3,5) pattern. The key is that these are joint predictions from a zero-parameter model.
-
-**What would refute:** Empirical matrix with clearly different number of regimes, no structural zeros, different spectral gap, different stationary concentration. Clean failure.
-
-**What would be ambiguous:** 5-ish regimes but different spectral properties. Would suggest the regime count is right but the dynamics differ — possibly a different (n,p) point.
-
-**Data requirements:** Long time series (>5000 observations) across multiple asset classes. Regime estimation is the hard part — the test itself is straightforward matrix comparison.
+### Not testable (structural mismatch)
+- The 互 endomorphism's rank reduction (6→4→2) and single leak have no clean market analogue in a stochastic Markov chain.
+- The P→H parity rotation has no identified market counterpart.
+- The 2/5 visibility ceiling: the market has a 2-projection structure (trend view and coherence view provide orthogonal information), but it's 2 views × 4 states, not 2/5 of 5 states.
 
 ---
 
-## Investigation 2: Observer-Participation and Framework Blind Spots
+## Investigation 1: Results — Completed March 2026
 
-**Question:** Do different analytical frameworks see orthogonal 2/5 slices of market structure?
+**Full details:** `memories/markets/investigation-summary.md`
 
-The (3,5) structure says: any observation basis (choice of "trigram") gives you a surjection that sees 2/5 of the relational field. Different bases see different 2/5 slices. The total relational field is only accessible through multiple orthogonal projections.
+### What was tested
+(3,5) predictions on BTC intraday data (214 days, 61,920 5-min bars). Four binary bases tested: trend timescales (A), volume profile (B, disqualified), flow×structure×activity (C), timescale-matched orthogonal channels (D).
 
-**The claim translated:** Value investing, momentum investing, and volatility trading are different observation bases on the same underlying relational structure. Each sees a different 2/5 of the regime space. Their blind spots are structurally determined, not random.
+### Result: K=4, not K=5
 
-**Method:**
-1. Define three (or more) analytical frameworks operationally:
-   - Value: price relative to fundamentals (P/E, P/B, etc.)
-   - Momentum: price relative to own history (trend, MA crossovers)
-   - Volatility: dispersion relative to recent dispersion (vol-of-vol, term structure)
-2. For each framework, identify which regime transitions it detects well and which it misses
-3. Test orthogonality: do the blind spots of framework A correspond to the visible region of framework B?
-4. Test ceiling: does each framework see approximately 40% of regime transitions?
+The market operates on a **4-regime directed cycle**:
+```
+Bear (C0) → Reversal (C1) → Bull (C3) → Pullback (C2) → Bear (C0) → ...
+```
 
-**What the (3,5) geometry predicts:** Three frameworks should partition the regime visibility space like three lines through a point in PG(2,F₂). Each line sees 2/5, each pair shares exactly one regime type, all three together cover the full space. This is the Fano-plane prediction.
+Key structural properties:
+- 4 structural zeros (forbidden stage-skipping)
+- Near-uniform stationary distribution (22.6%–28.1%)
+- Complement symmetry confirmed (Basis D)
+- K=4 lumpability error: 8.4×10⁻⁵ (nearly exact Markov at 4-state level)
+- Stable across three 71-day subperiods
 
-**Concrete test:** Build regime-detection accuracy matrices per framework. Compute mutual information between frameworks' regime calls. The (3,5) prediction: MI between any two frameworks should be low (they see different things) but their union should have high coverage (they're complementary, not redundant).
+### Most actionable finding: exit sub-state signal
 
-**What this buys you if true:** Principled multi-framework combination. Instead of ad hoc blending of signals, the geometry tells you exactly which frameworks to combine and what each one contributes. The 2/5 ceiling says no single framework can do better than 40% — this is structural, not a failure of analysis.
+The fast bit (trend_1h) at regime exit predicts next regime quality. Strongest instance:
 
----
+| C2 exit sub-state | → Bear | → Bull |
+|---|---|---|
+| S4 (trend_1h↓) | 51% | 49% |
+| S5 (trend_1h↑) | 8% | **92%** |
 
-## Investigation 3: Temporal Modulation and the Perfect Balance Theorem
+Stable across subperiods (90.7%–92.7%). Not a trading trigger (intra-episode flips are noise), but a **confirmation signal** at regime transitions. Forward-looking: C2-S5 → C3 episodes have mean return +0.09%, while C2-S4 → C3 episodes have −0.17%. The exit sub-state predicts next regime quality, not just direction.
 
-**Question:** Do regime dynamics exhibit temporal modulation with long-run balance?
-
-The 火珠林 perfect balance theorem: every hexagram has exactly 6 沖, 6 合, 6 墓 across 12 temporal positions. The count is always equal; discrimination is in the temporal pattern, not the total.
-
-**Market translation:** Every regime experiences each type of temporal modulation equally in the long run. Calendar effects, macro cycles, liquidity windows — they don't permanently favor any regime. But the temporal pattern matters: WHEN each modulation hits each regime is where the information lives.
-
-**Method:**
-1. Identify temporal modulation factors: day-of-week, month-of-year, Fed meeting cycle, options expiry, quarter-end, etc.
-2. For each regime (from Investigation 1), compute the conditional transition matrix given each temporal factor
-3. Test perfect balance: is the long-run average of each modulation type equal across regimes?
-4. Test temporal pattern: given balance holds, do the conditional matrices differ — i.e., does timing matter even when totals don't?
-
-**What the (3,5) structure predicts:**
-- **Balance:** Each regime gets equal total modulation (analogous to 6/6/6 per hexagram). No regime is permanently favored or suppressed by calendar.
-- **Pattern matters:** Despite equal totals, the temporal sequence of modulations differs per regime. January mean-reversion is structurally different from July mean-reversion, even if the annual counts are equal.
-- **Three-layer architecture:** Different temporal factors operate on different information channels (天干/地支/納音 → macro/calendar/structural). Not all modulations are fungible.
-
-**What this buys you if true:** Timing without prediction. You don't need to forecast regimes — you need to know which temporal modulation is currently active and what it does to each regime's coupling constants. The perfect balance theorem means no permanent edge from calendar, but structured temporal variation means conditional edges exist.
+This generalizes across ALL regime boundaries (C3 exits show same pattern: S7→orderly, S6→sharp).
 
 ---
 
-## What This Is Not
+## Investigation 2: Observer-Participation — Status: OPEN (redesigned)
 
-**Not a trading system.** The structure tells you the regime space and its dynamics, not how to profit from them. It's a map, not a strategy.
+The original framing assumed 5 regimes and 2/5 visibility. With K=4 confirmed, the investigation redesigns as:
 
-**Not a prediction engine.** The 2/5 visibility ceiling is structural — partial information is not a limitation to overcome but a fundamental property. The system is for orientation: knowing where you stand, which transitions are possible, which are forbidden.
+**Question:** Do the trend projection (Basis A: 4 Hamming-adjacent clusters) and coherence projection (Basis D: 4 complement-pair clusters) provide independent information about market dynamics?
 
-**Not algebraically forced.** The relations investigation closed this door. The connection is epistemological and phenomenological — markets share the observer-participation architecture but not the F₂ complement equivariance. The (3,5) matrix is a zero-parameter model to test against data, not a theorem about markets.
+**Preliminary finding (Phase 4):** The cross-basis contingency table shows weak coupling — the two projections capture largely independent information. C2 pullbacks overweight P0 (deceleration-aligned), but the correspondence is partial.
+
+**Revised prediction:** Two orthogonal 4-state views × low mutual information → each view sees ~half the information. Not the (3,5) Fano-plane geometry, but a simpler 2-view complementarity.
 
 ---
 
-## Open Questions
+## Investigation 3: Temporal Modulation — Status: OPEN (unchanged)
 
-1. **What are the "trigrams" in markets?** Binary observation vectors — but of what? Price direction (up/down) at three timescales? Relative performance of three asset pairs? The choice of basis determines the surjection. This is the most important design decision.
+The temporal modulation question doesn't depend on K=5. The 4-regime cycle can still exhibit temporal modulation (calendar effects on transition probabilities). The perfect balance theorem prediction remains testable.
 
-2. **Is the shear operative?** The 互 endomorphism (rank 6→4→2, one cross-term leak) creates all dynamical richness. Does the market analogue have the same rank reduction and single leak?
+---
 
-3. **Does the P→H parity rotation have a market counterpart?** The mechanism that makes 克 amplify (1.538×) — does mean-reversion systematically amplify through a parity rotation?
+## The Algebraic Boundary — Sharpened
 
-4. **What is the market 日辰?** Which temporal factors modulate regime coupling constants? Fed cycle? Seasonal? Volatility regime? This determines the temporal state space.
+The uniqueness theorem Orbits(n,p) = 1 iff (n,p) = (3,5) remains valid mathematics. What's been empirically shown is that **the market doesn't instantiate this structure**. The complement symmetry (necessary condition) holds, but the surjection structure (sufficient condition) doesn't — the market prefers {2,2,2,2} complement-pair grouping over {2,2,2,1,1} type-0/1/2 grouping.
 
-5. **Can the observer-participation structure be exploited?** If framework choice = transformation, then deliberate framework rotation might access different 2/5 slices sequentially. Is there a strategy analogue to the 梅花/火珠林 complementarity — two reading methods that together exhaust the information?
+This sharpens the boundary: the epistemological parallels (observer-participation, partial visibility, relational output) are real but don't constrain the regime count. The market has its own structural logic — 4 regimes from 2 coupled oscillations — that doesn't map to Z₅.
 
 ---
 
@@ -179,7 +117,8 @@ The 火珠林 perfect balance theorem: every hexagram has exactly 6 沖, 6 合, 
 Derived from:
 - I Ching uniqueness theorem (iching/unification/unification.md)
 - Z₅ transition matrix properties (iching/deep/open-questions.md, R15-R20)
-- 梅花 atlas dynamics (iching/atlas-mh/)
-- 火珠林 日辰 architecture (iching/atlas-hzl/)
 - Cross-domain analysis — algebraic boundary (iching/relations/, R62-R68)
-- Shao Yong comparison (conversation, Mar 2026) — Z₂ temporal mapping vs Z₅ relational dynamics
+- **Empirical investigation** (markets/investigation-summary.md, March 2026)
+  - 6-phase analysis, 3+ binary bases, exhaustive surjection search
+  - Scripts: logos/markets/01-06_*.py
+  - Raw outputs: memories/markets/01-06_*_output.txt

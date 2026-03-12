@@ -1,0 +1,170 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+  Working rows: 61920
+  Price range: 60024 → 125978
+  Total regime episodes: 796
+
+======================================================================
+  PART 1: Regime Duration Analysis
+======================================================================
+  Total episodes: 796 (2 truncated, excluded)
+  Clean episodes: 794
+
+--- C0 bear (211 episodes) ---
+  Duration (bars): mean=83.1  p25=36.5  median=67.0  p75=118.5  max=301
+  Duration (hours): mean=6.9h  median=5.6h
+
+  Duration by exit destination:
+    → C1 reversal (n=195): mean=85.7  p25=38.0  median=71.0  p75=121.5  max=301
+    → C2 pullback (n=16): mean=50.9  p25=23.0  median=42.0  p75=72.8  max=135
+
+  Duration by last sub-state (exit bar):
+    S0 (n=57): mean=92.4  p25=47.0  median=77.0  p75=139.0  max=301
+    S1 (n=154): mean=79.6  p25=33.2  median=67.0  p75=112.8  max=266
+
+--- C1 reversal (210 episodes) ---
+  Duration (bars): mean=73.6  p25=32.2  median=67.0  p75=104.0  max=281
+  Duration (hours): mean=6.1h  median=5.6h
+
+  Duration by exit destination:
+    → C0 bear (n=167): mean=72.5  p25=33.0  median=67.0  p75=94.5  max=281
+    → C3 bull (n=43): mean=78.0  p25=26.0  median=64.0  p75=107.5  max=235
+
+  Duration by last sub-state (exit bar):
+    S2 (n=141): mean=75.9  p25=36.0  median=68.0  p75=99.0  max=281
+    S3 (n=69): mean=68.9  p25=22.0  median=63.0  p75=106.0  max=203
+
+--- C2 pullback (187 episodes) ---
+  Duration (bars): mean=74.0  p25=31.0  median=69.0  p75=104.5  max=245
+  Duration (hours): mean=6.2h  median=5.8h
+
+  Duration by exit destination:
+    → C0 bear (n=43): mean=78.2  p25=21.5  median=47.0  p75=127.5  max=245
+    → C3 bull (n=144): mean=72.8  p25=37.0  median=70.0  p75=102.0  max=230
+
+  Duration by last sub-state (exit bar):
+    S4 (n=65): mean=78.7  p25=27.0  median=60.0  p75=117.0  max=245
+    S5 (n=122): mean=71.5  p25=37.2  median=70.0  p75=100.0  max=230
+
+--- C3 bull (186 episodes) ---
+  Duration (bars): mean=80.6  p25=31.0  median=70.5  p75=107.0  max=465
+  Duration (hours): mean=6.7h  median=5.9h
+
+  Duration by exit destination:
+    → C0 bear (n=1): mean=43.0  p25=43.0  median=43.0  p75=43.0  max=43
+    → C1 reversal (n=14): mean=39.6  p25=14.2  median=35.5  p75=53.8  max=99
+    → C2 pullback (n=171): mean=84.1  p25=33.0  median=74.0  p75=111.5  max=465
+
+  Duration by last sub-state (exit bar):
+    S6 (n=126): mean=82.6  p25=30.2  median=72.0  p75=112.8  max=304
+    S7 (n=60): mean=76.3  p25=41.0  median=70.0  p75=99.8  max=465
+
+======================================================================
+  PART 2: Exit Destination Analysis with Confidence
+======================================================================
+
+--- C0 bear ---
+  Exit probability by last sub-state (95% Wilson CI):
+   Sub      n           C1 reversal           C2 pullback               C3 bull
+  S  0     57   0.912 [0.811,0.962]   0.088 [0.038,0.189]   0.000 [0.000,0.063]
+  S  1    154   0.929 [0.877,0.960]   0.071 [0.040,0.123]   0.000 [0.000,0.024]
+
+--- C1 reversal ---
+  Exit probability by last sub-state (95% Wilson CI):
+   Sub      n               C0 bear           C2 pullback               C3 bull
+  S  2    141   0.837 [0.767,0.889]   0.000 [0.000,0.027]   0.163 [0.111,0.233]
+  S  3     69   0.710 [0.594,0.804]   0.000 [0.000,0.053]   0.290 [0.196,0.406]
+
+--- C2 pullback ---
+  Exit probability by last sub-state (95% Wilson CI):
+   Sub      n               C0 bear           C1 reversal               C3 bull
+  S  4     65   0.508 [0.389,0.625]   0.000 [0.000,0.056]   0.492 [0.375,0.611]
+  S  5    122   0.082 [0.045,0.144]   0.000 [0.000,0.031]   0.918 [0.856,0.955]
+
+--- C3 bull ---
+  Exit probability by last sub-state (95% Wilson CI):
+   Sub      n               C0 bear           C1 reversal           C2 pullback
+  S  6    126   0.008 [0.001,0.044]   0.048 [0.022,0.100]   0.944 [0.890,0.973]
+  S  7     60   0.000 [0.000,0.060]   0.133 [0.069,0.242]   0.867 [0.758,0.931]
+
+--- C2 Pullback: Subperiod Stability of Exit Splits ---
+
+  Subperiod 1 (63 C2 episodes):
+    S4 (n=25): → bear=0.560 (14)  → bull=0.440 (11)  → other=0
+    S5 (n=38): → bear=0.079 (3)  → bull=0.921 (35)  → other=0
+
+  Subperiod 2 (62 C2 episodes):
+    S4 (n=21): → bear=0.524 (11)  → bull=0.476 (10)  → other=0
+    S5 (n=41): → bear=0.073 (3)  → bull=0.927 (38)  → other=0
+
+  Subperiod 3 (62 C2 episodes):
+    S4 (n=19): → bear=0.421 (8)  → bull=0.579 (11)  → other=0
+    S5 (n=43): → bear=0.093 (4)  → bull=0.907 (39)  → other=0
+
+======================================================================
+  PART 3: Price Returns Conditioned on Regime
+======================================================================
+
+--- C0 bear (211 episodes) ---
+  Log return: mean=-0.1222%  median=0.1296%  std=1.3167%  skew=-2.709
+  Return per bar: -0.001470%  (regime velocity: -0.0176%/hr)
+
+  Returns by exit destination:
+    → C1 reversal (n=195): mean=-0.1344%  median=0.1333%  std=1.3620%  ret/bar=-0.001568%
+    → C2 pullback (n=16): mean=0.0266%  median=0.0408%  std=0.4784%  ret/bar=0.000522%
+
+--- C1 reversal (210 episodes) ---
+  Log return: mean=0.0264%  median=-0.0610%  std=1.2311%  skew=2.130
+  Return per bar: 0.000358%  (regime velocity: 0.0043%/hr)
+
+  Returns by exit destination:
+    → C0 bear (n=167): mean=-0.2483%  median=-0.2108%  std=1.0425%  ret/bar=-0.003426%
+    → C3 bull (n=43): mean=1.0930%  median=0.7069%  std=1.3228%  ret/bar=0.014022%
+
+--- C2 pullback (187 episodes) ---
+  Log return: mean=-0.1527%  median=0.0734%  std=0.9785%  skew=-1.566
+  Return per bar: -0.002063%  (regime velocity: -0.0248%/hr)
+
+  Returns by exit destination:
+    → C0 bear (n=43): mean=-1.2002%  median=-0.8156%  std=1.1579%  ret/bar=-0.015351%
+    → C3 bull (n=144): mean=0.1601%  median=0.2159%  std=0.6462%  ret/bar=0.002199%
+
+  C2 returns by last sub-state:
+    S4 (n=65): mean=-0.8100%  median=-0.3544%  std=1.1740%  mean_dur=78.7bars  ret/bar=-0.010298%
+      → C0 bear (n=33): mean=-1.4045%  dur=77.1bars
+      → C3 bull (n=32): mean=-0.1969%  dur=80.2bars
+    S5 (n=122): mean=0.1975%  median=0.2526%  std=0.6169%  mean_dur=71.5bars  ret/bar=0.002760%
+      → C0 bear (n=10): mean=-0.5259%  dur=81.7bars
+      → C3 bull (n=112): mean=0.2621%  dur=70.6bars
+
+--- C3 bull (186 episodes) ---
+  Log return: mean=-0.0049%  median=-0.0804%  std=0.8813%  skew=1.350
+  Return per bar: -0.000061%  (regime velocity: -0.0007%/hr)
+
+  Returns by exit destination:
+    → C0 bear (n=1): mean=-0.3908%  median=-0.3908%  std=0.0000%  ret/bar=-0.009089%
+    → C1 reversal (n=14): mean=0.0992%  median=0.0411%  std=0.2491%  ret/bar=0.002507%
+    → C2 pullback (n=171): mean=-0.0112%  median=-0.1003%  std=0.9154%  ret/bar=-0.000133%
+
+======================================================================
+  PART 4: Cross-Basis Contingency (Basis A × Basis D)
+======================================================================
+
+  Contingency table (% of all bars):
+                         P0        P1        P2        P3     Total
+          C0 bear     7.26%     3.51%     7.76%     9.85%    28.39%
+      C1 reversal     8.49%     3.86%     5.06%     7.54%    24.96%
+      C2 pullback     8.45%     4.83%     3.18%     5.89%    22.35%
+          C3 bull     5.95%     4.35%     5.84%     8.16%    24.30%
+            Total    30.16%    16.55%    21.84%    31.44%   100.00%
+
+  P(Basis D cluster | Basis A regime):
+                         P0        P1        P2        P3
+          C0 bear    25.59%    12.38%    27.32%    34.71%
+      C1 reversal    34.04%    15.46%    20.29%    30.22%
+      C2 pullback    37.81%    21.62%    14.23%    26.33%
+          C3 bull    24.49%    17.88%    24.04%    33.58%
+
+======================================================================
+  Phase 4 complete.
+======================================================================

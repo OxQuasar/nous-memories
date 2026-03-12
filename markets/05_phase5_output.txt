@@ -1,0 +1,106 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+  Working rows: 61920, price range: 60024–125978
+  Total episodes: 796
+
+======================================================================
+  PART 1: Intra-Episode Flip Analysis — C2 Pullback
+======================================================================
+  C2 episodes (non-truncated): 187
+
+--- 1a. Entry State Distribution ---
+  Enter as S4 (trend_1h↓): 116 (62.0%)
+  Enter as S5 (trend_1h↑): 71 (38.0%)
+
+  Entry state → exit destination:
+    S4 entry (n=116): → bear=0.241  → bull=0.759  mean_dur=80.8 bars
+    S5 entry (n=71): → bear=0.211  → bull=0.789  mean_dur=63.0 bars
+
+--- 1b. Flip Count Per Episode ---
+  S4→S5 flips:  mean=3.13  median=3  min=0  max=10
+  S5→S4 unflips: mean=2.86  median=3  min=0  max=10
+  Episodes with 0 flips: 28 (15.0%) — entered as S5, never went to S4
+
+  Flip count by exit destination:
+    → bear (n=43): mean=3.00  median=2
+    → bull (n=144): mean=3.17  median=3
+
+--- 1c. Return Profile: S4→S5 Flips ---
+  Total S4→S5 flips: 585
+  Holds (≥3 bars): 511 (87.4%)
+  Chatters (<3 bars): 74 (12.6%)
+
+  Cumulative return profile after flip:
+    Bars           Holds (n=511)        Chatters (n=74)             All (n=585)
+      +5              +0.0138%              -0.1035%              -0.0011%
+     +10              +0.0051%              -0.1120%              -0.0097%
+     +20              +0.0170%              -0.1098%              +0.0010%
+     +50              -0.0010%              -0.1377%              -0.0183%
+
+--- 1d. Return at FINAL S4→S5 Flip ---
+  (For episodes exiting C2 in state S5)
+  S5-exit episodes: 122
+  Episodes with ≥1 flip: 111  (no flip: 11)
+
+  Return breakdown (n=111):
+    Return before final flip: mean=-0.0559%  median=+0.0353%
+    Return after final flip:  mean=+0.2589%  median=+0.1156%
+    Total episode return:     mean=+0.2031%  median=+0.2666%
+    Bars from final flip to exit: mean=9.4  median=8
+
+  Final flip returns by exit destination:
+    → bear (n=10): ret_after=+0.0490%  bars_after=6.9
+    → bull (n=101): ret_after=+0.2797%  bars_after=9.7
+
+--- 1e. Confirmed-Flip Trading Simulation ---
+  Rule: enter long when S4→S5 persists ≥3 bars.
+  Exit: next S5→S4 reversal OR C2 regime exit (whichever first).
+
+  Total confirmed-flip trades: 511
+  Mean return: +0.0045%
+  Median return: -0.0163%
+  Std: 0.2735%
+  Win rate: 38.4% (196/511)
+  Mean win: +0.2248%
+  Mean loss: -0.1524%
+  Mean duration: 8.4 bars (0.7h)
+  Held to regime exit: 92/511 (18.0%)
+  Return per bar: 0.000539%  (0.0065%/hr)
+
+======================================================================
+  PART 2: C1 Reversal — Flip Dynamics (Lighter)
+======================================================================
+  C1 episodes (non-truncated): 210
+
+--- 2a. Entry State & Flip Count ---
+  Enter as S2 (trend_1h↓): 51 (24.3%)
+  Enter as S3 (trend_1h↑): 159 (75.7%)
+  S2→S3 flips: mean=2.84  median=2  min=0  max=12
+
+  Flip count by exit destination:
+    → bear (n=167): mean=2.79  median=2
+    → bull (n=43): mean=3.05  median=2
+
+--- 2b. Return at FINAL S2→S3 Flip ---
+  (For S3-exit episodes going to bull)
+  S3-exit → bull episodes: 20
+  With flips: 15
+    Return after final flip: mean=+0.6234%  median=+0.4473%
+    Total episode return:    mean=+1.7273%  median=+0.9147%
+    Bars after final flip:   mean=12.1
+
+--- 2c. Confirmed S2→S3 Flip Return Profile ---
+  Total S2→S3 flips: 597
+  Holds (≥3 bars): 529 (88.6%)
+  Chatters: 68 (11.4%)
+
+  Cumulative return profile:
+    Bars           Holds (n=529)        Chatters (n=68)
+      +5              +0.0074%              -0.0797%
+     +10              +0.0235%              -0.1090%
+     +20              +0.0299%              -0.1113%
+     +50              +0.0423%              -0.0484%
+
+======================================================================
+  Phase 5 complete.
+======================================================================

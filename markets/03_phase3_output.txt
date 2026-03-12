@@ -1,0 +1,174 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+  Global realized_vol_8h median: 0.000045
+  Basis D 8-state series: 61920 bars
+
+======================================================================
+  PART 1: Basis D → 4×4 Complement-Pair Clusters
+======================================================================
+  P0 {S0,S7} calm↓decel∪vol↑accel
+  P1 {S1,S6} calm↓accel∪vol↑decel
+  P2 {S2,S5} calm↑decel∪vol↓accel
+  P3 {S3,S4} calm↑accel∪vol↓decel
+
+--- Cluster Frequencies ---
+  P0: 18678 (30.16%)
+  P1: 10249 (16.55%)
+  P2: 13525 (21.84%)
+  P3: 19468 (31.44%)
+
+--- Transitions ---
+  Total state changes: 2218 (out of 61919 bars = 3.58%)
+
+--- T₄ (complement-pair transition matrix) ---
+         P0      P1      P2      P3
+P0 0.9696 0.0210 0.0024 0.0070
+P1 0.0167 0.9515 0.0064 0.0254
+P2 0.0235 0.0047 0.9577 0.0140
+P3 0.0041 0.0021 0.0237 0.9702
+
+--- J₄ (jump chain) ---
+         P0      P1      P2      P3
+P0 0.0000 0.6919 0.0792 0.2289
+P1 0.3441 0.0000 0.1328 0.5231
+P2 0.5559 0.1119 0.0000 0.3322
+P3 0.1360 0.0706 0.7935 0.0000
+
+--- Eigenvalues ---
+  T₄: +1.0000, +0.9569, +0.9569, +0.9351
+  J₄: +1.0000, -0.6894, -0.1553, -0.1553
+  J₄ magnitude gaps: 0.3106, 0.2928, 0.0000
+  Largest gap: between eigenvalue 0 and 1 (suggests ~1 natural clusters)
+
+--- Stationary Distribution π₄ ---
+  P0: 0.3017 (30.17%)
+  P1: 0.1658 (16.58%)
+  P2: 0.2183 (21.83%)
+  P3: 0.3141 (31.41%)
+  Top-3 concentration: 0.8342 (83.42%)
+
+--- Zero Structure in J₄ (<2% of row mass) ---
+  (none)
+
+--- Subperiod Stability ---
+  Subperiod 1 (0:20640): ‖J_sub - J_full‖_F = 0.0951
+  Subperiod 2 (20640:41280): ‖J_sub - J_full‖_F = 0.0486
+  Subperiod 3 (41280:61920): ‖J_sub - J_full‖_F = 0.0815
+
+  Zero-pattern stability (<2.0% of row mass):
+    0/12 off-diagonal cells are stable near-zeros
+
+  Saved J₄ → /home/quasar/nous/memories/markets/j4_basis_d_complement.npy
+
+--- Topology Comparison: Basis D complement-pairs vs Basis A slow-bit clusters ---
+
+  Basis A J₄:
+         C0      C1      C2      C3
+C0 0.0000 0.9245 0.0755 0.0000
+C1 0.7952 0.0000 0.0000 0.2048
+C2 0.2299 0.0000 0.0000 0.7701
+C3 0.0054 0.0753 0.9194 0.0000
+
+  Basis D J₄ (complement-pairs):
+         P0      P1      P2      P3
+P0 0.0000 0.6919 0.0792 0.2289
+P1 0.3441 0.0000 0.1328 0.5231
+P2 0.5559 0.1119 0.0000 0.3322
+P3 0.1360 0.0706 0.7935 0.0000
+
+  Near-zero cells (<2%): Basis A = 4/12, Basis D = 0/12
+
+  Dominant outgoing transition (cycle structure):
+    Basis A C0 → C1 (0.9245)
+    Basis A C1 → C0 (0.7952)
+    Basis A C2 → C3 (0.7701)
+    Basis A C3 → C2 (0.9194)
+    → Does NOT form full 4-cycle
+    Basis D P0 → P1 (0.6919)
+    Basis D P1 → P3 (0.5231)
+    Basis D P2 → P0 (0.5559)
+    Basis D P3 → P2 (0.7935)
+    → Forms full 4-cycle
+
+  Spectral gap (|λ₀|−|λ₁|): Basis A = 0.0026, Basis D = 0.3106
+
+  Basis D π₈: S0=0.1572, S1=0.0835, S2=0.1091, S3=0.1571, S4=0.1571, S5=0.1092, S6=0.0824, S7=0.1445
+
+======================================================================
+  PART 2: (3,5) Surjection Search — Formal Closure
+======================================================================
+
+  Total complement-equivariant surjections: 240
+
+--- Top 5 Surjections by Lumpability Error ---
+
+  #1: E = 0.00160054
+    Mapping: Z0={S0,S7}  Z1={S1,S2}  Z2={S3}  Z3={S4}  Z4={S5,S6}
+
+  #2: E = 0.00160054
+    Mapping: Z0={S0,S7}  Z1={S1,S2}  Z2={S4}  Z3={S3}  Z4={S5,S6}
+
+  #3: E = 0.00160054
+    Mapping: Z0={S0,S7}  Z1={S4}  Z2={S1,S2}  Z3={S5,S6}  Z4={S3}
+
+  #4: E = 0.00160054
+    Mapping: Z0={S0,S7}  Z1={S4}  Z2={S5,S6}  Z3={S1,S2}  Z4={S3}
+
+  #5: E = 0.00160054
+    Mapping: Z0={S0,S7}  Z1={S5,S6}  Z2={S3}  Z3={S4}  Z4={S1,S2}
+
+--- Best Surjection: Full Analysis ---
+  Z0 = {S0, S7}
+  Z1 = {S1, S2}
+  Z2 = {S3}
+  Z3 = {S4}
+  Z4 = {S5, S6}
+
+--- T₅ (lumped transition matrix, best surjection) ---
+         Z0      Z1      Z2      Z3      Z4
+Z0 0.9696 0.0126 0.0029 0.0041 0.0109
+Z1 0.0221 0.9531 0.0198 0.0000 0.0050
+Z2 0.0039 0.0260 0.9701 0.0000 0.0000
+Z3 0.0042 0.0001 0.0000 0.9702 0.0254
+Z4 0.0191 0.0059 0.0001 0.0180 0.9570
+
+--- J₅ (jump chain) ---
+         Z0      Z1      Z2      Z3      Z4
+Z0 0.0000 0.4137 0.0951 0.1338 0.3574
+Z1 0.4705 0.0000 0.4221 0.0000 0.1073
+Z2 0.1306 0.8694 0.0000 0.0000 0.0000
+Z3 0.1414 0.0034 0.0000 0.0000 0.8552
+Z4 0.4428 0.1373 0.0020 0.4180 0.0000
+
+--- Eigenvalues (best K=5 surjection) ---
+  T₅: +1.0000, +0.9841, +0.9642, +0.9384, +0.9332
+  J₅: +1.0000, -0.7018, -0.6514, +0.5424, -0.1891
+  Spectral gap (|λ₀|−|λ₁|): 0.2982
+  (3,5) prediction: 0.71
+
+--- Stationary Distribution π₅ ---
+  Z0: 0.3017 (30.17%)
+  Z1: 0.1926 (19.26%)
+  Z2: 0.1571 (15.71%)
+  Z3: 0.1571 (15.71%)
+  Z4: 0.1916 (19.16%)
+  Top-3 concentration: 0.6859 (68.59%)
+  (3,5) prediction: 0.89
+
+--- K=4 vs K=5 Comparison ---
+  K=4 complement-pair lumpability error: 0.00008368
+  K=5 best surjection lumpability error: 0.00160054
+  K=4: 4 within-class pairs, error/pair = 0.00002092
+  K=5: 3 within-class pairs, error/pair = 0.00053351
+
+  ═══ VERDICT: K=5 surjection error = 0.00160054 vs K=4 complement-pair error = 0.00008368 → K=4 WINS ═══
+
+--- K=5 Error Distribution (all 240 surjections) ---
+  Min: 0.00160054
+  Median: 0.00337736
+  Max: 0.00720580
+  Mean: 0.00350777
+
+======================================================================
+  Phase 3 closure complete.
+======================================================================

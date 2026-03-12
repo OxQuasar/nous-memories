@@ -1,0 +1,54 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+  Clean episodes: 794
+  Linked episode pairs: 793
+
+======================================================================
+  A. C3 Bull Episodes — By Entry Source
+======================================================================
+    C2-S5 → C3 (confirmed pullback) (n=111): ret mean=+0.0881%  median=-0.0830%  std=0.9778%  dur mean=91bars (7.6h)
+    C2-S4 → C3 (uncertain pullback) (n=32): ret mean=-0.1710%  median=-0.0933%  std=0.5178%  dur mean=52bars (4.3h)
+    C1    → C3 (reversal breakthrough) (n=43): ret mean=-0.1214%  median=-0.0715%  std=0.7973%  dur mean=75bars (6.2h)
+    All C3 episodes (n=186): ret mean=-0.0049%  median=-0.0804%  std=0.8813%  dur mean=81bars (6.7h)
+
+======================================================================
+  B. C0 Bear Episodes — By Entry Source
+======================================================================
+    C2-S4 → C0 (failed pullback, uncertain) (n=33): ret mean=-0.0312%  median=+0.0667%  std=1.1109%  dur mean=92bars (7.7h)
+    C2-S5 → C0 (failed pullback, was confirmed) (n=10): ret mean=+0.1198%  median=+0.0979%  std=0.1585%  dur mean=51bars (4.2h)
+    C1    → C0 (reversal failure) (n=167): ret mean=-0.1575%  median=+0.1406%  std=1.3918%  dur mean=83bars (7.0h)
+    C3    → C0 (bull → bear, rare) (n=1): ret mean=+0.3616%  median=+0.3616%  std=0.0000%  dur mean=38bars (3.2h)
+    All C0 episodes (n=211): ret mean=-0.1222%  median=+0.1296%  std=1.3167%  dur mean=83bars (6.9h)
+
+======================================================================
+  C. All Transitions Summary (n ≥ 5)
+======================================================================
+
+           Source  ExitSub  →            Dest     n    MeanRet     MedRet    MeanDur
+  --------------- -------- -- --------------- ----- ---------- ---------- ----------
+          C0 bear S     0 →     C1 reversal    52   -0.0113%   -0.0592%        72b
+          C0 bear S     0 →     C2 pullback     5   -0.2367%   +0.0078%        62b
+          C0 bear S     1 →     C1 reversal   143   -0.0231%   -0.1206%        77b
+          C0 bear S     1 →     C2 pullback    11   -0.1587%   +0.0000%        20b
+      C1 reversal S     2 →         C0 bear   118   -0.1154%   +0.1644%        89b
+      C1 reversal S     2 →         C3 bull    23   -0.0237%   -0.0715%        57b
+      C1 reversal S     3 →         C0 bear    49   -0.2588%   +0.1332%        70b
+      C1 reversal S     3 →         C3 bull    20   -0.2337%   -0.0828%        95b
+      C2 pullback S     4 →         C0 bear    33   -0.0312%   +0.0667%        92b
+      C2 pullback S     4 →         C3 bull    32   -0.1710%   -0.0933%        52b
+      C2 pullback S     5 →         C0 bear    10   +0.1198%   +0.0979%        51b
+      C2 pullback S     5 →         C3 bull   111   +0.0881%   -0.0830%        91b
+          C3 bull S     6 →     C1 reversal     6   +0.8736%   +0.0891%        63b
+          C3 bull S     6 →     C2 pullback   119   -0.2402%   +0.0734%        83b
+          C3 bull S     7 →     C1 reversal     8   +0.4197%   -0.0621%        39b
+          C3 bull S     7 →     C2 pullback    52   +0.0567%   +0.1435%        67b
+
+======================================================================
+  D. Zero-Flip C2 Episodes (entered S5, never went to S4)
+======================================================================
+  n=11: → bull=11 (100%)  → bear=0 (0%)
+  Mean return: +0.1412%  Mean duration: 5.7 bars (0.5h)
+
+======================================================================
+  Phase 6 complete.
+======================================================================
