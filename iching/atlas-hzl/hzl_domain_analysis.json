@@ -1,0 +1,242 @@
+{
+  "cluster_assignments": {
+    "占婚姻": "self_vs_party",
+    "占謁貴": "self_vs_party",
+    "占詞訟": "self_vs_party",
+    "占博戲": "self_vs_party",
+    "占買賣": "self_vs_asset",
+    "占求財": "self_vs_asset",
+    "占賊盜": "self_vs_asset",
+    "占耕種": "self_vs_asset",
+    "占蠶桑": "self_vs_asset",
+    "占漁獵": "self_vs_asset",
+    "占畜養": "self_vs_asset",
+    "占科舉": "self_vs_endeavor",
+    "占脫事散憂": "self_vs_endeavor",
+    "占孕產": "body_vs_condition",
+    "占家宅": "self_vs_dwelling",
+    "占墳墓": "self_vs_dwelling",
+    "占出行": "self_vs_journey",
+    "占行人": "self_vs_journey",
+    "占逃亡": "self_vs_journey",
+    "占身命": "self_fate",
+    "占形性": "self_fate",
+    "占運限": "self_fate",
+    "占朝國": "self_fate",
+    "占失物鬼祟": "adversary",
+    "占鬼神": "adversary",
+    "占征戰": "adversary"
+  },
+  "cluster_meta": {
+    "self_vs_party": {
+      "name": "Self vs Other Party",
+      "pattern": "世=self, 應=other party; 用神=person-type 六親",
+      "key_axis": "世應 relationship (生克) determines power balance",
+      "typical_yongshen": [
+        "妻財",
+        "官鬼"
+      ]
+    },
+    "self_vs_asset": {
+      "name": "Self vs Asset",
+      "pattern": "世=self, 用神=material 六親 (妻財 or 子孫)",
+      "key_axis": "財 strength + 子孫 support; 兄弟 = spoiler",
+      "typical_yongshen": [
+        "妻財",
+        "子孫"
+      ]
+    },
+    "self_vs_endeavor": {
+      "name": "Self vs Endeavor",
+      "pattern": "世=self, 用神=goal-type 六親 (官 or 子)",
+      "key_axis": "用神 旺相 + 持世 = success; 忌神 動 = failure",
+      "typical_yongshen": [
+        "官鬼",
+        "子孫"
+      ]
+    },
+    "body_vs_condition": {
+      "name": "Body vs Condition",
+      "pattern": "世=body, 用神=process/state 六親",
+      "key_axis": "Physical state indicators; trigram imagery for body parts",
+      "typical_yongshen": [
+        "妻財"
+      ]
+    },
+    "self_vs_dwelling": {
+      "name": "Self vs Dwelling",
+      "pattern": "世=self/wind-water, 用神=財+子; 六爻=spatial mapping",
+      "key_axis": "Line positions map to physical spaces; 旺相=new, 休囚=old",
+      "typical_yongshen": [
+        "妻財",
+        "子孫"
+      ]
+    },
+    "self_vs_journey": {
+      "name": "Self vs Journey",
+      "pattern": "世=traveler/waiter, 應=destination/traveler; directional reading",
+      "key_axis": "Motion patterns: 初=足, 二=身, 動=coming; 遊魂/八純 contraindicated",
+      "typical_yongshen": [
+        "妻財"
+      ]
+    },
+    "self_fate": {
+      "name": "Self-Fate",
+      "pattern": "世 IS the 用神; no external focus",
+      "key_axis": "世 line's own strength, position, and interactions",
+      "typical_yongshen": [
+        "世"
+      ]
+    },
+    "adversary": {
+      "name": "Adversary / Spirit",
+      "pattern": "用神 = 官鬼 (the threat/spirit); valence contextual",
+      "key_axis": "官鬼 as target to identify, capture, or pacify; 子孫 = remedy",
+      "typical_yongshen": [
+        "官鬼",
+        "子孫"
+      ]
+    }
+  },
+  "special_protocols": [
+    {
+      "domain": "占疾病",
+      "layer_shift": "none (地支 layer)",
+      "mode_shift": "condition — valence inverts",
+      "unique_mechanism": "用神 IS the illness (官鬼). Standard: strong 用神 = good. Here: WEAK 官鬼 = good (illness is weak). The 生克 network inverts: 子孫 (normally neutral) becomes the hero (克鬼 = cure). Three-墓 system: 宮墓 (palace graveyard at 世 = self合災), 鬼墓 (illness graveyard at 世 = trapped in illness), 財墓 (wealth graveyard = 吉兆, unless querent is female). 鬼's element → disease type (金=lung, 木=liver, 水=kidney, 火=heart, 土=spleen). 鬼's position (inner/outer trigram) → body location.",
+      "source_lines": "730-818",
+      "key_formulas": [
+        "子孫旺相 = recovery",
+        "鬼伏世下 = illness follows the body",
+        "大忌申酉持世, 木爻獨發 (申=喪車, 酉=喪服, 木=棺槨)"
+      ]
+    },
+    {
+      "domain": "占天時",
+      "layer_shift": "天干 becomes primary (normally 地支 dominates)",
+      "mode_shift": "state — weather as element interaction",
+      "unique_mechanism": "Dual-layer system. Layer 1: 天干合化 — day stem combines with hexagram stems via five transformations: 甲己化土=overcast, 丁壬化木=wind, 乙庚化金=rain, 丙辛化水=rain, 戊癸化火=clear. Layer 2: 六親 overlay — 父母=rain, 妻財=clear, 兄弟=wind, 子孫=cloud/fog, 官鬼=thunder. Inner 動=daytime event, outer 動=nighttime event. Branch specifics: 辰丑動=rain, 未戌動=clear. Timing uses 日辰 克日定時 for exact hour prediction.",
+      "source_lines": "967-1017",
+      "key_formulas": [
+        "父母長生日 or 帝旺日 = rain",
+        "絕日空 = rain stops",
+        "壬癸動 = rain; 丙丁 = clear; 庚辛 = rain then clear"
+      ]
+    },
+    {
+      "domain": "占射覆",
+      "layer_shift": "none (地支 layer)",
+      "mode_shift": "object — perceptual identification",
+      "unique_mechanism": "Object identification protocol. 財=surface/material (表), 鬼=interior/type (里). Both visible = complete object with surface and substance. Have 表 no 里 = externally real, internally empty. Have 里 no 表 = hidden substance. Both hidden = light/empty object. Trigrams → material class: 乾兌=metal/jade, 震巽=wood/bamboo, 坎=fish/water, 離=silk/thread, 坤艮=earth/stone. Shape from 世應 interaction: 合=round, 扶=long, 生=square, 克=damaged, 刑=pointed, 沖=broken. 陽卦=round, 陰卦=square. 應旺=new, 衰=old. Six spirits = directional position.",
+      "source_lines": "1020-1053",
+      "key_formulas": [
+        "陽卦圓, 陰卦方",
+        "世應合=圓, 相生=方, 相克=損",
+        "應旺=新, 應衰=舊"
+      ]
+    },
+    {
+      "domain": "占來情",
+      "layer_shift": "none",
+      "mode_shift": "meta — direction reverses (hexagram → question, not question → reading)",
+      "unique_mechanism": "Reverse protocol. Instead of domain determining 用神, the hexagram's 六親 composition reveals the domain. Count 六親 frequencies: the dominant type indicates what the person came to ask about (卦中多者取來情). 18 pattern rules in 達人事 match structural features to question types: e.g., 真喜合宅母 → pregnancy; 玄武臨門勾陳動 → theft; 祿馬合月鬼動 → career ambition; 文書乘朱動五爻 → lawsuit filing. This is the system's self-referential layer — the divination reads itself.",
+      "source_lines": "1057-1089",
+      "key_formulas": [
+        "卦中多者取來情 (dominant 六親 = question type)",
+        "重主過去, 交主未來 (old yin = past, old yang = future)",
+        "18 pattern rules in 達人事"
+      ]
+    },
+    {
+      "domain": "占姓字",
+      "layer_shift": "all 3 layers (天干, 地支, 納音) engaged simultaneously",
+      "mode_shift": "symbol — decoding Chinese character structure",
+      "unique_mechanism": "Character identification protocol. All three coordinate layers activate: 天干 → radical type (甲=木/田/日, 乙=草頭/弓, 丙=火/撇/捺, etc.). 地支 → structural element (子=水旁, 丑=橫畫, 寅=山/宗, etc.). 納音 → character type refinement. Eight trigrams → stroke patterns (乾=圓/點, 坎=雨頭/點水, 艮=橫畫/口, 震=木象/立畫, etc.). Day stem × 用爻 × inner/outer/互 trigrams combine to determine surname. Example: 甲乙日 + 純艮(Earth) + 寅(Wood) → three-body Wood → 林 surname.",
+      "source_lines": "1103-1158",
+      "key_formulas": [
+        "干配姓, 支配合, 納音配字",
+        "日配用爻, 兼內外互卦正化體象取勝為主",
+        "30 radical-to-trigram/stem/branch correspondence entries"
+      ]
+    }
+  ],
+  "guashen_activations": [
+    {
+      "domain": "general",
+      "source_line": 35,
+      "text": "卦身當一親",
+      "activation": "卦身 counts as one 六親 type (whichever type sits at that line)",
+      "condition": "Always applicable"
+    },
+    {
+      "domain": "general",
+      "source_line": 41,
+      "text": "如本卦世空，卻去看身",
+      "activation": "When 世 is 空亡 (void), read 卦身 instead as the self-reference point",
+      "condition": "世 line is in 旬空"
+    },
+    {
+      "domain": "占婚姻",
+      "source_line": 401,
+      "text": "身爻值鬼，主帶暗疾",
+      "activation": "卦身 line carries 官鬼 → hidden illness in the person",
+      "condition": "卦身 line's 六親 = 官鬼"
+    },
+    {
+      "domain": "占婢妾",
+      "source_line": 419,
+      "text": "又看身爻，身是鬼主有疾；身是父主識字；身是兄多說謊；身是子主慈善；身是財最好",
+      "activation": "卦身's 六親 type characterizes the servant's nature",
+      "condition": "Always — 卦身 type → personality mapping"
+    },
+    {
+      "domain": "占謁貴",
+      "source_line": 464,
+      "text": "卦有身，相見更看用爻，用爻生身尤好；卦無身又無用爻，終不見",
+      "activation": "If 卦身 exists (on a line): check if 用爻 generates 卦身 — very favorable. If 卦身 absent AND 用爻 absent/void: meeting will not happen.",
+      "condition": "卦身 on-line vs off-line determines availability"
+    },
+    {
+      "domain": "占鬼神",
+      "source_line": 683,
+      "text": "皆要生合卦身，不宜刑沖",
+      "activation": "Ritual offerings must 生 or 合 the 卦身 — not 刑 or 沖 it",
+      "condition": "Ritual context: 日辰/月建 relationship to 卦身"
+    },
+    {
+      "domain": "占脫事散憂",
+      "source_line": 724,
+      "text": "身爻世爻被太歲沖、生、合，有赦也",
+      "activation": "卦身 AND 世 受 太歲 沖/生/合 → pardon/release",
+      "condition": "太歲 (year branch) interacts with 卦身 line"
+    },
+    {
+      "domain": "占起造(陽宅)",
+      "source_line": 865,
+      "text": "身持兄得，五事俱全",
+      "activation": "卦身 carries 兄弟 → all 5 structural elements complete (上等屋)",
+      "condition": "卦身 line's 六親 = 兄弟 + no 空/刑/沖/克"
+    },
+    {
+      "domain": "占起造(陽宅)",
+      "source_line": 867,
+      "text": "凡卦身或空，未住；身並，現住。身值鬼，屋下有伏屍",
+      "activation": "卦身 空 → not yet living there. 卦身 present (身並) → currently living there. 卦身 = 鬼 → corpse under the house.",
+      "condition": "卦身 void/present/鬼 → occupancy status"
+    },
+    {
+      "domain": "占墳墓",
+      "source_line": 927,
+      "text": "次論卦身...卦身在初二爻葬在低處，三四爻平處，五六爻高處",
+      "activation": "卦身's line position determines burial elevation. L1-2=low, L3-4=level, L5-6=high.",
+      "condition": "卦身 line position → physical height"
+    },
+    {
+      "domain": "占射覆",
+      "source_line": 1053,
+      "text": "後審卦身有無吉囚，然後定休咎",
+      "activation": "Final step: check whether 卦身 is in 吉 (favorable) or 囚 (imprisoned) state",
+      "condition": "卦身 seasonal strength → final verdict modifier"
+    }
+  ]
+}

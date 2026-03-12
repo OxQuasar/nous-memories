@@ -1,0 +1,324 @@
+[
+  {
+    "id": 1,
+    "title": "占財伏鬼",
+    "source_lines": "137-146",
+    "hidden_type": "妻財",
+    "flying_type": "官鬼",
+    "fei_to_fu_relation": "fu generates fei",
+    "mechanism": "財爻泄鬼無氣 — hidden 妻財 drains its energy generating the flying 官鬼",
+    "favorable_conditions": [
+      "子孫旺相 (子 can overcome 鬼, releasing 財)",
+      "日辰是子孫 (external support from day branch)",
+      "子孫透出日辰或持世 (子 manifests externally)",
+      "日辰是財 (財 can overcome 父, allowing emergence)"
+    ],
+    "unfavorable_conditions": [
+      "官鬼旺 (the drainer is strong → 財 weaker)",
+      "父母旺 (官 generates 父 which overcomes 子, cutting rescue chain)"
+    ],
+    "summary": "買賣遭傷 — hidden wealth drains into authority. Requires 子孫 to break the 鬼 hold.",
+    "matches": [
+      {
+        "hex_val": 4,
+        "hex_name": "Qian",
+        "position": 2,
+        "hidden_element": "Wood",
+        "flying_element": "Fire",
+        "relation": "被生"
+      },
+      {
+        "hex_val": 13,
+        "hex_name": "Feng",
+        "position": 6,
+        "hidden_element": "Fire",
+        "flying_element": "Earth",
+        "relation": "被生"
+      },
+      {
+        "hex_val": 60,
+        "hex_name": "Dun",
+        "position": 2,
+        "hidden_element": "Wood",
+        "flying_element": "Fire",
+        "relation": "被生"
+      }
+    ],
+    "match_count": 3
+  },
+  {
+    "id": 2,
+    "title": "占財伏兄",
+    "source_lines": "149-157",
+    "hidden_type": "妻財",
+    "flying_type": "兄弟",
+    "fei_to_fu_relation": "fei overcomes fu",
+    "mechanism": "財被兄弟把住 — 兄弟 (sibling/rival) holds 妻財 captive, generates 口舌 (disputes)",
+    "favorable_conditions": [
+      "財爻旺相 (hidden wealth is strong enough to resist)",
+      "伏世下 (hidden under 世 → within your control)",
+      "透出直日辰 (emerges when day branch matches)"
+    ],
+    "unfavorable_conditions": [
+      "兄弟旺相 (captor is strong)",
+      "財休囚 (hidden wealth is weak)"
+    ],
+    "summary": "口舌相侵 — wealth trapped by rival. If hidden under 世 and 旺相, you control the captor and can extract wealth.",
+    "matches": [
+      {
+        "hex_val": 5,
+        "hex_name": "Ming Yi",
+        "position": 3,
+        "hidden_element": "Fire",
+        "flying_element": "Water",
+        "relation": "克"
+      },
+      {
+        "hex_val": 13,
+        "hex_name": "Feng",
+        "position": 3,
+        "hidden_element": "Fire",
+        "flying_element": "Water",
+        "relation": "克"
+      },
+      {
+        "hex_val": 16,
+        "hex_name": "Bi",
+        "position": 5,
+        "hidden_element": "Water",
+        "flying_element": "Earth",
+        "relation": "克"
+      }
+    ],
+    "match_count": 3
+  },
+  {
+    "id": 3,
+    "title": "財伏父母",
+    "source_lines": "161-172",
+    "hidden_type": "妻財",
+    "flying_type": "父母",
+    "fei_to_fu_relation": "fu overcomes fei",
+    "mechanism": "財伏父下, 子不能生財 — under 父母, 子孫 (財's support) is blocked by 父母's克, so only 'half wealth'",
+    "favorable_conditions": [
+      "財爻旺相 (旺相得半 — at least half is retrievable)"
+    ],
+    "unfavorable_conditions": [
+      "父母旺 (文書/authority figure blocks more)",
+      "子孫被克 (support chain cut)"
+    ],
+    "summary": "旺相得半 — wealth hidden under documents/authority. 子孫 support chain blocked. At best, half return.",
+    "matches": [
+      {
+        "hex_val": 5,
+        "hex_name": "Ming Yi",
+        "position": 6,
+        "hidden_element": "Fire",
+        "flying_element": "Metal",
+        "relation": "被克"
+      }
+    ],
+    "match_count": 1
+  },
+  {
+    "id": 4,
+    "title": "財伏子孫",
+    "source_lines": "161-172",
+    "hidden_type": "妻財",
+    "flying_type": "子孫",
+    "fei_to_fu_relation": "fei generates fu",
+    "mechanism": "子孫生財, 有氣必滿 — flying 子孫 naturally generates the hidden 妻財; most favorable hiding position",
+    "favorable_conditions": [
+      "子孫旺相 (generator is strong → wealth accumulates)",
+      "世應不克子孫 (no interference from 世/應)"
+    ],
+    "unfavorable_conditions": [
+      "父母持世應克子孫 (but even then, if 子孫旺相, still possible)"
+    ],
+    "summary": "有氣必滿 — wealth hidden under its generator. Best possible hiding position. Wealth will manifest.",
+    "matches": [
+      {
+        "hex_val": 4,
+        "hex_name": "Qian",
+        "position": 5,
+        "hidden_element": "Wood",
+        "flying_element": "Water",
+        "relation": "生"
+      },
+      {
+        "hex_val": 62,
+        "hex_name": "Gou",
+        "position": 2,
+        "hidden_element": "Wood",
+        "flying_element": "Water",
+        "relation": "生"
+      }
+    ],
+    "match_count": 2
+  },
+  {
+    "id": 5,
+    "title": "占鬼伏兄",
+    "source_lines": "176-184",
+    "hidden_type": "官鬼",
+    "flying_type": "兄弟",
+    "fei_to_fu_relation": "fu overcomes fei",
+    "mechanism": "同類欺凌、不忠 — 兄弟 (peers) covering up 官鬼 means colleagues deceive or bureaucrats are untrustworthy",
+    "favorable_conditions": [
+      "官鬼旺相 (authority is strong enough to emerge)",
+      "持世 (anchored to self)",
+      "日辰是官鬼 (external authority support)",
+      "官鬼能克兄 (authority overcomes deception)"
+    ],
+    "unfavorable_conditions": [
+      "兄弟旺 (deception/rivalry is strong)",
+      "所謀之事到底脫空 (plan ultimately amounts to nothing)"
+    ],
+    "summary": "同類欺凌 — authority hidden under rivalry/deception. Main theme: betrayal by peers. Need strong 鬼 to overcome.",
+    "matches": [
+      {
+        "hex_val": 34,
+        "hex_name": "Meng",
+        "position": 3,
+        "hidden_element": "Water",
+        "flying_element": "Fire",
+        "relation": "被克"
+      },
+      {
+        "hex_val": 58,
+        "hex_name": "Song",
+        "position": 3,
+        "hidden_element": "Water",
+        "flying_element": "Fire",
+        "relation": "被克"
+      }
+    ],
+    "match_count": 2
+  },
+  {
+    "id": 6,
+    "title": "占鬼伏財",
+    "source_lines": "188-198",
+    "hidden_type": "官鬼",
+    "flying_type": "妻財",
+    "fei_to_fu_relation": "fei generates fu",
+    "mechanism": "因財不吉, 官吏阻節 — 財 generates 官, but 財 also overcomes 父母 (documents), causing bureaucratic blockage",
+    "favorable_conditions": [
+      "官鬼旺相伏世下 (strong authority under your control)",
+      "父爻透出直日辰 (documents manifest at right time)"
+    ],
+    "unfavorable_conditions": [
+      "父母持世獨發 (documents alone move → 重迭艱辛)",
+      "財去克了文書 (wealth destroys documentation)"
+    ],
+    "summary": "因財有傷 — authority hidden under wealth. Wealth undermines documentation. Official matters obstructed.",
+    "matches": [
+      {
+        "hex_val": 34,
+        "hex_name": "Meng",
+        "position": 6,
+        "hidden_element": "Water",
+        "flying_element": "Metal",
+        "relation": "生"
+      },
+      {
+        "hex_val": 41,
+        "hex_name": "Shi He",
+        "position": 3,
+        "hidden_element": "Metal",
+        "flying_element": "Earth",
+        "relation": "生"
+      },
+      {
+        "hex_val": 47,
+        "hex_name": "Da You",
+        "position": 4,
+        "hidden_element": "Fire",
+        "flying_element": "Wood",
+        "relation": "生"
+      }
+    ],
+    "match_count": 3
+  },
+  {
+    "id": 7,
+    "title": "官伏父母",
+    "source_lines": "202-210",
+    "hidden_type": "官鬼",
+    "flying_type": "父母",
+    "fei_to_fu_relation": "fu generates fei",
+    "mechanism": "官化文書 — authority transforms into paperwork. Good for filing suits, filling positions",
+    "favorable_conditions": [
+      "貼世 (attached to self)",
+      "官鬼旺相 (strong authority)",
+      "文書直日 (documents match day branch)",
+      "利經官下狀、補名目 (suits, appointments)"
+    ],
+    "unfavorable_conditions": [
+      "不伏世下 (not under 世 → not within your control → 艱辛)"
+    ],
+    "summary": "舉狀經官 — authority hidden under documents. Favorable for legal filings and official appointments.",
+    "matches": [
+      {
+        "hex_val": 41,
+        "hex_name": "Shi He",
+        "position": 6,
+        "hidden_element": "Metal",
+        "flying_element": "Water",
+        "relation": "被生"
+      }
+    ],
+    "match_count": 1
+  },
+  {
+    "id": 8,
+    "title": "官伏子孫",
+    "source_lines": "214-222",
+    "hidden_type": "官鬼",
+    "flying_type": "子孫",
+    "fei_to_fu_relation": "fei overcomes fu",
+    "mechanism": "去路無門 — 子孫 (the overcomer of 官) sits on top, blocking authority completely. Stuck.",
+    "favorable_conditions": [
+      "官爻旺相在世下 (strong authority under your control)",
+      "子孫無氣落空 (blocker is weakened/void)",
+      "透出直日辰 (emerges at right time)"
+    ],
+    "unfavorable_conditions": [
+      "子孫旺相 (blocker is strong → 占看夫病即死)",
+      "官爻無氣落空 (authority is weak/void → merely 阻滯)"
+    ],
+    "summary": "去路無門 — authority blocked by its natural overcomer. Worst hiding position for 官. Only 散憂 (dispersing worry) is favorable.",
+    "matches": [
+      {
+        "hex_val": 58,
+        "hex_name": "Song",
+        "position": 6,
+        "hidden_element": "Water",
+        "flying_element": "Earth",
+        "relation": "克"
+      }
+    ],
+    "match_count": 1
+  },
+  {
+    "id": 9,
+    "title": "官鬼伏官",
+    "source_lines": "226-237",
+    "hidden_type": "官鬼",
+    "flying_type": "官鬼",
+    "fei_to_fu_relation": "比和",
+    "mechanism": "關隔之象, 小人作難 — a subordinate 官 (petty official) screens off the true 官 (authority). Obstruction by middlemen.",
+    "favorable_conditions": [
+      "旺相相扶 (mutual support when both strong)",
+      "親見貴人 (go personally to meet the authority)",
+      "世爻動化官鬼父母 (transform through action)"
+    ],
+    "unfavorable_conditions": [
+      "旁爻所隔 (blocked by side lines)",
+      "小人作難 (petty interference)"
+    ],
+    "summary": "小人作難 — true authority hidden behind false authority. Must personally bypass intermediaries.",
+    "matches": [],
+    "match_count": 0
+  }
+]

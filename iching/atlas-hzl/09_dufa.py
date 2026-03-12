@@ -1,0 +1,295 @@
+#!/usr/bin/env python3
+"""
+§V.2: 獨發 patterns extraction from huozhulin source text.
+
+Extracts the 5 獨發 sections (single moving type) + foundational rules
+(獨發亂動, 世應相剋, 公私用事) into structured data.
+"""
+
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Foundational rules (lines 62–117)
+# ═══════════════════════════════════════════════════════════════════════════
+
+FOUNDATIONAL = {
+    "dufa_luandong": {
+        "source_lines": "62-87",
+        "title": "獨發亂動",
+        "verse": "獨發易取，亂動難尋；先看世應，後審淺深。",
+        "rules": [
+            "獨發 (single moving line): easy to read — take that line as focus",
+            "亂動 (multiple moving lines): hard to read — four-step evaluation:",
+            "  1. 世上旁爻: look for 生財旺相 supporting 世; watch for 應 克 世",
+            "  2. 世下親爻: 財官 under 世 should be 靜 (stable, not clashed)",
+            "  3. Most 旺 line = 用神; if moving, must 生世; if hidden, must be 旺相",
+            "  4. 獨發 line: 旺相 → urgent; 休囚 → slow",
+        ],
+        "public_private": {
+            "官用": "官鬼 primary, 父母 auxiliary. Hidden 官 needs 旺 + 動 + 生世.",
+            "私用": "妻財 primary, 子孫 auxiliary. Hidden 財 needs 旺; avoid 伏鬼下.",
+            "both": "財官 both 旺相 and moving → both public and private matters succeed.",
+        },
+    },
+    "shi_ying_clash": {
+        "source_lines": "90-102",
+        "title": "世應相剋",
+        "verse": "旁爻持世，旺相得地；應與動爻，不克方是。",
+        "rules": [
+            "占財: 子孫旺相 + 妻財持世 → favorable",
+            "占官: 父母旺相 + 官鬼持世 → favorable",
+            "Condition: 應爻 and 動爻 must NOT 克 the auxiliary (輔爻)",
+            "世 = my situation; 應 = the other party's situation",
+            "If both 應 and 動爻 are 世's 墓 → completely unfavorable",
+        ],
+    },
+    "public_private": {
+        "source_lines": "105-117",
+        "title": "公私用事",
+        "verse": "陰陽男女，次策推排；官用取官，私用取財。",
+        "rules": [
+            "官用 domains: illness/ghosts, lost items/thieves, seeking office, lawsuits, marriage(wife asks about husband)",
+            "私用 domains: trade, household, servants, seeking wealth, marriage(husband asks about wife)",
+            "Core principle: 天下之事不出財官二字 — all matters reduce to 財 and 官",
+            "官 requires 父母 as support; 財 requires 子孫 as support",
+            "兄弟 is neither primary nor auxiliary — only a spoiler (劫財之人)",
+        ],
+    },
+}
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 獨發 patterns (lines 256–317)
+# ═══════════════════════════════════════════════════════════════════════════
+
+DUFA_PATTERNS = [
+    {
+        "moving_type": "子孫",
+        "source_lines": "256-267",
+        "verse": "子孫獨發，為退為散；若乘旺相，亦可求財。",
+        "epithet": "傷官之神",
+        "general_effect": "Retreat and dispersal. Overcomes 官鬼 (傷官), so blocks "
+                          "authority. But generates 妻財, so can produce wealth.",
+        "domain_effects": {
+            "占求財": "favorable — 子孫 生 財; 旺相 + 青龍 → wealth source active",
+            "占官事": "unfavorable — 子孫 克 官; blocks promotion, harms authority",
+            "占疾病": "favorable — 子孫 克 鬼(病); disperses illness",
+            "占脫事": "favorable — 利脫事, dispersal aligns with release",
+            "占博戲": "favorable — 子孫 持世旺相 → wins",
+            "占出行": "favorable — 子孫 持世 → safe journey",
+            "占赴任": "unfavorable — 必不滿任 (won't complete the appointment)",
+        },
+        "key_principles": [
+            "發動利脫事 (moving → good for release/dispersal)",
+            "旺相亦可求財 (strong → wealth accessible)",
+            "出現更看變爻 (when manifested, check what it transforms into)",
+        ],
+        "associations": "九流、中貴、福德、醫藥、蠶禽. Palace-specific: "
+                         "乾=和尚, 震=道士, 兌=尼姑, 巽=道姑, 坎=醫藥, 離=小士, 艮=法術, 坤=師巫",
+        "shengke_logic": "子孫 生→ 妻財(good), 克→ 官鬼(bad for authority, good for dispersal)",
+    },
+    {
+        "moving_type": "兄弟",
+        "source_lines": "271-279",
+        "verse": "兄弟獨發，為詐為虛；若乘旺相，財破嗟吁。",
+        "epithet": "劫財之神",
+        "general_effect": "Deception and emptiness. Robs wealth (克 妻財). "
+                          "Moving = 虛詐不實. Strong = 口舌憂疑破財.",
+        "domain_effects": {
+            "占求財": "very unfavorable — 劫財, directly destroys wealth",
+            "占婚姻": "unfavorable — 兄弟持世不成; 克妻之兆",
+            "占人口": "unfavorable — 克妻",
+            "占征戰": "unfavorable — 凶 (兄弟獨發凶)",
+            "占脫事": "neutral — 凶不凶吉不吉",
+        },
+        "key_principles": [
+            "大忌隱伏 (worst when hidden under 世)",
+            "動發主虛詐不實之事 (moving = unreal, deceptive)",
+            "大怕化鬼爻凶 (transforming into 官鬼 = worst outcome)",
+            "旺相主口舌憂疑破財 (strong → arguments, doubt, financial loss)",
+        ],
+        "shengke_logic": "兄弟 克→ 妻財(bad), 生→ 子孫(neutral). Same element as palace → no internal generation.",
+    },
+    {
+        "moving_type": "父母",
+        "source_lines": "283-298",
+        "verse": "父母獨發，重迭艱辛；若乘旺相，文書可成。",
+        "epithet": "重迭之神",
+        "general_effect": "Complication and duplication. Documents layer upon documents. "
+                          "Only favorable for document-related matters when 旺相.",
+        "domain_effects": {
+            "占科舉": "favorable if 旺相 — 文書可成, 趲補名缺",
+            "占求財": "unfavorable — 父母 克 子孫 (cuts wealth source)",
+            "占子女": "unfavorable — 父母 克 子孫",
+            "占疾病": "mixed — 無藥 if 父持世; documents/prescriptions become obstacles",
+            "占官事": "favorable — 父母 assists 官鬼 (輔神 of 官用)",
+        },
+        "key_principles": [
+            "大忌出現發動 (worst when visible and moving)",
+            "父母有兩重 (parents have two layers: grandparents + parents → 重迭)",
+            "旺相尚自重迭艱辛 (even strong = complications)",
+            "休囚不可憑準 (weak = completely unreliable)",
+        ],
+        "dongzhi_rules": [
+            "占官上馬: 文書爻入墓絕日去 (墓=store, 絕=stop)",
+            "占自身回家: 世絕墓日動身, 日辰沖便歸",
+            "化出爻生合世 or 刑克沖害世 → this matter holds you back",
+        ],
+        "shengke_logic": "父母 克→ 子孫(bad for offspring/wealth-source), 生→ 官鬼(good for authority)",
+    },
+    {
+        "moving_type": "官鬼",
+        "source_lines": "302-307",
+        "verse": "官鬼獨發，為欺為盜；若臨吉神，功名可望。",
+        "epithet": "官史",
+        "general_effect": "Threat or opportunity. With 吉神 (favorable spirits) → "
+                          "career advancement, prestige. With 囚神 → lawsuits, theft, harm.",
+        "domain_effects": {
+            "占科舉": "favorable if 臨吉神 — 立身清高, 功名可望",
+            "占求財": "mixed — 鬼旺 can mean obstacles but also 'legitimate business'",
+            "占疾病": "unfavorable — 官鬼 = the illness itself; 獨發大忌",
+            "占詞訟": "depends — plaintiff wants 鬼旺, defendant wants 鬼衰",
+            "占脫事": "unfavorable — 鬼爻旺相獨發凶",
+        },
+        "key_principles": [
+            "臨吉神 → 功名清高 (with auspicious spirits → clean reputation)",
+            "臨囚神 → 興訟賊盜弄魅害人 (with inauspicious → lawsuits, theft, ghostly harm)",
+        ],
+        "shengke_logic": "官鬼 克→ 兄弟(controls rivalry), 生→ 父母(supports documents)",
+    },
+    {
+        "moving_type": "妻財",
+        "source_lines": "311-317",
+        "verse": "妻財獨發，生鬼傷父；問病難瘳，占親無路。",
+        "epithet": "生鬼傷父之神",
+        "general_effect": "Wealth in motion generates threats (生鬼) and destroys "
+                          "documents/parents (克父). Generally: 宜旺不宜空, 宜靜不宜動.",
+        "domain_effects": {
+            "占求財": "favorable only for 脫貨 (selling goods) — wants 財 moving",
+            "占疾病": "unfavorable — 問病難瘳 (illness hard to cure)",
+            "占婚姻": "unfavorable — 財動必克翁姑 (moving wealth harms in-laws)",
+            "占詞訟": "unfavorable — 主克文書 (destroys documentation)",
+            "占脫貨": "favorable — 要財爻發動 (needs wealth moving to sell goods)",
+        },
+        "key_principles": [
+            "財動克父 (moving wealth destroys 父母 = documents, authority support)",
+            "亦能生鬼 (also generates 官鬼 = threats/authority)",
+            "宜旺不宜空 (should be strong, not void)",
+            "宜靜不宜動 (should be still, not moving — exception: 占脫貨)",
+            "財鬼俱動 → 父有元神而翁姑不克,文書有成 (both moving: mutual support)",
+        ],
+        "shengke_logic": "妻財 克→ 父母(bad for docs/parents), 生→ 官鬼(activates authority/threat)",
+    },
+]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Litigation-specific 化爻 patterns (lines 699-703)
+# ═══════════════════════════════════════════════════════════════════════════
+
+LITIGATION_HUAYAO = {
+    "source_lines": "699-703",
+    "domain": "占詞訟",
+    "patterns": [
+        {"type": "財化財", "meaning": "雖有理而不勝 — have reason but won't win"},
+        {"type": "官化官", "meaning": "推移主有詐偽事在後 — delay, deception will follow"},
+        {"type": "父化父", "meaning": "事重迭遲遲未決 — matter compounds, slow resolution"},
+        {"type": "子化子", "meaning": "主幹連小口 — involves children/dependents"},
+        {"type": "兄化兄", "meaning": "主對頭爭執 — opponent disputes"},
+    ],
+}
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Analysis
+# ═══════════════════════════════════════════════════════════════════════════
+
+def analyze():
+    """Print structured analysis."""
+    print("=" * 60)
+    print("§V.2: 獨發 PATTERNS")
+    print("=" * 60)
+
+    # Foundational rules summary
+    print(f"\n  FOUNDATIONAL RULES:")
+    for key, f in FOUNDATIONAL.items():
+        print(f"\n  ┌─ {f['title']} (lines {f['source_lines']})")
+        print(f"  │  {f['verse']}")
+        for r in f['rules'][:3]:
+            print(f"  │  • {r}")
+        if len(f['rules']) > 3:
+            print(f"  │  ... ({len(f['rules'])-3} more)")
+        print(f"  └")
+
+    # 獨發 patterns
+    print(f"\n  獨發 PATTERNS:")
+    print(f"\n  {'Type':6s} {'Epithet':12s} {'Effect':50s}")
+    print(f"  {'─'*6} {'─'*12} {'─'*50}")
+    for p in DUFA_PATTERNS:
+        effect = p['general_effect'][:50]
+        print(f"  {p['moving_type']:4s}   {p['epithet']:10s}   {effect}")
+
+    # Domain effect matrix
+    all_domains = set()
+    for p in DUFA_PATTERNS:
+        all_domains |= set(p['domain_effects'].keys())
+    domains = sorted(all_domains)
+
+    print(f"\n  DOMAIN EFFECT MATRIX:")
+    types = [p['moving_type'] for p in DUFA_PATTERNS]
+    print(f"  {'Domain':12s} " + " ".join(f"{t:>4}" for t in types))
+    print(f"  {'─'*12} " + " ".join("────" for _ in types))
+
+    for domain in domains:
+        cells = []
+        for p in DUFA_PATTERNS:
+            effect = p['domain_effects'].get(domain, "—")
+            if effect.startswith("favorable"):
+                cells.append("  + ")
+            elif effect.startswith("very unfavorable"):
+                cells.append(" -- ")
+            elif effect.startswith("unfavorable"):
+                cells.append("  - ")
+            elif effect.startswith("mixed") or effect.startswith("depends"):
+                cells.append("  ± ")
+            elif effect.startswith("neutral"):
+                cells.append("  · ")
+            else:
+                cells.append("  · ")
+        print(f"  {domain:12s} {''.join(cells)}")
+
+    # 生克 logic summary
+    print(f"\n  生克 CHAIN:")
+    print(f"    子孫 ──生→ 妻財 ──克→ 父母 ──克→ 子孫 (cycle)")
+    print(f"    子孫 ──克→ 官鬼 ──克→ 兄弟 ──克→ 妻財 (cycle)")
+    print(f"    官鬼 ──生→ 父母        父母 ──生→ 官鬼")
+    print(f"    妻財 ──生→ 官鬼        子孫 ──生→ 妻財")
+
+    print(f"\n  Key insight: each type moving has exactly ONE positive domain")
+    print(f"  and multiple negative ones. The positive aligns with what")
+    print(f"  that type's 生克 network naturally supports.")
+
+    # Litigation patterns
+    print(f"\n  LITIGATION-SPECIFIC 化爻 (占詞訟 lines {LITIGATION_HUAYAO['source_lines']}):")
+    for p in LITIGATION_HUAYAO['patterns']:
+        print(f"    {p['type']}: {p['meaning']}")
+
+
+def main():
+    analyze()
+
+    # Build output
+    output = {
+        "foundational_rules": FOUNDATIONAL,
+        "dufa_patterns": DUFA_PATTERNS,
+        "litigation_huayao": LITIGATION_HUAYAO,
+    }
+
+    out_path = HERE / "hzl_dufa.json"
+    out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False))
+    print(f"\n→ Wrote to {out_path}")
+
+
+if __name__ == "__main__":
+    main()

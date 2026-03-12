@@ -1,0 +1,6194 @@
+[
+  {
+    "hex_val": 0,
+    "hex_binary": "000000",
+    "name": "Kun",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "亥",
+    "guashen_element": "Water",
+    "guashen_line": 5,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 2,
+      "父母": 1,
+      "官鬼": 1,
+      "妻財": 1,
+      "子孫": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 1,
+    "hex_binary": "000001",
+    "name": "Fu",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "子",
+    "guashen_element": "Water",
+    "guashen_line": 1,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "官鬼": 1,
+      "兄弟": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 2,
+    "hex_binary": "000010",
+    "name": "Shi",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 1,
+      "官鬼": 2,
+      "妻財": 1,
+      "兄弟": 1,
+      "父母": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 3,
+    "hex_binary": "000011",
+    "name": "Lin",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "丑",
+    "guashen_element": "Earth",
+    "guashen_line": 3,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "官鬼": 1,
+      "兄弟": 2,
+      "妻財": 1,
+      "子孫": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 4,
+    "hex_binary": "000100",
+    "name": "Qian",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "戌",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 1,
+      "兄弟": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 5,
+    "hex_binary": "000101",
+    "name": "Ming Yi",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": 6,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 1,
+      "官鬼": 2,
+      "兄弟": 2,
+      "父母": 1
+    },
+    "missing_liuqin": [
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 6,
+    "hex_binary": "000110",
+    "name": "Sheng",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": 3,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 2,
+      "官鬼": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 7,
+    "hex_binary": "000111",
+    "name": "Tai",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": 2,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "癸",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "桑柘木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "癸",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "癸",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "官鬼": 1,
+      "兄弟": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 8,
+    "hex_binary": "001000",
+    "name": "Yu",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "午",
+    "guashen_element": "Fire",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "子孫": 1,
+      "兄弟": 2,
+      "父母": 1
+    },
+    "missing_liuqin": [
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 9,
+    "hex_binary": "001001",
+    "name": "Zhen",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "亥",
+    "guashen_element": "Water",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "兄弟": 2,
+      "妻財": 2
+    },
+    "missing_liuqin": [
+      "子孫",
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 10,
+    "hex_binary": "001010",
+    "name": "Xie",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "丑",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 2,
+      "妻財": 2,
+      "子孫": 1,
+      "父母": 1
+    },
+    "missing_liuqin": [
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 11,
+    "hex_binary": "001011",
+    "name": "Gui Mei",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "官鬼": 1,
+      "妻財": 2,
+      "父母": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "兄弟"
+    ]
+  },
+  {
+    "hex_val": 12,
+    "hex_binary": "001100",
+    "name": "Xiao Guo",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 1,
+      "兄弟": 1,
+      "子孫": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 13,
+    "hex_binary": "001101",
+    "name": "Feng",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "戌",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "官鬼": 2,
+      "兄弟": 2
+    },
+    "missing_liuqin": [
+      "妻財",
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 14,
+    "hex_binary": "001110",
+    "name": "Heng",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": 5,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 2,
+      "官鬼": 1,
+      "兄弟": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 15,
+    "hex_binary": "001111",
+    "name": "Da Zhuang",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "官鬼": 2,
+      "兄弟": 2
+    },
+    "missing_liuqin": [
+      "子孫",
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 16,
+    "hex_binary": "010000",
+    "name": "Bi",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 2,
+      "父母": 2,
+      "官鬼": 2
+    },
+    "missing_liuqin": [
+      "妻財",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 17,
+    "hex_binary": "010001",
+    "name": "Zhun",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "未",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 1,
+      "子孫": 2,
+      "官鬼": 2,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 18,
+    "hex_binary": "010010",
+    "name": "Kan",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "亥",
+    "guashen_element": "Water",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "官鬼": 2,
+      "妻財": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 19,
+    "hex_binary": "010011",
+    "name": "Jie",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "子",
+    "guashen_element": "Water",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "子孫": 2,
+      "官鬼": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 20,
+    "hex_binary": "010100",
+    "name": "Jian",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 2,
+      "兄弟": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 21,
+    "hex_binary": "010101",
+    "name": "Ji Ji",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": 4,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "官鬼": 2,
+      "兄弟": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 22,
+    "hex_binary": "010110",
+    "name": "Jing",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "辰",
+    "guashen_element": "Earth",
+    "guashen_line": 5,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 1,
+      "官鬼": 1,
+      "兄弟": 1,
+      "子孫": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 23,
+    "hex_binary": "010111",
+    "name": "Xu",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 6,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 1,
+      "官鬼": 2,
+      "兄弟": 2,
+      "父母": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 24,
+    "hex_binary": "011000",
+    "name": "Cui",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "未",
+    "guashen_element": "Earth",
+    "guashen_line": 1,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 2,
+      "妻財": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 25,
+    "hex_binary": "011001",
+    "name": "Sui",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "兄弟": 2,
+      "妻財": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 26,
+    "hex_binary": "011010",
+    "name": "Kun",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "午",
+    "guashen_element": "Fire",
+    "guashen_line": 3,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 2,
+      "官鬼": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 27,
+    "hex_binary": "011011",
+    "name": "Dui",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "亥",
+    "guashen_element": "Water",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "官鬼": 2,
+      "妻財": 2,
+      "父母": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 28,
+    "hex_binary": "011100",
+    "name": "Xian",
+    "palace": "Dui ☱",
+    "palace_element": "Metal",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 2,
+      "兄弟": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 29,
+    "hex_binary": "011101",
+    "name": "Ge",
+    "palace": "Kan ☵",
+    "palace_element": "Water",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": 1,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "兄弟",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "妻財",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "子孫",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "官鬼": 2,
+      "兄弟": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "父母"
+    ]
+  },
+  {
+    "hex_val": 30,
+    "hex_binary": "011110",
+    "name": "Da Guo",
+    "palace": "Zhen ☳",
+    "palace_element": "Wood",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": 5,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 1,
+      "官鬼": 1,
+      "子孫": 1,
+      "兄弟": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 31,
+    "hex_binary": "011111",
+    "name": "Guai",
+    "palace": "Kun ☷",
+    "palace_element": "Earth",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "辰",
+    "guashen_element": "Earth",
+    "guashen_line": 3,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "未",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "巳",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 1,
+      "官鬼": 2,
+      "兄弟": 2,
+      "父母": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 32,
+    "hex_binary": "100000",
+    "name": "Bo",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "戌",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 2,
+      "妻財": 1,
+      "兄弟": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 33,
+    "hex_binary": "100001",
+    "name": "Yi",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "兄弟": 1,
+      "妻財": 2,
+      "子孫": 1,
+      "官鬼": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 34,
+    "hex_binary": "100010",
+    "name": "Meng",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "子孫": 2,
+      "兄弟": 2,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 35,
+    "hex_binary": "100011",
+    "name": "Sun",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": 6,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 1,
+      "兄弟": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 36,
+    "hex_binary": "100100",
+    "name": "Gen",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "巳",
+    "guashen_element": "Fire",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 2,
+      "父母": 2,
+      "子孫": 2
+    },
+    "missing_liuqin": [
+      "妻財",
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 37,
+    "hex_binary": "100101",
+    "name": "Bi",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "子",
+    "guashen_element": "Water",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "官鬼": 1,
+      "兄弟": 2,
+      "妻財": 1,
+      "父母": 1,
+      "子孫": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 38,
+    "hex_binary": "100110",
+    "name": "Gu",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 1,
+      "官鬼": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "兄弟"
+    ]
+  },
+  {
+    "hex_val": 39,
+    "hex_binary": "100111",
+    "name": "Da Chu",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "丑",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 6,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 1,
+      "官鬼": 1,
+      "兄弟": 2,
+      "父母": 1,
+      "子孫": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 40,
+    "hex_binary": "101000",
+    "name": "Jin",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": 3,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 1,
+      "妻財": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "兄弟"
+    ]
+  },
+  {
+    "hex_val": 41,
+    "hex_binary": "101001",
+    "name": "Shi He",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "戌",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "兄弟": 2,
+      "妻財": 2
+    },
+    "missing_liuqin": [
+      "子孫",
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 42,
+    "hex_binary": "101010",
+    "name": "Wei Ji",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "子孫": 2,
+      "兄弟": 1,
+      "官鬼": 1
+    },
+    "missing_liuqin": [
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 43,
+    "hex_binary": "101011",
+    "name": "Kui",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": 2,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "官鬼": 2,
+      "兄弟": 2,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 44,
+    "hex_binary": "101100",
+    "name": "Lu",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "午",
+    "guashen_element": "Fire",
+    "guashen_line": 2,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "兄弟": 1,
+      "妻財": 1,
+      "父母": 1,
+      "官鬼": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 45,
+    "hex_binary": "101101",
+    "name": "Li",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "巳",
+    "guashen_element": "Fire",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "子孫": 2,
+      "官鬼": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 46,
+    "hex_binary": "101110",
+    "name": "Ding",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "丑",
+    "guashen_element": "Earth",
+    "guashen_line": 1,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "官鬼": 2,
+      "妻財": 1,
+      "父母": 1
+    },
+    "missing_liuqin": [
+      "兄弟"
+    ]
+  },
+  {
+    "hex_val": 47,
+    "hex_binary": "101111",
+    "name": "Da You",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": 2,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 6,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 2,
+      "妻財": 2,
+      "父母": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 48,
+    "hex_binary": "110000",
+    "name": "Guan",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": 6,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 1,
+      "妻財": 1,
+      "子孫": 1,
+      "兄弟": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 49,
+    "hex_binary": "110001",
+    "name": "Yi",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "兄弟": 1,
+      "妻財": 2,
+      "官鬼": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 50,
+    "hex_binary": "110010",
+    "name": "Huan",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "辰",
+    "guashen_element": "Earth",
+    "guashen_line": 2,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "子孫": 2,
+      "兄弟": 1,
+      "官鬼": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 51,
+    "hex_binary": "110011",
+    "name": "Zhong Fu",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "酉",
+    "guashen_element": "Metal",
+    "guashen_line": 6,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "官鬼": 1,
+      "兄弟": 2,
+      "妻財": 1,
+      "子孫": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 52,
+    "hex_binary": "110100",
+    "name": "Jian",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "妻財",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 2,
+      "父母": 1,
+      "子孫": 2,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 53,
+    "hex_binary": "110101",
+    "name": "Jia Ren",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "未",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "兄弟": 1,
+      "妻財": 2,
+      "父母": 2,
+      "官鬼": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 54,
+    "hex_binary": "110110",
+    "name": "Xun",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "巳",
+    "guashen_element": "Fire",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "妻財": 2,
+      "父母": 2,
+      "官鬼": 2
+    },
+    "missing_liuqin": [
+      "兄弟",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 55,
+    "hex_binary": "110111",
+    "name": "Xiao Chu",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "子",
+    "guashen_element": "Water",
+    "guashen_line": 1,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 5,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "兄弟": 1,
+      "妻財": 2,
+      "官鬼": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 56,
+    "hex_binary": "111000",
+    "name": "Pi",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 3,
+    "rank_name": "三世",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "申",
+    "guashen_element": "Metal",
+    "guashen_line": 5,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "乙",
+        "branch": "未",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "乙",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "乙",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 2,
+      "妻財": 1,
+      "兄弟": 1
+    },
+    "missing_liuqin": [
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 57,
+    "hex_binary": "111001",
+    "name": "Wu Wang",
+    "palace": "Xun ☴",
+    "palace_element": "Wood",
+    "palace_rank": 4,
+    "rank_name": "四世",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "庚",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "父母",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "庚",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "松柏木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "庚",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "白蠟金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "父母",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "妻財",
+        "feifu_branch": "酉",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "兄弟": 1,
+      "妻財": 2,
+      "子孫": 1,
+      "官鬼": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 58,
+    "hex_binary": "111010",
+    "name": "Song",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 6,
+    "rank_name": "游魂",
+    "shi_line": 4,
+    "ying_line": 1,
+    "guashen_branch": "卯",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "戊",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "戊",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "大林木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 3,
+        "stem": "戊",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "天上火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "子孫": 2,
+      "兄弟": 2,
+      "妻財": 1
+    },
+    "missing_liuqin": [
+      "官鬼"
+    ]
+  },
+  {
+    "hex_val": 59,
+    "hex_binary": "111011",
+    "name": "Lu",
+    "palace": "Gen ☶",
+    "palace_element": "Earth",
+    "palace_rank": 5,
+    "rank_name": "五世",
+    "shi_line": 5,
+    "ying_line": 2,
+    "guashen_branch": "辰",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丁",
+        "branch": "巳",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丁",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "爐中火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "丁",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "澗下水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "子孫",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "父母",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 1,
+      "兄弟": 2,
+      "子孫": 1
+    },
+    "missing_liuqin": [
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 60,
+    "hex_binary": "111100",
+    "name": "Dun",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 2,
+    "rank_name": "二世",
+    "shi_line": 2,
+    "ying_line": 5,
+    "guashen_branch": "未",
+    "guashen_element": "Earth",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "丙",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "沙中土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "丙",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "天河水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "丙",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "山下火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "官鬼": 2,
+      "兄弟": 2
+    },
+    "missing_liuqin": [
+      "妻財",
+      "子孫"
+    ]
+  },
+  {
+    "hex_val": 61,
+    "hex_binary": "111101",
+    "name": "Tong Ren",
+    "palace": "Li ☲",
+    "palace_element": "Fire",
+    "palace_rank": 7,
+    "rank_name": "歸魂",
+    "shi_line": 3,
+    "ying_line": 6,
+    "guashen_branch": "寅",
+    "guashen_element": "Wood",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "己",
+        "branch": "卯",
+        "element": "Wood",
+        "liuqin": "父母",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "城頭土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "己",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "霹靂火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 3,
+        "stem": "己",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "官鬼",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "平地木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "兄弟",
+        "feifu_branch": "卯",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "父母",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "妻財",
+        "feifu_branch": "丑",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "子孫",
+        "feifu_branch": "亥",
+        "feifu_element": "Water",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 1,
+      "子孫": 2,
+      "官鬼": 1,
+      "兄弟": 1,
+      "妻財": 1
+    },
+    "missing_liuqin": []
+  },
+  {
+    "hex_val": 62,
+    "hex_binary": "111110",
+    "name": "Gou",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 1,
+    "rank_name": "一世",
+    "shi_line": 1,
+    "ying_line": 4,
+    "guashen_branch": "午",
+    "guashen_element": "Fire",
+    "guashen_line": 4,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "辛",
+        "branch": "丑",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "壁上土",
+        "nayin_element": "Earth"
+      },
+      {
+        "position": 2,
+        "stem": "辛",
+        "branch": "亥",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "釵釧金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 3,
+        "stem": "辛",
+        "branch": "酉",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "石榴木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "父母": 2,
+      "子孫": 1,
+      "兄弟": 2,
+      "官鬼": 1
+    },
+    "missing_liuqin": [
+      "妻財"
+    ]
+  },
+  {
+    "hex_val": 63,
+    "hex_binary": "111111",
+    "name": "Qian",
+    "palace": "Qian ☰",
+    "palace_element": "Metal",
+    "palace_rank": 0,
+    "rank_name": "本宮",
+    "shi_line": 6,
+    "ying_line": 3,
+    "guashen_branch": "巳",
+    "guashen_element": "Fire",
+    "guashen_line": null,
+    "lines": [
+      {
+        "position": 1,
+        "stem": "甲",
+        "branch": "子",
+        "element": "Water",
+        "liuqin": "子孫",
+        "feifu_branch": "子",
+        "feifu_element": "Water",
+        "feifu_liuqin": "子孫",
+        "nayin_name": "海中金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 2,
+        "stem": "甲",
+        "branch": "寅",
+        "element": "Wood",
+        "liuqin": "妻財",
+        "feifu_branch": "寅",
+        "feifu_element": "Wood",
+        "feifu_liuqin": "妻財",
+        "nayin_name": "大溪水",
+        "nayin_element": "Water"
+      },
+      {
+        "position": 3,
+        "stem": "甲",
+        "branch": "辰",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "辰",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "覆燈火",
+        "nayin_element": "Fire"
+      },
+      {
+        "position": 4,
+        "stem": "壬",
+        "branch": "午",
+        "element": "Fire",
+        "liuqin": "官鬼",
+        "feifu_branch": "午",
+        "feifu_element": "Fire",
+        "feifu_liuqin": "官鬼",
+        "nayin_name": "楊柳木",
+        "nayin_element": "Wood"
+      },
+      {
+        "position": 5,
+        "stem": "壬",
+        "branch": "申",
+        "element": "Metal",
+        "liuqin": "兄弟",
+        "feifu_branch": "申",
+        "feifu_element": "Metal",
+        "feifu_liuqin": "兄弟",
+        "nayin_name": "劍鋒金",
+        "nayin_element": "Metal"
+      },
+      {
+        "position": 6,
+        "stem": "壬",
+        "branch": "戌",
+        "element": "Earth",
+        "liuqin": "父母",
+        "feifu_branch": "戌",
+        "feifu_element": "Earth",
+        "feifu_liuqin": "父母",
+        "nayin_name": "大海水",
+        "nayin_element": "Water"
+      }
+    ],
+    "liuqin_census": {
+      "子孫": 1,
+      "妻財": 1,
+      "父母": 2,
+      "官鬼": 1,
+      "兄弟": 1
+    },
+    "missing_liuqin": []
+  }
+]

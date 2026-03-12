@@ -12,6 +12,9 @@ Phase 3 answered: **what IS it?** — the unique complement-respecting surjectio
 
 ---
 
+
+
+
 ## The answer
 
 The I Ching's 五行 assignment is a complement-respecting surjection f: F₂³ → Z₅ satisfying f(x ⊕ 111) = −f(x) mod 5. It is **unique up to the natural symmetry** Stab(111) × Aut(Z₅), which acts regularly (free + transitive) on the 96 Orbit-C surjections.

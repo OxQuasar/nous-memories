@@ -84,18 +84,9 @@ This requires crossing temporal.json (60 states) with valence_torus.json (per-ce
 
 ## 6. 火珠林 operational atlas
 
-**Status: open, next major atlas**
+**Status: RESOLVED → atlas-hzl workflow**
 
-The 梅花 atlas mapped one of two operational projections. 火珠林 uses the same hexagram space but evaluates through 六親 × 日辰 activation — a time-dependent 五行 overlay with a floating daily reference (日辰), vs 梅花's fixed 體 reference. The two systems make structurally different cuts through the same algebra.
-
-**What a 火珠林 atlas would map:**
-- 384-state table with 六親 evaluations per line position
-- 用神 activation rules (which line "leads" the reading, by domain)
-- 日辰 × state interaction (how daily element cycles modulate readings)
-- The contrast with 梅花: fixed reference (體) vs floating reference (日辰)
-- Whether 火珠林's 4/5 ceiling (via 日辰) produces a structurally different arc space than 梅花's 2/5 ceiling
-
-**Dependency:** 火珠林 text extraction (partial in sy-divination.md), atlas.json, temporal.json.
+See atlas-hzl/findings.md for complete results. Summary: 11 data files, 13 scripts, 6 sections (static profiles, seasonal activation, 日辰 layer, 動爻 layer, network reading, domain bindings). Key structural results: shell⊥core confirmed at temporal level (MI=0), anti-resonance theorem (fc=0 iff missing pair forms 生 pair), {4,2,2,2,2} cascade across all layers, 游魂 universal 飛伏 completeness, 用神 evaluation protocol formalized as 7-step algorithm. 31 domains extracted (26 standard + 5 special), classified by 2D taxonomy (layer × mode).
 
 ---
 
@@ -367,3 +358,13 @@ Verified: (3,5) → 1 orbit; (4,13) → 960 = 5!×2³; (5,29) → ~6.4×10¹². 
 
 ### R59. 互 transition matrix: type-invariant at (3,5), complete invariant at (4,13) (unification Phase 3)
 **VERIFIED.** At (3,5), all 16 surjections within a type distribution produce the SAME 5×5 transition matrix T. At (4,13), every surjection produces a DISTINCT 13×13 T (verified for first 200 surjections: 200 distinct T matrices). The transition from constant to distinguishing occurs because p×p matrix resolution (25 vs 169 entries) exceeds the moduli at (4,13) but not at (3,5). (unification/within_type_orbits.py)
+
+### R60. 火珠林 operational atlas (atlas-hzl)
+**COMPLETE.** The shell projection operationalized across 6 sections:
+- §I: 64 static profiles with 納甲/六親/飛伏/納音/卦身. 世/應 asymmetry (妻財+官鬼=59% at 世). 游魂=universal completeness (8/8). Earth universality proven by pigeonhole.
+- §II: 320 seasonal states (64×5). 2/5 ceiling confirmed. Anti-resonance: fc=0 ⟺ missing pair is a 生 pair (10/320 states). 6 immune hexagrams (all Fire/Metal missing克 pair).
+- §III: 768 日辰 interactions. Perfect balance theorem (6/6/6 per hexagram). Shell⊥core MI=0 (constructive proof: 13 branch-sharing groups with different 互). 旬空 uniform (1.00 void lines/state). Three-layer architecture documented (天干/地支/納音).
+- §IV: 384 transformations. All 25 化爻 types realized. 官鬼 target deficit (55/384=14.3%, root cause: {4,2,2,2,2}). Basin crossing binary by line (L3/L4=100%, others=0%).
+- §V: 飛伏 diagnostic table (9 cases, 財/鬼 only = 80% coverage by design). 獨發 patterns (兄弟=zero positive domains). 用神 7-step protocol formalized with data file mapping.
+- §VI: 31 domains → 8 structural clusters + 5 special protocols classified by 2D taxonomy (layer×mode). 卦身 conditional sixth variable (41% on-line).
+Central synthesis: tangent vector (梅花) vs local observable (火珠林). Two systems exhaust the hexagram's information through orthogonal temporal channels. (atlas-hzl/findings.md)

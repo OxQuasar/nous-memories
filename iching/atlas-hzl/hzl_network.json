@@ -1,0 +1,1686 @@
+{
+  "snapshots": [
+    {
+      "hex_val": 0,
+      "name": "Kun",
+      "palace": "Kun ☷",
+      "palace_element": "Earth",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": 5,
+      "missing_liuqin": [],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "未",
+          "element": "Earth",
+          "liuqin": "兄弟",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "巳",
+          "element": "Fire",
+          "liuqin": "父母",
+          "strength": "相",
+          "richen_interactions": [
+            "克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "卯",
+          "element": "Wood",
+          "liuqin": "官鬼",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "丑",
+          "element": "Earth",
+          "liuqin": "兄弟",
+          "strength": "死",
+          "richen_interactions": [
+            "被克",
+            "合"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "亥",
+          "element": "Water",
+          "liuqin": "妻財",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "酉",
+          "element": "Metal",
+          "liuqin": "子孫",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "未(Earth) 兄弟",
+        "new": "子(Water) 妻財",
+        "type": "兄化財"
+      },
+      "topology": {
+        "沖": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "合": [],
+        "刑": [
+          [
+            1,
+            4
+          ]
+        ],
+        "害": [],
+        "墓": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            4
+          ]
+        ],
+        "生": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "克": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "死",
+        "子孫": "囚",
+        "父母": "相",
+        "妻財": "休",
+        "官鬼": "旺"
+      },
+      "strong_liuqin": [
+        "官鬼",
+        "父母"
+      ],
+      "functional_coverage": 2
+    },
+    {
+      "hex_val": 1,
+      "name": "Fu",
+      "palace": "Kun ☷",
+      "palace_element": "Earth",
+      "rank": "一世",
+      "shi_line": 1,
+      "ying_line": 4,
+      "guashen_line": 1,
+      "missing_liuqin": [
+        "父母"
+      ],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "子",
+          "element": "Water",
+          "liuqin": "妻財",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": true,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "寅",
+          "element": "Wood",
+          "liuqin": "官鬼",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "兄弟",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 4,
+          "branch": "丑",
+          "element": "Earth",
+          "liuqin": "兄弟",
+          "strength": "死",
+          "richen_interactions": [
+            "被克",
+            "合"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 5,
+          "branch": "亥",
+          "element": "Water",
+          "liuqin": "妻財",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "酉",
+          "element": "Metal",
+          "liuqin": "子孫",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "子(Water) 妻財",
+        "new": "未(Earth) 兄弟",
+        "type": "財化兄"
+      },
+      "topology": {
+        "沖": [],
+        "合": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "刑": [],
+        "害": [],
+        "墓": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            4
+          ]
+        ],
+        "生": [
+          [
+            1,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "克": [
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "死",
+        "子孫": "囚",
+        "父母": "相",
+        "妻財": "休",
+        "官鬼": "旺"
+      },
+      "strong_liuqin": [
+        "官鬼"
+      ],
+      "functional_coverage": 1
+    },
+    {
+      "hex_val": 9,
+      "name": "Zhen",
+      "palace": "Zhen ☳",
+      "palace_element": "Wood",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": null,
+      "missing_liuqin": [
+        "子孫",
+        "官鬼"
+      ],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "子",
+          "element": "Water",
+          "liuqin": "父母",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "寅",
+          "element": "Wood",
+          "liuqin": "兄弟",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "妻財",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "子",
+          "element": "Water",
+          "liuqin": "父母",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "寅",
+          "element": "Wood",
+          "liuqin": "兄弟",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "妻財",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "子(Water) 父母",
+        "new": "未(Earth) 妻財",
+        "type": "父化財"
+      },
+      "topology": {
+        "沖": [],
+        "合": [],
+        "刑": [],
+        "害": [],
+        "墓": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            3
+          ]
+        ],
+        "生": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "克": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "旺",
+        "子孫": "相",
+        "父母": "休",
+        "妻財": "死",
+        "官鬼": "囚"
+      },
+      "strong_liuqin": [
+        "兄弟"
+      ],
+      "functional_coverage": 1
+    },
+    {
+      "hex_val": 18,
+      "name": "Kan",
+      "palace": "Kan ☵",
+      "palace_element": "Water",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": null,
+      "missing_liuqin": [
+        "兄弟",
+        "父母"
+      ],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "寅",
+          "element": "Wood",
+          "liuqin": "子孫",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "官鬼",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "午",
+          "element": "Fire",
+          "liuqin": "妻財",
+          "strength": "相",
+          "richen_interactions": [
+            "克",
+            "沖"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "寅",
+          "element": "Wood",
+          "liuqin": "子孫",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "官鬼",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "午",
+          "element": "Fire",
+          "liuqin": "妻財",
+          "strength": "相",
+          "richen_interactions": [
+            "克",
+            "沖"
+          ],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "寅(Wood) 子孫",
+        "new": "巳(Fire) 妻財",
+        "type": "孫化財"
+      },
+      "topology": {
+        "沖": [],
+        "合": [],
+        "刑": [],
+        "害": [],
+        "墓": [
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "生": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "克": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "休",
+        "子孫": "旺",
+        "父母": "囚",
+        "妻財": "相",
+        "官鬼": "死"
+      },
+      "strong_liuqin": [
+        "妻財",
+        "子孫"
+      ],
+      "functional_coverage": 2
+    },
+    {
+      "hex_val": 36,
+      "name": "Gen",
+      "palace": "Gen ☶",
+      "palace_element": "Earth",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": null,
+      "missing_liuqin": [
+        "妻財",
+        "官鬼"
+      ],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "兄弟",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "午",
+          "element": "Fire",
+          "liuqin": "父母",
+          "strength": "相",
+          "richen_interactions": [
+            "克",
+            "沖"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "申",
+          "element": "Metal",
+          "liuqin": "子孫",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "兄弟",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "午",
+          "element": "Fire",
+          "liuqin": "父母",
+          "strength": "相",
+          "richen_interactions": [
+            "克",
+            "沖"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "申",
+          "element": "Metal",
+          "liuqin": "子孫",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "辰(Earth) 兄弟",
+        "new": "卯(Wood) 官鬼",
+        "type": "兄化鬼"
+      },
+      "topology": {
+        "沖": [],
+        "合": [],
+        "刑": [],
+        "害": [],
+        "墓": [
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "生": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "克": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "死",
+        "子孫": "囚",
+        "父母": "相",
+        "妻財": "休",
+        "官鬼": "旺"
+      },
+      "strong_liuqin": [
+        "父母"
+      ],
+      "functional_coverage": 1
+    },
+    {
+      "hex_val": 45,
+      "name": "Li",
+      "palace": "Li ☲",
+      "palace_element": "Fire",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": null,
+      "missing_liuqin": [
+        "兄弟",
+        "妻財"
+      ],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "卯",
+          "element": "Wood",
+          "liuqin": "父母",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "丑",
+          "element": "Earth",
+          "liuqin": "子孫",
+          "strength": "死",
+          "richen_interactions": [
+            "被克",
+            "合"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "亥",
+          "element": "Water",
+          "liuqin": "官鬼",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "卯",
+          "element": "Wood",
+          "liuqin": "父母",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "丑",
+          "element": "Earth",
+          "liuqin": "子孫",
+          "strength": "死",
+          "richen_interactions": [
+            "被克",
+            "合"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "亥",
+          "element": "Water",
+          "liuqin": "官鬼",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "卯(Wood) 父母",
+        "new": "辰(Earth) 子孫",
+        "type": "父化孫"
+      },
+      "topology": {
+        "沖": [],
+        "合": [],
+        "刑": [],
+        "害": [],
+        "墓": [],
+        "生": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            4
+          ]
+        ],
+        "克": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "相",
+        "子孫": "死",
+        "父母": "旺",
+        "妻財": "囚",
+        "官鬼": "休"
+      },
+      "strong_liuqin": [
+        "父母"
+      ],
+      "functional_coverage": 1
+    },
+    {
+      "hex_val": 54,
+      "name": "Xun",
+      "palace": "Xun ☴",
+      "palace_element": "Wood",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": null,
+      "missing_liuqin": [
+        "兄弟",
+        "子孫"
+      ],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "丑",
+          "element": "Earth",
+          "liuqin": "妻財",
+          "strength": "死",
+          "richen_interactions": [
+            "被克",
+            "合"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "亥",
+          "element": "Water",
+          "liuqin": "父母",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "酉",
+          "element": "Metal",
+          "liuqin": "官鬼",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "丑",
+          "element": "Earth",
+          "liuqin": "妻財",
+          "strength": "死",
+          "richen_interactions": [
+            "被克",
+            "合"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "亥",
+          "element": "Water",
+          "liuqin": "父母",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "酉",
+          "element": "Metal",
+          "liuqin": "官鬼",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "丑(Earth) 妻財",
+        "new": "子(Water) 父母",
+        "type": "財化父"
+      },
+      "topology": {
+        "沖": [],
+        "合": [],
+        "刑": [],
+        "害": [],
+        "墓": [
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            4
+          ]
+        ],
+        "生": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "克": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "旺",
+        "子孫": "相",
+        "父母": "休",
+        "妻財": "死",
+        "官鬼": "囚"
+      },
+      "strong_liuqin": [],
+      "functional_coverage": 0
+    },
+    {
+      "hex_val": 63,
+      "name": "Qian",
+      "palace": "Qian ☰",
+      "palace_element": "Metal",
+      "rank": "本宮",
+      "shi_line": 6,
+      "ying_line": 3,
+      "guashen_line": null,
+      "missing_liuqin": [],
+      "lines": [
+        {
+          "pos": 1,
+          "branch": "子",
+          "element": "Water",
+          "liuqin": "子孫",
+          "strength": "休",
+          "richen_interactions": [],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 2,
+          "branch": "寅",
+          "element": "Wood",
+          "liuqin": "妻財",
+          "strength": "旺",
+          "richen_interactions": [
+            "生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 3,
+          "branch": "辰",
+          "element": "Earth",
+          "liuqin": "父母",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": false,
+          "is_ying": true
+        },
+        {
+          "pos": 4,
+          "branch": "午",
+          "element": "Fire",
+          "liuqin": "官鬼",
+          "strength": "相",
+          "richen_interactions": [
+            "克",
+            "沖"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 5,
+          "branch": "申",
+          "element": "Metal",
+          "liuqin": "兄弟",
+          "strength": "囚",
+          "richen_interactions": [
+            "被生"
+          ],
+          "is_shi": false,
+          "is_ying": false
+        },
+        {
+          "pos": 6,
+          "branch": "戌",
+          "element": "Earth",
+          "liuqin": "父母",
+          "strength": "死",
+          "richen_interactions": [
+            "被克"
+          ],
+          "is_shi": true,
+          "is_ying": false
+        }
+      ],
+      "season": "Spring",
+      "season_element": "Wood",
+      "richen_branch": "子",
+      "richen_element": "Water",
+      "dongyao": {
+        "moving_line": 1,
+        "old": "子(Water) 子孫",
+        "new": "丑(Earth) 父母",
+        "type": "孫化父"
+      },
+      "topology": {
+        "沖": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "合": [],
+        "刑": [
+          [
+            2,
+            5
+          ]
+        ],
+        "害": [],
+        "墓": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            3
+          ]
+        ],
+        "生": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "克": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "liuqin_strengths": {
+        "兄弟": "囚",
+        "子孫": "休",
+        "父母": "死",
+        "妻財": "旺",
+        "官鬼": "相"
+      },
+      "strong_liuqin": [
+        "妻財",
+        "官鬼"
+      ],
+      "functional_coverage": 2
+    }
+  ],
+  "context": {
+    "season": "Spring",
+    "richen_branch": "子",
+    "moving_line": 1
+  },
+  "eight_axes": [
+    {
+      "axis": "世",
+      "chinese_source": "世爻乃我家情由",
+      "description": "The querent's position — which line represents 'self'",
+      "data_source": "hzl_profiles.json → shi_line",
+      "evaluation": "What 六親 sits at 世? Is it the 用神? Strength? 日辰 interaction?",
+      "interactions_with": [
+        "應 (世應 生克)",
+        "日辰 (日辰 acts on 世 line)",
+        "動 (世 line moving?)"
+      ]
+    },
+    {
+      "axis": "應",
+      "chinese_source": "應爻為彼之事理",
+      "description": "The other party / external situation",
+      "data_source": "hzl_profiles.json → ying_line",
+      "evaluation": "What 六親 sits at 應? 應 vs 世 relationship? 應 動 or 靜?",
+      "interactions_with": [
+        "世 (世應 生克)",
+        "日辰 (日辰 acts on 應 line)",
+        "動 (應 line moving?)"
+      ]
+    },
+    {
+      "axis": "日",
+      "chinese_source": "日辰",
+      "description": "The day branch — external temporal influence on all lines",
+      "data_source": "hzl_richen.json → richen_interactions",
+      "evaluation": "Which lines does 日辰 生/克/沖/合/墓? Does it support or attack 用神?",
+      "interactions_with": [
+        "每一爻 (all 6 lines)",
+        "旬空 (determines void)",
+        "六神 (day stem → rotation)"
+      ]
+    },
+    {
+      "axis": "月",
+      "chinese_source": "月建/季節",
+      "description": "The month/season — determines 旺相休囚死 strength levels",
+      "data_source": "hzl_seasonal.json",
+      "evaluation": "旺相 = strong, 休 = neutral, 囚死 = weak. Determines base power of every element.",
+      "interactions_with": [
+        "每一爻 (strength of all lines)",
+        "用神 (is 用神 strong this season?)"
+      ]
+    },
+    {
+      "axis": "飛",
+      "chinese_source": "出現旺相，為久為遠",
+      "description": "Visible/flying lines — 六親 types present in the hexagram",
+      "data_source": "hzl_profiles.json → lines[].liuqin",
+      "evaluation": "Is the 用神 飛 (visible)? If so, which line(s)? Multiple = pick strongest.",
+      "interactions_with": [
+        "伏 (what's hidden behind each line)",
+        "日辰 (fly or hide?)"
+      ]
+    },
+    {
+      "axis": "伏",
+      "chinese_source": "伏藏有氣，只利暫時",
+      "description": "Hidden lines — missing 六親 types lurking under visible lines",
+      "data_source": "hzl_profiles.json → feifu + missing_liuqin, hzl_feifu_diagnostic.json",
+      "evaluation": "If 用神 is 伏, what does it hide under? Apply 9 diagnostic cases. Can 日辰 bring it out (透出)?",
+      "interactions_with": [
+        "飛 (the covering line)",
+        "日辰 (透出 condition)",
+        "旬空 (void blocks emergence)"
+      ]
+    },
+    {
+      "axis": "動",
+      "chinese_source": "獨發易取，亂動難尋",
+      "description": "Moving lines — which lines change, and what they transform into",
+      "data_source": "hzl_dongyao.json, hzl_dufa.json",
+      "evaluation": "獨發 = single mover, read that line. 亂動 = multiple, read the 旺 one. 化爻 type determines transformation outcome.",
+      "interactions_with": [
+        "靜 (non-moving lines receive effects)",
+        "用神 (does 用神 move or stay?)"
+      ]
+    },
+    {
+      "axis": "靜",
+      "chinese_source": "財官喜靜",
+      "description": "Static lines — stability, resistance to change",
+      "data_source": "implicit (complement of 動)",
+      "evaluation": "靜 lines receive effects from 動 lines. For 用神: 靜 + 旺相 = stable foundation. In some domains (marriage, wealth): 用神 靜 is better than 動.",
+      "interactions_with": [
+        "動 (moving lines act on static)",
+        "日辰 (can activate static lines via 沖)"
+      ]
+    }
+  ],
+  "eight_primitives": [
+    {
+      "primitive": "克",
+      "chinese": "克",
+      "operates_between": [
+        "line ↔ line (element)",
+        "日辰 → line (element)"
+      ],
+      "condition": "Standard 五行 克 cycle: Wood→Earth, Earth→Water, Water→Fire, Fire→Metal, Metal→Wood",
+      "effect": "Overcomes, attacks, suppresses — destructive",
+      "frequency": "6.25/hexagram (static topology); 1.2/state (日辰)"
+    },
+    {
+      "primitive": "合",
+      "chinese": "合",
+      "operates_between": [
+        "line ↔ line (branch)",
+        "日辰 ↔ line (branch)"
+      ],
+      "condition": "Six harmony pairs: 子丑, 寅亥, 卯戌, 辰酉, 巳申, 午未",
+      "effect": "Combines, binds, stabilizes — can prevent action but also secure outcome",
+      "frequency": "0.72/hexagram (static); 6/hexagram across 12 日辰 (uniform)"
+    },
+    {
+      "primitive": "刑",
+      "chinese": "刑",
+      "operates_between": [
+        "line ↔ line (branch)"
+      ],
+      "condition": "Three-punishment groups: 子↔卯, 丑↔戌↔未, 寅↔巳↔申. Self-punish: 辰辰, 午午, 酉酉, 亥亥",
+      "effect": "Punishes through friction — harm, conflict, legal trouble",
+      "frequency": "0.53/hexagram (static topology)"
+    },
+    {
+      "primitive": "害",
+      "chinese": "害",
+      "operates_between": [
+        "line ↔ line (branch)"
+      ],
+      "condition": "Six harm pairs: 子未, 丑午, 寅巳, 卯辰, 申亥, 酉戌",
+      "effect": "Covert damage — hidden harm, undermining",
+      "frequency": "0.81/hexagram (static topology)"
+    },
+    {
+      "primitive": "墓",
+      "chinese": "墓",
+      "operates_between": [
+        "line → line (element→branch)",
+        "日辰 → line"
+      ],
+      "condition": "Element graveyard: Fire→戌, Water→辰, Wood→未, Metal→丑, Earth→辰",
+      "effect": "Entombed, trapped, stored — frozen, unable to act",
+      "frequency": "2.75/hexagram (static); present in 94% of hexagrams"
+    },
+    {
+      "primitive": "旺",
+      "chinese": "旺",
+      "operates_between": [
+        "season → element"
+      ],
+      "condition": "Element matches season: Wood=Spring, Fire=Summer, Earth=Late Summer, Metal=Autumn, Water=Winter. 相 = generated by season element.",
+      "effect": "Maximum power — strong foundation, events come quickly",
+      "frequency": "2 elements 旺/相 per season → 2.4 lines/hexagram on average"
+    },
+    {
+      "primitive": "空",
+      "chinese": "空",
+      "operates_between": [
+        "旬 → line (branch)"
+      ],
+      "condition": "旬空: 2 branches absent from current 旬 of 60 甲子 cycle",
+      "effect": "Void, unrealized, empty — 真空(+死) worst, 假空(+旺) temporary",
+      "frequency": "1.0 void lines per hexagram-旬 (exact average)"
+    },
+    {
+      "primitive": "沖",
+      "chinese": "沖",
+      "operates_between": [
+        "line ↔ line (branch)",
+        "日辰 ↔ line (branch)"
+      ],
+      "condition": "Opposite branches (distance 6): 子↔午, 丑↔未, 寅↔申, 卯↔酉, 辰↔戌, 巳↔亥",
+      "effect": "Clashes — disrupts, activates, breaks 合, wakes 空. Context-dependent valence.",
+      "frequency": "0.50/hexagram (static); 6/hexagram across 12 日辰 (uniform)"
+    }
+  ]
+}

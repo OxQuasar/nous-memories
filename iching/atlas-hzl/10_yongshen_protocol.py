@@ -1,0 +1,267 @@
+#!/usr/bin/env python3
+"""
+§V.3: 用神 evaluation protocol — formalized from method.md Steps 8-10.
+
+Outputs hzl_yongshen_protocol.json: the algorithmic judgment procedure
+with references to which atlas data files provide each input.
+"""
+
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+
+PROTOCOL = {
+    "title": "火珠林 用神 Evaluation Protocol",
+    "source": "method.md Steps 8-10 + 飛伏 diagnostics + 獨發 patterns",
+    "overview": (
+        "Given a hexagram, question domain, season, 日辰, and 動爻 pattern, "
+        "the protocol evaluates the 用神's condition across 7 dimensions "
+        "to produce a judgment."
+    ),
+
+    "inputs": {
+        "hexagram": {
+            "description": "6-bit value identifying the hexagram",
+            "data_file": "hzl_profiles.json",
+            "provides": ["palace", "六親 per line", "飛伏", "世/應", "卦身"],
+        },
+        "question_domain": {
+            "description": "What is being asked about",
+            "data_file": "hzl_domains.json",
+            "provides": ["用神 type", "忌神", "世/應 meaning"],
+        },
+        "season": {
+            "description": "Season of divination (5 seasons)",
+            "data_file": "hzl_seasonal.json",
+            "provides": ["旺相休囚死 per line", "functional coverage"],
+        },
+        "richen": {
+            "description": "日辰 branch (1 of 12)",
+            "data_file": "hzl_richen.json → richen_interactions",
+            "provides": ["生/克/沖/合/墓 interactions per line"],
+        },
+        "xun": {
+            "description": "Which 旬 the day falls in (1 of 6)",
+            "data_file": "hzl_richen.json → xunkong",
+            "provides": ["which lines are 空亡 (void)"],
+        },
+        "day_stem": {
+            "description": "Day's heavenly stem (determines 六神)",
+            "data_file": "hzl_richen.json → liushen_patterns",
+            "provides": ["六神 assignment per line"],
+        },
+        "dongyao_pattern": {
+            "description": "Which lines are moving (0-6 lines)",
+            "data_file": "hzl_dongyao.json (single-line), computed for multi-line",
+            "provides": ["化爻 type per moving line", "變卦"],
+        },
+    },
+
+    "steps": [
+        {
+            "step": 1,
+            "name": "SELECT 用神",
+            "description": "Identify the primary 六親 type to evaluate based on domain.",
+            "procedure": [
+                "1a. Map domain → 用神 type (from hzl_domains.json)",
+                "1b. Find which line(s) carry the 用神 type in the hexagram",
+                "1c. If multiple lines: prefer the one that is 動 (moving)",
+                "1d. If still ambiguous: prefer the one closest to 世",
+                "1e. Identify 輔神 (auxiliary) — the type that supports the 用神",
+            ],
+            "data_sources": ["hzl_profiles.json", "hzl_domains.json"],
+            "key_rule": "官用取官(+父母為輔), 私用取財(+子孫為輔)",
+        },
+        {
+            "step": 2,
+            "name": "ASSESS VISIBILITY (飛/伏)",
+            "description": "Determine if the 用神 is visible or hidden.",
+            "procedure": [
+                "2a. Check if 用神 type appears in missing_liuqin",
+                "2b. If visible (飛): proceed to strength assessment",
+                "2c. If hidden (伏): identify the flying type at that position",
+                "2d. Apply the 9 飛伏 diagnostics (hzl_feifu_diagnostic.json)",
+                "2e. Check emergence conditions: 日辰 透出, 旺相, 伏世下",
+            ],
+            "data_sources": ["hzl_profiles.json", "hzl_feifu_diagnostic.json"],
+            "key_rule": "出現旺相為久為遠; 伏藏有氣只利暫時",
+            "diagnostic_cases": {
+                "財伏鬼": "drain — needs 子孫 to rescue",
+                "財伏兄": "captured — needs 旺相 + 伏世下",
+                "財伏父": "blocked support chain — half return at best",
+                "財伏子": "nourished — best position, will manifest",
+                "鬼伏兄": "hidden by deception — needs strong 鬼",
+                "鬼伏財": "obstructed by wealth — bureaucratic blockage",
+                "鬼伏父": "authority in documents — good for legal filings",
+                "鬼伏子": "blocked by overcomer — worst position for 官",
+                "鬼伏鬼": "screened by impostor — must bypass personally",
+            },
+        },
+        {
+            "step": 3,
+            "name": "ASSESS STRENGTH (旺相休囚死)",
+            "description": "Evaluate the 用神's seasonal strength.",
+            "procedure": [
+                "3a. Look up 用神's element → seasonal strength level",
+                "3b. 旺/相 = strong → favorable foundation",
+                "3c. 休 = resting → neutral, drained (generated the season)",
+                "3d. 囚 = imprisoned → futile attacker, weak",
+                "3e. 死 = dead → overcome by season, very weak",
+            ],
+            "data_sources": ["hzl_seasonal.json"],
+            "key_rule": "旺相 → events come quickly; 休囚 → events come slowly",
+            "ceiling": "At most 2 of 5 六親 types can be 旺/相 in any season",
+        },
+        {
+            "step": 4,
+            "name": "ASSESS 日辰 INTERACTION",
+            "description": "Evaluate the day branch's effect on the 用神.",
+            "procedure": [
+                "4a. Check 日辰 → 用神 line interactions from richen map",
+                "4b. 日辰 生 用神 = favorable (external nourishment)",
+                "4c. 日辰 克 用神 = unfavorable (external attack)",
+                "4d. 日辰 沖 用神 = activating (disrupts, can be good or bad)",
+                "4e. 日辰 合 用神 = binding (stabilizes, may prevent action)",
+                "4f. 日辰 墓 用神 = trapping (unfavorable, entombed)",
+                "4g. Check 旬空: if 用神's branch is void → unrealized",
+            ],
+            "data_sources": ["hzl_richen.json"],
+            "key_rule": "日辰 生合 → favorable; 克墓空 → unfavorable; 沖 → context-dependent",
+            "void_rules": {
+                "空亡": "用神 void = empty, unrealized — generally unfavorable",
+                "真空": "用神 void AND 死 = genuinely empty — worst case",
+                "假空": "用神 void but 旺相 = temporarily blocked, will manifest",
+            },
+        },
+        {
+            "step": 5,
+            "name": "ASSESS MOVEMENT (動/靜)",
+            "description": "Evaluate the 用神's movement state and transformation.",
+            "procedure": [
+                "5a. If 用神 is 動 (moving): check 化爻 type",
+                "5b. Apply 獨發 rules if this is the only moving line",
+                "5c. If 用神 is 靜 (static): check if other 動 lines 生 or 克 it",
+                "5d. For multiple moving lines (亂動): take the most 旺 line as focus",
+                "5e. Check 化爻 favorability: X化X = ambiguous, X化克 = bad, X化生 = good",
+            ],
+            "data_sources": ["hzl_dongyao.json", "hzl_dufa.json"],
+            "key_rule": "獨發易取，亂動難尋",
+            "dufa_summary": {
+                "子孫": "退散 — good for dispersal/wealth, bad for authority",
+                "兄弟": "虛詐 — bad for wealth (劫財), 化鬼 worst case",
+                "父母": "重迭 — good for documents only, otherwise complicates",
+                "官鬼": "欺盜 — good with 吉神 for career, bad with 囚神",
+                "妻財": "生鬼傷父 — good for selling only, otherwise creates threats",
+            },
+        },
+        {
+            "step": 6,
+            "name": "ASSESS NETWORK",
+            "description": "Evaluate 世/應 relationship and other line interactions.",
+            "procedure": [
+                "6a. 世 and 應 element relationship: 生/克/比和",
+                "6b. 應 克 世 = other party harms querent (unfavorable)",
+                "6c. 世 克 應 = querent dominates (favorable for some domains)",
+                "6d. 世應相生合 = mutual benefit (favorable)",
+                "6e. Check 忌神 activity: is the antagonist of 用神 active?",
+                "6f. Check 輔神: is the support type 旺相 and active?",
+                "6g. Check inter-line 沖/合/刑/害/墓 from topology",
+            ],
+            "data_sources": ["hzl_profiles.json", "hzl_topology.json"],
+            "key_rule": "世爻乃我家情由，應爻為彼之事理",
+        },
+        {
+            "step": 7,
+            "name": "JUDGE",
+            "description": "Accumulate signs and produce final judgment.",
+            "procedure": [
+                "7a. Count favorable signs across steps 2-6",
+                "7b. Count unfavorable signs across steps 2-6",
+                "7c. Favorable majority → positive outcome",
+                "7d. Unfavorable majority → negative outcome",
+                "7e. Mixed signs → timing-dependent: wait for favorable 日辰",
+                "7f. Determine timing: 旺相 → fast; 休囚 → slow",
+                "7g. Specific day: when 日辰 matches 用神 at 生/旺/合/沖",
+            ],
+            "data_sources": ["all above"],
+            "key_rule": "Favorable signs accumulate → positive; unfavorable → negative; "
+                        "mixed → timing-dependent",
+            "timing_formula": {
+                "fast": "用神 旺相 + 日辰 生合 → events within days",
+                "slow": "用神 休囚 + obstacles → events within months",
+                "specific_day": "用神 element at 生/旺/合/沖 日辰 → exact timing",
+            },
+        },
+    ],
+
+    "eight_primitives": {
+        "source": "克、合、刑、害、墓、旺、空、沖 — 知此八宗，與神奧通",
+        "primitives": [
+            {"name": "克", "meaning": "Overcomes/attacks — destructive interaction"},
+            {"name": "合", "meaning": "Combines/harmonizes — binding, stabilizing"},
+            {"name": "刑", "meaning": "Punishes — harm through friction"},
+            {"name": "害", "meaning": "Harms — covert damage"},
+            {"name": "墓", "meaning": "Entombed — trapped, stored, frozen"},
+            {"name": "旺", "meaning": "Prosperous — seasonal strength at peak"},
+            {"name": "空", "meaning": "Void — unrealized, empty (旬空)"},
+            {"name": "沖", "meaning": "Clashes — disrupts, activates, breaks"},
+        ],
+    },
+}
+
+
+def analyze():
+    """Print protocol summary."""
+    print("=" * 60)
+    print("§V.3: 用神 EVALUATION PROTOCOL")
+    print("=" * 60)
+
+    print(f"\n  {PROTOCOL['overview']}\n")
+
+    # Input summary
+    print(f"  INPUTS ({len(PROTOCOL['inputs'])}):")
+    for name, inp in PROTOCOL['inputs'].items():
+        print(f"    {name:20s} → {inp['data_file']}")
+
+    # Step summary
+    print(f"\n  EVALUATION STEPS ({len(PROTOCOL['steps'])}):")
+    for step in PROTOCOL['steps']:
+        n_proc = len(step['procedure'])
+        print(f"    {step['step']}. {step['name']:30s} ({n_proc} sub-steps)")
+        print(f"       Key rule: {step['key_rule'][:65]}")
+
+    # Data dependency map
+    print(f"\n  DATA DEPENDENCY MAP:")
+    all_files = set()
+    for step in PROTOCOL['steps']:
+        for f in step['data_sources']:
+            all_files.add(f)
+    for f in sorted(all_files):
+        steps_using = [s['step'] for s in PROTOCOL['steps'] if f in s['data_sources']]
+        print(f"    {f:35s} → steps {steps_using}")
+
+    # Eight primitives
+    print(f"\n  EIGHT OPERATIONAL PRIMITIVES:")
+    for p in PROTOCOL['eight_primitives']['primitives']:
+        print(f"    {p['name']}: {p['meaning']}")
+    print(f"\n  Source: {PROTOCOL['eight_primitives']['source']}")
+
+    # Protocol flow
+    print(f"\n  PROTOCOL FLOW:")
+    print(f"    INPUT → SELECT用神 → VISIBILITY → STRENGTH → 日辰 → MOVEMENT → NETWORK → JUDGE")
+    print(f"      ↓         ↓           ↓           ↓         ↓          ↓")
+    print(f"    domain   profiles    seasonal    richen    dongyao   topology")
+    print(f"    domains  feifu_diag               xunkong   dufa")
+
+
+def main():
+    analyze()
+
+    out_path = HERE / "hzl_yongshen_protocol.json"
+    out_path.write_text(json.dumps(PROTOCOL, indent=2, ensure_ascii=False))
+    print(f"\n→ Wrote protocol to {out_path}")
+
+
+if __name__ == "__main__":
+    main()
