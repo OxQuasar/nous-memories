@@ -1,0 +1,256 @@
+{
+  "part_a": {
+    "stab_size": 24,
+    "homomorphism_ok": true,
+    "conjugacy_classes": [
+      {
+        "order": 1,
+        "trace": 4,
+        "size": 1
+      },
+      {
+        "order": 2,
+        "trace": 0,
+        "size": 3
+      },
+      {
+        "order": 2,
+        "trace": 2,
+        "size": 6
+      },
+      {
+        "order": 3,
+        "trace": 1,
+        "size": 8
+      },
+      {
+        "order": 4,
+        "trace": 0,
+        "size": 6
+      }
+    ],
+    "our_character": [
+      4,
+      2,
+      0,
+      1,
+      0
+    ],
+    "decomposition": {
+      "trivial": 1,
+      "sign": 0,
+      "standard": 1,
+      "sgn⊗std": 0,
+      "V₂(2D)": 0
+    },
+    "dimension_check": 4,
+    "aut_scalar": true,
+    "block_structure": {
+      "a7_invariant": false,
+      "upper_independent": false
+    }
+  },
+  "part_b": {
+    "surjection": [
+      2,
+      0,
+      4,
+      3,
+      2,
+      1,
+      0,
+      3
+    ],
+    "surjective": true,
+    "differential_uniformity": 4,
+    "eigenvalue_111_holds": true,
+    "derivative_spectrum": {
+      "001": [
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "010": [
+        0,
+        0,
+        4,
+        4,
+        0
+      ],
+      "011": [
+        0,
+        4,
+        0,
+        0,
+        4
+      ],
+      "100": [
+        4,
+        2,
+        0,
+        0,
+        2
+      ],
+      "101": [
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "110": [
+        0,
+        0,
+        4,
+        4,
+        0
+      ],
+      "111": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    "derivative_table": {
+      "001": [
+        3,
+        2,
+        4,
+        1,
+        4,
+        1,
+        3,
+        2
+      ],
+      "010": [
+        2,
+        3,
+        3,
+        2,
+        3,
+        2,
+        2,
+        3
+      ],
+      "011": [
+        1,
+        4,
+        1,
+        4,
+        1,
+        4,
+        1,
+        4
+      ],
+      "100": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        4,
+        4,
+        0
+      ],
+      "101": [
+        4,
+        2,
+        4,
+        2,
+        3,
+        1,
+        3,
+        1
+      ],
+      "110": [
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "111": [
+        1,
+        0,
+        2,
+        4,
+        1,
+        3,
+        0,
+        4
+      ]
+    }
+  },
+  "part_c": {
+    "at_3_5": {
+      "complement_pairs": [
+        {
+          "pair": [
+            "000",
+            "111"
+          ],
+          "values": [
+            2,
+            3
+          ],
+          "type": null
+        },
+        {
+          "pair": [
+            "001",
+            "110"
+          ],
+          "values": [
+            0,
+            0
+          ],
+          "type": 0
+        },
+        {
+          "pair": [
+            "010",
+            "101"
+          ],
+          "values": [
+            4,
+            1
+          ],
+          "type": 1
+        },
+        {
+          "pair": [
+            "011",
+            "100"
+          ],
+          "values": [
+            3,
+            2
+          ],
+          "type": 2
+        }
+      ],
+      "types_all_represented": true,
+      "gl2_size": 6,
+      "type_assignment_orbits": 1,
+      "rm_dim": 3,
+      "orientation_orbits": 1,
+      "complete_invariant": true
+    },
+    "at_4_13": {
+      "n": 4,
+      "p": 13,
+      "complement_pairs": 8,
+      "non_frame_pairs": 7,
+      "rm_dim": 4,
+      "orientation_orbits": 8,
+      "genuine_decoration": true
+    }
+  }
+}

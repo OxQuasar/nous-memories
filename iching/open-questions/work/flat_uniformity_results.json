@@ -1,0 +1,250 @@
+{
+  "total_surjections": 240,
+  "distinct_patterns": 15,
+  "pattern_details": [
+    {
+      "directions": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "directions_str": [
+        "001",
+        "010",
+        "101",
+        "110"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 8,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "directions_str": [
+        "001",
+        "011",
+        "100",
+        "110"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 8,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "directions_str": [
+        "010",
+        "011",
+        "100",
+        "101"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 8,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        1,
+        2,
+        7
+      ],
+      "directions_str": [
+        "001",
+        "010",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        1,
+        3,
+        7
+      ],
+      "directions_str": [
+        "001",
+        "011",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        1,
+        4,
+        7
+      ],
+      "directions_str": [
+        "001",
+        "100",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        1,
+        5,
+        7
+      ],
+      "directions_str": [
+        "001",
+        "101",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": true
+    },
+    {
+      "directions": [
+        2,
+        3,
+        7
+      ],
+      "directions_str": [
+        "010",
+        "011",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        2,
+        4,
+        7
+      ],
+      "directions_str": [
+        "010",
+        "100",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        2,
+        6,
+        7
+      ],
+      "directions_str": [
+        "010",
+        "110",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        3,
+        5,
+        7
+      ],
+      "directions_str": [
+        "011",
+        "101",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        3,
+        6,
+        7
+      ],
+      "directions_str": [
+        "011",
+        "110",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        4,
+        5,
+        7
+      ],
+      "directions_str": [
+        "100",
+        "101",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        4,
+        6,
+        7
+      ],
+      "directions_str": [
+        "100",
+        "110",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    },
+    {
+      "directions": [
+        5,
+        6,
+        7
+      ],
+      "directions_str": [
+        "101",
+        "110",
+        "111"
+      ],
+      "n_surjections": 16,
+      "stabilizer_size": 2,
+      "contains_ic": false
+    }
+  ],
+  "pattern_orbits_stab111": 2,
+  "surjection_orbits_full_group": 5,
+  "surjection_orbits_stab_only": 17,
+  "aut_preserves_patterns": true,
+  "ic_pattern": {
+    "directions": [
+      1,
+      5,
+      7
+    ],
+    "n_surjections": 16,
+    "stabilizer_order": 2
+  }
+}
