@@ -1,0 +1,107 @@
+Loaded: 209072 bars, price 16688–108258
+Macro episodes: 2946, mean duration: 5.9h
+Regime counts: {0: 693, 1: 704, 2: 768, 3: 781}
+
+Scale factors: trend_1h_std=0.000467, trend_8h_std=0.000162
+
+======================================================================
+  C2 Pullback Exit → P(bull)
+======================================================================
+  Episodes: 768 (positive=624, negative=144)
+  AUC: 0.9921, Brier: 0.0161, Pseudo R²: 0.8597
+
+  Z-scored coefficients:
+       const:     5.2091  (p=3.6556e-28)
+       t1h_z:     0.6899  (p=5.5688e-02)
+       t8h_z:    56.5441  (p=1.6274e-15)
+
+  Raw-scale coefficients (PRODUCTION):
+    const:          5.2091
+    trend_1h:       1477.0
+    trend_8h:     348533.1
+
+  Decision boundary (trend_1h=0): trend_8h = -0.0000149
+
+  Scorecard (trend_1h=0):
+          trend_8h  P(P(bull))
+        -0.0005000  0.0000
+        -0.0003000  0.0000
+        -0.0001000  0.0000
+        -0.0000500  0.0000
+        -0.0000100  0.8486
+         0.0000000  0.9946
+         0.0000100  0.9998
+         0.0000500  1.0000
+         0.0001000  1.0000
+
+  Calibration:
+               Bin      n      pred    actual
+    [0.0,0.1]    124    0.0018    0.0081
+    [0.1,0.3]      9    0.1896    0.2222
+    [0.3,0.5]      3    0.4137    0.0000
+    [0.5,0.7]      4    0.5867    0.5000
+    [0.7,0.9]     14    0.8172    0.7857
+    [0.9,1.0]    614    0.9887    0.9902
+
+======================================================================
+  C1 Reversal Exit → P(breakthrough)
+======================================================================
+  Episodes: 704 (positive=155, negative=549)
+  AUC: 0.9886, Brier: 0.0220, Pseudo R²: 0.8390
+
+  Z-scored coefficients:
+       const:    -4.8898  (p=6.5058e-28)
+       t1h_z:     1.4660  (p=8.0476e-07)
+       t8h_z:    68.3826  (p=5.6614e-14)
+
+  Raw-scale coefficients (PRODUCTION):
+    const:         -4.8898
+    trend_1h:       3138.4
+    trend_8h:     421504.5
+
+  Decision boundary (trend_1h=0): trend_8h = 0.0000116
+
+  Scorecard (trend_1h=0):
+          trend_8h  P(P(breakthrough))
+        -0.0005000  0.0000
+        -0.0003000  0.0000
+        -0.0001000  0.0000
+        -0.0000500  0.0000
+        -0.0000100  0.0001
+         0.0000000  0.0075
+         0.0000100  0.3374
+         0.0000500  1.0000
+         0.0001000  1.0000
+
+  Calibration:
+               Bin      n      pred    actual
+    [0.0,0.1]    528    0.0147    0.0170
+    [0.1,0.3]     25    0.1725    0.1600
+    [0.3,0.5]      9    0.3788    0.3333
+    [0.5,0.7]      4    0.6434    0.7500
+    [0.7,0.9]      5    0.8404    0.6000
+    [0.9,1.0]    133    0.9982    1.0000
+
+======================================================================
+  PRODUCTION COEFFICIENTS — BTC OOS 2023-2024
+======================================================================
+
+  Trend units: raw OLS slope / mean price (fractional rate per bar)
+  Typical magnitude: ~1e-4 for trend_8h, ~5e-4 for trend_1h
+
+  C2 Pullback Exit:
+    P(bull) = σ(5.2091 + 1477.0 × trend_1h + 348533.1 × trend_8h)
+    Decision boundary (at trend_1h=0): trend_8h = -0.0000149
+    AUC: 0.9921
+
+  C1 Reversal Exit:
+    P(bt) = σ(-4.8898 + 3138.4 × trend_1h + 421504.5 × trend_8h)
+    Decision boundary (at trend_1h=0): trend_8h = 0.0000116
+    AUC: 0.9886
+
+  Regime detection: 2-bit macro (trend_8h sign × trend_48h sign)
+    0 = bear (both negative)
+    1 = reversal (8h positive, 48h negative)
+    2 = pullback (8h negative, 48h positive)
+    3 = bull (both positive)
+

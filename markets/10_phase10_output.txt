@@ -1,0 +1,298 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+  Working rows: 61920
+  Price range: 60024 → 125978
+  Total regime episodes: 796
+
+======================================================================
+  PART 10a: Continuous Signal Analysis at C2 Exit
+======================================================================
+
+  C2 episodes (non-truncated, exit to bear/bull): 187
+
+────────────────────────────────────────────────────────────
+  1. trend_1h magnitude at exit vs outcome
+────────────────────────────────────────────────────────────
+  S5 (trend_1h > 0): n=122
+  S4 (trend_1h ≤ 0): n=65
+
+  S5 terciles by trend_1h magnitude:
+    Tercile boundaries: 0.406799, 0.879133
+     Tercile      n   bull_rate         95% Wilson CI                           range
+         Low     41       0.829  [0.687, 0.915]       [0.012785, 0.404334]
+         Mid     40       0.950  [0.835, 0.986]       [0.411820, 0.873613]
+        High     41       0.976  [0.874, 0.996]       [0.881843, 5.939270]
+    Monotonically increasing? YES
+
+  S4 terciles by |trend_1h| magnitude:
+    Tercile boundaries (|trend_1h|): 0.259171, 0.949105
+       Tercile      n   bear_rate         95% Wilson CI                     |t1h| range
+     Least neg     22       0.273  [0.132, 0.482]       [0.000000, 0.257869]
+           Mid     21       0.429  [0.245, 0.635]       [0.261799, 0.921819]
+      Most neg     22       0.818  [0.615, 0.927]       [0.962617, 4.067922]
+    Bear rate monotonically increasing with |trend_1h|? YES
+
+  Spearman (all C2 exits): trend_1h vs bull outcome
+    rho = 0.5332, p = 3.95e-15, n = 187
+
+────────────────────────────────────────────────────────────
+  2. trend_8h magnitude at exit (mechanistic test)
+────────────────────────────────────────────────────────────
+       Group      n      mean_t8h    median_t8h       std_t8h
+     S5→bull    112     -0.019314     -0.013579      0.015837
+     S5→bear     10     -0.979296     -0.772185      0.572507
+     S4→bull     32     -0.023770     -0.013645      0.031167
+     S4→bear     33     -1.438405     -0.839724      1.406483
+
+  Key question: S5→bull trend_8h — closer to zero or deeply negative?
+    S5→bull: 100.0% have trend_8h < 0
+    Interpretation: Medium trend still negative (about to align)
+
+────────────────────────────────────────────────────────────
+  3. Forward return quality vs trend_1h magnitude
+────────────────────────────────────────────────────────────
+
+  S5→bull (C2→C3 pairs): n=111
+    Spearman(trend_1h magnitude, C3 log return): rho=-0.0815, p=0.3949
+    Mean C3 return: 0.0881%
+
+  S4→bull (C2→C3 pairs): n=32
+    Spearman(trend_1h magnitude, C3 log return): rho=0.0783, p=0.6703
+    Mean C3 return: -0.1710%
+
+  S4→bear (C2→C0 pairs): n=33
+    Spearman(|trend_1h| magnitude, C0 log return): rho=0.0969, p=0.5916
+    Mean C0 return: -0.0312%
+
+  Does magnitude predict return SIZE? NO (or insufficient evidence)
+
+======================================================================
+  PART 10b: Duration × Sub-state Interaction
+======================================================================
+
+  1. Median C2 episode duration: 69 bars (5.8 hours)
+     Mean: 74.0 bars, Std: 54.7
+
+  2. Joint 2×2 table: sub-state × duration
+────────────────────────────────────────────────────────────
+
+          Cell      n   bull_rate             bull CI   bear_rate             bear CI
+      S4/short     35       0.429  [0.280,0.591]       0.571  [0.409,0.720]
+       S4/long     30       0.567  [0.392,0.726]       0.433  [0.274,0.608]
+      S5/short     59       0.915  [0.816,0.963]       0.085  [0.037,0.184]
+       S5/long     63       0.921  [0.827,0.966]       0.079  [0.034,0.173]
+
+  3. Fisher exact tests: does duration add predictive power?
+────────────────────────────────────────────────────────────
+  S5: short bull rate = 0.915 vs long bull rate = 0.921
+    Fisher exact p = 1.0000  not significant
+  S4: short bear rate = 0.571 vs long bear rate = 0.433
+    Fisher exact p = 0.3240  not significant
+
+  4. Forward returns by joint cell
+────────────────────────────────────────────────────────────
+          Cell      n      mean_ret    median_ret
+      S4/short     35        0.0409%       -0.0314%
+       S4/long     30       -0.2644%       -0.0798%
+      S5/short     59        0.0793%       -0.0017%
+       S5/long     62        0.1016%       -0.0942%
+
+======================================================================
+  PART 10c: Blind Re-discovery (Split-Half Validation)
+======================================================================
+
+  Timestamp range: 1753056299000 → 1771631939000
+  Midpoint: 1762344119000
+  Half 1: 30960 bars
+  Half 2: 30960 bars
+
+────────────────────────────────────────────────────────────
+  HALF 1 (first ~107 days)
+────────────────────────────────────────────────────────────
+  Bars: 30960, Price: 98929–125978
+
+  T₈ eigenvalues (magnitude): [1.    , 0.9958, 0.9779, 0.9735, 0.8392, 0.8335, 0.819 , 0.8149]
+  Gaps: [0.0042, 0.0178, 0.0044, 0.1343, 0.0058, 0.0144, 0.0041]
+  Largest gap at position 3: 0.1343
+  → K = 4
+
+  J₄ (jump chain):
+           C0       C1       C2       C3
+  C0  0.0000   0.9100   0.0900   0.0000
+  C1  0.7732   0.0000   0.0000   0.2268
+  C2  0.2424   0.0000   0.0000   0.7576
+  C3  0.0103   0.0619   0.9278   0.0000
+
+  Structural zeros (J₄ < 0.02):
+    C0→C3: 0.0000
+    C1→C2: 0.0000
+    C2→C1: 0.0000
+    C3→C0: 0.0103
+
+  Transition structure from each state:
+    C0: dominant → C1 (0.910), secondary → C2 (0.090)
+    C1: dominant → C0 (0.773), secondary → C3 (0.227)
+    C2: dominant → C3 (0.758), secondary → C0 (0.242)
+    C3: dominant → C2 (0.928), secondary → C1 (0.062)
+  Structural zeros match expected C0↛C3, C1↛C2, C2↛C1, C3↛C0: YES
+  (Cycle topology is confirmed by structural zeros + two coupled 2-cycles)
+
+  Complement symmetry JSD per pair:
+    (S0, S7): 0.0501
+    (S1, S6): 0.0505
+    (S2, S5): 0.0540
+    (S3, S4): 0.0609
+  Mean JSD: 0.0539  PASS (<0.15)
+
+  C2 exit signal:
+    S5→bull: 0.952 [0.867, 0.983] (n=62)
+    S4→bull: 0.432 [0.287, 0.591] (n=37)
+
+  Stationary distribution of J₄:
+    C0: 0.2545
+    C1: 0.2468
+    C2: 0.2519
+    C3: 0.2468
+
+  ── Acceptance criteria ──
+    K=4 by eigenvalue gap: PASS
+    Structural zeros match: PASS
+    Isomorphic cycle topology: PASS
+    Complement symmetry JSD < 0.15: PASS
+    S5→bull in [79%, 98%]: PASS
+
+────────────────────────────────────────────────────────────
+  HALF 2 (last ~107 days)
+────────────────────────────────────────────────────────────
+  Bars: 30960, Price: 60024–107320
+
+  T₈ eigenvalues (magnitude): [1.    , 0.9962, 0.9772, 0.9733, 0.8274, 0.8241, 0.8058, 0.8029]
+  Gaps: [0.0038, 0.019 , 0.0039, 0.1459, 0.0034, 0.0182, 0.003 ]
+  Largest gap at position 3: 0.1459
+  → K = 4
+
+  J₄ (jump chain):
+           C0       C1       C2       C3
+  C0  0.0000   0.9375   0.0625   0.0000
+  C1  0.8142   0.0000   0.0000   0.1858
+  C2  0.2159   0.0000   0.0000   0.7841
+  C3  0.0000   0.0899   0.9101   0.0000
+
+  Structural zeros (J₄ < 0.02):
+    C0→C3: 0.0000
+    C1→C2: 0.0000
+    C2→C1: 0.0000
+    C3→C0: 0.0000
+
+  Transition structure from each state:
+    C0: dominant → C1 (0.938), secondary → C2 (0.062)
+    C1: dominant → C0 (0.814), secondary → C3 (0.186)
+    C2: dominant → C3 (0.784), secondary → C0 (0.216)
+    C3: dominant → C2 (0.910), secondary → C1 (0.090)
+  Structural zeros match expected C0↛C3, C1↛C2, C2↛C1, C3↛C0: YES
+  (Cycle topology is confirmed by structural zeros + two coupled 2-cycles)
+
+  Complement symmetry JSD per pair:
+    (S0, S7): 0.0694
+    (S1, S6): 0.0661
+    (S2, S5): 0.0577
+    (S3, S4): 0.0695
+  Mean JSD: 0.0657  PASS (<0.15)
+
+  C2 exit signal:
+    S5→bull: 0.883 [0.778, 0.942] (n=60)
+    S4→bull: 0.571 [0.391, 0.735] (n=28)
+
+  Stationary distribution of J₄:
+    C0: 0.2736
+    C1: 0.2768
+    C2: 0.2232
+    C3: 0.2264
+
+  ── Acceptance criteria ──
+    K=4 by eigenvalue gap: PASS
+    Structural zeros match: PASS
+    Isomorphic cycle topology: PASS
+    Complement symmetry JSD < 0.15: PASS
+    S5→bull in [79%, 98%]: PASS
+
+────────────────────────────────────────────────────────────
+  Full sample reference
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+  FULL SAMPLE
+────────────────────────────────────────────────────────────
+  Bars: 61920, Price: 60024–125978
+
+  T₈ eigenvalues (magnitude): [1.    , 0.996 , 0.9775, 0.9736, 0.8324, 0.8291, 0.8126, 0.8094]
+  Gaps: [0.004 , 0.0185, 0.0039, 0.1412, 0.0033, 0.0165, 0.0032]
+  Largest gap at position 3: 0.1412
+  → K = 4
+
+  J₄ (jump chain):
+           C0       C1       C2       C3
+  C0  0.0000   0.9245   0.0755   0.0000
+  C1  0.7952   0.0000   0.0000   0.2048
+  C2  0.2299   0.0000   0.0000   0.7701
+  C3  0.0054   0.0753   0.9194   0.0000
+
+  Structural zeros (J₄ < 0.02):
+    C0→C3: 0.0000
+    C1→C2: 0.0000
+    C2→C1: 0.0000
+    C3→C0: 0.0054
+
+  Transition structure from each state:
+    C0: dominant → C1 (0.925), secondary → C2 (0.075)
+    C1: dominant → C0 (0.795), secondary → C3 (0.205)
+    C2: dominant → C3 (0.770), secondary → C0 (0.230)
+    C3: dominant → C2 (0.919), secondary → C1 (0.075)
+  Structural zeros match expected C0↛C3, C1↛C2, C2↛C1, C3↛C0: YES
+  (Cycle topology is confirmed by structural zeros + two coupled 2-cycles)
+
+  Complement symmetry JSD per pair:
+    (S0, S7): 0.0545
+    (S1, S6): 0.0496
+    (S2, S5): 0.0496
+    (S3, S4): 0.0518
+  Mean JSD: 0.0514  PASS (<0.15)
+
+  C2 exit signal:
+    S5→bull: 0.918 [0.856, 0.955] (n=122)
+    S4→bull: 0.492 [0.375, 0.611] (n=65)
+
+  Stationary distribution of J₄:
+    C0: 0.2643
+    C1: 0.2621
+    C2: 0.2372
+    C3: 0.2364
+
+  ── Acceptance criteria ──
+    K=4 by eigenvalue gap: PASS
+    Structural zeros match: PASS
+    Isomorphic cycle topology: PASS
+    Complement symmetry JSD < 0.15: PASS
+    S5→bull in [79%, 98%]: PASS
+
+======================================================================
+  COMPARISON SUMMARY: Half 1 vs Half 2 vs Full
+======================================================================
+
+                          Metric        Half 1        Half 2          Full
+              K (eigenvalue gap)             4             4             4
+                Structural zeros             4             4             4
+                     Cycle match          True          True          True
+                  Complement JSD        0.0539        0.0657        0.0514
+                    S5→bull rate     0.952(n=62)     0.883(n=60)     0.918(n=122)
+                    S4→bull rate     0.432(n=37)     0.571(n=28)     0.492(n=65)
+
+  Stationary distributions:
+                    C0        C1        C2        C3
+      Half 1    0.2545    0.2468    0.2519    0.2468
+      Half 2    0.2736    0.2768    0.2232    0.2264
+        Full    0.2643    0.2621    0.2372    0.2364
+
+======================================================================
+  Phase 10 complete.
+======================================================================

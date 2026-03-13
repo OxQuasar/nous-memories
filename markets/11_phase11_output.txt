@@ -1,0 +1,153 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+  Working rows: 61920
+  Price range: 60024 → 125978
+  Total regime episodes: 796
+  Timestamp midpoint: 1762344119000
+
+======================================================================
+  PART 11a: C2 Exit — P(bull | trend_1h, trend_8h)
+======================================================================
+  C2 episodes: 187
+  Bull exits: 144, Bear exits: 43
+  Half 1: 99 episodes, Half 2: 88 episodes
+
+  Cross-validated model comparison:
+
+    M1: trend_1h only:
+      H1→H2: AUC=0.8101  Brier=0.1363  AP=0.9424
+      H2→H1: AUC=0.9133  Brier=0.0957  AP=0.9596
+      → Mean AUC: 0.8617  Mean Brier: 0.1160
+
+    M2: trend_1h + trend_8h:
+      H1→H2: AUC=0.9474  Brier=0.0799  AP=0.9851
+      H2→H1: AUC=0.9994  Brier=0.0328  AP=0.9998
+      → Mean AUC: 0.9734  Mean Brier: 0.0564
+
+    M3: t1h + t8h + t1h×t8h:
+      H1→H2: AUC=0.9474  Brier=0.0802  AP=0.9851
+      H2→H1: AUC=0.9994  Brier=0.0327  AP=0.9998
+      → Mean AUC: 0.9734  Mean Brier: 0.0564
+
+  Best model: M2: trend_1h + trend_8h (mean AUC = 0.9734)
+
+────────────────────────────────────────────────────────────
+  Full-data logistic regression (M2: trend_1h + trend_8h)
+────────────────────────────────────────────────────────────
+
+  Coefficients:
+           const: coef=  5.9076  p=1.4105e-04  95%CI=[2.8656, 8.9495]
+        trend_1h: coef=  2.2286  p=2.0454e-01  95%CI=[-1.2143, 5.6715]
+        trend_8h: coef= 42.2196  p=1.1905e-02  95%CI=[9.3168, 75.1224]
+  Pseudo R²: 0.9344
+  Log-likelihood: -6.61
+  AIC: 19.22
+
+  Calibration (predicted vs actual bull rate, 5 bins):
+             Bin      n   pred_mean    actual
+    [0.00,0.20]     41      0.0007    0.0000
+    [0.40,0.60]      1      0.5286    1.0000
+    [0.60,0.80]      2      0.7177    0.5000
+    [0.80,1.00]    143      0.9931    0.9930
+
+  Scorecard (medians: trend_1h=0.2851, trend_8h=-0.0204):
+
+    trend_1h sweep (trend_8h = -0.0204):
+      trend_1h   P(bull)
+          -2.0    0.6431
+          -1.0    0.9436
+          -0.5    0.9808
+           0.0    0.9936
+           0.5    0.9979
+           1.0    0.9993
+           2.0    0.9999
+
+    trend_8h sweep (trend_1h = 0.2851):
+      trend_8h   P(bull)
+          -2.0    0.0000
+          -1.0    0.0000
+          -0.5    0.0000
+          -0.1    0.9106
+           0.0    0.9986
+
+  Binary baseline comparison:
+    Binary model AUC: 0.7726
+    Best continuous AUC: 0.9734
+    AUC improvement: +0.2008
+
+======================================================================
+  PART 11b: C1 Exit — P(breakthrough | trend_1h, trend_8h)
+======================================================================
+  C1 episodes: 210
+  Breakthroughs (→C3): 43 (20.5%)
+  Failures (→C0): 167 (79.5%)
+  Half 1: 97 episodes (22 bt)
+  Half 2: 113 episodes (21 bt)
+
+  Cross-validated model comparison (balanced class weights):
+
+    M1: trend_1h only:
+      H1→H2: AUC=0.6087  Brier=0.2392  AP=0.3235
+      H2→H1: AUC=0.7803  Brier=0.2058  AP=0.5906
+      → Mean AUC: 0.6945  Mean Brier: 0.2225  Mean AP: 0.4570
+
+    M2: trend_1h + trend_8h:
+      H1→H2: AUC=0.9457  Brier=0.1065  AP=0.8384
+      H2→H1: AUC=0.9848  Brier=0.0747  AP=0.9604
+      → Mean AUC: 0.9653  Mean Brier: 0.0906  Mean AP: 0.8994
+
+    M3: t1h + t8h + t1h×t8h:
+      H1→H2: AUC=0.9462  Brier=0.1063  AP=0.8410
+      H2→H1: AUC=0.9818  Brier=0.0743  AP=0.9549
+      → Mean AUC: 0.9640  Mean Brier: 0.0903  Mean AP: 0.8980
+
+  Best model: M2: trend_1h + trend_8h (mean AUC = 0.9653)
+
+────────────────────────────────────────────────────────────
+  Full-data logistic regression (M2: trend_1h + trend_8h)
+────────────────────────────────────────────────────────────
+
+  Coefficients:
+           const: coef= -5.1879  p=5.9360e-09  95%CI=[-6.9354, -3.4404]
+        trend_1h: coef=  0.7074  p=7.7910e-02  95%CI=[-0.0791, 1.4938]
+        trend_8h: coef= 48.1414  p=8.0570e-05  95%CI=[24.2097, 72.0731]
+  Pseudo R²: 0.8360
+  Log-likelihood: -17.46
+  AIC: 40.92
+
+  Sub-state breakdown:
+    S3 (trend_1h > 0): n=69, bt rate=0.290
+    S2 (trend_1h ≤ 0): n=141, bt rate=0.163
+
+  Binary baseline comparison:
+    Binary model AUC: 0.5859
+    Best continuous AUC: 0.9653
+    AUC improvement: +0.3794
+
+======================================================================
+  PART 11c: Generalization Check — C0 and C3 Exits
+======================================================================
+
+  C0→{C1,C2} (skip vs normal): 211 episodes (pos=16, neg=195)
+    M1: trend_1h: CV AUC = 0.3773
+    M2: t1h+t8h: CV AUC = 0.7222
+    → Signal present: M2: t1h+t8h AUC = 0.7222
+    Binary baseline AUC: 0.5229
+
+  C3→{C2,C0} (crash vs orderly): 172 episodes (pos=1, neg=171)
+    Too few episodes for reliable analysis
+
+======================================================================
+  PART 11d: Summary Table
+======================================================================
+
+  Boundary                         n   Binary AUC  Best model               CV AUC   AUC gain   t8h adds?
+  ────────────────────────────  ────  ───────────  ──────────────────────  ───────  ─────────  ──────────
+  C2→{C0,C3}                     187       0.7726  M2: trend_1h + trend_8h   0.9734    +0.2008         yes
+  C1→{C0,C3}                     210       0.5859  M2: trend_1h + trend_8h   0.9653    +0.3794         yes
+  C0→{C1,C2} (skip vs normal)    211       0.5229  M2: t1h+t8h              0.7222    +0.1993         yes
+  C3→{C2,C0} (crash vs orderly)   172          N/A  N/A                         N/A                     no
+
+======================================================================
+  Phase 11 complete.
+======================================================================

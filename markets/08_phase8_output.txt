@@ -1,0 +1,247 @@
+Loading and downsampling to 5-minute bars...
+  Rows: 61920
+
+======================================================================
+  STEP 1: Time-Tagged Transitions
+======================================================================
+  Total episodes: 796, clean: 794
+  Tagged transitions: 794
+
+  Transitions by time block:
+    Asia (00-05): 225 (28.3%)
+    Europe (06-11): 184 (23.2%)
+    US (12-17): 211 (26.6%)
+    Evening (18-23): 174 (21.9%)
+
+  Transitions by day of week:
+    Mon: 113 (14.2%)
+    Tue: 115 (14.5%)
+    Wed: 117 (14.7%)
+    Thu: 98 (12.3%)
+    Fri: 111 (14.0%)
+    Sat: 121 (15.2%)
+    Sun: 119 (15.0%)
+
+  Transitions by UTC hour:
+    00:00    41  ████████████████████
+    01:00    30  ███████████████
+    02:00    49  ████████████████████████
+    03:00    35  █████████████████
+    04:00    32  ████████████████
+    05:00    38  ███████████████████
+    06:00    27  █████████████
+    07:00    22  ███████████
+    08:00    34  █████████████████
+    09:00    29  ██████████████
+    10:00    41  ████████████████████
+    11:00    31  ███████████████
+    12:00    39  ███████████████████
+    13:00    41  ████████████████████
+    14:00    36  ██████████████████
+    15:00    37  ██████████████████
+    16:00    26  █████████████
+    17:00    32  ████████████████
+    18:00    28  ██████████████
+    19:00    20  ██████████
+    20:00    32  ████████████████
+    21:00    22  ███████████
+    22:00    30  ███████████████
+    23:00    42  █████████████████████
+
+======================================================================
+  STEP 2: J₄ by Time Block
+======================================================================
+
+--- Global J₄ (from 794 transitions) ---
+      C0  C1  C2  C3
+C0  0.0000.9240.0760.000
+C1  0.7950.0000.0000.205
+C2  0.2300.0000.0000.770
+C3  0.0050.0750.9190.000
+
+--- J₄ Block 0: Asia (00-05) (n=225) ---
+      C0  C1  C2  C3
+C0  0.0000.9260.0740.000
+C1  0.8810.0000.0000.119
+C2  0.2860.0000.0000.714
+C3  0.0180.0890.8930.000
+  ‖J₄_block - J₄_global‖_F = 0.1487
+
+--- J₄ Block 1: Europe (06-11) (n=184) ---
+      C0  C1  C2  C3
+C0  0.0000.8720.1280.000
+C1  0.7610.0000.0000.239
+C2  0.1740.0000.0000.826
+C3  0.0000.0890.9110.000
+  ‖J₄_block - J₄_global‖_F = 0.1196
+
+--- J₄ Block 2: US (12-17) (n=211) ---
+      C0  C1  C2  C3
+C0  0.0000.9640.0360.000
+C1  0.8100.0000.0000.190
+C2  0.2670.0000.0000.733
+C3  0.0000.0850.9150.000
+  ‖J₄_block - J₄_global‖_F = 0.0804
+
+--- J₄ Block 3: Evening (18-23) (n=174) ---
+      C0  C1  C2  C3
+C0  0.0000.9250.0750.000
+C1  0.6900.0000.0000.310
+C2  0.2040.0000.0000.796
+C3  0.0000.0260.9740.000
+  ‖J₄_block - J₄_global‖_F = 0.1694
+
+--- Structural Zero Persistence ---
+  C0→C3: total=0.0  by block: [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)]  ZERO HOLDS
+  C1→C2: total=0.0  by block: [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)]  ZERO HOLDS
+  C2→C1: total=0.0  by block: [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)]  ZERO HOLDS
+  C3→C0: total=1.0  by block: [np.float64(1.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)]  ZERO HOLDS
+
+--- Chi-Squared Tests: Transition Rate × Block Independence ---
+  H₀: transition probability is independent of time block
+    Transition        χ²     p-value                Result
+  C0→C1:     3.093      0.3775  not significant
+  C0→C2:     3.093      0.3775  not significant
+  C1→C0:     5.931      0.1150  not significant
+  C1→C3:     5.931      0.1150  not significant
+  C2→C0:     2.106      0.5507  not significant
+  C2→C3:     2.106      0.5507  not significant
+  C3→C1:     1.652      0.6477  not significant
+  C3→C2:     2.097      0.5525  not significant
+
+  → No transition shows significant time-block dependence (all p > 0.05)
+
+======================================================================
+  STEP 3: C2 Exit Sub-State Signal by Time Block
+======================================================================
+  Total C2 exits: 187
+  Block counts: [42, 46, 45, 54] — using 4 blocks
+
+                 Block   Sub      n   →Bull   →Bear    Bull%              95% CI
+          Asia (00-05)   S5     25      23       2    92.0%  [75.0%, 97.8%]
+          Asia (00-05)   S4     17       7      10    41.2%  [21.6%, 64.0%]
+        Europe (06-11)   S5     32      31       1    96.9%  [84.3%, 99.4%]
+        Europe (06-11)   S4     14       7       7    50.0%  [26.8%, 73.2%]
+            US (12-17)   S5     31      27       4    87.1%  [71.1%, 94.9%]
+            US (12-17)   S4     14       6       8    42.9%  [21.4%, 67.4%]
+       Evening (18-23)   S5     34      31       3    91.2%  [77.0%, 97.0%]
+       Evening (18-23)   S4     20      12       8    60.0%  [38.7%, 78.1%]
+
+  Global reference:
+                Global   S5    122     112            91.8%  [85.6%, 95.5%]
+                Global   S4     65      32            49.2%  [37.5%, 61.1%]
+
+  Chi-squared: S5→bull rate × block independence
+    χ²=2.025, p=0.5671 — not significant
+
+  Chi-squared: S4→bull rate × block independence
+    χ²=1.600, p=0.6594 — not significant
+
+======================================================================
+  STEP 4: Day-of-Week Effects
+======================================================================
+
+--- J₄ Weekday (Mon-Fri) (n=554) ---
+      C0  C1  C2  C3
+C0  0.0000.9410.0590.000
+C1  0.8250.0000.0000.175
+C2  0.2540.0000.0000.746
+C3  0.0080.0550.9380.000
+
+--- J₄ Weekend (Sat-Sun) (n=240) ---
+      C0  C1  C2  C3
+C0  0.0000.8790.1210.000
+C1  0.7310.0000.0000.269
+C2  0.1750.0000.0000.825
+C3  0.0000.1210.8790.000
+
+  ‖J₄_weekday - J₄_weekend‖_F = 0.2130
+
+--- Mean Episode Duration by Day of Week (bars × 5min) ---
+    DOW   Transitions   Mean Dur (bars)   Mean Dur (h)
+    Mon           113              79.7            6.6
+    Tue           115              74.4            6.2
+    Wed           117              73.0            6.1
+    Thu            98              91.5            7.6
+    Fri           111              86.1            7.2
+    Sat           121              70.3            5.9
+    Sun           119              72.9            6.1
+
+--- Transition Rate by Day of Week ---
+    Mon: 113 transitions, 9007 bars in source regimes, rate = 0.0125 trans/bar (80 bars/trans)
+    Tue: 115 transitions, 8551 bars in source regimes, rate = 0.0134 trans/bar (74 bars/trans)
+    Wed: 117 transitions, 8544 bars in source regimes, rate = 0.0137 trans/bar (73 bars/trans)
+    Thu: 98 transitions, 8963 bars in source regimes, rate = 0.0109 trans/bar (91 bars/trans)
+    Fri: 111 transitions, 9559 bars in source regimes, rate = 0.0116 trans/bar (86 bars/trans)
+    Sat: 121 transitions, 8511 bars in source regimes, rate = 0.0142 trans/bar (70 bars/trans)
+    Sun: 119 transitions, 8676 bars in source regimes, rate = 0.0137 trans/bar (73 bars/trans)
+
+======================================================================
+  STEP 5: Regime Duration by Starting Hour
+======================================================================
+
+--- Mean Duration (hours) by Start Block ---
+                 Block     C0 bear      C1 rev     C2 pull     C3 bull         All
+          Asia (00-05)         7.1         6.2         6.4         6.4         6.6
+        Europe (06-11)         7.2         6.4         6.4         6.4         6.6
+            US (12-17)         7.1         5.4         5.8         6.9         6.3
+       Evening (18-23)         6.0         6.8         6.0         7.0         6.5
+
+--- Transition Hour Histogram (preferred times for regime changes) ---
+    00:00    41  ( +23.9%)  ████████████████████ ▲
+    01:00    30  (  -9.3%)  ███████████████
+    02:00    49  ( +48.1%)  ████████████████████████ ▲
+    03:00    35  (  +5.8%)  █████████████████
+    04:00    32  (  -3.3%)  ████████████████
+    05:00    38  ( +14.9%)  ███████████████████
+    06:00    27  ( -18.4%)  █████████████
+    07:00    22  ( -33.5%)  ███████████ ▼
+    08:00    34  (  +2.8%)  █████████████████
+    09:00    29  ( -12.3%)  ██████████████
+    10:00    41  ( +23.9%)  ████████████████████ ▲
+    11:00    31  (  -6.3%)  ███████████████
+    12:00    39  ( +17.9%)  ███████████████████
+    13:00    41  ( +23.9%)  ████████████████████ ▲
+    14:00    36  (  +8.8%)  ██████████████████
+    15:00    37  ( +11.8%)  ██████████████████
+    16:00    26  ( -21.4%)  █████████████ ▼
+    17:00    32  (  -3.3%)  ████████████████
+    18:00    28  ( -15.4%)  ██████████████
+    19:00    20  ( -39.5%)  ██████████ ▼
+    20:00    32  (  -3.3%)  ████████████████
+    21:00    22  ( -33.5%)  ███████████ ▼
+    22:00    30  (  -9.3%)  ███████████████
+    23:00    42  ( +27.0%)  █████████████████████ ▲
+
+  Chi-squared: uniform distribution of transitions across 4 blocks
+    Block counts: [225 184 211 174]
+    Expected (uniform): 198.5
+    χ²=8.408, p=0.0383 — SIGNIFICANT
+
+======================================================================
+  STEP 6: Summary
+======================================================================
+
+  Frobenius distance from global J₄:
+    Asia (00-05): 0.1487
+    Europe (06-11): 0.1196
+    US (12-17): 0.0804
+    Evening (18-23): 0.1694
+    Mean: 0.1295, Max: 0.1694
+
+  Context: Phase 2 subperiod stability Frobenius norms were 0.03–0.12
+  → Time-block variation (0.1694) EXCEEDS subperiod variation range
+  → Possible systematic temporal modulation
+
+  Key transition probabilities by block:
+     Trans    Global     Asia (00-05)   Europe (06-11)       US (12-17)  Evening (18-23)
+     C0→C1     0.924            0.926            0.872            0.964            0.925
+     C1→C0     0.795            0.881            0.761            0.810            0.690
+     C1→C3     0.205            0.119            0.239            0.190            0.310
+     C2→C3     0.770            0.714            0.826            0.733            0.796
+     C2→C0     0.230            0.286            0.174            0.267            0.204
+     C3→C2     0.919            0.893            0.911            0.915            0.974
+
+======================================================================
+  Phase 8 complete.
+======================================================================
