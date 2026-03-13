@@ -40,22 +40,19 @@ Discovery (11 phases) + OOS validation (Phase 12) + production refit (Phase 13) 
 
 ---
 
-## 1. Operational Prototype (Next Priority)
+## 1. Forward Validation (Next Priority)
 
-### Components
-1. **Regime tracker:** Sign of trend_8h × sign of trend_48h → 2-bit macro regime (bear/reversal/pullback/bull)
-2. **Exit monitor:** At regime transition, read trend_1h and trend_8h → logistic model → P(favorable exit)
-3. **Dashboard:** Current regime, time in regime, trend_8h level, exit probability
+Python batch script on post-Feb 2026 BTC data. No dashboard, no real-time — just grade the model.
 
-### Architecture
-- Input: live 5-min BTC price → compute OLS trend at 1h, 8h, 48h rolling windows
-- State: 2-bit macro regime from trend_8h sign × trend_48h sign
-- Transition: detected when either trend_8h or trend_48h crosses zero
-- Output: regime label + exit quality when transition occurs
+### What it does
+1. Compute OLS trends (1h, 8h, 48h) on 5-min bars
+2. Detect regime transitions from 2-bit macro (trend_8h sign × trend_48h sign)
+3. At each transition, record: regime, trend_1h, trend_8h, logistic P(favorable), actual outcome
+4. After the run, grade against rubric
 
 ### Production model
 
-**Trend computation:** OLS slope of rolling window of period duration, divided by mean price in window → fractional rate per bar. E.g., trend_8h = OLS slope through last 96 5-min bars, normalized. See `data/download_btc.py` for implementation.
+**Trend computation:** OLS slope of rolling window of period duration, divided by mean price in window → fractional rate per bar. See `data/download_btc.py`.
 
 **C2 Pullback Exit:**
 ```
@@ -69,25 +66,25 @@ P(bt) = σ(−4.890 + 3138 × trend_1h + 421505 × trend_8h)
 Decision boundary: trend_8h ≈ +0.000012
 ```
 
-### What the prototype tests
-- Does the 2-bit regime tracker produce clean transitions in live data?
-- Does trend_8h zero-crossing reliably mark transition events?
-- Any boundary flickering that would motivate HMM?
-- Forward validation: do exit predictions match outcomes?
+### Grading rubric
+
+| Grade | Criteria |
+|-------|----------|
+| A | Zero topology violations, calibration within ±10pp per bin, decision boundary stable |
+| B | ≤2 topology violations, calibration within ±15pp, boundary shifted but direction correct |
+| C | Topology holds but exit signal degraded (AUC <0.80 or calibration off >20pp) |
+| F | Topology violations >5%, or K≠4 on live data |
+
+A or B → proceed to simulator integration for live trading. C → regime tracking only. F → stop.
+
+### Minimum data
+30 days (~150 episodes, ~40 C2 exits, ~40 C1 exits). Enough for topology, marginal for calibration. 90 days would be solid.
 
 ---
 
-## 2. Live Forward Test (Post-Feb 2026 BTC)
+## 2. Simulator Integration (If Grade A/B) 
 
-True forward OOS on data not available during any analysis phase. Even 30 days (~150 episodes) is informative.
-
-**This is running implicitly once the prototype is built.** The prototype generates live validation data.
-
-Key metrics to track:
-- Regime sequence: does it follow the directed cycle?
-- Structural zero violations: any forbidden transitions?
-- Exit prediction accuracy: binned P(bull) vs actual at C2 and C1
-- trend_8h decision boundary: stable near zero?
+Once forward validation passes, integrate the regime model into the existing trading simulator. The simulator handles per-second data ingestion and order execution — the regime model feeds it conviction signals at regime transitions (~5 per day).
 
 ---
 
@@ -125,8 +122,8 @@ If the IS data normalization recipe can be recovered, enables:
 
 ## Priority Order
 
-1. **Operational prototype** → live regime tracking + exit signal (can build now)
-2. **Live forward test** → runs automatically once prototype deployed
+1. **Forward validation** → Python batch on post-Feb 2026 data, grade against rubric
+2. **Simulator integration** → if grade A/B, wire regime signals into trading simulator
 3. **Multi-asset** → when data available, confirms portability
 
-Item 1 can proceed immediately. Item 2 is implicit. Item 3 is blocked on data acquisition.
+Item 1 needs post-Feb 2026 BTC data (download with `data/download_btc.py`). Item 2 gates on item 1. Item 3 is independent.
