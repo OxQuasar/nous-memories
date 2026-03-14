@@ -1,0 +1,101 @@
+========================================================================
+NQ4 THREAD 2: TYPE-DISTRIBUTION DEPENDENCE
+========================================================================
+
+Complement pairs: [(0, 15), (1, 14), (2, 13), (3, 12), (4, 11), (5, 10), (6, 9), (7, 8)]
+Non-Frame reps: [1, 2, 3, 4, 5, 6, 7]
+
+Predicted syndrome shifts from Type-0 constraint:
+  ORIGINAL (pair 1 = 001): H·e_0 = (1, 0, 0) = syndrome 1
+    Predicted Z₂ pairing: [(0, 1), (2, 3), (4, 5), (6, 7)]
+  pair 3 = 011: H·e_2 = (1, 1, 0) = syndrome 3
+    Predicted Z₂ pairing: [(0, 3), (1, 2), (4, 7), (5, 6)]
+  pair 4 = 100: H·e_3 = (0, 0, 1) = syndrome 4
+    Predicted Z₂ pairing: [(0, 4), (1, 5), (2, 6), (3, 7)]
+
+========================================================================
+TESTING: ORIGINAL (pair 1 = 001)
+========================================================================
+
+────────────────────────────────────────────────────────────
+  Type distribution: (2, 0, 1, 1, 1, 1, 1, 2)  [ORIGINAL (pair 1 = 001)]
+  Type-0: [1], Type-1: [2, 3, 4, 5, 6], Type-2: [0, 7]
+  Surjections: 92160
+  Syndrome distribution: {0: 11520, 1: 11520, 2: 11520, 3: 11520, 4: 11520, 5: 11520, 6: 11520, 7: 11520}
+  Globally uniform? True
+  Orbits: 960, sizes: [(96, 960)]
+  Syndromes per orbit: {6: 960}
+  Missing pairs: {(0, 1): 240, (2, 3): 240, (4, 5): 240, (6, 7): 240}
+  Distribution types: {(8, 8, 8, 8, 32, 32): 576, (16, 16, 16, 16, 16, 16): 384}
+
+  PREDICTION CHECK:
+    Predicted Z₂ pairing: [(0, 1), (2, 3), (4, 5), (6, 7)]
+    Actual missing pairs:  [(0, 1), (2, 3), (4, 5), (6, 7)]
+    ✓ EXACT MATCH — Z₂ pairing rotates with Type-0 Fano point
+    ✓ 4×240 = 960 structure preserved
+    96/144 split: 384 uniform + 576 biased = 960
+    ✓ 96/144 per class preserved (384 + 576 = 960)
+
+========================================================================
+TESTING: pair 3 = 011
+========================================================================
+
+────────────────────────────────────────────────────────────
+  Type distribution: (2, 1, 1, 0, 1, 1, 1, 2)  [pair 3 = 011]
+  Type-0: [3], Type-1: [1, 2, 4, 5, 6], Type-2: [0, 7]
+  Surjections: 92160
+  Syndrome distribution: {0: 11520, 1: 11520, 2: 11520, 3: 11520, 4: 11520, 5: 11520, 6: 11520, 7: 11520}
+  Globally uniform? True
+  Orbits: 960, sizes: [(96, 960)]
+  Syndromes per orbit: {6: 960}
+  Missing pairs: {(0, 3): 240, (1, 2): 240, (4, 7): 240, (5, 6): 240}
+  Distribution types: {(8, 8, 8, 8, 32, 32): 576, (16, 16, 16, 16, 16, 16): 384}
+
+  PREDICTION CHECK:
+    Predicted Z₂ pairing: [(0, 3), (1, 2), (4, 7), (5, 6)]
+    Actual missing pairs:  [(0, 3), (1, 2), (4, 7), (5, 6)]
+    ✓ EXACT MATCH — Z₂ pairing rotates with Type-0 Fano point
+    ✓ 4×240 = 960 structure preserved
+    96/144 split: 384 uniform + 576 biased = 960
+    ✓ 96/144 per class preserved (384 + 576 = 960)
+
+========================================================================
+TESTING: pair 4 = 100
+========================================================================
+
+────────────────────────────────────────────────────────────
+  Type distribution: (2, 1, 1, 1, 0, 1, 1, 2)  [pair 4 = 100]
+  Type-0: [4], Type-1: [1, 2, 3, 5, 6], Type-2: [0, 7]
+  Surjections: 92160
+  Syndrome distribution: {0: 11520, 1: 11520, 2: 11520, 3: 11520, 4: 11520, 5: 11520, 6: 11520, 7: 11520}
+  Globally uniform? True
+  Orbits: 960, sizes: [(96, 960)]
+  Syndromes per orbit: {6: 960}
+  Missing pairs: {(0, 4): 240, (1, 5): 240, (2, 6): 240, (3, 7): 240}
+  Distribution types: {(8, 8, 8, 8, 32, 32): 576, (16, 16, 16, 16, 16, 16): 384}
+
+  PREDICTION CHECK:
+    Predicted Z₂ pairing: [(0, 4), (1, 5), (2, 6), (3, 7)]
+    Actual missing pairs:  [(0, 4), (1, 5), (2, 6), (3, 7)]
+    ✓ EXACT MATCH — Z₂ pairing rotates with Type-0 Fano point
+    ✓ 4×240 = 960 structure preserved
+    96/144 split: 384 uniform + 576 biased = 960
+    ✓ 96/144 per class preserved (384 + 576 = 960)
+
+========================================================================
+SUMMARY: TYPE-DISTRIBUTION DEPENDENCE
+========================================================================
+
+Config                          Orbits  Miss  Unif  Bias              Pairing
+────────────────────────────── ─────── ───── ───── ───── ────────────────────
+  ORIGINAL (pair 1 = 001)          960     4   384   576 (0, 1)/(2, 3)/(4, 5)/(6, 7)
+  pair 3 = 011                     960     4   384   576 (0, 3)/(1, 2)/(4, 7)/(5, 6)
+  pair 4 = 100                     960     4   384   576 (0, 4)/(1, 5)/(2, 6)/(3, 7)
+
+Conclusion:
+  - Z₂ pairing rotates with Type-0 Fano point: predicted shift = H·e_j
+  - 4×240 = 960 structure is universal across type distributions
+  - 96/144 uniform/biased split is universal
+  - The 4-fold classification is canonical up to GL(3,F₂) symmetry
+
+Done.

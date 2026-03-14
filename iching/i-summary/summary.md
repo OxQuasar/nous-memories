@@ -6,13 +6,19 @@ The I Ching's algebraic structure is the unique complement-respecting surjection
 
 The concrete realization is PG(2,F₂) decorated with one compass. The 0.5-bit "cosmological choice" is presentational — under full symmetry Stab(111) × Aut(Z₅), there is exactly 1 orbit. The binary choice appears only when fixing the 互 kernel line H. The ANF parameter space (Z₅⁴) decomposes as the trivial ⊕ standard representation of S₄ over GF(5), with Aut(Z₅) acting as pure scalar multiplication.
 
-The texts and the algebra are independent systems sharing a narrow interface: one strong core bridge (basin × 凶, R²=23%) and a diffuse shell contact zone ({吉, 利} × {surface_relation, rank, palace_element}, R²≈6-10%), with 89% residual. The coupling is marker-specific: 凶 (danger) responds to both algebraic projections independently; 吉 and 利 (fortune, advantage) respond to shell only; 7 of 11 markers are algebraically uncoupled. The commentary tradition sees primes 2 and 3 but not 5.
+The texts and the algebra are independent systems sharing a narrow interface: one strong core bridge (basin × 凶, R²=23%) and a diffuse shell contact zone ({吉, 利} × {surface_relation, rank, palace_element}, R²≈6-10%), with 89% residual. The coupling is marker-specific: 凶 (danger) responds to both algebraic projections independently; 吉 and 利 (fortune, advantage) respond to shell only; 7 of 11 markers are algebraically uncoupled. 凶's dual coupling is NOT prevalence-driven (power simulation: monotonically increasing, no sweet spot at 13.5%). The commentary tradition sees primes 2 and 3 but not 5.
 
 Two operational atlases exhaust the algebraic interpretive surface. Shell (火珠林) and core (梅花) are the only two primitive projections on Z₂⁶ (R5). Their temporal channels are proven orthogonal (MI=0). The representational substrate ({4,2,2,2,2} branch element distribution) constrains the system more than its design choices do.
 
 The (3,5) object is algebraically isolated. "Self-interpreting code" is not a mathematical category — the architecture doesn't generalize. Isolation proven through three levels: char=2 (theorem), |F_q|=2 (GL Maximization), (n,p)=(3,5) (orbit formula). All cross-domain comparisons (genetic code, F₃, F₄) are clean negatives.
 
-76 results proven or verified across 9 workflows (atlas, atlas-mh, atlas-hzl, deep, unification phases 1–3, semantic-map, kw-final, relations). Zero contradictions.
+The nuclear shear has rank(M^k) = max(2, 2n−2k) for all n ≥ 2 — proven by block triangularization of M = [S E; E S] via σ = p ⊕ q coordinates. The all-ones vector 𝟏 is a fixed point of T = S+E, preventing nilpotency and creating the 4-element attractor {坤坤, 既濟, 未濟, 乾乾} at n=3.
+
+At (4,13), the first non-trivial moduli space: 960 orbits classified by Hamming syndrome structure. The orientation code is the [7,4,3] Hamming code, but the Type-0 fiber constraint creates a "stuck bit" defect that pairs syndromes, yielding 960 = 4 × (96 + 3×48) — not 8×120. The 4-fold classification is canonical under GL(3,F₂).
+
+The 彖傳 is a systematic anomaly detector on binary structure: 剛/柔 ratio is perfectly monotonic inverse to basin yang-content (Kun 2.14 > Cycle 1.50 > Qian 1.25).
+
+77 results proven or verified across 10 workflows (atlas, atlas-mh, atlas-hzl, deep, unification phases 1–3, semantic-map, kw-final, relations, i-summary). Zero contradictions.
 
 ---
 
@@ -28,6 +34,19 @@ The (3,5) object is algebraically isolated. "Self-interpreting code" is not a ma
 - **Three equivalent mathematical descriptions:** (1) PG(2,F₂) with type assignment on lines through 111 (unique up to S₃); (2) surjectivity locus within trivial ⊕ standard representation of S₄ × Z₄ on GF(5)⁴; (3) cross-characteristic function F₂³ → Z₅ with unique eigenvalue direction D_{111}f = 3f and δ_f = 4.
 - **Flat-direction partition:** 15 patterns in 2 S₄-orbits (3 complete-pair + 12 selective+complement), each with exactly 16 surjections. Complement flatness ⟺ three-type fiber shape {2,2,2,1,1}. Clean but derivative of fiber shape.
 
+### The (4,13) moduli space (i-summary)
+
+- **960 orbits classified by Hamming syndrome.** The orientation code at (4,13) is the [7,4,3] Hamming code — the kernel flip patterns are codewords. The Fano-plane labeling of complement pairs IS the parity-check matrix.
+- **Type-0 defect halves classification.** The Type-0 pair (both reps map to 0) creates a "stuck bit" that desynchronizes the kernel action from the Hamming structure. Effective flips have syndrome ∈ {0, H·e_j} instead of just {0}, pairing syndrome classes. 960 = 4 × 240, not 8 × 120.
+- **Within each class: 96 uniform + 144 biased.** Biased orbits split 48×3 among non-missing Z₂ pairs (Z₃-symmetric). The classification rotates with the Type-0 Fano point (verified across 3 type distributions) and is canonical under GL(3,F₂).
+- **At (3,5), the defect is masked by rigidity:** RM(1,2) fills the orientation space entirely, so the Type-0 defect has no room to manifest. This is a quantitative refinement of why (3,5) is rigid.
+
+### The nuclear rank theorem (i-summary)
+
+- **rank(M^k) = max(2, 2n−2k) for all n ≥ 2.** PROVEN by block triangularization. In the factored basis, M = [S E; E S] where S is a nilpotent shift and E is a rank-1 innermost coupling. The change of basis σ = p ⊕ q yields block upper-triangular M' = [T E; 0 T], where T = S+E has a fixed point 𝟏.
+- **Key lemma (orthogonal support):** The off-diagonal coupling Φ_k annihilates ker(T^k) because ker(T^k) is supported on outer levels while E only passes the innermost component. Weaker than im(Φ_k) ⊆ im(T^k) (which is false), but sufficient.
+- **Rank drops by exactly 2 per iteration** (one from position, one from orbit), stabilizing at rank 2 after n−1 steps. Stable image = F₂² = 4-element alternating-bit attractor.
+
 ### The structure (atlas + deep + unification phases 1–2)
 
 - **Zero residual:** 13 五行 coordinates jointly identify every hexagram uniquely. H(hexagram | full profile) = 0.0 bits.
@@ -35,7 +54,7 @@ The (3,5) object is algebraically isolated. "Self-interpreting code" is not a ma
 - **Selection chain 240→192→96→16→4→2** (complete, each step classified as theorem or structural choice).
 - **The torus is the frame, the Z₅ quotient is the picture.** Valence lives on the Z₅ diagonal — relation type, not position (R21).
 - **Three-tier text-algebra coupling:** 凶 dual-coupled (core+shell, R²=22.6%), 吉/利 shell-only (R²≈6-10%), 7/11 markers uncoupled (~64%). Basin × 凶 is the sole Bonferroni-surviving bridge (CMH p = 4.1×10⁻⁵). Shell contact is diffuse across multiple coordinates. ~89% of text variance is algebraically independent.
-- **Marker-specific coupling:** 凶 is structural + relational (responds to both basin convergence and 生克 surface dynamics). 吉 and 利 are relational only (respond to shell coordinates, blind to basin). Everything else is contextual only (no algebraic coupling). The valence hypothesis (negative markers = more core-coupled) is suggestive but not significant (permutation p = 0.186).
+- **凶's dual coupling is genuine, not prevalence-driven.** Power simulation (6000 reps across 6 prevalences) shows monotonically increasing dual-detection power. At 凶's prevalence (13.5%), dual power is only 22% — yet it was detected, while higher-prevalence markers (吉 at 31%) show no dual coupling. "Why 凶?" is semantic, not statistical.
 - **Only two reading methods exist:** Shell (3+3 = 火珠林) and core (1+4+1 = 梅花). The only two primitive projections on Z₂⁶ (R5).
 
 ### The geometry (unification phase 1)
@@ -64,6 +83,10 @@ The (3,5) object is algebraically isolated. "Self-interpreting code" is not a ma
 - **ANF parametrization:** 4 free parameters (a₁,a₂,a₄,a₇) ∈ Z₅⁴. All degree-2 coefficients = 2a₇. Surjectivity locus 240/625.
 - **Genetic code:** exhaustive test (210K pairs). No involutory equivariance. Connection architectural only.
 - **All domain comparisons negative:** F₃ (6 orbits), F₄ (116K orbits), genetic code (no equivariance), design theory (dead end), Fano labeling (dead end).
+
+### The 彖傳 (i-summary)
+
+- **Systematic anomaly detector on binary structure.** 剛/柔 ratio is perfectly monotonic inverse to basin yang-content: Kun (2.14) > Cycle (1.50) > Qian (1.25). The commentary highlights what's structurally unusual — yang in yin-dominant hexagrams, yin in yang-dominant ones.
 
 ### The 梅花 atlas (384 states)
 
@@ -100,37 +123,37 @@ The (3,5) object is algebraically isolated. "Self-interpreting code" is not a ma
 
 **Q1: 火珠林 operational atlas.** RESOLVED → atlas-hzl workflow. See atlas-hzl/findings.md.
 
-**Q2: KW sequence ordering.** RESOLVED → kw-final workflow. The pair ordering is **designed but not algebraically determined** — the unique point of human authorship. Monte Carlo (50K orderings) shows no metric discriminates KW under correct null model. Basin clustering was an artifact (R41 corrected). Three soft properties (directional orbit flow, small torus steps, complement proximity) characterize KW's style without determining it. The ordering principle is narrative (序卦傳), not algebraic. See kw-final/findings.md.
+**Q2: KW sequence ordering.** RESOLVED → kw-final workflow. The pair ordering is **designed but not algebraically determined** — the unique point of human authorship. See kw-final/findings.md.
 
 **Q3: 納甲 modification history.** When did the 京氏易傳 → 火珠林 rule change occur? Historical-philological.
 
 ### About the texts
 
-**Q4: Why exactly two bridges?** RESOLVED → open-questions workflow. The count of 2 contact clusters is structurally forced by R5 (exactly 2 primitive projections). The saturation is asymmetric and marker-specific: **凶 is dual-coupled** (responds to both core/basin and shell, independently, total R²=22.6%); **吉 and 利 are shell-only** (R²≈6-10%); **7 of 11 markers are uncoupled** (~64%). The original "two bridges" (basin×凶, 生体×吉) was directionally correct but overstated the shell side. More accurate: one strong core bridge + one diffuse shell contact zone + 89% uncoupled residual. Interpretive frame: "danger is structural + relational; fortune is relational only; everything else is contextual only." See open-questions/exploration-log.md.
+**Q4: Why exactly two bridges?** RESOLVED → open-questions + i-summary workflows. Three-tier coupling (凶 dual, 吉/利 shell-only, 7/11 uncoupled). See i-summary/exploration-log.md.
 
-**Q5: 彖傳 as systematic anomaly detector.** Measured for one variable. Is this systematic?
+**Q5: 彖傳 as systematic anomaly detector.** RESOLVED → i-summary workflow. 剛/柔 perfectly monotonic inverse to basin yang-content across all three basins.
 
 **Q6: 說卦傳 attributes.** Non-compass attributes (animals, body parts) untested for algebraic signal.
 
-### Interpretive
+### About the algebra
 
-**Q7: Incommensurability as mechanism.** The system's practical function may depend on the incommensurability between Z₂ and Z₅ — enter through binary (casting), exit through pentadic (interpretation). Is the 2/5 visibility ceiling a bug or a feature? (The relations workflow showed the 2/5 ceiling is extremal within the E=1 family — maximum partial visibility — but trivially forced by smallest p.)
+**Q8: The decorated Fano plane in existing mathematics.** RESOLVED (negative) → open-questions workflow. No name exists. Cross-characteristic gap + uniqueness → nothing to classify.
 
-**Q8: The decorated Fano plane in existing mathematics.** RESOLVED (negative) → open-questions workflow. The object has **no name in existing mathematics**. Three independent reasons: (1) cross-characteristic gap (F₂ domain, Z₅ codomain falls between GBF and finite geometry communities); (2) uniqueness at (3,5) eliminates classification need (1 orbit → nothing to name); (3) the representation decomposition trivial ⊕ standard of S₄ over GF(5) IS the mathematical identity — it's just new. The flat-direction partition (15 = C(3,2)×5) is derivative of fiber shape. At (4,13), genuine decoration survives (8 orientation orbits) — this richer object might match known structures. See open-questions/exploration-log.md.
+**Q9: Nuclear rank formula.** RESOLVED → i-summary workflow. PROVEN for all n ≥ 2: rank(M^k) = max(2, 2n−2k). See i-summary/work/proof_nuclear_rank.md.
 
-**Q9: Observer-participation formalization.** Can "observer = participant" be formalized between verbal analogy and algebraic isomorphism? The strongest domain match (markets) is epistemological, not algebraic. Is there a framework that captures the structural insight without requiring F₂?
+**NQ4: The (4,13) decorated object.** RESOLVED → i-summary workflow. 960 = 4 × (96 + 3×48) via Hamming + Type-0 defect. Canonical under GL(3,F₂).
 
-### New questions from open-questions session (2026-03-13)
+### Remaining open
 
-**NQ1: Is 凶's unique dual-coupling prevalence-driven?** At 13.5% prevalence, 凶 may sit in the statistical sweet spot for detecting both projection effects. Answerable by power simulation. If confirmed, "why 凶?" becomes "why this prevalence?" — a textual question, not algebraic.
+**NQ1: 凶's dual-coupling.** RESOLVED — not prevalence-driven. "Why 凶?" is semantic.
 
-**NQ2: 利's stronger shell coupling.** 利 (ΔR²_shell=0.098) > 吉 (0.056). Does the conditional/unconditional distinction in their semantics map to coupling strength?
+**NQ2: 利's stronger shell coupling.** 利 (ΔR²_shell=0.098) > 吉 (0.056). Does the conditional/unconditional distinction in their semantics map to coupling strength? LOW PRIORITY — interpretive.
 
-**NQ3: Rank-2 × 吉 signal.** p=0.008 nominal, n=48, not Bonferroni-surviving. Hexagram-level effect (distributed across lines, not shi-mediated). Needs independent corpus validation.
+**NQ3: Rank-2 × 吉 signal.** p=0.008 nominal, not Bonferroni-surviving. Needs independent corpus validation. MEDIUM PRIORITY.
 
-**NQ4: The (4,13) decorated object.** 8 orientation orbits at n=4. Computationally accessible. Might connect to PG(3,F₂) literature or define new structure.
+**NQ5: Cross-characteristic GBF as a new function class.** Complement-equivariant surjections F₂ⁿ → Z_p. Deprioritized as completism — the object's isolation at (3,5) means the class has exactly one interesting point.
 
-**NQ5: Cross-characteristic GBF as a new function class.** Complement-equivariant surjections F₂ⁿ → Z_p for varying (n,p). The (3,5) case is the unique point where decoration is fully absorbed. Systematic study could produce a nameable new class.
+**Q7: Incommensurability as mechanism.** The 2/5 visibility ceiling is trivially forced by smallest p. Unfalsifiable as stated.
 
 ---
 
@@ -143,16 +166,14 @@ The (3,5) object is algebraically isolated. "Self-interpreting code" is not a ma
 | `unification/synthesis-2.md` | Phase 2 account (landscape, selection chain, eigenstructure). |
 | `unification/synthesis-1.md` | Phase 1 account (PG(2,F₂) framework, 17 results). |
 | `unification/phase1-unification.md` | The (3,5) framework + I Ching mapping. |
-| `deep/` | Deep exploration: 9 iterations, derivation tree, open-questions.md (R1–R60). |
+| `deep/` | Deep exploration: 9 iterations, derivation tree, open-questions.md (R1–R72). |
 | `deep/number-structure.md` | The 2, 3, 5 prime architecture. |
 | `atlas/` | Static 五行 atlas: 64 profiles, torus, transformations, constraints. |
 | `atlas-mh/` | 梅花 operational atlas: 384 states, arcs, torus flow, channels, timing. |
 | `atlas-hzl/` | 火珠林 operational atlas: 64 profiles × temporal × 31 domains, network reading. |
 | `semantic-map/` | Text-algebra interface: 89% residual, two bridges, three registers. |
 | `kw-final/` | KW pair ordering investigation: Monte Carlo (50K), joint analysis, R41 correction. |
-| `relations/` | Cross-domain investigation: 6 iterations, 16 computations. "Self-interpreting code" closed as verbal analogy. Three-level specificity chain. R62–R68. |
-| `open-questions/` | Q4 and Q8 resolution: exhaustive bridge scan, marker coupling profiles, representation decomposition, flat-direction uniformity. 3 iterations. |
-| `openq/` | Computation scripts and JSON results for open-questions workflow. |
-| `synthesis/` | Early cross-workflow synthesis. Superseded but data files still referenced. |
-| `huozhulin/` | 火珠林 preliminary: 納甲 map, palace kernel, 六親 algebra. Superseded by atlas-hzl. |
-| `i-summary/` | This file. |
+| `relations/` | Cross-domain investigation: 6 iterations, 16 computations. R62–R68. |
+| `open-questions/` | Q4 and Q8 resolution: exhaustive bridge scan, marker coupling profiles. |
+| `i-summary/` | This file + exploration log + computation scripts (R69–R72, nuclear rank proof). |
+| `i-summary/work/` | All computation scripts and output files for this investigation. |

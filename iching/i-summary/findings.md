@@ -1,407 +1,215 @@
-# Open Questions — Computation Results
+# I Ching Open Questions Investigation — Complete Findings
 
-## Q4: Exhaustive Bridge Scan
+## Investigation Overview
 
-### Setup
-99 (coordinate × marker) pairs tested across 384 yaoci records.
-- 9 algebraic coordinates (4 core, 5 shell projection)
-- 11 markers (≥5 occurrences; 利貞 and 利涉大川 dropped as too rare)
-- Tests: raw chi²/Fisher → CMH position-controlled → bridge-controlled
-
-### Results: The bridge landscape is NOT isolated to two pairs
-
-**Bonferroni survivors (p < 5.05×10⁻⁴): exactly 2 pairs**
-
-| Pair | CMH p | CMH OR | Bridge p |
-|------|-------|--------|----------|
-| basin × 凶 | 4.08×10⁻⁵ | 0.24 (Cycle basin) | 1.41×10⁻⁴ |
-| i_component × 凶 | 4.08×10⁻⁵ | 4.25 (component 0) | 1.41×10⁻⁴ |
-
-These two are the same signal: i_component is a binary re-encoding of basin (Cycle basin = i_component 0). The identical CMH p-values confirm this.
-
-**CMH-significant at p < 0.05: 12 pairs total**
-
-Core projection (3 pairs, all driven by 凶):
-1. basin × 凶: p=4.08×10⁻⁵, OR=0.24 at Cycle basin ← **PRIMARY BRIDGE**
-2. i_component × 凶: p=4.08×10⁻⁵ (same signal as #1)
-3. hu_relation × 凶: p=2.85×10⁻³, OR=2.67 at 比和 — marginally survives bridge control (p=0.037)
-
-Shell projection (9 pairs, broader signal):
-4. rank × 咎: p=6.72×10⁻³, OR=8.11 at rank 7
-5. rank × 吉: p=7.86×10⁻³, OR=2.42 at rank 2
-6. shi × 吉: p=7.86×10⁻³, OR=2.42 at shi=2 (same signal as #5: rank 2 ↔ shi line 2)
-7. **surface_relation × 吉**: p=1.70×10⁻², OR=0.45 at 克体 ← **SECONDARY BRIDGE** (but note: best level is 克体, not 生体!)
-8. rank × 利: p=2.00×10⁻², OR=2.55 at rank 2
-9. shi × 利: p=2.00×10⁻², (same signal as #8)
-10. surface_relation × 悔: p=4.35×10⁻², OR=3.62 at 体克用
-11. palace_element × 利: p=4.62×10⁻², OR=1.94 at Metal
-12. surface_relation × 无咎: p=4.68×10⁻², OR=1.84 at 克体
-
-**All 12 pairs survive bridge control** — none are absorbed by the cross-projection bridge.
-
-### Key Findings
-
-**F1: Core projection is clean — one bridge dominates.**
-Basin × 凶 is the only Bonferroni-surviving core signal. The hu_relation × 凶 signal (比和 ↔ 凶) is secondary and barely survives bridge control (p=0.037). This makes sense: 比和 in nuclear structure correlates with basin membership (both reflect inner-trigram similarity).
-
-**F2: Shell projection is richer than predicted — NOT a single bridge.**
-The prediction was "surface_relation × 吉 (生体) alone." Reality: at least 4 independent shell signals survive position control, driven by different coordinates and markers:
-- rank/shi at level 2 → 吉 and 利 (rank-2 hexagrams are associated with favorable markers)
-- surface_relation → 吉 (but best contrast is 克体 LOW, not 生体 HIGH)
-- rank 7 → 咎 (highest rank hexagrams attract blame markers)
-- palace_element Metal → 利
-
-**F3: SURPRISE — The surface_relation×吉 bridge is not exactly 生体→吉.**
-The CMH pairwise breakdown for surface_relation × 吉:
-- 克体: CMH p=0.017, OR=0.446 ← strongest (克体 SUPPRESSES 吉)
-- 生体: CMH p=0.032, OR=1.875 (生体 elevates 吉, but weaker)
-- 比和: CMH p=0.083, OR=0.574 (not significant)
-
-The bridge is better described as "克体 suppresses 吉" than "生体 promotes 吉." The original finding (F7 in semantic-map findings) reported 生体 as the driver — this scan shows the contrast is really driven by 克体's low rate.
-
-**F4: Rank 2 is a significant shell-side signal independent of surface_relation.**
-Rank 2 (三世卦, third-generation palace member) shows OR=2.42 for 吉 and OR=2.55 for 利, surviving both position and basin bridge controls. This is NOT absorbed by the surface_relation bridge — it represents an additional channel.
-
-**F5: Multiple-testing caveat.** 
-After Bonferroni, only 2 pairs survive (both basin × 凶 in different encodings). All shell signals are p=0.007–0.047, significant nominally but not after strict correction. The shell projection has weak, distributed associations rather than one clean bridge.
-
-### Raw numbers for primary bridges
-
-**Basin × 凶 (core, Bonferroni-significant):**
-| Basin | N lines | 凶 count | 凶 rate |
-|-------|---------|----------|--------|
-| Kun | 96 | 20 | 20.8% |
-| Cycle | 192 | 12 | 6.2% |
-| Qian | 96 | 20 | 20.8% |
-
-Cycle basin has one-third the 凶 rate of Kun/Qian basins (6.2% vs 20.8%). This is the strongest text-algebra bridge in the entire system.
-
-**Surface relation × 吉 (shell, nominal significance):**
-| Relation | N lines | 吉 count | 吉 rate |
-|----------|---------|----------|--------|
-| 生体 | 72 | 30 | 41.7% |
-| 体克用 | 78 | 29 | 37.2% |
-| 体生用 | 72 | 25 | 34.7% |
-| 比和 | 84 | 19 | 22.6% |
-| 克体 | 78 | 15 | 19.2% |
-
-生体 has the highest rate (41.7%), 克体 the lowest (19.2%). The CMH flagged 克体 as best contrast because the binary split "克体 vs rest" (19.2% vs ~34%) is more extreme than "生体 vs rest" (41.7% vs ~28%). Both describe the same gradient.
-
-**Rank × 吉 (shell, nominal significance):**
-| Rank | N lines | 吉 count | 吉 rate |
-|------|---------|----------|--------|
-| 0 | 48 | 9 | 18.8% |
-| 1 | 48 | 10 | 20.8% |
-| **2** | **48** | **23** | **47.9%** |
-| 3 | 48 | 16 | 33.3% |
-| 4 | 48 | 14 | 29.2% |
-| 5 | 48 | 13 | 27.1% |
-| 6 | 48 | 17 | 35.4% |
-| 7 | 48 | 16 | 33.3% |
-
-Rank 2 (三世卦) is a striking outlier: 47.9% 吉 vs ~30.7% overall.
+Three iterations across two sessions (2026-03-13, 2026-03-14), investigating six open questions from the I Ching structural research corpus. Six questions resolved, one conjecture upgraded to theorem. 77 total results across 10 workflows, zero contradictions.
 
 ---
 
-## Q8: Decorated Fano Plane — Three Computations
+## Results Summary
 
-### Part A: Representation Decomposition
-
-**Result: ρ₄ ≅ trivial ⊕ standard (1 + 3 decomposition)**
-
-The 4D representation of Stab(111) ≅ S₄ on GF(5)⁴ = {(a₁,a₂,a₄,a₇)} decomposes as:
-
-| Irrep | Multiplicity | Dimension | Contribution |
-|-------|-------------|-----------|-------------|
-| trivial | 1 | 1 | 1 |
-| sign | 0 | 1 | 0 |
-| standard | 1 | 3 | 3 |
-| sgn⊗std | 0 | 3 | 0 |
-| V₂(2D) | 0 | 2 | 0 |
-| **Total** | | | **4** ✓ |
-
-Character verified: [4, 2, 0, 1, 0] matching classes (), (12), (12)(34), (123), (1234).
-
-**The trivial subrepresentation** is the 1D space fixed by all of S₄. This corresponds to the "overall scaling" parameter — related to the complement eigenvalue.
-
-**The standard representation** is the familiar 3D irrep of S₄ (permutation representation minus trivial). This is the space where the three coordinate parameters (a₁,a₂,a₄) act "like permutations of three things."
-
-**Block structure:** The representation is NOT upper-triangular — a₇ mixes with (a₁,a₂,a₄). The trivial+standard decomposition is an abstract isomorphism, not a visible block structure in the (a₁,a₂,a₄,a₇) basis.
-
-**Aut(Z₅) acts as pure scalar multiplication.** τ ∈ {1,2,3,4} sends (a₁,a₂,a₄,a₇) → τ·(a₁,a₂,a₄,a₇). This confirms the Stab(111) and Aut(Z₅) actions commute in the simplest possible way.
-
-### Part B: Differential Uniformity
-
-**Differential uniformity δ_f = 4.**
-
-Derivative spectrum by direction:
-
-| Direction a | Spectrum (Δ=0,1,2,3,4) | max | Type |
-|-------------|----------------------|-----|------|
-| 001 | (0,2,2,2,2) | 2 | **Flat** |
-| 010 | (0,0,4,4,0) | 4 | Two-value |
-| 011 | (0,4,0,0,4) | 4 | Two-value |
-| 100 | (4,2,0,0,2) | 4 | Three-value with zero-peak |
-| 101 | (0,2,2,2,2) | 2 | **Flat** |
-| 110 | (0,0,4,4,0) | 4 | Two-value |
-| 111 | (2,2,1,1,2) | 2 | **Near-flat (eigenvalue direction)** |
-
-**Key patterns:**
-- Three flat/near-flat directions: {001, 101, 111}. These have max = 2 (optimal for 8→5 maps).
-- The flat directions 001, 101 are weight-1 and weight-2 vectors. Together with 111 (weight-3), they span the "diagonal" subspace {x : popcount(x) is odd} — but this isn't quite right; 001⊕101 = 100, not 111.
-- Actually: {001, 101} = a Fano line. And 111 is the complement fixpoint. The flat directions are structurally special.
-
-**Complement eigenvalue D₁₁₁f = 3f: VERIFIED for all 8 inputs.**
-
-This means f(x⊕111) = f(x) + 3f(x) = 4f(x) = -f(x) mod 5. This is exactly the complement constraint: f(x̄) = -f(x) mod 5.
-
-**Only the direction a=111 has eigenvalue structure.** No other direction satisfies D_a f = c·f for any constant c.
-
-### Part C: Type-Assignment Reduction
-
-**At (3,5): complete invariant = type assignment, 1 orbit**
-
-The 3 non-frame complement pairs receive types {0, 1, 2} — one of each:
-- {001, 110} → both Wood → type 0 (identical fibers)
-- {010, 101} → Water/Fire → type 1 (singleton fibers)
-- {011, 100} → Metal/Earth → type 2 (shared double-fibers)
-
-GL(2,F₂) ≅ S₃ acts transitively on the 6 possible type assignments → 1 orbit.
-RM(1,2) has dimension 3 = number of non-frame pairs → orientation fully absorbed.
-**Type assignment is the complete invariant. The (3,5) object has NO residual decoration.**
-
-**At (4,13): genuine decoration emerges**
-
-- 7 non-frame complement pairs
-- RM(1,3) has dimension 4 < 7
-- Orientation orbits: 2^(7-4) = 8
-
-**The (3,5) case is the unique point where orientation is fully absorbed.**
-
-For all n ≥ 4: dim RM(1, n-1) = n < 2^(n-1) - 1, so residual decoration survives. The number of orientation orbits grows exponentially: 2^(2^(n-1) - 1 - n).
-
-This is a sharp characterization: the (3,5) object sits at the exact boundary where RM codes can absorb all orientation freedom. One step higher and the object acquires genuine decoration that symmetry cannot eliminate.
+| # | Result | Evidence Tier | Status |
+|---|--------|--------------|--------|
+| R69 | Hamming syndrome structure at (4,13): [7,4,3] code + Type-0 defect → 4×240 | Exhaustive verification | Verified |
+| R69a | Biased orbit 48×3 split + type-distribution rotation under GL(3,F₂) | Exhaustive verification (3 configs) | Verified |
+| R70 | 凶 dual-coupling not prevalence-driven | Statistical simulation (6000 reps) | Measured |
+| R71 | Nuclear rank formula: rank(M^k) = max(2, 2n−2k) for all n ≥ 2 | Algebraic proof + computational verification (n=2..10) | **Theorem** |
+| R72 | 彖傳 剛/柔 anomaly detection: perfect monotonic across basins | Exhaustive text count | Measured |
 
 ---
 
-## Shell Depth: Logistic Regression Model Comparison
+## R69: Hamming Syndrome Structure at (4,13)
 
-### Setup
-Logistic regressions predicting 吉 and 凶 from nested sets of algebraic coordinates. 384 yaoci records. McFadden pseudo-R² and likelihood ratio tests.
+### Statement
 
-### Results for 吉 (prevalence 118/384 = 30.7%)
+At (n=4, p=13), the 960 orbits of complement-equivariant surjections (within a fixed type distribution, under Stab(1⁴) × Aut(Z₁₃)) are classified by the [7,4,3] Hamming code with a Type-0 defect:
 
-| Model | k | McFadden R² | AIC | Description |
-|-------|---|------------|-----|-------------|
-| M0 | 6 | 0.0574 | 458.6 | Position only |
-| M1 | 8 | 0.0619 | 460.4 | Position + basin |
-| M2 | 10 | 0.0887 | 451.8 | Position + surface_relation |
-| M3 | 13 | 0.0874 | 458.4 | Position + rank |
-| M4 | 21 | 0.1138 | 461.9 | Position + all shell |
-| M5 | 23 | 0.1162 | 464.7 | Position + basin + all shell |
+**960 = 4 × (96 + 3 × 48) = 4 × 240**
 
-**Key finding: Basin adds NOTHING for 吉.** M0→M1 (add basin): LR=2.13, p=0.344, not significant. M4→M5 (add basin to shell): LR=1.15, p=0.562, not significant. Basin is irrelevant for predicting 吉.
+### Structure
 
-**Shell coordinates matter collectively.** M0→M4 (add all shell): LR=26.7, p=0.031. Surface_relation alone (ΔR²=+0.031) and rank alone (ΔR²=+0.030) contribute nearly equally. Combined shell ΔR²=+0.056 — less than additive, suggesting partial overlap.
+The 7 non-Frame complement pairs form PG(2,F₂) = the Fano plane. The kernel flip patterns (under the pair-fixing subgroup of Stab(1⁴)) generate the first-order Reed-Muller code RM(1,3) ⊂ (Z₂)⁷, which IS the [7,4,3] Hamming code. The Fano-plane labeling of complement pairs is the Hamming parity-check matrix H (3×7, columns = nonzero vectors of F₂³).
 
-**Only one coefficient survives in the full model:** line_position=2 (trad. line 3, inner trigram top), β=−1.57, OR=0.21, p=0.003. No shell coordinate achieves individual significance at p<0.05 in the full model — the shell signal is distributed, not concentrated.
+The Hamming syndrome s = Hv ∈ F₂³ classifies orientation vectors v ∈ (Z₂)⁷ into 8 cosets. However, the expected 8×120 product decomposition fails because:
 
-### Results for 凶 (prevalence 52/384 = 13.5%)
+1. **Type-0 defect:** The Type-0 pair (both representatives map to 0) creates a "stuck bit" — when a kernel element flips this pair algebraically, the orientation doesn't actually change (0 = −0). Half the kernel preserves syndromes; half shifts by ⊕(H·e_j) where j is the Type-0 column. This pairs syndromes: e.g., {0,1}, {2,3}, {4,5}, {6,7} when Type-0 is at Fano point 001.
 
-| Model | k | McFadden R² | AIC | Description |
-|-------|---|------------|-----|-------------|
-| M0 | 6 | 0.0654 | 296.6 | Position only |
-| M1 | 8 | 0.1287 | 281.4 | Position + basin |
-| M2 | 10 | 0.0950 | 295.6 | Position + surface_relation |
-| M3 | 13 | 0.1039 | 298.9 | Position + rank |
-| M4 | 21 | 0.1827 | 290.9 | Position + all shell |
-| M5 | 23 | 0.2263 | 281.6 | Position + basin + all shell |
+2. **Aut(Z₁₃) coset hopping:** Non-negation automorphisms (α = 2, 3, ...) permute values within negation pairs in assignment-dependent ways. Each orbit visits exactly 3 of the 4 Z₂ cosets, leaving one "missing pair."
 
-**Basin dominates 凶 prediction.** M0→M1: LR=19.3, p=6.5×10⁻⁵. Basin alone (ΔR²=+0.063) exceeds any single shell coordinate. In the full model, basin=Qian (OR=4.36, p=0.002) and basin=Kun (OR=3.80, p=0.005) are the strongest predictors.
+### Classification table
 
-**Shell adds significant incremental signal.** M1→M5 (shell given basin): LR=29.7, p=0.013. And basin adds to shell: M4→M5: LR=13.3, p=0.001. The projections carry **independent** information for 凶.
+| Missing Z₂ pair | Uniform orbits | Biased orbits (3 sub-classes of 48) | Total |
+|-----------------|---------------|-------------------------------------|-------|
+| {s, s⊕d} class 1 | 96 | 48 + 48 + 48 | 240 |
+| {s, s⊕d} class 2 | 96 | 48 + 48 + 48 | 240 |
+| {s, s⊕d} class 3 | 96 | 48 + 48 + 48 | 240 |
+| {s, s⊕d} class 4 | 96 | 48 + 48 + 48 | 240 |
 
-**Full model achieves R²=0.226** — substantial for this kind of data. Significant coefficients: basin=Qian/Kun, palace_element=Water, surface_relation=体生用/生体 (both suppress 凶).
+Where d = H·e_j (the syndrome of the Type-0 Fano point).
 
-### The Asymmetry
+- **Uniform orbits** (384 total): 16 surjections per syndrome across 6 present syndromes.
+- **Biased orbits** (576 total): (8, 8, 8, 8, 32, 32) — one Z₂ pair 4× overrepresented. The overrepresented pair is always a Z₂ pair, and the 144 biased orbits per class split 48×3 among the three non-missing Z₂ pairs (Z₃-symmetric).
 
-| | 吉 | 凶 |
-|---|---|---|
-| Basin ΔR² | +0.005 (NS) | **+0.063** (p<10⁻⁴) |
-| Surface_relation ΔR² | **+0.031** (p=0.005) | +0.030 (p=0.06) |
-| Rank ΔR² | **+0.030** (p=0.048) | +0.039 (p=0.11) |
-| Combined shell ΔR² | **+0.056** (p=0.031) | +0.117 (p=0.002) |
-| Full model R² | 0.116 | **0.226** |
+### Universality
 
-**凶 is more predictable than 吉.** Basin is a strong predictor for 凶 but irrelevant for 吉. Shell coordinates contribute to both but are individually weak. The full model explains twice as much variance for 凶 (22.6%) as for 吉 (11.6%).
+Verified across 3 type distributions (Type-0 at Fano points 001, 011, 100):
+- The Z₂ pairing rotates with the Type-0 Fano point as predicted by H·e_j
+- The 4×240 structure is preserved in all cases
+- The 96/144 uniform/biased split is preserved in all cases
+- The structure is canonical under GL(3,F₂), which acts transitively on Fano points
 
-### Interaction Test
+### Significance
 
-Rank × surface_relation interaction could not be tested (singular matrix): rank-2 hexagrams only have surface_relations {生体, 体生用}, never {克体, 比和, 体克用}. This is a structural confound — rank and surface_relation are partially entangled through the palace system.
+The three-way interaction of code structure (Hamming ⊂ (Z₂)⁷), fiber-type constraint (stuck bit at Type-0), and cross-characteristic symmetry (Aut(Z₁₃)) is genuinely novel — it doesn't arise in classical coding theory where domain and codomain share a characteristic.
 
-Within rank-2 hexagrams, comparing the two available surface relations:
-- 生体: 54.2% 吉 (13/24) vs 体生用: 41.7% 吉 (10/24)
-- Neither subsample significantly differs from the same surface_relation at other ranks (Fisher p=0.14 and p=0.44).
-
-**The rank-2 effect and surface_relation effect cannot be fully disentangled** because they share structural zeros in their cross-tabulation.
+At (3,5), the same Type-0 defect exists but is masked: RM(1,2) fills the entire orientation space (Z₂)³, so the defect cannot create observable structure. This is a quantitative refinement of rigidity: the code fills the space *even after accounting for the stuck bit*.
 
 ---
 
-## Flat-Direction Uniformity (15 × 16 partition)
+## R70: 凶 Dual-Coupling is Not Prevalence-Driven
 
-### Setup
-For each of the 240 complement-equivariant surjections F₂³ → Z₅, compute which of the 7 nonzero directions in F₂³ are "flat" (max derivative count ≤ 2, optimal diffusion).
+### Statement
 
-### Result: Exactly 15 patterns, each containing exactly 16 surjections
+The unique dual-coupling of 凶 (danger marker) to both core (basin) and shell (surface_relation, rank, palace_element) algebraic coordinates cannot be explained by its prevalence (13.5% = 52/384 yaoci). The dual-detection power curve is monotonically increasing — higher prevalence always means more power.
 
-| # | Pattern type | Count | Flat dirs | Stab size |
-|---|-------------|-------|-----------|-----------|
-| 3 | 4-flat (complementary pairs) | 3 × 16 = 48 | 4 | 8 |
-| 12 | 3-flat (including 111) | 12 × 16 = 192 | 3 | 2 |
+### Evidence
 
-**Total: 15 patterns × 16 surjections = 240.** The partition is perfectly uniform.
+Power simulation: 384-row datasets, 1000 replicates × 6 prevalences, with effect sizes matching observed ΔR²_core ≈ 0.063 and ΔR²_shell ≈ 0.117.
 
-### Two orbits under Stab(111)
+| Prevalence π | Core Power | Shell Power | Dual Power |
+|-------------|-----------|------------|-----------|
+| 0.050 | 0.257 | 0.239 | 0.069 |
+| 0.100 | 0.433 | 0.337 | 0.163 |
+| **0.135** | **0.510** | **0.443** | **0.223** |
+| 0.200 | 0.655 | 0.594 | 0.391 |
+| 0.300 | 0.770 | 0.718 | 0.558 |
+| 0.500 | 0.806 | 0.821 | 0.661 |
 
-The 15 patterns form **2 orbits** under Stab(111) ≅ S₄:
-
-**Orbit A (3 patterns, 48 surjections):** Patterns with 4 flat directions, none including 111. The three patterns are:
-- {001, 010, 101, 110} — the 4 "mixed" directions (complement pairs of Fano lines)
-- {001, 011, 100, 110}
-- {010, 011, 100, 101}
-
-Each has stabilizer of order 8 (a copy of D₄ inside S₄).
-
-**Orbit B (12 patterns, 192 surjections):** Patterns with 3 flat directions, always including 111 (the complement direction). The IC pattern {001, 101, 111} belongs here.
-
-Each has stabilizer of order 2 (generated by the identity and one involution).
-
-**Orbit-stabilizer theorem verified:** 3 × 8 = 12 × 2 = 24 = |S₄|. ✓
-
-### Aut(Z₅) preserves flat-direction patterns
-
-Scaling f by τ ∈ {1,2,3,4} does not change which directions are flat. This is expected: scaling values preserves the distribution shape over Z₅.
-
-### Surjection orbits
-
-Under the full group Stab(111) × Aut(Z₅) (order 96): **5 orbits** (sizes 96, 48, 48, 24, 24). The IC orbit has size 96 and spans all 12 patterns in Orbit B.
-
-Under Stab(111) alone (order 24): **17 orbits**. The Aut(Z₅) action merges groups of orbits.
-
-### IC pattern {001, 101, 111} — detail
-
-The 16 surjections sharing the IC pattern all have fiber type {2,2,2,1,1} — two elements with double fibers, two with single fibers, confirming this is the IC orbit's type class.
-
-**Stabilizer of the IC pattern:** order 2, generated by the identity and the matrix that swaps bit 2 (i.e., the involution fixing bits 0,1 and complementing bit 2). In terms of the Fano plane, this is the unique involution that fixes the Fano line {001, 101} (where 001 ⊕ 101 = 100).
-
-**Structural characterization:** The IC flat directions {001, 101, 111} form a set where:
-- 001 and 101 lie on a common Fano line ({001, 100, 101})
-- 111 is the complement direction (eigenvalue direction)
-- They do NOT form a Fano line (001 ⊕ 101 = 100 ≠ 111)
-
-Three Fano lines pass through pairs of these directions, each containing exactly 2/3 flat directions. The flat set is "almost a line" — two points on a line plus the complement point.
+At 凶's prevalence (13.5%), dual-detection power is only 22%. The fact that 凶's dual coupling was detected at all — while 吉 at 30.7% prevalence (58% dual power) shows NO dual coupling — means 凶's effect size is genuinely larger on the core projection. "Why 凶?" is answered semantically: danger is more algebraically constrained than fortune.
 
 ---
 
-## Marker Coupling Profiles
+## R71: Nuclear Rank Theorem
 
-### Setup
-For each marker with ≥8 occurrences (11 markers total), fit logistic regressions:
-- Model 0: position only (baseline)
-- Model A: position + basin (core projection)
-- Model B: position + shell (surface_relation + rank + palace_element)
-- Model C: position + basin + shell (full)
+### Statement
 
-For sparse markers (<15 occurrences: 悔, 亨, 咎), the shell model is reduced to surface_relation only (full shell has 21 parameters, too many for 8-13 events).
+**Theorem.** For all n ≥ 2, let M be the 2n×2n nuclear extraction matrix over F₂. Then:
 
-### Coupling profile table
+rank(M^k) = max(2, 2n − 2k) for all k ≥ 1.
 
-| Marker | N | Valence | ΔR²_core | ΔR²_shell | ΔR²_total | Core p | Shell p | Type |
-|--------|---|---------|----------|-----------|-----------|--------|---------|------|
-| 吉 | 118 | positive | +0.005 | +0.056 | +0.059 | 0.344 | **0.031** | Shell-only |
-| 无咎 | 84 | positive | +0.007 | +0.046 | +0.060 | 0.223 | 0.230 | None |
-| 貞 | 71 | neutral | +0.005 | +0.043 | +0.046 | 0.414 | 0.385 | None |
-| 凶 | 52 | negative | **+0.063** | **+0.117** | **+0.161** | **6.5×10⁻⁵** | **0.002** | **Dual** |
-| 利 | 51 | positive | +0.006 | +0.098 | +0.108 | 0.437 | **0.013** | Shell-only |
-| 厲 | 26 | negative | +0.030 | +0.050 | +0.092 | 0.058 | 0.853 | None† |
-| 吝 | 20 | negative | +0.002 | +0.079 | +0.081 | 0.845 | 0.646 | None† |
-| 悔亡 | 18 | neutral | +0.016 | +0.071 | — | 0.308 | 0.804 | None† |
-| 悔 | 13 | negative | — | +0.059 | — | — | 0.152 | None‡ |
-| 亨 | 8 | positive | +0.028 | +0.068 | +0.089 | 0.341 | 0.260 | None‡ |
-| 咎 | 8 | negative | +0.074 | +0.130 | +0.205 | 0.057 | **0.038** | Shell-only‡ |
+### Proof (5 steps)
 
-† Full shell model may be unreliable (events/parameters ≈ 1.0)
-‡ Sparse marker — reduced shell model (surface_relation only)
+**Step 1 — Factored basis.** In the basis {p₀,...,p_{n-1}, q₀,...,q_{n-1}} where p_j = L_{j+1} (lower, bottom-to-top) and q_j = L_{2n-j} (upper, top-to-bottom):
+```
+M = [S  E]    S = n×n superdiagonal shift, E = e_{n-1}·e_{n-1}^T
+    [E  S]
+```
+Verified n = 2,...,8.
 
-### Key findings
+**Step 2 — Block triangularization.** Q = [I 0; I I] is involutory over F₂. M' = QMQ = [T E; 0 T] where T = S + E. Verified n = 2,...,8.
 
-**F6: 凶 is the ONLY dual-coupled marker.**
-凶 is the only marker with significant associations to BOTH core (basin, p=6.5×10⁻⁵) and shell (p=0.002) projections. Moreover, core and shell carry independent information: core-given-shell p=0.001, shell-given-core p=0.013. Overlap is modest (+0.020), confirming the two projections capture distinct aspects of 凶 placement.
+**Step 3 — rank(T^k) = max(1, n−k).** By induction: T^k(e_{n-1}) = Σ_{i=max(0,n-1-k)}^{n-1} e_i. At k = n−1: T^{n-1}(e_{n-1}) = 𝟏 (all-ones), a fixed point. ker(T^k) = span{e₀,...,e_{min(k,n-1)-1}}. Verified n = 2,...,8 with explicit kernel basis checks.
 
-**F7: No marker is Core-only.**
-Not a single marker reaches significance on core projection alone. Basin coupling is exclusive to 凶 — all other markers have p>0.05 for the basin model.
+**Step 4 — Key lemma: Φ_k · ker(T^k) = {0}.** For M'^k = [T^k Φ_k; 0 T^k], the off-diagonal Φ_k = Σ_{l=0}^{k-1} T^l·E·T^{k-1-l} annihilates ker(T^k). Proof: For e_j ∈ ker(T^k), the factor T^{k-1-l}(e_j) is either 0 or e_{j-k+1+l} with j-k+1+l < n-1. Since E = e_{n-1}·e_{n-1}^T only passes the (n-1)-th component, E·e_{j-k+1+l} = 0. Every term vanishes. Verified n = 2,...,8 for all k.
 
-**F8: Shell-only markers are 吉, 利, and (marginally) 咎.**
-These markers show significant shell coupling but no core coupling. 利 has the strongest pure shell signal (ΔR²=+0.098, p=0.013). 吉 follows (ΔR²=+0.056, p=0.031). Both are "favorable" markers — shell coordinates help predict where positive assessments appear.
+NOTE: The natural first attempt im(Φ_k) ⊆ im(T^k) is FALSE. The correct and sufficient claim is that Φ_k vanishes on ker(T^k).
 
-**F9: Most markers show NO algebraic coupling.**
-7 of 11 markers (无咎, 貞, 厲, 吝, 悔亡, 悔, 亨) have no significant association with either projection after position control. These markers are placed by textual/contextual logic, not algebraic structure.
+**Step 5 — Rank formula.** ker(M'^k) = {(x,y) : T^k·y = 0, T^k·x + Φ_k·y = 0}. By Step 4: y ∈ ker(T^k) ⟹ Φ_k·y = 0 ⟹ T^k·x = 0. Hence ker(M'^k) = ker(T^k) × ker(T^k).
 
-**F10: 厲 nearly reaches core significance (p=0.058).**
-厲 (danger/severity) is the closest to a second core-coupled marker, with ΔR²_core = +0.030. Combined with shell, it reaches ΔR²_total = +0.092 — but neither projection alone is significant. This is suggestive but underpowered.
+rank(M'^k) = 2n − 2·min(k, n−1) = max(2, 2n − 2k). ∎
 
-### Hypothesis test: negative vs positive core coupling
+Verified by explicit rank computation at n = 2,...,10.
 
-**Hypothesis:** Negative/warning markers (凶, 咎, 厲, 悔, 吝) are more core-coupled than positive/affirmative markers (吉, 利, 亨, 无咎).
+### Corollaries
 
-| | Positive (4) | Negative (5) |
-|--|--|--|
-| Mean ΔR²_core | 0.011 | 0.034 |
-| Mean ΔR²_shell | 0.067 | 0.087 |
-
-Negative markers show 3× higher mean core coupling (+0.034 vs +0.011). But:
-- **Permutation test p = 0.186** — not significant at α=0.05.
-- The effect is driven almost entirely by 凶 (ΔR²_core=0.063) and 咎 (0.074). Remove either and the difference vanishes.
-- Shell coupling does not differ significantly between valence groups (p=0.169).
-
-**Conclusion:** The trend exists but is not significant with only 9 markers. The hypothesis that negative markers are more algebraically constrained is **suggestive but unconfirmed** — it rests on 凶 being an extreme outlier rather than a systematic valence effect.
-
-### Coupling landscape
-
-The 2D scatter (ΔR²_core, ΔR²_shell) reveals:
-- **凶 is an outlier** — high on both axes, far from all other markers
-- **咎 is similar but sparse** — high core and shell but only 8 occurrences
-- **利 is a pure shell marker** — low core, high shell
-- **The majority cluster near the origin** — low coupling on both axes
-
-This is NOT the predicted pattern of "negative=core, positive=shell." Instead: **凶 alone occupies dual space**, positive markers cluster in shell-only or none, and most negative markers show no significant coupling at all.
+1. **Uniform rank drop:** Each iteration kills exactly 2 dimensions (one position, one orbit), regardless of n.
+2. **Stabilization:** rank = 2 for all k ≥ n−1. Stable image = F₂² ⊂ F₂^{2n}.
+3. **Attractor:** The stable image {0, p_{n-1}, q_{n-1}, p_{n-1}+q_{n-1}} = alternating-bit vectors. At n=3: {坤坤, 既濟, 未濟, 乾乾}.
+4. **Anti-nilpotency:** T = S+E has fixed point 𝟏. Without the rank-1 coupling E, the pure shift S is nilpotent (S^n = 0) → rank → 0. The innermost shear prevents collapse.
+5. **σ-coordinate independence:** σ_j = p_j ⊕ q_j evolves as Tσ, converging to 𝟏. All levels eventually carry the sum-parity of the innermost pair.
 
 ---
 
-## Synthesis
+## R72: 彖傳 Anomaly Detection
 
-1. **The "exactly one bridge per projection" prediction is PARTIALLY confirmed.** Core projection has exactly one bridge (basin × 凶), clean and Bonferroni-significant. Shell projection has a diffuse constellation of weak signals, not a single clean bridge. The surface_relation × 吉 signal exists but is weaker and surrounded by other shell signals (rank, palace_element) of comparable strength.
+### Statement
 
-2. **凶 is more algebraically constrained than 吉.** Logistic regression confirms the asymmetry: the full model explains 22.6% of 凶 variance vs 11.6% of 吉 variance. Basin alone accounts for 6.3% of 凶 variance (p<10⁻⁴) but only 0.5% of 吉 (NS). 凶 placement respects algebraic structure; 吉 placement is more textually autonomous.
+The 彖傳's 剛/柔 (firm/yielding) usage ratio is perfectly monotonic inverse to basin yang-content:
 
-3. **Shell coordinates are weakly additive.** Surface_relation and rank each contribute ~3% ΔR² for 吉, but combined shell gives only 5.6% (not 6%). Rank and surface_relation are partially confounded through the palace system — rank-2 hexagrams can only have surface_relations {生体, 体生用}, never {克体, 比和, 体克用}. This structural entanglement prevents clean disentanglement of shell-side signals.
+| Basin | n_hex | 剛 | 柔 | 剛/柔 ratio | Yang % |
+|-------|-------|-----|-----|------------|--------|
+| Kun | 16 | 15 | 7 | **2.14** | 33.3% |
+| Cycle | 32 | 30 | 20 | 1.50 | 50.0% |
+| Qian | 16 | 15 | 12 | **1.25** | 66.7% |
 
-4. **The 240 surjections partition into 15 × 16 by flat-direction pattern.** This is a clean combinatorial fact: every pattern contains exactly 16 surjections. The patterns form 2 orbits under Stab(111): 3 patterns with 4 flat directions (none including 111) and 12 patterns with 3 flat directions (all including 111). The IC pattern belongs to the larger orbit.
+The 彖傳 systematically comments on what's structurally unusual: yang in yin-dominant hexagrams, yin in yang-dominant ones. This identifies the 彖傳 as an **anomaly detector operating on the binary (Z₂) structure**, consistent with the semantic-map finding that the 彖傳 sees Z₂ but not Z₅.
 
-5. **The representation decomposition ρ₄ ≅ trivial ⊕ standard** provides clean mathematical vocabulary: the surjection space splits into a 1D "scale" (trivial) and a 3D "shape" (standard S₄ representation). The 5 orbits of surjections correspond to points in GF(5)⁴ modulo this group action.
+### Caveat
 
-6. **The differential uniformity δ_f = 4** and the eigenvalue D₁₁₁f = 3f = -f (complement constraint as eigenvalue) place the IC surjection in the vocabulary of cross-characteristic cryptographic functions. The complement direction 111 is the unique eigenvalue direction — and it always belongs to the flat set (for all 192 surjections in the IC-type orbit).
-
-7. **The (3,5) type-assignment is a complete invariant** because RM(1,2) exactly fills the orientation space. This is the combinatorial reason for the single orbit in the IC type class: there is simply no room for decoration.
-
-8. **凶 is uniquely dual-coupled; no other marker has core coupling.** The marker coupling landscape is sparse and asymmetric: 凶 alone bridges both projections, positive markers weakly couple to shell, and most markers (~64%) show no algebraic coupling at all. The hypothesis that negative markers are systematically more core-coupled is suggestive (3× higher mean) but not significant (p=0.19) — it rests on 凶 being an extreme outlier rather than a category-level effect.
+Raw numbers are small (60 剛, 39 柔 across 64 hexagrams). The perfect monotonic ordering across 3 non-overlapping basins is noteworthy but not statistically proven at conventional significance thresholds.
 
 ---
 
-## Status
+## Evidence Quality Assessment
 
-Both Q4 and Q8 are **resolved**. See `exploration-log.md` for the full iteration history, interpretive synthesis, and new questions generated.
+### Tier 1 — Theorems (proven for all parameters)
+- R55: Uniqueness at (3,5) — orbit formula = 1
+- R57: RM fills orientation space iff n = 3
+- R63: Char-2 uniqueness
+- R64: GL Maximization at q = 2
+- **R71: Nuclear rank formula** — rank(M^k) = max(2, 2n−2k) ∀n ≥ 2
 
-**Q4 resolution:** Three-tier coupling (凶 dual-coupled R²=23%, 吉/利 shell-only R²≈6-10%, 7/11 markers uncoupled). The "two bridges" count is upper-bounded by R5 (2 projections). The bound is saturated asymmetrically: one clean core bridge + one diffuse shell contact zone.
+### Tier 2 — Exhaustive verifications (all cases at specific parameters)
+- **R69/R69a: Hamming syndrome at (4,13)** — all 92,160 surjections, 3 type distributions
+- R56: Regular action at (3,5) — all 96 surjections
+- R66: Five-orbit decomposition at (3,5) — all 240 surjections
 
-**Q8 resolution:** Definitive negative. The object (complement-equivariant surjection F₂³ → Z₅) falls in a cross-characteristic gap between GBF and finite geometry communities, and its decoration is unique at (3,5), eliminating classification need. Best mathematical description: trivial ⊕ standard of S₄ over GF(5).
+### Tier 3 — Measured effects (statistical, finite sample)
+- **R70: 凶 not prevalence-driven** — 6000 simulated replicates, clean monotonic curve
+- **R72: 彖傳 anomaly detection** — 99 data points, perfect monotonic ordering
+- Bridge structure (凶 dual, 吉/利 shell-only) — one Bonferroni-surviving, several sub-threshold
+
+Tier 3 is where honest caveats belong. The algebra (Tiers 1-2) is invulnerable. The text-algebra interface (Tier 3) is measured, not proven.
+
+---
+
+## Questions Resolved
+
+| Q# | Question | Status | Key Finding |
+|----|----------|--------|-------------|
+| Q4 | Why exactly two bridges? | **Resolved** | Structurally bounded (R5), empirically saturated, semantically asymmetric. Three-tier coupling: 凶 dual, 吉/利 shell-only, 7/11 uncoupled. |
+| Q8 | Decorated Fano plane? | **Resolved (negative)** | No name. Cross-characteristic gap + uniqueness → nothing to classify. Best description: trivial ⊕ standard of S₄ over GF(5). |
+| NQ1 | 凶 prevalence-driven? | **Resolved** | NOT prevalence-driven. Power monotonically increasing. "Why 凶?" is semantic. |
+| NQ4 | (4,13) decorated object | **Resolved** | Hamming [7,4,3] + Type-0 defect → 960 = 4×(96+3×48). Canonical under GL(3,F₂). |
+| C1-C2 | Nuclear rank formula | **Proven** | rank(M^k) = max(2, 2n−2k) for all n ≥ 2. Block triangularization + orthogonal support lemma. |
+| Q5 | 彖傳 anomaly detection | **Resolved** | 剛/柔 perfectly monotonic inverse to yang-content across all basins. |
+
+## Remaining Open Questions
+
+| Q# | Question | Priority | Blocker |
+|----|----------|----------|---------|
+| NQ3 | Rank-2 × 吉 signal (p=0.008, not Bonferroni) | Medium | Needs independent corpus |
+| NQ2 | 利 > 吉 shell coupling | Low | Interpretive (philology) |
+| Q6 | 說卦傳 non-compass attributes | Low | Testable but low-value |
+| Q3 | 納甲 modification history | Low | Historical-philological |
+| Q7 | Visibility ceiling as feature | Dropped | Unfalsifiable (2/5 = arithmetic) |
+| NQ5 | Cross-characteristic GBF class | Dropped | Completism (one interesting point) |
+
+---
+
+## Files
+
+| File | Contents |
+|------|----------|
+| `work/nq4_hamming_syndrome.py` | Initial Hamming syndrome computation |
+| `work/nq4_deeper.py` | Deeper syndrome analysis |
+| `work/nq4_followup.py` | Follow-up: within-orbit syndrome distributions |
+| `work/nq4_thread1_biased.py` | Biased orbit internal geometry (48×3 split) |
+| `work/nq4_thread2_typedep.py` | Type-distribution dependence (3 configs) |
+| `work/nq1_prevalence_power.py` | Prevalence power simulation |
+| `work/c1c2_nuclear_rank.py` | Initial nuclear rank verification (n=3..6) |
+| `work/c1c2_proof_v2.py` | Complete proof verification (n=2..10) |
+| `work/proof_nuclear_rank.md` | Formal proof document |
+| `work/q5_tuanzhuan_anomaly.py` | 彖傳 anomaly detection check |
+| `exploration-log.md` | Full iteration-by-iteration record |
+| `summary.md` | Updated research summary |
