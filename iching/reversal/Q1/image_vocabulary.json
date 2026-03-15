@@ -1,0 +1,3520 @@
+{
+  "classified": {
+    "履": {
+      "category": "states",
+      "frequency": 3
+    },
+    "霜": {
+      "category": "natural",
+      "frequency": 1
+    },
+    "堅": {
+      "category": "states",
+      "frequency": 1
+    },
+    "冰": {
+      "category": "natural",
+      "frequency": 1
+    },
+    "至": {
+      "category": "states",
+      "frequency": 6
+    },
+    "直": {
+      "category": "qualities",
+      "frequency": 1
+    },
+    "方": {
+      "category": "qualities",
+      "frequency": 5
+    },
+    "大": {
+      "category": "states",
+      "frequency": 15
+    },
+    "習": {
+      "category": "states",
+      "frequency": 2
+    },
+    "王事": {
+      "category": "states",
+      "frequency": 2
+    },
+    "含": {
+      "category": "states",
+      "frequency": 2
+    },
+    "章": {
+      "category": "states",
+      "frequency": 3
+    },
+    "從": {
+      "category": "actions",
+      "frequency": 6
+    },
+    "成": {
+      "category": "states",
+      "frequency": 3
+    },
+    "終": {
+      "category": "states",
+      "frequency": 16
+    },
+    "括": {
+      "category": "states",
+      "frequency": 1
+    },
+    "囊": {
+      "category": "objects",
+      "frequency": 1
+    },
+    "譽": {
+      "category": "states",
+      "frequency": 6
+    },
+    "黃": {
+      "category": "qualities",
+      "frequency": 8
+    },
+    "裳": {
+      "category": "objects",
+      "frequency": 1
+    },
+    "龍": {
+      "category": "animals",
+      "frequency": 5
+    },
+    "戰": {
+      "category": "actions",
+      "frequency": 1
+    },
+    "野": {
+      "category": "landscape",
+      "frequency": 1
+    },
+    "血": {
+      "category": "body",
+      "frequency": 6
+    },
+    "玄": {
+      "category": "qualities",
+      "frequency": 1
+    },
+    "遠": {
+      "category": "states",
+      "frequency": 1
+    },
+    "袛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "休": {
+      "category": "states",
+      "frequency": 2
+    },
+    "頻": {
+      "category": "body",
+      "frequency": 2
+    },
+    "中行": {
+      "category": "states",
+      "frequency": 5
+    },
+    "獨": {
+      "category": "states",
+      "frequency": 2
+    },
+    "敦": {
+      "category": "states",
+      "frequency": 3
+    },
+    "迷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "災": {
+      "category": "states",
+      "frequency": 5
+    },
+    "眚": {
+      "category": "states",
+      "frequency": 5
+    },
+    "行": {
+      "category": "actions",
+      "frequency": 12
+    },
+    "師": {
+      "category": "social_roles",
+      "frequency": 4
+    },
+    "敗": {
+      "category": "states",
+      "frequency": 1
+    },
+    "國": {
+      "category": "landscape",
+      "frequency": 6
+    },
+    "君": {
+      "category": "states",
+      "frequency": 3
+    },
+    "年": {
+      "category": "states",
+      "frequency": 5
+    },
+    "克": {
+      "category": "states",
+      "frequency": 10
+    },
+    "征": {
+      "category": "actions",
+      "frequency": 4
+    },
+    "出": {
+      "category": "actions",
+      "frequency": 11
+    },
+    "律": {
+      "category": "states",
+      "frequency": 1
+    },
+    "否": {
+      "category": "states",
+      "frequency": 3
+    },
+    "臧": {
+      "category": "states",
+      "frequency": 1
+    },
+    "在": {
+      "category": "states",
+      "frequency": 10
+    },
+    "中": {
+      "category": "states",
+      "frequency": 6
+    },
+    "王": {
+      "category": "social_roles",
+      "frequency": 13
+    },
+    "錫": {
+      "category": "states",
+      "frequency": 2
+    },
+    "命": {
+      "category": "states",
+      "frequency": 7
+    },
+    "輿": {
+      "category": "objects",
+      "frequency": 8
+    },
+    "尸": {
+      "category": "states",
+      "frequency": 2
+    },
+    "左": {
+      "category": "states",
+      "frequency": 3
+    },
+    "次": {
+      "category": "states",
+      "frequency": 5
+    },
+    "田": {
+      "category": "landscape",
+      "frequency": 5
+    },
+    "禽": {
+      "category": "animals",
+      "frequency": 4
+    },
+    "執": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "言": {
+      "category": "states",
+      "frequency": 10
+    },
+    "長": {
+      "category": "states",
+      "frequency": 1
+    },
+    "子": {
+      "category": "social_roles",
+      "frequency": 14
+    },
+    "帥": {
+      "category": "states",
+      "frequency": 1
+    },
+    "弟": {
+      "category": "states",
+      "frequency": 1
+    },
+    "小人": {
+      "category": "social_roles",
+      "frequency": 10
+    },
+    "大君": {
+      "category": "social_roles",
+      "frequency": 3
+    },
+    "開": {
+      "category": "states",
+      "frequency": 1
+    },
+    "承": {
+      "category": "states",
+      "frequency": 4
+    },
+    "家": {
+      "category": "states",
+      "frequency": 7
+    },
+    "咸": {
+      "category": "body",
+      "frequency": 2
+    },
+    "甘": {
+      "category": "states",
+      "frequency": 2
+    },
+    "既": {
+      "category": "states",
+      "frequency": 4
+    },
+    "憂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "知": {
+      "category": "states",
+      "frequency": 1
+    },
+    "宜": {
+      "category": "states",
+      "frequency": 1
+    },
+    "君子": {
+      "category": "social_roles",
+      "frequency": 16
+    },
+    "大川": {
+      "category": "states",
+      "frequency": 4
+    },
+    "涉": {
+      "category": "actions",
+      "frequency": 5
+    },
+    "鳴": {
+      "category": "states",
+      "frequency": 4
+    },
+    "勞": {
+      "category": "states",
+      "frequency": 1
+    },
+    "撝": {
+      "category": "states",
+      "frequency": 1
+    },
+    "富": {
+      "category": "qualities",
+      "frequency": 4
+    },
+    "鄰": {
+      "category": "states",
+      "frequency": 6
+    },
+    "侵": {
+      "category": "states",
+      "frequency": 1
+    },
+    "伐": {
+      "category": "actions",
+      "frequency": 4
+    },
+    "邑": {
+      "category": "landscape",
+      "frequency": 4
+    },
+    "明夷": {
+      "category": "states",
+      "frequency": 5
+    },
+    "飛": {
+      "category": "actions",
+      "frequency": 4
+    },
+    "垂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "翼": {
+      "category": "states",
+      "frequency": 1
+    },
+    "日": {
+      "category": "natural",
+      "frequency": 13
+    },
+    "食": {
+      "category": "objects",
+      "frequency": 11
+    },
+    "主": {
+      "category": "social_roles",
+      "frequency": 4
+    },
+    "人": {
+      "category": "states",
+      "frequency": 19
+    },
+    "夷": {
+      "category": "states",
+      "frequency": 3
+    },
+    "股": {
+      "category": "body",
+      "frequency": 2
+    },
+    "拯": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "馬": {
+      "category": "animals",
+      "frequency": 6
+    },
+    "壯": {
+      "category": "qualities",
+      "frequency": 7
+    },
+    "南": {
+      "category": "states",
+      "frequency": 1
+    },
+    "狩": {
+      "category": "states",
+      "frequency": 1
+    },
+    "得": {
+      "category": "states",
+      "frequency": 24
+    },
+    "首": {
+      "category": "body",
+      "frequency": 5
+    },
+    "疾": {
+      "category": "states",
+      "frequency": 8
+    },
+    "入": {
+      "category": "actions",
+      "frequency": 8
+    },
+    "腹": {
+      "category": "body",
+      "frequency": 1
+    },
+    "獲": {
+      "category": "states",
+      "frequency": 6
+    },
+    "心": {
+      "category": "states",
+      "frequency": 7
+    },
+    "門": {
+      "category": "objects",
+      "frequency": 4
+    },
+    "庭": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "箕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "明": {
+      "category": "states",
+      "frequency": 3
+    },
+    "晦": {
+      "category": "states",
+      "frequency": 1
+    },
+    "初": {
+      "category": "states",
+      "frequency": 3
+    },
+    "登": {
+      "category": "states",
+      "frequency": 2
+    },
+    "天": {
+      "category": "landscape",
+      "frequency": 8
+    },
+    "后": {
+      "category": "social_roles",
+      "frequency": 6
+    },
+    "地": {
+      "category": "states",
+      "frequency": 1
+    },
+    "允": {
+      "category": "states",
+      "frequency": 2
+    },
+    "孚": {
+      "category": "states",
+      "frequency": 13
+    },
+    "禴": {
+      "category": "states",
+      "frequency": 3
+    },
+    "虛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "岐": {
+      "category": "states",
+      "frequency": 1
+    },
+    "山": {
+      "category": "landscape",
+      "frequency": 2
+    },
+    "階": {
+      "category": "states",
+      "frequency": 1
+    },
+    "冥": {
+      "category": "states",
+      "frequency": 2
+    },
+    "息": {
+      "category": "states",
+      "frequency": 1
+    },
+    "拔": {
+      "category": "states",
+      "frequency": 2
+    },
+    "茅": {
+      "category": "objects",
+      "frequency": 3
+    },
+    "茹": {
+      "category": "states",
+      "frequency": 2
+    },
+    "彙": {
+      "category": "states",
+      "frequency": 2
+    },
+    "包": {
+      "category": "states",
+      "frequency": 7
+    },
+    "荒": {
+      "category": "states",
+      "frequency": 1
+    },
+    "馮": {
+      "category": "states",
+      "frequency": 1
+    },
+    "河": {
+      "category": "states",
+      "frequency": 1
+    },
+    "遐": {
+      "category": "states",
+      "frequency": 1
+    },
+    "遺": {
+      "category": "states",
+      "frequency": 1
+    },
+    "朋": {
+      "category": "social_roles",
+      "frequency": 7
+    },
+    "亡": {
+      "category": "states",
+      "frequency": 5
+    },
+    "尚": {
+      "category": "states",
+      "frequency": 5
+    },
+    "平": {
+      "category": "states",
+      "frequency": 2
+    },
+    "陂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "往": {
+      "category": "actions",
+      "frequency": 25
+    },
+    "復": {
+      "category": "actions",
+      "frequency": 7
+    },
+    "恤": {
+      "category": "states",
+      "frequency": 5
+    },
+    "福": {
+      "category": "states",
+      "frequency": 4
+    },
+    "翩": {
+      "category": "states",
+      "frequency": 2
+    },
+    "戒": {
+      "category": "states",
+      "frequency": 3
+    },
+    "歸妹": {
+      "category": "social_roles",
+      "frequency": 5
+    },
+    "帝": {
+      "category": "social_roles",
+      "frequency": 3
+    },
+    "乙": {
+      "category": "states",
+      "frequency": 2
+    },
+    "祉": {
+      "category": "states",
+      "frequency": 2
+    },
+    "城": {
+      "category": "landscape",
+      "frequency": 1
+    },
+    "隍": {
+      "category": "states",
+      "frequency": 1
+    },
+    "自": {
+      "category": "states",
+      "frequency": 9
+    },
+    "告": {
+      "category": "states",
+      "frequency": 3
+    },
+    "介": {
+      "category": "states",
+      "frequency": 3
+    },
+    "石": {
+      "category": "states",
+      "frequency": 2
+    },
+    "盱": {
+      "category": "states",
+      "frequency": 1
+    },
+    "遲": {
+      "category": "states",
+      "frequency": 2
+    },
+    "由": {
+      "category": "states",
+      "frequency": 2
+    },
+    "疑": {
+      "category": "states",
+      "frequency": 2
+    },
+    "盍": {
+      "category": "states",
+      "frequency": 1
+    },
+    "簪": {
+      "category": "states",
+      "frequency": 1
+    },
+    "恆": {
+      "category": "states",
+      "frequency": 3
+    },
+    "死": {
+      "category": "states",
+      "frequency": 2
+    },
+    "渝": {
+      "category": "states",
+      "frequency": 3
+    },
+    "來": {
+      "category": "actions",
+      "frequency": 17
+    },
+    "虩": {
+      "category": "states",
+      "frequency": 2
+    },
+    "笑": {
+      "category": "states",
+      "frequency": 4
+    },
+    "啞": {
+      "category": "states",
+      "frequency": 2
+    },
+    "億": {
+      "category": "states",
+      "frequency": 2
+    },
+    "喪": {
+      "category": "states",
+      "frequency": 8
+    },
+    "貝": {
+      "category": "states",
+      "frequency": 1
+    },
+    "躋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "陵": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "逐": {
+      "category": "actions",
+      "frequency": 6
+    },
+    "蘇": {
+      "category": "states",
+      "frequency": 2
+    },
+    "遂": {
+      "category": "states",
+      "frequency": 3
+    },
+    "泥": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "事": {
+      "category": "states",
+      "frequency": 6
+    },
+    "婚媾": {
+      "category": "social_roles",
+      "frequency": 5
+    },
+    "索": {
+      "category": "states",
+      "frequency": 2
+    },
+    "視": {
+      "category": "states",
+      "frequency": 5
+    },
+    "矍": {
+      "category": "states",
+      "frequency": 2
+    },
+    "躬": {
+      "category": "states",
+      "frequency": 4
+    },
+    "狐": {
+      "category": "animals",
+      "frequency": 1
+    },
+    "矢": {
+      "category": "objects",
+      "frequency": 3
+    },
+    "負": {
+      "category": "states",
+      "frequency": 2
+    },
+    "且": {
+      "category": "states",
+      "frequency": 5
+    },
+    "乘": {
+      "category": "states",
+      "frequency": 2
+    },
+    "致": {
+      "category": "states",
+      "frequency": 2
+    },
+    "寇": {
+      "category": "social_roles",
+      "frequency": 8
+    },
+    "拇": {
+      "category": "body",
+      "frequency": 2
+    },
+    "斯": {
+      "category": "states",
+      "frequency": 2
+    },
+    "維": {
+      "category": "states",
+      "frequency": 3
+    },
+    "公": {
+      "category": "social_roles",
+      "frequency": 6
+    },
+    "射": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "隼": {
+      "category": "states",
+      "frequency": 1
+    },
+    "高": {
+      "category": "qualities",
+      "frequency": 4
+    },
+    "墉": {
+      "category": "landscape",
+      "frequency": 2
+    },
+    "上": {
+      "category": "states",
+      "frequency": 1
+    },
+    "娣": {
+      "category": "states",
+      "frequency": 3
+    },
+    "跛": {
+      "category": "states",
+      "frequency": 2
+    },
+    "能": {
+      "category": "states",
+      "frequency": 7
+    },
+    "眇": {
+      "category": "states",
+      "frequency": 2
+    },
+    "幽": {
+      "category": "qualities",
+      "frequency": 3
+    },
+    "須": {
+      "category": "body",
+      "frequency": 2
+    },
+    "反": {
+      "category": "states",
+      "frequency": 3
+    },
+    "歸": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "愆": {
+      "category": "states",
+      "frequency": 1
+    },
+    "期": {
+      "category": "states",
+      "frequency": 1
+    },
+    "時": {
+      "category": "states",
+      "frequency": 1
+    },
+    "袂": {
+      "category": "states",
+      "frequency": 2
+    },
+    "良": {
+      "category": "states",
+      "frequency": 2
+    },
+    "月": {
+      "category": "natural",
+      "frequency": 3
+    },
+    "幾": {
+      "category": "states",
+      "frequency": 3
+    },
+    "望": {
+      "category": "states",
+      "frequency": 3
+    },
+    "女": {
+      "category": "social_roles",
+      "frequency": 5
+    },
+    "筐": {
+      "category": "states",
+      "frequency": 1
+    },
+    "實": {
+      "category": "states",
+      "frequency": 3
+    },
+    "士": {
+      "category": "states",
+      "frequency": 2
+    },
+    "刲": {
+      "category": "states",
+      "frequency": 1
+    },
+    "羊": {
+      "category": "animals",
+      "frequency": 5
+    },
+    "鳥": {
+      "category": "animals",
+      "frequency": 3
+    },
+    "過": {
+      "category": "states",
+      "frequency": 5
+    },
+    "祖": {
+      "category": "states",
+      "frequency": 1
+    },
+    "遇": {
+      "category": "states",
+      "frequency": 12
+    },
+    "妣": {
+      "category": "states",
+      "frequency": 1
+    },
+    "及": {
+      "category": "states",
+      "frequency": 1
+    },
+    "臣": {
+      "category": "social_roles",
+      "frequency": 4
+    },
+    "防": {
+      "category": "states",
+      "frequency": 1
+    },
+    "戕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "必": {
+      "category": "states",
+      "frequency": 1
+    },
+    "密": {
+      "category": "states",
+      "frequency": 1
+    },
+    "云": {
+      "category": "states",
+      "frequency": 1
+    },
+    "雨": {
+      "category": "natural",
+      "frequency": 5
+    },
+    "我": {
+      "category": "states",
+      "frequency": 10
+    },
+    "西": {
+      "category": "states",
+      "frequency": 3
+    },
+    "郊": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "弋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "取": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "彼": {
+      "category": "states",
+      "frequency": 1
+    },
+    "穴": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "離": {
+      "category": "states",
+      "frequency": 2
+    },
+    "是": {
+      "category": "states",
+      "frequency": 2
+    },
+    "謂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "配": {
+      "category": "states",
+      "frequency": 1
+    },
+    "雖": {
+      "category": "states",
+      "frequency": 1
+    },
+    "旬": {
+      "category": "states",
+      "frequency": 1
+    },
+    "蔀": {
+      "category": "states",
+      "frequency": 3
+    },
+    "見": {
+      "category": "states",
+      "frequency": 14
+    },
+    "斗": {
+      "category": "states",
+      "frequency": 2
+    },
+    "發": {
+      "category": "states",
+      "frequency": 2
+    },
+    "沛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "沫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "折": {
+      "category": "states",
+      "frequency": 3
+    },
+    "右": {
+      "category": "states",
+      "frequency": 1
+    },
+    "肱": {
+      "category": "body",
+      "frequency": 1
+    },
+    "慶": {
+      "category": "states",
+      "frequency": 1
+    },
+    "屋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "窺": {
+      "category": "states",
+      "frequency": 2
+    },
+    "戶": {
+      "category": "objects",
+      "frequency": 3
+    },
+    "闃": {
+      "category": "states",
+      "frequency": 1
+    },
+    "歲": {
+      "category": "states",
+      "frequency": 5
+    },
+    "觌": {
+      "category": "states",
+      "frequency": 1
+    },
+    "浚": {
+      "category": "states",
+      "frequency": 1
+    },
+    "德": {
+      "category": "states",
+      "frequency": 5
+    },
+    "羞": {
+      "category": "states",
+      "frequency": 2
+    },
+    "婦": {
+      "category": "social_roles",
+      "frequency": 8
+    },
+    "夫": {
+      "category": "social_roles",
+      "frequency": 8
+    },
+    "振": {
+      "category": "states",
+      "frequency": 1
+    },
+    "趾": {
+      "category": "body",
+      "frequency": 6
+    },
+    "罔": {
+      "category": "states",
+      "frequency": 2
+    },
+    "羝": {
+      "category": "states",
+      "frequency": 2
+    },
+    "觸": {
+      "category": "states",
+      "frequency": 2
+    },
+    "藩": {
+      "category": "objects",
+      "frequency": 3
+    },
+    "羸": {
+      "category": "states",
+      "frequency": 3
+    },
+    "角": {
+      "category": "body",
+      "frequency": 3
+    },
+    "決": {
+      "category": "states",
+      "frequency": 1
+    },
+    "輹": {
+      "category": "states",
+      "frequency": 2
+    },
+    "易": {
+      "category": "states",
+      "frequency": 2
+    },
+    "退": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "艱": {
+      "category": "qualities",
+      "frequency": 3
+    },
+    "盈": {
+      "category": "states",
+      "frequency": 2
+    },
+    "缶": {
+      "category": "objects",
+      "frequency": 3
+    },
+    "它": {
+      "category": "states",
+      "frequency": 2
+    },
+    "內": {
+      "category": "states",
+      "frequency": 1
+    },
+    "外": {
+      "category": "states",
+      "frequency": 1
+    },
+    "邑人": {
+      "category": "social_roles",
+      "frequency": 3
+    },
+    "顯": {
+      "category": "states",
+      "frequency": 1
+    },
+    "驅": {
+      "category": "states",
+      "frequency": 1
+    },
+    "失": {
+      "category": "states",
+      "frequency": 5
+    },
+    "前": {
+      "category": "states",
+      "frequency": 2
+    },
+    "誡": {
+      "category": "states",
+      "frequency": 1
+    },
+    "磐": {
+      "category": "states",
+      "frequency": 2
+    },
+    "桓": {
+      "category": "states",
+      "frequency": 1
+    },
+    "居": {
+      "category": "actions",
+      "frequency": 6
+    },
+    "建": {
+      "category": "states",
+      "frequency": 1
+    },
+    "侯": {
+      "category": "social_roles",
+      "frequency": 2
+    },
+    "乘馬": {
+      "category": "objects",
+      "frequency": 3
+    },
+    "邅": {
+      "category": "states",
+      "frequency": 1
+    },
+    "班": {
+      "category": "states",
+      "frequency": 3
+    },
+    "字": {
+      "category": "states",
+      "frequency": 2
+    },
+    "即": {
+      "category": "states",
+      "frequency": 4
+    },
+    "鹿": {
+      "category": "animals",
+      "frequency": 1
+    },
+    "虞": {
+      "category": "states",
+      "frequency": 2
+    },
+    "惟": {
+      "category": "states",
+      "frequency": 1
+    },
+    "林": {
+      "category": "landscape",
+      "frequency": 1
+    },
+    "舍": {
+      "category": "states",
+      "frequency": 3
+    },
+    "求": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "膏": {
+      "category": "states",
+      "frequency": 2
+    },
+    "小": {
+      "category": "states",
+      "frequency": 10
+    },
+    "泣": {
+      "category": "states",
+      "frequency": 2
+    },
+    "漣": {
+      "category": "states",
+      "frequency": 1
+    },
+    "窞": {
+      "category": "states",
+      "frequency": 2
+    },
+    "險": {
+      "category": "states",
+      "frequency": 2
+    },
+    "枕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "樽": {
+      "category": "states",
+      "frequency": 1
+    },
+    "酒": {
+      "category": "objects",
+      "frequency": 4
+    },
+    "簋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "貳": {
+      "category": "states",
+      "frequency": 1
+    },
+    "納": {
+      "category": "actions",
+      "frequency": 2
+    },
+    "約": {
+      "category": "states",
+      "frequency": 1
+    },
+    "牖": {
+      "category": "states",
+      "frequency": 1
+    },
+    "祗": {
+      "category": "states",
+      "frequency": 1
+    },
+    "係": {
+      "category": "states",
+      "frequency": 1
+    },
+    "徽": {
+      "category": "states",
+      "frequency": 1
+    },
+    "纆": {
+      "category": "states",
+      "frequency": 1
+    },
+    "寘": {
+      "category": "states",
+      "frequency": 1
+    },
+    "叢": {
+      "category": "states",
+      "frequency": 1
+    },
+    "棘": {
+      "category": "states",
+      "frequency": 1
+    },
+    "嗟": {
+      "category": "states",
+      "frequency": 4
+    },
+    "安": {
+      "category": "states",
+      "frequency": 2
+    },
+    "苦": {
+      "category": "states",
+      "frequency": 1
+    },
+    "故": {
+      "category": "states",
+      "frequency": 1
+    },
+    "連": {
+      "category": "states",
+      "frequency": 1
+    },
+    "大人": {
+      "category": "social_roles",
+      "frequency": 6
+    },
+    "碩": {
+      "category": "states",
+      "frequency": 2
+    },
+    "曳": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "輪": {
+      "category": "states",
+      "frequency": 2
+    },
+    "濡": {
+      "category": "states",
+      "frequency": 6
+    },
+    "尾": {
+      "category": "states",
+      "frequency": 5
+    },
+    "茀": {
+      "category": "states",
+      "frequency": 1
+    },
+    "宗": {
+      "category": "states",
+      "frequency": 3
+    },
+    "鬼": {
+      "category": "states",
+      "frequency": 3
+    },
+    "繻": {
+      "category": "states",
+      "frequency": 1
+    },
+    "衣": {
+      "category": "states",
+      "frequency": 1
+    },
+    "袽": {
+      "category": "states",
+      "frequency": 1
+    },
+    "東": {
+      "category": "states",
+      "frequency": 1
+    },
+    "殺": {
+      "category": "states",
+      "frequency": 1
+    },
+    "牛": {
+      "category": "animals",
+      "frequency": 7
+    },
+    "祭": {
+      "category": "states",
+      "frequency": 2
+    },
+    "受": {
+      "category": "states",
+      "frequency": 3
+    },
+    "舊": {
+      "category": "states",
+      "frequency": 2
+    },
+    "谷": {
+      "category": "landscape",
+      "frequency": 2
+    },
+    "鮒": {
+      "category": "states",
+      "frequency": 1
+    },
+    "瓮": {
+      "category": "states",
+      "frequency": 1
+    },
+    "敝": {
+      "category": "states",
+      "frequency": 1
+    },
+    "漏": {
+      "category": "states",
+      "frequency": 1
+    },
+    "渫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "惻": {
+      "category": "states",
+      "frequency": 1
+    },
+    "汲": {
+      "category": "states",
+      "frequency": 1
+    },
+    "并": {
+      "category": "states",
+      "frequency": 1
+    },
+    "甃": {
+      "category": "states",
+      "frequency": 1
+    },
+    "冽": {
+      "category": "states",
+      "frequency": 1
+    },
+    "寒": {
+      "category": "states",
+      "frequency": 1
+    },
+    "泉": {
+      "category": "states",
+      "frequency": 1
+    },
+    "收": {
+      "category": "states",
+      "frequency": 1
+    },
+    "幕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "沙": {
+      "category": "landscape",
+      "frequency": 1
+    },
+    "速": {
+      "category": "states",
+      "frequency": 1
+    },
+    "客": {
+      "category": "states",
+      "frequency": 1
+    },
+    "敬": {
+      "category": "states",
+      "frequency": 2
+    },
+    "亂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "號": {
+      "category": "states",
+      "frequency": 6
+    },
+    "握": {
+      "category": "states",
+      "frequency": 1
+    },
+    "引": {
+      "category": "states",
+      "frequency": 2
+    },
+    "位": {
+      "category": "states",
+      "frequency": 1
+    },
+    "齎": {
+      "category": "states",
+      "frequency": 1
+    },
+    "咨": {
+      "category": "states",
+      "frequency": 1
+    },
+    "涕": {
+      "category": "states",
+      "frequency": 2
+    },
+    "洟": {
+      "category": "states",
+      "frequency": 1
+    },
+    "官": {
+      "category": "states",
+      "frequency": 1
+    },
+    "交": {
+      "category": "states",
+      "frequency": 4
+    },
+    "功": {
+      "category": "states",
+      "frequency": 1
+    },
+    "系": {
+      "category": "states",
+      "frequency": 6
+    },
+    "丈": {
+      "category": "states",
+      "frequency": 2
+    },
+    "道": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "何": {
+      "category": "states",
+      "frequency": 5
+    },
+    "嘉": {
+      "category": "states",
+      "frequency": 3
+    },
+    "拘": {
+      "category": "states",
+      "frequency": 1
+    },
+    "臀": {
+      "category": "body",
+      "frequency": 3
+    },
+    "株": {
+      "category": "states",
+      "frequency": 1
+    },
+    "木": {
+      "category": "states",
+      "frequency": 2
+    },
+    "覿": {
+      "category": "states",
+      "frequency": 1
+    },
+    "朱": {
+      "category": "qualities",
+      "frequency": 1
+    },
+    "紱": {
+      "category": "states",
+      "frequency": 2
+    },
+    "祀": {
+      "category": "states",
+      "frequency": 2
+    },
+    "據": {
+      "category": "states",
+      "frequency": 1
+    },
+    "蒺": {
+      "category": "states",
+      "frequency": 1
+    },
+    "藜": {
+      "category": "states",
+      "frequency": 1
+    },
+    "宮": {
+      "category": "landscape",
+      "frequency": 2
+    },
+    "妻": {
+      "category": "social_roles",
+      "frequency": 3
+    },
+    "徐": {
+      "category": "states",
+      "frequency": 3
+    },
+    "金": {
+      "category": "states",
+      "frequency": 5
+    },
+    "車": {
+      "category": "objects",
+      "frequency": 4
+    },
+    "劓": {
+      "category": "states",
+      "frequency": 2
+    },
+    "刖": {
+      "category": "states",
+      "frequency": 1
+    },
+    "赤": {
+      "category": "qualities",
+      "frequency": 1
+    },
+    "說": {
+      "category": "states",
+      "frequency": 6
+    },
+    "葛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "藟": {
+      "category": "states",
+      "frequency": 1
+    },
+    "臲": {
+      "category": "states",
+      "frequency": 1
+    },
+    "卼": {
+      "category": "states",
+      "frequency": 1
+    },
+    "動": {
+      "category": "states",
+      "frequency": 1
+    },
+    "和": {
+      "category": "states",
+      "frequency": 2
+    },
+    "商": {
+      "category": "states",
+      "frequency": 1
+    },
+    "未": {
+      "category": "states",
+      "frequency": 2
+    },
+    "寧": {
+      "category": "states",
+      "frequency": 1
+    },
+    "喜": {
+      "category": "states",
+      "frequency": 4
+    },
+    "剝": {
+      "category": "states",
+      "frequency": 1
+    },
+    "腓": {
+      "category": "body",
+      "frequency": 2
+    },
+    "隨": {
+      "category": "actions",
+      "frequency": 2
+    },
+    "憧": {
+      "category": "states",
+      "frequency": 2
+    },
+    "爾": {
+      "category": "states",
+      "frequency": 3
+    },
+    "思": {
+      "category": "states",
+      "frequency": 2
+    },
+    "脢": {
+      "category": "body",
+      "frequency": 1
+    },
+    "輔": {
+      "category": "states",
+      "frequency": 2
+    },
+    "頰": {
+      "category": "body",
+      "frequency": 1
+    },
+    "舌": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鞏": {
+      "category": "states",
+      "frequency": 1
+    },
+    "己": {
+      "category": "states",
+      "frequency": 1
+    },
+    "就": {
+      "category": "states",
+      "frequency": 1
+    },
+    "改": {
+      "category": "states",
+      "frequency": 1
+    },
+    "虎": {
+      "category": "animals",
+      "frequency": 4
+    },
+    "變": {
+      "category": "states",
+      "frequency": 2
+    },
+    "占": {
+      "category": "states",
+      "frequency": 1
+    },
+    "豹": {
+      "category": "states",
+      "frequency": 1
+    },
+    "面": {
+      "category": "states",
+      "frequency": 1
+    },
+    "藉": {
+      "category": "states",
+      "frequency": 1
+    },
+    "白": {
+      "category": "qualities",
+      "frequency": 3
+    },
+    "枯": {
+      "category": "states",
+      "frequency": 2
+    },
+    "楊": {
+      "category": "states",
+      "frequency": 2
+    },
+    "生": {
+      "category": "states",
+      "frequency": 5
+    },
+    "稊": {
+      "category": "states",
+      "frequency": 1
+    },
+    "老": {
+      "category": "states",
+      "frequency": 2
+    },
+    "棟": {
+      "category": "objects",
+      "frequency": 2
+    },
+    "橈": {
+      "category": "states",
+      "frequency": 1
+    },
+    "隆": {
+      "category": "states",
+      "frequency": 1
+    },
+    "華": {
+      "category": "states",
+      "frequency": 1
+    },
+    "滅": {
+      "category": "states",
+      "frequency": 4
+    },
+    "頂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "勝": {
+      "category": "states",
+      "frequency": 3
+    },
+    "惕": {
+      "category": "states",
+      "frequency": 3
+    },
+    "莫": {
+      "category": "states",
+      "frequency": 4
+    },
+    "夜": {
+      "category": "states",
+      "frequency": 1
+    },
+    "戎": {
+      "category": "states",
+      "frequency": 2
+    },
+    "頄": {
+      "category": "states",
+      "frequency": 1
+    },
+    "慍": {
+      "category": "states",
+      "frequency": 1
+    },
+    "膚": {
+      "category": "body",
+      "frequency": 5
+    },
+    "牽": {
+      "category": "states",
+      "frequency": 2
+    },
+    "聞": {
+      "category": "states",
+      "frequency": 1
+    },
+    "信": {
+      "category": "states",
+      "frequency": 1
+    },
+    "莧": {
+      "category": "states",
+      "frequency": 1
+    },
+    "陸": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "牀": {
+      "category": "objects",
+      "frequency": 5
+    },
+    "足": {
+      "category": "body",
+      "frequency": 2
+    },
+    "蔑": {
+      "category": "states",
+      "frequency": 2
+    },
+    "辨": {
+      "category": "states",
+      "frequency": 1
+    },
+    "貫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "魚": {
+      "category": "animals",
+      "frequency": 3
+    },
+    "寵": {
+      "category": "states",
+      "frequency": 1
+    },
+    "果": {
+      "category": "states",
+      "frequency": 1
+    },
+    "廬": {
+      "category": "states",
+      "frequency": 1
+    },
+    "靈": {
+      "category": "states",
+      "frequency": 1
+    },
+    "龜": {
+      "category": "animals",
+      "frequency": 3
+    },
+    "觀": {
+      "category": "actions",
+      "frequency": 1
+    },
+    "朵": {
+      "category": "states",
+      "frequency": 1
+    },
+    "顛": {
+      "category": "body",
+      "frequency": 3
+    },
+    "拂": {
+      "category": "states",
+      "frequency": 3
+    },
+    "經": {
+      "category": "states",
+      "frequency": 2
+    },
+    "丘": {
+      "category": "landscape",
+      "frequency": 3
+    },
+    "眈": {
+      "category": "states",
+      "frequency": 2
+    },
+    "欲": {
+      "category": "states",
+      "frequency": 1
+    },
+    "桎梏": {
+      "category": "objects",
+      "frequency": 1
+    },
+    "刑": {
+      "category": "states",
+      "frequency": 1
+    },
+    "金夫": {
+      "category": "social_roles",
+      "frequency": 1
+    },
+    "困": {
+      "category": "states",
+      "frequency": 1
+    },
+    "童": {
+      "category": "states",
+      "frequency": 5
+    },
+    "擊": {
+      "category": "states",
+      "frequency": 2
+    },
+    "禦": {
+      "category": "states",
+      "frequency": 2
+    },
+    "已": {
+      "category": "states",
+      "frequency": 2
+    },
+    "遄": {
+      "category": "states",
+      "frequency": 2
+    },
+    "酌": {
+      "category": "states",
+      "frequency": 1
+    },
+    "益": {
+      "category": "states",
+      "frequency": 3
+    },
+    "友": {
+      "category": "social_roles",
+      "frequency": 1
+    },
+    "使": {
+      "category": "states",
+      "frequency": 1
+    },
+    "違": {
+      "category": "states",
+      "frequency": 2
+    },
+    "快": {
+      "category": "states",
+      "frequency": 2
+    },
+    "限": {
+      "category": "states",
+      "frequency": 1
+    },
+    "列": {
+      "category": "states",
+      "frequency": 1
+    },
+    "夤": {
+      "category": "states",
+      "frequency": 1
+    },
+    "薰": {
+      "category": "states",
+      "frequency": 1
+    },
+    "身": {
+      "category": "states",
+      "frequency": 1
+    },
+    "序": {
+      "category": "states",
+      "frequency": 1
+    },
+    "徒": {
+      "category": "states",
+      "frequency": 1
+    },
+    "永": {
+      "category": "states",
+      "frequency": 3
+    },
+    "皤": {
+      "category": "states",
+      "frequency": 1
+    },
+    "翰": {
+      "category": "body",
+      "frequency": 2
+    },
+    "於": {
+      "category": "states",
+      "frequency": 1
+    },
+    "園": {
+      "category": "states",
+      "frequency": 1
+    },
+    "束": {
+      "category": "states",
+      "frequency": 1
+    },
+    "帛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "戔": {
+      "category": "states",
+      "frequency": 2
+    },
+    "幹": {
+      "category": "qualities",
+      "frequency": 4
+    },
+    "父": {
+      "category": "social_roles",
+      "frequency": 4
+    },
+    "考": {
+      "category": "states",
+      "frequency": 2
+    },
+    "母": {
+      "category": "social_roles",
+      "frequency": 2
+    },
+    "裕": {
+      "category": "states",
+      "frequency": 2
+    },
+    "閑": {
+      "category": "states",
+      "frequency": 2
+    },
+    "衛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "牿": {
+      "category": "states",
+      "frequency": 1
+    },
+    "豶": {
+      "category": "states",
+      "frequency": 1
+    },
+    "豕": {
+      "category": "animals",
+      "frequency": 3
+    },
+    "牙": {
+      "category": "states",
+      "frequency": 1
+    },
+    "衢": {
+      "category": "states",
+      "frequency": 1
+    },
+    "摧": {
+      "category": "states",
+      "frequency": 1
+    },
+    "愁": {
+      "category": "states",
+      "frequency": 1
+    },
+    "茲": {
+      "category": "states",
+      "frequency": 1
+    },
+    "眾": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鼫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鼠": {
+      "category": "animals",
+      "frequency": 1
+    },
+    "屨": {
+      "category": "states",
+      "frequency": 1
+    },
+    "校": {
+      "category": "objects",
+      "frequency": 2
+    },
+    "噬": {
+      "category": "states",
+      "frequency": 5
+    },
+    "鼻": {
+      "category": "states",
+      "frequency": 1
+    },
+    "臘": {
+      "category": "states",
+      "frequency": 1
+    },
+    "肉": {
+      "category": "body",
+      "frequency": 2
+    },
+    "毒": {
+      "category": "states",
+      "frequency": 1
+    },
+    "乾": {
+      "category": "states",
+      "frequency": 2
+    },
+    "胏": {
+      "category": "states",
+      "frequency": 1
+    },
+    "耳": {
+      "category": "body",
+      "frequency": 3
+    },
+    "震": {
+      "category": "states",
+      "frequency": 1
+    },
+    "賞": {
+      "category": "states",
+      "frequency": 1
+    },
+    "光": {
+      "category": "natural",
+      "frequency": 2
+    },
+    "飲": {
+      "category": "states",
+      "frequency": 2
+    },
+    "惡": {
+      "category": "states",
+      "frequency": 1
+    },
+    "巷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "掣": {
+      "category": "states",
+      "frequency": 1
+    },
+    "孤": {
+      "category": "states",
+      "frequency": 2
+    },
+    "厥": {
+      "category": "states",
+      "frequency": 2
+    },
+    "涂": {
+      "category": "states",
+      "frequency": 1
+    },
+    "載": {
+      "category": "actions",
+      "frequency": 3
+    },
+    "先": {
+      "category": "states",
+      "frequency": 5
+    },
+    "張": {
+      "category": "states",
+      "frequency": 1
+    },
+    "弧": {
+      "category": "states",
+      "frequency": 2
+    },
+    "瑣": {
+      "category": "states",
+      "frequency": 2
+    },
+    "所": {
+      "category": "states",
+      "frequency": 3
+    },
+    "懷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "資": {
+      "category": "states",
+      "frequency": 3
+    },
+    "僕": {
+      "category": "states",
+      "frequency": 2
+    },
+    "焚": {
+      "category": "states",
+      "frequency": 3
+    },
+    "處": {
+      "category": "states",
+      "frequency": 2
+    },
+    "斧": {
+      "category": "objects",
+      "frequency": 2
+    },
+    "雉": {
+      "category": "animals",
+      "frequency": 2
+    },
+    "巢": {
+      "category": "states",
+      "frequency": 1
+    },
+    "咷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "錯": {
+      "category": "states",
+      "frequency": 1
+    },
+    "然": {
+      "category": "states",
+      "frequency": 1
+    },
+    "昃": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鼓": {
+      "category": "states",
+      "frequency": 2
+    },
+    "歌": {
+      "category": "states",
+      "frequency": 2
+    },
+    "耋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "突": {
+      "category": "states",
+      "frequency": 1
+    },
+    "棄": {
+      "category": "states",
+      "frequency": 1
+    },
+    "沱": {
+      "category": "states",
+      "frequency": 1
+    },
+    "戚": {
+      "category": "states",
+      "frequency": 1
+    },
+    "醜": {
+      "category": "states",
+      "frequency": 1
+    },
+    "妾": {
+      "category": "states",
+      "frequency": 2
+    },
+    "仇": {
+      "category": "states",
+      "frequency": 1
+    },
+    "革": {
+      "category": "states",
+      "frequency": 2
+    },
+    "塞": {
+      "category": "states",
+      "frequency": 1
+    },
+    "虧": {
+      "category": "states",
+      "frequency": 1
+    },
+    "覆": {
+      "category": "states",
+      "frequency": 1
+    },
+    "餗": {
+      "category": "states",
+      "frequency": 1
+    },
+    "形": {
+      "category": "states",
+      "frequency": 1
+    },
+    "渥": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鉉": {
+      "category": "states",
+      "frequency": 2
+    },
+    "玉": {
+      "category": "states",
+      "frequency": 1
+    },
+    "害": {
+      "category": "states",
+      "frequency": 1
+    },
+    "彭": {
+      "category": "states",
+      "frequency": 1
+    },
+    "威": {
+      "category": "states",
+      "frequency": 2
+    },
+    "佑": {
+      "category": "states",
+      "frequency": 1
+    },
+    "進": {
+      "category": "actions",
+      "frequency": 2
+    },
+    "賓": {
+      "category": "social_roles",
+      "frequency": 2
+    },
+    "作": {
+      "category": "states",
+      "frequency": 1
+    },
+    "享": {
+      "category": "states",
+      "frequency": 1
+    },
+    "圭": {
+      "category": "states",
+      "frequency": 1
+    },
+    "依": {
+      "category": "states",
+      "frequency": 1
+    },
+    "遷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "惠": {
+      "category": "states",
+      "frequency": 2
+    },
+    "問": {
+      "category": "states",
+      "frequency": 1
+    },
+    "立": {
+      "category": "states",
+      "frequency": 1
+    },
+    "奔": {
+      "category": "states",
+      "frequency": 1
+    },
+    "机": {
+      "category": "states",
+      "frequency": 1
+    },
+    "群": {
+      "category": "states",
+      "frequency": 1
+    },
+    "汗": {
+      "category": "states",
+      "frequency": 1
+    },
+    "去": {
+      "category": "states",
+      "frequency": 2
+    },
+    "逖": {
+      "category": "states",
+      "frequency": 1
+    },
+    "他": {
+      "category": "states",
+      "frequency": 1
+    },
+    "燕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鶴": {
+      "category": "animals",
+      "frequency": 1
+    },
+    "陰": {
+      "category": "states",
+      "frequency": 1
+    },
+    "好": {
+      "category": "states",
+      "frequency": 2
+    },
+    "爵": {
+      "category": "states",
+      "frequency": 1
+    },
+    "吾": {
+      "category": "states",
+      "frequency": 1
+    },
+    "與": {
+      "category": "states",
+      "frequency": 1
+    },
+    "靡": {
+      "category": "states",
+      "frequency": 1
+    },
+    "敵": {
+      "category": "states",
+      "frequency": 1
+    },
+    "罷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "几": {
+      "category": "states",
+      "frequency": 1
+    },
+    "匹": {
+      "category": "states",
+      "frequency": 1
+    },
+    "攣": {
+      "category": "states",
+      "frequency": 2
+    },
+    "音": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鴻漸": {
+      "category": "animals",
+      "frequency": 6
+    },
+    "干": {
+      "category": "states",
+      "frequency": 1
+    },
+    "衎": {
+      "category": "states",
+      "frequency": 2
+    },
+    "孕": {
+      "category": "states",
+      "frequency": 2
+    },
+    "育": {
+      "category": "states",
+      "frequency": 1
+    },
+    "桷": {
+      "category": "states",
+      "frequency": 1
+    },
+    "羽": {
+      "category": "states",
+      "frequency": 1
+    },
+    "儀": {
+      "category": "states",
+      "frequency": 1
+    },
+    "饋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "嗃": {
+      "category": "states",
+      "frequency": 2
+    },
+    "嘻": {
+      "category": "states",
+      "frequency": 2
+    },
+    "假": {
+      "category": "states",
+      "frequency": 1
+    },
+    "武": {
+      "category": "states",
+      "frequency": 2
+    },
+    "下": {
+      "category": "states",
+      "frequency": 2
+    },
+    "史": {
+      "category": "states",
+      "frequency": 1
+    },
+    "巫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "紛": {
+      "category": "states",
+      "frequency": 1
+    },
+    "品": {
+      "category": "states",
+      "frequency": 1
+    },
+    "庚": {
+      "category": "states",
+      "frequency": 2
+    },
+    "輻": {
+      "category": "states",
+      "frequency": 1
+    },
+    "目": {
+      "category": "body",
+      "frequency": 1
+    },
+    "疇": {
+      "category": "states",
+      "frequency": 1
+    },
+    "繫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "苞": {
+      "category": "states",
+      "frequency": 1
+    },
+    "桑": {
+      "category": "states",
+      "frequency": 1
+    },
+    "傾": {
+      "category": "states",
+      "frequency": 1
+    },
+    "後": {
+      "category": "states",
+      "frequency": 1
+    },
+    "无妄": {
+      "category": "states",
+      "frequency": 4
+    },
+    "耕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "穫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "菑": {
+      "category": "states",
+      "frequency": 1
+    },
+    "畬": {
+      "category": "states",
+      "frequency": 1
+    },
+    "藥": {
+      "category": "states",
+      "frequency": 1
+    },
+    "逋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "鞶": {
+      "category": "states",
+      "frequency": 1
+    },
+    "帶": {
+      "category": "states",
+      "frequency": 1
+    },
+    "朝": {
+      "category": "states",
+      "frequency": 1
+    },
+    "褫": {
+      "category": "states",
+      "frequency": 1
+    },
+    "素": {
+      "category": "states",
+      "frequency": 1
+    },
+    "坦": {
+      "category": "states",
+      "frequency": 2
+    },
+    "咥": {
+      "category": "states",
+      "frequency": 1
+    },
+    "愬": {
+      "category": "states",
+      "frequency": 2
+    },
+    "夬": {
+      "category": "states",
+      "frequency": 1
+    },
+    "祥": {
+      "category": "states",
+      "frequency": 1
+    },
+    "旋": {
+      "category": "states",
+      "frequency": 1
+    },
+    "畜": {
+      "category": "states",
+      "frequency": 1
+    },
+    "肥": {
+      "category": "states",
+      "frequency": 1
+    },
+    "同人": {
+      "category": "social_roles",
+      "frequency": 4
+    },
+    "伏": {
+      "category": "states",
+      "frequency": 1
+    },
+    "莽": {
+      "category": "states",
+      "frequency": 1
+    },
+    "升": {
+      "category": "actions",
+      "frequency": 1
+    },
+    "興": {
+      "category": "states",
+      "frequency": 1
+    },
+    "攻": {
+      "category": "actions",
+      "frequency": 1
+    },
+    "啕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "相": {
+      "category": "states",
+      "frequency": 1
+    },
+    "柅": {
+      "category": "states",
+      "frequency": 1
+    },
+    "踟": {
+      "category": "states",
+      "frequency": 1
+    },
+    "躅": {
+      "category": "states",
+      "frequency": 1
+    },
+    "起": {
+      "category": "states",
+      "frequency": 1
+    },
+    "杞": {
+      "category": "states",
+      "frequency": 1
+    },
+    "瓜": {
+      "category": "states",
+      "frequency": 1
+    },
+    "隕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "潛": {
+      "category": "actions",
+      "frequency": 1
+    },
+    "夕": {
+      "category": "states",
+      "frequency": 1
+    },
+    "躍": {
+      "category": "actions",
+      "frequency": 1
+    },
+    "淵": {
+      "category": "landscape",
+      "frequency": 1
+    },
+    "亢": {
+      "category": "states",
+      "frequency": 1
+    }
+  },
+  "categories": {
+    "states": {
+      "tokens": [
+        "丈",
+        "上",
+        "下",
+        "且",
+        "中",
+        "中行",
+        "乘",
+        "乙",
+        "乾",
+        "亂",
+        "事",
+        "云",
+        "亡",
+        "亢",
+        "交",
+        "享",
+        "人",
+        "仇",
+        "介",
+        "他",
+        "伏",
+        "休",
+        "位",
+        "佑",
+        "何",
+        "作",
+        "使",
+        "依",
+        "侵",
+        "係",
+        "信",
+        "假",
+        "傾",
+        "僕",
+        "儀",
+        "億",
+        "允",
+        "先",
+        "克",
+        "內",
+        "冥",
+        "冽",
+        "几",
+        "刑",
+        "刖",
+        "列",
+        "初",
+        "刲",
+        "前",
+        "剝",
+        "劓",
+        "功",
+        "動",
+        "勝",
+        "勞",
+        "包",
+        "匹",
+        "南",
+        "占",
+        "即",
+        "卼",
+        "厥",
+        "去",
+        "及",
+        "反",
+        "受",
+        "叢",
+        "史",
+        "右",
+        "君",
+        "否",
+        "含",
+        "吾",
+        "告",
+        "命",
+        "和",
+        "咥",
+        "咨",
+        "咷",
+        "品",
+        "商",
+        "問",
+        "啕",
+        "啞",
+        "喜",
+        "喪",
+        "嗃",
+        "嗟",
+        "嘉",
+        "嘻",
+        "噬",
+        "困",
+        "園",
+        "在",
+        "圭",
+        "地",
+        "坦",
+        "垂",
+        "堅",
+        "塞",
+        "士",
+        "夕",
+        "外",
+        "夜",
+        "夤",
+        "大",
+        "大川",
+        "夬",
+        "失",
+        "夷",
+        "奔",
+        "好",
+        "妣",
+        "妾",
+        "威",
+        "娣",
+        "孕",
+        "字",
+        "孚",
+        "孤",
+        "它",
+        "安",
+        "宗",
+        "官",
+        "宜",
+        "客",
+        "害",
+        "家",
+        "密",
+        "寒",
+        "寘",
+        "實",
+        "寧",
+        "寵",
+        "小",
+        "尚",
+        "就",
+        "尸",
+        "尾",
+        "屋",
+        "履",
+        "屨",
+        "岐",
+        "巢",
+        "左",
+        "巫",
+        "己",
+        "已",
+        "巷",
+        "帛",
+        "帥",
+        "帶",
+        "幕",
+        "干",
+        "平",
+        "年",
+        "并",
+        "幾",
+        "序",
+        "庚",
+        "廬",
+        "建",
+        "弋",
+        "引",
+        "弟",
+        "弧",
+        "張",
+        "彙",
+        "形",
+        "彭",
+        "彼",
+        "律",
+        "後",
+        "徐",
+        "徒",
+        "得",
+        "德",
+        "徽",
+        "心",
+        "必",
+        "快",
+        "思",
+        "恆",
+        "恤",
+        "息",
+        "惕",
+        "惟",
+        "惠",
+        "惡",
+        "惻",
+        "愁",
+        "愆",
+        "愬",
+        "慍",
+        "慶",
+        "憂",
+        "憧",
+        "懷",
+        "戎",
+        "成",
+        "我",
+        "戒",
+        "戔",
+        "戕",
+        "戚",
+        "所",
+        "承",
+        "折",
+        "拂",
+        "拔",
+        "拘",
+        "括",
+        "振",
+        "掣",
+        "握",
+        "摧",
+        "撝",
+        "擊",
+        "據",
+        "攣",
+        "收",
+        "改",
+        "故",
+        "敗",
+        "敝",
+        "敦",
+        "敬",
+        "敵",
+        "斗",
+        "斯",
+        "於",
+        "旋",
+        "无妄",
+        "既",
+        "旬",
+        "昃",
+        "明",
+        "明夷",
+        "易",
+        "是",
+        "時",
+        "晦",
+        "望",
+        "朝",
+        "期",
+        "木",
+        "未",
+        "朵",
+        "机",
+        "杞",
+        "束",
+        "東",
+        "枕",
+        "果",
+        "枯",
+        "柅",
+        "株",
+        "桑",
+        "桓",
+        "桷",
+        "棄",
+        "棘",
+        "楊",
+        "樽",
+        "橈",
+        "次",
+        "欲",
+        "歌",
+        "武",
+        "歲",
+        "死",
+        "殺",
+        "毒",
+        "永",
+        "汗",
+        "汲",
+        "決",
+        "沛",
+        "沫",
+        "沱",
+        "河",
+        "泉",
+        "泣",
+        "洟",
+        "浚",
+        "涂",
+        "涕",
+        "渝",
+        "渥",
+        "渫",
+        "滅",
+        "漏",
+        "漣",
+        "濡",
+        "災",
+        "焚",
+        "然",
+        "燕",
+        "爵",
+        "爾",
+        "牖",
+        "牙",
+        "牽",
+        "牿",
+        "狩",
+        "獨",
+        "獲",
+        "玉",
+        "王事",
+        "班",
+        "瑣",
+        "瓜",
+        "瓮",
+        "甃",
+        "甘",
+        "生",
+        "由",
+        "畜",
+        "畬",
+        "疇",
+        "疑",
+        "疾",
+        "登",
+        "發",
+        "皤",
+        "盈",
+        "益",
+        "盍",
+        "盱",
+        "相",
+        "眇",
+        "眈",
+        "眚",
+        "眾",
+        "矍",
+        "知",
+        "石",
+        "碩",
+        "磐",
+        "祀",
+        "祉",
+        "祖",
+        "祗",
+        "祥",
+        "祭",
+        "福",
+        "禦",
+        "禴",
+        "稊",
+        "穫",
+        "突",
+        "窞",
+        "窺",
+        "立",
+        "章",
+        "童",
+        "笑",
+        "筐",
+        "箕",
+        "簋",
+        "簪",
+        "系",
+        "約",
+        "紛",
+        "素",
+        "索",
+        "紱",
+        "終",
+        "經",
+        "維",
+        "繫",
+        "繻",
+        "纆",
+        "罔",
+        "罷",
+        "羝",
+        "羞",
+        "群",
+        "羸",
+        "羽",
+        "習",
+        "翩",
+        "翼",
+        "老",
+        "考",
+        "耋",
+        "耕",
+        "聞",
+        "肥",
+        "育",
+        "胏",
+        "能",
+        "膏",
+        "臘",
+        "臧",
+        "自",
+        "臲",
+        "至",
+        "致",
+        "與",
+        "興",
+        "舊",
+        "舌",
+        "舍",
+        "良",
+        "苞",
+        "苦",
+        "茀",
+        "茲",
+        "茹",
+        "荒",
+        "莧",
+        "莫",
+        "莽",
+        "菑",
+        "華",
+        "葛",
+        "蒺",
+        "蔀",
+        "蔑",
+        "薰",
+        "藉",
+        "藜",
+        "藟",
+        "藥",
+        "蘇",
+        "處",
+        "虛",
+        "虞",
+        "號",
+        "虧",
+        "虩",
+        "衎",
+        "衛",
+        "衢",
+        "衣",
+        "袂",
+        "袛",
+        "袽",
+        "裕",
+        "褫",
+        "西",
+        "覆",
+        "見",
+        "視",
+        "覿",
+        "觌",
+        "觸",
+        "言",
+        "誡",
+        "說",
+        "謂",
+        "譽",
+        "變",
+        "豶",
+        "豹",
+        "貝",
+        "負",
+        "貫",
+        "貳",
+        "資",
+        "賞",
+        "起",
+        "跛",
+        "踟",
+        "躅",
+        "躋",
+        "身",
+        "躬",
+        "輔",
+        "輪",
+        "輹",
+        "輻",
+        "辨",
+        "迷",
+        "逋",
+        "逖",
+        "速",
+        "連",
+        "遂",
+        "遄",
+        "遇",
+        "過",
+        "遐",
+        "違",
+        "遠",
+        "遲",
+        "遷",
+        "遺",
+        "邅",
+        "鄰",
+        "酌",
+        "配",
+        "醜",
+        "金",
+        "鉉",
+        "錫",
+        "錯",
+        "長",
+        "開",
+        "閑",
+        "闃",
+        "防",
+        "陂",
+        "限",
+        "陰",
+        "隆",
+        "隍",
+        "階",
+        "隕",
+        "險",
+        "隼",
+        "雖",
+        "離",
+        "震",
+        "靈",
+        "靡",
+        "面",
+        "革",
+        "鞏",
+        "鞶",
+        "音",
+        "頂",
+        "頄",
+        "顯",
+        "飲",
+        "餗",
+        "饋",
+        "馮",
+        "驅",
+        "鬼",
+        "鮒",
+        "鳴",
+        "鼓",
+        "鼫",
+        "鼻",
+        "齎"
+      ],
+      "n_distinct": 537,
+      "total_freq": 1129
+    },
+    "natural": {
+      "tokens": [
+        "光",
+        "冰",
+        "日",
+        "月",
+        "雨",
+        "霜"
+      ],
+      "n_distinct": 6,
+      "total_freq": 25
+    },
+    "qualities": {
+      "tokens": [
+        "壯",
+        "富",
+        "幹",
+        "幽",
+        "方",
+        "朱",
+        "玄",
+        "白",
+        "直",
+        "艱",
+        "赤",
+        "高",
+        "黃"
+      ],
+      "n_distinct": 13,
+      "total_freq": 45
+    },
+    "actions": {
+      "tokens": [
+        "伐",
+        "來",
+        "入",
+        "出",
+        "升",
+        "取",
+        "執",
+        "射",
+        "居",
+        "往",
+        "征",
+        "從",
+        "復",
+        "戰",
+        "拯",
+        "攻",
+        "曳",
+        "歸",
+        "求",
+        "涉",
+        "潛",
+        "納",
+        "行",
+        "觀",
+        "躍",
+        "載",
+        "退",
+        "逐",
+        "進",
+        "隨",
+        "飛"
+      ],
+      "n_distinct": 31,
+      "total_freq": 154
+    },
+    "objects": {
+      "tokens": [
+        "乘馬",
+        "囊",
+        "戶",
+        "斧",
+        "校",
+        "桎梏",
+        "棟",
+        "牀",
+        "矢",
+        "缶",
+        "茅",
+        "藩",
+        "裳",
+        "車",
+        "輿",
+        "酒",
+        "門",
+        "食"
+      ],
+      "n_distinct": 18,
+      "total_freq": 63
+    },
+    "animals": {
+      "tokens": [
+        "牛",
+        "狐",
+        "禽",
+        "羊",
+        "虎",
+        "豕",
+        "雉",
+        "馬",
+        "魚",
+        "鳥",
+        "鴻漸",
+        "鶴",
+        "鹿",
+        "鼠",
+        "龍",
+        "龜"
+      ],
+      "n_distinct": 16,
+      "total_freq": 55
+    },
+    "landscape": {
+      "tokens": [
+        "丘",
+        "國",
+        "城",
+        "墉",
+        "天",
+        "宮",
+        "山",
+        "庭",
+        "林",
+        "沙",
+        "泥",
+        "淵",
+        "田",
+        "穴",
+        "谷",
+        "道",
+        "邑",
+        "郊",
+        "野",
+        "陵",
+        "陸"
+      ],
+      "n_distinct": 21,
+      "total_freq": 60
+    },
+    "body": {
+      "tokens": [
+        "咸",
+        "拇",
+        "目",
+        "翰",
+        "耳",
+        "肉",
+        "股",
+        "肱",
+        "脢",
+        "腓",
+        "腹",
+        "膚",
+        "臀",
+        "血",
+        "角",
+        "足",
+        "趾",
+        "須",
+        "頰",
+        "頻",
+        "顛",
+        "首"
+      ],
+      "n_distinct": 22,
+      "total_freq": 57
+    },
+    "social_roles": {
+      "tokens": [
+        "主",
+        "侯",
+        "公",
+        "友",
+        "同人",
+        "后",
+        "君子",
+        "大人",
+        "大君",
+        "夫",
+        "女",
+        "妻",
+        "婚媾",
+        "婦",
+        "子",
+        "寇",
+        "小人",
+        "帝",
+        "師",
+        "朋",
+        "歸妹",
+        "母",
+        "父",
+        "王",
+        "臣",
+        "賓",
+        "邑人",
+        "金夫"
+      ],
+      "n_distinct": 28,
+      "total_freq": 157
+    }
+  }
+}

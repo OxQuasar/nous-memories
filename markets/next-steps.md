@@ -2,127 +2,103 @@
 
 ## Current State — Research Complete (15 phases)
 
-Discovery (11 phases) + OOS validation (Phase 12) + production refit (Phase 13) + cross-asset validation (Phases 14-15) complete. **Research phase is done.** Remaining work is engineering + forward time accumulation.
+4-regime directed cycle validated across BTC (IS + 2yr OOS + 21-day forward crash) and ETH (7.5 months). BTC production coefficients transfer cross-asset (AUC 0.994/0.998 on ETH). Research phase is done. Remaining work is engineering + forward time accumulation.
 
-- 4-regime directed cycle: **OOS-validated** on 2 years of BTC 2023-2024 (2,947 episodes)
-- All topological invariants confirmed: K=4, structural zeros, complement symmetry (JSD 0.007)
-- Exit prediction: **cross-domain AUC 0.957 (C2), 0.980 (C1)** — top tier
-- Cross-asset: **BTC→ETH transfer AUC 0.994 (C2), 0.998 (C1)** — BTC coefficients outperform ETH-specific fit
-- Returns confirmed: C1 breakthrough +1.08% OOS vs +1.09% IS, asymmetry ratio 3.95 (ETH: 3.87)
-- Production coefficients fitted on raw-scale OOS data (Phase 13) — universal for crypto deployment
-- Regime detection refined: **2-bit macro (trend_8h × trend_48h)**, not 3-bit trigram
+### Production Model
 
----
+**Regime detection:** 2-bit macro (sign of trend_8h × sign of trend_48h)
 
-## Resolved Questions
+| Macro | trend_8h | trend_48h | Regime |
+|-------|----------|-----------|--------|
+| 0 | − | − | Bear |
+| 1 | + | − | Reversal |
+| 2 | − | + | Pullback |
+| 3 | + | + | Bull |
 
-### ~~OOS Validation~~
-**RESOLVED — TOP TIER PASS (Phase 12).**
+**Trend computation:** OLS slope of rolling window of period duration, divided by mean price → fractional rate per bar (~1e-5 magnitude). Simulator uses `NormalizedTrendAndVolatility` in `~/henry/callandor/calcs.go`.
 
-| Criterion | Result | Status |
-|-----------|--------|--------|
-| K=4 topology | K=4, gap=0.151 | ✓ |
-| Structural zeros | Identical pattern | ✓ |
-| Complement symmetry | JSD = 0.007 | ✓ |
-| C2 AUC > 0.85 | 0.957 | ✓ TOP TIER |
-| C1 AUC > 0.85 | 0.980 | ✓ TOP TIER |
-
-### ~~Coefficient Refit~~
-**RESOLVED (Phase 13).** Production coefficients in raw OLS slope units. See findings.md §11.
-
-### ~~C1 Thin-n~~
-**RESOLVED.** 155 breakthroughs in OOS (was 43 IS). Return +1.08% confirmed.
-
-### ~~Binary vs Continuous~~
-**RESOLVED.** Binary signal environment-dependent. Continuous trend_8h model stable. Binary is discovery tool only.
-
-### ~~3-bit vs 2-bit Regime Detection~~
-**RESOLVED (Phase 13).** On raw-scale data, trend_1h flips every ~55 minutes, creating ~21K noisy micro-episodes. The macro regime is medium × slow alignment (trend_8h × trend_48h = 2-bit). This gives ~2,950 episodes at ~5.9h mean duration — matching IS perfectly. trend_1h enters only as a logistic predictor at exit, not as a regime determinant.
-
----
-
-## 1. Forward Validation (TOPOLOGY PASS — Phase 14)
-
-~~Python batch script on post-Feb 2026 BTC data.~~ **DONE.** Topology confirmed (K=4, structural zeros, directed cycle) on 21 days of crash data (n=74 episodes). Logistic AUC=1.000 but n too small for calibration. Below 150-episode minimum → topology check only, not full validation.
-
-### What it does
-1. Compute OLS trends (1h, 8h, 48h) on 5-min bars
-2. Detect regime transitions from 2-bit macro (trend_8h sign × trend_48h sign)
-3. At each transition, record: regime, trend_1h, trend_8h, logistic P(favorable), actual outcome
-4. After the run, grade against rubric
-
-### Production model
-
-**Trend computation:** OLS slope of rolling window of period duration, divided by mean price in window → fractional rate per bar. See `data/download_btc.py`.
-
-**C2 Pullback Exit:**
+**Exit scoring (Phase 13, fit on BTC OOS 2023-2024):**
 ```
-P(bull) = σ(5.209 + 1477 × trend_1h + 348533 × trend_8h)
-Decision boundary: trend_8h ≈ −0.000015
+C2 Pullback: P(bull) = σ(5.209 + 1477 × trend_1h + 348533 × trend_8h)
+C1 Reversal: P(bt)   = σ(−4.890 + 3138 × trend_1h + 421505 × trend_8h)
 ```
-
-**C1 Reversal Exit:**
-```
-P(bt) = σ(−4.890 + 3138 × trend_1h + 421505 × trend_8h)
-Decision boundary: trend_8h ≈ +0.000012
-```
-
-### Grading rubric
-
-| Grade | Criteria |
-|-------|----------|
-| A | Zero topology violations, calibration within ±10pp per bin, decision boundary stable |
-| B | ≤2 topology violations, calibration within ±15pp, boundary shifted but direction correct |
-| C | Topology holds but exit signal degraded (AUC <0.80 or calibration off >20pp) |
-| F | Topology violations >5%, or K≠4 on live data |
-
-A or B → proceed to simulator integration for live trading. C → regime tracking only. F → stop.
-
-### Minimum data
-30 days (~150 episodes, ~40 C2 exits, ~40 C1 exits). Enough for topology, marginal for calibration. 90 days would be solid.
+Decision boundaries: C2 at trend_8h ≈ −0.000015, C1 at trend_8h ≈ +0.000012.
 
 ---
 
-## 2. Simulator Integration (If Grade A/B) 
+## TODO
 
-Once forward validation passes, integrate the regime model into the existing trading simulator. The simulator handles per-second data ingestion and order execution — the regime model feeds it conviction signals at regime transitions (~5 per day).
+### 1. Production Scoring
+
+The model labels regimes and scores exits — it does not generate trading signals. Three metrics track whether it's working on live data:
+
+**Metric 1: Topology violations (count)**
+Count forbidden transitions: C0→C3, C3→C0, C1→C2, C2→C1. Expected: 0. Multiple violations in a short window = topology breaking.
+
+**Metric 2: Exit AUC (rolling)**
+At every C2 and C1 exit, record (trend_1h, trend_8h, P(favorable), actual outcome). Compute rolling AUC over trailing 100 exits.
+
+| AUC | Status |
+|-----|--------|
+| > 0.90 | Working |
+| 0.85–0.90 | Monitor |
+| 0.80–0.85 | Investigate |
+| < 0.80 | Stop using exit scores |
+
+**Metric 3: Calibration (binned)**
+Bin predictions: <0.10, 0.10–0.50, 0.50–0.90, >0.90. Model is bimodal — >95% should fall in extreme bins, actuals within ±10pp of predicted.
+
+**When to refit:** AUC < 0.85 on rolling 100, or calibration drifts >15pp in extreme bins. Refit on most recent 6 months. Topology (2-bit) should never need changing.
+
+### 2. Simulator Integration
+
+Wire regime labels and exit scores into the trading simulator. The simulator handles per-second data ingestion — the regime model feeds it regime state and exit scores at transitions (~5 per day).
+
+### 3. Forward Calibration
+
+Accumulate 30+ days of live data for calibration-level validation (150+ episodes, ~40 C2 and C1 exits each). Phase 14 confirmed topology on 21 days (n=74) but that's below minimum for exit score validation.
+
+### 4. Additional Assets (Deferred)
+
+**PENGU:** Tests boundary invariance across different vol profiles. C2 boundary was near-invariant BTC↔ETH (3% difference) but both have similar fractional vol.
+
+**Traditional markets (SPY, QQQ):** Different microstructure (market hours, gaps). Topology likely holds. Complement symmetry may weaken (volatility asymmetry). Time-invariance will likely break (session effects).
+
+### 5. Failure Clustering (Deferred)
+
+Do high-confidence C2 failures (1-3% at P>0.9) cluster in time? Operational risk characterization for position sizing.
+
+### 6. HMM (Contingent)
+
+Only if operational use reveals systematic boundary flickering at trend_8h ≈ 0 or trend_48h ≈ 0 that degrades regime labeling.
 
 ---
 
-## 3. Multi-Asset Validation (ETH CONFIRMED — Phase 14)
+## DONE
 
-### 3a. ~~Crypto (ETH)~~ — DONE
-**CONFIRMED** on 7.5 months ETH data (860 episodes). All 4 hierarchy rungs pass: K=4, same structural zeros, complement symmetry (JSD=0.050), trend_8h dominance, bimodal calibration, near-identical C2 decision boundary (-1.44e-5 vs BTC -1.49e-5). Asymmetry ratio 3.87 (BTC: 3.95). Returns scale with vol, risk-reward invariant. **Phase 15 upgrade:** BTC production coefficients transfer to ETH (AUC 0.994/0.998) better than ETH's own fit. Universal crypto model confirmed.
+### OOS Validation (Phase 12) — TOP TIER PASS
+K=4 (gap=0.151), identical structural zeros, complement symmetry (JSD=0.007), cross-domain AUC 0.957 (C2) / 0.980 (C1). 2,947 episodes on BTC 2023-2024.
 
-### 3b. Crypto (SOL) — Deferred
-Same framework, different asset. Would test whether boundary invariance holds across different vol profiles.
+### Coefficient Refit (Phase 13)
+Production coefficients in price-normalized units. Fit on BTC OOS 2023-2024.
 
-### 3b. Traditional markets (SPY, QQQ) (Deferred)
-Different microstructure (market hours, no 24/7 trading). Tests whether complement symmetry and directed cycle survive session boundaries.
+### C1 Thin-n (Phase 12)
+155 breakthroughs in OOS (was 43 IS). Return +1.08% confirmed. Asymmetry ratio 3.95.
 
-**Expectation:** Topology likely holds. Complement symmetry may weaken (volatility asymmetry stronger in equities). Time-invariance will likely break (session open/close effects).
+### Binary vs Continuous (Phase 11)
+Binary S5/S4 signal environment-dependent (gap collapsed 42.6pp → 14.1pp OOS). Continuous trend_8h model stable. Binary deprecated.
 
----
+### 3-bit vs 2-bit Regime Detection (Phase 13)
+trend_1h flips every ~55 minutes on raw data, creating noisy micro-episodes. Macro regime is trend_8h × trend_48h (2-bit). trend_1h enters only as logistic predictor at exit.
 
-## 4. Contingent Next Steps
+### Forward Topology (Phase 14) — PASS
+K=4, structural zeros, directed cycle confirmed on 21-day BTC crash (n=74). Below minimum for exit score validation.
 
-### 4a. HMM (if 2-bit regime tracking fails operationally)
-Motivated only if operational prototype reveals:
-- Systematic boundary flickering at trend_8h ≈ 0 or trend_48h ≈ 0
-- Detection latency vs a continuous model
-- Smooth transition zones that the binary model misclassifies
+### ETH Cross-Asset (Phases 14-15) — CONFIRMED
+860 episodes. All 4 hierarchy rungs pass. BTC→ETH coefficient transfer AUC 0.994 (C2) / 0.998 (C1) — outperforms ETH's own fit. Asymmetry ratio 3.87. C2 boundary near-invariant (−1.44e-5 vs −1.49e-5). C1 boundary asset-specific (2.3× different, use as binary go/no-go only).
 
-### 4b. ~~IS Normalization Recovery~~ RESOLVED
-IS trend was **raw OLS slope** (dollars per sample index) prior to the normalization fix. The simulator now uses `NormalizedTrendAndVolatility` for price trends (slope / mean price → fractional rate), matching `download_btc.py`. Both systems now output the same units (~1e-4 magnitude). The IS datalog has been regenerated to reflect the new normalization. See `~/henry-2/callandor/calcs.go`.
+### Ambiguous Zone (Phase 15) — CLOSED
+3-4 episodes in [0.2, 0.8] range on both assets. Bimodal separation confirmed. AUC is mechanical state-reading of clean bifurcation.
 
----
-
-## Priority Order
-
-1. ~~Forward validation~~ → **TOPOLOGY PASS** (Phase 14). Need 30+ days for calibration-level.
-2. ~~Multi-asset (ETH)~~ → **CONFIRMED** (Phase 14-15). BTC→ETH transfer AUC 0.994/0.998.
-3. ~~Ambiguous-zone AUC~~ → **CLOSED** (Phase 15). Bimodal separation confirmed.
-4. **Operational prototype** → 2-bit regime tracker + trend_8h monitor for live deployment
-5. **Simulator integration** → wire regime signals into trading simulator
-6. **Forward calibration** → accumulate 30+ days BTC for logistic-level validation
-7. **Failure clustering analysis** → check if high-confidence C2 failures cluster in time (operational risk)
+### IS Normalization (Phase 13 + simulator fix)
+Simulator now uses `NormalizedTrendAndVolatility` for price trends (slope / mean price → fractional rate), matching `download_btc.py`. IS datalog regenerated with consistent units.

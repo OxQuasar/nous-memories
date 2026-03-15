@@ -42,11 +42,6 @@ An investigation of the I Ching's algebraic structure, producing 77 results acro
 - `work/` — computation scripts and proof documents
 - `work/proof_nuclear_rank.md` — formal proof of rank(M^k) = max(2, 2n−2k)
 
-### `open-questions/`
-**Q4/Q8 resolution workspace.** Bridge scan, marker coupling profiles, decorated Fano plane search. Merged into i-summary findings.
-- `findings.md` — results document
-- `work/` — scripts and output files
-
 ---
 
 ## Operational Atlases
@@ -127,6 +122,10 @@ An investigation of the I Ching's algebraic structure, producing 77 results acro
 - `sy_divination_examples.md` — worked examples
 
 ---
+
+## I Ching Texts
+Original I Ching texts and commentary found in: 
+memories/texts
 
 ## Navigation
 

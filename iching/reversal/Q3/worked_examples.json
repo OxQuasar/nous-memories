@@ -1,0 +1,692 @@
+[
+  {
+    "id": "MH01",
+    "source": "梅花易數 卷一",
+    "title": "觀梅占 (Plum Blossom Observation)",
+    "text_ref": "vol1.txt:177-179",
+    "domain": "event_prediction",
+    "algorithmic_inputs": {
+      "method": "先天 (date-time numerology)",
+      "date": "辰年十二月十七日申時",
+      "upper_trigram": "兌 (from remainder 2)",
+      "lower_trigram": "離 (from remainder 3)",
+      "hexagram": "澤火革",
+      "moving_line": "初爻",
+      "changed_hex": "咸",
+      "hu_gua": "乾, 巽",
+      "ti_yong": "兌金=體, 離火=用",
+      "wuxing_relations": [
+        "離火克兌金(用克體)",
+        "巽木生離火(互生用)",
+        "乾金=體黨"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "兌為少女 → 女子",
+        "reasoning": "Trigram象 mapped to person type: 兌 = youngest daughter → young woman"
+      },
+      {
+        "type": "analogy",
+        "content": "巽為股 → 傷股 (injury to thigh)",
+        "reasoning": "Trigram body-part mapping: 巽 = thigh. 巽 is克'd by 乾金兑金 → thigh is injured"
+      },
+      {
+        "type": "integration",
+        "content": "互中巽木又逢乾金兑金克之 → 巽木被傷",
+        "reasoning": "Combined multiple克 relations on 巽 to conclude injury, not just misfortune"
+      },
+      {
+        "type": "weighting",
+        "content": "克體之卦氣盛 (克體 signals dominate)",
+        "reasoning": "Counted克體 vs 生體: 離火克兌金 + 巽木生離火 = overwhelming克, so outcome is negative"
+      },
+      {
+        "type": "exception",
+        "content": "變為艮土, 兌金得生 → 不至凶危",
+        "reasoning": "變卦 provides a生體 signal (艮土生兌金), overriding the dominant克 to prevent death"
+      },
+      {
+        "type": "external",
+        "content": "明晚 (timing from context)",
+        "reasoning": "Tomorrow evening predicted — timing derived from the situation (plum viewing) not from卦 numerics"
+      }
+    ],
+    "outcome": "明晚有女子折花，園丁逐之，女子失驚墜地，傷其股。不至凶危。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH02",
+    "source": "梅花易數 卷一",
+    "title": "牡丹占 (Peony Divination)",
+    "text_ref": "vol1.txt:181-185",
+    "domain": "event_prediction",
+    "algorithmic_inputs": {
+      "method": "先天 (date-time numerology)",
+      "date": "巳年三月十六日卯時",
+      "upper_trigram": "乾 (from remainder 1)",
+      "lower_trigram": "巽 (from remainder 5)",
+      "hexagram": "天風姤",
+      "moving_line": "五爻",
+      "changed_hex": "鼎",
+      "hu_gua": "重乾",
+      "ti_yong": "巽木=體, 乾金=用",
+      "wuxing_relations": [
+        "乾金克巽木(用克體)",
+        "重乾=克體黨多",
+        "無生體之卦"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "weighting",
+        "content": "互卦又見重乾，克體之卦多矣，卦中無生意",
+        "reasoning": "Extreme imbalance: ALL signals克體, zero生體 → destruction certain"
+      },
+      {
+        "type": "analogy",
+        "content": "乾為馬 → 被馬踐毀",
+        "reasoning": "Trigram象: 乾 = horse. Since乾 is the克ing force, destruction comes via horses"
+      },
+      {
+        "type": "external",
+        "content": "午時 = 離明之象 → timing",
+        "reasoning": "午 = noon = 離(fire/brightness). Used branch-trigram correspondence for timing"
+      }
+    ],
+    "outcome": "明日午時，貴官觀牡丹，二馬相嚙，群至花間馳驟，花盡為之踐毀。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH03",
+    "source": "梅花易數 卷一",
+    "title": "鄰夜扣門借物占 (Neighbor Knocking at Night)",
+    "text_ref": "vol1.txt:187-191",
+    "domain": "object_identification",
+    "algorithmic_inputs": {
+      "method": "先天 (sound counting)",
+      "date": "冬夕酉時",
+      "upper_trigram": "乾 (1 knock)",
+      "lower_trigram": "巽 (5 knocks)",
+      "hexagram": "天風姤",
+      "moving_line": "四爻",
+      "changed_hex": "巽",
+      "hu_gua": "重乾",
+      "ti_yong": "N/A (object identification)",
+      "wuxing_relations": [
+        "三乾金, 二巽木 → 金木之物"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "三乾金, 二巽木 → 金木之物",
+        "reasoning": "五行 composition directly maps to material composition: metal+wood object"
+      },
+      {
+        "type": "weighting",
+        "content": "乾金短, 巽木長 → 斧",
+        "reasoning": "Relative proportion: metal is shorter than wood handle → axe shape"
+      },
+      {
+        "type": "external",
+        "content": "夕晚安用鋤？必借斧。蓋斧切於劈柴之用耳。",
+        "reasoning": "Time-of-day reasoning: evening → need to chop firewood, not hoe. EXPLICITLY teaches: 推數又須明理"
+      }
+    ],
+    "outcome": "借斧 (borrowing an axe)",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH04",
+    "source": "梅花易數 卷一",
+    "title": "今日動靜如何 (Today's Fortune)",
+    "text_ref": "vol1.txt:193-197",
+    "domain": "daily_fortune",
+    "algorithmic_inputs": {
+      "method": "先天 (character tones)",
+      "upper_trigram": "坤 (from 今日動 = 1+4+3 = 8)",
+      "lower_trigram": "巽 (from 靜如何 = 3+1+1 = 5)",
+      "hexagram": "地風升",
+      "moving_line": "初爻",
+      "changed_hex": "泰",
+      "hu_gua": "震, 兌",
+      "ti_yong": "巽木=體, 坤土=用",
+      "wuxing_relations": [
+        "巽木克坤土(體克用)",
+        "震木=體黨",
+        "兌金克體"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "升者, 有升階之義 → going up (to someone's house)",
+        "reasoning": "Hexagram name meaning: 升 = ascending → being invited up/elevated"
+      },
+      {
+        "type": "analogy",
+        "content": "互震兌有東西席之分",
+        "reasoning": "互卦 trigram positions mapped to seating arrangement at a banquet"
+      },
+      {
+        "type": "analogy",
+        "content": "兌為口, 坤為腹 → 口腹之事 (dining)",
+        "reasoning": "Body part象: mouth + belly = eating/dining occasion"
+      },
+      {
+        "type": "weighting",
+        "content": "客不多: 坤土獨立, 無同類之卦氣",
+        "reasoning": "Counted坤's party: only one坤, no allies → few guests"
+      },
+      {
+        "type": "weighting",
+        "content": "酒不醉: 卦中無坎",
+        "reasoning": "Absence reasoning: no坎(water) → no heavy drinking"
+      },
+      {
+        "type": "analogy",
+        "content": "坤為黍稷 → 味止黍雞",
+        "reasoning": "坤's food象 = grain/millet. Specific menu predicted from trigram associations"
+      },
+      {
+        "type": "integration",
+        "content": "卦無相生之義 → 酒不多, 食品不豐",
+        "reasoning": "Overall harmony assessment: no mutual生 = modest affair"
+      }
+    ],
+    "outcome": "今日有人相請, 客不多, 酒不醉, 味至黍雞而已。果然。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH05",
+    "source": "梅花易數 卷一",
+    "title": "西林寺牌額占 (Temple Sign)",
+    "text_ref": "vol1.txt:199-205",
+    "domain": "feng_shui",
+    "algorithmic_inputs": {
+      "method": "先天 (stroke counting)",
+      "upper_trigram": "艮 (西=7 strokes)",
+      "lower_trigram": "坤 (林=8 strokes)",
+      "hexagram": "山地剝",
+      "moving_line": "三爻",
+      "changed_hex": "艮",
+      "hu_gua": "重坤",
+      "ti_yong": "坤土=體, 艮土=用",
+      "wuxing_relations": [
+        "比和(坤艮皆土)",
+        "群陰剝陽"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "exception",
+        "content": "寺者純陽之所居, 今卦得重陰之爻 → 不吉",
+        "reasoning": "OVERRIDES the比和(normally吉) reading. Context: Buddhist temple = pure陽 place, but卦 is pure陰 → contradiction"
+      },
+      {
+        "type": "analogy",
+        "content": "群陰剝陽 → 陰人之禍",
+        "reasoning": "Hexagram name/meaning: 剝 = stripping away. 陰 overwhelming 陽 → women causing trouble in monks' quarters"
+      },
+      {
+        "type": "external",
+        "content": "Remedy: add hooks to 林 → changes卦 to 山澤損 → 吉",
+        "reasoning": "Physical intervention changes the numerological input → new卦 is favorable. Practitioner intervenes in causality."
+      }
+    ],
+    "outcome": "寺中果有陰人之禍。添林字兩鉤後，寺果無事。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH06",
+    "source": "梅花易數 卷一",
+    "title": "老人有憂色占 (Worried Old Man)",
+    "text_ref": "vol1.txt:209-213",
+    "domain": "personal_fate",
+    "algorithmic_inputs": {
+      "method": "後天 (observed person + direction)",
+      "date": "己丑日卯時",
+      "upper_trigram": "乾 (old man → 乾)",
+      "lower_trigram": "巽 (巽方 direction)",
+      "hexagram": "天風姤",
+      "moving_line": "九四",
+      "changed_hex": "N/A",
+      "hu_gua": "重乾",
+      "ti_yong": "巽木=體, 乾金=用",
+      "wuxing_relations": [
+        "乾金克巽木(用克體)",
+        "重乾克體(互克體)",
+        "無生體之卦"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "integration",
+        "content": "易辭: 包無魚, 起凶 → 不吉",
+        "reasoning": "爻辭 consulted AND found consonant with卦理 (both negative)"
+      },
+      {
+        "type": "weighting",
+        "content": "巽木為體, 乾金克之, 互卦重乾俱克體, 無生氣",
+        "reasoning": "All signals克體, zero生體 → certain disaster"
+      },
+      {
+        "type": "external",
+        "content": "時在途行, 其應速 → 取成卦之數中分其半 → 5日",
+        "reasoning": "Practitioner's own motion state (walking) determines speed of outcome. Then halves the total卦 number to get the day count."
+      },
+      {
+        "type": "analogy",
+        "content": "包無魚 + 卦象 → 魚骨鯁而終",
+        "reasoning": "爻辭 mentions 'no fish' → death comes via fish (fish bone choking). Ironic inversion of the text."
+      }
+    ],
+    "outcome": "五日後赴吉席, 因魚骨鯁而終。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH07",
+    "source": "梅花易數 卷一",
+    "title": "少年有喜色占 (Happy Young Man)",
+    "text_ref": "vol1.txt:215-217",
+    "domain": "personal_fate",
+    "algorithmic_inputs": {
+      "method": "後天 (observed person + direction)",
+      "date": "壬申日午時",
+      "upper_trigram": "艮 (少年 → 艮少男)",
+      "lower_trigram": "離 (離方 south)",
+      "hexagram": "山火賁",
+      "moving_line": "六五",
+      "changed_hex": "家人",
+      "hu_gua": "震, 坎",
+      "ti_yong": "離火=體, 艮土=用",
+      "wuxing_relations": [
+        "艮土泄離火(用泄體)",
+        "互變俱生體"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "integration",
+        "content": "爻辭: 賁於丘園, 束帛戔戔, 吝終吉 → 吉 + 聘幣",
+        "reasoning": "爻辭 mentions 束帛(bundled silk) = betrothal gifts. Combined with卦理(生體) = engagement"
+      },
+      {
+        "type": "weighting",
+        "content": "離為體, 互變俱生之 → 大吉",
+        "reasoning": "All互 and變卦 signals生體 → strongly positive outcome"
+      },
+      {
+        "type": "analogy",
+        "content": "束帛戔戔 → 聘幣之喜",
+        "reasoning": "Silk gifts in爻辭 → betrothal/engagement gifts. Direct textual-to-situational analogy."
+      },
+      {
+        "type": "external",
+        "content": "十七日內 (from total number 17)",
+        "reasoning": "Timing from the sum of numbers used to construct the卦"
+      }
+    ],
+    "outcome": "十七日內必有聘幣之喜。至期果然定親。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH08",
+    "source": "梅花易數 卷一",
+    "title": "牛哀鳴占 (Ox Mournful Cry)",
+    "text_ref": "vol1.txt:219-223",
+    "domain": "animal_fate",
+    "algorithmic_inputs": {
+      "method": "後天 (animal + direction)",
+      "date": "癸卯日午時",
+      "upper_trigram": "坤 (牛 → 坤)",
+      "lower_trigram": "坎 (坎方 north)",
+      "hexagram": "地水師",
+      "moving_line": "三爻",
+      "changed_hex": "升",
+      "hu_gua": "坤, 震",
+      "ti_yong": "坤土=體, 坎水=用",
+      "wuxing_relations": [
+        "坤土克坎水(體克用)",
+        "互變俱克體(震木克坤土)"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "integration",
+        "content": "爻辭: 師或輿尸, 凶 → combined with卦理",
+        "reasoning": "爻辭 says 'army transports corpses' = death. Consonant with克體 signals."
+      },
+      {
+        "type": "weighting",
+        "content": "坤為體, 互變俱克之, 無生氣",
+        "reasoning": "All signals克體, zero生 → certain death for the animal"
+      },
+      {
+        "type": "external",
+        "content": "二十一日 (from total number 21: 坎6+坤8+午7)",
+        "reasoning": "Timing from卦 construction numbers"
+      }
+    ],
+    "outcome": "二十一日內必遭屠殺。二十日果買此牛殺以犒眾。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH09",
+    "source": "梅花易數 卷一",
+    "title": "雞悲鳴占 (Chicken Sad Cry)",
+    "text_ref": "vol1.txt:225-229",
+    "domain": "animal_fate",
+    "algorithmic_inputs": {
+      "method": "後天 (animal + direction)",
+      "date": "甲申日卯時",
+      "upper_trigram": "巽 (雞 → 巽)",
+      "lower_trigram": "乾 (乾方 northwest)",
+      "hexagram": "風天小畜",
+      "moving_line": "六四",
+      "changed_hex": "乾",
+      "hu_gua": "離, 兌",
+      "ti_yong": "乾金=體, 巽木=用",
+      "wuxing_relations": [
+        "乾金克巽木(體克用)",
+        "離火克乾金(互克體)"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "integration",
+        "content": "爻辭: 有孚, 血去惕出, 無咎 → 推之割雞之義",
+        "reasoning": "血去 = blood removed → interpreted as slaughter/butchering"
+      },
+      {
+        "type": "analogy",
+        "content": "巽木離火 → 烹飪之象",
+        "reasoning": "Wood + fire in卦 = cooking imagery. The chicken will be cooked."
+      },
+      {
+        "type": "external",
+        "content": "十日 (from total number 10: 巽5+乾1+卯4)",
+        "reasoning": "Timing from卦 construction numbers"
+      }
+    ],
+    "outcome": "十日當烹。果十日客至, 有烹雞之驗。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH10",
+    "source": "梅花易數 卷一",
+    "title": "枯枝墜地占 (Dead Branch Falls)",
+    "text_ref": "vol1.txt:231-235",
+    "domain": "event_prediction",
+    "algorithmic_inputs": {
+      "method": "後天 (object + direction)",
+      "date": "戊子日辰時",
+      "upper_trigram": "離 (枯木 → 離)",
+      "lower_trigram": "兌 (兌方 west)",
+      "hexagram": "火澤睽",
+      "moving_line": "九四",
+      "changed_hex": "損",
+      "hu_gua": "坎, 離",
+      "ti_yong": "兌金=體, 離火=用",
+      "wuxing_relations": [
+        "離火克兌金(用克體)",
+        "睽損卦名皆有傷殘之義"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "integration",
+        "content": "爻辭: 睽孤, 遇元夫 + 卦理俱凶",
+        "reasoning": "Both爻辭 and五行 analysis point to damage/loss"
+      },
+      {
+        "type": "analogy",
+        "content": "睽損卦名俱有傷殘之義",
+        "reasoning": "Hexagram NAMES as semantic content: 睽(discord) + 損(diminish) = damage"
+      },
+      {
+        "type": "external",
+        "content": "十日 → 伐樹起公榭, 匠者適字元夫",
+        "reasoning": "The爻辭 character 元夫 matched the carpenter's actual name. Textual coincidence becomes prophetic."
+      }
+    ],
+    "outcome": "十日當伐。果十日伐樹起公榭, 匠者適字元夫。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH11",
+    "source": "梅花易數 卷三",
+    "title": "籠盛物占 (Basket of Objects)",
+    "text_ref": "vol3.txt:163",
+    "domain": "object_identification",
+    "algorithmic_inputs": {
+      "method": "後天 (hexagram interpretation)",
+      "hexagram": "地天泰",
+      "moving_line": "初爻",
+      "changed_hex": "升",
+      "hu_gua": "震, 兌",
+      "ti_yong": "N/A (object identification)"
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "互震兌 → 草木類生土中, 色青根黃",
+        "reasoning": "震=wood/green, 兌=yellow → green plant with yellow root"
+      },
+      {
+        "type": "integration",
+        "content": "爻辭: 拔茅茹, 以其彙 → 連根之草木, 幹根之草木",
+        "reasoning": "爻辭 about pulling up thatch by the roots directly describes the object"
+      },
+      {
+        "type": "analogy",
+        "content": "互震為青色, 兌為黃根",
+        "reasoning": "Color assignments from trigram associations"
+      }
+    ],
+    "outcome": "草木連根, 新採於土中。互震為青色, 兌為黃根。",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH12",
+    "source": "梅花易數 卷三",
+    "title": "鐘覆物占 (Object Under Bell)",
+    "text_ref": "vol3.txt:164",
+    "domain": "object_identification",
+    "algorithmic_inputs": {
+      "method": "後天 (hexagram interpretation)",
+      "hexagram": "火風鼎",
+      "changed_hex": "雷風恆",
+      "hu_gua": "乾, 兌"
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "有聲價氣勢之物 → valuable",
+        "reasoning": "鼎 = cauldron/vessel of state → object of value and authority"
+      },
+      {
+        "type": "analogy",
+        "content": "互乾兌雖圓而毀 → round but broken",
+        "reasoning": "乾=round/complete + 兌=broken/damaged → round object with damage"
+      },
+      {
+        "type": "integration",
+        "content": "爻辭: 鼎玉鉉, 大吉 → 玉 + 其色白可用",
+        "reasoning": "爻辭 mentions jade → white precious object"
+      }
+    ],
+    "outcome": "玉綬環, 果破矣。(Jade belt ring, indeed broken.)",
+    "outcome_verified": true
+  },
+  {
+    "id": "MH13",
+    "source": "梅花易數 卷三",
+    "title": "澤火革之傷股 (Revolution Hexagram - Thigh Injury)",
+    "text_ref": "vol3.txt:13-14",
+    "domain": "person_harm",
+    "algorithmic_inputs": {
+      "hexagram": "澤火革",
+      "hu_gua": "巽",
+      "changed_hex": "澤山咸",
+      "ti_yong": "兌金=體, 離火=用",
+      "wuxing_relations": [
+        "離火克兌金",
+        "巽為股, 乾金克巽"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "兌金為少女, 離火克之 → 少女受傷",
+        "reasoning": "兌=young woman, fire克金 → young woman is harmed"
+      },
+      {
+        "type": "analogy",
+        "content": "巽為股, 乾金克之 → 傷股",
+        "reasoning": "巽=thigh, metal克wood → thigh injury"
+      },
+      {
+        "type": "exception",
+        "content": "得艮土生入兌金 → 不至於死",
+        "reasoning": "變卦 provides rescue signal: 艮土生兌金 → survival"
+      }
+    ],
+    "outcome": "少女傷股, 不至於死。"
+  },
+  {
+    "id": "MH14",
+    "source": "梅花易數 卷二",
+    "title": "田姓起造占 (House Building - Tian Family)",
+    "text_ref": "vol2.txt:233",
+    "domain": "feng_shui",
+    "algorithmic_inputs": {
+      "method": "先天 + surname strokes",
+      "date": "寅年十二月初一日午時",
+      "surname_strokes": "田=6",
+      "hexagram": "水風井",
+      "changed_hex": "升",
+      "hu_gua": "離, 兌",
+      "ti_yong": "巽木=體, 坎水=用",
+      "wuxing_relations": [
+        "坎水生巽木(用生體)",
+        "兌金克巽木(互克體)",
+        "離火制兌金"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "weighting",
+        "content": "用坎水生體, 雖兌金克, 有離火制金",
+        "reasoning": "生體 dominant, 克體 neutralized by離 → overall positive but with caveats"
+      },
+      {
+        "type": "external",
+        "content": "酉年月日有損失之憂 (兌金旺時)",
+        "reasoning": "Timing of misfortune tied to when the克體 element is seasonally strong"
+      },
+      {
+        "type": "external",
+        "content": "亥子水年月日有進益 (坎水旺時)",
+        "reasoning": "Timing of fortune tied to when the生體 element is seasonally strong"
+      },
+      {
+        "type": "analogy",
+        "content": "家必多口舌之聒, 亦為兌也",
+        "reasoning": "兌 = mouth/speech → household arguments. Even when兌 isn't dominant, its象 manifests."
+      },
+      {
+        "type": "integration",
+        "content": "木體近春, 喜逢坎水 → 必能發旺",
+        "reasoning": "季節 resonance: wood體 + spring season + water生 = flourishing"
+      },
+      {
+        "type": "weighting",
+        "content": "二十九年後此屋當毀 (全卦成數). 若非有兌, 再見二十九年無恙。",
+        "reasoning": "Lifespan from total卦 number. 兌's presence halves the durability."
+      }
+    ],
+    "outcome": "此居必能發旺, 但多口舌。二十九年後此屋當毀。"
+  },
+  {
+    "id": "HZL01",
+    "source": "火珠林",
+    "title": "姤之鼎卦 葬地占 (Burial Site Divination)",
+    "text_ref": "huozhulin.md:lines11-18",
+    "domain": "feng_shui",
+    "algorithmic_inputs": {
+      "method": "六爻 (six-line with 六親)",
+      "hexagram": "姤之鼎",
+      "key_lines": "世持辛丑, 伏甲子金",
+      "six_relations": "壬申化己未火, 火克本宮為鬼"
+    },
+    "judgment_steps": [
+      {
+        "type": "analogy",
+        "content": "世下伏金 → 土中有石",
+        "reasoning": "辛丑(earth) conceals 甲子(metal) → earth containing stone"
+      },
+      {
+        "type": "analogy",
+        "content": "巽下伏乾 → 乾為大赤 → 石色大赤",
+        "reasoning": "Concealed乾 trigram → red color attribute"
+      },
+      {
+        "type": "integration",
+        "content": "壬申化己未火, 火克本宮為鬼 → 伏屍鬼",
+        "reasoning": "Transformation producing fire克 = ghost/corpse spirit"
+      },
+      {
+        "type": "analogy",
+        "content": "申化未 → 西南方",
+        "reasoning": "Branch transformation gives directional reading"
+      },
+      {
+        "type": "external",
+        "content": "距離計算: 壬申金重數4 + 丑未土5 = 40步",
+        "reasoning": "Numerical computation from stem-branch values for physical distance"
+      },
+      {
+        "type": "analogy",
+        "content": "壬申乃劍鋒金 → 刀傷之人",
+        "reasoning": "納音 five-phase (劍鋒金 = sword-edge metal) → cause of death was blade"
+      },
+      {
+        "type": "analogy",
+        "content": "壬午乃楊柳木 → 柳樹旁",
+        "reasoning": "納音 identification: 壬午 = willow wood → near willow tree"
+      }
+    ],
+    "outcome": "掘地五尺土中有石, 其色大赤, 離穴四十步西南近柳樹有伏屍, 葬出刀傷之人, 並主火災。"
+  },
+  {
+    "id": "MH15",
+    "source": "梅花易數 卷三",
+    "title": "天水訟卦求財 (Seeking Wealth)",
+    "text_ref": "vol3.txt:29",
+    "domain": "wealth",
+    "algorithmic_inputs": {
+      "hexagram": "天水訟",
+      "changed_hex": "兌",
+      "ti_yong": "乾金=體, 坎水=用",
+      "wuxing_relations": [
+        "體生用(乾金生坎水) → 泄己之氣"
+      ]
+    },
+    "judgment_steps": [
+      {
+        "type": "weighting",
+        "content": "體生用 → 泄己之氣, 其財空望",
+        "reasoning": "體 feeds用 (gold produces water) → energy drain, wealth unobtainable"
+      },
+      {
+        "type": "integration",
+        "content": "得離卦屬火能克金 + 午時客來食去酒 → 消耗",
+        "reasoning": "離 fire克體金 + temporal context = loss through hospitality expenses"
+      }
+    ],
+    "outcome": "財空望, 午時客來食去酒, 返自消耗。"
+  }
+]
