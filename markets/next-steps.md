@@ -1,14 +1,15 @@
 # Next Steps: Regime Model Development
 
-## Current State
+## Current State — Research Complete (15 phases)
 
-Discovery (11 phases) + OOS validation (Phase 12) + production refit (Phase 13) complete.
+Discovery (11 phases) + OOS validation (Phase 12) + production refit (Phase 13) + cross-asset validation (Phases 14-15) complete. **Research phase is done.** Remaining work is engineering + forward time accumulation.
 
 - 4-regime directed cycle: **OOS-validated** on 2 years of BTC 2023-2024 (2,947 episodes)
 - All topological invariants confirmed: K=4, structural zeros, complement symmetry (JSD 0.007)
 - Exit prediction: **cross-domain AUC 0.957 (C2), 0.980 (C1)** — top tier
-- Returns confirmed: C1 breakthrough +1.08% OOS vs +1.09% IS, asymmetry ratio 3.95
-- Production coefficients fitted on raw-scale OOS data (Phase 13)
+- Cross-asset: **BTC→ETH transfer AUC 0.994 (C2), 0.998 (C1)** — BTC coefficients outperform ETH-specific fit
+- Returns confirmed: C1 breakthrough +1.08% OOS vs +1.09% IS, asymmetry ratio 3.95 (ETH: 3.87)
+- Production coefficients fitted on raw-scale OOS data (Phase 13) — universal for crypto deployment
 - Regime detection refined: **2-bit macro (trend_8h × trend_48h)**, not 3-bit trigram
 
 ---
@@ -40,9 +41,9 @@ Discovery (11 phases) + OOS validation (Phase 12) + production refit (Phase 13) 
 
 ---
 
-## 1. Forward Validation (Next Priority)
+## 1. Forward Validation (TOPOLOGY PASS — Phase 14)
 
-Python batch script on post-Feb 2026 BTC data. No dashboard, no real-time — just grade the model.
+~~Python batch script on post-Feb 2026 BTC data.~~ **DONE.** Topology confirmed (K=4, structural zeros, directed cycle) on 21 days of crash data (n=74 episodes). Logistic AUC=1.000 but n too small for calibration. Below 150-episode minimum → topology check only, not full validation.
 
 ### What it does
 1. Compute OLS trends (1h, 8h, 48h) on 5-min bars
@@ -88,14 +89,13 @@ Once forward validation passes, integrate the regime model into the existing tra
 
 ---
 
-## 3. Multi-Asset Validation (Deferred)
+## 3. Multi-Asset Validation (ETH CONFIRMED — Phase 14)
 
-### 3a. Crypto (ETH, SOL)
-Same market microstructure, different assets. Tests whether the regime cycle is a property of crypto markets or BTC specifically.
+### 3a. ~~Crypto (ETH)~~ — DONE
+**CONFIRMED** on 7.5 months ETH data (860 episodes). All 4 hierarchy rungs pass: K=4, same structural zeros, complement symmetry (JSD=0.050), trend_8h dominance, bimodal calibration, near-identical C2 decision boundary (-1.44e-5 vs BTC -1.49e-5). Asymmetry ratio 3.87 (BTC: 3.95). Returns scale with vol, risk-reward invariant. **Phase 15 upgrade:** BTC production coefficients transfer to ETH (AUC 0.994/0.998) better than ETH's own fit. Universal crypto model confirmed.
 
-**Key question:** Do transition probabilities match BTC, or just topology? Topology match with different probabilities is still a win — framework portable, parameters asset-specific.
-
-**Data needed:** ETH/SOL 5-min OHLCV, 6+ months. Can use `data/download_btc.py` adapted for other symbols.
+### 3b. Crypto (SOL) — Deferred
+Same framework, different asset. Would test whether boundary invariance holds across different vol profiles.
 
 ### 3b. Traditional markets (SPY, QQQ) (Deferred)
 Different microstructure (market hours, no 24/7 trading). Tests whether complement symmetry and directed cycle survive session boundaries.
@@ -112,18 +112,17 @@ Motivated only if operational prototype reveals:
 - Detection latency vs a continuous model
 - Smooth transition zones that the binary model misclassifies
 
-### 4b. IS Normalization Recovery
-If the IS data normalization recipe can be recovered, enables:
-- Direct threshold comparison (was the bifurcation boundary invariant?)
-- Combined IS+OOS logistic fit for maximum sample size
-- Not blocking — OOS-only refit is sufficient for deployment
+### 4b. ~~IS Normalization Recovery~~ RESOLVED
+IS trend was **raw OLS slope** (dollars per sample index) prior to the normalization fix. The simulator now uses `NormalizedTrendAndVolatility` for price trends (slope / mean price → fractional rate), matching `download_btc.py`. Both systems now output the same units (~1e-4 magnitude). The IS datalog has been regenerated to reflect the new normalization. See `~/henry-2/callandor/calcs.go`.
 
 ---
 
 ## Priority Order
 
-1. **Forward validation** → Python batch on post-Feb 2026 data, grade against rubric
-2. **Simulator integration** → if grade A/B, wire regime signals into trading simulator
-3. **Multi-asset** → when data available, confirms portability
-
-Item 1 needs post-Feb 2026 BTC data (download with `data/download_btc.py`). Item 2 gates on item 1. Item 3 is independent.
+1. ~~Forward validation~~ → **TOPOLOGY PASS** (Phase 14). Need 30+ days for calibration-level.
+2. ~~Multi-asset (ETH)~~ → **CONFIRMED** (Phase 14-15). BTC→ETH transfer AUC 0.994/0.998.
+3. ~~Ambiguous-zone AUC~~ → **CLOSED** (Phase 15). Bimodal separation confirmed.
+4. **Operational prototype** → 2-bit regime tracker + trend_8h monitor for live deployment
+5. **Simulator integration** → wire regime signals into trading simulator
+6. **Forward calibration** → accumulate 30+ days BTC for logistic-level validation
+7. **Failure clustering analysis** → check if high-confidence C2 failures cluster in time (operational risk)

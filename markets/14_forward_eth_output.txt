@@ -1,0 +1,260 @@
+
+======================================================================
+  COMPUTATION 1: Downsample + Compute Raw Trends
+======================================================================
+
+Loading BTC Forward (Feb-Mar 2026) from btc_datalog_2026-02-20_2026-03-13.csv...
+  5-min bars: 6132, Price: 62670.95–73957.19
+  Time span: 2026-02-20 00:04:59+00:00 → 2026-03-13 06:55:06+00:00
+  Computing OLS trends...
+  After warmup removal: 5557 bars
+  trend_1h: mean=8.511463e-06, std=5.841334e-04, p5=-8.103833e-04, p95=8.729768e-04
+  trend_8h: mean=7.562363e-06, std=2.115978e-04, p5=-3.432877e-04, p95=3.826295e-04
+  trend_48h: mean=6.065423e-06, std=8.205312e-05, p5=-1.184784e-04, p95=1.636394e-04
+
+  SANITY GATE: trend_8h std = 2.115978e-04
+  Reference OOS std = 1.600000e-04
+  Acceptable range: [8.000000e-05, 3.200000e-04]
+  Ratio to reference: 1.3225 — PASS
+
+Loading ETH (Jul 2025–Mar 2026) from eth_datalog_2025-07-21_2026-03-03.csv...
+  5-min bars: 65088, Price: 1747.06–4950.35
+  Time span: 2025-07-21 00:04:59+00:00 → 2026-03-03 23:58:59+00:00
+  Computing OLS trends...
+  After warmup removal: 64513 bars
+  trend_1h: mean=-9.804657e-06, std=6.801345e-04, p5=-1.016221e-03, p95=9.335386e-04
+  trend_8h: mean=-9.706184e-06, std=2.412180e-04, p5=-4.215773e-04, p95=3.488507e-04
+  trend_48h: mean=-9.765607e-06, std=9.625486e-05, p5=-1.757117e-04, p95=1.512342e-04
+
+======================================================================
+  COMPUTATION 2: BTC Forward Validation
+======================================================================
+
+  Total non-truncated episodes: 74
+  NOTE: Below 150 minimum for full validation — topology check only
+
+────────────────────────────────────────────────────────────
+  BTC Forward: Topology
+────────────────────────────────────────────────────────────
+
+  Jump chain counts:
+    C0(bear)   C1(rev)  C2(pull)  C3(bull)
+  C0(bear)         0        14         0         0
+   C1(rev)        10         0         0         5
+  C2(pull)         4         0         0        18
+  C3(bull)         0         1        22         0
+
+  Jump chain probabilities:
+    C0(bear)   C1(rev)  C2(pull)  C3(bull)
+  C0(bear)    0.0000    1.0000    0.0000    0.0000
+   C1(rev)    0.6667    0.0000    0.0000    0.3333
+  C2(pull)    0.1818    0.0000    0.0000    0.8182
+  C3(bull)    0.0000    0.0435    0.9565    0.0000
+
+  Eigenvalues of 8×8 transition matrix (|λ|, descending):
+    λ1 = 1.000000
+    λ2 = 0.995995  gap=0.0040
+    λ3 = 0.978473  gap=0.0175
+    λ4 = 0.968825  gap=0.0096
+    λ5 = 0.839561  gap=0.1293
+    λ6 = 0.824837  gap=0.0147
+    λ7 = 0.810019  gap=0.0148
+    λ8 = 0.796501  gap=0.0135
+  K = 4 (largest gap after λ1: between λ4 and λ5, gap=0.1293)
+
+  Structural zeros (< 0.01):
+    C0(bear) → C2(pull): ZERO
+    C0(bear) → C3(bull): ZERO
+    C1(rev) → C2(pull): ZERO
+    C2(pull) → C1(rev): ZERO
+    C3(bull) → C0(bear): ZERO
+
+  Complement symmetry JSD:
+    (C0,C3): 0.1237
+    (C1,C2): 0.1232
+    Mean: 0.1235
+
+  Stationary distribution:
+      C0(bear): 0.2680
+       C1(rev): 0.1833
+      C2(pull): 0.2788
+      C3(bull): 0.2698
+
+  Episodes: 76 total, 74 non-truncated
+      Regime   count  mean_dur_h   med_dur_h
+    C0(bear)      14        8.94        7.54
+     C1(rev)      15        5.69        5.92
+    C2(pull)      22        5.62        5.12
+    C3(bull)      23        4.95        3.75
+
+────────────────────────────────────────────────────────────
+  BTC Forward: C2 Logistic Test (production coefficients)
+────────────────────────────────────────────────────────────
+  C2 exit episodes: 22 (bull=18, bear=4)
+  AUC (overall): 1.0000
+  Ambiguous zone: insufficient class diversity (n=11)
+  Decision boundary (t1h=0): trend_8h = -1.494550e-05
+
+────────────────────────────────────────────────────────────
+  BTC Forward: C1 Logistic Test (production coefficients)
+────────────────────────────────────────────────────────────
+  C1 exit episodes: 15 (bt=5, fail=10)
+  AUC (overall): 1.0000
+  Ambiguous zone: insufficient class diversity (n=7)
+  Decision boundary (t1h=0): trend_8h = 1.160129e-05
+
+======================================================================
+  COMPUTATION 3: ETH Structural Validation
+======================================================================
+
+────────────────────────────────────────────────────────────
+  ETH: Topology
+────────────────────────────────────────────────────────────
+
+  Jump chain counts:
+    C0(bear)   C1(rev)  C2(pull)  C3(bull)
+  C0(bear)         0       204        22         0
+   C1(rev)       179         0         1        37
+  C2(pull)        46         0         0       167
+  C3(bull)         0        13       191         0
+
+  Jump chain probabilities:
+    C0(bear)   C1(rev)  C2(pull)  C3(bull)
+  C0(bear)    0.0000    0.9027    0.0973    0.0000
+   C1(rev)    0.8249    0.0000    0.0046    0.1705
+  C2(pull)    0.2160    0.0000    0.0000    0.7840
+  C3(bull)    0.0000    0.0637    0.9363    0.0000
+
+  Eigenvalues of 8×8 transition matrix (|λ|, descending):
+    λ1 = 1.000000
+    λ2 = 0.996207  gap=0.0038
+    λ3 = 0.976042  gap=0.0202
+    λ4 = 0.972267  gap=0.0038
+    λ5 = 0.824537  gap=0.1477
+    λ6 = 0.820973  gap=0.0036
+    λ7 = 0.803563  gap=0.0174
+    λ8 = 0.800426  gap=0.0031
+  K = 4 (largest gap after λ1: between λ4 and λ5, gap=0.1477)
+
+  Structural zeros (< 0.01):
+    C0(bear) → C3(bull): ZERO
+    C1(rev) → C2(pull): 0.0046 (n=1)
+    C2(pull) → C1(rev): ZERO
+    C3(bull) → C0(bear): ZERO
+
+  Complement symmetry JSD:
+    (C0,C3): 0.0438
+    (C1,C2): 0.0565
+    Mean: 0.0502
+
+  Stationary distribution:
+      C0(bear): 0.2766
+       C1(rev): 0.2381
+      C2(pull): 0.2187
+      C3(bull): 0.2666
+
+  Episodes: 862 total, 860 non-truncated
+      Regime   count  mean_dur_h   med_dur_h
+    C0(bear)     226        6.61        5.54
+     C1(rev)     217        5.93        5.50
+    C2(pull)     213        5.47        4.83
+    C3(bull)     204        6.98        5.71
+
+────────────────────────────────────────────────────────────
+  ETH: C2 Logistic Refit (fresh fit, NOT BTC coefficients)
+────────────────────────────────────────────────────────────
+  C2 exit episodes: 213 (bull=167, bear=46)
+
+  Z-scored coefficients:
+           const:     -17.9865  (p=1.3929e-03)
+      trend_1h_z:       2.1603  (p=3.1127e-02)
+      trend_8h_z:      66.0161  (p=4.0500e-04)
+
+  Raw-scale coefficients:
+           const:       6.9062
+        trend_1h:       3274.6
+        trend_8h:     479897.9
+
+  Feature impact (|z-coef|):
+    trend_1h: 2.1603
+    trend_8h: 66.0161
+    Dominant: trend_8h (p=4.0500e-04 vs 3.1127e-02)
+
+  AUC (in-sample): 0.9923
+  Decision boundary (t1h=0): trend_8h = -1.439099e-05
+
+  Calibration:
+             Bin      n   pred_mean    actual
+  [0.0,0.1]     42      0.0020    0.0000
+  [0.1,0.3]      2      0.2232    0.0000
+  [0.3,0.5]      1      0.3321    0.0000
+  [0.5,0.7]      1      0.5869    1.0000
+  [0.7,0.9]      4      0.8607    1.0000
+  [0.9,1.0]    163      0.9945    0.9939
+  Extreme bins mass: 207/213 = 97.18% → bimodal
+
+────────────────────────────────────────────────────────────
+  ETH: C1 Logistic Refit (fresh fit)
+────────────────────────────────────────────────────────────
+  C1 exit episodes: 216 (bt=37, fail=179)
+
+  Z-scored coefficients:
+           const:       4.1828  (p=5.3638e-02)
+      trend_1h_z:       0.4963  (p=5.3905e-01)
+      trend_8h_z:      31.3446  (p=1.0004e-03)
+
+  Raw-scale coefficients:
+           const:      -6.4852
+        trend_1h:        607.6
+        trend_8h:     245163.2
+
+  Feature impact (|z-coef|):
+    trend_1h: 0.4963
+    trend_8h: 31.3446
+    Dominant: trend_8h (p=1.0004e-03 vs 5.3905e-01)
+
+  AUC (in-sample): 0.9974
+  Decision boundary (t1h=0): trend_8h = 2.645273e-05
+
+  Calibration:
+             Bin      n   pred_mean    actual
+  [0.0,0.1]    175      0.0045    0.0057
+  [0.1,0.3]      5      0.1761    0.2000
+  [0.5,0.7]      1      0.5287    0.0000
+  [0.7,0.9]      1      0.8807    1.0000
+  [0.9,1.0]     34      0.9978    1.0000
+  Extreme bins mass: 214/216 = 99.07% → bimodal
+
+────────────────────────────────────────────────────────────
+  ETH: Returns Analysis
+────────────────────────────────────────────────────────────
+  C2 → C3 (confirmed bull): n=167, mean return=0.3022%
+  C2 → C0 (failed):         n=46, mean return=-1.9429%
+
+  C1 → C3 (breakthrough):   n=37, mean return=1.6943%
+  C1 → C0 (failure):         n=179, mean return=-0.4374%
+  Asymmetry ratio: 3.87 (BTC IS: 4.36, BTC OOS: 3.95)
+
+  BTC reference: C1→C3 = +1.08–1.09%, C1→C0 = −0.25–0.27%
+
+======================================================================
+  SUMMARY COMPARISON TABLE
+======================================================================
+
+                     Metric    BTC OOS 23-24       BTC Fwd 26              ETH
+  ─────────────────────────  ───────────────  ───────────────  ───────────────
+                          K                4                4                4
+           Structural zeros                4                5                4
+             Complement JSD            0.007           0.1235           0.0502
+                   Episodes             2947               74              860
+                     C2 AUC            0.992           1.0000           0.9923
+                     C1 AUC            0.989           1.0000           0.9974
+              C2 DB (t1h=0)        -1.49e-05        -1.49e-05        -1.44e-05
+              C1 DB (t1h=0)         1.16e-05         1.16e-05         2.65e-05
+
+  Note: BTC OOS 23-24 AUCs are in-sample (production fit). BTC Fwd uses production coefficients.
+  ETH AUCs are from fresh logistic refit (in-sample). ETH decision boundaries from fresh fit.
+
+======================================================================
+  Phase 14 Complete
+======================================================================

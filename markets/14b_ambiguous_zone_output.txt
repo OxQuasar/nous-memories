@@ -1,0 +1,82 @@
+Loading ETH data...
+  5-min bars: 65088
+  Computing OLS trends...
+  After warmup: 64513 bars
+
+======================================================================
+  C2 Pullback Exit → P(bull)
+======================================================================
+
+  Total: n=213, positive=167, negative=46
+  Overall AUC (in-sample): 0.9923
+  Coefficients (z-scored): const=-17.9865, t1h=2.1603, t8h=66.0161
+  Coefficients (raw):      const=6.9062, t1h=3274.6, t8h=479897.9
+  Decision boundary (t1h=0): trend_8h = -1.439099e-05
+
+  Median |trend_8h|: 3.336476e-06
+
+  AMBIGUOUS (|t8h| < median):
+    n=106, positive=106, negative=0
+    |trend_8h| range: [1.188539e-09, 3.297727e-06]
+    AUC: N/A (single class)
+    Prediction quantiles: p5=0.9947, p25=0.9980, p50=0.9989, p75=0.9994, p95=0.9999
+
+  CLEAR (|t8h| ≥ median):
+    n=107, positive=61, negative=46
+    |trend_8h| range: [3.336476e-06, 9.421407e-04]
+    AUC: 0.9850
+    Prediction quantiles: p5=0.0000, p25=0.0000, p50=0.9628, p75=0.9959, p95=0.9993
+
+  Tertile decomposition:
+    Boundaries: |t8h| = 1.712920e-06, 6.288815e-06
+    Bottom third (most ambiguous): n=71, pos=71, neg=0, AUC=N/A (pos=71, neg=0)
+    Middle third: n=71, pos=70, neg=1, AUC=N/A (pos=70, neg=1)
+    Top third (most clear): n=71, pos=26, neg=45, AUC=1.0000
+
+======================================================================
+  C1 Reversal Exit → P(breakthrough)
+======================================================================
+
+  Total: n=216, positive=37, negative=179
+  Overall AUC (in-sample): 0.9974
+  Coefficients (z-scored): const=4.1828, t1h=0.4963, t8h=31.3446
+  Coefficients (raw):      const=-6.4852, t1h=607.6, t8h=245163.2
+  Decision boundary (t1h=0): trend_8h = 2.645273e-05
+
+  Median |trend_8h|: 3.556231e-06
+
+  AMBIGUOUS (|t8h| < median):
+    n=108, positive=0, negative=108
+    |trend_8h| range: [7.671685e-08, 3.464612e-06]
+    AUC: N/A (single class)
+    Prediction quantiles: p5=0.0013, p25=0.0016, p50=0.0019, p75=0.0024, p95=0.0038
+
+  CLEAR (|t8h| ≥ median):
+    n=108, positive=37, negative=71
+    |trend_8h| range: [3.647849e-06, 9.704127e-04]
+    AUC: 0.9935
+    Prediction quantiles: p5=0.0023, p25=0.0045, p50=0.0113, p75=1.0000, p95=1.0000
+
+  Tertile decomposition:
+    Boundaries: |t8h| = 1.704803e-06, 6.823798e-06
+    Bottom third (most ambiguous): n=72, pos=0, neg=72, AUC=N/A (pos=0, neg=72)
+    Middle third: n=72, pos=0, neg=72, AUC=N/A (pos=0, neg=72)
+    Top third (most clear): n=72, pos=37, neg=35, AUC=0.9869
+
+======================================================================
+  INTERPRETATION
+======================================================================
+
+  Three-outcome framework:
+    A) Ambiguous AUC > 0.8 with n ≥ 20 per class
+       → Model has real discriminative content beyond mechanical bit-flip
+    B) Ambiguous AUC ~ 0.5-0.6 with decent n
+       → AUC was mostly mechanical (proximity to zero crossing)
+    C) Ambiguous zone has < 10 in minority class
+       → Bimodality makes question moot (model is inherently bimodal)
+
+  The ambiguous zone tests whether trend_1h provides discriminative signal
+  when trend_8h alone is insufficient to determine the outcome (near zero).
+  If ambiguous AUC ≈ overall AUC, the model works everywhere.
+  If ambiguous AUC << overall AUC, the model is mostly reading proximity.
+

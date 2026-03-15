@@ -1,8 +1,8 @@
 # Investigation 1: Intraday Regime Transition Structure
 
-## Status: OOS-VALIDATED — March 2026 (12 phases)
+## Status: OOS-VALIDATED + CROSS-ASSET CONFIRMED — March 2026 (15 phases)
 
-**Result: Clean informative negative on (3,5). K=4, not K=5. The 4-regime cycle is a universal property of multi-timescale trend coupling. Exit prediction dominated by trend_8h (medium trend proximity to zero crossing). OOS-validated on 2 years of BTC 2023-2024 ($16.7k–$108k) — topology confirmed, cross-domain AUC 0.957 (C2), 0.980 (C1).**
+**Result: Clean informative negative on (3,5). K=4, not K=5. The 4-regime cycle is a universal property of multi-timescale trend coupling. Exit prediction dominated by trend_8h (medium trend proximity to zero crossing). OOS-validated on 2 years of BTC 2023-2024 ($16.7k–$108k) — topology confirmed, cross-domain AUC 0.957 (C2), 0.980 (C1). Cross-asset confirmed on ETH — BTC production coefficients transfer with AUC 0.994 (C2), 0.998 (C1). Research complete.**
 
 ---
 
@@ -26,7 +26,7 @@ Regime exit quality is dominated by trend_8h (medium trend) proximity to its zer
 - BTC, 1-second sampling, 18.6M rows, 214 days
 - Downsampled to 5-minute bars (61,920 rows)
 - Price range: $60,024–$125,978
-- Pre-normalized trends (std ~1)
+- Trends were raw OLS slope (dollars/sample, std ~1 at ~$100K BTC). Simulator now outputs price-normalized trends (fractional rate, ~1e-4). IS datalog needs regenerating for consistent units.
 - 796 regime episodes
 
 **Out-of-sample (OOS):** `data/btc_5m_2023-01-01_2024-12-31.csv`
@@ -268,10 +268,14 @@ The binary trigram framework was the right tool for **discovery** — finding th
 
 ## Next Steps
 
-1. **Coefficient refit** on raw-scale OOS data → production-ready model
-2. **Operational prototype** → live regime tracking + exit signal
-3. **Live forward test** → post-Feb 2026 BTC (true forward OOS)
-4. **Multi-asset** → ETH, SOL (topology portability)
+~~1. Coefficient refit on raw-scale OOS data~~ → **DONE** (Phase 13)
+~~2. Multi-asset (ETH)~~ → **CONFIRMED** (Phase 14-15, BTC→ETH transfer AUC 0.994/0.998)
+~~3. Ambiguous-zone AUC~~ → **CLOSED** (Phase 15, bimodal separation confirmed)
+4. **Forward calibration** → need 30+ days BTC for logistic-level testing (currently 21 days, 74 episodes)
+5. **Operational prototype** → live regime tracking + exit signal
+6. **Simulator integration** → wire regime signals into trading simulator
+
+**Research is complete. Remaining items are engineering + forward time accumulation.**
 
 ---
 
@@ -316,6 +320,13 @@ The binary trigram framework was the right tool for **discovery** — finding th
 | Duration scaling: 96h slow | 12.0–17.4h episodes | Phase 9 |
 | Signal bandwidth | 1:4 to 1:8 fast:medium | Phase 9 |
 | Transition time-invariance | all p > 0.05 | Phase 8 |
+| ETH regime episodes | 813 (non-truncated) | Phase 14-15 |
+| ETH price range | $1,747–$4,950 | Phase 14 |
+| BTC→ETH transfer AUC (C2) | 0.9943 | Phase 15 |
+| BTC→ETH transfer AUC (C1) | 0.9978 | Phase 15 |
+| ETH asymmetry ratio | 3.87 | Phase 14 |
+| C2 boundary (BTC / ETH) | -1.49e-5 / -1.44e-5 | Phase 14 |
+| C1 boundary (BTC / ETH) | +1.16e-5 / +2.65e-5 | Phase 14 |
 
 ---
 
@@ -335,5 +346,8 @@ The binary trigram framework was the right tool for **discovery** — finding th
 | 10 | `memories/markets/10_signal_refinement.py` | `memories/markets/10_phase10_output.txt` |
 | 11 | `memories/markets/11_logistic_exit.py` | `memories/markets/11_phase11_output.txt` |
 | 12 | `memories/markets/12_oos_validation.py` | `memories/markets/12_oos_validation_output.txt` |
+| 13 | `memories/markets/13_refit_coefficients.py` | `memories/markets/13_refit_output.txt` |
+| 14 | `memories/markets/14_forward_eth_validation.py` | `memories/markets/14_forward_eth_output.txt` |
+| 15 | `memories/markets/15_eth_validation.py` | `memories/markets/15_eth_validation_output.txt` |
 
-*Analysis completed March 2026. All computations in UTC.*
+*Analysis completed March 2026 (15 phases, research complete). All computations in UTC.*
