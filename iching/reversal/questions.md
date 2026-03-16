@@ -44,6 +44,24 @@ Now there's a coordinate system for the textual layer. The KW sequence traces a 
 
 **Why this matters:** This connects the one authored element (KW ordering) to the one non-algebraic structure (residual manifold). The algebra couldn't see the sequence's logic because it was the wrong lens. The thematic manifold might be the right one. If the KW path is coherent in thematic space, it would explain what the sequence *is* — a curated walk through the space of human situations, organized by narrative rather than algebra, but legible in the residual's coordinates.
 
+### Phase 6: Cross-Model Robustness
+
+The residual analysis (Phases 1–5) uses BGE-M3 embeddings exclusively. The qualitative findings — complement antipodality, quadruple dissociation, smooth manifold — are likely robust, but the specific geometry (20 dimensions, −0.201 mean cosine, 18 participation ratio) is instrument-dependent.
+
+**What to check:**
+
+1. **Multi-model replication:** Repeat the core measurements (complement anti-correlation, variance decomposition, quadruple dissociation nulls) across 3–5 embedding models (e.g., BGE-M3, multilingual-e5, text-embedding-3, GTE, Cohere multilingual). Which findings are model-invariant?
+
+2. **Dimensionality stability:** Does the ~20-dimensional estimate hold across models, or is it an artifact of BGE-M3's architecture? Compare effective dimensionality (PCs for 90% variance) across models.
+
+3. **Complement anti-correlation strength:** Is −0.201 stable, or does it vary? If it varies, what's the range? Is the rank ordering of pair-wise anti-correlation stable (i.e., do the same 4 exceptions appear across models)?
+
+4. **The nulls as the robust core:** The four dissociation nulls (algebra, vocabulary, 象, syntax all r ≈ 0) should be the most model-invariant finding — they measure absence of signal, which is less sensitive to embedding specifics. Confirm this.
+
+**Why this matters:** The distinction between Tier 2 (method-contingent measurements) and potential Tier 1 (model-invariant structure) is currently unmeasured. If complement antipodality and the quadruple dissociation survive across models, they upgrade from "as measured by BGE-M3" to "a property of the text itself." If the specific geometry varies, the qualitative finding (structured, complement-organized, irreducible) may still hold even as the quantitative details shift.
+
+**Epistemic status:** The current results are measurements through one instrument. The nulls (quadruple dissociation) are likely robust — four independent formalisms all returning zero is unlikely to be model-dependent. The positive geometry (18 dimensions, complement antipodality) needs cross-validation. Until then, the findings are: *as measured by BGE-M3, the residual has this structure.* That's honest but incomplete.
+
 ---
 
 ## Q2: The Axioms from Below
