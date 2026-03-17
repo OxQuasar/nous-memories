@@ -91,4 +91,3 @@ The "80/20" language comes from the judgment tradition's self-description. Empir
 - Residual-space artifacts are real — always verify direction findings on raw centroids (Phase 8e lesson)
 - The "numerically positive, structurally negative" distinction (T3) is a useful template: cardinality match ≠ structural match
 - Q2 Proper showed that enumeration at small parameters can resolve philosophical questions computationally — the |S|=6 solution was not anticipated
-- The program is open ended, do not make closure judgements on program status. 

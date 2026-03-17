@@ -3,6 +3,14 @@ Grade 16: Regime model validation on simulator datalogs.
 
 Validates: trend magnitudes, topology, episode stats, exit AUC, calibration.
 Compares jump chain to OOS reference (Phase 12, BTC 2023-2024).
+
+Discovery: simulator computes OLS trends with 30-second subsampling (960 points
+over 8h), giving slope-per-30s-index / mean_price. Research data (downloaded 5-min
+bars) used slope-per-5min-index / mean_price — a factor of 10x larger. All trend
+magnitudes in simulator data are 10x smaller than research convention.
+
+For regime detection: sign-based → scale-invariant, no impact.
+For exit scoring: production coefficients need trend_8h/trend_1h scaled by 10x.
 """
 
 import sys
@@ -16,9 +24,24 @@ FWD_FILE = '/home/quasar/nous/memories/markets/data/btc_datalog_2026-02-20_2026-
 
 SUBSAMPLE = 300  # 1s → 5min
 
-# Production logistic coefficients (Phase 13)
-C2_COEFS = (5.209, 1477.0, 348533.0)   # intercept, trend_1h, trend_8h
-C1_COEFS = (-4.890, 3138.0, 421505.0)  # intercept, trend_1h, trend_8h
+# Scale factor: simulator 30s-index convention vs research 5min-bar convention
+# simulator_trend × SCALE = research_trend
+SCALE_FACTOR = 10.0
+
+# Production logistic coefficients (Phase 13, in research/5min-bar units)
+# P = σ(b0 + b1 × trend_1h + b8 × trend_8h)
+# For simulator units: multiply feature coefficients by SCALE_FACTOR
+C2_COEFS_RESEARCH = (5.209, 1477.0, 348533.0)
+C1_COEFS_RESEARCH = (-4.890, 3138.0, 421505.0)
+
+# Adjusted for simulator units: same logit, trends are 10x smaller
+# σ(b0 + b1*t1h_research + b8*t8h_research) = σ(b0 + b1*10*t1h_sim + b8*10*t8h_sim)
+C2_COEFS_SIM = (C2_COEFS_RESEARCH[0],
+                C2_COEFS_RESEARCH[1] * SCALE_FACTOR,
+                C2_COEFS_RESEARCH[2] * SCALE_FACTOR)
+C1_COEFS_SIM = (C1_COEFS_RESEARCH[0],
+                C1_COEFS_RESEARCH[1] * SCALE_FACTOR,
+                C1_COEFS_RESEARCH[2] * SCALE_FACTOR)
 
 # OOS reference jump chain (Phase 12, BTC 2023-2024, 2947 episodes)
 REF_JUMP = np.array([
@@ -29,8 +52,6 @@ REF_JUMP = np.array([
 ])
 
 REGIME_NAMES = ['C0(bear)', 'C1(rev)', 'C2(pull)', 'C3(bull)']
-
-# Forbidden transitions (topology violations)
 FORBIDDEN = [(0, 3), (3, 0), (1, 2), (2, 1)]
 
 
@@ -40,8 +61,6 @@ def sigmoid(x):
 
 def load_subsample(path, every=SUBSAMPLE):
     """Load only needed columns, subsample to 5-min."""
-    cols = ['price', 'trend_1h', 'trend_8h', 'trend_48h']
-    # Use column indices (0-based): 2, 32, 34, 37
     df = pd.read_csv(path, usecols=[0, 2, 32, 34, 37],
                      names=['timestamp', 'price', 'trend_1h', 'trend_8h', 'trend_48h'],
                      header=0)
@@ -50,50 +69,65 @@ def load_subsample(path, every=SUBSAMPLE):
 
 
 def assign_regime(df):
-    """2-bit regime: sign(trend_8h) × sign(trend_48h)."""
+    """2-bit regime: sign(trend_8h) × sign(trend_48h). Zero treated as positive."""
     b8 = (df['trend_8h'] >= 0).astype(int)
     b48 = (df['trend_48h'] >= 0).astype(int)
     df['regime'] = b8 + 2 * b48
-    # 0=bear(both neg), 1=rev(8h+,48h-), 2=pull(8h-,48h+), 3=bull(both pos)
     return df
 
 
 def detect_episodes(df):
-    """Detect regime episodes with 1-bar debounce."""
+    """Detect regime episodes with flicker debounce.
+
+    Debounce only A→B(1-bar)→A patterns (flicker back to same regime).
+    Preserve A→B(1-bar)→C where C≠A (genuine transit through B).
+    """
     regime = df['regime'].values
     n = len(regime)
 
-    # Raw episode detection
+    # Detect raw episodes
     changes = np.where(np.diff(regime) != 0)[0] + 1
     starts = np.concatenate([[0], changes])
     ends = np.concatenate([changes, [n]])
-    durations = ends - starts
+    raw_regimes = regime[starts]
+    raw_durations = ends - starts
 
-    # Debounce: merge 1-bar episodes into previous
-    merged_starts = []
-    merged_regimes = []
-    i = 0
-    while i < len(starts):
-        s = starts[i]
-        r = regime[s]
-        # Skip forward through 1-bar episodes that follow
-        j = i + 1
-        while j < len(starts) and durations[j] == 1:
-            j += 1
-        if durations[i] == 1 and merged_regimes:
-            # This 1-bar episode gets absorbed into previous
-            i = j
-            continue
-        merged_starts.append(s)
-        merged_regimes.append(r)
-        i += 1 if durations[i] > 1 else j
+    # Flicker debounce: absorb 1-bar A→B→A back into A
+    kept_idx = list(range(len(starts)))
+    changed = True
+    while changed:
+        changed = False
+        new_kept = []
+        i = 0
+        while i < len(kept_idx):
+            idx = kept_idx[i]
+            # Check if this is a 1-bar flicker: same regime before and after
+            if (raw_durations[idx] == 1
+                    and i > 0 and i < len(kept_idx) - 1):
+                prev_r = raw_regimes[kept_idx[i - 1]]
+                next_r = raw_regimes[kept_idx[i + 1]]
+                if prev_r == next_r:
+                    # Flicker: skip this episode, merge prev and next
+                    changed = True
+                    i += 1
+                    continue
+            new_kept.append(idx)
+            i += 1
+        kept_idx = new_kept
 
-    # Rebuild episodes from merged
+    # Merge consecutive same-regime episodes (from flicker absorption)
+    merged = []
+    for idx in kept_idx:
+        r = raw_regimes[idx]
+        if merged and merged[-1][1] == r:
+            continue  # will be merged by end computation
+        merged.append((starts[idx], r))
+
+    # Build episode dataframe
     ep_data = []
-    for k in range(len(merged_starts)):
-        s = merged_starts[k]
-        e = merged_starts[k + 1] if k + 1 < len(merged_starts) else n
-        r = merged_regimes[k]
+    for k in range(len(merged)):
+        s, r = merged[k]
+        e = merged[k + 1][0] if k + 1 < len(merged) else n
         ep_data.append({
             'regime': r,
             'start': s,
@@ -107,13 +141,13 @@ def detect_episodes(df):
 
 
 def gate0_trend_divergence(df):
-    """Verify simulator trends match OLS recomputation."""
+    """Verify simulator trends match OLS recomputation (with 30s-index convention)."""
     print("=" * 70)
     print("  GATE 0: Trend Divergence Check")
     print("=" * 70)
+    print("  (Recomputing OLS on 5-min bars, dividing by 10 for 30s-index convention)")
 
-    # Skip first 8h warmup (96 bars at 5-min)
-    WARMUP = 96
+    WARMUP = 96  # 8h of 5-min bars
     valid = df.iloc[WARMUP:]
     n_samples = min(1000, len(valid))
     indices = np.linspace(0, len(valid) - 1, n_samples, dtype=int)
@@ -121,18 +155,17 @@ def gate0_trend_divergence(df):
     divergences = []
     for idx in indices:
         actual_idx = WARMUP + idx
-        if actual_idx < WARMUP:
-            continue
         window = df['price'].iloc[actual_idx - 96 + 1:actual_idx + 1].values
         if len(window) < 96:
             continue
         mean_price = window.mean()
         x = np.arange(len(window))
-        slope = np.polyfit(x, window, 1)[0]
-        recomputed = slope / mean_price
+        slope_per_bar = np.polyfit(x, window, 1)[0]
+        # Convert to simulator's 30s-index convention: ÷10
+        recomputed = slope_per_bar / SCALE_FACTOR / mean_price
         native = df['trend_8h'].iloc[actual_idx]
 
-        if abs(recomputed) > 1e-10:
+        if abs(recomputed) > 1e-12:
             div = abs(native - recomputed) / abs(recomputed)
             divergences.append(div)
 
@@ -158,7 +191,7 @@ def gate0_trend_divergence(df):
 
 
 def check_trend_magnitudes(df, label):
-    """Verify trend_8h std is ~1e-4."""
+    """Report trend magnitudes. Simulator uses 30s-index convention (~1e-5 std)."""
     print()
     print("─" * 60)
     print(f"  Trend Magnitudes ({label})")
@@ -170,10 +203,15 @@ def check_trend_magnitudes(df, label):
               f"p5={s.quantile(0.05):.2e}, p95={s.quantile(0.95):.2e}")
 
     std_8h = df['trend_8h'].std()
-    if 5e-5 < std_8h < 5e-4:
-        print(f"  → PASS (trend_8h std = {std_8h:.2e}, expected ~1e-4)")
+    # Simulator uses 30s subsampling → std ~1.5e-5 (= research ~1.5e-4 / 10)
+    research_equiv = std_8h * SCALE_FACTOR
+    print(f"\n  trend_8h std (simulator):  {std_8h:.2e}")
+    print(f"  trend_8h std (×10 = research equiv): {research_equiv:.2e}")
+
+    if 5e-5 < research_equiv < 5e-4:
+        print(f"  → PASS (research-equiv {research_equiv:.2e} ~ 1e-4)")
     else:
-        print(f"  → FAIL (trend_8h std = {std_8h:.2e}, expected ~1e-4)")
+        print(f"  → FAIL (research-equiv {research_equiv:.2e}, expected ~1e-4)")
 
 
 def check_topology(episodes, label):
@@ -184,16 +222,20 @@ def check_topology(episodes, label):
     print("─" * 60)
 
     violations = 0
+    details = []
     for i in range(len(episodes) - 1):
         src = episodes['regime'].iloc[i]
         dst = episodes['regime'].iloc[i + 1]
         if (src, dst) in FORBIDDEN:
             violations += 1
+            details.append(f"    ep {i}: {REGIME_NAMES[src]} → {REGIME_NAMES[dst]}")
 
     if violations == 0:
         print(f"  → PASS (0 violations)")
     else:
         print(f"  → FAIL ({violations} violations)")
+        for d in details[:10]:
+            print(d)
     return violations
 
 
@@ -220,7 +262,7 @@ def check_episodes(episodes, label, n_days):
             print(f"    {REGIME_NAMES[r]:>12s}: n={len(sub):>4d}, "
                   f"mean={d.mean():.2f}h, med={d.median():.2f}h, std={d.std():.2f}h")
 
-    if n_days > 100:  # IS thresholds
+    if n_days > 100:
         ep_pass = 400 <= n_ep <= 1200
         dur_pass = 3 <= mean_dur <= 12
         ok = ep_pass and dur_pass
@@ -230,12 +272,12 @@ def check_episodes(episodes, label, n_days):
         if not dur_pass:
             verdicts.append(f"mean_dur {mean_dur:.1f}h outside [3,12]")
         if ok:
-            print(f"  → PASS (n={n_ep}, mean_dur={mean_dur:.1f}h)")
+            print(f"\n  → PASS (n={n_ep}, mean_dur={mean_dur:.1f}h)")
         else:
-            print(f"  → FAIL ({'; '.join(verdicts)})")
+            print(f"\n  → FAIL ({'; '.join(verdicts)})")
         return ok
     else:
-        print(f"  (forward: no hard threshold, informational only)")
+        print(f"\n  (forward: no hard threshold, informational only)")
         return True
 
 
@@ -246,19 +288,16 @@ def check_jump_chain(episodes, label):
     print(f"  Check 3: Transition Matrix ({label})")
     print("─" * 60)
 
-    # Count matrix (exclude self-transitions by construction — episodes are contiguous same-regime)
     count = np.zeros((4, 4), dtype=int)
     for i in range(len(episodes) - 1):
         src = episodes['regime'].iloc[i]
         dst = episodes['regime'].iloc[i + 1]
         count[src, dst] += 1
 
-    # Row-normalize
     row_sums = count.sum(axis=1, keepdims=True).astype(float)
-    row_sums[row_sums == 0] = 1  # avoid div by zero
+    row_sums[row_sums == 0] = 1
     jump = count / row_sums
 
-    # Print
     print(f"\n  Count matrix:")
     print(f"    {'':>12s}  " + "  ".join(f"{REGIME_NAMES[j]:>10s}" for j in range(4)))
     for i in range(4):
@@ -269,7 +308,6 @@ def check_jump_chain(episodes, label):
     for i in range(4):
         print(f"    {REGIME_NAMES[i]:>12s}  " + "  ".join(f"{jump[i, j]:>10.4f}" for j in range(4)))
 
-    # Frobenius vs reference
     frob = np.linalg.norm(jump - REF_JUMP)
     print(f"\n  OOS reference (Phase 12, BTC 2023-2024):")
     print(f"    {'':>12s}  " + "  ".join(f"{REGIME_NAMES[j]:>10s}" for j in range(4)))
@@ -285,34 +323,39 @@ def check_jump_chain(episodes, label):
     return jump, frob < 0.1
 
 
+def get_exits(episodes, regime, target_regime):
+    """Extract exit events for a given regime → target transition."""
+    ep = episodes[episodes['regime'] == regime].copy()
+    idx = ep.index
+    next_reg = []
+    for i in idx:
+        pos = episodes.index.get_loc(i)
+        if pos + 1 < len(episodes):
+            next_reg.append(episodes['regime'].iloc[pos + 1])
+        else:
+            next_reg.append(np.nan)
+    ep = ep.copy()
+    ep['next_regime'] = next_reg
+    ep = ep.dropna(subset=['next_regime'])
+    ep['next_regime'] = ep['next_regime'].astype(int)
+    exits = ep[ep['next_regime'].isin([0, target_regime])].copy()
+    return exits
+
+
 def check_exit_auc(episodes, label):
-    """Exit AUC for C2 and C1 using production logistic coefficients."""
+    """Exit AUC using production logistic (adjusted to simulator units)."""
     print()
     print("─" * 60)
     print(f"  Check 4: Exit AUC ({label})")
     print("─" * 60)
+    print(f"  (Coefficients scaled ×{SCALE_FACTOR:.0f} for simulator 30s-index units)")
 
     results = {}
     for regime, coefs, target_regime, model_label in [
-        (2, C2_COEFS, 3, "C2 Pullback → P(bull)"),
-        (1, C1_COEFS, 3, "C1 Reversal → P(breakthrough)"),
+        (2, C2_COEFS_SIM, 3, "C2 Pullback → P(bull)"),
+        (1, C1_COEFS_SIM, 3, "C1 Reversal → P(breakthrough)"),
     ]:
-        ep = episodes[episodes['regime'] == regime].copy()
-        # Need next regime
-        idx = ep.index
-        next_reg = []
-        for i in idx:
-            pos = episodes.index.get_loc(i)
-            if pos + 1 < len(episodes):
-                next_reg.append(episodes['regime'].iloc[pos + 1])
-            else:
-                next_reg.append(np.nan)
-        ep['next_regime'] = next_reg
-        ep = ep.dropna(subset=['next_regime'])
-        ep['next_regime'] = ep['next_regime'].astype(int)
-
-        # Filter to exits that go to C0 or C3
-        exits = ep[ep['next_regime'].isin([0, 3])].copy()
+        exits = get_exits(episodes, regime, target_regime)
         if len(exits) < 5:
             print(f"\n  {model_label}: too few exits ({len(exits)}), skipping")
             results[regime] = (np.nan, len(exits))
@@ -320,22 +363,23 @@ def check_exit_auc(episodes, label):
 
         y = (exits['next_regime'] == target_regime).astype(int)
         b0, b1, b8 = coefs
-        logit = b0 + b1 * exits['trend_1h_last'] + b8 * exits['trend_8h_last']
+        logit = b0 + b1 * exits['trend_1h_last'].values + b8 * exits['trend_8h_last'].values
         pred = sigmoid(logit)
 
         auc = roc_auc_score(y, pred) if y.nunique() > 1 else float('nan')
 
         print(f"\n  {model_label}:")
         print(f"    Exits: {len(exits)} (positive={y.sum()}, negative={len(exits)-y.sum()})")
-        print(f"    AUC: {auc:.4f}" if not np.isnan(auc) else "    AUC: N/A (single class)")
-
         if not np.isnan(auc):
+            print(f"    AUC: {auc:.4f}")
             if auc > 0.90:
                 print(f"    → PASS (AUC {auc:.4f} > 0.90)")
             elif auc > 0.85:
                 print(f"    → WARN (AUC {auc:.4f} in [0.85, 0.90])")
             else:
                 print(f"    → FAIL (AUC {auc:.4f} < 0.85)")
+        else:
+            print(f"    AUC: N/A (single class)")
 
         results[regime] = (auc, len(exits))
 
@@ -343,7 +387,7 @@ def check_exit_auc(episodes, label):
 
 
 def check_calibration(episodes, label):
-    """Calibration check for exit predictions."""
+    """Calibration of exit predictions (simulator-unit coefficients)."""
     print()
     print("─" * 60)
     print(f"  Check 5: Calibration ({label})")
@@ -352,23 +396,10 @@ def check_calibration(episodes, label):
     bins = [(0, 0.10), (0.10, 0.50), (0.50, 0.90), (0.90, 1.01)]
 
     for regime, coefs, target_regime, model_label in [
-        (2, C2_COEFS, 3, "C2 Pullback → P(bull)"),
-        (1, C1_COEFS, 3, "C1 Reversal → P(bt)"),
+        (2, C2_COEFS_SIM, 3, "C2 Pullback → P(bull)"),
+        (1, C1_COEFS_SIM, 3, "C1 Reversal → P(bt)"),
     ]:
-        ep = episodes[episodes['regime'] == regime].copy()
-        idx = ep.index
-        next_reg = []
-        for i in idx:
-            pos = episodes.index.get_loc(i)
-            if pos + 1 < len(episodes):
-                next_reg.append(episodes['regime'].iloc[pos + 1])
-            else:
-                next_reg.append(np.nan)
-        ep['next_regime'] = next_reg
-        ep = ep.dropna(subset=['next_regime'])
-        ep['next_regime'] = ep['next_regime'].astype(int)
-        exits = ep[ep['next_regime'].isin([0, 3])].copy()
-
+        exits = get_exits(episodes, regime, target_regime)
         if len(exits) < 5:
             print(f"\n  {model_label}: too few exits, skipping")
             continue
@@ -379,7 +410,7 @@ def check_calibration(episodes, label):
         pred = sigmoid(logit)
 
         print(f"\n  {model_label} ({len(exits)} exits):")
-        print(f"    {'Bin':>14s}  {'n':>5s}  {'pred_mean':>9s}  {'actual':>8s}  {'gap':>6s}")
+        print(f"    {'Bin':>14s}  {'n':>5s}  {'pred_mean':>9s}  {'actual':>8s}  {'gap':>8s}")
 
         extreme_n = 0
         total_n = 0
@@ -392,7 +423,7 @@ def check_calibration(episodes, label):
                 pm = pred[mask].mean()
                 act = y[mask].mean()
                 gap = act - pm
-                is_extreme = (lo < 0.10 + 1e-9) or (lo >= 0.90 - 1e-9)
+                is_extreme = (lo < 0.101) or (lo >= 0.899)
                 if is_extreme:
                     extreme_n += n
                 marker = ""
@@ -401,18 +432,18 @@ def check_calibration(episodes, label):
                     cal_ok = False
                 elif is_extreme and abs(gap) > 0.10:
                     marker = " ← WARN"
-                print(f"    [{lo:.2f},{hi:.2f})  {n:>5d}  {pm:>9.4f}  {act:>8.4f}  {gap:>+6.2%}{marker}")
+                print(f"    [{lo:.2f},{hi:.2f})  {n:>5d}  {pm:>9.4f}  {act:>8.4f}  {gap:>+8.4f}{marker}")
             else:
                 print(f"    [{lo:.2f},{hi:.2f})  {0:>5d}      -         -       -")
 
         extreme_pct = extreme_n / total_n if total_n > 0 else 0
         print(f"\n    Bimodal: {extreme_pct:.1%} in extreme bins (<0.10 or >0.90)")
         if extreme_pct > 0.90:
-            print(f"    → PASS (>{90}%)")
+            print(f"    → PASS (bimodal {extreme_pct:.1%} > 90%)")
         elif extreme_pct > 0.85:
-            print(f"    → WARN ({extreme_pct:.1%})")
+            print(f"    → WARN (bimodal {extreme_pct:.1%})")
         else:
-            print(f"    → FAIL ({extreme_pct:.1%} < 85%)")
+            print(f"    → FAIL (bimodal {extreme_pct:.1%} < 85%)")
 
 
 def grade_dataset(path, label, n_days):
@@ -467,13 +498,20 @@ def grade_dataset(path, label, n_days):
 
 
 def main():
+    print("=" * 70)
+    print("  SCALE FACTOR DISCOVERY")
+    print("=" * 70)
+    print(f"  Simulator OLS: 30-second subsampling (960 pts over 8h)")
+    print(f"  Research OLS:  5-minute bars (96 pts over 8h)")
+    print(f"  Scale factor:  ×{SCALE_FACTOR:.0f} (simulator × 10 = research units)")
+    print(f"  Impact: regime detection (sign-based) unaffected.")
+    print(f"          exit coefficients rescaled: b_sim = b_research × {SCALE_FACTOR:.0f}")
+
     all_verdicts = {}
 
-    # IS dataset
     is_verdicts = grade_dataset(IS_FILE, "BTC IS (Jul 2025 – Feb 2026)", n_days=214)
     all_verdicts['IS'] = is_verdicts
 
-    # Forward dataset
     fwd_verdicts = grade_dataset(FWD_FILE, "BTC Forward (Feb 20 – Mar 13, 2026)", n_days=21)
     all_verdicts['Forward'] = fwd_verdicts
 
@@ -489,7 +527,7 @@ def main():
         for check, passed in verdicts.items():
             status = "PASS" if passed else "FAIL"
             print(f"    {check:>15s}: {status}")
-            if not passed and dataset == 'IS':  # Only IS failures count for overall
+            if not passed and dataset == 'IS':
                 overall = False
 
     print(f"\n  Overall: {'PASS' if overall else 'FAIL'}")

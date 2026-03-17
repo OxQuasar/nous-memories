@@ -13,8 +13,6 @@
 
 ## Program Status: (180 results, 19 iterations)
 
-- The program is open ended, do not make closure judgements on program status. 
-
 
 ### Characterization
 

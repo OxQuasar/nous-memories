@@ -1,8 +1,67 @@
 # Next Steps: Regime Model Development
 
-## Current State — Research Complete (15 phases)
+## Current State — v3.0 Baselined, Boundary Study Cycle 1 Complete
 
-4-regime directed cycle validated across BTC (IS + 2yr OOS + 21-day forward crash) and ETH (7.5 months). BTC production coefficients transfer cross-asset (AUC 0.994/0.998 on ETH). Research phase is done. Remaining work is engineering + forward time accumulation.
+4-regime directed cycle validated across BTC and ETH. Strategy v3.0 (long-only, +4.18% over 16 weeks) establishes baseline. Edge is thin (2:1 edge-to-fee) and concentrated in XC1 exits. First boundary study cycle complete: →C2 outcome fully characterized, real signal found but not actionable at current fees.
+
+### The Loop
+
+```
+Study boundaries → Refine model/strategy → Backtest → Find weaknesses → Repeat
+```
+
+Each cycle produces: one analysis, one insight (or confirmed negative), and either a strategy change or a documented reason not to change.
+
+---
+
+## Next Cycle: →C3 Entry Quality Study
+
+### Question
+Can we time entries better within confirmed C3 (bull)? Improve gross/trade without adding trades.
+
+### Why this is next
+- Targets per-trade quality, not trade count (avoids the fee trap discovered in cycle 1)
+- C3 entry quality doesn't create extra trades — it modifies existing entry timing
+- 189 C3 episodes available in IS data
+- The boundary study design (boundary-study.md) already scopes this as priority #2
+
+### Approach
+Same framework as →C2 study: snapshot indicators at C3 entry, split by outcome metric (trade PnL, duration, exit type), rank by AUC. But the outcome variable is different — not binary (C3 doesn't have a simple success/fail), so needs duration or PnL-based outcome definition.
+
+### Open questions before execution
+- What's the right outcome variable? Episode duration? Price change during episode? Next exit type (XC1 vs XC0)?
+- Should we condition on entry context (which regime preceded C3)?
+- Which indicator groups? Same initial set (trends, vol, CVD) or expand to microstructure/order flow?
+
+---
+
+## Ideas Backlog
+
+### Strategy Refinements
+- ~~**C2 early exit:** Filter bad pullbacks using intermediate trends~~ → DONE (Cycle 1: real signal, not actionable at current fees)
+- **C3 entry timing:** Microstructure signals for better entry within confirmed bull ← NEXT
+- **Position sizing:** Scale by transition quality (trend magnitude, vol level, order flow confirmation)
+- **C0 shorts (isolated):** Separate execution from long logic, 6h+ duration filter, context-gated
+- **C1 breakthrough entry redesign:** Fix the value trap (full size or nothing, not 0.5/1.0 split)
+- **Duration filter:** Sub-6h episodes are noise — filter or weight by expected duration
+
+### Model Extensions
+- **Multi-indicator regime:** Replace 2-bit sign with richer state using vol/order flow
+- **Transition probability refinement:** Condition base rates on indicator context (not all C2s are equal — we now know trend_24h differentiates them, even if not actionable)
+- **Temporal patterns:** Do certain hours/sessions have different transition probabilities?
+- **Failure clustering:** Do bad C2 outcomes cluster in time? (risk management)
+
+### Validation
+- **Full IS backtest:** Run current strategy on full Jul 2025 – Feb 2026 for 45+ trades and statistical confidence
+- **Additional assets:** PENGU (different vol profile), traditional markets (different microstructure)
+- **Forward reconciliation:** 2.17% gap between FuturesPM and TradeCapture on forward data
+
+### Shelved (Real Signal, Not Actionable)
+- **trend_24h at C2 entry:** AUC 0.765 for C2 outcome, independent of both trend_8h (r=0.036) and trend_48h (r=0.460). Operational split: 85.4% vs 44.4% success rate by sign. But C2 price moves (0.2-0.6%) ≈ fee cost (0.36% RT), so exit filter EV is -6.45%. Becomes actionable if fees decrease or a non-fee-generating use emerges.
+
+---
+
+## Reference
 
 ### Production Model
 
@@ -10,95 +69,79 @@
 
 | Macro | trend_8h | trend_48h | Regime |
 |-------|----------|-----------|--------|
-| 0 | − | − | Bear |
-| 1 | + | − | Reversal |
-| 2 | − | + | Pullback |
-| 3 | + | + | Bull |
+| 0 | − | − | C0 Bear |
+| 1 | + | − | C1 Reversal |
+| 2 | − | + | C2 Pullback |
+| 3 | + | + | C3 Bull |
 
-**Trend computation:** OLS slope of rolling window of period duration, divided by mean price → fractional rate per bar (~1e-5 magnitude). Simulator uses `NormalizedTrendAndVolatility` in `~/henry/callandor/calcs.go`.
+**Scale factor:** Simulator trends are 10× smaller than research convention (DS30 vs 5-min bars).
 
-**Exit scoring (Phase 13, fit on BTC OOS 2023-2024):**
+**Exit scoring (simulator units):**
 ```
-C2 Pullback: P(bull) = σ(5.209 + 1477 × trend_1h + 348533 × trend_8h)
-C1 Reversal: P(bt)   = σ(−4.890 + 3138 × trend_1h + 421505 × trend_8h)
+C2: P(bull) = σ(5.209 + 14770 × trend_1h + 3485330 × trend_8h)
+C1: P(bt)   = σ(−4.890 + 31380 × trend_1h + 4215050 × trend_8h)
 ```
-Decision boundaries: C2 at trend_8h ≈ −0.000015, C1 at trend_8h ≈ +0.000012.
 
----
+### v3.0 Baseline
 
-## TODO
+| Metric | Value |
+|--------|-------|
+| Total PnL | +4.18% (16 weeks) |
+| Trades | 23 |
+| Win rate | 43% |
+| Gross/trade | +0.36% |
+| Edge-to-fee | 2:1 |
+| XC1 exits | +38.16% (10 trades, 70% WR) |
+| XC0 exits | -33.98% (13 trades, 23% WR) |
 
-### 1. Production Scoring
+Strategy: long 1.0 in C3, hold through C2, flat in C0/C1. 8% stop (insurance). 5-min debounce.
 
-The model labels regimes and scores exits — it does not generate trading signals. Three metrics track whether it's working on live data:
-
-**Metric 1: Topology violations (count)**
-Count forbidden transitions: C0→C3, C3→C0, C1→C2, C2→C1. Expected: 0. Multiple violations in a short window = topology breaking.
-
-**Metric 2: Exit AUC (rolling)**
-At every C2 and C1 exit, record (trend_1h, trend_8h, P(favorable), actual outcome). Compute rolling AUC over trailing 100 exits.
-
-| AUC | Status |
-|-----|--------|
-| > 0.90 | Working |
-| 0.85–0.90 | Monitor |
-| 0.80–0.85 | Investigate |
-| < 0.80 | Stop using exit scores |
-
-**Metric 3: Calibration (binned)**
-Bin predictions: <0.10, 0.10–0.50, 0.50–0.90, >0.90. Model is bimodal — >95% should fall in extreme bins, actuals within ±10pp of predicted.
-
-**When to refit:** AUC < 0.85 on rolling 100, or calibration drifts >15pp in extreme bins. Refit on most recent 6 months. Topology (2-bit) should never need changing.
-
-### 2. Simulator Integration
-
-Wire regime labels and exit scores into the trading simulator. The simulator handles per-second data ingestion — the regime model feeds it regime state and exit scores at transitions (~5 per day).
-
-### 3. Forward Calibration
-
-Accumulate 30+ days of live data for calibration-level validation (150+ episodes, ~40 C2 and C1 exits each). Phase 14 confirmed topology on 21 days (n=74) but that's below minimum for exit score validation.
-
-### 4. Additional Assets (Deferred)
-
-**PENGU:** Tests boundary invariance across different vol profiles. C2 boundary was near-invariant BTC↔ETH (3% difference) but both have similar fractional vol.
-
-**Traditional markets (SPY, QQQ):** Different microstructure (market hours, gaps). Topology likely holds. Complement symmetry may weaken (volatility asymmetry). Time-invariance will likely break (session effects).
-
-### 5. Failure Clustering (Deferred)
-
-Do high-confidence C2 failures (1-3% at P>0.9) cluster in time? Operational risk characterization for position sizing.
-
-### 6. HMM (Contingent)
-
-Only if operational use reveals systematic boundary flickering at trend_8h ≈ 0 or trend_48h ≈ 0 that degrades regime labeling.
+### Key Constraints
+- **Fee floor:** 0.18% RT → >0.36% gross/trade minimum
+- **Interaction effects dominate:** v3.1 and v3.2 both degraded core signal through indirect mechanisms
+- **Sub-6h episodes are noise** for trading
+- **The regime model labels states, not timing.** Entry/exit timing is the improvement axis.
+- **C2 episode price moves ≈ fee cost.** Any filter that adds round-trips during C2 is structurally negative EV.
 
 ---
 
 ## DONE
 
-### OOS Validation (Phase 12) — TOP TIER PASS
-K=4 (gap=0.151), identical structural zeros, complement symmetry (JSD=0.007), cross-domain AUC 0.957 (C2) / 0.980 (C1). 2,947 episodes on BTC 2023-2024.
+### Boundary Study Cycle 1: →C2 Outcome (Scripts 17, 17b, 17c)
 
-### Coefficient Refit (Phase 13)
-Production coefficients in price-normalized units. Fit on BTC OOS 2023-2024.
+**Finding:** trend_24h carries strong, independent information about C2 pullback outcomes.
+- AUC 0.765 (p=3e-6 after Bonferroni), Cohen's d=0.815
+- Independent of trend_8h (r=0.036) AND trend_48h (r=0.460)
+- Split-half stable (0.77/0.76)
+- Forward-consistent (93.8% vs 70.0%, n=26)
+- Signal is primarily binary (sign), with continuous tail in positive group (within-AUC 0.680)
 
-### C1 Thin-n (Phase 12)
-155 breakthroughs in OOS (was 43 IS). Return +1.08% confirmed. Asymmetry ratio 3.95.
+**Null results (high confidence):**
+- Volatility (OLS + realized, all timescales): AUC 0.50-0.54, no signal
+- Volume/CVD (cvd_slope_5m, cvd_div_15m, vwap_divergence): AUC 0.50-0.56, no signal
+- Trend-of-trends (tot_4h/8h/24h): structurally zero during C2 regime
 
-### Binary vs Continuous (Phase 11)
-Binary S5/S4 signal environment-dependent (gap collapsed 42.6pp → 14.1pp OOS). Continuous trend_8h model stable. Binary deprecated.
+**Operationalization: NOT ACTIONABLE at current fees.**
+- C2 exit filter (trend_24h ≤ 0): EV = -6.45%. C2 price moves (avg 0.2-0.6%) ≈ fee cost (0.36% RT).
+- Stack depth filter (depth < 2): EV = -11.61%. Wider net, worse economics.
+- The filter correctly identifies losers but the economics don't support extra round-trips.
 
-### 3-bit vs 2-bit Regime Detection (Phase 13)
-trend_1h flips every ~55 minutes on raw data, creating noisy micro-episodes. Macro regime is trend_8h × trend_48h (2-bit). trend_1h enters only as logistic predictor at exit.
+**Mechanistic insight:** trend_24h measures how far the negative signal has propagated up the timescale hierarchy. When only trend_8h is negative (trend_24h still positive), the pullback is shallow and the bull structure is intact. When trend_24h is also negative, the deeper structure is eroding. This is the coupled-oscillator mechanism: intermediate trends measure structural depth of pullback.
 
-### Forward Topology (Phase 14) — PASS
-K=4, structural zeros, directed cycle confirmed on 21-day BTC crash (n=74). Below minimum for exit score validation.
+Scripts: `17_c2_boundary_study.py`, `17b_c2_followup.py`, `17c_c2_filter_ev.py`
+Output: `17_c2_boundary_output.txt`, `17b_c2_followup_output.txt`, `17c_c2_filter_ev_output.txt`
 
-### ETH Cross-Asset (Phases 14-15) — CONFIRMED
-860 episodes. All 4 hierarchy rungs pass. BTC→ETH coefficient transfer AUC 0.994 (C2) / 0.998 (C1) — outperforms ETH's own fit. Asymmetry ratio 3.87. C2 boundary near-invariant (−1.44e-5 vs −1.49e-5). C1 boundary asset-specific (2.3× different, use as binary go/no-go only).
+### Strategy Development (Phase 17) — v3.0 BASELINED
 
-### Ambiguous Zone (Phase 15) — CLOSED
-3-4 episodes in [0.2, 0.8] range on both assets. Bimodal separation confirmed. AUC is mechanical state-reading of clean bifurcation.
+| Version | Change | Result | Trades | Lesson |
+|---------|--------|--------|--------|--------|
+| v2.1 | 3% stop | -5.59% | 29 | Stop fires during indicator lag |
+| v3.0 | 8% stop + cooldown | **+4.18%** | 23 | Zero stop-outs, regime exits only |
+| v3.1 | +C0 shorts (flip) | +1.85% | 92 | Longs degraded, fees killed it |
+| v3.2 | +C1 breakthrough | -13.38% | 97 | Value trap, splits C3 capture |
 
-### IS Normalization (Phase 13 + simulator fix)
-Simulator now uses `NormalizedTrendAndVolatility` for price trends (slope / mean price → fractional rate), matching `download_btc.py`. IS datalog regenerated with consistent units.
+### Simulator Validation (Phase 16) — PASS
+Zero topology violations. Exit AUC 0.992/0.964 (IS), 1.000/0.983 (forward). 10× scale factor discovered and handled.
+
+### Research Phases 1-15 — COMPLETE
+K=4 topology, complement symmetry, exit prediction, OOS validation, ETH cross-asset transfer. See `findings.md`, `investigation-1.md`, `exploration-log.md`.

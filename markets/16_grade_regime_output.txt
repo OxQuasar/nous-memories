@@ -1,0 +1,257 @@
+======================================================================
+  SCALE FACTOR DISCOVERY
+======================================================================
+  Simulator OLS: 30-second subsampling (960 pts over 8h)
+  Research OLS:  5-minute bars (96 pts over 8h)
+  Scale factor:  ×10 (simulator × 10 = research units)
+  Impact: regime detection (sign-based) unaffected.
+          exit coefficients rescaled: b_sim = b_research × 10
+
+======================================================================
+  GRADING: BTC IS (Jul 2025 – Feb 2026)
+  File: /home/quasar/nous/memories/markets/data/btc_datalog_2025-07-21_2026-02-20.csv
+======================================================================
+  Loaded: 61920 bars (5-min), price 60034–126001
+
+────────────────────────────────────────────────────────────
+  Trend Magnitudes (BTC IS (Jul 2025 – Feb 2026))
+────────────────────────────────────────────────────────────
+      trend_1h: mean=-2.94e-07, std=1.43e-05, p5=-2.10e-05, p95=1.90e-05
+      trend_8h: mean=-8.99e-07, std=1.52e-05, p5=-2.60e-05, p95=2.10e-05
+     trend_48h: mean=-9.12e-06, std=5.89e-05, p5=-1.06e-04, p95=7.60e-05
+
+  trend_8h std (simulator):  1.52e-05
+  trend_8h std (×10 = research equiv): 1.52e-04
+  → PASS (research-equiv 1.52e-04 ~ 1e-4)
+======================================================================
+  GATE 0: Trend Divergence Check
+======================================================================
+  (Recomputing OLS on 5-min bars, dividing by 10 for 30s-index convention)
+  Samples: 997
+  Median divergence: 4.2265%
+  P95 divergence:    100.0000%
+  Max divergence:    2815.2286%
+  → PASS (median 4.2265% < 5%)
+
+  Episodes detected: 779
+
+────────────────────────────────────────────────────────────
+  Check 1: Topology Violations (BTC IS (Jul 2025 – Feb 2026))
+────────────────────────────────────────────────────────────
+  → PASS (0 violations)
+
+────────────────────────────────────────────────────────────
+  Check 2: Episode Statistics (BTC IS (Jul 2025 – Feb 2026), ~214 days)
+────────────────────────────────────────────────────────────
+  Total episodes: 779
+  Mean duration:  6.62h
+  Median duration: 5.92h
+
+        C0(bear): n= 201, mean=6.85h, med=5.75h, std=4.88h
+         C1(rev): n= 204, mean=6.61h, med=6.12h, std=4.78h
+        C2(pull): n= 185, mean=5.95h, med=5.42h, std=4.12h
+        C3(bull): n= 189, mean=7.07h, med=6.08h, std=5.39h
+
+  → PASS (n=779, mean_dur=6.6h)
+
+────────────────────────────────────────────────────────────
+  Check 3: Transition Matrix (BTC IS (Jul 2025 – Feb 2026))
+────────────────────────────────────────────────────────────
+
+  Count matrix:
+                    C0(bear)     C1(rev)    C2(pull)    C3(bull)
+        C0(bear)           0         190          11           0
+         C1(rev)         158           0           0          46
+        C2(pull)          42           0           0         143
+        C3(bull)           0          14         174           0
+
+  Jump chain (row-normalized):
+                    C0(bear)     C1(rev)    C2(pull)    C3(bull)
+        C0(bear)      0.0000      0.9453      0.0547      0.0000
+         C1(rev)      0.7745      0.0000      0.0000      0.2255
+        C2(pull)      0.2270      0.0000      0.0000      0.7730
+        C3(bull)      0.0000      0.0745      0.9255      0.0000
+
+  OOS reference (Phase 12, BTC 2023-2024):
+                    C0(bear)     C1(rev)    C2(pull)    C3(bull)
+        C0(bear)      0.0000      0.9336      0.0635      0.0029
+         C1(rev)      0.7798      0.0000      0.0000      0.2202
+        C2(pull)      0.1875      0.0000      0.0000      0.8125
+        C3(bull)      0.0000      0.0743      0.9257      0.0000
+
+  Frobenius distance vs reference: 0.0583
+  → PASS (Frobenius 0.0583 < 0.1)
+
+────────────────────────────────────────────────────────────
+  Check 4: Exit AUC (BTC IS (Jul 2025 – Feb 2026))
+────────────────────────────────────────────────────────────
+  (Coefficients scaled ×10 for simulator 30s-index units)
+
+  C2 Pullback → P(bull):
+    Exits: 185 (positive=143, negative=42)
+    AUC: 0.9923
+    → PASS (AUC 0.9923 > 0.90)
+
+  C1 Reversal → P(breakthrough):
+    Exits: 204 (positive=46, negative=158)
+    AUC: 0.9635
+    → PASS (AUC 0.9635 > 0.90)
+
+────────────────────────────────────────────────────────────
+  Check 5: Calibration (BTC IS (Jul 2025 – Feb 2026))
+────────────────────────────────────────────────────────────
+
+  C2 Pullback → P(bull) (185 exits):
+               Bin      n  pred_mean    actual       gap
+    [0.00,0.10)     38     0.0006    0.0000   -0.0006
+    [0.10,0.50)      7     0.1680    0.5714   +0.4034 ← FAIL
+    [0.50,0.90)    138     0.8564    0.9928   +0.1363
+    [0.90,1.01)      2     0.9120    1.0000   +0.0880
+
+    Bimodal: 25.4% in extreme bins (<0.10 or >0.90)
+    → FAIL (bimodal 25.4% < 85%)
+
+  C1 Reversal → P(bt) (204 exits):
+               Bin      n  pred_mean    actual       gap
+    [0.00,0.10)    158     0.0074    0.0380   +0.0306
+    [0.10,0.50)      9     0.2744    0.3333   +0.0589
+    [0.50,0.90)      0      -         -       -
+    [0.90,1.01)     37     0.9975    1.0000   +0.0025
+
+    Bimodal: 100.0% in extreme bins (<0.10 or >0.90)
+    → PASS (bimodal 100.0% > 90%)
+
+======================================================================
+  GRADING: BTC Forward (Feb 20 – Mar 13, 2026)
+  File: /home/quasar/nous/memories/markets/data/btc_datalog_2026-02-20_2026-03-13.csv
+======================================================================
+  Loaded: 6336 bars (5-min), price 62677–73946
+
+────────────────────────────────────────────────────────────
+  Trend Magnitudes (BTC Forward (Feb 20 – Mar 13, 2026))
+────────────────────────────────────────────────────────────
+      trend_1h: mean=3.07e-07, std=1.87e-05, p5=-2.60e-05, p95=2.80e-05
+      trend_8h: mean=9.98e-07, std=2.04e-05, p5=-3.30e-05, p95=3.50e-05
+     trend_48h: mean=9.10e-06, std=7.77e-05, p5=-1.16e-04, p95=1.58e-04
+
+  trend_8h std (simulator):  2.04e-05
+  trend_8h std (×10 = research equiv): 2.04e-04
+  → PASS (research-equiv 2.04e-04 ~ 1e-4)
+======================================================================
+  GATE 0: Trend Divergence Check
+======================================================================
+  (Recomputing OLS on 5-min bars, dividing by 10 for 30s-index convention)
+  Samples: 988
+  Median divergence: 2.8259%
+  P95 divergence:    52.8087%
+  Max divergence:    462.2551%
+  → PASS (median 2.8259% < 5%)
+
+  Episodes detected: 85
+
+────────────────────────────────────────────────────────────
+  Check 1: Topology Violations (BTC Forward (Feb 20 – Mar 13, 2026))
+────────────────────────────────────────────────────────────
+  → PASS (0 violations)
+
+────────────────────────────────────────────────────────────
+  Check 2: Episode Statistics (BTC Forward (Feb 20 – Mar 13, 2026), ~21 days)
+────────────────────────────────────────────────────────────
+  Total episodes: 85
+  Mean duration:  6.21h
+  Median duration: 6.08h
+
+        C0(bear): n=  14, mean=8.34h, med=7.42h, std=5.83h
+         C1(rev): n=  16, mean=6.36h, med=6.21h, std=4.65h
+        C2(pull): n=  27, mean=5.40h, med=5.83h, std=3.58h
+        C3(bull): n=  28, mean=5.84h, med=4.67h, std=4.50h
+
+  (forward: no hard threshold, informational only)
+
+────────────────────────────────────────────────────────────
+  Check 3: Transition Matrix (BTC Forward (Feb 20 – Mar 13, 2026))
+────────────────────────────────────────────────────────────
+
+  Count matrix:
+                    C0(bear)     C1(rev)    C2(pull)    C3(bull)
+        C0(bear)           0          14           0           0
+         C1(rev)          10           0           0           6
+        C2(pull)           4           0           0          22
+        C3(bull)           0           1          27           0
+
+  Jump chain (row-normalized):
+                    C0(bear)     C1(rev)    C2(pull)    C3(bull)
+        C0(bear)      0.0000      1.0000      0.0000      0.0000
+         C1(rev)      0.6250      0.0000      0.0000      0.3750
+        C2(pull)      0.1538      0.0000      0.0000      0.8462
+        C3(bull)      0.0000      0.0357      0.9643      0.0000
+
+  OOS reference (Phase 12, BTC 2023-2024):
+                    C0(bear)     C1(rev)    C2(pull)    C3(bull)
+        C0(bear)      0.0000      0.9336      0.0635      0.0029
+         C1(rev)      0.7798      0.0000      0.0000      0.2202
+        C2(pull)      0.1875      0.0000      0.0000      0.8125
+        C3(bull)      0.0000      0.0743      0.9257      0.0000
+
+  Frobenius distance vs reference: 0.2482
+  → FAIL (Frobenius 0.2482 >= 0.1)
+
+────────────────────────────────────────────────────────────
+  Check 4: Exit AUC (BTC Forward (Feb 20 – Mar 13, 2026))
+────────────────────────────────────────────────────────────
+  (Coefficients scaled ×10 for simulator 30s-index units)
+
+  C2 Pullback → P(bull):
+    Exits: 26 (positive=22, negative=4)
+    AUC: 1.0000
+    → PASS (AUC 1.0000 > 0.90)
+
+  C1 Reversal → P(breakthrough):
+    Exits: 16 (positive=6, negative=10)
+    AUC: 0.9833
+    → PASS (AUC 0.9833 > 0.90)
+
+────────────────────────────────────────────────────────────
+  Check 5: Calibration (BTC Forward (Feb 20 – Mar 13, 2026))
+────────────────────────────────────────────────────────────
+
+  C2 Pullback → P(bull) (26 exits):
+               Bin      n  pred_mean    actual       gap
+    [0.00,0.10)      4     0.0009    0.0000   -0.0009
+    [0.10,0.50)      0      -         -       -
+    [0.50,0.90)     17     0.8658    1.0000   +0.1342
+    [0.90,1.01)      5     0.9146    1.0000   +0.0854
+
+    Bimodal: 34.6% in extreme bins (<0.10 or >0.90)
+    → FAIL (bimodal 34.6% < 85%)
+
+  C1 Reversal → P(bt) (16 exits):
+               Bin      n  pred_mean    actual       gap
+    [0.00,0.10)      9     0.0062    0.0000   -0.0062
+    [0.10,0.50)      2     0.3411    0.5000   +0.1589 ← FAIL
+    [0.50,0.90)      0      -         -       -
+    [0.90,1.01)      5     1.0000    1.0000   +0.0000
+
+    Bimodal: 100.0% in extreme bins (<0.10 or >0.90)
+    → PASS (bimodal 100.0% > 90%)
+
+======================================================================
+  FINAL SUMMARY
+======================================================================
+
+  IS:
+              gate0: PASS
+           topology: PASS
+           episodes: PASS
+         jump_chain: PASS
+           exit_auc: PASS
+
+  Forward:
+              gate0: PASS
+           topology: PASS
+           episodes: PASS
+         jump_chain: FAIL
+           exit_auc: PASS
+
+  Overall: PASS
+======================================================================

@@ -42,6 +42,30 @@ An investigation of the I Ching's algebraic structure, producing 77 results acro
 - `work/` — computation scripts and proof documents
 - `work/proof_nuclear_rank.md` — formal proof of rank(M^k) = max(2, 2n−2k)
 
+### `reversal/`
+**The inward turn.** 87 results (R94–R180) across 19 iterations, reversing the program's direction: from analyzing the object to inhabiting it. Four investigations, all closed.
+
+**Q1 — The Residual (R112–R170):** The 89% of text that algebra can't see is a smooth ~16-dimensional thematic manifold, cross-model validated (BGE-M3, E5-large, LaBSE). No clusters. The complement involution is the sole organizing principle — an antipodal map where each pair opposes along its own unique axis. Quadruple dissociation: algebra, vocabulary, 象 categories, and syntactic frames all return null against embedding geometry. The residual is sub-syntactic and non-decomposable. Near-neighbor differentiation and holistic composition produce a V-shaped Hamming spectrum. All algebraic groupings (Fano lines, 五行, basins, trigram decomposition) null against opposition direction.
+
+**Q2 — The Axioms (R73–R111, R171–R175):** The forcing chain has exactly one gap: composability (the group axiom). Without it, a bare 6-element set suffices. With it, F₂³ and (3,5) are forced. The gap is irreducible. Cross-culturally: binary converges (≥3 traditions), five-fold partially converges (China/India), dual-cycle surjection is unique to China.
+
+**Q3 — The Judgment Boundary (R140–R150):** Five judgment operations (analogy 40%, integration 19%, external 19%, weighting 17.5%, exception 5%), invariant across 梅花 and 火珠林. Three-phase sequence: read → assess → anchor. The system explicitly formalizes its own specification gap.
+
+**Resonance Test 3 (R176–R180):** {4,2,2,2,2} appears in climate data but structural predictions fail (0/83 cities). The structure is mathematical, not physical. T1+/T2−/T3−.
+
+- `findings.md` — complete findings (87 results, all tiers)
+- `exploration-log.md` — 19 iterations
+- `questions.md` — open/closed question tracker
+- `resonance-tests.md` — resonance test specifications
+- `Q1/` — residual analysis (8 phases, cached embeddings, scripts)
+- `Q2/` — axiom forcing chain (enumeration, proofs)
+- `Q2T2/` — cross-cultural convergence (Ifá counterfactual, branching landscape)
+- `Q3/` — judgment boundary (worked examples, 象 space analysis)
+- `T3/` — climate cycle test
+
+### `usage.md`
+**The system as judgment instrument.** Synthesis of the reversal findings into a functional account: the I Ching as an instrument for judgment under uncertainty, not a model of physics. Covers the interface architecture (calendar → assessment vocabulary → judgment), the {4,2,2,2,2} cascade as interface property, the algorithm-judgment boundary, the five practitioner operations, and the three-layer summary (algebra constrains, interface translates, text provides terrain, practitioner navigates).
+
 ---
 
 ## Operational Atlases
@@ -123,16 +147,18 @@ An investigation of the I Ching's algebraic structure, producing 77 results acro
 
 ---
 
-## I Ching Texts
-Original I Ching texts and commentary found in: 
-memories/texts
+## Source Texts
+
+Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for full listing.
+
+---
 
 ## Navigation
 
 | Question | Go to |
 |----------|-------|
 | What is the central result? | `unification/synthesis-3.md` |
-| Full results inventory (R1–R72) | `deep/open-questions.md` |
+| Full results inventory (R1–R180) | `deep/open-questions.md` (R1–R72), `reversal/findings.md` (R94–R180) |
 | Master summary | `i-summary/summary.md` |
 | How was it derived? | `deep/exploration-log.md` |
 | What do the texts say? | `semantic-map/findings.md` |
@@ -142,4 +168,9 @@ memories/texts
 | What about the KW ordering? | `kw-final/findings.md` |
 | The {2,3,5} prime architecture | `deep/number-structure.md` |
 | Nuclear rank proof | `i-summary/work/proof_nuclear_rank.md` |
-| What's still open? | `i-summary/summary.md` § Open questions |
+| What's in the 89% residual? | `reversal/findings.md` § Q1 |
+| What are the axioms? | `reversal/findings.md` § Q2 |
+| How does judgment work? | `reversal/findings.md` § Q3 |
+| What is the system *for*? | `usage.md` |
+| Cross-cultural comparison | `reversal/findings.md` § Q2 Test 2 |
+| Source texts directory | `../texts/directory.md` |
