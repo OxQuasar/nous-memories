@@ -7,10 +7,14 @@
 ### The Loop
 
 ```
-Study boundaries → Refine model/strategy → Backtest → Find weaknesses → Repeat
+1. Study boundaries (analysis)
+2. Refine model and strategy
+3. Backtest strategy
+4. Find weaknesses
+5. Back to 1
 ```
 
-Each cycle produces: one analysis, one insight (or confirmed negative), and either a strategy change or a documented reason not to change.
+This is the main work. Keep looping and refining. Each cycle produces: one analysis, one insight (or confirmed negative), and either a strategy change or a documented reason not to change.
 
 ---
 
