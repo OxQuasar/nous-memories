@@ -1,5 +1,7 @@
 # Fibonacci Structure in the I Ching
 
+**Investigative stance:** When two independent processes produce the same output, there are three possibilities: shared mechanism, coincidence, or structural constraint. "No shared mechanism" does not establish coincidence — it only rules out the first category. Do not close questions by demonstrating that mechanisms differ. Investigate why outputs agree.
+
 ## The Observation
 
 The I Ching's core structural parameters are four consecutive Fibonacci numbers:
@@ -44,87 +46,68 @@ The Fibonacci alignment holds at n=3 and breaks on either side, except for 13 = 
 
 ## Open Questions
 
-### Q1: Is the Fibonacci alignment structural or arithmetic coincidence?
+### Q4: F(9)=34, F(10)=55 — Do They Appear?
 
-Each parameter is independently derived:
-- 2 is axiomatic
-- 5 is forced by the dual-cycle requirement
-- 3 is forced by the dimensional relationship between 2 and 5
-- 8 = 2³ follows from 2 and 3
+Do 34 or 55 appear in any structural count of the I Ching system?
 
-These happen to be consecutive Fibonacci numbers. The relationships between them (dimensional forcing, E=1 condition, convergence identity) mirror the Fibonacci recurrence F(n+1) = F(n) + F(n−1). Is this because the forcing chain *is* a Fibonacci recurrence in disguise? Or because small numbers that satisfy multiplicative/exponential relationships tend to overlap with Fibonacci?
+**What to check:**
+- Subgroup counts, coset counts, path counts on the hexagram cube
+- Orbit decomposition sizes (互, 變, palace walks)
+- Transition counts (filtered by type, by position, by basin)
+- Incidence counts at hexagram level (F₂⁶): lines, planes, subcubes
+- Any count arising from the atlas data (atlas.json, transitions.json)
 
-**What to investigate:**
-- Express the forcing chain algebraically. Does it reduce to or contain the Fibonacci recurrence?
-- The dimensional forcing condition can be written: the smallest prime p ≥ 2^{n−1}+1 with two independent cycles. Does the Bertrand-postulate-like relationship between 2^{n−1} and the next suitable prime produce Fibonacci numbers systematically, or only at n=3?
-- The identity 2^{n−1}+1 = 2ⁿ−3 rearranges to 2^{n−1} = 4, giving n=3. Is there a Fibonacci-theoretic reason why 2^{F(4)−1}+1 = F(5)?
+This is a finite, inexpensive computation. Do not dismiss without running it.
 
-### Q2: Does the Fibonacci recurrence appear in the dynamics?
+### Q6: Why Do the Fibonacci Sequence and the Forcing Chain Agree?
 
-The 互 nuclear extraction is a linear map with rank drop 2 per iteration (R71). The 克 subgraph carries φ in its eigenvalues (R198). φ governs the Fibonacci recurrence.
+The previous investigation tested: "is the forcing chain's mechanism the Fibonacci recurrence?" Answer: no. The operations differ (exponentiation/primality vs addition). This was labeled "arithmetic coincidence."
 
-**What to investigate:**
-- The nuclear shear lifted to Q(ζ₅): do the eigenvalues produce Fibonacci-related convergence rates?
-- The basin attractor has 4 elements. The rank sequence is 6, 4, 2, 2, ... Does any Fibonacci pattern appear in the orbit structure of iterated 互?
-- The 克 P₄ paths have eigenvalues {φ, 1/φ, −1/φ, −φ}. A signal propagating along these paths decays with ratio 1/φ per step. Is this decay rate visible in how 五行 assignments change under iterated transformation?
+But "coincidence" only means the two processes aren't identical. It doesn't explain *why* they produce the same numbers at n=3. The overlap is specifically at the unique rigid point — the same point where three mathematical descriptions converge, the orbit formula equals 1, Routes A and B both produce φ. Now also where Fibonacci and the forcing chain agree.
 
-### Q3: Why does 13 sit at the boundary?
+**The deeper question:** The Fibonacci sequence is the simplest non-trivial linear recurrence. The forcing chain is the simplest non-trivial path through the axioms of change. Both are "first non-trivial" sequences in their respective domains. Do first non-trivial sequences generically overlap at small values because the landscape of small structurally interesting numbers is sparse?
 
-13 = F(7) is the next E=1 prime after 5 = F(5). At (3,5): 1 orbit. At (4,13): 960 orbits. The Fibonacci window closes.
+This is a weaker claim than "the forcing chain is Fibonacci" but stronger than "random coincidence." It would mean: the I Ching's parameters are Fibonacci not because of a hidden recurrence, but because the I Ching occupies the *smallest non-trivial point* in its parameter space, and the Fibonacci numbers occupy the *smallest non-trivial points* in theirs, and there aren't enough small structurally interesting numbers for them to differ.
 
-**What to investigate:**
-- The orbit count at (4,13) is 960 = 2⁶ × 3 × 5. This contains F(5) = 5 as a factor. Coincidence?
-- The Hamming syndrome structure at (4,13) splits 960 = 4 × 240 (R69). 240 = 2⁴ × 3 × 5. Does the factorization of orbit counts across the E=1 family carry Fibonacci factors systematically?
-- 13 is both F(7) and a prime where φ vanishes from Route B (R207). Is there a Fibonacci-theoretic reason why the golden ratio's combinatorial route closes at the next Fibonacci prime?
-
-### Q4: F(9)=34, F(10)=55 — gaps or hidden?
-
-The Fibonacci alignment has apparent gaps:
-
-| F(n) | Value | I Ching role |
-|------|-------|-------------|
-| F(9) | 34 | ? |
-| F(10) | 55 | ? |
-| F(11) | 89 | Residual % (possibly coincidental) |
-
-**What to investigate:**
-- 34 and 55 — do they appear anywhere in the hexagram structure? Subgroup counts, path counts, orbit decompositions, transition counts?
-- 89 as F(11): the 89% residual comes from a variance decomposition (R157). Is 11% (algebraic) related to any Fibonacci number or ratio? 11/89 ≈ 0.124. φ−1 = 1/φ ≈ 0.618. 1/φ² ≈ 0.382. Not an obvious match.
-- The algebraic R² is 10.8–11.0% (multilingual) and 13.2% (domain-matched, R212). 13.2% ≈ 13/100. 13 = F(7). Is the domain-matched R² converging on a Fibonacci ratio?
-
-### Q5: The φ-克 connection and Fibonacci growth
-
-In natural systems, Fibonacci numbers appear through growth processes governed by φ. The I Ching carries φ in the 克 (destruction) cycle — not the 生 (generation) cycle.
-
-**What to investigate:**
-- In Fibonacci growth (phyllotaxis, branching), the ratio governs *generation* — each new element is the sum of two predecessors. In the I Ching, φ governs *destruction* — the cycle that constrains and limits. Is there a mathematical relationship between these two roles of φ? Does φ in a generation process and φ in a destruction process produce dual dynamics?
-- The 生 cycle gets 4 cube edges (P₃, no φ). The 克 cycle gets 6 edges (P₄, φ). If the roles were reversed (φ in 生), would the structural consequences differ?
-- The 48/48 mirror (R204): 48 surjections have φ in 克, 48 in 生. The I Ching's surjection chose 克. In the mirror surjections where φ is in 生, does the system behave like a "growth" system rather than a "constraint" system?
-
-### Q6: Self-Referential Change as the Common Substrate
-
-The previous investigation tested whether nature shows five-phase *classification* structure (T3). It doesn't — climate data is sinusoidal, not pentadic. But φ doesn't enter the I Ching through the classification. It enters through the *dynamics* — the 克 eigenstructure, the Fibonacci parameters, the self-referential growth rule.
-
-The connection between the I Ching, φ, and natural systems may be at the level of *process*, not *classification*:
-
-- Natural growth (phyllotaxis, branching, shells): the next element is built from the current and previous elements. φ emerges as the eigenvalue.
-- The I Ching: the next situation is the current situation with one polarity flipped, evaluated through its relationship to what preceded it. φ is in the 克 eigenstructure.
-- Both: self-referential sequential change where each state feeds on its predecessors.
+**Note:** The previous investigation tested "is A identical to B?" and got no. It did not test "do A and B occupy the same region for a structural reason?" That's the actual question. Do not close this by showing the mechanisms differ — that is already known (R215). Investigate *why the outputs agree despite different mechanisms*.
 
 **What to investigate:**
 
-**The eigenvalue bridge.** The 克 P₄ paths have eigenvalues {φ, 1/φ, −1/φ, −φ}. The Fibonacci growth matrix [[1,1],[1,0]] has eigenvalues {φ, −1/φ}. These overlap. Is the 克 subgraph a doubled Fibonacci matrix? If so, the I Ching's destruction cycle and natural growth processes share the same spectral structure — not analogously, but mathematically.
+**Sparsity of small structural numbers.** How many small numbers (say 2–20) are "structurally interesting" — primes, prime powers, Fibonacci, Catalan, binomial coefficients, etc.? If the density is high enough, overlap is expected. If it's low, overlap at four consecutive values is surprising. Quantify the probability that a forcing chain landing on 4 consecutive structurally-determined small numbers would hit a Fibonacci run by chance.
 
-**The recurrence in the forcing chain.** 2+3=5, 3+5=8, 5+8=13. The forcing chain produces these through independent theorems (dual cycles, dimensional forcing, exponentiation). But the output satisfies the Fibonacci recurrence. Does the logic of "the next structural requirement is determined by the conjunction of the previous two" mirror "the next Fibonacci number is the sum of the previous two"? Is the forcing chain a Fibonacci process in disguise?
+**The dependency graph question.** The forcing chain has a two-lookback structure (each parameter depends on the previous two). The Fibonacci recurrence has the same dependency shape. Is "same dependency shape, different operations" structurally meaningful or trivially common? Survey other mathematical forcing chains for their lookback structure.
 
-**The complement involution and φ.** φ satisfies x = 1 + 1/x — self-referential, x defined in terms of itself. The complement involution is also self-referential — the opposite is defined by the original. The complement is the deepest layer of the I Ching (nine-level characterization). φ is the fixed point of the simplest self-referential operation. Are these the same self-reference? Does the complement involution, formalized as f(x⊕1) = −f(x), contain or imply the equation x = 1 + 1/x when expressed in the right basis?
+**The φ-克 spectral identity.** R217 proved spec(P₄) ⊃ spec(Fibonacci matrix). This is a mathematical fact: the destruction cycle on the I Ching's cube has the Fibonacci matrix's eigenvalues embedded in its spectrum. What are the consequences? Does the shared spectrum mean signals propagating on the 克 subgraph decay at Fibonacci rates? Does it connect to how 克 relations attenuate across transformation chains?
 
-**Reframing T3.** The question is not "does nature have five elements" but "do the I Ching and natural systems share the same deep structure — self-referential sequential change — with φ as its signature?" The classification (Z₅) is surface. The eigenstructure (φ) is depth. Test the depth, not the surface.
+**The eigenvalue bridge to natural systems.** Natural growth (phyllotaxis, branching) is governed by the Fibonacci matrix eigenvalue φ. The 克 cycle carries the same eigenvalue. The connection may not be through the Fibonacci numbers themselves (R215 closed that) but through the shared eigenstructure. What class of dynamical systems have φ as a dominant eigenvalue? Does the 克 subgraph belong to that class alongside Fibonacci growth processes?
+
+**The complement involution and x = 1 + 1/x.** φ satisfies x = 1 + 1/x — self-referential, x defined in terms of itself. The complement involution f(x⊕1) = −f(x) is also self-referential. Does the complement equivariance, expressed in the right basis, contain or imply the golden ratio equation?
+
+---
+
+## Done
+
+### Q1: Is the Fibonacci alignment structural or arithmetic coincidence? — CLOSED (R215)
+
+Arithmetic coincidence. Scan of n=2..30 confirms triple Fibonacci hit at n=3 only, single hit at n=4, zero hits for n≥5. The forcing chain's mechanism is exponential/primality, not additive self-reference. The "two-lookback" appearance (each parameter derived from conjunction of previous two) is because n serves dual roles (dimension and exponent), not because the derivation contains F(n+1) = F(n) + F(n-1).
+
+### Q2: Does the Fibonacci recurrence appear in the dynamics? — CLOSED (R216)
+
+No. The nuclear (互) orbit structure is entirely F₂-linear: rank 4 kernel, uniform branching (4 preimages per image node), basin sizes 16:16:32 forced by complement symmetry. No Fibonacci counts in orbit lengths, transient lengths, branching ratios, or basin sizes.
+
+### Q3: Why does 13 sit at the boundary? — CLOSED (R218)
+
+Group-theoretic, not Fibonacci. 960 = 2⁶ × 3 × 5. The factor 5 traces to |GL(4,F₂)| = 20160, not to Fibonacci structure.
+
+### Q5: The φ-克 connection and Fibonacci growth — CLOSED (R217)
+
+spec(P₄) ⊃ spec(Fibonacci matrix) via bipartite doubling — both involve 2cos(kπ/5). Proven mathematical fact, labeled reformulation of R198 by the investigation.
 
 ---
 
 ## References
 
+- `fibo/findings.md` — R215–R237
 - `iching/eastwest/findings.md` — Route A/B, cyclotomic structure (R181–R214)
 - `iching/unification/synthesis-3.md` — uniqueness theorem, orbit formula
 - `iching/deep/number-structure.md` — the {2,3,5} prime architecture
