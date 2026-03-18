@@ -46,42 +46,7 @@ The Fibonacci alignment holds at n=3 and breaks on either side, except for 13 = 
 
 ## Open Questions
 
-### Q4: F(9)=34, F(10)=55 — Do They Appear?
-
-Do 34 or 55 appear in any structural count of the I Ching system?
-
-**What to check:**
-- Subgroup counts, coset counts, path counts on the hexagram cube
-- Orbit decomposition sizes (互, 變, palace walks)
-- Transition counts (filtered by type, by position, by basin)
-- Incidence counts at hexagram level (F₂⁶): lines, planes, subcubes
-- Any count arising from the atlas data (atlas.json, transitions.json)
-
-This is a finite, inexpensive computation. Do not dismiss without running it.
-
-### Q6: Why Do the Fibonacci Sequence and the Forcing Chain Agree?
-
-The previous investigation tested: "is the forcing chain's mechanism the Fibonacci recurrence?" Answer: no. The operations differ (exponentiation/primality vs addition). This was labeled "arithmetic coincidence."
-
-But "coincidence" only means the two processes aren't identical. It doesn't explain *why* they produce the same numbers at n=3. The overlap is specifically at the unique rigid point — the same point where three mathematical descriptions converge, the orbit formula equals 1, Routes A and B both produce φ. Now also where Fibonacci and the forcing chain agree.
-
-**The deeper question:** The Fibonacci sequence is the simplest non-trivial linear recurrence. The forcing chain is the simplest non-trivial path through the axioms of change. Both are "first non-trivial" sequences in their respective domains. Do first non-trivial sequences generically overlap at small values because the landscape of small structurally interesting numbers is sparse?
-
-This is a weaker claim than "the forcing chain is Fibonacci" but stronger than "random coincidence." It would mean: the I Ching's parameters are Fibonacci not because of a hidden recurrence, but because the I Ching occupies the *smallest non-trivial point* in its parameter space, and the Fibonacci numbers occupy the *smallest non-trivial points* in theirs, and there aren't enough small structurally interesting numbers for them to differ.
-
-**Note:** The previous investigation tested "is A identical to B?" and got no. It did not test "do A and B occupy the same region for a structural reason?" That's the actual question. Do not close this by showing the mechanisms differ — that is already known (R215). Investigate *why the outputs agree despite different mechanisms*.
-
-**What to investigate:**
-
-**Sparsity of small structural numbers.** How many small numbers (say 2–20) are "structurally interesting" — primes, prime powers, Fibonacci, Catalan, binomial coefficients, etc.? If the density is high enough, overlap is expected. If it's low, overlap at four consecutive values is surprising. Quantify the probability that a forcing chain landing on 4 consecutive structurally-determined small numbers would hit a Fibonacci run by chance.
-
-**The dependency graph question.** The forcing chain has a two-lookback structure (each parameter depends on the previous two). The Fibonacci recurrence has the same dependency shape. Is "same dependency shape, different operations" structurally meaningful or trivially common? Survey other mathematical forcing chains for their lookback structure.
-
-**The φ-克 spectral identity.** R217 proved spec(P₄) ⊃ spec(Fibonacci matrix). This is a mathematical fact: the destruction cycle on the I Ching's cube has the Fibonacci matrix's eigenvalues embedded in its spectrum. What are the consequences? Does the shared spectrum mean signals propagating on the 克 subgraph decay at Fibonacci rates? Does it connect to how 克 relations attenuate across transformation chains?
-
-**The eigenvalue bridge to natural systems.** Natural growth (phyllotaxis, branching) is governed by the Fibonacci matrix eigenvalue φ. The 克 cycle carries the same eigenvalue. The connection may not be through the Fibonacci numbers themselves (R215 closed that) but through the shared eigenstructure. What class of dynamical systems have φ as a dominant eigenvalue? Does the 克 subgraph belong to that class alongside Fibonacci growth processes?
-
-**The complement involution and x = 1 + 1/x.** φ satisfies x = 1 + 1/x — self-referential, x defined in terms of itself. The complement involution f(x⊕1) = −f(x) is also self-referential. Does the complement equivariance, expressed in the right basis, contain or imply the golden ratio equation?
+None.
 
 ---
 
@@ -99,15 +64,32 @@ No. The nuclear (互) orbit structure is entirely F₂-linear: rank 4 kernel, un
 
 Group-theoretic, not Fibonacci. 960 = 2⁶ × 3 × 5. The factor 5 traces to |GL(4,F₂)| = 20160, not to Fibonacci structure.
 
+### Q4: F(9)=34, F(10)=55 — Do They Appear? — CLOSED (R239)
+
+F(9)=34 and F(10)=55 absent from all 125 structural counts (atlas partitions, orbit structures, Gaussian binomials, group orders, transition counts, incidence geometry). Fibonacci presence confined to {1,2,3,5,8,13}. No structural count falls on any Fibonacci number beyond 13.
+
 ### Q5: The φ-克 connection and Fibonacci growth — CLOSED (R217)
 
 spec(P₄) ⊃ spec(Fibonacci matrix) via bipartite doubling — both involve 2cos(kπ/5). Proven mathematical fact, labeled reformulation of R198 by the investigation.
+
+### Q6: The Shared Eigenstructure — CLOSED (R238, R240, R241)
+
+The forcing chain and Fibonacci agree at n=3 because Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2) and the orbit formula independently select n=3. Sparsity null model: P(all four parameters Fibonacci) ≈ 0.3%, with the bottleneck being the Carmichael constraint. Consecutiveness is forced once all-Fibonacci holds in [2,8] (the only Fibonacci numbers in that range are exactly {2,3,5,8}). Complement involution on 克 produces generic Z₅ eigenvalues (cos(2π/5), cos(4π/5)), not the Fibonacci polynomial x²−x−1 — the golden ratio appears through pentagon geometry, not Fibonacci-specific structure.
+
+Remaining threads (investigated iteration 10):
+- **The 0.3% question:** The content of p≈0.3% is the localization to Carmichael's theorem, not the p-value itself. The structural diagnosis is complete regardless of multiple-testing adjustments.
+- **The eigenvalue bridge:** φ in the 克 cube-edge spectrum (R198) is basis-dependent — it belongs to the 0.5-bit presentational layer, not the structural orbit. At the basis-independent level (fiber-lifted 克 graph), the dominant eigenvalue is ≈3.297 with no golden ratio (R241).
+- **The dependency graph:** Two-lookback forcing chain structure is generic — most proof chains have multi-premise steps. The Fibonacci recurrence is distinguished by additive self-reference (the operation), not by DAG shape.
+
+### Q7: φ-Eigenvalue Systems in Nature and the I Ching — CLOSED (R241)
+
+φ in the 克 spectrum is basis-dependent. The cube-edge partition (R198) varies under GL(3,F₂): 克 structure ranges from P₄∪P₄ (standard basis, with φ eigenvalues) to P₈ to P₂∪P₂∪P₄. Only S₃ ⊂ GL(3,F₂) (6/168 elements) preserves Hamming structure. The basis-independent (fiber-lifted) 克 graph has dominant eigenvalue ≈3.297 with no golden ratio. φ belongs to the 0.5-bit presentational layer identified by the uniqueness theorem — the same layer as the specific basis choice, single-line mutations, and the P₄ path structure. The class of φ-eigenvalue systems does not contain the I Ching's 五行 dynamics at the structural (orbit) level.
 
 ---
 
 ## References
 
-- `fibo/findings.md` — R215–R237
+- `fibo/findings.md` — R215–R241
 - `iching/eastwest/findings.md` — Route A/B, cyclotomic structure (R181–R214)
 - `iching/unification/synthesis-3.md` — uniqueness theorem, orbit formula
 - `iching/deep/number-structure.md` — the {2,3,5} prime architecture

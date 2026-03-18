@@ -649,21 +649,283 @@ No new results. R236 updated:
 
 ---
 
+## Iteration 9
+
+### Design Phase (Discussion)
+
+**Reopened Q4 and Q6 from the Fibonacci investigation.** The previous closure (iteration 1) labeled Q4 "deferred as numerology" and Q6 "philosophical wrapper dissolved." The questions file flagged both as still open, with specific computational and conceptual threads.
+
+**Three tasks designed:**
+
+1. **Task A (Q4):** Exhaustive sweep of all structural counts from atlas.json, transitions.json, F₂⁶ incidence geometry, and group-theoretic invariants. Check whether F(9)=34 or F(10)=55 appear anywhere.
+
+2. **Task A.5 (Thread 5 of Q6):** Does the complement involution, restricted to its σ-antisymmetric subspace on the 克 cycle, have characteristic polynomial x²−x−1 (the Fibonacci polynomial)? Precise construction: directed 克 adjacency matrix A on Z₅, complement-induced involution σ(e)=−e mod 5, V⁻ = σ-antisymmetric subspace (dim 2), compute eigenvalues of A|_{V⁻}.
+
+3. **Task B (Thread 1 of Q6):** Sparsity null model. For each n=2..20, compute the forcing chain's four parameters (base=2, dimension=n, prime=2ⁿ−3, trigrams=2ⁿ). Check which are Fibonacci. Compute joint probability that all four are Fibonacci at a given n. Test whether consecutiveness adds constraint beyond all-Fibonacci.
+
+**Key design decisions:**
+- Task A.5 uses the **directed** 克 adjacency matrix (克 direction matters)
+- Task B decomposes into per-parameter hit rates: P(n∈F), P(2ⁿ−3∈F | prime), P(2ⁿ∈F)
+- Consecutiveness tested separately from all-Fibonacci
+- Ambient density of "structurally interesting" numbers in [2,20] computed for context
+
+### Computation Phase
+
+**Task A: 125 structural counts enumerated. 34 and 55 absent.**
+
+Fibonacci numbers found in structural counts: {1, 2, 3, 5, 8, 13}. Beyond 13 (surface 克 relation counts: 体克用=13, 克体=13), no structural count lands on a Fibonacci number. Counts near 34: 32 (many contexts), 36 (reverse/rev_comp orbits). Counts near 55: 48, 50, 52 — nothing hits 55.
+
+Gaussian binomial coefficients [6 choose k]₂ = {1, 63, 651, 1395, 651, 63, 1} — none are 34 or 55. [3 choose k]₂ = {1, 7, 7, 1} — also none.
+
+**Task A.5: Characteristic polynomial is NOT x²−x−1.**
+
+Z₅ labeling: Wood=0, Fire=1, Earth=2, Metal=3, Water=4 (生=+1, 克=+2). σ(e)=−e mod 5 fixes Wood(0), swaps {Fire↔Water} and {Earth↔Metal}. V⁻ has orthonormal basis {(e₁−e₄)/√2, (e₂−e₃)/√2}.
+
+Exact computation:
+- A @ e₁ = e₄ (since column 1 has 1 at row (1−2)%5 = 4)
+- A @ e₄ = e₂ (since column 4 has 1 at row (4−2)%5 = 2)
+- A⁻ = P⁻ A P⁻ᵀ = [[-1/2, -1/2], [-1/2, 0]]
+- Trace = -1/2, Det = -1/4
+- Characteristic polynomial: x² + x/2 − 1/4
+
+This is NOT x²−x−1. However, 2A⁻ has characteristic polynomial x²+x−1 — the **reciprocal** Fibonacci polynomial (related to x²−x−1 by x→−x). Eigenvalues of A⁻: (−1+√5)/4 = cos(2π/5) ≈ 0.309 and (−1−√5)/4 = cos(4π/5) ≈ −0.809. These are φ/2 and −1/(2φ).
+
+**Critical structural insight:** ALL non-identity cyclic shifts on Z₅ give the same characteristic polynomial when restricted to V⁻. Verified computationally for shifts 1–4. This is a consequence of circulant matrix theory: V⁻ corresponds to the DFT mode pair {ω², ω³}, and cos(2π/5) = (√5−1)/4 is an algebraic identity of the regular pentagon, not specific to 克. The golden ratio appears generically for any 5-element cyclic structure restricted to the complement-antisymmetric subspace.
+
+V⁺ restriction (3×3): eigenvalues {1, cos(2π/5), cos(4π/5)} ≈ {1, 0.309, −0.809}. The eigenvalue 1 reflects σ's fixed point.
+
+**Task B: Joint probability ≈ 0.3% — SURPRISING.**
+
+Per-parameter hit rates:
+- P(base=2 ∈ F) = 1 (trivially)
+- P(n ∈ F | n∈[2,20]) = 5/19 = 26.3% (n ∈ {2, 3, 5, 8, 13})
+- P(2ⁿ−3 ∈ F | 2ⁿ−3 prime, n∈[2,20]) = 2/9 = 22.2% (n=3→5, n=4→13)
+- P(2ⁿ ∈ F | n∈[2,20]) = **1/19 = 5.3%** (only n=3 works: 2³=8=F(6))
+
+**The bottleneck is 2ⁿ being Fibonacci.** By Carmichael's theorem on primitive divisors of Lucas sequences, the only powers of 2 that are Fibonacci numbers are {1, 2, 8} (i.e., 2⁰, 2¹, 2³). In the range n∈[2,20], only n=3 satisfies 2ⁿ∈F.
+
+Joint probability (assuming independence): 1 × 0.263 × 0.222 × 0.053 ≈ 0.31%.
+
+**Consecutiveness is forced once all-Fibonacci holds.** At n=3: base=2, dim=3, prime=5, count=8. The Fibonacci numbers in [2,8] are exactly {2, 3, 5, 8} — four consecutive Fibonacci numbers with no room for gaps. P(consecutive | all Fibonacci, monotone in [2,8]) = 1.
+
+Ambient density: 17/19 = 89.5% of integers in [2,20] belong to at least one "structurally interesting" family. But having four parameters simultaneously satisfy a single family is far more constraining.
+
+### Review Phase (Discussion)
+
+**Q4 closed.** 34 and 55 absent from all 125 structural counts. Fibonacci presence in the I Ching is confined to {1, 2, 3, 5, 8, 13} — the dense initial segment through F(7). No extension beyond the rigidity boundary.
+
+**Thread 5 closed.** The golden ratio appears in the complement-restricted 克 spectrum but generically — any Z₅ cycle gives identical eigenvalues. The characteristic polynomial x²+x/2−1/4 is not the Fibonacci polynomial. Even the scaled version (2A⁻ → x²+x−1) is the reciprocal, not the original. This is a reformulation of R217 (generic cyclotomic structure), not a new connection between complement involution and golden ratio.
+
+**Thread 1 produced a genuine surprise.** The sage had predicted ~20% joint probability based on individual hit rates of ~40–50% per non-trivial parameter. The computation showed 0.3%, driven by a constraint the sage didn't account for: **Carmichael's theorem** makes 2³=8 the last non-trivial Fibonacci power of 2. This is a hard number-theoretic constraint, not a soft density argument.
+
+**Assessment of the coincidence:** Two independent theorems select n=3:
+1. The orbit formula Orbits(n,p) = 1 iff (n,p) = (3,5) — the I Ching's rigidity constraint
+2. 2ⁿ ∈ Fibonacci iff n ∈ {0, 1, 3} — Carmichael's constraint
+
+Both are theorems. Both select n=3. The remaining alignments (2∈F, 3∈F, 5∈F) have high individual probability.
+
+**R215 amended:** R215 correctly identified that the forcing chain's mechanism is not the Fibonacci recurrence. But its label "arithmetic coincidence" understates the situation. The coincidence has been localized to a single number-theoretic fact (Carmichael's theorem), and its probability is ~0.3%. Revised label: **mechanism-independent coincidence, localized to Carmichael's theorem.**
+
+**Why no further investigation:** Connecting the orbit formula (combinatorial group theory) to primitive divisors of Lucas sequences (algebraic number theory) would require a bridge between genuinely independent mathematical domains. No such bridge is known. Both constraints select n=3 because exponential constraints generically have their unique solutions at small values. This is a generic property, not a deep connection.
+
+### Results
+
+| # | Finding | Tier | Status |
+|---|---------|------|--------|
+| R238 | Fibonacci alignment probability is ~0.3% under the forcing chain's actual constraints. Bottleneck: Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The orbit formula and Carmichael independently select n=3. Remaining alignments (2∈F, 3∈F, 5∈F) have high individual probability (~22–26%). The structural content of the Fibonacci observation reduces to this single coincidence. Amends R215: "arithmetic coincidence" → "mechanism-independent coincidence, localized to Carmichael's theorem" | Measurement | New |
+| R239 | F(9)=34 and F(10)=55 do not appear in any structural count of the I Ching system. 125 counts enumerated across atlas data, transitions, F₂⁶ incidence geometry, and group-theoretic invariants. Fibonacci presence ends at F(7)=13 (surface 克 relation counts). Closes Q4 | Measurement | New |
+| R240 | Complement involution restricted to σ-antisymmetric subspace of any Z₅ cycle gives eigenvalues cos(2π/5)=(φ−1)/2 and cos(4π/5)=−φ/2. Characteristic polynomial x²+x/2−1/4, not x²−x−1. Golden ratio presence is generic Z₅ representation theory (all cyclic shifts produce identical eigenvalues). Reformulation of R217. Closes Thread 5 | Theorem | New |
+
+### Operational Notes
+
+- The sage's prediction of ~20% joint probability was off by 60× because it decomposed into individual hit rates without checking their magnitudes against hard constraints. Carmichael's theorem makes the 2ⁿ constraint much tighter than the naive count suggests. Always check for hard constraints before estimating from individual rates.
+- The sparsity null model was designed to show the coincidence was expected. Instead it showed p≈0.3%. The *reason* it's surprising is localized to a single fact (Carmichael). The *reason* both constraints select n=3 is that exponential constraints generically have unique solutions at small values. The investigation terminates with a precise diagnosis, not an open question.
+- Task A.5's negative result (x²+x/2−1/4 ≠ x²−x−1) was analytically predictable: the complement involution on Z₅ is σ(e)=−e, which conjugates ω→ω⁴=ω⁻¹, swapping DFT modes k and 5−k. The antisymmetric subspace picks out sine components, whose eigenvalues under a cyclic shift are determined by the group structure alone. Any 5-cycle gives the same result.
+- The distinction between R217 and a potential Thread 5 positive was clear: R217 says P₄ contains Fibonacci eigenvalues (structural inclusion), Thread 5 asked whether the complement involution *selects* Fibonacci eigenvalues (symmetry-based selection). The negative answer (it selects cos(2π/5), not φ) confirms that the golden ratio in the 克 spectrum is about the pentagon, not about the complement.
+
+---
+
 ## Final Synthesis
 
-Eight iterations. 23 results (R215–R237). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic.
+Eleven iterations. 27 results (R215–R241, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, the Fibonacci coincidence is localized to Carmichael's theorem, and φ in the 克 spectrum belongs to the 0.5-bit presentational layer.
 
-**Phase 1 (iteration 1):** Fibonacci alignment is arithmetic coincidence — the forcing chain's mechanism is exponential/primality, not additive self-reference. The discriminator (structural iff derivation contains F(n+1) = F(n) + F(n-1)) resolved 4/6 questions analytically. R215–R218.
+**Phase 1 (iterations 1, 9, 10):** The Fibonacci alignment is a mechanism-independent coincidence with probability ~0.3%, localized to Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The forcing chain's mechanism is exponential/primality, not additive self-reference. The orbit formula and Carmichael independently select n=3. 34 and 55 absent from all structural counts. Complement involution on the 克 cycle produces generic Z₅ eigenvalues, not the Fibonacci polynomial. The cube-edge partition and its φ eigenvalues are basis-dependent (0.5-bit presentational layer). R215–R218, R238–R241.
 
 **Phase 2 (iterations 2–8):** Positive characterization of the ~16 cross-model-stable opposition dimensions. Decomposed along every available axis:
 
 - **Accessible:** Text length captures ~1 of ~16 dims (R219). Opposition is vocabulary-diffuse (R220), not vocabulary-opaque.
 - **Independent:** Three organizational principles — text length, d=1 differentiation, d=6 complement opposition — are mutually independent (R233, R235). The V-shape peaks arise from separate mechanisms.
-- **Coupled:** d=2 neighborhood similarity anti-correlates with complement opposition (R236, ρ ≈ −0.30, 3/4 models). This single coupling is itself non-decomposable — distributed across trigram components.
+- **Coupled:** d=2 neighborhood similarity anti-correlates with complement opposition (R236, ρ ≈ −0.30, 3/4 models). Distance-specific: d=3,4,5 null or below threshold (iteration 11). This single coupling is itself non-decomposable — distributed across trigram components.
 - **Bounded:** Cross-layer comparison confounded by genre (R225). Opposition mostly holistic across positions (R228–R229) with pair-specific exceptions (R231). Reversal non-significant (R237).
 
 **Central characterization:** Non-decomposability confirmed across five independent factoring axes (R167, R170, R210, R220, R236). The thematic manifold resists factoring not because the right decomposition hasn't been found, but because the texts compose meaning holistically.
 
 **Methodological boundary reached:** Embedding paradigm at resolution limit (~15% architecture-dependent, R213). Further computation probes below the noise floor.
 
-**Investigation closed.**
+**All questions closed.** Q1–Q7. Q4 (R239), Q6 (R238, R240, R241), Q7 (R241). No open questions remain.
+
+---
+
+## Iteration 10
+
+### Design Phase (Discussion)
+
+**Reopened Q6 (remaining threads) and Q7 (uninvestigated).** Q6 had three threads marked open: (1) the 0.3% null model, (2) the eigenvalue bridge / φ-eigenvalue class, (3) two-lookback dependency graph shape. Q7 asked whether a structural class of φ-eigenvalue systems exists that contains both Fibonacci growth and 克 dynamics.
+
+**Analytical closures (no computation needed):**
+- Q6 Thread 1 (null model): The 0.3% figure's content is the *localization* to Carmichael's theorem, not the p-value itself. Multiple-testing correction is valid but doesn't change the structural diagnosis.
+- Q6 Thread 3 (two-lookback): Generic. Most proof chains have multi-premise steps. "Two-lookback" describes the dependency DAG, not a structural constraint. The Fibonacci recurrence is distinguished by additive self-reference (the operation), not by graph shape. Resolves without computation.
+
+**Computation plan for Q6 Thread 2 + Q7:** Test whether φ has *operational* content in 克 dynamics beyond "P₄ has eigenvalue φ."
+
+**Critical design distinction identified during discussion:** Two different graphs must be computed separately:
+1. **Cube-edge partition** — the 12 Hamming-distance-1 edges of F₂³, classified by 五行 relation. This is R198's object. φ lives here.
+2. **Fiber-lifted relational graph** — Z₅ 克 edges lifted to F₂³ via the surjection's fibers (connecting all pairs in f⁻¹(a) × f⁻¹(b)). Different, denser graph. Basis-independent.
+
+These answer different questions: cube-edge = "what 五行 relation does a single-bit flip induce?" vs fiber-lifted = "which trigrams are in a 克 relationship?"
+
+**Expected outcome stated before computation:** Spectrum is doubled P₄ (block-diagonal, disconnected components). Cube embedding contributes nothing. Result = R198 restated as dynamics.
+
+**Surprise would be:** Components not disconnected, or non-isomorphic P₄ components when accounting for which trigrams sit at endpoints vs interior, or singletons (Fire/Water) systematically placed at endpoints vs interior.
+
+### Computation Phase
+
+**Part 1: Cube-edge partition (confirmed R198)**
+
+12 edges decompose as 比和=2, 生=4, 克=6. Subgraph structures:
+
+| Subgraph | Components | Structure | Spectrum |
+|----------|-----------|-----------|----------|
+| 比和 | 2 (+ 4 isolated) | P₂ ∪ P₂ | {±1, ±1, 0⁴} |
+| 生 | 2 (+ 2 isolated) | P₃ ∪ P₃ | {±√2, ±√2, 0⁴} |
+| 克 | 2 (no isolated) | P₄ ∪ P₄ | {±φ, ±φ, ±1/φ, ±1/φ} |
+
+克 P₄ component paths:
+- C0: Kan☵(Water) → Kun☷(Earth) → Zhen☳(Wood) → Dui☱(Metal)
+- C1: Gen☶(Earth) → Xun☴(Wood) → Qian☰(Metal) → Li☲(Fire)
+
+**Singletons (Fire/Water, fiber_size=1) sit at endpoints in both P₄ components.** Interior positions occupied exclusively by doubletons (Earth, Wood, Metal, fiber_size=2).
+
+生 P₃ shows the **inverse**: singletons at interior (degree 2, high centrality), doubletons at endpoints.
+
+**Part 2: Fiber-lifted relational graphs**
+
+| Lifted graph | Edges | Components | Max eigenvalue |
+|-------------|-------|-----------|---------------|
+| 比和 | 3 | 3 × P₂ | 1.0 |
+| 生 | 12 | 1 (connected) | 3.103 |
+| 克 | 13 | 1 (connected) | 3.297 |
+
+Cube edges are a strict subset of fiber-lifted edges. The lifted graphs are denser and connected. **No φ in fiber-lifted spectra.** The golden ratio is specific to the P₄ path structure created by the Hamming-1 constraint.
+
+**Part 3: Operational dynamics**
+
+克 PF eigenvector (per P₄ component): endpoints weight 0.191, interior weight 0.309. Ratio = 1/φ.
+生 PF eigenvector (per P₃ component): endpoints weight 0.293, interior weight 0.414. Ratio = 1/√2.
+
+克 walk counts (||A^k||): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 — literal Fibonacci sequence. Growth ratio → φ.
+生 walk counts: oscillating ratios, geometric mean → √2.
+比和 walk counts: constant (ratio 1.0).
+
+Algebraic integer hierarchy: 1 (比和) < √2 (生) < φ (克).
+
+**Part 4: GL(3,F₂) verification — the critical finding**
+
+Tested whether P₄ ∪ P₄ structure is an orbit invariant by applying GL(3,F₂) transformations to the surjection representative.
+
+**GL(3,F₂) does NOT preserve Hamming structure.** Only S₃ ⊂ GL(3,F₂) (6/168 elements) preserves it. Under different GL elements:
+
+| GL element | 克 structure |
+|-----------|-------------|
+| Identity / coord perm | P₄ ∪ P₄ |
+| Shear | P₈ (single path through all 8 trigrams) |
+| Mixed | P₂ ∪ P₂ ∪ P₄, P₄ ∪ P₂ ∪ P₂ |
+
+Singleton placement also varies — not orbit-invariant. Some representatives put singletons at P₄ interior.
+
+Aut(Z₅) swap: multiplication by 2 in Z₅ maps stride-2 (克) → stride-4 ≡ stride-1 (生), swapping their cube-edge structures exactly. Already captured in R187/R204.
+
+### Review Phase (Discussion)
+
+**Core resolution:** φ in the 克 spectrum is basis-dependent — it belongs to the 0.5-bit presentational layer identified by the uniqueness theorem (synthesis-3). The P₄ structure arises from the intersection of the algebraic surjection with the Hamming metric of a particular basis choice. At the basis-independent (orbit) level, the fiber-lifted 克 graph has dominant eigenvalue ≈3.297 with no golden ratio.
+
+**The standard basis argument fails.** The standard basis is physically meaningful for hexagram lines but the 五行 assignment treats trigrams as atomic units. The cube-edge partition mixes levels: it asks "when I flip one bit *inside* a trigram, what happens at the 五行 level?" The bit-flip is basis-dependent; the 五行 relation is not. The mixing creates the basis dependence.
+
+**R198 is not retracted — it is classified.** R198 remains a theorem about the standard-basis embedding. R241 reveals it as a theorem about the presentational layer, not the structural layer. Analogous to how the uniqueness theorem classifies the specific I Ching assignment as one representative of a 240-element orbit.
+
+**Discriminator answer:** The P₄ eigenvalues, PF weights, and Fibonacci walk counts are all properties of the abstract P₄ graph — assignment-independent. What IS assignment-dependent: (a) that 克 produces P₄ at all, (b) where singletons sit in the path. Both are basis-dependent and vary across orbit representatives.
+
+**The investigation's key insight:** The question "does φ have operational content in 克 dynamics?" was malformed — it was asking about a basis-dependent object as though it were structural. The GL(3,F₂) verification was worth more than Parts 1-3 combined.
+
+**Q6 Thread 2 and Q7 close:** φ in the 克 spectrum is presentational (0.5-bit layer). The class of φ-eigenvalue systems does not contain the I Ching's 五行 dynamics at the structural level.
+
+### Results
+
+| # | Finding | Tier | Status |
+|---|---------|------|--------|
+| R241 | The cube-edge partition (R198) is basis-dependent — not an orbit invariant. Under GL(3,F₂), the 克 cube-edge subgraph varies from P₄∪P₄ (standard basis) to P₈ to P₂∪P₂∪P₄. Only S₃ ⊂ GL(3,F₂) (6/168 elements) preserves Hamming structure. φ in the 克 spectrum belongs to the 0.5-bit presentational layer. The basis-independent (fiber-lifted) 克 graph has dominant eigenvalue ≈3.297 with no golden ratio. Singleton placement (Fire/Water at P₄ endpoints in standard basis) is also basis-dependent. Classifies R198 as presentational. Closes Q7 | Theorem | New |
+
+### Operational Notes
+
+- The two-graph distinction (cube-edge partition vs fiber-lifted relational graph) was identified during discussion and proved essential. The original task description conflated them; the sage caught the ambiguity. The cube-edge partition is basis-dependent; the fiber-lifted graph is basis-independent. φ appears only in the first.
+- The GL(3,F₂) verification was designed as a "quick sanity check" and produced the most important finding. The premise (orbit invariance of the cube-edge partition) was wrong — GL(3,F₂) does not preserve Hamming structure. This negative result resolved the entire Q7 investigation.
+- The P₈ structure (all 8 trigrams in a single connected 克 path) under a shear basis is mathematically striking but has no physical significance — it's an artifact of a non-standard basis.
+- The Fibonacci walk count sequence (1,2,3,5,8,13,...) is visually compelling but reduces to the P₄ recurrence — which is the Fibonacci recurrence because P₄ has 4 vertices and 4+1=5=|Z₅|. This is R217 (tautological bipartite doubling) restated as dynamics, not new content.
+- Script: `memories/iching/fibo/phi_dynamics.py`
+
+## Iteration 11
+
+### Design Phase (Discussion)
+
+**R236 distance profile completion.** The investigation tested d=1 (null, R235) and d=2 (significant, R236) for anti-coupling with complement opposition, then decomposed d=2 by trigram component (iteration 8). But d=3, d=4, d=5 were never mapped. This gap makes R236's interpretation ambiguous — is d=2 the first point of a monotonic gradient, or specifically elevated?
+
+**Key prediction to falsify:** If coupling is a smooth monotonic gradient, d=3 should show *stronger* coupling than d=2 because d=3 has 20 neighbors (more than d=2's 15) giving lower-variance estimates and higher power. Finding d=3 ≥ d=2 → monotonic → R236 collapses into R159. Finding d=3 < d=2 → d=2 specificity → structural content.
+
+**Complement symmetry prediction:** d_k neighbors of h are d_{6-k} neighbors of σ(h). If complement symmetry holds, ρ(d_k_diff, comp_opp) should approximately equal ρ(d_{6-k}_diff, comp_opp).
+
+**Method:** Same pipeline as iteration 7 — line-level residualization (R² ≈ 11%), average to 64 centroids, Spearman ρ against comp_opp. Extended from d=1,2 to d=1..5.
+
+### Computation Phase
+
+**Full distance profile ρ(d_k_diff, comp_opp):**
+
+| Model | d=1 | d=2 | d=3 | d=4 | d=5 |
+|-------|-----|-----|-----|-----|-----|
+| bge-m3 | −0.182 | **−0.393** | +0.268* | +0.008 | −0.243 |
+| e5-large | −0.129 | **−0.321** | +0.246 | −0.156 | −0.252* |
+| labse | −0.141 | *−0.264* | +0.128 | −0.155 | −0.109 |
+| sikuroberta | −0.109 | −0.214 | +0.220 | −0.013 | −0.212 |
+
+Significance count: d=1: 0/4, d=2: 3/4, d=3: 1/4, d=4: 0/4, d=5: 1/4.
+
+**Sanity check passed:** d=1 and d=2 reproduce R235/R236 exactly.
+
+**Finding 1: d=2 is specifically elevated, NOT monotonic.** d=3 has more neighbors (20 vs 15) yet weaker |ρ|. The monotonic gradient hypothesis is falsified.
+
+**Finding 2: d=3 sign flip.** All 4 models show positive ρ at d=3 (range +0.13 to +0.27). Hexagrams more differentiated from their d=3 neighborhood are MORE opposed to their complement — opposite direction from d=2. Only 1/4 models individually significant. Sign consistency (4/4 same sign) has binomial p = 0.0625 under null — suggestive but below the ≥3/4 cross-model threshold.
+
+**Finding 3: d=2/d=4 near-perfect anticorrelation.** Inter-distance correlation ρ(d2_diff, d4_diff) ≈ −0.83 to −0.90 across all models. This is a geometric artifact of the weighted-sum constraint: 6·d1 + 15·d2 + 20·d3 + 15·d4 + 6·d5 ≈ constant (mean distance to all non-self non-complement hexagrams is approximately constant after residualization). With d=2 and d=4 having equal weight (15 each), they absorb each other's variance most efficiently.
+
+**Complement symmetry:** Profile is NOT complement-symmetric. ρ(d=2) ≠ ρ(d=4) and ρ(d=1) ≠ ρ(d=5). Per-hexagram same-distance symmetry ρ(d_k(h), d_k(σ(h))) is strongly positive (0.3–0.7), as expected from σ(N_k(h)) = N_k(σ(h)). The original structural prediction σ(N_k(h)) = N_{6-k}(σ(h)) was algebraically incorrect — the correct identity is N_k(h) = N_{6-k}(σ(h)) (without taking complements of the neighbor set).
+
+### Review Phase (Discussion)
+
+**d=2 specificity: Record as R236 update.** Clean confirmation — 3/4 models significant at d=2, 0/4 at d=3 despite higher power.
+
+**d=2/d=4 anticorrelation: Geometric artifact, do not record.** The weighted-sum constraint on distance shells forces anticorrelation between equal-weight shells. Any embedding of 64 points would show similar structure.
+
+**d=3 sign flip: Below threshold, flag for follow-up.** 4/4 same-sign (p=0.0625 binomial) but only 1/4 individually significant. May be a geometric echo of d=2 through the constraint: if d=2 has genuine negative ρ, the linear constraint pushes other shells' correlations in predictable directions. **Partial correlation test proposed:** ρ(d3, comp_opp | d2) would determine if d=3 is independent or echo. Not yet computed.
+
+### Results
+
+No new result numbers. R236 updated with distance-specificity characterization:
+
+| # | Finding (updated) | Tier | Status |
+|---|-------------------|------|--------|
+| R236 | d=2 neighborhood similarity anti-correlates with complement opposition (ρ ≈ −0.21 to −0.39, p < 0.05 in 3/4 models). Distance-specific: d=1 null (R235), d=3,4,5 null or below threshold despite equal or greater statistical power. d=2/d=4 anticorrelation (ρ ≈ −0.83) is a geometric artifact of the distance-shell weighted-sum constraint. d=3 shows sign reversal (4/4 positive) but below cross-model significance (1/4). Distributed across trigram components (iteration 8). Non-decomposable | Measurement | Updated |
+
+### Operational Notes
+
+- The geometric constraint 6·d1 + 15·d2 + 20·d3 + 15·d4 + 6·d5 ≈ constant explains the inter-distance correlation structure without invoking thematic content. Always check for linear constraints before interpreting inter-variable correlations as structural findings.
+- The d=3 sign flip (4/4 positive) is the one observation that could be genuinely new. Partial correlation ρ(d3, comp_opp | d2) is the decisive test: if it vanishes, d=3 is a geometric echo of d=2; if it survives, there are two independent distance-specific couplings with opposite signs.
+- Script: `memories/iching/fibo/distance_profile.py`

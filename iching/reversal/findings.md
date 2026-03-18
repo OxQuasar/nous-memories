@@ -1,13 +1,13 @@
-# Reversal: Complete Findings
+# Reversal: Findings
 
 > 19 iterations of the I Ching structural research program.
-> 87 results (R94–R180). All open questions closed.
+> 87 results (R94–R180).
 
 ---
 
-## Terminal Characterization
+## Current Characterization
 
-The (3,5) structure is the unique rigid formalization of composable polarity with dual evaluation. It organizes conceptual space for judgment under uncertainty — mathematical, not physical. The complement involution is the sole bridge between algebra and text: forced, natural, pervasive, rich, opaque, non-decomposable, compositional, and text-intrinsic.
+The (3,5) structure is the unique rigid formalization of composable polarity with dual evaluation. It organizes conceptual space for judgment under uncertainty — mathematical, not physical. The complement involution is the sole bridge between algebra and text found so far: forced, natural, pervasive, rich, opaque, non-decomposable, compositional, and text-intrinsic.
 
 ### Resonance Verdict: T1+, T2−, T3−
 
@@ -167,7 +167,7 @@ V-shaped spectrum: d=1 (1.072) and d=6 (1.201) peaks, d=3–5 troughs. Holistic 
 
 **All algebraic groupings null:** Fano lines, 五行, basin — all p > 0.5 on raw centroids. Anti-clustering in residual space confirmed as artifact (Phase 8e).
 
-**Terminal Q1 finding:** The ~16-dimensional opposition space is text-intrinsic and irreducibly non-algebraic.
+**Q1 status:** The ~16-dimensional opposition space is text-intrinsic and irreducibly non-algebraic as measured by current methods.
 
 ---
 
@@ -226,7 +226,7 @@ The {4,2,2,2,2} asymmetry is in the model's algebra, not in nature's dynamics.
 
 ---
 
-## Complete Results Inventory
+## Results Inventory
 
 ### Q2 Test 2 — Cross-Cultural Convergence (R94–R111)
 

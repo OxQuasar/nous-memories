@@ -2,7 +2,7 @@
 
 The research program moved outward from (3,5) for 77 results. The reversal turned inward: what lives in the 89% the algebra can't see, what generates the axioms, what happens at the judgment boundary. 103 further results (R73–R180) across 19 iterations.
 
-**All named open questions are now closed.**
+**Status of named questions below.**
 
 ---
 
@@ -22,9 +22,9 @@ See `resonance-tests.md` for full specification, `T3/resonance_test3_results.md`
 
 ## Done
 
-### Q1: Dimensionality Reduction of the Residual — CLOSED (59 results, R112–R170)
+### Q1: Dimensionality Reduction of the Residual (59 results, R112–R170)
 
-**Terminal finding:** The ~16-dimensional opposition space is text-intrinsic and irreducibly non-algebraic.
+**Status:** The ~16-dimensional opposition space is text-intrinsic and irreducibly non-algebraic as measured by current methods.
 
 Phase 8 tested whether trigram structure organizes opposition *direction* — the last untested algebraic angle. Trigram additive model fits worse than chance (R² ≈ 0.18 < null 0.226, p ≥ 0.92) across 3 models. All algebraic groupings null on raw centroids (anti-clustering in residual space confirmed as artifact, Phase 8e).
 
@@ -43,7 +43,7 @@ Cross-model direction concordance ρ = 0.78–0.88. Procrustes R² = 0.85–0.95
 
 See `Q1/phase1_results.md` through `Q1/phase8_results.md`.
 
-### Q2: The Axioms — CLOSED (26 results, R73–R93, R171–R175)
+### Q2: The Axioms (26 results, R73–R93, R171–R175)
 
 **Three-level architecture:**
 
@@ -103,4 +103,4 @@ See `T3/resonance_test3_results.md`.
 
 The system was designed for judgment under uncertainty. Its mathematical structure is unique, its textual structure is irreducible, and its operational structure is explicitly incomplete by design.
 
-**Current totals:** 180 results across 19 iterations. All open questions closed.
+**Current totals:** 180 results across 19 iterations.

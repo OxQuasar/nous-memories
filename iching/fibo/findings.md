@@ -1,16 +1,16 @@
 # Fibonacci & Opposition Manifold: Findings
 
-> 8 iterations. 23 results (R215–R237).
-> Phase 1: Fibonacci parameter alignment — arithmetic coincidence.
+> Ten iterations. 27 results (R215–R241, R215 amended).
+> Phase 1: Fibonacci parameter alignment — mechanism-independent coincidence, localized to Carmichael's theorem.
 > Phase 2: Opposition manifold decomposition — three independent principles, non-decomposable.
 
 ---
 
 ## Overall Synthesis
 
-Eight iterations. Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic.
+Ten iterations. 27 results (R215–R241, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, and the Fibonacci coincidence is localized to Carmichael's theorem.
 
-**Phase 1 (iteration 1):** The Fibonacci alignment is arithmetic coincidence. The forcing chain's mechanism is exponential/primality, not additive self-reference. The discriminator — structural iff the derivation contains F(n+1) = F(n) + F(n-1) — resolved 4 of 6 questions analytically before computation. All 6 closed. R215–R218.
+**Phase 1 (iterations 1, 9, 10):** The Fibonacci alignment is a mechanism-independent coincidence with probability ~0.3%, localized to Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The forcing chain's mechanism is exponential/primality, not additive self-reference. The orbit formula and Carmichael independently select n=3. 34 and 55 absent from all structural counts. Complement involution on the 克 cycle produces generic Z₅ eigenvalues, not the Fibonacci polynomial. R215–R218, R238–R241.
 
 **Phase 2 (iterations 2–8):** Pivoted to positive characterization of the ~16 cross-model-stable opposition dimensions (R169). The investigation decomposed the manifold along every available axis:
 
@@ -30,16 +30,20 @@ Eight iterations. Entry point: are the I Ching's parameters {2,3,5,8} structural
 
 ---
 
-## Section 1: Fibonacci Structure (R215–R218)
+## Section 1: Fibonacci Structure (R215–R218, R238–R241)
 
-The forcing chain's parameters are Fibonacci because n=3 places them in the dense initial segment F(3)–F(8). The mechanism is exponential/primality, not additive self-reference. Nuclear dynamics are F₂-linear, orbit counts trace to group orders, and the P₄ ⊃ Fibonacci spectrum is tautological bipartite doubling.
+The forcing chain's parameters are Fibonacci because n=3 places them in the dense initial segment F(3)–F(8). The mechanism is exponential/primality, not additive self-reference. Nuclear dynamics are F₂-linear, orbit counts trace to group orders, and the P₄ ⊃ Fibonacci spectrum is tautological bipartite doubling. The coincidence probability is ~0.3%, localized to Carmichael's theorem: 2³=8 is the last non-trivial Fibonacci power of 2. F(9)=34 and F(10)=55 are absent from all 125 structural counts. The complement involution on the 克 cycle produces generic Z₅ eigenvalues (cos(2π/5), cos(4π/5)), not the Fibonacci polynomial x²−x−1. The cube-edge partition (R198) and its φ eigenvalues are basis-dependent — they belong to the 0.5-bit presentational layer, not the structural orbit.
 
 | # | Finding | Tier |
 |---|---------|------|
-| R215 | Fibonacci parameter alignment is arithmetic coincidence — triple hit at n=3 only, permanent divergence n≥5 | Theorem |
+| R215 | Fibonacci parameter alignment is mechanism-independent coincidence (p≈0.3%), localized to Carmichael's theorem — 2³=8 is the last non-trivial Fibonacci power of 2. Triple hit at n=3 only, permanent divergence n≥5 | Theorem |
 | R216 | Nuclear orbit structure entirely F₂-linear — uniform branching, no Fibonacci counts | Theorem |
 | R217 | spec(P₄) ⊃ spec(Fibonacci matrix) is tautological bipartite doubling — reformulation of R198 | Theorem |
 | R218 | 960 orbit count factors (2⁶×3×5) trace to group orders, not Fibonacci | Measurement |
+| R238 | Sparsity null model: P(all four forcing chain parameters Fibonacci) ≈ 0.3%. Bottleneck is Carmichael's constraint (only 2⁰,2¹,2³ are Fibonacci). Consecutiveness forced once all-Fibonacci holds in [2,8] | Measurement |
+| R239 | Exhaustive structural count sweep: 125 counts enumerated, 38 are Fibonacci. F(9)=34 and F(10)=55 absent. Fibonacci presence confined to {1,2,3,5,8,13} | Measurement |
+| R240 | Complement involution on 克 cycle restricted to V⁻: char poly x²+x/2−1/4 (eigenvalues cos(2π/5), cos(4π/5) = φ/2, −1/(2φ)). Generic Z₅ representation theory, not Fibonacci-specific. All cyclic shifts give identical char poly | Theorem |
+| R241 | Cube-edge partition (R198) is basis-dependent — not an orbit invariant. Under GL(3,F₂), 克 structure varies from P₄∪P₄ (standard basis) to P₈ to P₂∪P₂∪P₄. Only S₃ ⊂ GL(3,F₂) (6/168) preserves Hamming structure. φ in 克 spectrum belongs to 0.5-bit presentational layer. Basis-independent fiber-lifted 克 graph has dominant eigenvalue ≈3.297, no golden ratio. Classifies R198 as presentational. Closes Q7 | Theorem |
 
 ---
 
@@ -83,7 +87,7 @@ Starting from the ~16 cross-model-stable opposition dimensions (R169), this phas
 | R233 | R159 completely independent of text length. Partial correlation reduces r by <1%. R159 and R219 orthogonal | Measurement |
 | R234 | Hamming-thematic anti-correlation is residual-space phenomenon. Algebraic ~11% masks it in raw space | Measurement |
 | R235 | d=1 differentiation and complement opposition independent. ρ null in 4/4 models (mean −0.14, p=0.15–0.39). Two separate mechanisms | Measurement |
-| R236 | d=2 anti-correlates with complement opposition (ρ≈−0.30, 3/4 models). Distributed across trigram components (no sub-component ≥3/4). Trigram imbalance null. Non-decomposable | Measurement |
+| R236 | d=2 anti-correlates with complement opposition (ρ≈−0.30, 3/4 models). Distance-specific: d=1 null (R235), d=3,4,5 null or below threshold despite equal or greater power. d=2/d=4 anticorrelation (ρ≈−0.83) is geometric artifact of distance-shell constraint. Distributed across trigram components. Non-decomposable | Measurement |
 
 ### Reversal (R237)
 

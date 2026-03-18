@@ -1,4 +1,4 @@
-# East/West: Complete Findings
+# East/West: Findings
 
 > 12 iterations investigating whether the golden ratio (φ) and 五行 dual cycles share a deep connection.
 > 34 results (R181–R214, one retracted).
@@ -185,7 +185,7 @@ Genre proximity to the target corpus matters more than training objective for st
 
 ---
 
-## Complete Result Table
+## Result Table
 
 | # | Finding | Tier |
 |---|---------|------|
@@ -196,7 +196,7 @@ Genre proximity to the target corpus matters more than training objective for st
 | R185 | |W|² ∈ Q(√5) at p=5, Q at p=3, Q(cos 2π/7) at p=7. φ-connection tracks cyclotomic field, not rigidity | Theorem |
 | R186 | Complement equivariance ↔ Galois conjugation on Q(ζ₅): generic to all equivariant Z_p maps | Theorem |
 | R187 | Pentagon = Cay(Z₅,{±1}) = 生; Pentagram = Cay(Z₅,{±2}) = 克; edge ratio = φ = 2cos(π/5) | Theorem |
-| R188 | Q5 closed: Q(ζ₅) is shared address of φ and dual cycles, not shared cause. "Address with conditional resonance" | Interpretation |
+| R188 | Q(ζ₅) is shared address of φ and dual cycles. Route A (cyclotomic) and Route B (combinatorial) converge uniquely at n=3 | Interpretation |
 | R189 | KW semantic smoothness is layer-stratified: tuan (99.7%) > guaci (92%) > yaoci (80%) > daxiang (76%). Binary and torus show no inter-pair signal | Measurement |
 | R190 | Layer gradient correlates with discursive freedom, not traditional dating. Authorial confound not separable | Measurement |
 | R191 | ~~Surface cell anti-signal~~ **RETRACTED** — does not replicate across models or layers | — |
