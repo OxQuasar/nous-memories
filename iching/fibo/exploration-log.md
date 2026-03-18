@@ -747,7 +747,7 @@ Both are theorems. Both select n=3. The remaining alignments (2∈F, 3∈F, 5∈
 
 ## Final Synthesis
 
-Eleven iterations. 27 results (R215–R241, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, the Fibonacci coincidence is localized to Carmichael's theorem, and φ in the 克 spectrum belongs to the 0.5-bit presentational layer.
+Twelve iterations. 28 results (R215–R243, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, the Fibonacci coincidence is localized to Carmichael's theorem, and φ in the 克 spectrum belongs to the 0.5-bit presentational layer.
 
 **Phase 1 (iterations 1, 9, 10):** The Fibonacci alignment is a mechanism-independent coincidence with probability ~0.3%, localized to Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The forcing chain's mechanism is exponential/primality, not additive self-reference. The orbit formula and Carmichael independently select n=3. 34 and 55 absent from all structural counts. Complement involution on the 克 cycle produces generic Z₅ eigenvalues, not the Fibonacci polynomial. The cube-edge partition and its φ eigenvalues are basis-dependent (0.5-bit presentational layer). R215–R218, R238–R241.
 
@@ -755,7 +755,7 @@ Eleven iterations. 27 results (R215–R241, R215 amended). Entry point: are the 
 
 - **Accessible:** Text length captures ~1 of ~16 dims (R219). Opposition is vocabulary-diffuse (R220), not vocabulary-opaque.
 - **Independent:** Three organizational principles — text length, d=1 differentiation, d=6 complement opposition — are mutually independent (R233, R235). The V-shape peaks arise from separate mechanisms.
-- **Coupled:** d=2 neighborhood similarity anti-correlates with complement opposition (R236, ρ ≈ −0.30, 3/4 models). Distance-specific: d=3,4,5 null or below threshold (iteration 11). This single coupling is itself non-decomposable — distributed across trigram components.
+- **Coupled:** Two distance-specific, opposite-sign couplings with complement opposition: d=2 negative (R236, ρ ≈ −0.30, 3/4 bivariate, 2/4 permutation-significant) and d=3 positive (R243, ρ ≈ +0.22, 4/4 same sign, 3/4 permutation-significant). Both independent (partial correlations), text-specific (permutation test), and non-decomposable.
 - **Bounded:** Cross-layer comparison confounded by genre (R225). Opposition mostly holistic across positions (R228–R229) with pair-specific exceptions (R231). Reversal non-significant (R237).
 
 **Central characterization:** Non-decomposability confirmed across five independent factoring axes (R167, R170, R210, R220, R236). The thematic manifold resists factoring not because the right decomposition hasn't been found, but because the texts compose meaning holistically.
@@ -929,3 +929,93 @@ No new result numbers. R236 updated with distance-specificity characterization:
 - The geometric constraint 6·d1 + 15·d2 + 20·d3 + 15·d4 + 6·d5 ≈ constant explains the inter-distance correlation structure without invoking thematic content. Always check for linear constraints before interpreting inter-variable correlations as structural findings.
 - The d=3 sign flip (4/4 positive) is the one observation that could be genuinely new. Partial correlation ρ(d3, comp_opp | d2) is the decisive test: if it vanishes, d=3 is a geometric echo of d=2; if it survives, there are two independent distance-specific couplings with opposite signs.
 - Script: `memories/iching/fibo/distance_profile.py`
+
+## Iteration 12
+
+### Design Phase (Discussion)
+
+**Two threads to resolve R236:**
+- **Thread A:** Partial correlations ρ(d_k, comp_opp | d2) for k=1,3,4,5 — determines whether d=3 sign flip is independent or geometric echo of d=2.
+- **Thread B:** Permutation test — 1000 random shuffles of text↔vertex assignment. Tests whether d=2 coupling is specific to the I Ching's actual text-vertex assignment or generic embedding geometry.
+
+**Design decisions:**
+- Pre-residualized centroids fixed across permutations (no re-residualization). Tests text-vertex specificity, not residualization interaction.
+- Unrestricted permutations (don't preserve complement pairing). Tests whether coupling requires the specific assignment.
+- Permutation null computed for ALL distances d=1..5 simultaneously — free additional data.
+
+### Computation Phase
+
+**Thread A: Partial correlations**
+
+ρ(d_k, comp_opp | d2) for k=1,3,4,5:
+
+| Model | d=1 | d=3 | d=4 | d=5 |
+|-------|-----|-----|-----|-----|
+| bge-m3 | −0.127 | +0.323 | **−0.621***| −0.325 |
+| e5-large | −0.116 | +0.294* | **−0.599***| −0.290* |
+| labse | −0.111 | +0.124 | **−0.683***| −0.103 |
+| sikuroberta | −0.092 | +0.206 | **−0.469***| −0.187 |
+
+ρ(d2, comp_opp | d3):
+
+| Model | partial ρ | p |
+|-------|-----------|---|
+| bge-m3 | −0.429 | 0.0004*** |
+| e5-large | −0.358 | 0.004** |
+| labse | −0.262 | 0.038* |
+| sikuroberta | −0.199 | 0.118 |
+
+**Key findings from partial correlations:**
+
+1. **d=3 is independent of d=2.** Partial ρ(d3 | d2) retains positive sign in 4/4 models (+0.12 to +0.32), significant in 2/4.
+2. **d=2 is independent of d=3.** Partial ρ(d2 | d3) retains significance in 3/4 models.
+3. **d=4 suppression artifact.** Bivariate d=4 ≈ 0, but partial ρ(d4 | d2) explodes to −0.47 to −0.68 (4/4 significant). The d2/d4 geometric anticorrelation (ρ ≈ −0.83) was masking d=4. However, permutation test (below) shows d=4 is NOT text-specific — the partial signal is geometric, not thematic.
+4. **d=1 carries no independent signal.** Drops to near zero after controlling for d=2 and d=3 jointly.
+
+**Thread B: Permutation test**
+
+Permutation p-values (two-sided):
+
+| Model | d=1 | d=2 | d=3 | d=4 | d=5 |
+|-------|-----|-----|-----|-----|-----|
+| bge-m3 | 0.238 | **0.006** | **0.006** | 0.550 | 0.104 |
+| e5-large | 0.438 | **0.036** | **0.014** | 0.544 | 0.088 |
+| labse | 0.434 | 0.122 | 0.122 | 0.520 | 0.620 |
+| sikuroberta | 0.586 | 0.234 | **0.022** | 0.648 | 0.176 |
+
+Significance count: d=1: 0/4, d=2: 2/4, **d=3: 3/4**, d=4: 0/4, d=5: 0/4.
+
+Null distribution means are not zero (range −0.03 to −0.08) — reflects baseline Hamming geometry under random assignment.
+
+**Key findings from permutation test:**
+
+1. **d=2 is text-specific** in 2/4 models. Weaker than bivariate (3/4) but consistent — the models with non-significant permutation (labse, sikuroberta) are the same models with weakest bivariate signal.
+2. **d=3 is text-specific** in 3/4 models — stronger than d=2 on this test.
+3. **d=4 is NOT text-specific** (all p > 0.5) — confirms the partial correlation signal is geometric artifact.
+4. **d=1, d=5 are not text-specific.**
+
+### Review Phase (Discussion)
+
+**d=3 is a genuine new finding.** Evidence: 4/4 same sign (positive), 3/4 permutation-significant, independent of d=2 (partial correlation retains sign and magnitude). The bivariate test (1/4 significant) tests a different null (ρ=0) with low power at ρ≈+0.22, n=64. The permutation test (3/4 significant) is the more informative test for our question — it shows the coupling is specific to the I Ching's text-vertex assignment.
+
+**d=4 suppression artifact — methodological lesson.** Partial correlations between geometrically coupled distance shells can amplify artifacts. The d=2/d=4 anticorrelation (ρ ≈ −0.83) creates a suppression effect: partialing out d=2 inflates d=4's apparent signal despite d=4 being permutation-null. Bivariate values are the correct reading for geometrically coupled shells.
+
+**d=2 permutation (2/4) does not weaken R236.** R236 was established by bivariate cross-model consistency (3/4), survived residual correction (iteration 7), survived trigram decomposition (iteration 8), and is now confirmed as distance-specific (iteration 11) and partially text-specific (2/4 permutation). The 2/4 contextualizes R236 as assignment-dependent in the models with sufficient power.
+
+**d=2/d=3 structural distinction:** d=2 neighbors include 6/15 same-trigram modifications + 9/15 one-bit-per-trigram. d=3 neighbors include 2/20 intra-trigram complements + 18/20 mixed flips. These are small-fraction subsets — the sign flip is likely distributed across flip types, consistent with the non-decomposability pattern (R236 iteration 8). Further decomposition is past the resolution boundary.
+
+**Interpretation (not recorded as result):** The d=2 negative / d=3 positive pattern suggests a concentration-diffusion structure: hexagrams thematically distinctive at close range (d=2) are more opposed to their complement; hexagrams that blend into mid-range (d=3) are less opposed. Consistent with non-decomposability — the coupling operates through global manifold geometry.
+
+### Results
+
+| # | Finding | Tier | Status |
+|---|---------|------|--------|
+| R236 | d=2 anti-correlates with complement opposition (ρ≈−0.30, 3/4 bivariate, 2/4 permutation-significant). Distance-specific (d=1,3,4,5 null or opposite-sign). Independent of d=3 (partial ρ retains 3/4 significance). d=2/d=4 anticorrelation (ρ≈−0.83) is geometric artifact. Distributed across trigram components. Non-decomposable | Measurement | Updated |
+| R243 | d=3 neighborhood similarity positively correlates with complement opposition (ρ≈+0.13 to +0.27, 4/4 same sign, 3/4 permutation-significant p<0.025). Independent of d=2 (partial ρ retains sign after controlling). Opposite sign from R236. Text-specific (permutation test). Effect size weak but assignment-dependent | Measurement | New |
+
+### Operational Notes
+
+- Partial correlations on geometrically coupled shells can amplify artifacts (d=4 suppression effect). Always cross-validate partial correlation findings with permutation tests.
+- The bivariate/permutation discrepancy (d=3: 1/4 bivariate vs 3/4 permutation) reflects different nulls and is expected at low effect sizes. The permutation test is more informative for text-specificity questions.
+- The d=2/d=3 sign opposition was invisible in R236 (which only tested d=1 and d=2). The full distance profile (iteration 11) and partial correlation analysis (this iteration) were both necessary to reveal it.
+- Script: `memories/iching/fibo/partial_and_permutation.py`

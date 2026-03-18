@@ -1,6 +1,6 @@
 # Fibonacci & Opposition Manifold: Findings
 
-> Ten iterations. 27 results (R215–R241, R215 amended).
+> Twelve iterations. 28 results (R215–R243, R215 amended).
 > Phase 1: Fibonacci parameter alignment — mechanism-independent coincidence, localized to Carmichael's theorem.
 > Phase 2: Opposition manifold decomposition — three independent principles, non-decomposable.
 
@@ -8,7 +8,7 @@
 
 ## Overall Synthesis
 
-Ten iterations. 27 results (R215–R241, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, and the Fibonacci coincidence is localized to Carmichael's theorem.
+Twelve iterations. 28 results (R215–R243, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, and the Fibonacci coincidence is localized to Carmichael's theorem.
 
 **Phase 1 (iterations 1, 9, 10):** The Fibonacci alignment is a mechanism-independent coincidence with probability ~0.3%, localized to Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The forcing chain's mechanism is exponential/primality, not additive self-reference. The orbit formula and Carmichael independently select n=3. 34 and 55 absent from all structural counts. Complement involution on the 克 cycle produces generic Z₅ eigenvalues, not the Fibonacci polynomial. R215–R218, R238–R241.
 
@@ -18,7 +18,7 @@ Ten iterations. 27 results (R215–R241, R215 amended). Entry point: are the I C
 
 *What's independent:* Three organizational principles — text length, d=1 differentiation, d=6 complement opposition — are mutually independent (R233, R235). Text length has zero mediation of the Hamming V-shape (< 1% partial correlation reduction). d=1 and d=6 are uncorrelated (0/4 models significant). The V-shape peaks arise from separate mechanisms.
 
-*What couples:* At d=2, neighborhood similarity anti-correlates with complement opposition (R236, ρ ≈ −0.30, 3/4 models). This is the single non-trivial coupling discovered across the entire investigation. It is itself non-decomposable — distributed across trigram components with no sub-component reaching cross-model significance.
+*What couples:* Two distance-specific, opposite-sign couplings between neighborhood similarity and complement opposition. At d=2, anti-correlation (R236, ρ ≈ −0.30, 3/4 bivariate, 2/4 permutation-significant): hexagrams locally distinct from d=2 neighbors are more opposed to complement. At d=3, positive correlation (R243, ρ ≈ +0.22, 4/4 same sign, 3/4 permutation-significant): hexagrams similar to mid-range neighbors are less opposed to complement. Both are independent (partial correlations retain sign and magnitude), text-specific (permutation test), and non-decomposable.
 
 *What's bounded:* Cross-layer comparison is confounded by genre (R225). The ~16 dimensions are yaoci-intrinsic, not demonstrably concept-intrinsic. Opposition is mostly holistic across positions (R228–R229) with pair-specific exceptions (R231). Reversal is not a significant opposition principle (R237, p = 0.08–0.18).
 
@@ -79,7 +79,7 @@ Starting from the ~16 cross-model-stable opposition dimensions (R169), this phas
 | R230 | Opposition and differentiation positional profiles independent (ρ≈0) | Measurement |
 | R231 | 升↔无妄 bimodal: opposed at L3/L5 (ranks 1–6), concordant at L1/L2/L4/L6 (ranks 20–32). Cross-model consistent. Pair-specific | Measurement |
 
-### Independence and Coupling (R232–R236)
+### Independence and Coupling (R232–R236, R243)
 
 | # | Finding | Tier |
 |---|---------|------|
@@ -87,7 +87,8 @@ Starting from the ~16 cross-model-stable opposition dimensions (R169), this phas
 | R233 | R159 completely independent of text length. Partial correlation reduces r by <1%. R159 and R219 orthogonal | Measurement |
 | R234 | Hamming-thematic anti-correlation is residual-space phenomenon. Algebraic ~11% masks it in raw space | Measurement |
 | R235 | d=1 differentiation and complement opposition independent. ρ null in 4/4 models (mean −0.14, p=0.15–0.39). Two separate mechanisms | Measurement |
-| R236 | d=2 anti-correlates with complement opposition (ρ≈−0.30, 3/4 models). Distance-specific: d=1 null (R235), d=3,4,5 null or below threshold despite equal or greater power. d=2/d=4 anticorrelation (ρ≈−0.83) is geometric artifact of distance-shell constraint. Distributed across trigram components. Non-decomposable | Measurement |
+| R236 | d=2 anti-correlates with complement opposition (ρ≈−0.30, 3/4 bivariate, 2/4 permutation-significant). Distance-specific and independent of d=3 (partial ρ retains 3/4 significance). d=2/d=4 anticorrelation (ρ≈−0.83) is geometric artifact. Distributed across trigram components. Non-decomposable | Measurement |
+| R243 | d=3 neighborhood similarity positively correlates with complement opposition (ρ≈+0.13 to +0.27, 4/4 same sign, 3/4 permutation-significant). Independent of d=2 (partial ρ retains sign). Opposite sign from R236. Text-specific. Effect size weak but assignment-dependent | Measurement |
 
 ### Reversal (R237)
 
