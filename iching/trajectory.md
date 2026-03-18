@@ -26,19 +26,17 @@ The investigation started from the outside and has been spiraling inward. Each p
 
 ### Phase 6: What connects it to the wider world?
 **Workflows:** eastwest, fibo
-**Answer (in progress):** φ is wired into the 克 eigenstructure through Route B (combinatorial, P₄ paths on the binary cube). The structural parameters are four consecutive Fibonacci numbers. The 克 subgraph and Fibonacci growth matrices share eigenvalues. Two routes to φ converge uniquely at (3,5).
+**Answer:** The connection is weaker than anticipated. φ enters the 克 eigenstructure through Route B (P₄ paths on the binary cube), but this is basis-dependent — it belongs to the 0.5-bit presentational layer (R241). The structural parameters are four consecutive Fibonacci numbers, but the mechanism is exponential/primality, not additive self-reference — the alignment is localized to Carmichael's theorem (R215, R238). φ's cross-system ubiquity decomposes into two independent phenomena: Hurwitz ubiquity (CF extremality drives φ in nature) and small-number ubiquity (Fibonacci density at n=3 drives the I Ching's parameters). No shared mechanism (R244–R245). The I Ching has no connection to the Hurwitz property that makes φ appear in phyllotaxis, quasicrystals, and KAM theory.
 
 ## Current Position
 
-The investigation is at a threshold. Everything until now has been internal — analyzing the I Ching's own structure, texts, and operations. The current questions require looking outside.
+Phase 6 is resolved. The outward-looking questions (Q6, Q7, Q8 from fibo; all eastwest questions) are answered. The investigation found that the I Ching's connections to the wider mathematical world are weaker and more specific than the initial observations suggested: the Fibonacci alignment is Carmichael, the φ spectrum is presentational, and the cross-system "ubiquity" dissolves into independent phenomena.
 
-**Q6 (fibo):** Why do the Fibonacci sequence and the forcing chain produce the same numbers despite different mechanisms? Structural constraint at small values, or deeper connection?
-
-**Q7 (fibo):** Is there a class of systems characterized by φ as dominant eigenvalue — a class that includes both natural growth processes and the I Ching's destruction cycle? This requires external data and literature from physics, biology, dynamical systems theory.
+**One question remains from the reversal workflow:**
 
 **Q2 proper (reversal):** What is the minimal mathematical structure capable of representing situated change? The forcing chain has exactly one contingent step (composability). Is composability itself forced by something deeper?
 
-These three questions are converging on the same target: **whether the I Ching's structure reflects something about the mathematics of change itself.** Not change as modeled by the I Ching, but change as a mathematical phenomenon. The Fibonacci recurrence, the golden ratio, self-referential sequential processes, the complement involution — all point toward a formal characterization of what change requires.
+This is the deepest remaining question — it asks not about the I Ching's connections to other systems, but about whether the structure it embodies is *necessary* rather than merely *unique*.
 
 ## The Method
 
@@ -48,11 +46,11 @@ The investigation uses divergent-first methodology:
 - Three epistemic categories: mechanism, coincidence, structural constraint (not binary mechanism/coincidence)
 - The process itself is subject to investigation (agent behavior, closure bias, epistemic anchoring)
 
-Each phase was reached by refusing premature closure on the previous phase. The 89% residual was treated as primary object, not leftover. The Fibonacci "coincidence" was treated as a question, not an answer. The T3 negative (nature doesn't match five-phase classification) reframed the nature connection from classification to process.
+Each phase was reached by refusing premature closure on the previous phase. The 89% residual was treated as primary object, not leftover. The Fibonacci "coincidence" was treated as a question, not an answer. The T3 negative (nature doesn't match five-phase classification) reframed the nature connection from classification to process. The φ "ubiquity" was treated as a testable hypothesis, not a given — and the test refuted the simplest explanations before converging on the Hurwitz/small-number decomposition.
 
 ## Running Totals
 
-~240 results across 18 workflows. The count is approximate because the investigation is active.
+~245 results across 19 workflows.
 
 | Phase | Workflows | Results | Status |
 |-------|-----------|---------|--------|
@@ -61,4 +59,4 @@ Each phase was reached by refusing premature closure on the previous phase. The 
 | 3. Where stops | relations, semantic-map, kw-final | R61–R72 | Established |
 | 4. Inside boundary | reversal Q1, Q3 | R112–R170 | Established, methods may extend |
 | 5. What it's for | reversal Q2, Q3, atlases | R73–R111, R140–R180 | Established |
-| 6. Wider connections | eastwest, fibo | R181–R241 | Active |
+| 6. Wider connections | eastwest, fibo | R181–R245 | Established |

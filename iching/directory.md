@@ -2,7 +2,7 @@
 
 ## Program Overview
 
-An investigation of the I Ching's algebraic structure, producing 214 results (1 retracted) across 11 workflows. Central finding: the 五行 assignment is a complement-respecting surjection F₂³ → Z₅ — the unique rigid point in an infinite family. The orbit formula Orbits(n,p) = ((p−3)/2)! × 2^{2^{n−1}−1−n} equals 1 if and only if (n,p) = (3,5).
+An investigation of the I Ching's algebraic structure, producing 252 results (1 retracted) across 13 workflows. Central finding: the 五行 assignment is a complement-respecting surjection F₂³ → Z₅ — the unique rigid point in an infinite family. The orbit formula Orbits(n,p) = ((p−3)/2)! × 2^{2^{n−1}−1−n} equals 1 if and only if (n,p) = (3,5).
 
 The thematic manifold has ~16 text-intrinsic opposition dimensions (cross-validated across 4 architecturally distinct models), irreducibly non-algebraic. The system organizes conceptual space for judgment under uncertainty — mathematical, not physical.
 
@@ -79,6 +79,22 @@ The thematic manifold has ~16 text-intrinsic opposition dimensions (cross-valida
 - `questions.md` — question tracker (all closed)
 - Scripts: `cyclotomic_probe.py`, `kw_sequence_probe.py`, `torus_coherence.py`, `differentiation_principle.py`, `hu_cell_validation.py`, `dynamics_probe.py`, `edge_type_decomposition.py`, `perturbation_directions.py`, `sikuroberta_replication.py`, `pair_concordance.py`
 - Cached embeddings: `reversal/Q1/embeddings_{bge-m3,e5-large,labse,sikuroberta}.npz`
+
+### `fibo/`
+**Fibonacci structure, φ ubiquity, and the interface layer.** 37 results (R215–R252, R215 amended) across 14 LOGOS iterations + literature survey + analysis. Three phases: (1) Fibonacci parameter alignment localized to Carmichael's theorem (p≈0.3%). (2) Opposition manifold decomposition — ~16 dimensions irreducibly holistic. (3) φ across natural systems — three-mechanism decomposition and the interface layer characterization.
+
+**φ resolution (R244–R252):** φ's cross-system appearances decompose into three mechanisms: CF extremality (phyllotaxis, KAM), Z₅ representation theory (quasicrystals, Penrose tilings, I Ching 克 spectrum), and small-number density (I Ching parameters). The I Ching shares the Z₅ mechanism with five-fold quasicrystals — 生=pentagon, 克=pentagram, edge ratio=φ. φ enters at the metric/geometric layer (the operational interface, R248). The presentational package (φ + 1:2:3 ratio + P₄ eigenstructure) is a single unit constituting the system's interface architecture, the most spectrally structured of 8 possible types (R251), with φ in the destruction/risk channel (R252).
+
+- `findings.md` — complete findings (R215–R252)
+- `exploration-log.md` — 14 iterations
+- `questions.md` — question tracker (all resolved)
+- Scripts: `algebraic_simplicity.py`, `phi_dynamics.py`, `distance_profile.py`, `partial_and_permutation.py`, `d2d3_characterization.py`
+
+### `dynamics/`
+**The I Ching as a map to dynamical space.** Phase 7 of the investigation arc. Entry point: the I Ching is representational — it models change-as-experienced. The text maps internal structure onto the dynamics of situations. The question is whether this map preserves structure, and whether the ~16-dimensional thematic manifold is a discretization of a real dynamical phase space. Open questions: Q11 (phase space discretization), Q12 (克/生/比和 as dynamical transition types), Q13 (φ in dynamics — KAM connection revisited), Q14 (formal definition of the map), Q15 (thematic manifold vs known dynamical structures).
+
+- `questions.md` — open questions (Q11–Q15)
+- `findings.md` — findings (none yet, priors listed)
 
 ### `usage.md`
 **The system as judgment instrument.** Synthesis of the reversal findings into a functional account: the I Ching as an instrument for judgment under uncertainty, not a model of physics. Covers the interface architecture (calendar → assessment vocabulary → judgment), the {4,2,2,2,2} cascade as interface property, the algorithm-judgment boundary, the five practitioner operations, and the three-layer summary (algebra constrains, interface translates, text provides terrain, practitioner navigates).
@@ -175,8 +191,8 @@ Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for
 | Question | Go to |
 |----------|-------|
 | What is the central result? | `unification/synthesis-3.md` |
-| Full results inventory | `deep/open-questions.md` (R1–R72), `reversal/findings.md` (R94–R180), `eastwest/findings.md` (R181–R214) |
-| Master summary | `i-summary/summary.md` (R1–R77), `reversal/` + `eastwest/` for R94–R214 |
+| Full results inventory | `deep/open-questions.md` (R1–R72), `reversal/findings.md` (R94–R180), `eastwest/findings.md` (R181–R214), `fibo/findings.md` (R215–R252) |
+| Master summary | `i-summary/summary.md` (R1–R77), `reversal/` for R94–R180, `eastwest/` for R181–R214, `fibo/` for R215–R245 |
 | How was it derived? | `deep/exploration-log.md` |
 | What do the texts say? | `semantic-map/findings.md` |
 | Why is it isolated? | `relations/findings.md` |
@@ -192,5 +208,8 @@ Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for
 | Cross-cultural comparison | `reversal/findings.md` § Q2 Test 2 |
 | φ and 五行 across traditions | `eastwest/findings.md` |
 | Cross-architecture replication | `eastwest/findings.md` § R212–R213 |
+| Fibonacci structure & φ ubiquity | `fibo/findings.md` |
+| φ interface layer & quasicrystal connection | `fibo/findings.md` § R246–R252 |
+| I Ching as dynamical map | `dynamics/questions.md` |
 | Source texts directory | `../texts/directory.md` |
 | Captain's log | `../agent_logs/iching_captain.md` |

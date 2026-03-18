@@ -1,0 +1,203 @@
+{
+  "constants": [
+    {
+      "name": "\u03c6 (golden ratio)",
+      "poly": "x^2-x-1",
+      "approx": 1.6180339887,
+      "mahler_measure": 1.618034,
+      "cf_geometric_mean": 1.0,
+      "cf_data_sample": [
+        1
+      ],
+      "conductor": 5,
+      "conductor_verified": true,
+      "recurrence_order": 2,
+      "recurrence_coeff_sum": 2,
+      "recurrence_total_complexity": 4
+    },
+    {
+      "name": "\u221a2",
+      "poly": "x^2-2",
+      "approx": 1.4142135624,
+      "mahler_measure": 2.0,
+      "cf_geometric_mean": 2.0,
+      "cf_data_sample": [
+        2
+      ],
+      "conductor": 8,
+      "conductor_verified": true,
+      "recurrence_order": 2,
+      "recurrence_coeff_sum": 2,
+      "recurrence_total_complexity": 4
+    },
+    {
+      "name": "\u221a3",
+      "poly": "x^2-3",
+      "approx": 1.7320508076,
+      "mahler_measure": 3.0,
+      "cf_geometric_mean": 1.4142,
+      "cf_data_sample": [
+        1,
+        2
+      ],
+      "conductor": 12,
+      "conductor_verified": true,
+      "recurrence_order": 2,
+      "recurrence_coeff_sum": 3,
+      "recurrence_total_complexity": 5
+    },
+    {
+      "name": "Plastic number \u03c1",
+      "poly": "x^3-x-1",
+      "approx": 1.3247179572,
+      "mahler_measure": 1.324718,
+      "cf_geometric_mean": 2.49,
+      "cf_data_sample": [
+        3,
+        12,
+        1,
+        1,
+        3,
+        2,
+        3,
+        2,
+        4,
+        1,
+        1,
+        9,
+        1,
+        4,
+        15,
+        1,
+        6,
+        2,
+        2,
+        2
+      ],
+      "conductor": null,
+      "conductor_verified": true,
+      "recurrence_order": 3,
+      "recurrence_coeff_sum": 2,
+      "recurrence_total_complexity": 5
+    },
+    {
+      "name": "Silver ratio (1+\u221a2)",
+      "poly": "x^2-2x-1",
+      "approx": 2.4142135624,
+      "mahler_measure": 2.414214,
+      "cf_geometric_mean": 2.0,
+      "cf_data_sample": [
+        2
+      ],
+      "conductor": 8,
+      "conductor_verified": true,
+      "recurrence_order": 2,
+      "recurrence_coeff_sum": 3,
+      "recurrence_total_complexity": 5
+    },
+    {
+      "name": "\u221a5",
+      "poly": "x^2-5",
+      "approx": 2.2360679775,
+      "mahler_measure": 5.0,
+      "cf_geometric_mean": 4.0,
+      "cf_data_sample": [
+        4
+      ],
+      "conductor": 5,
+      "conductor_verified": true,
+      "recurrence_order": 2,
+      "recurrence_coeff_sum": 5,
+      "recurrence_total_complexity": 7
+    },
+    {
+      "name": "2cos(2\u03c0/7)",
+      "poly": "x^3+x^2-2x-1",
+      "approx": 1.2469796037,
+      "mahler_measure": 2.24698,
+      "cf_geometric_mean": 3.749,
+      "cf_data_sample": [
+        4,
+        20,
+        2,
+        3,
+        1,
+        6,
+        10,
+        4,
+        3,
+        3,
+        1,
+        5,
+        1,
+        11,
+        2,
+        2,
+        16,
+        12,
+        2,
+        1
+      ],
+      "conductor": 7,
+      "conductor_verified": true,
+      "recurrence_order": 3,
+      "recurrence_coeff_sum": 4,
+      "recurrence_total_complexity": 7
+    },
+    {
+      "name": "Lehmer's number",
+      "poly": "x^10+x^9-x^7-x^6-x^5-x^4-x^3+x+1",
+      "approx": 1.17628081826,
+      "mahler_measure": 1.176281,
+      "cf_geometric_mean": 3.3388,
+      "cf_data_sample": [
+        5,
+        1,
+        2,
+        17,
+        1,
+        7,
+        2,
+        1,
+        1,
+        2,
+        4,
+        7,
+        1,
+        1,
+        9,
+        1,
+        2,
+        1,
+        32,
+        5
+      ],
+      "conductor": null,
+      "conductor_verified": true,
+      "recurrence_order": 10,
+      "recurrence_coeff_sum": 8,
+      "recurrence_total_complexity": 18
+    }
+  ],
+  "correlations": {
+    "mahler_vs_cf": {
+      "rho": 0.1429,
+      "p": 0.7358
+    },
+    "mahler_vs_recurrence": {
+      "rho": -0.0238,
+      "p": 0.9554
+    },
+    "mahler_vs_conductor_cyclotomic": {
+      "rho": 0.3714,
+      "p": 0.4685
+    }
+  },
+  "phi_analysis": {
+    "simplest_mahler": false,
+    "most_irrational_cf": true,
+    "simplest_recurrence": true,
+    "smallest_conductor": true,
+    "conclusion": "outlier_on:Mahler measure"
+  }
+}

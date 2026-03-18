@@ -46,50 +46,77 @@ The Fibonacci alignment holds at n=3 and breaks on either side, except for 13 = 
 
 ## Open Questions
 
-None.
+No open questions remain on φ, Fibonacci alignment, or the interface layer. The investigation thread is complete. Further questions would concern the 89% residual (thematic manifold), not the 11% algebraic structure or the 0.5-bit presentational layer.
 
 ---
 
-## Done
+## Resolved
 
-### Q1: Is the Fibonacci alignment structural or arithmetic coincidence? — CLOSED (R215)
+### Q8: φ across systems → Three mechanisms; I Ching shares Z₅ with quasicrystals (R246–R252)
 
-Arithmetic coincidence. Scan of n=2..30 confirms triple Fibonacci hit at n=3 only, single hit at n=4, zero hits for n≥5. The forcing chain's mechanism is exponential/primality, not additive self-reference. The "two-lookback" appearance (each parameter derived from conjunction of previous two) is because n serves dual roles (dimension and exponent), not because the derivation contains F(n+1) = F(n) + F(n-1).
+φ's cross-system appearances decompose into three independent mechanisms:
 
-### Q2: Does the Fibonacci recurrence appear in the dynamics? — CLOSED (R216)
+| Mechanism | Property of φ used | Systems |
+|-----------|-------------------|---------|
+| CF extremality (Hurwitz) | Most irrational number, worst Diophantine approximation | Phyllotaxis, KAM theory |
+| Z₅ representation theory | cos(2π/5) = (φ−1)/2, pentagon geometry | Five-fold quasicrystals, Penrose tilings, **I Ching 克 spectrum** |
+| Small-number density | Fibonacci numbers dense at small n, Carmichael's theorem | I Ching parameter alignment |
 
-No. The nuclear (互) orbit structure is entirely F₂-linear: rank 4 kernel, uniform branching (4 preimages per image node), basin sizes 16:16:32 forced by complement symmetry. No Fibonacci counts in orbit lengths, transient lengths, branching ratios, or basin sizes.
+Key findings: The 生/克 cycles ARE the pentagon/pentagram (R247). φ enters at the metric/geometric layer in both systems (R248). Z₅ is a boundary case in both — first dual-cycle group, first forbidden crystallographic symmetry (R249). The 1:2:3 ratio, P₄ eigenstructure, and φ are a single presentational package constituting the operational interface (R250). The I Ching's package is the most spectrally structured of 8 possible types, with φ in the risk-assessment (克) channel (R251). The algebra provides the menu of 8 types; the presentation selects from it (R252).
 
-### Q3: Why does 13 sit at the boundary? — CLOSED (R218)
+Caveat: I Ching's φ is presentational (basis-dependent, R241); quasicrystal's is structural (physical observables). The Z₅ mechanism is shared; the structural status differs.
 
-Group-theoretic, not Fibonacci. 960 = 2⁶ × 3 × 5. The factor 5 traces to |GL(4,F₂)| = 20160, not to Fibonacci structure.
+### Q9: Is the presentational package optimized? → Functionally distinguished, not arbitrary (R251)
 
-### Q4: F(9)=34, F(10)=55 — Do They Appear? — CLOSED (R239)
+The 8 interface types split along two binary properties: whether 比和 exists (4 yes, 4 no) and whether 克 or 生 dominates (mirror pairs). Among 克-dominant types with 比和, only 2 exist: P₄∪P₄ in 克 (I Ching) and K₁,₃∪K₁,₃ in 克. The I Ching's type has richer spectral structure: P₄ gives 4 distinct eigenvalues and Fibonacci walk growth; K₁,₃ gives 2 eigenvalues and geometric decay. The selection is functionally distinguished among 8 options. Whether it constitutes "optimization" depends on design intent, which the investigation cannot determine.
 
-F(9)=34 and F(10)=55 absent from all 125 structural counts (atlas partitions, orbit structures, Gaussian binomials, group orders, transition counts, incidence geometry). Fibonacci presence confined to {1,2,3,5,8,13}. No structural count falls on any Fibonacci number beyond 13.
+### Q10: Algebraic → presentational relationship → Possibility space with constrained menu (R252)
 
-### Q5: The φ-克 connection and Fibonacci growth — CLOSED (R217)
+The algebraic layer (1 orbit) provides 8 interface types. The presentational layer (basis choice) selects one. Only 2/8 contain φ, only 4/8 have 比和. The I Ching selects 克-dominant with P₄ — the type where φ governs destructive (risk-assessment) transitions. The relationship: algebra constrains the menu, presentation selects from it. The selection has operational significance but is not determined by the algebra.
 
-spec(P₄) ⊃ spec(Fibonacci matrix) via bipartite doubling — both involve 2cos(kπ/5). Proven mathematical fact, labeled reformulation of R198 by the investigation.
+### Q1: Is the Fibonacci alignment structural or arithmetic coincidence? → Reframed by Q8
 
-### Q6: The Shared Eigenstructure — CLOSED (R238, R240, R241)
+The forcing chain's mechanism is exponential/primality, not additive self-reference (R215). Scan of n=2..30 confirms triple Fibonacci hit at n=3 only, single hit at n=4, zero hits for n≥5. The "two-lookback" appearance is because n serves dual roles (dimension and exponent), not because the derivation contains F(n+1) = F(n) + F(n-1).
 
-The forcing chain and Fibonacci agree at n=3 because Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2) and the orbit formula independently select n=3. Sparsity null model: P(all four parameters Fibonacci) ≈ 0.3%, with the bottleneck being the Carmichael constraint. Consecutiveness is forced once all-Fibonacci holds in [2,8] (the only Fibonacci numbers in that range are exactly {2,3,5,8}). Complement involution on 克 produces generic Z₅ eigenvalues (cos(2π/5), cos(4π/5)), not the Fibonacci polynomial x²−x−1 — the golden ratio appears through pentagon geometry, not Fibonacci-specific structure.
+Original framing: "structural vs coincidence." Current understanding: neither — the alignment is a consequence of small-number density at the unique rigid point. Q8 investigates whether this pattern generalizes.
 
-Remaining threads (investigated iteration 10):
-- **The 0.3% question:** The content of p≈0.3% is the localization to Carmichael's theorem, not the p-value itself. The structural diagnosis is complete regardless of multiple-testing adjustments.
-- **The eigenvalue bridge:** φ in the 克 cube-edge spectrum (R198) is basis-dependent — it belongs to the 0.5-bit presentational layer, not the structural orbit. At the basis-independent level (fiber-lifted 克 graph), the dominant eigenvalue is ≈3.297 with no golden ratio (R241).
-- **The dependency graph:** Two-lookback forcing chain structure is generic — most proof chains have multi-premise steps. The Fibonacci recurrence is distinguished by additive self-reference (the operation), not by DAG shape.
+### Q2: Does the Fibonacci recurrence appear in the dynamics? → No (R216)
 
-### Q7: φ-Eigenvalue Systems in Nature and the I Ching — CLOSED (R241)
+The nuclear (互) orbit structure is entirely F₂-linear: rank 4 kernel, uniform branching (4 preimages per image node), basin sizes 16:16:32 forced by complement symmetry. No Fibonacci counts in orbit lengths, transient lengths, branching ratios, or basin sizes.
 
-φ in the 克 spectrum is basis-dependent. The cube-edge partition (R198) varies under GL(3,F₂): 克 structure ranges from P₄∪P₄ (standard basis, with φ eigenvalues) to P₈ to P₂∪P₂∪P₄. Only S₃ ⊂ GL(3,F₂) (6/168 elements) preserves Hamming structure. The basis-independent (fiber-lifted) 克 graph has dominant eigenvalue ≈3.297 with no golden ratio. φ belongs to the 0.5-bit presentational layer identified by the uniqueness theorem — the same layer as the specific basis choice, single-line mutations, and the P₄ path structure. The class of φ-eigenvalue systems does not contain the I Ching's 五行 dynamics at the structural (orbit) level.
+### Q3: Why does 13 sit at the boundary? → Group-theoretic (R218)
+
+960 = 2⁶ × 3 × 5. The factor 5 traces to |GL(4,F₂)| = 20160, not to Fibonacci structure.
+
+### Q4: F(9)=34, F(10)=55 — Do They Appear? → Absent (R239)
+
+F(9)=34 and F(10)=55 absent from all 125 structural counts. Fibonacci presence confined to {1,2,3,5,8,13}. Consistent with Q8 framing: Fibonacci numbers appear only in the small-number zone where sequences overlap.
+
+### Q5: The φ-克 connection and Fibonacci growth → Tautological (R217)
+
+spec(P₄) ⊃ spec(Fibonacci matrix) via bipartite doubling — both involve 2cos(kπ/5). Mathematical identity, not structural connection.
+
+### Q6: The Shared Eigenstructure → Localized to Carmichael (R238, R240, R241)
+
+The forcing chain and Fibonacci agree at n=3 because Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2) and the orbit formula independently select n=3. Sparsity: P(all four parameters Fibonacci) ≈ 0.3%, bottlenecked by Carmichael. Consecutiveness forced once all-Fibonacci holds in [2,8]. Complement involution on 克 produces generic Z₅ eigenvalues, not Fibonacci-specific.
+
+The localization is precise but does not explain *why* two independent constraints (orbit rigidity, Fibonacci powers) terminate at the same n. R244 shows algebraic simplicity doesn't predict ubiquity. The small-number density explanation (exponential constraints generically resolve at small values where sequences overlap) is the current best framing but has not been formally tested.
+
+Remaining observations:
+- φ in the 克 cube-edge spectrum (R198) is basis-dependent — presentational layer, not orbit-invariant. Basis-independent dominant eigenvalue ≈3.297 (R241).
+- Two-lookback forcing chain structure is generic to multi-premise proofs, not Fibonacci-specific.
+
+### Q7: φ-Eigenvalue Systems in Nature → No shared spectral class (R241); shared Z₅ mechanism with quasicrystals (R246)
+
+φ in the 克 spectrum is basis-dependent (R241). At the orbit level, the I Ching's 五行 dynamics do not belong to a φ-eigenvalue spectral class.
+
+However, R246 shows the I Ching shares the Z₅ representation theory mechanism with five-fold quasicrystals and Penrose tilings. Both systems have φ because both have five-element cyclic structure: cos(2π/5) = (φ−1)/2. The proof is that 8-fold quasicrystals use √2 instead, 7-fold use 2cos(π/7) — the algebraic number is determined by symmetry group. The connection is real at the mechanism level but differs in structural status: quasicrystal φ is a physical observable; I Ching φ is presentational (R241).
 
 ---
 
 ## References
 
-- `fibo/findings.md` — R215–R241
+- `fibo/findings.md` — R215–R245
 - `iching/eastwest/findings.md` — Route A/B, cyclotomic structure (R181–R214)
 - `iching/unification/synthesis-3.md` — uniqueness theorem, orbit formula
 - `iching/deep/number-structure.md` — the {2,3,5} prime architecture

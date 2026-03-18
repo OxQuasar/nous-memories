@@ -747,22 +747,24 @@ Both are theorems. Both select n=3. The remaining alignments (2∈F, 3∈F, 5∈
 
 ## Final Synthesis
 
-Twelve iterations. 28 results (R215–R243, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, the Fibonacci coincidence is localized to Carmichael's theorem, and φ in the 克 spectrum belongs to the 0.5-bit presentational layer.
+Fourteen iterations. 30 results (R215–R245, R215 amended). Entry point: are the I Ching's parameters {2,3,5,8} structurally Fibonacci? Terminal finding: the ~16 opposition dimensions are irreducibly holistic, the Fibonacci coincidence is localized to Carmichael's theorem, φ in the 克 spectrum belongs to the 0.5-bit presentational layer, and φ's cross-system ubiquity decomposes into Hurwitz ubiquity (nature) and small-number ubiquity (I Ching) with no shared mechanism.
 
-**Phase 1 (iterations 1, 9, 10):** The Fibonacci alignment is a mechanism-independent coincidence with probability ~0.3%, localized to Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The forcing chain's mechanism is exponential/primality, not additive self-reference. The orbit formula and Carmichael independently select n=3. 34 and 55 absent from all structural counts. Complement involution on the 克 cycle produces generic Z₅ eigenvalues, not the Fibonacci polynomial. The cube-edge partition and its φ eigenvalues are basis-dependent (0.5-bit presentational layer). R215–R218, R238–R241.
+**Phase 1 (iterations 1, 9, 10, 14):** The Fibonacci alignment is a mechanism-independent coincidence with probability ~0.3%, localized to Carmichael's theorem (2³=8 is the last non-trivial Fibonacci power of 2). The forcing chain's mechanism is exponential/primality, not additive self-reference. The orbit formula and Carmichael independently select n=3. 34 and 55 absent from all structural counts. Complement involution on the 克 cycle produces generic Z₅ eigenvalues, not the Fibonacci polynomial. The cube-edge partition and its φ eigenvalues are basis-dependent (0.5-bit presentational layer). Algebraic simplicity (Mahler measure) does not predict ubiquity (R244) — φ's ubiquity decomposes into Hurwitz ubiquity (CF extremality, driving φ-in-nature) and small-number ubiquity (Fibonacci density at n=3, driving φ-in-the-I-Ching), with no shared mechanism (R245). R215–R218, R238–R241, R244–R245.
 
-**Phase 2 (iterations 2–8):** Positive characterization of the ~16 cross-model-stable opposition dimensions. Decomposed along every available axis:
+**Phase 2 (iterations 2–8, 11–13):** Positive characterization of the ~16 cross-model-stable opposition dimensions. Decomposed along every available axis:
 
 - **Accessible:** Text length captures ~1 of ~16 dims (R219). Opposition is vocabulary-diffuse (R220), not vocabulary-opaque.
 - **Independent:** Three organizational principles — text length, d=1 differentiation, d=6 complement opposition — are mutually independent (R233, R235). The V-shape peaks arise from separate mechanisms.
-- **Coupled:** Two distance-specific, opposite-sign couplings with complement opposition: d=2 negative (R236, ρ ≈ −0.30, 3/4 bivariate, 2/4 permutation-significant) and d=3 positive (R243, ρ ≈ +0.22, 4/4 same sign, 3/4 permutation-significant). Both independent (partial correlations), text-specific (permutation test), and non-decomposable.
+- **Coupled:** Two distance-specific, opposite-sign couplings with complement opposition: d=2 negative (R236, ρ ≈ −0.30, 3/4 bivariate, 2/4 permutation-significant) and d=3 positive (R243, ρ ≈ +0.22, 4/4 same sign, 3/4 permutation-significant). Both independent (partial correlations), text-specific (permutation test), not text-length mediated, and non-decomposable. Combined composite predicts comp_opp at ρ ≈ −0.43. No atlas feature clusters the composite (0/10 significant).
 - **Bounded:** Cross-layer comparison confounded by genre (R225). Opposition mostly holistic across positions (R228–R229) with pair-specific exceptions (R231). Reversal non-significant (R237).
 
-**Central characterization:** Non-decomposability confirmed across five independent factoring axes (R167, R170, R210, R220, R236). The thematic manifold resists factoring not because the right decomposition hasn't been found, but because the texts compose meaning holistically.
+**Central characterization:** Non-decomposability confirmed across ten independent factoring axes: opposition direction (R167), algebraic grouping (R170), perturbation direction (R210), vocabulary features (R220), trigram components (R236), distance specificity (iterations 11–12), partial correlations (iteration 12), permutation (iteration 12), text-length mediation (iteration 13), atlas-feature clustering (iteration 13). The thematic manifold resists factoring not because the right decomposition hasn't been found, but because the texts compose meaning holistically.
 
 **Methodological boundary reached:** Embedding paradigm at resolution limit (~15% architecture-dependent, R213). Further computation probes below the noise floor.
 
-**All questions closed.** Q1–Q7. Q4 (R239), Q6 (R238, R240, R241), Q7 (R241). No open questions remain.
+**All questions closed.** Q1–Q8. Q4 (R239), Q6 (R238, R240, R241), Q7 (R241), Q8 (R244, R245). No open questions remain.
+
+**Text-algebra interface:** The d=2/d=3 coupling pair (R236/R243) constitutes a continuous-domain bridge in the text-algebra interface, complementing the two categorical bridges (凶×basin, 吉×生体). Three known bridges total — two categorical (vocabulary token × algebraic feature) and one continuous (embedding distance × complement opposition, two-component). These are the only points where the algebraic structure demonstrably touches the textual content. The interface is sparse.
 
 ---
 
@@ -1019,3 +1021,136 @@ Null distribution means are not zero (range −0.03 to −0.08) — reflects bas
 - The bivariate/permutation discrepancy (d=3: 1/4 bivariate vs 3/4 permutation) reflects different nulls and is expected at low effect sizes. The permutation test is more informative for text-specificity questions.
 - The d=2/d=3 sign opposition was invisible in R236 (which only tested d=1 and d=2). The full distance profile (iteration 11) and partial correlation analysis (this iteration) were both necessary to reveal it.
 - Script: `memories/iching/fibo/partial_and_permutation.py`
+
+## Iteration 13
+
+### Design Phase (Discussion)
+
+**Complete the d=2/d=3 characterization.** Two threads:
+- **Thread A (mediation):** Does text length mediate R236 or R243? R233 established text length is independent of the Hamming V-shape broadly, but not tested for d=2 and d=3 specifically.
+- **Thread B (extremes):** Rank hexagrams by composite z(d2_diff)−z(d3_diff). Check whether extremes cluster by any atlas feature. Report hexagram identities for interpretive inspection.
+
+**Closure criterion:** If Thread A shows no mediation and Thread B shows no clustering → close the opposition manifold work.
+
+### Computation Phase
+
+**Thread A: Text-length mediation — null.**
+
+comp_opp is uncorrelated with text length (ρ ≈ −0.03 to −0.08, all p > 0.5). d2_diff and d3_diff show weak negative correlations with text length (longer texts → lower local differentiation) but inconsistent across models. Controlling for text length changes ρ(d2, comp_opp) and ρ(d3, comp_opp) by ≤ ±0.02 in every case. Text length is not a confound for either coupling.
+
+**Thread B: Extremes analysis.**
+
+Composite z(d2)−z(d3) predicts comp_opp at ρ ≈ −0.43 (4/4 models, all p < 0.05). The negative sign means: high composite (d2-distinctive, d3-blending) predicts LESS complement opposition. This follows from the signs of R236 (negative) and R243 (positive) — not a new finding, but confirms the combined prediction.
+
+No atlas feature clusters the composite score:
+
+| Test | p |
+|------|---|
+| ρ(composite, Hamming_weight) | 0.859 |
+| ρ(composite, KW_number) | 0.295 |
+| ρ(composite, rank) | 0.744 |
+| ρ(composite, text_length) | 0.791 |
+| ρ(composite, depth) | 0.949 |
+| KW by palace | 0.648 |
+| KW by basin | 0.157 |
+| KW by surface_relation | 0.916 |
+| KW by Hamming weight | 0.431 |
+
+0/10 tests significant. The d2−d3 composite is purely semantic — lives in the ~15-dimensional residual space, consistent with non-decomposability.
+
+Cross-model consistency: inter-model ρ of composite scores ranges 0.40–0.76.
+
+### Review Phase (Discussion)
+
+**Both threads confirm the existing characterization.** No new result numbers needed.
+
+Thread A: text-length mediation null. Strengthens R236 and R243 as they stand.
+Thread B: combined prediction confirmed (ρ ≈ −0.43). No algebraic clustering. Another data point for non-decomposability.
+
+**Sign clarification:** R236's ρ(d2_diff, comp_opp) < 0 means hexagrams dissimilar to their d=2 neighbors are LESS opposed to their complement. R243's ρ(d3_diff, comp_opp) > 0 means hexagrams dissimilar to their d=3 neighbors are MORE opposed to their complement. These signs are correctly stated in the findings. The d=2/d=3 sign opposition reflects two independent axes of distinctiveness that predict complement opposition in opposite directions.
+
+**Opposition manifold work closes.** The characterization is complete at every tested axis: opposition direction (R167), algebraic grouping (R170), perturbation direction (R210), vocabulary features (R220), trigram components (R236 iteration 8), distance specificity (iteration 11), partial correlations (iteration 12), permutation (iteration 12), text-length mediation (this iteration), and atlas-feature clustering (this iteration). Every decomposition returns the same answer: holistic, non-decomposable, algebraically opaque.
+
+### Results
+
+No new result numbers. R236 and R243 updated with text-length and clustering characterizations.
+
+### Operational Notes
+
+- The sign confusion (captain predicted high composite → more complement-opposed; data shows the opposite) arose from conflating "locally distinctive" with "globally opposed." These are different properties — the d=2/d=3 sign opposition makes this explicit.
+- Post-hoc examination of specific hexagrams in the top/bottom 10 was declined — this would be pattern-matching on n=10 without correction for interpretive degrees of freedom, violating the methodological norm established after R191's retraction.
+- Script: `memories/iching/fibo/d2d3_characterization.py`
+
+## Iteration 14
+
+### Design Phase (Discussion)
+
+**Reopened Q8 — the last open question.** Q8 asked whether φ's appearances across systems (I Ching, phyllotaxis, quasicrystals) share a common cause beyond "tight constraints in small parameter space."
+
+**Three hypotheses explored in discussion:**
+
+1. **"Tight constraints, small parameters"** — the original Q8 framing. Sage argued this dissolves on contact with precision: abstracting away mechanism makes different systems look similar, but the mechanism is the whole story. Phyllotaxis uses CF extremality (continuous optimization), quasicrystals use Z₅ algebraic identity, the I Ching uses neither (Carmichael + orbit formula). Without precise definitions, unfalsifiable; with them, tautological.
+
+2. **"Algebraic simplicity → ubiquity"** — sage proposed that φ's three "doors" (CF minimality, Z₅ eigenvalue, recurrence growth) are manifestations of algebraic minimality. If Mahler measure (standard algebraic complexity) correlates monotonically with ubiquity measures, φ's prominence is explained by being the simplest non-cyclotomic quadratic.
+
+3. **"Two independent phenomena, no shared mechanism"** — the alternative: φ-in-nature and φ-in-the-I-Ching use different properties of φ with no common thread.
+
+**Sage's key analytical contribution:** Decomposed φ's appearances into three independent mathematical properties: (1) CF minimality (most irrational number, Hurwitz constant), (2) algebraic identity with Z₅ (cos(2π/5) = (φ−1)/2), (3) recurrence growth rate (dominant eigenvalue of x²−x−1). Predicted these would correlate monotonically with Mahler measure.
+
+**Computation designed:** Build an algebraic simplicity table for 8 notable algebraic integers ranked by Mahler measure, with columns for CF convergence rate, real cyclotomic conductor, and recurrence complexity. Test monotone correlation.
+
+### Computation Phase
+
+**Algebraic simplicity table (8 constants):**
+
+| Constant | Min. Poly | Mahler | CF GM | Conductor | Rec.Ord | Rec.|Σc| |
+|---|---|---|---|---|---|---|
+| Lehmer's number | degree 10 | 1.176 | 3.339 | ∞ | 10 | 8 |
+| Plastic ρ | x³−x−1 | 1.325 | 2.490 | ∞ | 3 | 2 |
+| φ | x²−x−1 | 1.618 | **1.000** | **5** | **2** | **2** |
+| √2 | x²−2 | 2.000 | 2.000 | 8 | 2 | 2 |
+| √3 | x²−3 | 3.000 | 1.414 | 12 | 2 | 3 |
+| 2cos(2π/7) | x³+x²−2x−1 | 2.247 | 3.749 | 7 | 3 | 4 |
+| Silver ratio | x²−2x−1 | 2.414 | 2.000 | 8 | 2 | 3 |
+| √5 | x²−5 | 5.000 | 4.000 | 5 | 2 | 5 |
+
+**Spearman correlations (Mahler rank vs other measures):**
+- vs CF convergence: ρ = +0.14, p = 0.74
+- vs Recurrence complexity: ρ = −0.02, p = 0.96
+- vs Conductor (cyclotomic only): ρ = +0.37, p = 0.47
+
+**All correlations essentially zero.** The measures are nearly orthogonal.
+
+**The surprise: sage's prediction was refuted.** φ ranks 3/8 by Mahler measure (behind Lehmer's number and plastic number), but 1/8 on CF convergence (theoretical minimum: all partial quotients = 1) and tied 1/8 on recurrence simplicity. Lehmer's number (M=1.176, algebraically "simplest") is obscure in mathematics. The plastic number (M=1.325) appears in a few specialized contexts. Neither approaches φ's ubiquity.
+
+### Review Phase (Discussion)
+
+**Sage assessment of the refutation:**
+
+The "algebraic simplicity → ubiquity" hypothesis fails because Mahler measure doesn't predict ubiquity. What DOES predict φ's ubiquity is its continued fraction property: φ = [1;1,1,1,...] is the unique "most irrational" number (all partial quotients = 1). This is the Hurwitz constant — the worst case for Diophantine approximation.
+
+**Sage's correction on independence:** The three properties aren't fully independent — they're linked through degree. CF extremality (all-1 partial quotients) is a degree-2 phenomenon. It forces small coefficients in the minimal polynomial, which forces small Mahler measure within the quadratic class. φ IS the Mahler-minimal non-cyclotomic quadratic. But higher-degree polynomials can achieve smaller Mahler measure (Lehmer's degree-10 number has M=1.176 < φ's 1.618) without having CF extremality. So CF extremality → small Mahler measure at degree 2, but the reverse doesn't hold.
+
+**φ's ubiquity decomposes into two phenomena:**
+
+1. **Hurwitz ubiquity**: φ appears in nature wherever systems optimize against rational approximation (phyllotaxis, quasicrystals, KAM theory). This is one theorem (Hurwitz) applied across physics. The mechanism is CF extremality — a property specific to x²−x−1.
+
+2. **Small-number ubiquity**: Fibonacci numbers are dense in the small-integer zone. The I Ching's parameters land there because the orbit formula forces n=3, and Carmichael's theorem makes 2³=8 the last non-trivial Fibonacci power of 2. φ doesn't enter the mechanism — the parameters are Fibonacci numbers, not φ itself.
+
+**The I Ching has no connection to the Hurwitz property.** Its two φ-connections are: (a) parameters being Fibonacci → Carmichael → no CF content, (b) 克 eigenvalue → Z₅ representation theory → basis-dependent (R241) → no CF content. Neither involves Diophantine approximation.
+
+**Q8 resolution:** Three hypotheses tested. "Tight constraints, small parameters" dissolves (unfalsifiable/tautological). "Algebraic simplicity → ubiquity" refuted (R244). "Two phenomena, no shared mechanism" confirmed (R245). No common cause between φ-in-the-I-Ching and φ-in-nature.
+
+### Results
+
+| # | Finding | Tier | Status |
+|---|---------|------|--------|
+| R244 | Algebraic simplicity (Mahler measure) does not predict mathematical ubiquity. φ ranks 3/8 by Mahler measure among tested algebraic integers, behind Lehmer's number (1.176) and the plastic number (1.325). Spearman correlations between Mahler rank and CF convergence (ρ=+0.14), recurrence complexity (ρ=−0.02), cyclotomic conductor (ρ=+0.37) — all non-significant. φ is unique in combining CF extremality (rank 1/8, theoretical minimum) with low Mahler measure (rank 3/8). CF extremality is specific to x²−x−1, not a generic property of algebraic simplicity | Measurement | New |
+| R245 | φ's cross-system ubiquity decomposes into two independent phenomena with no shared mechanism. (1) Hurwitz ubiquity: φ is the unique worst case for Diophantine approximation (CF = [1;1,1,...], Hurwitz constant √5). Drives phyllotaxis, quasicrystals, KAM theory — all systems optimizing against rational approximation. (2) Small-number ubiquity: Fibonacci numbers dense in small-integer zone; I Ching parameters land there via orbit formula + Carmichael's theorem. The I Ching has no connection to the Hurwitz property. Neither Fibonacci parameter alignment (Carmichael) nor 克 eigenvalue (Z₅, presentational/R241) involves CF extremality | Measurement | New |
+
+### Operational Notes
+
+- The sage predicted monotone correlation between Mahler measure and ubiquity measures. The prediction was refuted — the first failed prediction from the sage across 14 iterations of this workflow. The failure was productive: it distinguished CF extremality (a specific property of x²−x−1) from algebraic simplicity (a generic property of small polynomials).
+- The "decompose by property, then test correlation" methodology is reusable: when a mathematical constant appears across systems, ask "which property of this constant does each system select for?" and build a comparison table. If the answers vary, the "ubiquity" is illusory.
+- Hurwitz's theorem (1891) gives the sharp constant √5 in the approximation bound |α − p/q| < 1/(√5·q²), with φ as the worst case. φ's natural appearances reduce to this single theorem applied in different physical contexts. The "mystery of φ in nature" is largely the mystery of why many physical systems optimize against rational approximation.
+- Script: `memories/iching/fibo/algebraic_simplicity.py`
