@@ -1,0 +1,91 @@
+====================================================================================================
+  Script 20: C1 Breakthrough EV Computation
+  Data: IS period Jul 2025 - Feb 2026
+====================================================================================================
+
+  BLOCK 1: C1 Episode Statistics
+----------------------------------------------------------------------------------------------------
+  Total C1 episodes: 204
+  Breakthroughs (→C3): 46 (22.5%)
+  Failures (→C0):      158 (77.5%)
+
+  Duration (hours):
+    All:          min=0.1  Q1=3.0  median=6.1  Q3=9.1  max=23.5  mean=6.6
+    Breakthroughs: mean=6.7h  median=5.1h  (n=46)
+    Failures:      mean=6.6h  median=6.2h  (n=158)
+
+  Price change during C1 episode (%):
+    Breakthroughs: mean=1.050%  median=0.630%  std=1.444%
+    Failures:      mean=-0.256%  median=-0.188%  std=1.098%
+    Unconditional: mean=0.039%
+
+  BLOCK 2: Logistic Model Calibration Check
+----------------------------------------------------------------------------------------------------
+  Overall AUC: 0.533
+
+  P(bt) distribution:
+    min=0.0030  Q1=0.0076  median=0.0090  Q3=0.0116  max=1.0000
+
+  Bin               n   BT rate   Mean ΔP%    BT mean   Fail mean
+  -----------------------------------------------------------------
+  [0.0, 0.1)    187     21.9%     -0.056     +0.907      -0.327
+  [0.1, 0.2)      0         —          —          —           —
+  [0.2, 0.3)      2      0.0%     +0.072          —      +0.072
+  [0.3, 0.4)      2      0.0%     +0.632          —      +0.632
+  [0.4, 0.5)      2     50.0%     +1.122     +2.318      -0.075
+  [0.5, 0.6)      0         —          —          —           —
+  [0.6, 0.7)      0         —          —          —           —
+  [0.7, 0.8)      1    100.0%     -1.000     -1.000           —
+  [0.8, 0.9)      0         —          —          —           —
+  [0.9, 1.0)     10     30.0%     +1.580     +3.265      +0.858
+
+  BLOCK 3: EV Computation by Confidence Threshold
+----------------------------------------------------------------------------------------------------
+  Fee: 0.18% round-trip
+  EV = (bt_rate × mean_bt_move) + ((1 - bt_rate) × mean_fail_move) - 0.18%
+
+  Threshold      n   BT rate   BT move  Fail move        EV  EV>0?  trades/mo
+  ---------------------------------------------------------------------------
+  P>0.1         17     29.4%    +2.223     +0.612    +0.905    YES        2.4
+  P>0.2         17     29.4%    +2.223     +0.612    +0.905    YES        2.4
+  P>0.3         15     33.3%    +2.223     +0.720    +1.041    YES        2.1
+  P>0.4         13     38.5%    +2.223     +0.741    +1.131    YES        1.9
+  P>0.5         11     36.4%    +2.199     +0.858    +1.166    YES        1.6
+  P>0.6         11     36.4%    +2.199     +0.858    +1.166    YES        1.6
+  P>0.7         11     36.4%    +2.199     +0.858    +1.166    YES        1.6
+  P>0.8         10     30.0%    +3.265     +0.858    +1.400    YES        1.4
+  P>0.9         10     30.0%    +3.265     +0.858    +1.400    YES        1.4
+
+  Baseline (all C1): n=204, BT rate=22.5%, BT move=+1.050%, Fail move=-0.256%, EV=-0.141%
+
+  BLOCK 4: Practical Assessment
+----------------------------------------------------------------------------------------------------
+  POSITIVE EV FOUND at P>0.8
+    n=10 trades, BT rate=30.0%, EV=+1.400%/trade
+    Expected: 1.4 trades/month
+    Expected monthly EV: +2.000%
+
+  CAVEATS:
+    - This measures C1 episode price change only (entry at C1 start, exit at C1 end)
+    - Does NOT include potential C3 continuation
+    - In-sample: logistic was fit on OOS 2023-2024 data, tested here on IS 2025-2026
+    - v3.2 used P>0.50 with 0.5 exposure and produced -13.38% — but that had
+      interaction effects with the long logic. This evaluates C1 trades in isolation.
+    - Small n in high-confidence bins: results are noisy
+
+  COMPARISON TO v3.2
+  v3.2 entered C1 at 0.5 exposure when P(bt)>0.50: -13.38% over 16 weeks
+  That failure had two causes:
+    1. Interaction: 0.5 exposure in C1 degraded subsequent C3 capture
+    2. Fee drag: 72 C1 trades x 0.18% = 12.96% in fees alone
+  This script evaluates C1 in ISOLATION (no interaction) and at FULL SIZE
+  Result: Positive EV in isolation
+
+====================================================================================================
+  VERDICT
+====================================================================================================
+  C1 anticipatory entry shows positive EV in isolation at high confidence.
+  However, small n in high-confidence bins means this needs validation.
+  Next step: verify in simulator as a standalone trade type.
+
+====================================================================================================

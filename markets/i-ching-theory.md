@@ -192,3 +192,5 @@ Then scores.
 - Can the model learn the 真/形色 distinction from outcomes alone, or does it need human-annotated reasoning about *why* signals were real or apparent?
 - Does the interface asymmetry principle (most time is background, rare periods carry signal) help with class imbalance in training?
 - What's the right base model size for this narrow task?
+
+note: 18 was the start of the last run - **Hexagram content.** The 384 line texts describe human situations in ancient Chinese agricultural society. They don't describe markets.

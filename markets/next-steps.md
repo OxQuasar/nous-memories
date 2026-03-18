@@ -1,67 +1,77 @@
 # Next Steps: Regime Model Development
 
-## Current State — v3.0 Baselined, Boundary Study Cycle 1 Complete
+## Current State — Directional Trading Research COMPLETE, No Tradeable Edge Found
 
-4-regime directed cycle validated across BTC and ETH. Strategy v3.0 (long-only, +4.18% over 16 weeks) establishes baseline. Edge is thin (2:1 edge-to-fee) and concentrated in XC1 exits. First boundary study cycle complete: →C2 outcome fully characterized, real signal found but not actionable at current fees.
+All directional trading avenues for the 2-bit regime model have been systematically tested and closed:
 
-### The Loop
+| Avenue | Result | Evidence |
+|--------|--------|----------|
+| C3 confirmed entry (v3.0) | Gross negative (−0.555%) | Script 19 |
+| C2 exit filter | Real signal, negative EV | Script 17c |
+| C3 entry quality | Clean null (24 indicators) | Script 18 |
+| C1 breakthrough EV | Logistic at chance at entry | Script 20 |
+| C0 shorts (v3.1) | Interaction degraded longs | Strategy log |
+| C1 entry (v3.2) | Value trap, −13.38% | Strategy log |
+| Longer timescale (24h/96h) | Exit signal collapses (2.8pp gap) | Findings §6 |
 
-```
-1. Study boundaries (analysis)
-2. Refine model and strategy
-3. Backtest strategy
-4. Find weaknesses
-5. Back to 1
-```
-
-This is the main work. Keep looping and refining. Each cycle produces: one analysis, one insight (or confirmed negative), and either a strategy change or a documented reason not to change.
+The 2-bit regime model is a **validated state classifier** (K=4 topology, AUC 0.957+, cross-asset) that does not produce a tradeable directional strategy at current timescales and fees. Its value is in state classification — risk labeling, position sizing — for strategies that source their edge elsewhere.
 
 ---
 
-## Next Cycle: →C3 Entry Quality Study
+## Why Directional Trading Failed
 
-### Question
-Can we time entries better within confirmed C3 (bull)? Improve gross/trade without adding trades.
+### Core failure: state identification ≠ tradeable edge
+The regime model correctly identifies market states — topology is validated, transition structure is real, exit AUCs are high. But:
+- C3 episodes are too noisy to extract consistent profit (mean price change ≈ 0%)
+- XC1 exits (the supposed edge source) are 56% WR on full sample (not 70%)
+- 3 outlier wins (+24.67%, +20.89%, +10.26%) drive the XC1 total positive
+- XC0 exits bleed −1.88%/trade on 31 trades, overwhelming any XC1 edge
 
-### Why this is next
-- Targets per-trade quality, not trade count (avoids the fee trap discovered in cycle 1)
-- C3 entry quality doesn't create extra trades — it modifies existing entry timing
-- 189 C3 episodes available in IS data
-- The boundary study design (boundary-study.md) already scopes this as priority #2
+### Structural impossibility: entry-bar prediction with trend indicators
+Scripts 18 and 20 converge on one structural insight: **backward-looking trend indicators at regime entry contain no forward-predictive information about episode quality.** At regime entry, the defining trend variable has *just* crossed its threshold — its magnitude is minimal and uninformative. The logistic models work at exits (AUC 0.96+) precisely because by exit time, the trend has developed magnitude. This generalizes: any proposal to predict episode quality from entry-bar snapshots of OLS trends, vol, CVD, or microstructure is pre-closed. Entry-time prediction requires a fundamentally different information source.
 
-### Approach
-Same framework as →C2 study: snapshot indicators at C3 entry, split by outcome metric (trade PnL, duration, exit type), rank by AUC. But the outcome variable is different — not binary (C3 doesn't have a simple success/fail), so needs duration or PnL-based outcome definition.
+### Duration unpredictability
+The model tells you *what state you're in*, not *how long you'll stay there*. Sub-6h episodes lose money (−0.49% mean) but no entry-bar indicator predicts duration (Script 18).
 
-### Open questions before execution
-- What's the right outcome variable? Episode duration? Price change during episode? Next exit type (XC1 vs XC0)?
-- Should we condition on entry context (which regime preceded C3)?
-- Which indicator groups? Same initial set (trends, vol, CVD) or expand to microstructure/order flow?
+---
+
+## Pivot: Regime Model as Infrastructure
+
+The regime model's value is as a **risk overlay**, not a signal source. The question shifts from "how to trade regimes" to "what strategy sources its own edge, and how does regime-conditioned sizing/filtering improve it?"
+
+### Concrete pivot path
+1. **Risk overlay for other strategies:** Regime-conditioned position sizing, stop placement, or entry gating for strategies with independently-sourced edge
+2. **Different asset/fee structure:** The model may work on lower-fee venues or assets with larger regime moves
+3. **Non-directional uses:** Vol regime classification for options strategies, funding rate arbitrage gating
+
+### Model extension backlog (flagged: these don't address the core failure)
+These items enrich the state classifier but do NOT solve entry-timing — they would still face the same structural impossibility of entry-bar prediction:
+- **Multi-indicator regime:** Richer state using vol/order flow → better labeling, same entry problem
+- **Transition probability refinement:** Conditional base rates → better probability estimates, same entry problem
+- **Temporal patterns:** Session-based transition rates → incremental, doesn't change entry economics
 
 ---
 
 ## Ideas Backlog
 
-### Strategy Refinements
-- ~~**C2 early exit:** Filter bad pullbacks using intermediate trends~~ → DONE (Cycle 1: real signal, not actionable at current fees)
-- **C3 entry timing:** Microstructure signals for better entry within confirmed bull ← NEXT
-- **Position sizing:** Scale by transition quality (trend magnitude, vol level, order flow confirmation)
-- **C0 shorts (isolated):** Separate execution from long logic, 6h+ duration filter, context-gated
-- **C1 breakthrough entry redesign:** Fix the value trap (full size or nothing, not 0.5/1.0 split)
-- **Duration filter:** Sub-6h episodes are noise — filter or weight by expected duration
+### Closed — Directional Trading (all avenues exhausted)
+- ~~C2 early exit~~ → DONE (Cycle 1: real signal, negative EV at current fees)
+- ~~C3 entry timing~~ → DONE (Cycle 2: clean null, 24 indicators)
+- ~~v3.0 deployment~~ → DONE (Script 19: no edge, −36.76%)
+- ~~C1 breakthrough EV~~ → DONE (Script 20: logistic AUC=0.533 at entry)
+- ~~Position sizing~~ → Moot (no base edge to scale)
+- ~~Duration filter~~ → Confirmed effect, not predictable at entry
+- ~~C0 shorts~~ → Interaction-degraded in v3.1; isolated evaluation would face same entry-timing problem
+- ~~Longer timescale (24h/96h)~~ → Exit signal collapses (Findings §6)
 
-### Model Extensions
-- **Multi-indicator regime:** Replace 2-bit sign with richer state using vol/order flow
-- **Transition probability refinement:** Condition base rates on indicator context (not all C2s are equal — we now know trend_24h differentiates them, even if not actionable)
-- **Temporal patterns:** Do certain hours/sessions have different transition probabilities?
-- **Failure clustering:** Do bad C2 outcomes cluster in time? (risk management)
-
-### Validation
-- **Full IS backtest:** Run current strategy on full Jul 2025 – Feb 2026 for 45+ trades and statistical confidence
-- **Additional assets:** PENGU (different vol profile), traditional markets (different microstructure)
-- **Forward reconciliation:** 2.17% gap between FuturesPM and TradeCapture on forward data
+### Open — Pivot Track (regime model as infrastructure)
+- **Risk overlay prototype:** Apply regime labels to an independently-edged strategy, measure improvement
+- **Lower-fee venue test:** Same model, different fee structure — does the math change?
+- **Failure clustering analysis:** Do bad outcomes cluster in time? (risk management value even without directional edge)
+- **Additional assets:** PENGU (different vol profile), non-crypto (different microstructure)
 
 ### Shelved (Real Signal, Not Actionable)
-- **trend_24h at C2 entry:** AUC 0.765 for C2 outcome, independent of both trend_8h (r=0.036) and trend_48h (r=0.460). Operational split: 85.4% vs 44.4% success rate by sign. But C2 price moves (0.2-0.6%) ≈ fee cost (0.36% RT), so exit filter EV is -6.45%. Becomes actionable if fees decrease or a non-fee-generating use emerges.
+- **trend_24h at C2 entry:** AUC 0.765, independent of trend_8h/trend_48h. But C2 price moves ≈ fee cost → negative EV. Becomes actionable if fees decrease or non-fee use emerges.
 
 ---
 
@@ -86,30 +96,103 @@ C2: P(bull) = σ(5.209 + 14770 × trend_1h + 3485330 × trend_8h)
 C1: P(bt)   = σ(−4.890 + 31380 × trend_1h + 4215050 × trend_8h)
 ```
 
-### v3.0 Baseline
+### v3.0 Results
 
+**Prior baseline (−p 2 rotation, biased sample):**
 | Metric | Value |
 |--------|-------|
 | Total PnL | +4.18% (16 weeks) |
 | Trades | 23 |
 | Win rate | 43% |
 | Gross/trade | +0.36% |
-| Edge-to-fee | 2:1 |
-| XC1 exits | +38.16% (10 trades, 70% WR) |
-| XC0 exits | -33.98% (13 trades, 23% WR) |
+
+**Full IS backtest (complete period):**
+| Metric | Value |
+|--------|-------|
+| Total PnL | **−36.76%** (30 weeks) |
+| Trades | 50 |
+| Win rate | 40% |
+| Gross/trade | **−0.555%** |
+| 95% CI | [−2.47%, +1.36%] |
+| t-test p-value | 0.563 |
+| XC1 exits | +37.62% (18 trades, 56% WR) |
+| XC0 exits | −58.19% (31 trades, 32% WR) |
+| Stop-outs | 1 (−16.19%) |
 
 Strategy: long 1.0 in C3, hold through C2, flat in C0/C1. 8% stop (insurance). 5-min debounce.
+**Verdict: No detectable edge. Prior baseline was sample artifact.**
 
 ### Key Constraints
-- **Fee floor:** 0.18% RT → >0.36% gross/trade minimum
-- **Interaction effects dominate:** v3.1 and v3.2 both degraded core signal through indirect mechanisms
-- **Sub-6h episodes are noise** for trading
-- **The regime model labels states, not timing.** Entry/exit timing is the improvement axis.
-- **C2 episode price moves ≈ fee cost.** Any filter that adds round-trips during C2 is structurally negative EV.
+- **No edge detected:** Full IS backtest shows gross/trade is negative (−0.555%), not just sub-fee
+- **Fee floor:** 0.18% RT → >0.36% gross/trade minimum (strategy doesn't clear even gross=0)
+- **XC1 concentration risk:** 3 outlier wins drive XC1 positive; remove them and total collapses further
+- **Sub-6h episodes are noise** for trading (−0.49% mean) but not predictable at entry
+- **The regime model labels states, not timing.** No entry-bar indicator predicts episode quality
+- **Entry-bar prediction pre-closed:** Backward-looking trend indicators at regime entry carry no forward-predictive info (Scripts 18, 20). Defining trend just crossed threshold → magnitude minimal. Any entry-time prediction requires a fundamentally different information source, not a different indicator in the same family.
+- **C2 episode price moves ≈ fee cost.** Any filter that adds round-trips during C2 is structurally negative EV
+- **Sample artifact:** −p 2 rotation selects specific weeks, producing biased trade subsets
 
 ---
 
 ## DONE
+
+### C1 Breakthrough EV: Logistic at Chance Level (Script 20)
+
+**Finding: NOT ACTIONABLE.** The C1 logistic model (AUC 0.965 for exit prediction) has AUC=0.533 when applied at C1 entry — effectively chance level.
+- 204 C1 episodes: 22.5% breakthrough rate (46→C3, 158→C0)
+- P(bt) distribution: 187/204 episodes at P < 0.10 (logistic says "no info" at entry)
+- P > 0.8 bin: n=10, 30% BT rate — actually *lower* than P > 0.1 bin's 29.4%
+- "Positive EV" at high confidence bins is driven by failures having positive price changes (noise at n=10)
+- Unconditional C1 price change: +0.039% (near zero)
+
+**Mechanistic explanation:** The C1 logistic was designed for EXIT prediction — it measures trend_8h magnitude near the C1→C0/C3 transition point. At C1 *entry*, trend_8h just crossed zero (small positive by construction), so the logistic correctly says "not enough information yet." This is consistent with Script 18's finding that entry-bar snapshots don't predict episode outcomes.
+
+**Closes:** C1 breakthrough EV from ideas backlog. The logistic model cannot be repurposed for entry prediction.
+
+Script: `20_c1_breakthrough_ev.py` | Output: `20_c1_breakthrough_ev_output.txt`
+
+### Full IS Backtest: v3.0 Invalidated (Script 19)
+
+**Finding: NO DETECTABLE EDGE.** 50 trades over full IS period (Jul 2025 – Feb 2026).
+- Mean gross/trade: −0.555% (95% CI: [−2.47%, +1.36%], t-test p=0.563)
+- Total PnL: −36.76% net
+- Wilcoxon p=0.081 (also fails to reject)
+- Prior +4.18% baseline (23 trades, −p 2 rotation) was sample artifact
+- XC1 exits: 56% WR (not 70%), driven by 3 large outliers
+- XC0 exits: 31 trades at −1.88% avg, overwhelming any XC1 edge
+- 1 stop-out at −16.19%; even excluding it, total is −20.57%
+- Temporal split: first half −38.80%, second half +2.04% (unstable)
+
+**Closes:** v3.0 deployment. Strategy does not clear even the gross=0 bar.
+
+Output: `19_full_is_backtest_output.txt`
+
+### Boundary Study Cycle 2: →C3 Entry Quality (Script 18)
+
+**Finding: CLEAN NULL.** No entry-bar indicator predicts C3 episode quality after Bonferroni correction (24 indicators, n=189 episodes).
+
+**Best suggestive signals (sub-Bonferroni):**
+- realized_vol_24h: ρ=−0.20 with episode price change (p_raw=0.006, p_corr=0.14)
+- trend_1h: AUC=0.623 for duration ≥6h (p_raw=0.004, p_corr=0.085)
+
+**Null results (high confidence):**
+- Microstructure (ob_total_ratio, spread_bps, depth_asymmetry, liquidity_shift, ob_imbalance_slope): uniformly AUC ≈ 0.50, no signal
+- All trends (4h, 8h, 16h, 24h, 48h, 96h): |ρ| < 0.19 with price change, all p_corr > 0.25
+- Volume/CVD: null (same as cycle 1)
+- Trend-of-trends: structurally zero in C3 regime (same as C2)
+- Predecessor regime (C2 vs C1): AUC=0.581 for duration, not significant (p_corr=0.24)
+
+**Duration finding (confirmed, not predictable):**
+- Sub-6h C3 episodes: mean price change −0.49%, median −0.37%
+- ≥6h C3 episodes: mean +0.41%, median +0.16%
+- Duration ≥6h fraction: 51.3% (median split near 6h)
+- But no indicator at entry predicts which episodes will be long vs short
+
+**Mechanistic interpretation:** C3 episode quality is exogenously determined during the episode, not endogenously set at entry. The coupled-oscillator model explains this: at C3 entry, the fast trend has committed (positive by construction), and the outcome depends on whether the medium trend stays positive — which is a function of future price action, not current state.
+
+**Closes:** "C3 entry timing" from ideas backlog. Entry-bar snapshot doesn't contain episode quality information.
+
+Script: `18_c3_entry_quality.py` | Output: `18_c3_entry_quality_output.txt`
 
 ### Boundary Study Cycle 1: →C2 Outcome (Scripts 17, 17b, 17c)
 
@@ -135,12 +218,13 @@ Strategy: long 1.0 in C3, hold through C2, flat in C0/C1. 8% stop (insurance). 5
 Scripts: `17_c2_boundary_study.py`, `17b_c2_followup.py`, `17c_c2_filter_ev.py`
 Output: `17_c2_boundary_output.txt`, `17b_c2_followup_output.txt`, `17c_c2_filter_ev_output.txt`
 
-### Strategy Development (Phase 17) — v3.0 BASELINED
+### Strategy Development (Phase 17) — v3.0 INVALIDATED
 
 | Version | Change | Result | Trades | Lesson |
 |---------|--------|--------|--------|--------|
 | v2.1 | 3% stop | -5.59% | 29 | Stop fires during indicator lag |
-| v3.0 | 8% stop + cooldown | **+4.18%** | 23 | Zero stop-outs, regime exits only |
+| v3.0 (−p 2) | 8% stop + cooldown | +4.18% | 23 | Sample artifact (biased week rotation) |
+| v3.0 (full IS) | same | **-36.76%** | 50 | **No edge.** Gross/trade = -0.555% |
 | v3.1 | +C0 shorts (flip) | +1.85% | 92 | Longs degraded, fees killed it |
 | v3.2 | +C1 breakthrough | -13.38% | 97 | Value trap, splits C3 capture |
 

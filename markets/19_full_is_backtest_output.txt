@@ -1,0 +1,94 @@
+====================================================================================================
+  Script 19: Full IS Backtest Statistical Analysis
+  Period: 2025-07-21 to 2026-02-20 (~30 weeks)
+====================================================================================================
+
+  OVERALL RESULTS
+  Total trades: 50
+  Win rate: 20/50 = 40.0%
+  Total PnL (net): -36.76%
+  Mean PnL per trade (net): -0.735% +/- 6.738%
+  Median PnL per trade (net): -1.340%
+  Mean gross per trade: -0.555%
+  Max win: 24.67%  Max loss: -16.19%
+  Mean hold time: 43.7h  Median: 34.9h
+
+  EXIT TYPE DECOMPOSITION
+  XC0 (Bear): 31 trades, avg PnL: -1.877%, total: -58.19%
+    Win rate: 10/31 = 32.3%
+  XC1 (Rev):  18 trades, avg PnL: 2.090%, total: 37.62%
+    Win rate: 10/18 = 55.6%
+  XStop:      1 trades, avg PnL: -16.190%, total: -16.19%
+
+  STATISTICAL TESTS
+  H0: mean gross PnL per trade = 0 (strategy has no edge)
+
+  One-sample t-test (gross PnL vs 0):
+    Mean gross: -0.555%
+    Std dev: 6.738%
+    SE: 0.953%
+    t-statistic: -0.583
+    p-value (two-sided): 0.5628
+    95% CI: [-2.470%, 1.360%]
+    Verdict: FAIL TO REJECT H0 (no edge)
+
+  Wilcoxon signed-rank test (gross PnL vs 0):
+    W-statistic: 457.0
+    p-value (two-sided): 0.0814
+    Verdict: FAIL TO REJECT H0
+
+  One-sample t-test (net PnL vs 0):
+    Mean net: -0.735%
+    t-statistic: -0.772
+    p-value (two-sided): 0.4441
+    95% CI: [-2.650%, 1.180%]
+
+  TEMPORAL STABILITY
+  First 25 trades (Jul-Oct): mean PnL -1.552%, total -38.80%
+  Last 25 trades (Oct-Feb):  mean PnL 0.082%, total 2.04%
+  Both halves negative: NO
+
+  EXCLUDING STOP-OUT (trade #23)
+  Without stop: 49 trades, mean net PnL: -0.420%, total: -20.57%
+  Without stop: mean gross PnL: -0.240%
+  t-test p-value: 0.7950
+
+  PNL DISTRIBUTION (net, all 50 trades)
+    P10: -6.57%
+    P25: -4.00%
+    P50: -1.34%
+    P75: 1.76%
+    P90: 4.06%
+
+  COMPARISON TO PRIOR BASELINE (-p 2, 16 weeks)
+  Prior:   23 trades, +4.18% total, +0.36% gross/trade, 43% WR
+  Full IS: 50 trades, -36.76% total, -0.555% gross/trade, 40% WR
+  The prior baseline was a biased sample (rotation -p 2 selects specific weeks within each month).
+  The full IS run covers the complete Jul 2025 - Feb 2026 period.
+
+  XC1 EXIT DEEP DIVE (where the edge was supposed to be)
+  n=18 XC1 trades
+  Mean PnL: 2.090%  Median: 0.250%
+  Total: 37.62%
+  Win rate: 55.6%
+  Distribution: 3/18 above 5%, 2/18 below -5%
+  Top 3 wins: [np.float64(24.67), np.float64(20.89), np.float64(10.26)]
+  The prior subset showed 10 XC1 trades at 70% WR and +38.16% total.
+  The full IS shows 18 XC1 trades at 56% WR and 37.62% total.
+
+====================================================================================================
+  VERDICT
+====================================================================================================
+  v3.0 gross PnL per trade is NOT significantly different from zero.
+  Mean gross: -0.555% (95% CI: [-2.470%, 1.360%])
+  Point estimate is NEGATIVE — the strategy loses money even before fees.
+  The strategy has no detectable edge on the full IS period.
+
+  The prior +4.18% baseline was a sample artifact:
+  - The -p 2 rotation selected weeks 2 of each month (Oct-Mar)
+  - The full period reveals the strategy is net negative
+  - XC1 exits (the supposed edge) are only 56% WR on the full sample
+  - 3 large wins (+24.67%, +20.89%, +10.26%) drive the XC1 average positive
+  - But 7/18 XC1 trades are losses, and several are large (-6.20%, -6.11%)
+
+====================================================================================================
