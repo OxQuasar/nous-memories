@@ -15,14 +15,14 @@
   - `Q2/` — axiom investigations including Q2 Proper
   - `Q2T2/`, `Q3/`, `T3/` — investigation phases
 - East/West investigation: `memories/iching/eastwest/` — cyclotomic, KW sequence, torus coherence, dynamics, perturbation, cross-architecture replication
-  - `findings.md` — canonical results document (R181–R213)
-  - `exploration-log.md` — iteration-by-iteration log (12 iterations, R181–R213)
-  - `questions.md` — all closed except Q4 (out of scope)
+  - `findings.md` — canonical results document (R181–R214)
+  - `exploration-log.md` — iteration-by-iteration log (12 iterations, R181–R214)
+  - `questions.md` — all questions closed
   - Scripts: `cyclotomic_probe.py`, `kw_sequence_probe.py`, `torus_coherence.py`, `differentiation_principle.py`, `hu_cell_validation.py`, `dynamics_probe.py`, `edge_type_decomposition.py`, `perturbation_directions.py`, `sikuroberta_replication.py`, `pair_concordance.py`
 
-## Research Program Status: (213 results, 1 retracted)
+## Research Program Status: (214 results, 1 retracted)
 
-### Terminal Characterization
+### Characterization
 
 The (3,5) structure is the unique rigid formalization of composable polarity with dual evaluation. One contingency: the group axiom. The thematic manifold has ~16 text-intrinsic opposition dimensions, irreducibly non-algebraic. The system organizes conceptual space for judgment under uncertainty — mathematical, not physical.
 
@@ -44,6 +44,7 @@ The (3,5) structure is the unique rigid formalization of composable polarity wit
 | East/West: φ in dynamics | R197–R209 | φ in cube-edge partition (克=P₄∪P₄). No bridge to text at any resolution |
 | Perturbation directions | R210–R211 | d=1 directions full-rank (hexagram-specific). Partial bit-position alignment |
 | Cross-architecture replication | R212–R213 | Tier 1b confirmed on SikuRoBERTa. ~85% geometry text-intrinsic, ~15% architecture-dependent |
+| Q4 closure | R214 | φ in 5-fold systems trivially affirmative (arithmetic); Route B in nature negative (no known instantiation) |
 
 ### Non-Decomposability Inventory
 
@@ -66,7 +67,7 @@ Forced → Natural → Pervasive → Rich → Opaque → Lexically Invisible →
 - **Tier 1 (theorems):** R85, R75, R87, R102, R108, R171–R174, R181–R187, R197–R205, R207–R208. Mathematical proofs.
 - **Tier 1b (text-intrinsic):** R156–R159, R161–R163, R167–R170, R212, R213 (pair ranking). Cross-model validated across BGE-M3/E5-large/LaBSE/SikuRoBERTa (4 architecturally distinct models). R213 quantifies: ~85% of opposition geometry is cross-architecture invariant.
 - **Tier 2 (measurements):** R151, R164–R166, R176–R179, R189–R190, R192–R196, R206, R209–R211, R213 (angular structure). Method-dependent.
-- **Tier 3 (interpretations):** R175, R180, R188. Revisable.
+- **Tier 3 (interpretations):** R175, R180, R188, R214-Q4b. Revisable.
 - **Retracted:** R191 (surface cell anti-signal — failed cross-model replication).
 
 ### Vulnerability

@@ -18,7 +18,7 @@ At (4,13), the first non-trivial moduli space: 960 orbits classified by Hamming 
 
 The 彖傳 is a systematic anomaly detector on binary structure: 剛/柔 ratio is perfectly monotonic inverse to basin yang-content (Kun 2.14 > Cycle 1.50 > Qian 1.25).
 
-77 results proven or verified across 10 workflows (atlas, atlas-mh, atlas-hzl, deep, unification phases 1–3, semantic-map, kw-final, relations, i-summary). Zero contradictions.
+213 results (1 retracted) across 11 workflows. See reversal/ and eastwest/ for R94–R214. Original 77 results proven or verified across 10 workflows (atlas, atlas-mh, atlas-hzl, deep, unification phases 1–3, semantic-map, kw-final, relations, i-summary). Zero contradictions.
 
 ---
 
@@ -114,6 +114,32 @@ The 彖傳 is a systematic anomaly detector on binary structure: 剛/柔 ratio i
 - **小象 encodes 3-layer hierarchy:** χ²=125, p=5×10⁻²⁶. Zero algebraic signal after position control.
 - **Commentary is non-algebraic:** 大象 imagistic, 彖傳 binary-structural (Z₂), 小象 positional only.
 - **Three historical registers see three primes:** 爻辭 → positions, 小象/彖傳 → Z₂, 五行 → Z₅.
+
+### The thematic manifold (reversal investigation, R94–R180)
+
+> Full details: `reversal/findings.md` (87 results across 19 iterations)
+
+- **~16-dimensional text-intrinsic opposition space.** The 89% residual is a smooth manifold with the complement involution as sole organizing principle. Cross-model validated (BGE-M3, E5-large, LaBSE). Algebraic R² = 10.8–11.0% (model-invariant).
+- **Non-decomposable.** Quadruple dissociation: algebra, vocabulary, 象 categories, and syntactic frames all null against embedding geometry. Trigram decomposition null. All algebraic groupings null against opposition direction.
+- **Forcing chain gap.** One irreducible gap at composability (group axiom). Without it, |S|=6 suffices. With it, (3,5) forced.
+- **Judgment boundary.** Five operations, three phases, designed specification gap. Resonance T1+/T2−/T3−.
+
+### East/West: φ and 五行 across traditions (R181–R214)
+
+> Full details: `eastwest/findings.md` (33 results across 12 iterations)
+
+- **"Address with conditional resonance, no bridge to text."** Two independent routes to φ at (3,5): Route A (cyclotomic, unconditional) and Route B (combinatorial, conditional on 96/240 surjections). Convergence unique at n=3 via identity 2^{n-1}+1 = 2^n−3.
+- **Dimension threshold:** n=2 → p≤3 → dual cycles impossible. Greek system structurally locked out. Pentagon (生) and pentagram (克) are the same Cayley graph read differently.
+- **No bridge to text at any resolution tested.** Five-phase dynamics (生/克) invisible in text embeddings. Route B (φ in 克 subgraph) has no textual correlate.
+- **Cross-architecture replication (R212–R213).** Tier 1b findings replicate on SikuRoBERTa (classical-Chinese BERT). R² two-band: 10.8–11.0% (multilingual) / 13.2% (domain-matched). Opposition geometry is ~85% text-intrinsic, ~15% architecture-dependent (correlating with training-data cultural salience). Four-model consensus across distinct training data, objectives, architectures, and embedding methods.
+
+### Epistemic tiers (full program)
+
+- **Tier 1 (theorems):** R85, R75, R87, R102, R108, R171–R174, R181–R187, R197–R205, R207–R208.
+- **Tier 1b (text-intrinsic, 4-model validated):** R156–R159, R161–R163, R167–R170, R212, R213.
+- **Tier 2 (measurements):** R151, R164–R166, R176–R179, R189–R196, R206, R209–R211.
+- **Tier 3 (interpretations):** R175, R180, R188.
+- **Retracted:** R191.
 
 ---
 

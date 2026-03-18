@@ -1,22 +1,35 @@
 # East/West: Complete Findings
 
 > 12 iterations investigating whether the golden ratio (φ) and 五行 dual cycles share a deep connection.
-> 33 results (R181–R213, one retracted). All questions closed except Q4 (empirical, out of scope).
+> 34 results (R181–R214, one retracted).
 
 ---
 
-## Central Verdict: Address with Conditional Resonance, No Bridge to Text
+## Overall Synthesis
 
-The golden ratio and 五行 dual cycles share the 5th cyclotomic field Q(ζ₅) as their natural mathematical home. Two structurally independent routes produce φ at (3,5): Route A (cyclotomic, unconditional) and Route B (combinatorial, conditional on surjection). The convergence is unique at n=3 via the identity 2^{n-1}+1 = 2^n−3.
+The I Ching carries φ. Not incidentally, not just through the cyclotomic field — it's wired into the destruction cycle's geometry on the binary cube.
 
-At every level tested, the I Ching system uses addresses without using the structures at those addresses:
-- The **texts** use the five-phase *partition* without the five-phase *dynamics* (R192).
-- The **cyclotomic field** hosts both φ and dual cycles without connecting them (R188).
-- The **cube-edge partition** contains φ in the 克 subgraph, but this has no textual correlate (R209).
+Two independent routes produce φ at (3,5). Route A is cyclotomic (top-down, generic to all 240 surjections). Route B is combinatorial (bottom-up, specific to 96/240 surjections including the I Ching's). The two routes converge uniquely at n=3 via the identity 2^{n−1}+1 = 2ⁿ−3, which has exactly one solution. The I Ching sits at the unique point where both routes produce φ simultaneously.
+
+The structural parameters are four consecutive Fibonacci numbers: 2, 3, 5, 8 = F(3)–F(6). Each is derived independently through the forcing chain, but the numerical output satisfies the Fibonacci recurrence: 2+3=5, 3+5=8, 5+8=13. The next Fibonacci number F(7)=13 is precisely where rigidity breaks (960 orbits). φ = lim F(n+1)/F(n) is both the limit of the sequence that generates the parameters and an eigenvalue inside the structure itself.
+
+Three layers of structure:
+
+**The algebra** carries φ through the 克 cycle. The 6 克 edges on the trigram cube form two P₄ paths with eigenvalues {φ, 1/φ, −1/φ, −φ}. The 生 cycle does not carry φ (4 edges, P₃, no golden ratio eigenvalue). Destruction is geometrically richer than generation.
+
+**The texts** do not see the dynamics. The 五行 relational labels (生/克/比和) carry no semantic information (R192). The 11% algebraic variance is static (grouping), not dynamic (relating). The texts use the partition without the cycles. The bridge between φ and textual meaning has not been found.
+
+**The cross-cultural picture** is precise. The Greek system (n=2, F₂²) is structurally locked out of dual-cycle dynamics — Z₃ has only one Hamiltonian cycle. The pentagram is the 克 Cayley graph Cay(Z₅,{±2}), with edge ratio φ. The Greeks studied its spectral structure (geometry, proportions). The Chinese studied its adjacency structure (生/克 dynamics). Same graph, different readings, neither tradition computed both.
+
+**What remains open:** The connection between φ, the I Ching, and natural systems may be at the level of *process* rather than *classification*. The T3 test asked "does nature have five phases?" (No.) The unasked question: "do the I Ching and nature share the same deep structure — self-referential sequential change — with φ as its signature?" The Fibonacci recurrence (next = current + previous) describes both natural growth and the I Ching's forcing chain. φ is the eigenvalue of both. Whether this is coincidence at small numbers or a structural identity is the open thread. See `fibo/questions.md`.
 
 ---
 
-## The Dimension Threshold (R181–R182)
+## Detailed Findings
+
+---
+
+### The Dimension Threshold (R181–R182)
 
 Binary encoding + dual cycles requires dimension n ≥ 3.
 
@@ -31,7 +44,7 @@ The Greek quaternary system (F₂², 4 elements from 2 binary qualities) structu
 
 ---
 
-## The Cyclotomic Structure (R183–R187)
+### The Cyclotomic Structure (R183–R187)
 
 ### Universal Trace Formula (R183)
 
@@ -62,7 +75,7 @@ The Cayley graph framing is presentation, not content — the identification Cay
 
 ---
 
-## Textual Findings (R189–R196)
+### Textual Findings (R189–R196)
 
 ### King Wen Ordering: Semantic, Not Algebraic (R189–R190)
 
@@ -93,7 +106,7 @@ The nuclear hexagram's element cell (互卦) predicts semantic similarity in gua
 
 ---
 
-## φ in Dynamics (R197–R209)
+### φ in Dynamics (R197–R209)
 
 ### Two Routes to φ
 
@@ -119,13 +132,13 @@ Route B is algebraically real and has no detectable textual correlate at any res
 
 ---
 
-## Perturbation Directions (R210–R211)
+### Perturbation Directions (R210–R211)
 
 Single-line perturbation directions are hexagram-specific (rank ~5.4/6, no dominant axis). Within-pair cosines (same bit position, different trigram) consistently exceed cross-pair (5/5 sources), layer-stratified: tuan (+0.27) > guaci (+0.12) > yaoci (+0.03–0.06). The algebraically special bit (bit 1, pure 克) shows the strongest tuan alignment (+0.32) but is textually most opaque in the primary layer (guaci −0.01).
 
 ---
 
-## Cross-Architecture Replication (R212–R213)
+### Cross-Architecture Replication (R212–R213)
 
 ### Aggregate Replication (R212)
 
@@ -220,7 +233,7 @@ Genre proximity to the target corpus matters more than training objective for st
 
 **Tier 2 (measurements):** R189, R190, R192–R196, R206, R209–R211, R213 (angular structure component). Method-dependent.
 
-**Tier 3 (interpretations):** R188. Best reading of evidence, revisable.
+**Tier 3 (interpretations):** R188, R214-Q4b. Best reading of evidence, revisable.
 
 **Retracted:** R191.
 

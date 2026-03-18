@@ -17,7 +17,7 @@ The I Ching research program established that Z₅ is forced by the axioms (R102
 
 ---
 
-## Established Results (R181–R213)
+## Established Results (R181–R214)
 
 ### The Dimension Threshold (R181–R182)
 - (2,3) is the unique viable point at n=2. Z₃ supports only 1 Hamiltonian cycle — dual dynamics impossible.
@@ -76,7 +76,7 @@ The I Ching research program established that Z₅ is forced by the axioms (R102
 | Q1 (unified theory of 5-ness) | **Closed (negative)** | No cyclotomic unification. φ and dual cycles are independent consequences of 5's arithmetic |
 | Q2 (pentagon vs algebra) | **Closed** | R187: same Cayley graph, different readings (spectral vs adjacency) |
 | Q3 (why West stopped at geometry) | **Closed** | R181–R182: n=2 → p≤3 → dual cycles impossible |
-| Q4 (φ in natural systems) | **Open (out of scope)** | Untouched. Empirical, outside this investigation |
+| Q4 (φ in natural systems) | **Closed** | R214: Q4a (trivially affirmative — φ in all 5-fold systems by Q(ζ₅) arithmetic) and Q4b (empirical negative — no known natural instantiation of {F₂³, Z₅, equivariance, surjectivity}; genetic code failed R62-R68; isolation proof establishes algebraic uniqueness) |
 | Q5 (cyclotomic connection) | **Closed** | R183–R188: "address with conditional resonance." Two independent routes to φ converge at (3,5) only |
 | Q1/Q5 reopened (φ in dynamics) | **Closed** | R197–R209: φ found in cube-edge partition (P₄∪P₄ in 克 subgraph). Fully characterized: 96/240 surjections, Jacobian-determined (R205). No bridge to text at any resolution (R206, R209) |
 | Perturbation directions | **Closed** | R210–R211: rank ~5.4 (hexagram-specific). Partial bit-position alignment in relative cosines (layer-stratified, tuan strongest). Non-decomposability confirmed at d=1 |
@@ -86,8 +86,8 @@ The I Ching research program established that Z₅ is forced by the axioms (R102
 
 ## References
 
-- `eastwest/findings.md` — complete findings document (R181–R213)
-- `eastwest/exploration-log.md` — 11-iteration investigation log (R181–R213)
+- `eastwest/findings.md` — complete findings document (R181–R214)
+- `eastwest/exploration-log.md` — 11-iteration investigation log (R181–R214)
 - `iching/unification/synthesis-3.md` — uniqueness theorem, orbit formula
 - `iching/reversal/findings.md` — cross-cultural convergence, forcing chain (R94–R180)
 - `iching/deep/number-structure.md` — the {2,3,5} prime architecture

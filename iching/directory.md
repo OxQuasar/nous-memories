@@ -2,7 +2,9 @@
 
 ## Program Overview
 
-An investigation of the I Ching's algebraic structure, producing 77 results across 10 workflows. Central finding: the 五行 assignment is a complement-respecting surjection F₂³ → Z₅ — the unique rigid point in an infinite family. The orbit formula Orbits(n,p) = ((p−3)/2)! × 2^{2^{n−1}−1−n} equals 1 if and only if (n,p) = (3,5).
+An investigation of the I Ching's algebraic structure, producing 214 results (1 retracted) across 11 workflows. Central finding: the 五行 assignment is a complement-respecting surjection F₂³ → Z₅ — the unique rigid point in an infinite family. The orbit formula Orbits(n,p) = ((p−3)/2)! × 2^{2^{n−1}−1−n} equals 1 if and only if (n,p) = (3,5).
+
+The thematic manifold has ~16 text-intrinsic opposition dimensions (cross-validated across 4 architecturally distinct models), irreducibly non-algebraic. The system organizes conceptual space for judgment under uncertainty — mathematical, not physical.
 
 ---
 
@@ -36,7 +38,7 @@ An investigation of the I Ching's algebraic structure, producing 77 results acro
 
 ### `i-summary/`
 **Final investigation + master summary.** Resolves Q4 (three-tier coupling, not just two bridges), Q5 (彖傳 anomaly detection), Q8 (no name in existing mathematics — definitive negative). Proves nuclear rank formula for all n ≥ 2. Characterizes (4,13) moduli space via Hamming syndrome structure.
-- `summary.md` — master summary of entire research program
+- `summary.md` — master summary of entire research program (through R77; see reversal/ and eastwest/ for R94–R214)
 - `exploration-log.md` — iteration record (R69–R72)
 - `findings.md` — complete findings
 - `work/` — computation scripts and proof documents
@@ -62,6 +64,21 @@ An investigation of the I Ching's algebraic structure, producing 77 results acro
 - `Q2T2/` — cross-cultural convergence (Ifá counterfactual, branching landscape)
 - `Q3/` — judgment boundary (worked examples, 象 space analysis)
 - `T3/` — climate cycle test
+
+### `eastwest/`
+**The golden ratio and 五行 across traditions.** 34 results (R181–R214, 1 retracted) across 12 iterations, investigating whether φ (golden ratio) and 五行 dual cycles share a deep connection. All questions closed.
+
+**Central verdict: "Address with conditional resonance, no bridge to text."** Two structurally independent routes produce φ at (3,5): Route A (cyclotomic, unconditional — all 240 surjections live in Q(√5)) and Route B (combinatorial, conditional — 96/240 surjections have φ in cube-edge partition via P₄∪P₄ paths). The convergence is unique at n=3 via the identity 2^{n-1}+1 = 2^n−3. Tested for textual correlates at three resolutions (torus cell, nuclear hex, cube edge) — all null.
+
+**The dimension threshold (R181–R182):** Binary encoding + dual cycles requires n ≥ 3. The Greek quaternary system (F₂²) is structurally locked out of dual-cycle dynamics: p ≤ 3 → single Hamiltonian cycle. Pentagon = Cay(Z₅,{±1}) = 生; Pentagram = Cay(Z₅,{±2}) = 克 — same graph, different readings (spectral vs adjacency). Neither tradition computed both.
+
+**Cross-architecture replication (R212–R213):** Tier 1b findings (complement anti-correlation R156, algebraic R² R157, Hamming V-shape R159) replicate on SikuRoBERTa (classical-Chinese BERT), architecturally distinct from the three prior multilingual sentence-transformers. R² two-band structure: 10.8–11.0% (multilingual) / 13.2% (domain-matched). Pair-level concordance reveals ~85% text-intrinsic geometry with ~15% architecture-dependent periphery (correlating with training-data cultural salience). Four-model consensus confirms "text-intrinsic" for opposition ranking.
+
+- `findings.md` — complete findings (R181–R213)
+- `exploration-log.md` — 12 iterations
+- `questions.md` — question tracker (all closed)
+- Scripts: `cyclotomic_probe.py`, `kw_sequence_probe.py`, `torus_coherence.py`, `differentiation_principle.py`, `hu_cell_validation.py`, `dynamics_probe.py`, `edge_type_decomposition.py`, `perturbation_directions.py`, `sikuroberta_replication.py`, `pair_concordance.py`
+- Cached embeddings: `reversal/Q1/embeddings_{bge-m3,e5-large,labse,sikuroberta}.npz`
 
 ### `usage.md`
 **The system as judgment instrument.** Synthesis of the reversal findings into a functional account: the I Ching as an instrument for judgment under uncertainty, not a model of physics. Covers the interface architecture (calendar → assessment vocabulary → judgment), the {4,2,2,2,2} cascade as interface property, the algorithm-judgment boundary, the five practitioner operations, and the three-layer summary (algebra constrains, interface translates, text provides terrain, practitioner navigates).
@@ -158,8 +175,8 @@ Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for
 | Question | Go to |
 |----------|-------|
 | What is the central result? | `unification/synthesis-3.md` |
-| Full results inventory (R1–R180) | `deep/open-questions.md` (R1–R72), `reversal/findings.md` (R94–R180) |
-| Master summary | `i-summary/summary.md` |
+| Full results inventory | `deep/open-questions.md` (R1–R72), `reversal/findings.md` (R94–R180), `eastwest/findings.md` (R181–R214) |
+| Master summary | `i-summary/summary.md` (R1–R77), `reversal/` + `eastwest/` for R94–R214 |
 | How was it derived? | `deep/exploration-log.md` |
 | What do the texts say? | `semantic-map/findings.md` |
 | Why is it isolated? | `relations/findings.md` |
@@ -173,4 +190,7 @@ Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for
 | How does judgment work? | `reversal/findings.md` § Q3 |
 | What is the system *for*? | `usage.md` |
 | Cross-cultural comparison | `reversal/findings.md` § Q2 Test 2 |
+| φ and 五行 across traditions | `eastwest/findings.md` |
+| Cross-architecture replication | `eastwest/findings.md` § R212–R213 |
 | Source texts directory | `../texts/directory.md` |
+| Captain's log | `../agent_logs/iching_captain.md` |

@@ -476,7 +476,7 @@ Route B (φ in 克 subgraph) is algebraically real and combinatorially interesti
 | Q1 (unified theory of 5-ness) | **Closed (negative)** | No cyclotomic unification. φ and dual cycles are independent consequences of 5's arithmetic |
 | Q2 (pentagon vs algebra) | **Closed** | R187: same Cayley graph, different readings (spectral vs adjacency) |
 | Q3 (why West stopped at geometry) | **Closed** | R181–R182: n=2 → p≤3 → dual cycles impossible |
-| Q4 (φ in natural systems) | **Open** | Untouched. Empirical, outside scope |
+| Q4 (φ in natural systems) | **Closed** | R214: splits into Q4a (trivially affirmative — arithmetic of 5) and Q4b (empirical negative — no known natural instantiation of prerequisites) |
 | Q5 (cyclotomic connection) | **Closed** | R183–R188: "address with conditional resonance." Two independent routes to φ converge at (3,5) only |
 | Q1/Q5 reopened (φ in dynamics) | **Closed** | R197–R209: φ in cube-edge partition. No bridge to text at any resolution. Fully characterized |
 
@@ -739,7 +739,7 @@ The sage predicted ρ ≈ 0.55–0.65; actual was 0.74–0.75. The text signal c
 
 ---
 
-## Result Table (R181–R213)
+## Result Table (R181–R214)
 
 | # | Finding | Tier |
 |---|---------|------|
@@ -776,6 +776,7 @@ The sage predicted ρ ≈ 0.55–0.65; actual was 0.74–0.75. The text signal c
 | R211 | Within-pair perturbation cosines (same bit position, different trigram) consistently exceed cross-pair cosines (5/5 sources, Δ = +0.06 to +0.31). Layer-stratified: tuan (+0.27) > guaci (+0.12) > yaoci (+0.03–0.06). Bit 1 (pure-克, algebraically special) shows guaci −0.01 / tuan +0.32 — algebraically special bit is textually most opaque in primary layer | Measurement |
 | R212 | Tier 1b cross-architecture replication: R156, R157, R159 all replicate on SikuRoBERTa (classical-Chinese BERT). Complement mean cosine = −0.162 (p=0.0001, 27/32 negative). R² = 13.2% (elevated from 10.8–11.0% multilingual band — domain sensitivity). Hamming V-shape preserved. Cross-model ρ = 0.46–0.70. Four-model consensus confirms "text-intrinsic" | Tier 1b |
 | R213 | Pair-level concordance: complement opposition decomposes into model-invariant core (profile ρ = 0.80–0.83) and architecture-sensitive periphery (direction ρ = 0.74–0.75). Procrustes R² = 0.83–0.86 at k=20 (~85% geometry recoverable). ~13-14 cross-architecture invariant dimensions + ~2-3 architecture-dependent. Largest discrepancies (Kan↔Li, Jian↔Kui) correlate with training-data cultural salience | Tier 1b (pair ranking) / Tier 2 (angular structure) |
+| R214 | Q4 split: Q4a (φ in 5-fold systems) trivially affirmative — arithmetic of Q(ζ₅). Q4b (P₄∪P₄ in natural systems) negative — conjunction {F₂³, Z₅, complement equivariance, surjectivity} has no known natural instantiation. Genetic code sole candidate, failed (R62-R68). Isolation proof (relations/) establishes algebraic uniqueness. Q4 closed | Tier 1 (Q4a) / Tier 3 (Q4b) |
 
 ## Question Status
 
@@ -784,7 +785,7 @@ The sage predicted ρ ≈ 0.55–0.65; actual was 0.74–0.75. The text signal c
 | Q1 (unified theory of 5-ness) | **Closed (negative)** | No cyclotomic unification. φ and dual cycles are independent consequences of 5's arithmetic |
 | Q2 (pentagon vs algebra) | **Closed** | R187: same Cayley graph, different readings (spectral vs adjacency) |
 | Q3 (why West stopped at geometry) | **Closed** | R181–R182: n=2 → p≤3 → dual cycles impossible |
-| Q4 (φ in natural systems) | **Open** | Untouched. Empirical, outside scope |
+| Q4 (φ in natural systems) | **Closed** | R214: splits into Q4a (trivially affirmative — arithmetic of 5) and Q4b (empirical negative — no known natural instantiation of prerequisites) |
 | Q5 (cyclotomic connection) | **Closed** | R183–R188: "address with conditional resonance." Two independent routes to φ converge at (3,5) only |
 | Q1/Q5 reopened (φ in dynamics) | **Closed** | R197–R209: φ in cube-edge partition. No bridge to text at any resolution. Fully characterized |
 | Perturbation directions | **Closed** | R210–R211: rank ~5.4 (hexagram-specific). Non-decomposability confirmed at d=1 |
@@ -804,3 +805,9 @@ The sage predicted ρ ≈ 0.55–0.65; actual was 0.74–0.75. The text signal c
 | `perturbation_directions.py` | Mean displacement norms, SVD rank, cosine similarity matrix, within-pair analysis, cross-model validation |
 | `sikuroberta_replication.py` | Cross-architecture replication of R156/R157/R159 on classical-Chinese BERT |
 | `pair_concordance.py` | Pair-level direction concordance, Procrustes alignment, profile concordance across 4 models |
+
+---
+
+## Possible Future Refinements (not pursued)
+
+**R² feature decomposition across two bands.** The 10.8–11.0% → 13.2% elevation on SikuRoBERTa could be decomposed by running per-feature-group R² (trigram identity, basin, palace, etc.) to identify where the extra 2pp concentrates. All three outcomes (trigram-concentrated, basin/palace-concentrated, uniform) would confirm existing findings without changing program-level conclusions. Noted as confirmatory — below marginal return threshold.
