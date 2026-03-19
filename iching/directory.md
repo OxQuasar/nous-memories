@@ -61,6 +61,11 @@ R253, R257–R281. Transition graph dynamics + fingerprint investigation.
 - `exploration-log.md` — 11 iterations
 - Scripts: `p1_subgraph_spectra.py`, `p2_hu_dynamics.py`, `p3_composed_dynamics.py`, `p45_symbolic_transfer.py`, `p7_dimension.py`, `p8_triple_null_test.py`, `probeA_golden_mean.py`, `probeB_renormalization.py`, `probeC_chebyshev.py`, `probeC2_complement_z5.py`
 
+### `resolution/`
+No results yet. Investigation of what the minimal Markov partition projects onto.
+- `questions.md` — R1–R6: logistic map identification, timescale ratios, regime transition stats, effective dimensionality, dark sector, composability
+- `plan.md` — 5 probes ordered by tractability. Priority: dark sector (computational, immediate), logistic map (computational, could identify target), composability (connects to Q2)
+
 ### `usage.md`
 The system as judgment instrument. Three-layer summary.
 
