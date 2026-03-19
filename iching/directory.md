@@ -57,6 +57,7 @@ R253, R257–R281. Transition graph dynamics + fingerprint investigation.
 - **Three-level null:** vertex (R192/R209/R253), flow (R253), spectral (R269) — 五行 decoration and semantic manifold are independently organized
 - `findings.md` — R253, R257–R281
 - `questions.md` — Q11–Q15 + fingerprint questions F1–F7
+- **Literature review** (`literature.md`): Cross-references fingerprint against known systems. GMS ubiquitous (lattice gas, constrained coding, chaotic maps), Chebyshev spacing automatic from path graphs, RG identification correct, no matching external system found. Complement-Z₅ gate (R279) is the original contribution — not previously in literature.
 - `exploration-log.md` — 11 iterations
 - Scripts: `p1_subgraph_spectra.py`, `p2_hu_dynamics.py`, `p3_composed_dynamics.py`, `p45_symbolic_transfer.py`, `p7_dimension.py`, `p8_triple_null_test.py`, `probeA_golden_mean.py`, `probeB_renormalization.py`, `probeC_chebyshev.py`, `probeC2_complement_z5.py`
 
