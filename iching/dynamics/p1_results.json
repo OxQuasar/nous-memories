@@ -1,0 +1,851 @@
+{
+  "directed_edge_counts": {
+    "比和": 84,
+    "生": 144,
+    "克": 156
+  },
+  "q6_directed_decomposition_valid": true,
+  "edge_pair_distribution": {
+    "('克', '比和')": 44,
+    "('比和', '比和')": 8,
+    "('克', '生')": 64,
+    "('克', '克')": 24,
+    "('生', '生')": 28,
+    "('比和', '生')": 24
+  },
+  "symmetric_edges": 60,
+  "asymmetric_edges": 132,
+  "and_symmetrized": {
+    "edge_counts": {
+      "比和": 8,
+      "生": 28,
+      "克": 24
+    },
+    "eigenvalues": {
+      "比和": [
+        {
+          "value": -2.0,
+          "multiplicity": 2
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 60
+        },
+        {
+          "value": 2.0,
+          "multiplicity": 2
+        }
+      ],
+      "生": [
+        {
+          "value": -2.79860888,
+          "multiplicity": 2
+        },
+        {
+          "value": -1.84775907,
+          "multiplicity": 2
+        },
+        {
+          "value": -1.21472715,
+          "multiplicity": 2
+        },
+        {
+          "value": -0.83200138,
+          "multiplicity": 2
+        },
+        {
+          "value": -0.76536686,
+          "multiplicity": 2
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 44
+        },
+        {
+          "value": 0.76536686,
+          "multiplicity": 2
+        },
+        {
+          "value": 0.83200138,
+          "multiplicity": 2
+        },
+        {
+          "value": 1.21472715,
+          "multiplicity": 2
+        },
+        {
+          "value": 1.84775907,
+          "multiplicity": 2
+        },
+        {
+          "value": 2.79860888,
+          "multiplicity": 2
+        }
+      ],
+      "克": [
+        {
+          "value": -2.28824561,
+          "multiplicity": 2
+        },
+        {
+          "value": -2.0,
+          "multiplicity": 2
+        },
+        {
+          "value": -1.0,
+          "multiplicity": 4
+        },
+        {
+          "value": -0.87403205,
+          "multiplicity": 2
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 44
+        },
+        {
+          "value": 0.87403205,
+          "multiplicity": 2
+        },
+        {
+          "value": 1.0,
+          "multiplicity": 4
+        },
+        {
+          "value": 2.0,
+          "multiplicity": 2
+        },
+        {
+          "value": 2.28824561,
+          "multiplicity": 2
+        }
+      ]
+    },
+    "components": {
+      "比和": {
+        "count": 58,
+        "sizes": [
+          4,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "生": {
+        "count": 42,
+        "sizes": [
+          12,
+          12,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "克": {
+        "count": 44,
+        "sizes": [
+          9,
+          9,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "spectral_gaps": {
+      "比和": 2.0,
+      "生": 0.9508498100000002,
+      "克": 0.28824561000000015
+    }
+  },
+  "or_symmetrized": {
+    "edge_counts": {
+      "比和": 76,
+      "生": 116,
+      "克": 132
+    },
+    "eigenvalues": {
+      "比和": [
+        {
+          "value": -3.66102776,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.82842712,
+          "multiplicity": 4
+        },
+        {
+          "value": -2.0,
+          "multiplicity": 4
+        },
+        {
+          "value": -1.41421356,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.77257735,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 38
+        },
+        {
+          "value": 0.77257735,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.41421356,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.0,
+          "multiplicity": 4
+        },
+        {
+          "value": 2.82842712,
+          "multiplicity": 4
+        },
+        {
+          "value": 3.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.66102776,
+          "multiplicity": 1
+        }
+      ],
+      "生": [
+        {
+          "value": -4.4958954,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.85454858,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.56461983,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.09374462,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.83370567,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.76786072,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.70719056,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.29160679,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.2696546,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.12360443,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.10026483,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.0,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.61508961,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.56326489,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.50428773,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.16828151,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.01188836,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.00862196,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.9398502,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.58453581,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.53458753,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.27584536,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 20
+        },
+        {
+          "value": 0.27584536,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.53458753,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.58453581,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.9398502,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.00862196,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.01188836,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.16828151,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.50428773,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.56326489,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.61508961,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.0,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.10026483,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.12360443,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.2696546,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.29160679,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.70719056,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.76786072,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.83370567,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.09374462,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.56461983,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.85454858,
+          "multiplicity": 1
+        },
+        {
+          "value": 4.4958954,
+          "multiplicity": 1
+        }
+      ],
+      "克": [
+        {
+          "value": -4.68847085,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.72131673,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.71449608,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.54666177,
+          "multiplicity": 1
+        },
+        {
+          "value": -3.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.98815835,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.48662242,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.30277564,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.27826079,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.14311244,
+          "multiplicity": 1
+        },
+        {
+          "value": -2.0,
+          "multiplicity": 4
+        },
+        {
+          "value": -1.96100206,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.40831335,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.30277564,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.20685083,
+          "multiplicity": 1
+        },
+        {
+          "value": -1.16489906,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.88964164,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.56780378,
+          "multiplicity": 1
+        },
+        {
+          "value": -0.37649688,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 18
+        },
+        {
+          "value": 0.37649688,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.56780378,
+          "multiplicity": 1
+        },
+        {
+          "value": 0.88964164,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.16489906,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.20685083,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.30277564,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.40831335,
+          "multiplicity": 1
+        },
+        {
+          "value": 1.96100206,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.0,
+          "multiplicity": 4
+        },
+        {
+          "value": 2.14311244,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.27826079,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.30277564,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.48662242,
+          "multiplicity": 1
+        },
+        {
+          "value": 2.98815835,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.23606798,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.54666177,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.71449608,
+          "multiplicity": 1
+        },
+        {
+          "value": 3.72131673,
+          "multiplicity": 1
+        },
+        {
+          "value": 4.68847085,
+          "multiplicity": 1
+        }
+      ]
+    },
+    "components": {
+      "比和": {
+        "count": 11,
+        "sizes": [
+          54,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "生": {
+        "count": 3,
+        "sizes": [
+          62,
+          1,
+          1
+        ]
+      },
+      "克": {
+        "count": 1,
+        "sizes": [
+          64
+        ]
+      }
+    }
+  },
+  "trigram": {
+    "elements": {
+      "0": "Earth",
+      "1": "Wood",
+      "2": "Water",
+      "3": "Metal",
+      "4": "Earth",
+      "5": "Fire",
+      "6": "Wood",
+      "7": "Metal"
+    },
+    "edge_counts": {
+      "比和": 2,
+      "生": 4,
+      "克": 6
+    },
+    "eigenvalues": {
+      "比和": [
+        {
+          "value": -1.0,
+          "multiplicity": 2
+        },
+        {
+          "value": 0.0,
+          "multiplicity": 4
+        },
+        {
+          "value": 1.0,
+          "multiplicity": 2
+        }
+      ],
+      "生": [
+        {
+          "value": -1.41421356,
+          "multiplicity": 2
+        },
+        {
+          "value": -0.0,
+          "multiplicity": 4
+        },
+        {
+          "value": 1.41421356,
+          "multiplicity": 2
+        }
+      ],
+      "克": [
+        {
+          "value": -1.61803399,
+          "multiplicity": 2
+        },
+        {
+          "value": -0.61803399,
+          "multiplicity": 2
+        },
+        {
+          "value": 0.61803399,
+          "multiplicity": 2
+        },
+        {
+          "value": 1.61803399,
+          "multiplicity": 2
+        }
+      ]
+    }
+  },
+  "tensor_product": {
+    "比和": {
+      "match": false,
+      "deviation": 2.0
+    },
+    "生": {
+      "match": false,
+      "deviation": 1.41421356
+    },
+    "克": {
+      "match": false,
+      "deviation": 2.23606798
+    }
+  },
+  "q6_spectrum": [
+    {
+      "value": -6.0,
+      "multiplicity": 1
+    },
+    {
+      "value": -4.0,
+      "multiplicity": 6
+    },
+    {
+      "value": -2.0,
+      "multiplicity": 15
+    },
+    {
+      "value": 0.0,
+      "multiplicity": 20
+    },
+    {
+      "value": 2.0,
+      "multiplicity": 15
+    },
+    {
+      "value": 4.0,
+      "multiplicity": 6
+    },
+    {
+      "value": 6.0,
+      "multiplicity": 1
+    }
+  ]
+}

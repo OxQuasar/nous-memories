@@ -29,14 +29,14 @@ The investigation started from the outside and has been spiraling inward. Each p
 **Answer:** The connection is weaker than anticipated. φ enters the 克 eigenstructure through Route B (P₄ paths on the binary cube), but this is basis-dependent — it belongs to the 0.5-bit presentational layer (R241). The structural parameters are four consecutive Fibonacci numbers, but the mechanism is exponential/primality, not additive self-reference — the alignment is localized to Carmichael's theorem (R215, R238). Three independent mechanisms for φ in nature: CF extremality (phyllotaxis, KAM), Z₅ representation (quasicrystals — same mechanism as I Ching), small-number density.
 
 ### Phase 7: What does the structure represent?
-**Workflows:** dynamics (barely started)
-**Status:** One operationalization tested — semantic Laplacian flow on the transition graph — negative (R253). The broader question (does the I Ching's structure reflect properties of the dynamics it claims to model?) is open. Inverse methods, symbolic dynamics, external comparison, abstract graph theory all untested.
+**Workflows:** dynamics
+**What's known:** The transition graph's 五行 decomposition has rich dynamics (Chebyshev sequence, Fibonacci machine, one-way valve, hinge attractors, coherent φ survival) organized by a stage/drama framework (R253, R257–R269). Three-level null (vertex, flow, spectral) establishes that the 五行 decoration and the thematic manifold are independently organized on Q₆. The complement involution constrains both but doesn't connect them.
+
+**What's untested:** External matching — does the structural fingerprint (Chebyshev {1,√2,φ}, Fibonacci growth, 1:2:3, weak-tie topology) correspond to any known class of dynamical systems? Non-五行 operationalizations of "the I Ching models dynamics."
 
 ## Current Position
 
-Two open directions:
-
-**The dynamics question (Q11–Q15):** The I Ching is representational — it models change-as-experienced. The investigation has characterized the source side (spaces 1-3) but never looked at the target side (space 4). The flow version was tested and rejected. The inverse approach (treating the transition graph as data and inferring dynamical properties) and external comparison (actual situational dynamics) are untested.
+**The dynamics question:** The 五行-text connection is a measured null at three levels. What's untested: whether the structural fingerprint matches known dynamical systems (literature), and whether non-五行 approaches bypass the null.
 
 **Q2 proper (reversal):** Is composability itself forced by something deeper? The forcing chain has exactly one contingent step.
 
@@ -49,7 +49,7 @@ The investigation uses divergent-first methodology:
 
 ## Running Totals
 
-~256 results across 20 workflows.
+~269 results across 20 workflows.
 
 | Phase | Workflows | Results | Status |
 |-------|-----------|---------|--------|
@@ -59,4 +59,4 @@ The investigation uses divergent-first methodology:
 | 4. Inside boundary | reversal Q1, Q3, dynamics D1–D3 | R112–R170, R254–R256 | Established |
 | 5. What it's for | reversal Q2, Q3, atlases | R73–R111, R140–R180 | Established |
 | 6. Wider connections | eastwest, fibo | R181–R252 | Established |
-| 7. What does it represent | dynamics | R253 | One test, mostly open |
+| 7. What does it represent | dynamics | R253, R257–R269 | Internal characterized, external untested |

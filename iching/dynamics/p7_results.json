@@ -1,0 +1,104 @@
+{
+  "part1_spectral_dimension": {
+    "hex_dims_short": {
+      "比和": 1.4647369146751223,
+      "生": 1.463419595243583,
+      "克": 1.5386059481360825,
+      "Q6": 1.4057862155825693
+    },
+    "hex_dims_extended": {
+      "比和": 1.12139246911709,
+      "生": 1.0253102861688315,
+      "克": 1.0353091252390703,
+      "Q6": 0.8668470685832004
+    },
+    "trig_dims": {
+      "比和": -5.332778753343982e-17,
+      "生": -5.332778753343982e-17,
+      "克": 0.05128352190047946,
+      "Q3": 0.1060241658539176
+    },
+    "hex_rhos": {
+      "比和": 3.66102776,
+      "生": 4.4958954,
+      "克": 4.68847085,
+      "Q6": 6.0
+    },
+    "trig_rhos": {
+      "比和": 1.0,
+      "生": 1.41421356,
+      "克": 1.61803399,
+      "Q3": 3.0
+    }
+  },
+  "part2_effective_dimension": {
+    "比和": {
+      "spectral_radius": 3.66102776,
+      "rank": 26,
+      "distinct_nonzero": 14,
+      "nullity": 38,
+      "participation_ratio": 0.8888198280686325,
+      "eff_dim_pr": 23.109315529784443,
+      "eff_dim_entropy": 24.306909693012955
+    },
+    "生": {
+      "spectral_radius": 4.4958954,
+      "rank": 44,
+      "distinct_nonzero": 44,
+      "nullity": 20,
+      "participation_ratio": 0.7693115050669006,
+      "eff_dim_pr": 33.849706222943624,
+      "eff_dim_entropy": 37.605406290531384
+    },
+    "克": {
+      "spectral_radius": 4.68847085,
+      "rank": 46,
+      "distinct_nonzero": 40,
+      "nullity": 18,
+      "participation_ratio": 0.7979539346251552,
+      "eff_dim_pr": 36.70588099275714,
+      "eff_dim_entropy": 40.403461962489665
+    },
+    "Q6": {
+      "rank": 44,
+      "nullity": 20,
+      "participation_ratio": 0.8522727272727273
+    }
+  },
+  "part3_dimensional_comparison": {
+    "ambient_dim": 6,
+    "total_states": 64,
+    "weight3_basis": 20,
+    "semantic_manifold_dim": 16,
+    "hu_image_states": 16,
+    "hu_image_bits": 4,
+    "hu2_image_states": 4,
+    "hu2_image_bits": 2,
+    "bit_layers": {
+      "outer": {
+        "bits": [
+          0,
+          5
+        ],
+        "survives_hu": false,
+        "survives_hu2": false
+      },
+      "middle": {
+        "bits": [
+          1,
+          4
+        ],
+        "survives_hu": true,
+        "survives_hu2": false
+      },
+      "hinge": {
+        "bits": [
+          2,
+          3
+        ],
+        "survives_hu": true,
+        "survives_hu2": true
+      }
+    }
+  }
+}

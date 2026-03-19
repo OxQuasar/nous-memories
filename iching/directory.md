@@ -1,6 +1,6 @@
 # I Ching Research — Directory
 
-~256 results across 20 workflows. See `trajectory.md` for the investigation arc.
+~269 results across 20 workflows. See `trajectory.md` for the investigation arc.
 
 Central finding: the 五行 assignment is the unique rigid complement-respecting surjection F₂³ → Z₅. The thematic manifold has ~16 text-intrinsic opposition dimensions, identified as the weight-3 Walsh eigenspace of Q₆.
 
@@ -47,9 +47,15 @@ Fibonacci alignment, φ ubiquity, interface layer. R215–R252.
 Three φ mechanisms: CF extremality, Z₅ representation theory, small-number density. I Ching shares Z₅ mechanism with quasicrystals. Presentational package (φ + 1:2:3 + P₄) is the interface architecture.
 
 ### `dynamics/`
-R253. Dynamical flow hypothesis negative (Laplacian anti-parallelism fails cross-model). Manifold results R254–R256 moved to reversal/Q1. The dynamics questions (Q11–Q15) are open — only one operationalization tested so far.
-- `questions.md` — Q11–Q15 (inverse methods, symbolic dynamics, external data all untested)
-- `d1_laplacian_walsh.py` — the one test that was run
+R253, R257–R269. Transition graph dynamics: complete internal characterization, disconnected from text.
+- **Q₆ decomposed by 五行:** Chebyshev sequence {1, √2, φ}, fiber bundle structure, Fibonacci machine at trigram level, coherent φ survival (±2φ, ±2/φ)
+- **互 dynamics:** hinge collapse (hu²→2 bits), one-way valve 克→生=0 (contingent, 1/6 partitions), hinge lines destroy equilibria, F₃/F₄ asymmetry, 12-state absorbing class
+- **Stage/drama decomposition:** entropy follows size (stage), spectral gap follows label (derived stage), valve is drama, coherent sector is interaction
+- **Three-level null:** vertex (R192/R209/R253), flow (R253), spectral (R269) — 五行 decoration and semantic manifold are independently organized. Complement involution is shared constraint, not bridge.
+- `findings.md` — R253, R257–R269
+- `questions.md` — Q11–Q15 with status (Q15 complete, Q13 characterized, Q14 negative for 五行, Q11/Q12 open for external matching)
+- `exploration-log.md` — 7 iterations + final synthesis
+- Scripts: `p1_subgraph_spectra.py`, `p2_hu_dynamics.py`, `p3_composed_dynamics.py`, `p45_symbolic_transfer.py`, `p7_dimension.py`, `p8_triple_null_test.py`
 
 ### `usage.md`
 The system as judgment instrument. Three-layer summary.
@@ -97,5 +103,5 @@ The system as judgment instrument. Three-layer summary.
 | The 89% residual | `reversal/findings.md` § Q1 |
 | Axioms & forcing | `reversal/findings.md` § Q2 |
 | φ & Fibonacci | `fibo/findings.md` |
-| Dynamics | `dynamics/questions.md` |
+| Dynamics | `dynamics/findings.md` |
 | Source texts | `../texts/directory.md` |

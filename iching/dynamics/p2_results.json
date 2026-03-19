@@ -1,0 +1,1104 @@
+{
+  "part_a": {
+    "hu_map": {
+      "0": 0,
+      "1": 0,
+      "2": 1,
+      "3": 1,
+      "4": 10,
+      "5": 10,
+      "6": 11,
+      "7": 11,
+      "8": 20,
+      "9": 20,
+      "10": 21,
+      "11": 21,
+      "12": 30,
+      "13": 30,
+      "14": 31,
+      "15": 31,
+      "16": 32,
+      "17": 32,
+      "18": 33,
+      "19": 33,
+      "20": 42,
+      "21": 42,
+      "22": 43,
+      "23": 43,
+      "24": 52,
+      "25": 52,
+      "26": 53,
+      "27": 53,
+      "28": 62,
+      "29": 62,
+      "30": 63,
+      "31": 63,
+      "32": 0,
+      "33": 0,
+      "34": 1,
+      "35": 1,
+      "36": 10,
+      "37": 10,
+      "38": 11,
+      "39": 11,
+      "40": 20,
+      "41": 20,
+      "42": 21,
+      "43": 21,
+      "44": 30,
+      "45": 30,
+      "46": 31,
+      "47": 31,
+      "48": 32,
+      "49": 32,
+      "50": 33,
+      "51": 33,
+      "52": 42,
+      "53": 42,
+      "54": 43,
+      "55": 43,
+      "56": 52,
+      "57": 52,
+      "58": 53,
+      "59": 53,
+      "60": 62,
+      "61": 62,
+      "62": 63,
+      "63": 63
+    },
+    "orbit_structure": {
+      "0": {
+        "trajectory": [
+          0
+        ],
+        "transient_length": 0,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "1": {
+        "trajectory": [
+          1,
+          0
+        ],
+        "transient_length": 1,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "2": {
+        "trajectory": [
+          2,
+          1,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "3": {
+        "trajectory": [
+          3,
+          1,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "4": {
+        "trajectory": [
+          4,
+          10,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "5": {
+        "trajectory": [
+          5,
+          10,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "6": {
+        "trajectory": [
+          6,
+          11,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "7": {
+        "trajectory": [
+          7,
+          11,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "8": {
+        "trajectory": [
+          8,
+          20,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "9": {
+        "trajectory": [
+          9,
+          20,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "10": {
+        "trajectory": [
+          10,
+          21,
+          42
+        ],
+        "transient_length": 1,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "11": {
+        "trajectory": [
+          11,
+          21,
+          42
+        ],
+        "transient_length": 1,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "12": {
+        "trajectory": [
+          12,
+          30,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "13": {
+        "trajectory": [
+          13,
+          30,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "14": {
+        "trajectory": [
+          14,
+          31,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "15": {
+        "trajectory": [
+          15,
+          31,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "16": {
+        "trajectory": [
+          16,
+          32,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "17": {
+        "trajectory": [
+          17,
+          32,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "18": {
+        "trajectory": [
+          18,
+          33,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "19": {
+        "trajectory": [
+          19,
+          33,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "20": {
+        "trajectory": [
+          20,
+          42,
+          21
+        ],
+        "transient_length": 1,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "21": {
+        "trajectory": [
+          21,
+          42
+        ],
+        "transient_length": 0,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "22": {
+        "trajectory": [
+          22,
+          43,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "23": {
+        "trajectory": [
+          23,
+          43,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "24": {
+        "trajectory": [
+          24,
+          52,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "25": {
+        "trajectory": [
+          25,
+          52,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "26": {
+        "trajectory": [
+          26,
+          53,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "27": {
+        "trajectory": [
+          27,
+          53,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "28": {
+        "trajectory": [
+          28,
+          62,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "29": {
+        "trajectory": [
+          29,
+          62,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "30": {
+        "trajectory": [
+          30,
+          63
+        ],
+        "transient_length": 1,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "31": {
+        "trajectory": [
+          31,
+          63
+        ],
+        "transient_length": 1,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "32": {
+        "trajectory": [
+          32,
+          0
+        ],
+        "transient_length": 1,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "33": {
+        "trajectory": [
+          33,
+          0
+        ],
+        "transient_length": 1,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "34": {
+        "trajectory": [
+          34,
+          1,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "35": {
+        "trajectory": [
+          35,
+          1,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "36": {
+        "trajectory": [
+          36,
+          10,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "37": {
+        "trajectory": [
+          37,
+          10,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "38": {
+        "trajectory": [
+          38,
+          11,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "39": {
+        "trajectory": [
+          39,
+          11,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "40": {
+        "trajectory": [
+          40,
+          20,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "41": {
+        "trajectory": [
+          41,
+          20,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "42": {
+        "trajectory": [
+          42,
+          21
+        ],
+        "transient_length": 0,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "43": {
+        "trajectory": [
+          43,
+          21,
+          42
+        ],
+        "transient_length": 1,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "44": {
+        "trajectory": [
+          44,
+          30,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "45": {
+        "trajectory": [
+          45,
+          30,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "46": {
+        "trajectory": [
+          46,
+          31,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "47": {
+        "trajectory": [
+          47,
+          31,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "48": {
+        "trajectory": [
+          48,
+          32,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "49": {
+        "trajectory": [
+          49,
+          32,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "50": {
+        "trajectory": [
+          50,
+          33,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "51": {
+        "trajectory": [
+          51,
+          33,
+          0
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 0
+      },
+      "52": {
+        "trajectory": [
+          52,
+          42,
+          21
+        ],
+        "transient_length": 1,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "53": {
+        "trajectory": [
+          53,
+          42,
+          21
+        ],
+        "transient_length": 1,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "54": {
+        "trajectory": [
+          54,
+          43,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "55": {
+        "trajectory": [
+          55,
+          43,
+          21,
+          42
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 21
+      },
+      "56": {
+        "trajectory": [
+          56,
+          52,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "57": {
+        "trajectory": [
+          57,
+          52,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "58": {
+        "trajectory": [
+          58,
+          53,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "59": {
+        "trajectory": [
+          59,
+          53,
+          42,
+          21
+        ],
+        "transient_length": 2,
+        "cycle_length": 2,
+        "attractor": 42
+      },
+      "60": {
+        "trajectory": [
+          60,
+          62,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "61": {
+        "trajectory": [
+          61,
+          62,
+          63
+        ],
+        "transient_length": 2,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "62": {
+        "trajectory": [
+          62,
+          63
+        ],
+        "transient_length": 1,
+        "cycle_length": 1,
+        "attractor": 63
+      },
+      "63": {
+        "trajectory": [
+          63
+        ],
+        "transient_length": 0,
+        "cycle_length": 1,
+        "attractor": 63
+      }
+    },
+    "max_transient": 2,
+    "transient_distribution": {
+      "0": 4,
+      "1": 12,
+      "2": 48
+    },
+    "image_size": 16,
+    "basins": {
+      "0": [
+        0,
+        1,
+        2,
+        3,
+        16,
+        17,
+        18,
+        19,
+        32,
+        33,
+        34,
+        35,
+        48,
+        49,
+        50,
+        51
+      ],
+      "21": [
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        21,
+        22,
+        23,
+        36,
+        37,
+        38,
+        39,
+        43,
+        54,
+        55
+      ],
+      "42": [
+        8,
+        9,
+        20,
+        24,
+        25,
+        26,
+        27,
+        40,
+        41,
+        42,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59
+      ],
+      "63": [
+        12,
+        13,
+        14,
+        15,
+        28,
+        29,
+        30,
+        31,
+        44,
+        45,
+        46,
+        47,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "basin_sizes": {
+      "0": 16,
+      "21": 16,
+      "42": 16,
+      "63": 16
+    },
+    "bits_23_determine_basin": false,
+    "in_degree_distribution": {
+      "0": 48,
+      "4": 16
+    },
+    "basin_wuxing_table": {
+      "0": {
+        "比和": 4,
+        "生": 5,
+        "克": 7
+      },
+      "21": {
+        "比和": 3,
+        "生": 7,
+        "克": 6
+      },
+      "42": {
+        "比和": 3,
+        "生": 7,
+        "克": 6
+      },
+      "63": {
+        "比和": 4,
+        "生": 5,
+        "克": 7
+      }
+    },
+    "basin_wuxing_chi2": 1.1062271062271063,
+    "basin_wuxing_pvalue": 0.9812630496086245,
+    "wuxing_transition_matrix": {
+      "比和→比和": 6,
+      "比和→生": 4,
+      "比和→克": 4,
+      "生→比和": 2,
+      "生→生": 4,
+      "生→克": 18,
+      "克→比和": 8,
+      "克→生": 0,
+      "克→克": 18
+    },
+    "contraction_by_distance": {
+      "1": {
+        "n_pairs": 192,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.816496580927726,
+        "min_ratio": 0.0,
+        "max_ratio": 2.0
+      },
+      "2": {
+        "n_pairs": 480,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.5163977794943222,
+        "min_ratio": 0.0,
+        "max_ratio": 2.0
+      },
+      "3": {
+        "n_pairs": 640,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.36514837167011077,
+        "min_ratio": 0.3333333333333333,
+        "max_ratio": 1.6666666666666667
+      },
+      "4": {
+        "n_pairs": 480,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.2581988897471611,
+        "min_ratio": 0.5,
+        "max_ratio": 1.5
+      },
+      "5": {
+        "n_pairs": 192,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.16329931618554516,
+        "min_ratio": 0.8,
+        "max_ratio": 1.2
+      },
+      "6": {
+        "n_pairs": 32,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.0,
+        "min_ratio": 1.0,
+        "max_ratio": 1.0
+      }
+    },
+    "contraction_by_type": {
+      "('克', '克')": {
+        "n_pairs": 325,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.43240136467284673
+      },
+      "('克', '比和')": {
+        "n_pairs": 364,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.4102100477466188
+      },
+      "('克', '生')": {
+        "n_pairs": 624,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.44705430302990024
+      },
+      "('比和', '比和')": {
+        "n_pairs": 91,
+        "mean_ratio": 0.9999999999999999,
+        "std_ratio": 0.40468863805757355
+      },
+      "('比和', '生')": {
+        "n_pairs": 336,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.47092726271950613
+      },
+      "('生', '生')": {
+        "n_pairs": 276,
+        "mean_ratio": 1.0,
+        "std_ratio": 0.39151631403376974
+      }
+    },
+    "distance_to_attractor": {
+      "比和": {
+        "mean_nearest": 1.4285714285714286,
+        "mean_own": 2.0,
+        "nearest_dist": {
+          "0": 2,
+          "1": 4,
+          "2": 8
+        },
+        "own_dist": {
+          "0": 2,
+          "2": 4,
+          "3": 6,
+          "1": 2
+        }
+      },
+      "生": {
+        "mean_nearest": 1.6666666666666667,
+        "mean_own": 2.4166666666666665,
+        "nearest_dist": {
+          "2": 16,
+          "1": 8
+        },
+        "own_dist": {
+          "2": 10,
+          "1": 4,
+          "5": 2,
+          "3": 8
+        }
+      },
+      "克": {
+        "mean_nearest": 1.3846153846153846,
+        "mean_own": 2.3846153846153846,
+        "nearest_dist": {
+          "1": 12,
+          "2": 12,
+          "0": 2
+        },
+        "own_dist": {
+          "1": 6,
+          "3": 2,
+          "2": 8,
+          "4": 6,
+          "5": 2,
+          "0": 2
+        }
+      }
+    },
+    "attractor_affinity": {
+      "比和": {
+        "0": 4,
+        "21": 3,
+        "42": 3,
+        "63": 4
+      },
+      "生": {
+        "0": 5,
+        "21": 7,
+        "42": 7,
+        "63": 5
+      },
+      "克": {
+        "0": 7,
+        "21": 6,
+        "42": 6,
+        "63": 7
+      }
+    }
+  },
+  "part_b": {
+    "random_partition": {
+      "n_real": 1000,
+      "n_trials": 1000,
+      "fraction": 1.0
+    },
+    "alternative_assignments": {
+      "n_distinct": 6,
+      "n_all_real": 6,
+      "details": [
+        {
+          "perm": [
+            "Earth",
+            "Wood",
+            "Water",
+            "Metal",
+            "Fire"
+          ],
+          "sizes": {
+            "比和": 14,
+            "生": 24,
+            "克": 26
+          },
+          "all_real": true,
+          "is_actual": false
+        },
+        {
+          "perm": [
+            "Earth",
+            "Wood",
+            "Water",
+            "Fire",
+            "Metal"
+          ],
+          "sizes": {
+            "比和": 14,
+            "生": 24,
+            "克": 26
+          },
+          "all_real": true,
+          "is_actual": false
+        },
+        {
+          "perm": [
+            "Earth",
+            "Wood",
+            "Metal",
+            "Water",
+            "Fire"
+          ],
+          "sizes": {
+            "比和": 14,
+            "生": 24,
+            "克": 26
+          },
+          "all_real": true,
+          "is_actual": false
+        },
+        {
+          "perm": [
+            "Earth",
+            "Wood",
+            "Metal",
+            "Fire",
+            "Water"
+          ],
+          "sizes": {
+            "比和": 14,
+            "生": 24,
+            "克": 26
+          },
+          "all_real": true,
+          "is_actual": false
+        },
+        {
+          "perm": [
+            "Earth",
+            "Wood",
+            "Fire",
+            "Water",
+            "Metal"
+          ],
+          "sizes": {
+            "比和": 14,
+            "生": 26,
+            "克": 24
+          },
+          "all_real": true,
+          "is_actual": false
+        },
+        {
+          "perm": [
+            "Earth",
+            "Wood",
+            "Fire",
+            "Metal",
+            "Water"
+          ],
+          "sizes": {
+            "比和": 14,
+            "生": 26,
+            "克": 24
+          },
+          "all_real": true,
+          "is_actual": false
+        }
+      ]
+    }
+  }
+}
