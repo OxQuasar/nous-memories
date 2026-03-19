@@ -38,6 +38,4 @@ Directed type subgraphs show H ≈ 0.06–0.24 at step 5 (vs max 1.58). Likely e
 
 The I Ching realizes the GMS as an edge coloring of Q₆ (constraint on transitions, not states). General question: given a shift of finite type (SFT), what is the minimum n such that the SFT's forbidden patterns can be realized as edge coloring of Q_n? What is the dark sector structure as a function of n? Connects to constrained coding theory and algebraic graph theory.
 
-### Empirical Questions → moved to `empirical/questions.md`
-
-Timescale ratio matching, regime transition statistics, five-element prediction, inversion symmetry in natural transitions.
+### Empirical Questions → `empirical/questions.md`
