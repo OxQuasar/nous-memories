@@ -181,15 +181,47 @@ R254 (weight-3 eigenspace identification), R255 (dimensional pressure), R256 (Kr
 | F6 (combined signature) | Answered | Two perpendicular structures: edge-type (Hamiltonian) ⊥ bit-layer (RG) |
 | F7 (互 = RG?) | Confirmed | Block-spin RG on bit-layer axis; does NOT descend to GMS (R273–R274) |
 
+## Literature Review (L1–L8)
+
+Full review in `literature.md`. Summary:
+
+Every fingerprint component — GMS, Chebyshev spacing, Fibonacci walks, block-spin RG — is the *first nontrivial instance* of a standard construction. Each follows automatically from path graphs on Q₃ with a Z₅ partition:
+
+| Component | Standard construction | Why it appears here |
+|-----------|----------------------|---------------------|
+| GMS (R270) | Simplest SFT with positive entropy | P₄ is its bipartite double cover; any 4-vertex path has this |
+| Chebyshev {1,√2,φ} (R258) | Spectral radii of consecutive path graphs | Forced by {P₂,P₃,P₄}; consecutive paths always Chebyshev-spaced |
+| Fibonacci/Lucas walks (R265) | tr(Aⁿ) when eigenvalues are {φ,−1/φ} | Standard P₄ eigenstructure |
+| Block-spin RG (R273) | d=2, b=2 real-space RG | 互 strips bit-layers; any middle-extraction on 6 bits does this |
+
+No known external dynamical system matches the combined fingerprint. The complement-Z₅ gate (R279) and forcing chain (R281) are the original mathematical contributions — not previously in the literature.
+
+## Interpretation: Minimal Markov Partition
+
+The structure is the smallest discrete system where the combinatorial atoms of symbolic dynamics, spectral theory, and renormalization all coexist and are mutually constrained:
+
+- GMS is the simplest nontrivial SFT — P₄ is its smallest bipartite realization
+- Q₃ is the smallest Boolean cube admitting a surjection onto Z₅ (need ≥8 > 5 vertices)
+- Three consecutive path graphs is the minimum for a nontrivial spectral hierarchy
+- 6 bits is the minimum where a 2-step block-spin RG terminates nontrivially
+
+Each component is at the **floor** of its category. Below Q₃/Z₅ they can't coexist. At Q₃/Z₅ they're forced to. The forcing chain (120→40→20→10→1) shows the constraints are so tight at this scale that exactly one assignment survives.
+
+**Scaling up:** Increasing the parameters (Q₃→Q_n, Z₅→Z_k) converges to 1D lattice models in statistical mechanics — the standard setting where transfer matrices, symbolic dynamics, and real-space RG were developed. The I Ching sits at the floor of this family.
+
+**Reframe:** The I Ching is a *projection* — the smallest Markov partition that simultaneously captures:
+- A forbidden-pattern constraint (binary exclusion / GMS)
+- Separated timescales (Chebyshev spectral hierarchy)
+- An inversion symmetry (complement involution)
+
+The class of systems it could approximate: anything with these three features. The three-level null (R253/R269) clarifies the resolution: the projection captures the transition skeleton but not the semantic content. Architecture and text are independent layers.
+
 ## What Remains Untested
 
-- External matching: does the transition structure correspond to any known dynamical system? (Q11)
-- Bifurcation frequency comparison: 1:2:3 vs real dynamical systems (Q12)
-- Non-五行 graph dynamics: Q₆ structure connecting to text independently of the 五行 overlay (only Laplacian tested; other operationalizations possible)
-- External data: actual situational dynamics vs I Ching transition structure
 - Hex-level zeta factorization: what symmetry group organizes the 60 incoherent eigenvalues? (the "dark sector")
 - Aut(Q₃) orbits on the 10 valve assignments: does it reduce the irreducible drama at Tier 5?
 - The complement-Z₅ reflection condition generalized: is there a theorem in finite group theory for when a Z₂ involution on a set is a Z_n isometry?
+- Non-五行 graph dynamics: Q₆ structure connecting to text independently of the 五行 overlay (only Laplacian tested; other operationalizations possible)
 
 ## Fingerprint Investigation Results (Probe A)
 
