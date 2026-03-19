@@ -1,0 +1,261 @@
+PROTOCOL CASCADE SEQUENCING
+Temporal ordering of liquidations across Maker, Compound, and Aave
+Data: block-level event timestamps from raw liquidation logs
+
+Total events: 38116 (aave: 29534, compound: 8206, maker: 376)
+High-liquidation threshold (P90): $1,054,208
+Episodes: 27
+WARNING: 2700 events missing USD conversion (no price match)
+============================================================
+A. PROTOCOL ACTIVATION ORDERING DURING EPISODES
+============================================================
+
+Data: block-level timestamps for 35416 events across 3 protocols
+Activation threshold: >$100K daily volume per protocol
+Episodes: 27 (14d gap clustering, high-liq days >P90)
+
+  Start        Size   Maker    Comp    Aave       First    7d Ret
+  ------------------------------------------------------------
+  2022-01-20      5      1d    1d    1d       maker   -21.41%
+  2022-02-11      2     13d    0d    0d    compound    -5.04%
+  2022-04-06      4      5d     —    0d        aave    -1.49%
+  2022-05-05     17      3d    0d    0d    compound   -28.59%
+  2022-09-13      1       —    0d     —    compound   -15.83%
+  2022-11-08      2      1d    0d    0d    compound    -6.50%
+  2023-03-09      1       —    0d    0d    compound   +17.08%
+  2023-06-14      1      0d    0d    0d       maker   +14.97%
+  2023-08-17      1      0d    0d    0d       maker    -1.65%
+  2023-12-20      5       —   14d    0d        aave    +8.52%
+  2024-03-16      5     28d    0d    0d    compound    -4.35%
+  2024-04-30      2      0d    1d    0d       maker    +0.73%
+  2024-06-11      7     22d   13d    0d        aave    -1.01%
+  2024-08-02      3      2d    0d    0d    compound   -13.18%
+  2024-08-27      3     10d   10d    0d        aave    -0.47%
+  2024-10-03      1      0d     —    0d       maker    +1.14%
+  2024-11-12      1       —     —    0d        aave    -5.38%
+  2024-12-05      5     15d   15d    0d        aave    +2.51%
+  2025-01-07      6      6d    6d    0d        aave    -4.36%
+  2025-02-22     11      3d    3d    0d        aave   -20.24%
+  2025-03-30      5      4d    7d    0d        aave   -13.32%
+  2025-05-23      2      2d    0d     —    compound    -0.21%
+  2025-06-21      1       —     —    0d        aave    +6.87%
+  2025-08-01      5       —     —    0d        aave   +16.57%
+  2025-09-16      6      6d    6d    0d        aave    -7.49%
+  2025-11-03      6      1d    1d    0d        aave    -0.22%
+  2026-01-20      9     11d   11d    0d        aave    +2.59%
+
+  Protocol activation orderings (multi-protocol episodes):
+    aave → maker → compound: 8 episodes
+    compound → aave → maker: 5 episodes
+    maker → compound → aave: 3 episodes
+    aave → maker: 1 episodes
+    compound → aave: 1 episodes
+    aave → compound: 1 episodes
+    maker → aave → compound: 1 episodes
+    aave → compound → maker: 1 episodes
+    maker → aave: 1 episodes
+    compound → maker: 1 episodes
+
+  First-to-activate (multi-protocol episodes):
+         maker: 5/23 (21.7%)
+      compound: 7/23 (30.4%)
+          aave: 11/23 (47.8%)
+
+============================================================
+B. PROTOCOL LEAD/LAG STATISTICS
+============================================================
+
+  Lag = day(Y first active) - day(X first active). Positive = X leads Y.
+
+  Pair                      N   Med lag   Mean lag   X leads   Same day   Y leads
+  --------------------------------------------------------------------
+  maker→compound         19     +0.0d     -2.84d     2 (  11%)    10 (  53%)     7 (  37%)
+  maker→aave             20     -3.5d     -6.50d     0 (   0%)     5 (  25%)    15 (  75%)
+  compound→aave             20     -1.0d     -4.35d     0 (   0%)     9 (  45%)    11 (  55%)
+
+  Sub-daily ordering (same-day activations, using block timestamps):
+    maker→compound: 0 maker-first, 10 compound-first, 0 ties (of 10 same-day pairs)
+    maker→aave: 1 maker-first, 4 aave-first, 0 ties (of 5 same-day pairs)
+    compound→aave: 3 compound-first, 6 aave-first, 0 ties (of 9 same-day pairs)
+
+============================================================
+C. LAG STRUCTURE VS CASCADE SEVERITY
+============================================================
+
+  Multi-protocol episodes: 23
+  Simultaneous (all protocols within 1 day): 8
+  Sequential (≥2 day gap between first and last): 15
+
+  Simultaneous (n=8):
+    7d forward return: median=+0.255%, mean=+0.517%, %neg=50.0%
+
+  Sequential (n=15):
+    7d forward return: median=-4.354%, mean=-5.742%, %neg=80.0%
+
+  Spread (simul - sequential median): +4.609pp
+  Mann-Whitney: U=79, p=0.2382
+
+  Start         Spread  #Proto    7d Ret  Type
+  --------------------------------------------------
+  2022-01-20        0d       3   -21.41%  simul
+  2022-02-11       13d       3    -5.04%  seq
+  2022-04-06        5d       2    -1.49%  seq
+  2022-05-05        3d       3   -28.59%  seq
+  2022-11-08        1d       3    -6.50%  simul
+  2023-03-09        0d       2   +17.08%  simul
+  2023-06-14        0d       3   +14.97%  simul
+  2023-08-17        0d       3    -1.65%  simul
+  2023-12-20       14d       2    +8.52%  seq
+  2024-03-16       28d       3    -4.35%  seq
+  2024-04-30        1d       3    +0.73%  simul
+  2024-06-11       22d       3    -1.01%  seq
+  2024-08-02        2d       3   -13.18%  seq
+  2024-08-27       10d       3    -0.47%  seq
+  2024-10-03        0d       2    +1.14%  simul
+  2024-12-05       15d       3    +2.51%  seq
+  2025-01-07        6d       3    -4.36%  seq
+  2025-02-22        3d       3   -20.24%  seq
+  2025-03-30        7d       3   -13.32%  seq
+  2025-05-23        2d       2    -0.21%  seq
+  2025-09-16        6d       3    -7.49%  seq
+  2025-11-03        1d       3    -0.22%  simul
+  2026-01-20       11d       3    +2.59%  seq
+
+============================================================
+D. VOLUME SHARE DYNAMICS WITHIN EPISODES
+============================================================
+
+  Top 5 episodes by total liquidation volume:
+
+  --- Episode starting 2022-05-05 (17 high-liq days, $331.8M total) ---
+    Date                Aave    Compound       Maker       Total   Aave%  Comp%  Makr%
+    ------------------------------------------------------------------------------
+    2022-05-05    $     3969K  $      143K  $       25K  $     4137K   95.9%   3.5%   0.6%
+    2022-05-06    $     2070K  $       61K  $        0K  $     2131K   97.1%   2.9%   0.0%
+    2022-05-07    $     1121K  $       11K  $        0K  $     1132K   99.0%   1.0%   0.0%
+    2022-05-08    $     1296K  $     1131K  $      301K  $     2728K   47.5%  41.4%  11.0%
+    2022-05-09    $     8122K  $    10122K  $      469K  $    18713K   43.4%  54.1%   2.5%
+    2022-05-10    $     1963K  $       96K  $        0K  $     2059K   95.4%   4.6%   0.0%
+    2022-05-11    $    13319K  $     2997K  $     2576K  $    18891K   70.5%  15.9%  13.6%
+    2022-05-12    $    31264K  $    16017K  $     4615K  $    51895K   60.2%  30.9%   8.9%
+    2022-05-13    $       77K  $       25K  $        0K  $      102K   75.9%  24.1%   0.0%
+    2022-05-14    $      132K  $        9K  $        0K  $      141K   93.5%   6.5%   0.0%
+    2022-05-15    $       45K  $        2K  $       43K  $       89K   50.2%   1.9%  47.9%
+    2022-05-16    $        8K  $        0K  $        0K  $        8K  100.0%   0.0%   0.0%
+    2022-05-17    $        4K  $        0K  $        0K  $        4K  100.0%   0.0%   0.0%
+    2022-05-18    $      242K  $        5K  $        0K  $      247K   97.9%   2.1%   0.0%
+    2022-05-19    $       25K  $      150K  $        0K  $      175K   14.2%  85.8%   0.0%
+    2022-05-20    $        5K  $        3K  $        0K  $        9K   60.2%  39.8%   0.0%
+    2022-05-21    $        6K  $        2K  $        0K  $        8K   76.6%  23.4%   0.0%
+    2022-05-22    $       14K  $        0K  $        0K  $       14K   98.0%   2.0%   0.0%
+    2022-05-23    $        1K  $        0K  $        0K  $        1K  100.0%   0.0%   0.0%
+    2022-05-24    $       13K  $        0K  $        0K  $       13K  100.0%   0.0%   0.0%
+    2022-05-25    $        3K  $        0K  $        0K  $        3K  100.0%   0.0%   0.0%
+    2022-05-26    $     1138K  $     5522K  $       99K  $     6759K   16.8%  81.7%   1.5%
+    2022-05-27    $      402K  $      273K  $      417K  $     1092K   36.8%  25.0%  38.2%
+    2022-05-28    $       41K  $        4K  $        0K  $       45K   92.1%   7.9%   0.0%
+    2022-05-29    $       14K  $        0K  $        0K  $       14K   98.9%   1.1%   0.0%
+    2022-05-30    $        0K  $       24K  $        0K  $       25K    1.4%  98.6%   0.0%
+    2022-05-31    $        5K  $       24K  $        0K  $       29K   16.0%  84.0%   0.0%
+    2022-06-03    $        1K  $      102K  $        0K  $      103K    0.5%  99.5%   0.0%
+    2022-06-04    $        2K  $        0K  $        0K  $        2K  100.0%   0.0%   0.0%
+    2022-06-05    $        0K  $        0K  $        0K  $        0K  100.0%   0.0%   0.0%
+    2022-06-07    $      600K  $        0K  $        0K  $      601K  100.0%   0.0%   0.0%
+    2022-06-09    $        1K  $        0K  $        0K  $        1K  100.0%   0.0%   0.0%
+    2022-06-10    $      445K  $      308K  $      168K  $      921K   48.3%  33.4%  18.2%
+    2022-06-11    $     9885K  $     6226K  $     2885K  $    18996K   52.0%  32.8%  15.2%
+    2022-06-12    $     5218K  $     5428K  $       31K  $    10677K   48.9%  50.8%   0.3%
+    2022-06-13    $    13009K  $    14929K  $    11218K  $    39156K   33.2%  38.1%  28.6%
+    2022-06-14    $    31979K  $    43883K  $     1249K  $    77112K   41.5%  56.9%   1.6%
+    2022-06-15    $     5843K  $    17634K  $      271K  $    23748K   24.6%  74.3%   1.1%
+    2022-06-16    $       18K  $        9K  $        0K  $       27K   66.6%  33.4%   0.0%
+    2022-06-17    $       29K  $       12K  $        0K  $       41K   70.2%  29.8%   0.0%
+    2022-06-18    $     6879K  $    16500K  $     1507K  $    24886K   27.6%  66.3%   6.1%
+
+    Share shift (first half → second half of episode):
+            aave:  62.1% →  37.0% (-25.2pp)
+        compound:  30.0% →  54.3% (+24.3pp)
+           maker:   7.8% →   8.7% (+0.9pp)
+
+  --- Episode starting 2022-01-20 (5 high-liq days, $245.2M total) ---
+    Date                Aave    Compound       Maker       Total   Aave%  Comp%  Makr%
+    ------------------------------------------------------------------------------
+    2022-01-21    $    21277K  $    53374K  $     1079K  $    75730K   28.1%  70.5%   1.4%
+    2022-01-22    $     8834K  $    21158K  $     5553K  $    35546K   24.9%  59.5%  15.6%
+    2022-01-23    $     2692K  $       21K  $        0K  $     2713K   99.2%   0.8%   0.0%
+    2022-01-24    $    11173K  $    10455K  $     1491K  $    23120K   48.3%  45.2%   6.5%
+
+    Share shift (first half → second half of episode):
+            aave:  27.1% →  53.7% (+26.6pp)
+        compound:  67.0% →  40.6% (-26.4pp)
+           maker:   6.0% →   5.8% (-0.2pp)
+
+  --- Episode starting 2025-01-07 (6 high-liq days, $235.7M total) ---
+    Date                Aave    Compound       Maker       Total   Aave%  Comp%  Makr%
+    ------------------------------------------------------------------------------
+    2025-01-07    $     2354K  $       18K  $        0K  $     2372K   99.2%   0.8%   0.0%
+    2025-01-08    $     5061K  $       20K  $        0K  $     5081K   99.6%   0.4%   0.0%
+    2025-01-09    $      141K  $        0K  $        0K  $      141K  100.0%   0.0%   0.0%
+    2025-01-10    $        1K  $        0K  $        0K  $        1K  100.0%   0.0%   0.0%
+    2025-01-11    $        0K  $        0K  $        0K  $        0K   60.3%  39.7%   0.0%
+    2025-01-12    $        3K  $        0K  $        0K  $        3K   98.2%   1.8%   0.0%
+    2025-01-13    $     7478K  $    19342K  $      739K  $    27559K   27.1%  70.2%   2.7%
+    2025-01-14    $        0K  $        0K  $        0K  $        0K  100.0%   0.0%   0.0%
+    2025-01-15    $        0K  $        0K  $        0K  $        0K  100.0%   0.0%   0.0%
+    2025-01-16    $        7K  $        0K  $        0K  $        7K  100.0%   0.0%   0.0%
+    2025-01-17    $        0K  $        0K  $        0K  $        0K  100.0%   0.0%   0.0%
+    2025-01-18    $       81K  $        0K  $        0K  $       81K  100.0%   0.0%   0.0%
+    2025-01-19    $      592K  $        0K  $        0K  $      592K  100.0%   0.0%   0.0%
+    2025-01-20    $        5K  $        0K  $        0K  $        5K  100.0%   0.0%   0.0%
+    2025-01-21    $        5K  $        0K  $        0K  $        5K  100.0%   0.0%   0.0%
+    2025-01-22    $        0K  $        0K  $        0K  $        0K  100.0%   0.0%   0.0%
+    2025-01-23    $        1K  $        0K  $        0K  $        1K  100.0%   0.0%   0.0%
+    2025-01-24    $        7K  $        0K  $        0K  $        7K  100.0%   0.0%   0.0%
+    2025-01-25    $        4K  $        0K  $        0K  $        4K  100.0%   0.0%   0.0%
+    2025-01-26    $        4K  $        0K  $        0K  $        4K  100.0%   0.0%   0.0%
+    2025-01-27    $     1028K  $        1K  $    18480K  $    19509K    5.3%   0.0%  94.7%
+    2025-01-28    $       47K  $        0K  $        0K  $       47K  100.0%   0.0%   0.0%
+    2025-01-29    $        1K  $        0K  $        0K  $        1K  100.0%   0.0%   0.0%
+    2025-01-30    $        0K  $        0K  $        0K  $        0K  100.0%   0.0%   0.0%
+    2025-01-31    $        0K  $        0K  $        0K  $        0K   58.8%  41.2%   0.0%
+    2025-02-01    $       34K  $        1K  $        0K  $       35K   96.2%   3.8%   0.0%
+    2025-02-02    $     7100K  $     1601K  $      750K  $     9452K   75.1%  16.9%   7.9%
+    2025-02-03    $    99596K  $    51397K  $     5584K  $   156577K   63.6%  32.8%   3.6%
+
+    Share shift (first half → second half of episode):
+            aave:  43.9% →  58.1% (+14.2pp)
+        compound:  54.1% →  28.5% (-25.5pp)
+           maker:   2.1% →  13.4% (+11.3pp)
+
+  --- Episode starting 2024-08-02 (3 high-liq days, $210.1M total) ---
+    Date                Aave    Compound       Maker       Total   Aave%  Comp%  Makr%
+    ------------------------------------------------------------------------------
+    2024-08-02    $      596K  $     4677K  $        6K  $     5280K   11.3%  88.6%   0.1%
+    2024-08-03    $      933K  $       23K  $        0K  $      956K   97.6%   2.4%   0.0%
+    2024-08-04    $    10836K  $     2700K  $      263K  $    13799K   78.5%  19.6%   1.9%
+    2024-08-05    $   144293K  $    38870K  $      402K  $   183564K   78.6%  21.2%   0.2%
+
+    Share shift (first half → second half of episode):
+            aave:  24.5% →  78.6% (+54.1pp)
+        compound:  75.4% →  21.1% (-54.3pp)
+           maker:   0.1% →   0.3% (+0.2pp)
+
+  --- Episode starting 2025-03-30 (5 high-liq days, $186.5M total) ---
+    Date                Aave    Compound       Maker       Total   Aave%  Comp%  Makr%
+    ------------------------------------------------------------------------------
+    2025-03-30    $     1379K  $        1K  $       12K  $     1391K   99.1%   0.0%   0.9%
+    2025-03-31    $        0K  $        0K  $        0K  $        0K   85.2%  14.8%   0.0%
+    2025-04-01    $        6K  $        0K  $        0K  $        6K   99.8%   0.2%   0.0%
+    2025-04-02    $       58K  $        0K  $        0K  $       59K   99.5%   0.5%   0.0%
+    2025-04-03    $     1041K  $       22K  $      337K  $     1400K   74.4%   1.6%  24.1%
+    2025-04-04    $        5K  $        0K  $        0K  $        5K   99.6%   0.4%   0.0%
+    2025-04-05    $        1K  $        0K  $        0K  $        1K  100.0%   0.0%   0.0%
+    2025-04-06    $    35414K  $     1751K  $   109597K  $   146763K   24.1%   1.2%  74.7%
+    2025-04-07    $    32320K  $     2070K  $     3825K  $    38215K   84.6%   5.4%  10.0%
+    2025-04-08    $       46K  $        2K  $        0K  $       48K   96.2%   3.8%   0.0%
+    2025-04-09    $     1662K  $      165K  $        7K  $     1834K   90.6%   9.0%   0.4%
+
+    Share shift (first half → second half of episode):
+            aave:  87.0% →  37.2% (-49.8pp)
+        compound:   0.8% →   2.1% (+1.3pp)
+           maker:  12.2% →  60.7% (+48.5pp)

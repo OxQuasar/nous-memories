@@ -46,15 +46,30 @@ The investigation started from the outside and has been spiraling inward. Each p
 
 **Interpretation — minimal Markov partition:** The structure is the smallest discrete system where the combinatorial atoms of symbolic dynamics (shift spaces), spectral theory (Chebyshev), and renormalization (block-spin RG) all coexist and are mutually constrained. Scaling up Q₃/Z₅ (more bits, larger cyclic groups) converges to 1D lattice models in statistical mechanics — the standard setting where transfer matrices, symbolic dynamics, and real-space RG were developed. This reframes the I Ching as a *projection*: the smallest Markov partition that simultaneously captures a nontrivial spectral hierarchy, a forbidden-pattern constraint, and an inversion symmetry. The class of systems it could approximate: anything with binary exclusion (GMS), separated timescales (Chebyshev), and inversion symmetry (complement). The three-level null (R253/R269) clarifies the resolution: the projection captures the transition skeleton but not the semantic content — architecture and text are independent layers.
 
-**What's untested:** The dark sector (60/64 hex-level eigenvalues with no trigram ancestor — controls long-time dynamics, uncharacterized). Aut(Q₃) orbits on the 10 valve assignments.
+**What's untested:** Aut(Q₃) orbits on the 10 valve assignments.
+
+### Phase 8: What is it projecting?
+**Workflows:** projection
+**Answer:** Nothing external. The I Ching is the unique canonical classification of single-step Q₆ transitions under complement-Z₅ axioms. The "minimal Markov partition" refines to: the minimal stage *on which* the constraint class {GMS + complement + Z₅} can be written — not a partition *of* some target, but the stage itself.
+
+Three probes converged:
+
+1. **Dark sector characterization (R282–R285):** The 60/64 dark eigenvalues are spectrally generic — Walsh-binomial weight distribution, no internal structure, dominant from step 0. Partition is tight on the constraint axis: the 五行 typing captures all spectral constraints, and the dynamics within are free. 生 coherent sector is entirely the kernel (topological, confirmed directed — R283). Algebraic complexity grades: 比和 (simple) > 克 (intermediate) > 生 (generic).
+
+2. **Logistic map / 1D map exclusion (R286–R287):** Absolute structural obstruction: continuous 1D maps produce interval graph transition matrices; Q₃ is not an interval graph. Rules out all 1D maps at all parameters with all partitions. The GMS connection is real at the constraint level (shared forbidden-"11", entropy log(φ), field Q(φ)) but the geometries diverge: interval graph vs hypercube. Two incompatible architectures for the same constraint: constraint-on-states (logistic, Fibonacci cell count) vs constraint-on-transitions (I Ching, all states present, GMS on edges).
+
+3. **Composability (R288–R291):** Type information decorrelates in 1–2 steps (MI half-lives: 生 ~1.1, 克 ~1.4, 比和 ~1.8). Full transition graph IS Q₆ — typing classifies but doesn't constrain. Directed single-step subgraphs are the informative regime, matching traditional practice. 互 preserves exactly 1/3 of transitions (type-independent, pure Q₆ × 互 geometry). 生 parity balance forced by uniqueness theorem (R291).
+
+**Grammar ≠ vocabulary:** The algebra is the edge typing (grammar of transitions). The text is the vertex content (vocabulary of situations). They are independent because they operate on different aspects of the same graph — edges vs vertices. The ~11% correlation is the shared complement symmetry.
 
 ## Current Position
 
-**The minimal Markov partition interpretation** is the most coherent framing the dynamics investigation has produced. It answers "what does the structure represent" with: the smallest valid approximation frame for systems with binary exclusion, separated timescales, and inversion symmetry. What the text fills in is a separate layer.
+**The theoretical arc is complete across 8 phases.** The I Ching is the unique rigid complement-respecting surjection F₂³ → Z₅ (Phase 1), existing only at (n,p) = (3,5) (Phase 2), with an 11%/89% algebra/text boundary (Phase 3), a ~16-dim thematic manifold inside that boundary (Phase 4), functioning as a judgment instrument (Phase 5), connected to wider mathematics through Route B (Phase 6), internally decomposed into two perpendicular axes with a complete forcing chain (Phase 7), and confirmed as the unique canonical edge typing of Q₆ — not projecting any external system (Phase 8).
 
-**The dark sector** is the largest open structural question. 60 of 64 hex-level eigenvalues are born from the fiber bundle coupling and dominate the spectral radius (4.69 > 2φ). Everything characterized so far lives in the subdominant coherent sector.
-
-**Q2 proper (reversal):** Is composability itself forced by something deeper? The forcing chain has exactly one contingent step.
+**What remains:**
+- Empirical: do natural systems exhibit the constraint class {GMS + complement + Z₅}? (timescale ratios, regime transition data — different investigation, different methods)
+- Refinements: Z₅ proximity inversion mechanism (R283), algebraic discriminants (R284), directed subgraph trapping (R289)
+- New direction: shift spaces as hypercube edge colorings — general theory of embedding shift constraints in Q_n
 
 ## The Method
 
@@ -65,7 +80,7 @@ The investigation uses divergent-first methodology:
 
 ## Running Totals
 
-~281 results across 20 workflows.
+~291 results across 21 workflows.
 
 | Phase | Workflows | Results | Status |
 |-------|-----------|---------|--------|
@@ -75,4 +90,5 @@ The investigation uses divergent-first methodology:
 | 4. Inside boundary | reversal Q1, Q3, dynamics D1–D3 | R112–R170, R254–R256 | Established |
 | 5. What it's for | reversal Q2, Q3, atlases | R73–R111, R140–R180 | Established |
 | 6. Wider connections | eastwest, fibo | R181–R252 | Established |
-| 7. What does it represent | dynamics | R253, R257–R281 | Minimal Markov partition; dark sector open |
+| 7. What does it represent | dynamics | R253, R257–R281 | Two-axis decomposition, forcing chain |
+| 8. What is it projecting | projection | R282–R291 | Not projecting; unique canonical edge typing |

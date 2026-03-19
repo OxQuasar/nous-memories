@@ -1,0 +1,67 @@
+Data: 2022-01-01 to 2026-03-19 (1539 days)
+Liquidation volume thresholds (of active days):
+  75th: $0.06M, 90th: $0.91M, 95th: $3.69M
+
+=== A. FORWARD VOLATILITY BY LIQUIDATION REGIME ===
+
+  --- 1-day absolute forward return ---
+      Bucket       N      Mean    Median       Std      Kurt       Max
+       quiet    1260     2.36%     1.58%     2.43%      7.00    19.58%
+    moderate     167     3.08%     2.19%     3.02%      3.29    15.96%
+    elevated      55     3.71%     2.82%     3.46%      4.68    17.80%
+     extreme      56     4.62%     3.32%     4.15%      3.14    18.45%
+
+  --- 3-day absolute forward return ---
+      Bucket       N      Mean    Median       Std      Kurt       Max
+       quiet    1259     4.34%     3.21%     4.18%      8.90    41.99%
+    moderate     166     5.13%     4.09%     4.38%      2.84    23.75%
+    elevated      55     6.10%     4.87%     6.00%      2.47    27.54%
+     extreme      56     6.66%     5.45%     5.57%      0.54    23.07%
+
+  --- 7-day absolute forward return ---
+      Bucket       N      Mean    Median       Std      Kurt       Max
+       quiet    1255     7.01%     5.34%     6.62%      6.28    49.54%
+    moderate     166     7.07%     5.08%     6.80%      4.79    39.86%
+    elevated      55     9.43%     7.49%     8.33%      1.25    34.76%
+     extreme      56     7.55%     5.82%     6.78%      5.10    35.78%
+
+=== B. STATISTICAL SIGNIFICANCE (extreme vs quiet, abs 7d return) ===
+  Quiet days:  n=1255, median abs 7d return = 5.34%
+  Extreme days: n=56, median abs 7d return = 5.82%
+  Mann-Whitney U = 37276, p-value = 0.2205
+  Effect size (median ratio extreme/quiet) = 1.09x
+  Significant at 5%: NO
+
+=== C. VOLATILITY SIGNAL TIME SERIES ===
+  Saved 1539 rows → /home/quasar/nous/memories/mev/data/volatility_signal.csv
+  Correlation(liq_volume, fwd_7d_abs_return) = +0.006
+  Correlation(liq_volume, fwd_7d_realized_vol) = +0.156
+  Correlation(log_liq_volume, fwd_7d_abs_return) = +0.035 (active days only, n=1103)
+  Correlation(log_liq_volume, fwd_7d_realized_vol) = +0.235
+
+=== D. CONCENTRATION RATIO: CASCADE vs ABSORPTION CLASSIFIER ===
+  (Days with liq volume ≥ 90th pctl = $0.9M)
+  Concentrated: today > 50% of trailing 7d total (capitulation)
+  Distributed: today ≤ 50% of trailing 7d total (ongoing cascade)
+
+  Concentrated: 72 days, Distributed: 39 days
+
+  Concentrated (n=72):
+     Horizon      Mean    Median     % Neg
+         1d   -0.426%   +0.628%     47.2%
+         3d   -1.228%   +0.235%     48.6%
+         7d   -1.189%   +0.191%     50.0%
+
+  Distributed (n=39):
+     Horizon      Mean    Median     % Neg
+         1d   -1.337%   -0.648%     56.4%
+         3d   -2.977%   -1.594%     64.1%
+         7d   -2.800%   -3.436%     64.1%
+
+  7d return difference: Mann-Whitney p = 0.1771
+  Concentrated 7d median: +0.191%, Distributed 7d median: -3.436%
+
+=== VERDICT ===
+  Volatility prediction: NO — ratio 1.1x, not significant (p=0.2205)
+  Concentration classifier: concentrated median +0.191% vs distributed median -3.436% (p=0.1771)
+  → No statistically significant difference between concentrated and distributed

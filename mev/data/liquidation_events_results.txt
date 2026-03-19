@@ -1,0 +1,82 @@
+=== DATA ACCESS RESULTS ===
+Option A (DefiLlama liquidations API): FAILED — 500 error
+Option B (Aave subgraph/The Graph): FAILED — deprecated / requires API key
+Option C (Dune Analytics): FAILED — requires API key
+Option D (On-chain event logs via free RPC): SUCCESS
+
+Data: 2022-01-16 to 2026-03-19 (1524 days)
+Total liquidation events: 27702
+Total ETH liquidated: 536,339 ETH
+Total USD liquidated: $1,192.3M
+Days with liquidations: 1110 / 1524
+
+=== UNCONDITIONAL BASELINE ===
+   1d: mean=+0.041%, median=+0.024%, %neg=49.4%
+   3d: mean=+0.127%, median=+0.059%, %neg=49.4%
+   7d: mean=+0.339%, median=-0.063%, %neg=50.6%
+  14d: mean=+0.712%, median=-0.664%, %neg=53.0%
+
+=== A. CASCADE vs ABSORPTION TEST ===
+(Forward ETH returns after high-liquidation days)
+
+  75th percentile: ≥$0.1M (278 days)
+     Horizon      Mean    Median     % Neg   Count
+         1d   -0.128%   +0.005%     49.6%     278
+         3d   -0.338%   +0.238%     49.1%     277
+         7d   -0.153%   +0.166%     49.8%     277
+        14d   -0.607%   -1.525%     58.3%     276
+
+  90th percentile: ≥$0.9M (111 days)
+     Horizon      Mean    Median     % Neg   Count
+         1d   -0.746%   -0.121%     50.5%     111
+         3d   -1.843%   -0.594%     54.1%     111
+         7d   -1.755%   -0.626%     55.0%     111
+        14d   -2.290%   -2.385%     58.6%     111
+
+  95th percentile: ≥$3.7M (56 days)
+     Horizon      Mean    Median     % Neg   Count
+         1d   +0.193%   +0.399%     48.2%      56
+         3d   -0.539%   -0.098%     50.0%      56
+         7d   +0.715%   +2.046%     42.9%      56
+        14d   -0.164%   -0.617%     53.6%      56
+
+  99th percentile: ≥$21.9M (12 days)
+     Horizon      Mean    Median     % Neg   Count
+         1d   -0.789%   -0.012%     50.0%      12
+         3d   +1.677%   -0.236%     50.0%      12
+         7d   -0.880%   +0.407%     50.0%      12
+        14d   -1.335%   -1.188%     58.3%      12
+
+=== B. LIQUIDATION CLUSTERING ===
+(Autocorrelation of daily liquidation volume)
+  lag 1d: autocorr = +0.145
+  lag 2d: autocorr = +0.027
+  lag 3d: autocorr = +0.032
+  lag 4d: autocorr = +0.012
+  lag 5d: autocorr = +0.045
+  lag 6d: autocorr = +0.027
+  lag 7d: autocorr = -0.002
+
+=== C. TOP 15 LIQUIDATION DAYS ===
+          Date        Volume    Events   ETH Price    7d Fwd
+    2024-08-05  $    152.0M      1088  $    2,469    +9.75%
+    2025-02-03  $    114.2M       585  $    2,879    -7.82%
+    2026-01-31  $     63.1M       619  $    2,427   -14.28%
+    2022-06-14  $     51.9M       400  $    1,177    -4.46%
+    2026-02-05  $     44.7M       573  $    1,888    +2.95%
+    2025-04-06  $     33.1M       983  $    1,559    +1.82%
+    2025-04-07  $     33.0M       857  $    1,577    +2.88%
+    2022-05-12  $     31.0M       541  $    1,967    +2.27%
+    2022-01-21  $     28.1M       350  $    2,523    +1.13%
+    2026-02-06  $     26.7M       214  $    2,072    -1.05%
+    2025-10-10  $     25.7M       205  $    3,859    -0.31%
+    2025-02-28  $     21.9M       478  $    2,215    -3.44%
+    2024-04-13  $     21.6M        90  $    3,056    +2.98%
+    2025-03-10  $     19.1M       619  $    1,886    +2.45%
+    2022-06-13  $     18.8M      1051  $    1,206    -6.10%
+
+=== VERDICT ===
+  Signal: MIXED
+  No clear directional signal from liquidation spikes
+  Spike 7d mean: -1.755% vs baseline 7d mean: +0.339%
+  Spike 7d %neg: 55.0% vs baseline 7d %neg: 50.6%

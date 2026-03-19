@@ -1,0 +1,28 @@
+Data: 2022-01-01 to 2026-03-19 (1539 days)
+
+=== LEVEL CORRELATION (raw, expect high) ===
+       dai_supply vs ETH price:  r = -0.003
+       gho_supply vs ETH price:  r = +0.455
+      usds_supply vs ETH price:  r = +0.342
+     total_supply vs ETH price:  r = +0.380
+
+=== 7-DAY RATE-OF-CHANGE CORRELATION ===
+         dai roc vs ETH roc:  r = +0.219  (n=1524)
+         gho roc vs ETH roc:  r = -0.005  (n=972)
+        usds roc vs ETH roc:  r = -0.053  (n=541)
+       total roc vs ETH roc:  r = +0.078  (n=1532)
+
+=== CROSS-CORRELATION (lags -30 to +30, +lag = supply leads) ===
+         dai:  peak r = +0.229 at lag -1d → CONCURRENT
+             top lags: -1d:+0.229, +0d:+0.219, -2d:+0.211, +1d:+0.202, -3d:+0.177
+         gho:  peak r = -0.061 at lag +27d → NOISE
+             top lags: +27d:-0.061, +28d:-0.059, +26d:-0.058, +30d:-0.053, +29d:-0.052
+        usds:  peak r = -0.134 at lag +28d → LEAD
+             top lags: +28d:-0.134, +29d:-0.131, -3d:-0.129, +30d:-0.129, -2d:-0.120
+       total:  peak r = -0.124 at lag -8d → LAG
+             top lags: -8d:-0.124, -7d:-0.117, -9d:-0.116, -6d:-0.111, -10d:-0.097
+
+=== VERDICT ===
+Combined supply signal: LAG
+  Peak cross-corr: r = -0.124 at lag -8 days
+  → Supply change LAGS ETH price change by ~8 days (not actionable)

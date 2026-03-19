@@ -1,0 +1,226 @@
+REGIME-INVARIANCE STRESS TEST
+Concentration Ratio: Structural Signal or Regime Artifact?
+Data: liquidation_events_combined.csv (Jan 2022 → Mar 2026)
+
+High-liquidation threshold (P90 of non-zero): $1,054,208
+Total days: 1539, days with liquidations: 1168
+============================================================
+A. ALTERNATIVE CLASSIFICATION METHODS
+============================================================
+
+--- Original (trailing 7d sum, >50%) ---
+    Concentrated   n= 76  median=+0.191%  mean=-1.452%  %neg=50.0%
+    Distributed    n= 41  median=-3.483%  mean=-3.482%  %neg=70.7%
+    Spread (conc - dist median): +3.674pp
+    Mann-Whitney U=1869, p=0.0761
+
+--- Method 1: 180d window, ≥95th pctl ---
+    Concentrated   n= 56  median=+1.233%  mean=+0.511%  %neg=46.4%
+    Distributed    n= 57  median=-3.312%  mean=-4.859%  %neg=70.2%
+    Spread (conc - dist median): +4.545pp
+    Mann-Whitney U=2045, p=0.0100
+
+  Confusion matrix: Original vs M1-P95
+  (rows=original, cols=M1-P95)
+                         New Conc   New Dist
+  Orig Concentrated            43         31
+  Orig Distributed             13         26
+  Original distributed → new distributed: 26/39 = 66.7%
+  Original concentrated → new concentrated: 43/74 = 58.1%
+
+--- Method 1: 180d window, ≥97th pctl ---
+    Concentrated   n= 38  median=+2.359%  mean=+2.017%  %neg=39.5%
+    Distributed    n= 75  median=-3.312%  mean=-4.333%  %neg=68.0%
+    Spread (conc - dist median): +5.672pp
+    Mann-Whitney U=1919, p=0.0027
+
+  Confusion matrix: Original vs M1-P97
+  (rows=original, cols=M1-P97)
+                         New Conc   New Dist
+  Orig Concentrated            32         42
+  Orig Distributed              6         33
+  Original distributed → new distributed: 33/39 = 84.6%
+  Original concentrated → new concentrated: 32/74 = 43.2%
+
+--- Method 2: Peak ratio (today/prior_6d_max > 2.0) ---
+    Concentrated   n= 65  median=-0.207%  mean=-1.767%  %neg=52.3%
+    Distributed    n= 52  median=-2.638%  mean=-2.658%  %neg=63.5%
+    Spread (conc - dist median): +2.431pp
+    Mann-Whitney U=1853, p=0.3727
+
+  Confusion matrix: Original vs M2-Peak
+  (rows=original, cols=M2-Peak)
+                         New Conc   New Dist
+  Orig Concentrated            65         11
+  Orig Distributed              0         41
+  Original distributed → new distributed: 41/41 = 100.0%
+  Original concentrated → new concentrated: 65/76 = 85.5%
+
+============================================================
+B. THRESHOLD STABILITY CURVE (Method 1: 180d window)
+============================================================
+
+   Pctl   n_conc   n_dist    Med Conc    Med Dist      Spread     p-val
+  --------------------------------------------------------------
+    85th      105        8      -0.658%      -4.950%      +4.292pp    0.3013
+    87th      101       12      -0.658%      -3.023%      +2.364pp    0.4531
+    89th       96       17      -0.642%      -1.492%      +0.850pp    0.2394
+    91th       87       26      -0.241%      -2.724%      +2.482pp    0.0850
+    93th       72       41      +0.191%      -1.965%      +2.155pp    0.0269
+    95th       56       57      +1.233%      -3.312%      +4.545pp    0.0100
+    97th       38       75      +2.359%      -3.312%      +5.672pp    0.0027
+    99th       18       95      +2.699%      -1.188%      +3.888pp    0.0522
+
+============================================================
+C. WITHIN-REGIME CONTROL (trailing 30d ETH return)
+============================================================
+
+--- Original ---
+  Bull (30d ret > 0):
+    Concentrated: n=21, median 7d=-0.207%, %neg=52.4%
+    Distributed: n=5, median 7d=-1.188%, %neg=80.0%
+    Spread: +0.981pp, Mann-Whitney p=0.2503
+  Bear (30d ret ≤ 0):
+    Concentrated: n=53, median 7d=+0.441%, %neg=49.1%
+    Distributed: n=33, median 7d=-4.938%, %neg=75.8%
+    Spread: +5.379pp, Mann-Whitney p=0.0772
+
+--- M1-P95 ---
+  Bull (30d ret > 0):
+    Concentrated: n=8, median 7d=+1.135%, %neg=50.0%
+    Distributed: n=18, median 7d=-0.662%, %neg=61.1%
+    Spread: +1.798pp, Mann-Whitney p=0.6832
+  Bear (30d ret ≤ 0):
+    Concentrated: n=48, median 7d=+1.233%, %neg=45.8%
+    Distributed: n=38, median 7d=-4.991%, %neg=76.3%
+    Spread: +6.224pp, Mann-Whitney p=0.0015
+
+--- M1-P97 ---
+  Bull (30d ret > 0):
+    Concentrated: n=5, median 7d=+8.279%, %neg=40.0%
+    Distributed: n=21, median 7d=-0.310%, %neg=61.9%
+    Spread: +8.590pp, Mann-Whitney p=0.4861
+  Bear (30d ret ≤ 0):
+    Concentrated: n=33, median 7d=+2.269%, %neg=39.4%
+    Distributed: n=53, median 7d=-4.938%, %neg=71.7%
+    Spread: +7.207pp, Mann-Whitney p=0.0012
+
+--- M2-Peak ---
+  Bull (30d ret > 0):
+    Concentrated: n=17, median 7d=-0.241%, %neg=58.8%
+    Distributed: n=9, median 7d=-0.310%, %neg=55.6%
+    Spread: +0.069pp, Mann-Whitney p=0.9570
+  Bear (30d ret ≤ 0):
+    Concentrated: n=46, median 7d=+0.191%, %neg=50.0%
+    Distributed: n=40, median 7d=-4.897%, %neg=70.0%
+    Spread: +5.088pp, Mann-Whitney p=0.1896
+
+============================================================
+D. EPISODE CLUSTERING (14d gap threshold)
+============================================================
+
+  Total high-liquidation days: 117
+  Total independent episodes: 27
+  Episode sizes: min=1, max=17, median=4, mean=4.3
+  Size distribution: {1: 7, 2: 4, 3: 2, 4: 1, 5: 6, 6: 3, 7: 1, 9: 1, 11: 1, 17: 1}
+
+  Episode composition (original classification):
+    Pure concentrated: 15
+    Pure distributed:  0
+    Mixed (both):      12
+    Total episodes:    27 (vs 117 individual days)
+
+  Episode-level 7d forward returns (dominant regime, first day):
+    Concentrated: n=22, median=-0.742%, mean=+0.055%, %neg=63.6%
+    Distributed: n=5, median=-20.235%, mean=-16.193%, %neg=80.0%
+    Spread: +19.494pp, Mann-Whitney p=0.0191
+
+  Episode detail:
+    Start         Size Dominant         7d Ret
+    ------------------------------------------
+    2022-01-20       5 distributed      -21.41%
+    2022-02-11       2 concentrated      -5.04%
+    2022-04-06       4 concentrated      -1.49%
+    2022-05-05      17 distributed      -28.59%
+    2022-09-13       1 concentrated     -15.83%
+    2022-11-08       2 concentrated      -6.50%
+    2023-03-09       1 concentrated     +17.08%
+    2023-06-14       1 concentrated     +14.97%
+    2023-08-17       1 concentrated      -1.65%
+    2023-12-20       5 concentrated      +8.52%
+    2024-03-16       5 concentrated      -4.35%
+    2024-04-30       2 concentrated      +0.73%
+    2024-06-11       7 concentrated      -1.01%
+    2024-08-02       3 concentrated     -13.18%
+    2024-08-27       3 concentrated      -0.47%
+    2024-10-03       1 concentrated      +1.14%
+    2024-11-12       1 concentrated      -5.38%
+    2024-12-05       5 concentrated      +2.51%
+    2025-01-07       6 concentrated      -4.36%
+    2025-02-22      11 distributed      -20.24%
+    2025-03-30       5 distributed      -13.32%
+    2025-05-23       2 concentrated      -0.21%
+    2025-06-21       1 concentrated      +6.87%
+    2025-08-01       5 concentrated     +16.57%
+    2025-09-16       6 concentrated      -7.49%
+    2025-11-03       6 concentrated      -0.22%
+    2026-01-20       9 distributed       +2.59%
+
+============================================================
+E. WITHIN-EPISODE POSITION (M1-P97)
+============================================================
+
+  Total episodes (M1-P97): 27
+  Multi-day episodes with both types: 13
+
+  Within mixed episodes:
+    Concentrated days: n=35, mean position=0.621, median=0.750
+    Distributed days:  n=53, mean position=0.420, median=0.400
+    (0.0 = episode start, 1.0 = episode end)
+    Mann-Whitney: U=1250, p=0.0058
+    → Concentrated days appear LATER in episodes
+    → Position-in-crash may contribute to forward return spread
+
+  Episode-level detail (mixed episodes only):
+    Start         Size  Conc positions             Dist positions
+    ----------------------------------------------------------------------
+    2022-05-05      17  C:[0.44,0.81,0.88]  D:[0.00,0.06,0.12,0.19,0.25,0.31,0.38,0.50,0.56,0.62,0.69,0.75,0.94,1.00]
+    2023-12-20       5  C:[0.00,0.25,0.50,1.00]  D:[0.75]
+    2024-03-16       5  C:[0.00,0.25,0.75,1.00]  D:[0.50]
+    2024-06-11       7  C:[0.83]  D:[0.00,0.17,0.33,0.50,0.67,1.00]
+    2024-08-02       3  C:[0.50,1.00]  D:[0.00]
+    2024-08-27       3  C:[1.00]  D:[0.00,0.50]
+    2024-12-05       5  C:[0.25,1.00]  D:[0.00,0.50,0.75]
+    2025-01-07       6  C:[0.40,0.60,0.80,1.00]  D:[0.00,0.20]
+    2025-02-22      11  C:[0.20,0.50,0.80]  D:[0.00,0.10,0.30,0.40,0.60,0.70,0.90,1.00]
+    2025-03-30       5  C:[0.50,0.75]  D:[0.00,0.25,1.00]
+    2025-09-16       6  C:[0.20,0.80]  D:[0.00,0.40,0.60,1.00]
+    2025-11-03       6  C:[0.20,0.60,0.80,1.00]  D:[0.00,0.40]
+    2026-01-20       9  C:[0.25,0.88,1.00]  D:[0.00,0.12,0.38,0.50,0.62,0.75]
+
+============================================================
+F. TRAILING 7d RETURN CONTROL (M1-P97, bear market)
+============================================================
+
+  Bear-market high-liquidation days (M1-P97): 86
+  Concentrated: 33, Distributed: 53
+
+  --- Trailing 7d return (drawdown into event) ---
+    Concentrated: median=-13.202%, mean=-14.695%
+    Distributed:  median=-10.110%, mean=-11.352%
+    Mann-Whitney: U=667, p=0.0660
+
+  --- Forward 7d return ---
+    Concentrated: median=+2.269%, mean=+1.668%
+    Distributed:  median=-4.938%, mean=-6.552%
+    Spread: +7.207pp, Mann-Whitney p=0.0012
+
+  --- Excess forward return (fwd_7d − trail_7d) ---
+    Concentrated: median=+16.280%, mean=+16.363%
+    Distributed:  median=+5.375%, mean=+4.801%
+    Excess spread: +10.905pp, Mann-Whitney p=0.0003
+
+  --- Interpretation ---
+    Trailing 7d returns DIFFER significantly between groups.
+    Excess return spread PERSISTS (+10.905pp, p=0.0003).
+    → Signal survives momentum control — not purely mean-reversion.

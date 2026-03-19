@@ -1,0 +1,58 @@
+=== DATA SUMMARY ===
+          aave: $  1192.3M total,  1110 active days
+       comp_v2: $   312.0M total,   565 active days
+       comp_v3: $   208.1M total,   150 active days
+         maker: $   311.6M total,   103 active days
+      COMBINED: $  2023.9M total,  1168 active days
+
+=== CONCENTRATION RATIO TEST: AAVE ONLY (baseline) ===
+  [Aave-only] 90th pctl threshold: $0.91M, active days: 1110
+  [Aave-only] High-liq days: 111 (concentrated: 72, distributed: 39)
+
+  Concentrated (n=72):
+     Horizon      Mean    Median     % Neg
+         1d   -0.426%   +0.628%     47.2%
+         3d   -1.228%   +0.235%     48.6%
+         7d   -1.189%   +0.191%     50.0%
+        14d   -1.836%   -2.301%     56.9%
+
+  Distributed (n=39):
+     Horizon      Mean    Median     % Neg
+         1d   -1.337%   -0.648%     56.4%
+         3d   -2.977%   -1.594%     64.1%
+         7d   -2.800%   -3.436%     64.1%
+        14d   -3.128%   -4.963%     61.5%
+
+  [Aave-only] 7d return Mann-Whitney: U=1623, p=0.1771
+  [Aave-only] Concentrated 7d median: +0.191%, Distributed 7d median: -3.436%
+  [Aave-only] Spread: +3.627%
+
+=== CONCENTRATION RATIO TEST: ALL PROTOCOLS (expanded) ===
+  [Combined] 90th pctl threshold: $1.05M, active days: 1168
+  [Combined] High-liq days: 117 (concentrated: 76, distributed: 41)
+
+  Concentrated (n=76):
+     Horizon      Mean    Median     % Neg
+         1d   -0.585%   -0.280%     51.3%
+         3d   -1.431%   +0.388%     46.1%
+         7d   -1.452%   +0.191%     50.0%
+        14d   -2.038%   -2.085%     60.5%
+
+  Distributed (n=41):
+     Horizon      Mean    Median     % Neg
+         1d   -1.430%   -0.418%     53.7%
+         3d   -2.626%   -1.594%     68.3%
+         7d   -3.482%   -3.483%     70.7%
+        14d   -3.785%   -6.005%     65.9%
+
+  [Combined] 7d return Mann-Whitney: U=1869, p=0.0761
+  [Combined] Concentrated 7d median: +0.191%, Distributed 7d median: -3.483%
+  [Combined] Spread: +3.674%
+
+=== VERDICT ===
+  Combined sample: concentrated n=76, distributed n=41
+  Concentrated 7d median: +0.191%
+  Distributed 7d median: -3.483%
+  Spread: +3.674%
+  Mann-Whitney p = 0.0761
+  → MARGINAL (p < 0.10). Direction correct, approaching significance.

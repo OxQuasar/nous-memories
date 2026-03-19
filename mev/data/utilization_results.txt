@@ -1,0 +1,70 @@
+UTILIZATION → LIQUIDATION REGIME ANALYSIS
+==================================================
+=== APY Summary Statistics ===
+  usdc_apy               mean=4.921%  median=4.001%  std=3.463  min=0.303  max=56.678  n=1138
+  usdt_apy               mean=4.671%  median=3.802%  std=4.120  min=0.045  max=68.374  n=1131
+  dai_apy                mean=4.582%  median=3.617%  std=3.648  min=0.237  max=59.328  n=1138
+  weth_apy               mean=1.869%  median=1.858%  std=0.460  min=1.046  max=5.844  n=1138
+  stable_apy_weighted    mean=4.562%  median=3.873%  std=2.674  min=0.290  max=27.145  n=1138
+
+Overlap period: 2023-02-06 to 2026-03-19 (1138 days)
+High-liquidation threshold (P90): $1,001,726
+High-liquidation days: 88 (concentrated: 61, distributed: 27)
+
+=== TEST A: Pre-Event Utilization Comparison ===
+  Concentrated events: n=61, median=4.809%, mean=5.877%
+  Distributed events:  n=27, median=3.692%, mean=3.936%
+  Mann-Whitney U: stat=461.0, p=0.0011
+  → Significant (p<0.05): distributed events have lower pre-event APY
+
+=== TEST B: Quartile Conditional Table ===
+  Quartile   APY Range                 Total    Conc     Dist     %Dist   
+  -------------------------------------------------------------------
+  Q1         [0.29%, 2.73%]            14       5        9        64.3    
+  Q2         [2.74%, 3.87%]            26       17       9        34.6    
+  Q3         [3.87%, 5.52%]            23       17       6        26.1    
+  Q4         [5.53%, 27.14%]           25       22       3        12.0    
+
+  Fisher's exact (Q1 vs Q4): odds_ratio=0.076, p=0.0013
+
+=== TEST C: Temporal Lead/Lag Check ===
+  Lag   Correlation  (negative lag = APY leads)
+  ----------------------------------------
+  -14d   -0.0382
+  -13d   -0.0348
+  -12d   -0.0361
+  -11d   -0.0292
+  -10d   -0.0352
+   -9d   -0.0336
+   -8d   -0.0348
+   -7d   -0.0283
+   -6d   -0.0240
+   -5d   -0.0246
+   -4d   -0.0204
+   -3d   -0.0196
+   -2d   -0.0159
+   -1d   -0.0093
+   +0d   -0.0067
+   +1d   +0.0050
+   +2d   +0.0123
+   +3d   +0.0115
+   +4d   +0.0111
+   +5d   +0.0200
+   +6d   +0.0288
+   +7d   +0.0267
+   +8d   +0.0199
+   +9d   +0.0169
+  +10d   +0.0070
+  +11d   +0.0085
+  +12d   +0.0300
+  +13d   +0.0389
+  +14d   +0.0442 ← peak
+
+  Peak correlation: lag=+14d, r=+0.0442
+  → APY LAGS liquidation volume by 14 day(s)
+
+==================================================
+VERDICT
+==================================================
+
+  INVERSE LEAD (regime-predictive, not time-predictive): Strong regime association (p=0.0011): HIGHER utilization precedes CONCENTRATED liquidations (conc median=4.81% vs dist=3.69%). Monotonic quartile gradient confirms (Q1: 64% dist → Q4: 12% dist, Fisher p=0.0013). However, temporal cross-correlation is weak (peak r=+0.0442 at lag=+14d), meaning APY level classifies regime but doesn't spike before events. Interpretation: high utilization = crowded leverage = when liquidations hit, they cascade (concentrated). Low utilization = sparse leverage = liquidations spread across days (distributed).

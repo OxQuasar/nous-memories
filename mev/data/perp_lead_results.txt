@@ -1,0 +1,96 @@
+PERP → LENDING TEMPORAL LEAD ANALYSIS
+============================================================
+
+PHASE 1: DATA FEASIBILITY
+----------------------------------------
+
+Direct historical perp liquidation data NOT freely available:
+  - Hyperliquid API: no public liquidation history endpoint
+    (stats-data.hyperliquid.xyz returns 403; userFills requires
+    knowing liquidated addresses; HLP vault shows deposits/withdrawals only)
+  - Coinglass: requires API key for all liquidation endpoints
+  - Binance: removed public forceOrders; no liquidationSnapshot in data archive
+  - Binance metrics: 5-min OI snapshots available (Dec 2021 → present)
+
+PROXY: Using Binance ETHUSDT open interest (OI) changes as liquidation proxy.
+Large negative hourly OI changes during stress = forced position closures.
+Significance threshold: hourly OI drop > 3%
+
+Limitation: OI drops include voluntary closures. During stress episodes,
+the forced component dominates, but the proxy is noisy for mild events.
+
+Episodes 2024+: 17 / 27 total
+OI data: 92157 rows, 2024-03-14 00:05:00+00:00 to 2026-02-09 00:00:00+00:00
+Hourly OI: 7697 data points
+
+============================================================
+PHASE 2: TEMPORAL LEAD ANALYSIS
+============================================================
+============================================================
+A. EPISODE ALIGNMENT (perp OI drop vs lending peak)
+============================================================
+
+  Reference: lending = midnight of peak liquidation day;
+  perp = first significant OI drop within ±48h of lending peak.
+
+  Start         Sz  Peak day              OI drop time       Lag   OI worst    7d Ret
+  --------------------------------------------------------------------------------
+  2024-03-16     5  2024-04-13        2024-04-12 17:00     +7.0h     -8.25%    -4.35%
+  2024-04-30     2  2024-05-01        2024-04-29 02:00    +46.0h     -4.99%    +0.73%
+  2024-06-11     7  2024-07-05        2024-07-04 01:00    +23.0h     -6.17%    -1.01%
+  2024-08-02     3  2024-08-05        2024-08-04 17:00     +7.0h     -6.58%   -13.18%
+  2024-08-27     3  2024-09-06        2024-09-04 01:00    +47.0h     -2.43%    -0.47%
+  2024-10-03     1  2024-10-03        2024-10-01 07:00    +41.0h     -3.21%    +1.14%
+  2024-11-12     1  2024-11-12        2024-11-10 19:00    +29.0h     -5.25%    -5.38%
+  2024-12-05     5  2024-12-20        2024-12-19 14:00    +10.0h     -4.55%    +2.51%
+  2025-01-07     6  2025-02-03        2025-02-03 01:00     -1.0h     -7.03%    -4.36%
+  2025-02-22    11  2025-03-10        2025-03-09 16:00     +8.0h     -4.76%   -20.24%
+  2025-03-30     5  2025-04-06        2025-04-04 02:00    +46.0h     -9.51%   -13.32%
+  2025-05-23     2  2025-05-25        2025-05-23 04:00    +44.0h     -6.42%    -0.21%
+  2025-06-21     1  2025-06-21        2025-06-19 00:00    +48.0h     -6.76%    +6.87%
+  2025-08-01     5  2025-08-01        2025-07-31 13:00    +11.0h     -3.28%   +16.57%
+  2025-09-16     6  2025-10-10        2025-10-09 08:00    +16.0h    -17.30%    -7.49%
+  2025-11-03     6  2025-11-04        2025-11-03 15:00     +9.0h     -5.88%    -0.22%
+  2026-01-20     9  2026-01-31        2026-01-30 01:00    +23.0h     -5.73%    +2.59%
+
+============================================================
+B. LEAD/LAG STATISTICS
+============================================================
+
+  Episodes with measurable lag: 17 / 17
+  Median lag: +23.0 hours
+  Mean lag: +24.4 hours
+  Perps lead (lag > 0): 16 / 17 (94.1%)
+  Simultaneous (|lag| < 12h): 7 / 17 (41.2%)
+  Lending leads (lag < 0): 1 / 17 (5.9%)
+
+  Lag distribution:
+    P10: +7.0h
+    P25: +9.0h
+    P50: +23.0h
+    P75: +44.0h
+    P90: +46.4h
+
+============================================================
+C. LAG VS EPISODE SEVERITY
+============================================================
+
+  Episodes with lag + forward return: 17
+  Spearman correlation (lag vs 7d return): r=+0.330, p=0.1954
+  → No significant relationship between lag and severity
+
+  Perps lead (>12h ahead): n=10, median 7d ret=-0.338%
+  Simultaneous (±12h): n=7, median 7d ret=-4.354%
+
+============================================================
+VERDICT
+============================================================
+
+  PERPS LEAD: 94% of episodes, median +23h.
+  Perp OI drops provide 23h of lead time before lending liquidations.
+
+  Proxy caveat: OI changes are an imperfect proxy for liquidations.
+  Direct liquidation data (from Hyperliquid or Coinglass with API key)
+  would provide higher fidelity. The structural conclusion about
+  temporal ordering, however, is likely robust to proxy noise during
+  major stress episodes where forced closures dominate OI changes.
