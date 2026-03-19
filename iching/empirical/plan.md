@@ -6,7 +6,7 @@ Apply the 五行 grammar to real transition data and check whether it predicts a
 
 ## The Mapping Problem
 
-The hardest part. The grammar requires:
+The grammar requires:
 1. A system with discrete states (or discretizable continuous states)
 2. A cyclic classification of states into ≥5 types
 3. A rule assigning transitions to {continuation, generation, destruction} based on the type-distance between source and target states
