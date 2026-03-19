@@ -32,13 +32,21 @@ The investigation started from the outside and has been spiraling inward. Each p
 
 ### Phase 7: What does the structure represent?
 **Workflows:** dynamics
-**What's known:** The transition graph's 五行 decomposition has rich dynamics (Chebyshev sequence, Fibonacci machine, one-way valve, hinge attractors, coherent φ survival) organized by a stage/drama framework (R253, R257–R269). Three-level null (vertex, flow, spectral) establishes that the 五行 decoration and the thematic manifold are independently organized on Q₆. The complement involution constrains both but doesn't connect them.
+**What's known:** Two perpendicular structures on Q₆, each with distinct algebraic origin:
 
-**What's untested:** External matching — does the structural fingerprint (Chebyshev {1,√2,φ}, Fibonacci growth, 1:2:3, weak-tie topology) correspond to any known class of dynamical systems? Non-五行 operationalizations of "the I Ching models dynamics."
+1. **Edge-type axis** (五行 → Z₅ → shift spaces): Q₃ edges partition into {P₂, P₃, P₄} = bipartite double covers of {trivial shift, full shift, golden mean shift}. Chebyshev spectral sequence {1, √2, φ}. At hex level, coherent sector preserves φ via same-magnitude resonance filter; incoherent modes (60/64 eigenvalues) dominate. Three-level null: 五行 decoration and semantic manifold independently organized.
+
+2. **Bit-layer axis** (互 → conveyor belt RG): Block-spin RG at scale factor 2, d=2. Strips 2 bits/step for 2 steps to 4-state hinge attractor. Universal relevant/irrelevant decomposition. Orthogonal to edge-type axis (R274).
+
+**Connected by:** complement-Z₅ reflection compatibility — the gate from algebra to the clean mathematics (GMS, Chebyshev, φ). 40/120 = 1/3 of surjections pass this gate.
+
+**Forcing chain:** 120 (Z₅ surjections) → 40 (complement-Z₅ reflection) → 20 (克→P₄) → 10 (valve) → 1 (naming). Each tier has clean algebraic content (R281).
+
+**What's untested:** The dark sector (60/64 hex-level eigenvalues with no trigram ancestor — controls long-time dynamics, uncharacterized). External comparison to known dynamical systems (literature). Aut(Q₃) orbits on the 10 valve assignments.
 
 ## Current Position
 
-**The dynamics question:** The 五行-text connection is a measured null at three levels. What's untested: whether the structural fingerprint matches known dynamical systems (literature), and whether non-五行 approaches bypass the null.
+**The dark sector** is the largest open structural question. 60 of 64 hex-level eigenvalues are born from the fiber bundle coupling and dominate the spectral radius (4.69 > 2φ). Everything characterized so far lives in the subdominant coherent sector.
 
 **Q2 proper (reversal):** Is composability itself forced by something deeper? The forcing chain has exactly one contingent step.
 
@@ -51,7 +59,7 @@ The investigation uses divergent-first methodology:
 
 ## Running Totals
 
-~269 results across 20 workflows.
+~281 results across 20 workflows.
 
 | Phase | Workflows | Results | Status |
 |-------|-----------|---------|--------|
@@ -61,4 +69,4 @@ The investigation uses divergent-first methodology:
 | 4. Inside boundary | reversal Q1, Q3, dynamics D1–D3 | R112–R170, R254–R256 | Established |
 | 5. What it's for | reversal Q2, Q3, atlases | R73–R111, R140–R180 | Established |
 | 6. Wider connections | eastwest, fibo | R181–R252 | Established |
-| 7. What does it represent | dynamics | R253, R257–R269 | Internal characterized, external untested |
+| 7. What does it represent | dynamics | R253, R257–R281 | Two-axis decomposition; dark sector open |
