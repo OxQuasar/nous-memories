@@ -63,12 +63,15 @@ R253, R257–R281. Transition graph dynamics + fingerprint investigation.
 
 ### `projection/`
 R282–R291. Phase 8: what is the minimal Markov partition projecting?
-- **Answer:** Nothing external. The I Ching is the unique canonical edge typing of Q₆ under complement-Z₅ axioms. Not a partition *of* a target system, but the minimal stage *for* the constraint class.
+- **Answer:** Nothing external. The I Ching is the unique canonical edge typing of Q₆ under complement-Z₅ axioms. Not a partition *of* a target system, but the minimal stage *for* the constraint class {GMS + complement + Z₅}.
 - **Dark sector (R282–R285):** 60/64 eigenvalues generic (Walsh-binomial), partition tight on constraint axis. 生 coherent sector = pure kernel (topological). Algebraic complexity: 比和 > 克 > 生.
 - **1D map exclusion (R286–R287):** Q₃ not an interval graph → absolute obstruction against all 1D maps. Constraint-on-transitions (I Ching) vs constraint-on-states (logistic map) — incompatible architectures for same GMS constraint.
 - **Composability (R288–R291):** Type info decorrelates in 1–2 steps. Directed single-step subgraphs are the informative regime. 互 preserves 1/3 of transitions. 生 parity balance forced by uniqueness theorem.
-- `findings.md` — R282–R291, `questions.md` — R1–R6, `plan.md`
+- **Open refinements:** Z₅ proximity inversion mechanism, algebraic discriminants {√41, √13}, directed subgraph trapping
+- **New direction:** Shift spaces as hypercube edge colorings — general theory of embedding SFT constraints in Q_n
+- `findings.md`, `questions.md`, `plan.md`
 - Scripts: `dark_sector.py`, `logistic_map.py`, `composability.py`
+- Empirical questions moved to `empirical/`
 
 ### `empirical/`
 No results yet. Asks whether nature exhibits the constraint class {GMS + complement + Z₅}.

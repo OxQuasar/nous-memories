@@ -83,14 +83,76 @@ C. LAG VS EPISODE SEVERITY
   Simultaneous (±12h): n=7, median 7d ret=-4.354%
 
 ============================================================
+G. FALSE POSITIVE RATE
+============================================================
+
+  Total hours with >3% OI drop in episode windows: 146
+  Control period: 334 days (2187 hours)
+  Control drops >3%: 18
+
+  Drop rate (episode windows): 0.21 per day
+  Drop rate (control periods): 0.05 per day
+  Enrichment ratio: 3.9x (episode vs control)
+
+  Estimated annual false alarms (>3% drop, no lending episode): 20
+  Actual lending episodes per year: ~8
+  Rough precision estimate: ~30%
+
+  Threshold sensitivity:
+   Thresh   Ep drops  Ctrl drops   Ep/day   Ctrl/day   Enrich
+  -------------------------------------------------------
+  >1%        949         201     1.36       0.60     2.3x
+  >2%        335          61     0.48       0.18     2.6x
+  >3%        146          18     0.21       0.05     3.9x
+  >4%         71           5     0.10       0.01     6.8x
+  >5%         37           3     0.05       0.01     5.9x
+
+============================================================
+H. CORRECTED LEAD TIME + PRICE DIAGNOSTIC
+============================================================
+  Raw lending events: 35416
+
+  Start        Peak day       Lend peak hr     OI drop hr   Corr lag      P@OI    P@Lend       ΔP
+  -----------------------------------------------------------------------------------------------
+  2024-03-16   2024-04-13    2024-04-13 20  2024-04-12 17     +27.0h    $3,414    $2,898   -15.1%
+  2024-04-30   2024-05-01    2024-05-01 07  2024-04-29 02     +53.0h    $3,277    $2,901   -11.5%
+  2024-06-11   2024-07-05    2024-07-05 02  2024-07-04 01     +25.0h    $3,289    $3,070    -6.6%
+  2024-08-02   2024-08-05    2024-08-05 01  2024-08-04 17      +8.0h    $2,789    $2,319   -16.8%
+  2024-08-27   2024-09-06    2024-09-06 15  2024-09-04 01     +62.0h    $2,333    $2,316    -0.7%
+  2024-10-03   2024-10-03    2024-10-03 08  2024-10-01 07     +49.0h    $2,648    $2,360   -10.9%
+  2024-11-12   2024-11-12    2024-11-12 10  2024-11-10 19     +39.0h    $3,232    $3,344    +3.5%
+  2024-12-05   2024-12-20    2024-12-20 13  2024-12-19 14     +23.0h    $3,692    $3,229   -12.5%
+  2025-01-07   2025-02-03    2025-02-03 01  2025-02-03 01      +0.0h    $2,818    $2,818    +0.0%
+  2025-02-22   2025-03-10    2025-03-10 17  2025-03-09 16     +25.0h    $2,088    $1,967    -5.8%
+  2025-03-30   2025-04-06    2025-04-06 22  2025-04-04 02     +68.0h    $1,797    $1,588   -11.6%
+  2025-05-23   2025-05-25    2025-05-25 02  2025-05-23 04     +46.0h    $2,721    $2,498    -8.2%
+  2025-06-21   2025-06-21    2025-06-21 21  2025-06-19 00     +69.0h    $2,523    $2,399    -4.9%
+  2025-08-01   2025-08-01    2025-08-01 22  2025-07-31 13     +33.0h    $3,824    $3,528    -7.7%
+  2025-09-16   2025-10-10    2025-10-10 21  2025-10-09 08     +37.0h    $4,411    $3,898   -11.6%
+  2025-11-03   2025-11-04    2025-11-04 20  2025-11-03 15     +29.0h    $3,710    $3,231   -12.9%
+  2026-01-20   2026-01-31    2026-01-31 18  2026-01-30 01     +41.0h    $2,807    $2,400   -14.5%
+
+  Corrected lead/lag statistics (n=17):
+    Median corrected lag: +37.0h
+    Mean corrected lag: +37.3h
+    Perps lead: 16 / 17 (94.1%)
+
+  Price change (OI drop → lending peak):
+    Median: -10.9%
+    Mean: -8.7%
+    Price declined between OI drop and lending peak: 88% of episodes
+
+    → GENUINE WARNING: price typically fell 10.9% between
+      OI drop and lending peak. The OI drop fires while further decline is coming.
+
+============================================================
 VERDICT
 ============================================================
 
-  PERPS LEAD: 94% of episodes, median +23h.
-  Perp OI drops provide 23h of lead time before lending liquidations.
+  PERPS LEAD: 94% of episodes, corrected median +37.0h.
+  Price typically fell 10.9% between OI drop and lending peak.
+  → GENUINE EARLY WARNING: further decline still coming when OI drop fires.
 
   Proxy caveat: OI changes are an imperfect proxy for liquidations.
   Direct liquidation data (from Hyperliquid or Coinglass with API key)
-  would provide higher fidelity. The structural conclusion about
-  temporal ordering, however, is likely robust to proxy noise during
-  major stress episodes where forced closures dominate OI changes.
+  would provide higher fidelity.
