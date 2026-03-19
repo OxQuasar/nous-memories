@@ -42,9 +42,15 @@ The investigation started from the outside and has been spiraling inward. Each p
 
 **Forcing chain:** 120 (Z₅ surjections) → 40 (complement-Z₅ reflection) → 20 (克→P₄) → 10 (valve) → 1 (naming). Each tier has clean algebraic content (R281).
 
-**What's untested:** The dark sector (60/64 hex-level eigenvalues with no trigram ancestor — controls long-time dynamics, uncharacterized). External comparison to known dynamical systems (literature). Aut(Q₃) orbits on the 10 valve assignments.
+**Literature review** (`dynamics/literature.md`): Cross-referenced the fingerprint against known systems. Every component (GMS, Chebyshev, Fibonacci, RG) is the *first nontrivial instance* of a standard construction — automatic consequences of path graphs on Q₃ with a Z₅ partition. No external dynamical system matches the full fingerprint. The complement-Z₅ gate (R279) and forcing chain are the original mathematical contribution — not previously in the literature.
+
+**Interpretation — minimal Markov partition:** The structure is the smallest discrete system where the combinatorial atoms of symbolic dynamics (shift spaces), spectral theory (Chebyshev), and renormalization (block-spin RG) all coexist and are mutually constrained. Scaling up Q₃/Z₅ (more bits, larger cyclic groups) converges to 1D lattice models in statistical mechanics — the standard setting where transfer matrices, symbolic dynamics, and real-space RG were developed. This reframes the I Ching as a *projection*: the smallest Markov partition that simultaneously captures a nontrivial spectral hierarchy, a forbidden-pattern constraint, and an inversion symmetry. The class of systems it could approximate: anything with binary exclusion (GMS), separated timescales (Chebyshev), and inversion symmetry (complement). The three-level null (R253/R269) clarifies the resolution: the projection captures the transition skeleton but not the semantic content — architecture and text are independent layers.
+
+**What's untested:** The dark sector (60/64 hex-level eigenvalues with no trigram ancestor — controls long-time dynamics, uncharacterized). Aut(Q₃) orbits on the 10 valve assignments.
 
 ## Current Position
+
+**The minimal Markov partition interpretation** is the most coherent framing the dynamics investigation has produced. It answers "what does the structure represent" with: the smallest valid approximation frame for systems with binary exclusion, separated timescales, and inversion symmetry. What the text fills in is a separate layer.
 
 **The dark sector** is the largest open structural question. 60 of 64 hex-level eigenvalues are born from the fiber bundle coupling and dominate the spectral radius (4.69 > 2φ). Everything characterized so far lives in the subdominant coherent sector.
 
@@ -69,4 +75,4 @@ The investigation uses divergent-first methodology:
 | 4. Inside boundary | reversal Q1, Q3, dynamics D1–D3 | R112–R170, R254–R256 | Established |
 | 5. What it's for | reversal Q2, Q3, atlases | R73–R111, R140–R180 | Established |
 | 6. Wider connections | eastwest, fibo | R181–R252 | Established |
-| 7. What does it represent | dynamics | R253, R257–R281 | Two-axis decomposition; dark sector open |
+| 7. What does it represent | dynamics | R253, R257–R281 | Minimal Markov partition; dark sector open |

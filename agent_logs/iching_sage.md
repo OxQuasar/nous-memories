@@ -1,5 +1,5 @@
 
-# I Ching Research — Sage's Log
+# I Ching Research — Sage's Reference
 
 ## Relevant Files
 

@@ -1,4 +1,4 @@
-# I Ching Research — Captain's Log
+# I Ching Research — Captain's Reference
 
 ## Investigation Background
 
