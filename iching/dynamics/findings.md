@@ -169,9 +169,173 @@ R254 (weight-3 eigenspace identification), R255 (dimensional pressure), R256 (Kr
 | Q14 (formal meaning) | Negative for 五行 | Internal dynamics (valve, hinge, Fibonacci) are disconnected from text at all three tested levels |
 | Q15 (abstract analysis) | Complete | Comprehensive spectral, topological, and dynamical characterization of the transition graph |
 
+### Fingerprint Questions (F1–F7)
+
+| Question | Status | Finding |
+|----------|--------|---------|
+| F1 (Chebyshev) | Characterized | Forced by {P₂,P₃,P₄} which requires complement-Z₅ reflection gate (R277–R279) |
+| F2 (Fibonacci) | Characterized | P₄ = bipartite double cover of GMS; walk counts = 4×Lucas (R270) |
+| F3 (irreversibility) | Absorbed | Valve at Tier 4 of forcing chain; 10/20 assignments have it (R281) |
+| F4 (contraction) | Characterized | 互 = block-spin RG, d=2, b=2, 2 bits/step (R273) |
+| F5 (coherent sector) | Characterized | Same-magnitude resonance filter; coherent sector subdominant (R272) |
+| F6 (combined signature) | Answered | Two perpendicular structures: edge-type (Hamiltonian) ⊥ bit-layer (RG) |
+| F7 (互 = RG?) | Confirmed | Block-spin RG on bit-layer axis; does NOT descend to GMS (R273–R274) |
+
 ## What Remains Untested
 
 - External matching: does the transition structure correspond to any known dynamical system? (Q11)
 - Bifurcation frequency comparison: 1:2:3 vs real dynamical systems (Q12)
 - Non-五行 graph dynamics: Q₆ structure connecting to text independently of the 五行 overlay (only Laplacian tested; other operationalizations possible)
 - External data: actual situational dynamics vs I Ching transition structure
+- Hex-level zeta factorization: what symmetry group organizes the 60 incoherent eigenvalues? (the "dark sector")
+- Aut(Q₃) orbits on the 10 valve assignments: does it reduce the irreducible drama at Tier 5?
+- The complement-Z₅ reflection condition generalized: is there a theorem in finite group theory for when a Z₂ involution on a set is a Z_n isometry?
+
+## Fingerprint Investigation Results (Probe A)
+
+### R270: P₄ = Bipartite Double Cover of the Golden Mean Shift
+
+**[measured]** The zeta function of P₄ factors exactly:
+
+det(I - zA_{P₄}) = (1 - z - z²)(1 + z - z²) = ζ⁻¹_GMS(z) × ζ⁻¹_anti-GMS(z)
+
+The first factor is the GMS zeta denominator; the second is its parity twist (z → −z). This is the Artin factorization for the Z₂-cover P₄ → GMS.
+
+**[measured]** Bipartite square root confirmation: A²_{P₄}|_odd = M²_GMS = [[2,1],[1,1]] (exact matrix equality). A²|_even = [[1,1],[1,2]] = (M²_GMS)^T. Both sectors have spectrum {φ², 1/φ²}.
+
+**[measured]** P₄ and GMS are NOT topologically conjugate (different periodic orbit counts: P₄ has 2L_n even/0 odd; GMS has L_n all n). P₄ is the bipartite double cover, with the folding map as a topological factor map.
+
+Script: `probeA_golden_mean.py`
+
+### R271: The {Trivial, Full, GMS} Hierarchy Is Algebraically Forced
+
+**[proven]** The unique surjection F₂³ → Z₅ forces the edge partition {2, 4, 6} on Q₃'s 12 edges, giving paths {P₂, P₃, P₄}. Each P_n is a bipartite double cover:
+
+| 五行 type | Path | Base shift | ρ_base | ρ_cover = √(ρ_base²) |
+|-----------|------|-----------|--------|----------------------|
+| 比和 | P₂ | Trivial (fixed point) | 1 | 1 |
+| 生 | P₃ | Full 2-shift | 2 | √2 |
+| 克 | P₄ | Golden mean shift | φ | φ |
+
+The Chebyshev sequence {1, √2, φ} = {2cos(π/3), 2cos(π/4), 2cos(π/5)} is the cover spectral radii. The hierarchy {trivial, full, GMS} exhausts the three simplest SFTs on binary alphabet — forced by the algebraic constraint, not selected from among alternatives. Stage-level.
+
+Script: `probeA_golden_mean.py`
+
+### R272: Same-Magnitude Resonance Filter at Hexagram Level
+
+**[measured]** The fiber bundle coupling at the hexagram level selectively preserves tensor eigenvalues where both trigrams resonate at the same eigenvalue magnitude, and destroys cross-magnitude modes:
+
+| Tensor eigenvalue | Form | Magnitude match | Survives hex? |
+|-------------------|------|-----------------|---------------|
+| ±2φ | φ+φ | ✓ same | ✓ |
+| ±2/φ | 1/φ+1/φ | ✓ same | ✓ |
+| 0 | φ+(-φ), etc. | — | ✓ |
+| ±√5 | φ+1/φ | ✗ cross | ✗ destroyed |
+| ±1 | φ-1/φ | ✗ cross | ✗ destroyed |
+
+The destroyed √5 = tr(M_GMS): the hex level cannot linearly access the trace of the underlying GMS matrix. This filter is non-trivial only for 克 (the only subgraph with two distinct nonzero eigenvalue magnitudes).
+
+**[measured]** Coherent sector (±2φ, ±2/φ) accounts for 76% of hex-level topological entropy but does NOT dominate the spectral radius (ρ_coherent = 2φ ≈ 3.24 < ρ_total = 4.69). Long-time hex-level dynamics are controlled by incoherent modes with no trigram-level analog.
+
+Script: `probeA_golden_mean.py`
+
+## Fingerprint Investigation Results (Probe B)
+
+### R273: 互 Is a Block-Spin RG (Scale Factor 2, d=2)
+
+**[measured]** The 互 map is a conveyor belt RG on the bit-layer structure:
+- 3 layers of 2 bits: outer {0,5}, middle {1,4}, hinge {2,3}
+- Each step shifts information inward by one layer: outer→middle→hinge
+- Hinge bits swap under hu: (b₂,b₃) → (b₃,b₂). hu² = identity on hinge.
+- Entropy loss: exactly 2 bits/step for 2 steps (6→4→2 bits). Matches d·log₂(b) = 2·1 = 2.
+- Semigroup: {hu, hu², hu²=hu⁴=...}. hu² is idempotent (the RG terminates at the IR fixed point).
+- Image sizes: 64→16→4 (factor 4 reduction per step).
+
+Stage-level: the routing σ = [1,2,3,2,3,4] is defined by nuclear trigram construction, independent of 五行.
+
+Script: `probeB_renormalization.py`
+
+### R274: Edge-Type and Bit-Layer Axes Are Orthogonal
+
+**[measured]** 互 maximally scrambles P₄ bipartite parity. The 4×4 parity transition matrix (pL_in, pU_in) → (pL_out, pU_out) is perfectly uniform: every cell = 4/16 = 25%.
+
+The edge-type axis (五行 → P₂/P₃/P₄ → shift spaces) and the bit-layer axis (互 → conveyor belt → hinge attractor) are complementary decompositions of Q₆. One classifies transitions by kind; the other classifies structure by depth. 互 does not descend to the GMS quotient.
+
+Script: `probeB_renormalization.py`
+
+### R275: Universal Relevant/Irrelevant Decomposition
+
+**[measured]** At every fixed point {0, 21, 42, 63}:
+- 2 relevant directions: hinge bits {2, 3} — perturbations grow under hu²
+- 4 irrelevant directions: outer+middle bits {0, 1, 4, 5} — perturbations die under hu²
+
+Phases classified by hinge parity: {0, 63} fixed (b₂=b₃, swap-invariant), {21, 42} period-2 (b₂≠b₃, exchanged by swap).
+
+Script: `probeB_renormalization.py`
+
+### R276: Walsh Mode Breaking Pattern
+
+**[measured]** 互 preserves 61/64 Walsh coefficients under pushforward. The 3 broken modes {001010, 010100, 011110} have weights {2, 2, 4}, form a closed group under XOR, and detect the middle↔hinge rearrangement. No connection to the weight-3 triple null (R268) — the broken modes and the invisible modes live in different weight subspaces.
+
+Script: `probeB_renormalization.py`
+
+## Fingerprint Investigation Results (Probe C)
+
+### R277: The Forcing Gap — Z₅ Forces Edge Counts, Not Topology
+
+**[measured]** All 120 complement-respecting Z₅ assignments produce the edge-count multiset {2, 4, 6}. Algebraically forced by Z₅'s distance structure.
+
+**[measured]** Only 40 of 120 Z₅ assignments (33%) produce the 2×{P₂, P₃, P₄} paired-path topology. The other 80 produce mixed-size path unions (e.g., P₂+P₆ fragments). Of the 40 with paired paths, 20 have 克→2×P₄ and 20 have 克→2×P₃.
+
+**R271 revised:** The three-tier forcing chain:
+- Tier 1 (Stage): Z₅ → {2,4,6} edges (120/120)
+- Tier 2 (Intermediate): additional constraint → 2×{P₂,P₃,P₄} (40/120 = 1/3)
+- Tier 3 (Automatic): paired consecutive paths → Chebyshev → {trivial, full, GMS}
+
+The hierarchy {trivial, full, GMS} is NOT purely stage-level. It requires an intermediate constraint (hypothesized: complement-Z₅ compatibility). The 1/3 fraction measures the restrictiveness of this constraint.
+
+4,200 total {2,4,6} path-union partitions of Q₃ exist across 31 topology types. The 2×{P₂,P₃,P₄} topology accounts for 120 of these (2.9%).
+
+Script: `probeC_chebyshev.py`
+
+### R278: Unique Consecutive Path Triple
+
+**[proven]** {P₂, P₃, P₄} is the unique consecutive path triple fitting Q₃ as doubled paths. The constraint 2×[(n-1)+n+(n+1)] = 12 forces n=2 uniquely. Other triples either exceed Q₃'s vertex count or require incompatible edge-count distributions.
+
+Script: `probeC_chebyshev.py`
+
+## Fingerprint Investigation Results (Probe C2)
+
+### R279: Complement-Z₅ Reflection Is the Exact Gate
+
+**[measured]** The 40/120 Z₅ assignments producing 2×{P₂,P₃,P₄} topology are exactly those where the complement involution t→7−t induces a Z₅ isometry on element labels. Perfect contingency: 40 matches, 0 exceptions in either direction.
+
+**[proven]** All 40 isometries are reflections (a→c−a mod 5), never rotations. Forced: complement has order 2, and D₅'s only order-2 elements are the 5 reflections. Each reflection axis appears in exactly 8 assignments (4 with 克→P₄, 4 with 克→P₃).
+
+The structural content: the yin-yang symmetry (complement involution) must be coherent with the five-phase cycles (Z₅). The fraction 1/3 = 40/120 measures the restrictiveness of this coherence condition.
+
+Script: `probeC2_complement_z5.py`
+
+### R280: φ-Orbit Structure
+
+**[measured]** The Z₅ automorphism φ: a→2a (mod 5, order 4) organizes the 40 complement-compatible assignments into exactly 10 orbits of size 4. Within each orbit, topology alternates: 克→P₄ → 克→P₃ → 克→P₄ → 克→P₃.
+
+φ is a bijection between the 20 克→P₄ and 20 克→P₃ assignments (both directions verified). φ² (= negation, a→−a mod 5) preserves topology. The 克→P₄ vs 克→P₃ selection is the Z₂ choice "which Z₅ distance carries the prohibition."
+
+Script: `probeC2_complement_z5.py`
+
+### R281: Complete Forcing Chain
+
+**[measured]** The traditional 五行 assignment is located by a 5-tier forcing chain:
+
+| Tier | Count | Gate | Type |
+|------|------:|------|------|
+| 1. Z₅ surjections | 120 | F₂³ → Z₅ complement-respecting | Stage |
+| 2. Complement = Z₅ reflection | 40 | Yin-yang ↔ five-phase coherence | Intermediate |
+| 3. 克→P₄ | 20 | φ-orbit alternation | Z₂ selection |
+| 4. Valve (克→生=0) | 10 | Irreversibility | Drama |
+| 5. Traditional | 1 | Specific trigram-element pairing | Naming |
+
+Tiers 1–3 are algebraic. Tier 4 is the irreversibility selection (half of Tier 3 assignments have the one-way valve). Tier 5 is the irreducible content of the specific cosmological associations.
+
+Script: `probeC2_complement_z5.py`

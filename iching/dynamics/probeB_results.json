@@ -1,0 +1,514 @@
+{
+  "part1_parity": {
+    "trigram_parity": {
+      "2": 0,
+      "0": 1,
+      "1": 0,
+      "3": 1,
+      "4": 0,
+      "6": 1,
+      "7": 0,
+      "5": 1
+    },
+    "class0": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "class1": [
+      0,
+      3,
+      5,
+      6
+    ],
+    "parity_transitions": {
+      "((1, 1), (1, 1))": 4,
+      "((0, 1), (1, 1))": 4,
+      "((0, 1), (0, 1))": 4,
+      "((1, 1), (0, 1))": 4,
+      "((0, 1), (0, 0))": 4,
+      "((1, 1), (0, 0))": 4,
+      "((1, 1), (1, 0))": 4,
+      "((0, 1), (1, 0))": 4,
+      "((1, 0), (0, 0))": 4,
+      "((0, 0), (0, 0))": 4,
+      "((0, 0), (1, 0))": 4,
+      "((1, 0), (1, 0))": 4,
+      "((0, 0), (1, 1))": 4,
+      "((1, 0), (1, 1))": 4,
+      "((1, 0), (0, 1))": 4,
+      "((0, 0), (0, 1))": 4
+    },
+    "preserves_parity": false,
+    "n_preserve": 16,
+    "n_change": 48,
+    "quotient_map": null
+  },
+  "part2_rg_properties": {
+    "2a": {
+      "distinct_maps": 3,
+      "stabilizes_at": 3,
+      "hu2_idempotent": true
+    },
+    "2b": {
+      "entropy_sequence": [
+        6.0,
+        4.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "type_entropy_sequence": [
+        1.5382265375346469,
+        1.2987949406953985,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "h_monotone": true,
+      "ht_monotone": true
+    },
+    "2c": {
+      "popcount": {
+        "original": 192,
+        "hu": 192,
+        "preserved": true
+      },
+      "weight_0122_10": {
+        "original": 192,
+        "hu": 192,
+        "preserved": true
+      },
+      "hamming_to_0": {
+        "original": 192,
+        "hu": 192,
+        "preserved": true
+      },
+      "hamming_to_63": {
+        "original": 192,
+        "hu": 192,
+        "preserved": true
+      },
+      "bit2": {
+        "original": 32,
+        "hu": 32,
+        "preserved": true
+      },
+      "bit3": {
+        "original": 32,
+        "hu": 32,
+        "preserved": true
+      },
+      "hinge_pair": {
+        "original": 64,
+        "hu": 64,
+        "preserved": true
+      },
+      "complement_indicator": {
+        "original": 0,
+        "hu": 0,
+        "preserved": true
+      },
+      "xor_complement": {
+        "original": 4032,
+        "hu": 4032,
+        "preserved": true
+      },
+      "mean_hamming": {
+        "original": 3.0476190476190474,
+        "hu": 3.0476190476190474,
+        "preserved": true
+      },
+      "walsh_preserved": 61,
+      "walsh_changed": 3
+    },
+    "linearization_0": {
+      "0": {
+        "input": 1,
+        "output": 0,
+        "delta_out_bits": [],
+        "delta_out": 0,
+        "hamming_growth": 0
+      },
+      "1": {
+        "input": 2,
+        "output": 1,
+        "delta_out_bits": [
+          0
+        ],
+        "delta_out": 1,
+        "hamming_growth": 1
+      },
+      "2": {
+        "input": 4,
+        "output": 10,
+        "delta_out_bits": [
+          1,
+          3
+        ],
+        "delta_out": 10,
+        "hamming_growth": 2
+      },
+      "3": {
+        "input": 8,
+        "output": 20,
+        "delta_out_bits": [
+          2,
+          4
+        ],
+        "delta_out": 20,
+        "hamming_growth": 2
+      },
+      "4": {
+        "input": 16,
+        "output": 32,
+        "delta_out_bits": [
+          5
+        ],
+        "delta_out": 32,
+        "hamming_growth": 1
+      },
+      "5": {
+        "input": 32,
+        "output": 0,
+        "delta_out_bits": [],
+        "delta_out": 0,
+        "hamming_growth": 0
+      }
+    },
+    "linearization_21": {
+      "0": {
+        "input": 20,
+        "output": 42,
+        "delta_out_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "delta_out": 63,
+        "hamming_growth": 6
+      },
+      "1": {
+        "input": 23,
+        "output": 43,
+        "delta_out_bits": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "delta_out": 62,
+        "hamming_growth": 5
+      },
+      "2": {
+        "input": 17,
+        "output": 32,
+        "delta_out_bits": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "delta_out": 53,
+        "hamming_growth": 4
+      },
+      "3": {
+        "input": 29,
+        "output": 62,
+        "delta_out_bits": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "delta_out": 43,
+        "hamming_growth": 4
+      },
+      "4": {
+        "input": 5,
+        "output": 10,
+        "delta_out_bits": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "delta_out": 31,
+        "hamming_growth": 5
+      },
+      "5": {
+        "input": 53,
+        "output": 42,
+        "delta_out_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "delta_out": 63,
+        "hamming_growth": 6
+      }
+    },
+    "linearization_42": {
+      "0": {
+        "input": 43,
+        "output": 21,
+        "delta_out_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "delta_out": 63,
+        "hamming_growth": 6
+      },
+      "1": {
+        "input": 40,
+        "output": 20,
+        "delta_out_bits": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "delta_out": 62,
+        "hamming_growth": 5
+      },
+      "2": {
+        "input": 46,
+        "output": 31,
+        "delta_out_bits": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "delta_out": 53,
+        "hamming_growth": 4
+      },
+      "3": {
+        "input": 34,
+        "output": 1,
+        "delta_out_bits": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "delta_out": 43,
+        "hamming_growth": 4
+      },
+      "4": {
+        "input": 58,
+        "output": 53,
+        "delta_out_bits": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "delta_out": 31,
+        "hamming_growth": 5
+      },
+      "5": {
+        "input": 10,
+        "output": 21,
+        "delta_out_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "delta_out": 63,
+        "hamming_growth": 6
+      }
+    },
+    "linearization_63": {
+      "0": {
+        "input": 62,
+        "output": 63,
+        "delta_out_bits": [],
+        "delta_out": 0,
+        "hamming_growth": 0
+      },
+      "1": {
+        "input": 61,
+        "output": 62,
+        "delta_out_bits": [
+          0
+        ],
+        "delta_out": 1,
+        "hamming_growth": 1
+      },
+      "2": {
+        "input": 59,
+        "output": 53,
+        "delta_out_bits": [
+          1,
+          3
+        ],
+        "delta_out": 10,
+        "hamming_growth": 2
+      },
+      "3": {
+        "input": 55,
+        "output": 43,
+        "delta_out_bits": [
+          2,
+          4
+        ],
+        "delta_out": 20,
+        "hamming_growth": 2
+      },
+      "4": {
+        "input": 47,
+        "output": 31,
+        "delta_out_bits": [
+          5
+        ],
+        "delta_out": 32,
+        "hamming_growth": 1
+      },
+      "5": {
+        "input": 31,
+        "output": 63,
+        "delta_out_bits": [],
+        "delta_out": 0,
+        "hamming_growth": 0
+      }
+    },
+    "relevant_bits_0": [
+      2,
+      3
+    ],
+    "irrelevant_bits_0": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "relevant_bits_21": [
+      2,
+      3
+    ],
+    "irrelevant_bits_21": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "relevant_bits_42": [
+      2,
+      3
+    ],
+    "irrelevant_bits_42": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "relevant_bits_63": [
+      2,
+      3
+    ],
+    "irrelevant_bits_63": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "part3_kernel": {
+    "3a": {
+      "kernel": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "window": "bits 1-4",
+      "duplicated": "bits 2-3",
+      "discarded": "bits 0, 5"
+    },
+    "3b": {
+      "routing_matrix": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "rank": 4,
+      "R2_rank": 2,
+      "R_inf_rank": 2
+    },
+    "3c": {
+      "outer_from_middle": 64,
+      "middle_from_hinge": 64,
+      "hinge_swap": 64,
+      "hinge_identity": 32,
+      "dynamics": "3-level conveyor belt with swap at core"
+    }
+  }
+}

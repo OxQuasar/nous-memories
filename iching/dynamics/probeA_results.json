@@ -1,0 +1,367 @@
+{
+  "part1_topology": {
+    "比和": {
+      "edges": 2,
+      "components": 6,
+      "component_details": {
+        "0": {
+          "vertices": [
+            "0",
+            "4"
+          ],
+          "topology": "P_2"
+        },
+        "1": {
+          "vertices": [
+            "1"
+          ],
+          "topology": "P_1"
+        },
+        "2": {
+          "vertices": [
+            "2"
+          ],
+          "topology": "P_1"
+        },
+        "3": {
+          "vertices": [
+            "3",
+            "7"
+          ],
+          "topology": "P_2"
+        },
+        "4": {
+          "vertices": [
+            "5"
+          ],
+          "topology": "P_1"
+        },
+        "5": {
+          "vertices": [
+            "6"
+          ],
+          "topology": "P_1"
+        }
+      }
+    },
+    "生": {
+      "edges": 4,
+      "components": 4,
+      "component_details": {
+        "0": {
+          "vertices": [
+            "0"
+          ],
+          "topology": "P_1"
+        },
+        "1": {
+          "vertices": [
+            "1",
+            "4",
+            "5"
+          ],
+          "topology": "P_3"
+        },
+        "2": {
+          "vertices": [
+            "2",
+            "3",
+            "6"
+          ],
+          "topology": "P_3"
+        },
+        "3": {
+          "vertices": [
+            "7"
+          ],
+          "topology": "P_1"
+        }
+      }
+    },
+    "克": {
+      "edges": 6,
+      "components": 2,
+      "component_details": {
+        "0": {
+          "vertices": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "topology": "P_4"
+        },
+        "1": {
+          "vertices": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "topology": "P_4"
+        }
+      }
+    }
+  },
+  "part2_forbidden_words": {
+    "P4": {
+      "n_vertices": 4,
+      "forbidden_2": 10,
+      "extra_forbidden_3": 0,
+      "is_1step_SFT": true,
+      "self_loops": 0
+    },
+    "2xP4_ke": {
+      "n_vertices": 8,
+      "forbidden_2": 52,
+      "extra_forbidden_3": 0,
+      "is_1step_SFT": true,
+      "self_loops": 0
+    },
+    "2xP2_bihe": {
+      "n_vertices": 8,
+      "forbidden_2": 60,
+      "extra_forbidden_3": 0,
+      "is_1step_SFT": true,
+      "self_loops": 0
+    },
+    "2xP3_sheng": {
+      "n_vertices": 8,
+      "forbidden_2": 56,
+      "extra_forbidden_3": 0,
+      "is_1step_SFT": true,
+      "self_loops": 0
+    }
+  },
+  "part3_gms_comparison": {
+    "3a": {
+      "traces": {
+        "P4": [
+          0,
+          6,
+          0,
+          14,
+          0,
+          36,
+          0,
+          94,
+          0,
+          246,
+          0,
+          644,
+          0,
+          1686,
+          0,
+          4414,
+          0,
+          11556,
+          0,
+          30254
+        ],
+        "2P4": [
+          0,
+          12,
+          0,
+          28,
+          0,
+          72,
+          0,
+          188,
+          0,
+          492,
+          0,
+          1288,
+          0,
+          3372,
+          0,
+          8828,
+          0,
+          23112,
+          0,
+          60508
+        ],
+        "GMS": [
+          1,
+          3,
+          4,
+          7,
+          11,
+          18,
+          29,
+          47,
+          76,
+          123,
+          199,
+          322,
+          521,
+          843,
+          1364,
+          2207,
+          3571,
+          5778,
+          9349,
+          15127
+        ],
+        "4Ln": [
+          4,
+          12,
+          16,
+          28,
+          44,
+          72,
+          116,
+          188,
+          304,
+          492,
+          796,
+          1288,
+          2084,
+          3372,
+          5456,
+          8828,
+          14284,
+          23112,
+          37396,
+          60508
+        ],
+        "Ln": [
+          1,
+          3,
+          4,
+          7,
+          11,
+          18,
+          29,
+          47,
+          76,
+          123,
+          199,
+          322,
+          521,
+          843,
+          1364,
+          2207,
+          3571,
+          5778,
+          9349,
+          15127
+        ]
+      },
+      "GMS_equals_Lucas": true,
+      "conjugate": false,
+      "reason": "different trace sequences (P4 bipartite: zero odd traces; GMS has nonzero odd traces)"
+    },
+    "3b": {
+      "GMS_zeta": "1/(1-z-z²)",
+      "P4_zeta": "1/[(1-z-z²)(1+z-z²)]",
+      "P4_det": "1 - 3z² + z⁴ = (1-z-z²)(1+z-z²)",
+      "GMS_is_factor": true,
+      "2P4_zeta": "[ζ_P4(z)]²"
+    },
+    "3c": {
+      "GMS2_spectrum": [
+        -0.6180339887,
+        -0.0,
+        1.6180339887
+      ],
+      "P4_spectrum": [
+        -1.6180339887,
+        -0.6180339887,
+        0.6180339887,
+        1.6180339887
+      ],
+      "GMS2_subset_of_P4": false,
+      "GMS3_spectrum": [
+        -0.6180339887,
+        0.0,
+        0.0,
+        0.0,
+        1.6180339887
+      ]
+    },
+    "3d": {
+      "P4_edge_shift_spectrum": [
+        -1.6180339887,
+        -0.6180339887,
+        -0.0,
+        -0.0,
+        0.6180339887,
+        1.6180339887
+      ],
+      "GMS_edge_shift_spectrum": [
+        -0.6180339887,
+        -0.0,
+        1.6180339887
+      ],
+      "GMS2_equals_GMS_edge": true
+    },
+    "3e": {
+      "A2_even": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "A2_odd": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "M_GMS_squared": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "A2_even_is_M2_transpose": false,
+      "A2_odd_is_M2": true,
+      "spectra_match": true
+    }
+  },
+  "part4_hex_decomposition": {
+    "hex_entropy": {
+      "rho": 4.688470846713879,
+      "h_top": 1.5451064838170203,
+      "log_phi": 0.48121182505960347
+    },
+    "coherent": {
+      "eigenvalues": [
+        -3.236068,
+        -1.236068,
+        1.236068,
+        3.236068
+      ],
+      "rho": 3.2360679774997907,
+      "h_top": 1.174359005619549,
+      "fraction_of_total": 0.7600505323868816
+    },
+    "incoherent": {
+      "rho": 4.688470846713879,
+      "h_top": 1.5451064838170203
+    },
+    "tensor_eigenvalues": [
+      -3.236068,
+      -2.236068,
+      -1.236068,
+      -1.0,
+      0.0,
+      1.0,
+      1.236068,
+      2.236068,
+      3.236068
+    ]
+  }
+}

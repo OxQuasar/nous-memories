@@ -107,3 +107,25 @@ These questions call for:
 - **Cross-domain comparison** — identify candidate systems from other fields, compare structural fingerprint quantitatively
 - **Computation on the transition graph** — topological entropy, zeta functions, substitution rules, RG properties
 - **No embeddings** — the fingerprint is combinatorial, not semantic
+
+---
+
+## Fingerprint Investigation Results Summary
+
+**Investigation complete (Iterations 8–11, R270–R281).**
+
+### Answers
+
+| Question | Answer |
+|----------|--------|
+| F1 | Chebyshev spacing forced by complement-Z₅ reflection gate (R279): 40/120 assignments produce paired paths → automatic Chebyshev |
+| F2 | P₄ = bipartite double cover of GMS (R270). Walk counts = 4×Lucas. Zeta factors: ζ_{P₄} = ζ_{GMS} × ζ_{anti-GMS} |
+| F3 | Valve at Tier 4 of forcing chain (R281). 10/20 assignments with 克→P₄ have it. Irreversibility is a binary choice, not a spectrum |
+| F4 | 互 = block-spin RG at scale factor 2, d=2 (R273). Conveyor belt: outer→middle→hinge. 2 bits/step. hu² idempotent |
+| F5 | Same-magnitude resonance filter (R272). Coherent sector preserves ±2φ, ±2/φ but is subdominant (ρ=3.24 < 4.69) |
+| F6 | Two perpendicular structures on Q₆: edge-type (Hamiltonian → shift spaces) ⊥ bit-layer (RG → conveyor belt). Not one system |
+| F7 | 互 is an RG on the bit-layer axis, NOT on the GMS (R274). Maximal parity scrambling = measured orthogonality |
+
+### Central finding
+
+The structure is the shadow of the architecture, not a message embedded in it. The I Ching's mathematical content is overwhelmingly forced by its architectural choices (binary encoding, trigram pairing, Z₅ classification, complement symmetry). The forcing chain 120→40→20→10→1 decomposes how much freedom existed. By Tier 3, all mathematics (GMS, Chebyshev, φ) is locked.
