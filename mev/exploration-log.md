@@ -645,3 +645,88 @@ This confirms the position-heterogeneity finding from Iteration 10: structural p
 - **False positive rate control:** How many >3% OI drops occur outside of lending episodes? What is the precision of the signal?
 - **Price-level diagnostic:** ETH price at OI drop vs at lending peak — determines whether the lead provides genuine warning content or is just faster measurement of the same event
 - **Corrected lead time:** Using block-level lending timestamps instead of midnight reference
+
+---
+
+## Iteration 12 — Perp Lead Discriminant Tests: False Positive Rate & Price Diagnostic
+
+**Date:** 2026-03-19
+
+### What was tested
+
+Two discriminant tests to resolve the key vulnerabilities identified in Iteration 11: (1) false positive rate of the >3% OI drop signal, and (2) price-level diagnostic + corrected lead time using block-level lending timestamps.
+
+- **Script:** `memories/mev/perp_lead.py` (extended with sections G, H)
+- **Data:** `memories/mev/data/perp_lead_results.txt` (sections G, H appended)
+- **Additional data:** Binance OI for 3 control months (2024-09, 2024-11, 2025-07) with no lending episodes
+
+### What was measured
+
+**Test G — False positive rate:**
+
+| Threshold | Episode drops/day | Control drops/day | Enrichment | Est. false alarms/year |
+|---|---|---|---|---|
+| >1% | 1.36 | 0.60 | 2.3x | ~219 |
+| >2% | 0.48 | 0.18 | 2.6x | ~66 |
+| >3% | 0.21 | 0.05 | 3.9x | ~20 |
+| >4% | 0.10 | 0.01 | 6.8x | ~5 |
+| >5% | 0.05 | 0.01 | 5.9x | ~3 |
+
+At the 3% threshold: ~30% precision (~20 false alarms/year vs ~8 true episodes). At 4%: enrichment jumps to 6.8x with ~5 false alarms/year. The 4% threshold is the operational sweet spot.
+
+**Test H — Corrected lead time + price diagnostic:**
+
+Using block-level lending timestamps to identify the actual hour of peak lending liquidation volume (replacing the midnight reference):
+
+| Metric | Original (midnight ref) | Corrected (actual peak hour) |
+|---|---|---|
+| Median lead | 23h | 37h |
+| Mean lead | 24.4h | 37.3h |
+| Perps lead | 16/17 (94%) | 16/17 (94%) |
+
+The midnight reference **understated** the lead, not overstated it. Lending liquidation peaks cluster in the afternoon/evening UTC, so the actual peak is later than midnight, extending the lead.
+
+**Price-level diagnostic:**
+
+| Metric | Value |
+|---|---|
+| Median price decline (OI drop → lending peak) | -10.9% |
+| Mean price decline | -8.7% |
+| Episodes with further decline after OI drop | 15/17 (88%) |
+
+When the OI drop fires, ETH is typically 10.9% higher than it will be at the lending peak. This is genuine early warning — further decline is still coming. Not faster measurement of the same event.
+
+Per-episode detail shows the price gap is substantial in most cases: -15.1% (Mar 2024), -11.5% (Apr 2024), -16.8% (Aug 2024), -12.5% (Dec 2024), -11.6% (Mar 2025, Sep 2025), -14.5% (Jan 2026). Two episodes show minimal gap: -0.7% (Aug 2024 late) and +3.5% (Nov 2024 — the one case where the OI drop was likely noise).
+
+### What these results mean
+
+**The perp → lending lead is validated as genuine early warning.** Three concerns from Iteration 11 are resolved:
+1. False positive rate is manageable at the 4% threshold (~5 false alarms/year, 6.8x enrichment)
+2. Corrected lead time is 37h (longer than original 23h estimate, not shorter)
+3. Price diagnostic confirms 10.9% further decline after OI drop — genuine warning content, not same-event measurement
+
+### Final review consensus
+
+The review discussion reached consensus on:
+
+1. **The magnitude classifier IS the climactic volume pattern** measured on-chain with higher precision than traditional volume data allows. Drop the "may reduce to" hedge. The pattern itself is not novel; the measurement precision is the DeFi-specific contribution.
+
+2. **Three findings to carry forward:**
+   - **Position heterogeneity principle:** The most generalizable finding. Temporal ordering in liquidation cascades scales with the leverage gap between position types. Explains why intra-lending protocol structure doesn't produce signals, and predicts where signals will exist (wide leverage gaps).
+   - **Perp → lending lead (37h, 10.9% further decline):** The one genuinely novel structural finding. Not a standalone trading signal (precision issues) but provides information beyond simpler inputs.
+   - **Three-layer monitoring architecture:** Utilization (pre-condition) → perp OI (early warning) → magnitude (classification). Each layer stress-tested individually. The conjunction hasn't been tested as a system.
+
+3. **Investigation conclusion:** The on-chain leverage topology is legible, the mechanical relationships are real, and the leverage hierarchy creates measurable temporal structure when the leverage gap is wide enough. The findings constitute a fragility monitoring system, not a trading edge. No single signal provides information asymmetry on fully public data; value is in the synthesis.
+
+### What was measured vs conjectured
+
+**Measured:**
+- False positive rate: 3.9x enrichment at 3%, 6.8x at 4%, ~5 false alarms/year at 4% threshold
+- Corrected lead time: 37h median (increased from 23h after fixing midnight reference)
+- Price decline OI drop → lending peak: -10.9% median, 88% of episodes
+- The OI signal fires at a meaningfully higher price than where lending liquidations peak
+
+**Conjectured:**
+- The magnitude classifier is the climactic volume pattern, not a novel DeFi-specific mechanism
+- The perp → lending lead's value is as a confirmation input within a monitoring system, not standalone edge
+- The conjunction of all three layers (utilization + perp OI + magnitude) may produce better precision than any single signal, but this has not been tested

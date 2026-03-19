@@ -2,133 +2,137 @@
 
 ## Summary
 
-Six iterations tested whether on-chain DeFi metrics produce actionable signals for ETH price. Started with "does on-chain data predict price direction?" Arrived at a different and more interesting finding: "the temporal structure of liquidation flow classifies whether the system's fragility is resolving or deepening."
+Twelve iterations tested whether on-chain DeFi metrics produce actionable signals for ETH price direction. Started with "does on-chain data predict price direction?" Arrived at: "the leverage topology is legible and produces classifiable system states during stress, but does not yield trading edge due to zero information asymmetry on fully public data."
 
-One characterized signal emerged. Several were killed. The thesis was refined.
+Three characterized findings emerged. Several signals were killed. The thesis was refined from "directional signal generator" to "fragility monitoring system."
+
+The investigation's deepest contribution is the **position heterogeneity principle**: temporal ordering in liquidation cascades is measurable only when the leverage gap between position types is large (order of magnitude). This explains every structural hypothesis outcome in the investigation.
 
 ---
 
-## Signals Tested — Ranked by Outcome
+## Signals Tested — Ranked by Lead Time and Strength
 
-### 1. Liquidation Concentration Ratio ✦ Primary Finding
+### 1. Perp → Lending Temporal Lead ✦ Genuine Early Warning
 
-**What it is:** When daily liquidation volume crosses the 90th percentile, classify by whether today's volume is >50% of the trailing 7-day total (concentrated) or ≤50% (distributed).
+**What it is:** Hourly Binance ETHUSDT open interest drops (>3-4%) as a proxy for perp liquidation activity, preceding lending protocol liquidation peaks.
 
-**Result:** Distributed liquidations (multi-day bleed) → median -3.48% over 7 days, 70.7% negative. Concentrated liquidations (single-day spike) → median +0.19%, ~50% negative. Spread: 3.67pp. Mann-Whitney p=0.076. Tested across Aave v2+v3, Compound v2+v3, and Maker. 36,237 events, $2.02B, 1,524 days.
+**Lead time:** Corrected median 37 hours. 16/17 episodes (94%).
 
-**Mechanism:** A concentrated spike clears the overhang — weak positions liquidated in one event, fragility resolved, price stabilizes or bounces. Distributed liquidations mean the system is peeling through layers of leverage — each day's clearing reveals more fragile positions beneath.
+**Result:** When the OI drop fires, ETH price is typically 10.9% higher than it will be at the lending liquidation peak. This is genuine warning — further decline is still coming.
 
-**Properties:**
-- Fires ~10x/year (distributed class)
-- Computable in real-time from free public RPC data
-- Not easily arbitraged — reads temporal structure, not just volume
-- Borderline significant (p=0.076) but mechanistically grounded and stable across protocol expansion
+**False positive rate:** ~20 false alarms/year at 3% threshold (~30% precision, 3.9x enrichment). At 4% threshold: ~5 false alarms/year, 6.8x enrichment.
 
-### 2. Volatility Regime Signal — Real but Modest
+**Why it works:** The leverage gap between perps (5-50x) and lending (1.5-3x) is an order of magnitude — wide enough to overcome position heterogeneity and produce consistent temporal ordering. The same mechanism failed within lending protocols (Maker vs Aave, <2x gap).
 
-**What it is:** Log-liquidation-volume predicts forward 7-day realized volatility.
+**Limitations:** OI is a proxy (includes voluntary closures). Data is fully public. Not a standalone trading signal due to precision.
 
-**Result:** r=0.235 (~5.5% variance explained). 1-day absolute returns show clean monotonic gradient: quiet days 2.36%, extreme days 4.62% (~2x). Dissipates by 7 days.
+### 2. Magnitude Classifier (Climactic Volume On-Chain) ✦ Validated Descriptive Signal
 
-**Assessment:** Confirms that liquidation events predict the *magnitude* of moves regardless of direction. But the explanatory power is modest and may already be priced into options markets (untested). Useful as supporting evidence for the fragility thesis, not standalone.
+**What it is:** When daily lending liquidation volume crosses the 90th percentile, classify by magnitude relative to trailing 180d window. ≥97th percentile = concentrated/capitulation; below = distributed/continuation.
 
-### 3. Stablecoin Supply (DAI + GHO + USDS) — Lags, Not Predictive
+**Lead time:** None — fires on the event day. Classification is concurrent.
 
-**What it is:** DeFi-native stablecoin supply as a proxy for leverage expansion.
+**Result:** Concentrated: median +2.36% 7d, 39.5% negative (n=38). Distributed: median -3.31% 7d, 68.0% negative (n=75). Spread: 5.67pp, p=0.003. Survived seven discriminant tests: regime-invariant reclassification, threshold stability, bear-market control (+7.2pp, p=0.001), episode clustering (+19.5pp, p=0.019), within-episode position, trailing momentum control (excess return +10.9pp, p=0.0003).
 
-**Result:** Combined supply lags ETH price by ~8 days. DAI shows concurrent correlation (r=0.23) but doesn't lead. GHO is governance-driven noise. USDS too new.
+**What it is NOT:** The original "temporal structure of liquidation flow" interpretation was wrong. Shape-based classification (peak ratio) fails (p=0.37). This is the traditional climactic volume pattern measured on-chain with higher precision than exchange volume data allows. The pattern is not novel; the measurement precision is the DeFi contribution.
 
-**Why it failed:** The thesis assumed a reflexive loop (price up → mint stablecoins → buy more → price up). The data shows the first half (price → minting) but the loop doesn't close — minted stablecoins disperse into DeFi rather than feeding back into spot demand. Expansion is voluntary and multi-path.
+**Limitations:** 27 independent episodes, ~5-6 distributed-dominant. Fully public data.
 
-**Verdict:** Kill as a directional signal. The ~8-day lag is itself informative (confirms system response time) but not tradeable.
+### 3. Utilization as Regime Pre-Classifier ✦ Contextual, Not Predictive
 
-### 4. stETH/ETH Spread — Arbitraged Away
+**What it is:** TVL-weighted Aave v3 stablecoin supply APY classifies which type of liquidation event will occur.
 
-**What it is:** stETH discount from parity as a stress indicator.
+**Lead time:** Pre-condition (regime-level), not event-level timing. No temporal lead in cross-correlation.
 
-**Result:** Pre-Shanghai (before April 2023): strong concurrent signal (r=-0.375), conditional -4.3% mean 14d returns at 67.5% hit rate. Post-Shanghai: noise. Coin-flip at all horizons.
+**Result:** High APY (>5.5%) → 88% of liquidation events are concentrated/capitulation. Low APY (<2.7%) → 64% are distributed/cascade. Monotonic Q1→Q4 gradient, Fisher p=0.001.
 
-**Why it failed:** Redemption arbitrage (enabled by Shanghai upgrade) compresses the spread before it can accumulate information. The mechanical relationship was real but got destroyed by infrastructure improvement.
+**Caveat:** Likely a regime confound — APY moves in month-scale waves that proxy bull/bear markets. The statistical tests assume independence but ~5-8 clustered episodes provide effective N far below the nominal sample. However, the directional information is consistent with the position heterogeneity principle: high utilization = crowded positions at similar thresholds = concentrated clearance.
 
-**Verdict:** Kill. Signal existed in the illiquid regime and was arbitraged away. Pattern recognition: any signal based on a price spread that can be closed by a faster arbitrageur will decay.
+### 4. Volatility Regime Signal — Real but Modest
 
-### 5. Liquidation Wall Map — Legible but Snapshot-Only
+**What it is:** Log-liquidation-volume → forward 7d realized volatility.
 
-**What it is:** Current distribution of liquidation thresholds by ETH price level.
-
-**Result:** $2.16B total across 11 protocols. Two whale positions ($213M Compound, $201M Maker) at ~$1,400 dominate. Current regime: not fragile (walls 60%+ below price).
-
-**Assessment:** The map is readable and informative for current-state assessment. But without historical wall snapshots, it can't be backtested. Useful as a monitoring dashboard, not a tested signal. Whale concentration (94% in two positions) makes walls unstable — one deleverage removes them.
+**Result:** r=0.235 (~5.5% variance explained). Quiet days: 2.36% abs return. Extreme days: 4.62%. Supporting evidence, not standalone.
 
 ---
 
 ## What Was Noise — Don't Revisit
 
-| Signal | Why it's noise | Notes |
+| Signal | Why it's noise | Iteration |
 |---|---|---|
-| GHO supply | Driven by Aave governance, not market conditions | r=-0.061, peak at window edge |
-| USDS (Sky Dollar) supply | Too new (541 days), spurious peak at lag boundary | Only launched mid-2024 |
-| stETH/ETH post-Shanghai | Redemption arb compresses spread to noise | Any spread-based signal with an arb mechanism will decay |
-| Raw liquidation volume → price direction | Volume alone doesn't predict direction | Must be combined with temporal structure (concentration ratio) |
+| Stablecoin supply (DAI/GHO/USDS) | Lags ETH by ~8 days. Loop doesn't close — minted stables disperse, don't feed back to spot. | 1 |
+| stETH/ETH spread (post-Shanghai) | Redemption arb compresses spread to noise. Any spread-based signal with an arb mechanism will decay. | 2 |
+| GHO supply | Governance-driven, r=-0.061 | 1 |
+| USDS supply | Too new (541 days), spurious boundary peak | 1 |
+| Protocol cascade ordering (Maker → Compound → Aave) | No consistent ordering. Aave fires first (48%) due to volume dominance. Leverage gap too small. | 10 |
+| Raw liquidation volume → direction | Volume alone doesn't predict direction. Must be combined with magnitude classification. | 4 |
+| Temporal shape classification (peak ratio) | Pure shape classification fails (p=0.37). The signal is magnitude, not shape. | 8 |
 
 ---
 
-## What Was Not Tested
+## Composite Signal Architecture
 
-| Signal | Reason deferred | Connection to findings |
-|---|---|---|
-| USDT/USDC supply | Different mechanism (capital inflow, not DeFi leverage) | Could be a separate investigation |
-| Lending utilization (Realm 2) | Cross-correlation is wrong tool; reframe as fragility-state test | Could test: does high utilization predict distributed liquidation patterns? |
-| TVL divergence (Realm 4) | No clear connection to primary finding | Park |
-| Bridge flows (Realm 5) | No clear connection to primary finding | Park |
-| L2 liquidation events | Same code, different RPCs | Tests universality of concentration ratio across chains |
-| IV/options data | Requires options market data | Tests whether vol expansion is already priced in |
+The three validated findings form a three-layer monitoring system. Each layer was individually stress-tested; the conjunction has not been tested as a system.
 
----
+```
+Layer 1: REGIME PRE-CONDITION
+  Input:  Aave v3 stablecoin APY (DefiLlama yields API)
+  Logic:  APY < 2.7% → system primed for distributed/cascade mode
+          APY > 5.5% → events likely to be concentrated/capitulation
+  Lead:   Weeks to months (regime-level)
+  Value:  Context. Tells you which mode to expect.
 
-## Composite Signal Potential
+Layer 2: EARLY WARNING
+  Input:  Binance ETHUSDT hourly OI change
+  Logic:  OI drop > 4% in one hour → perp leverage layer unwinding
+  Lead:   ~37 hours before peak lending liquidation
+  Value:  Alert. Expect ~10% further decline. ~5 false alarms/year at 4%.
 
-The concentration ratio is currently a standalone signal. Two extensions could strengthen it:
+Layer 3: EVENT CLASSIFICATION
+  Input:  Daily lending liquidation volume (Aave + Compound + Maker via RPC)
+  Logic:  Volume > 90th pctl AND ≥ 97th pctl of 180d → capitulation
+          Volume > 90th pctl AND < 97th pctl of 180d → continuation risk
+  Lead:   Same-day (concurrent classification)
+  Value:  Assessment. +2.4% vs -3.3% median 7d forward return.
+```
 
-**Extension 1: Utilization → Liquidation Regime Chain**
-If high lending utilization predicts distributed (cascade-type) liquidation patterns, that creates a two-step causal chain: high utilization → distributed liquidations → further downside. Utilization becomes a *precondition indicator* — it tells you the system is primed for cascade mode before the liquidations start. Each link is independently testable.
+**Operational sequence during a stress event:**
+1. Utilization context says: low APY → system fragile, expect distributed pattern
+2. Perp OI drops >4% → early warning fires, ~37h before lending peak
+3. Lending liquidation volume spikes → classify magnitude:
+   - If extreme (≥97th pctl of 180d): likely capitulation, expect recovery
+   - If moderate (90th-97th pctl): continuation risk, expect further decline
 
-**Extension 2: Wall Proximity + Concentration Ratio**
-During periods where liquidation walls are near the current price (not the case now, but would be in a drawdown), the concentration ratio signal becomes more meaningful — there's a known pool of forced selling ahead. The wall map as context + concentration ratio as classification = a richer fragility model.
-
-Both extensions are premature until the base signal is further characterized.
-
----
-
-## Thesis Revision
-
-The original thesis claimed: "On-chain leverage data is transparent and can be used for directional positioning."
-
-**What held:**
-- The leverage topology IS transparent and legible. Liquidation walls can be mapped. Stablecoin supply tracks leverage. The data is real and accessible.
-- Mechanical relationships between leverage metrics and price are real — supply follows price, liquidations accompany drawdowns, spread reflects stress.
-
-**What didn't hold:**
-- Expansion-side signals (supply growth, TVL, utilization climbing) lag or are concurrent — they don't lead. The reflexive loop doesn't close on the expansion side because minted stablecoins disperse rather than feeding back into spot demand.
-- Contraction-side price signals (stETH spread) get arbitraged away by infrastructure improvement.
-- Simple cross-correlation is the wrong tool. The thesis describes regime transitions and thresholds, not linear continuous relationships.
-
-**What emerged instead:**
-- The legible thing isn't *where price goes* — it's *what mode the system is in*. Fragility resolving vs deepening is classifiable from the temporal structure of liquidation flow.
-- The concentration ratio (single-spike capitulation vs multi-day bleed) is a second-order structural reading that classifies system state with a 3.67pp median effect and 71% hit rate.
-- This is harder to arbitrage than first-order signals because it requires reading the *shape* of liquidation flow over time, not just volume or price.
+**What this does NOT provide:** A systematic trading signal. The false positive rate on Layer 2 is too high for mechanical execution. The magnitude classifier in Layer 3 has a real effect (5.7pp) but fires rarely (~10-15 moderate events/year, ~5-6 extreme). Sample size (27 episodes over 4 years) limits confidence for position sizing.
 
 ---
 
-## Next Steps — Decision Point
+## Position Heterogeneity Principle
 
-**Option A: L2 Universality Test**
-Run the same concentration ratio analysis on Aave liquidations on Arbitrum, Base, Optimism. Same code, different RPC endpoints. Tests whether the mechanism is about leverage topology universally or Ethereum-L1-specific. Low effort, characterization value.
+The investigation's most generalizable finding, spanning multiple tests:
 
-**Option B: Utilization → Liquidation Regime Link**
-Pull lending utilization data (Realm 2, reframed). Test whether high utilization predicts distributed liquidation patterns. Builds a causal chain that extends the primary finding. Higher effort, higher value if it works.
+**Temporal ordering in forced-liquidation cascades scales with the leverage gap between position types.**
 
-**Option C: Real-Time Monitor**
-Build a simple pipeline that monitors daily liquidation events across Aave/Compound/Maker, computes the concentration ratio, and flags distributed-mode days. Shifts from research to operational. Premature if the signal needs more validation, appropriate if the current characterization is sufficient.
+| Comparison | Leverage gap | Consistent ordering? | Result |
+|---|---|---|---|
+| Perps vs lending | 10-30x (5-50x vs 1.5-3x) | Yes, 94% | 37h median lead |
+| Maker vs Aave | <2x (150% vs 120%) | No | Volume-proportional |
+| Within single protocol | ~1x | N/A | No structure |
 
-The investigation is at a natural stopping point for the broad exploration phase. The concentration ratio signal is the output worth carrying forward.
+**Why:** Protocol-level parameters (collateral ratios, liquidation thresholds) set the threshold at which a position liquidates. But the timing depends on each position's entry price and LTV, not just protocol minimums. Positions are distributed across the full price range within each protocol. When the leverage gap between venue types is small, this position diversity washes out the structural ordering. When the gap is an order of magnitude, even diverse position distributions can't bridge it — 20x perp positions mechanically liquidate before 2x lending positions.
+
+**Implication for future investigation:** Only test structural hypotheses where the leverage gap is ≥10x. Within-protocol or within-tier structural signals are unlikely to overcome position heterogeneity.
+
+---
+
+## Next Step
+
+The investigation is at its natural conclusion for the exploration phase. The broad question ("does on-chain DeFi data produce trading signals?") has been answered: the data is legible and classifiable, but constitutes a monitoring system, not a trading edge.
+
+**If continuing this line:**
+- **Real-time monitor (Plan F)** is the most valuable remaining work. Operationalizing the three-layer system as a live tool. This shifts from research to engineering.
+- **Conjunction testing:** The three layers have only been tested individually. A forward-looking period or simulation testing the combined system could reveal whether the conjunction adds precision beyond individual signals.
+
+**If pivoting:**
+- The position heterogeneity principle suggests looking at **wider leverage gaps** for structural signals — e.g., options (effectively 10-100x via delta) vs perps vs lending. The options/IV overlay (Plan H) becomes more interesting from this angle.
+- Alternatively, the finding that the magnitude pattern is generic climactic volume suggests DeFi-specific edge may not exist in price prediction at all, and the program's value is in the monitoring/risk-management layer.

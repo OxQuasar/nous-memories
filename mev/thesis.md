@@ -16,84 +16,68 @@ The DeFi leverage machine creates mechanical price relationships:
 
 ## Empirical Findings (March 2026 exploration)
 
-Eight iterations tested the thesis against data. The mechanical relationships are real and legible. The predictive picture is more nuanced than originally framed.
+Ten iterations tested the thesis against data across eight investigations. The mechanical relationships are real and legible. The predictive picture is more nuanced than originally framed.
 
-### What held
+### What was validated
 
-- The leverage topology IS transparent. Liquidation walls can be mapped in real-time ($2.16B ETH-collateral across 11 protocols). Stablecoin supply tracks leverage. On-chain event logs provide complete liquidation history.
-- Mechanical relationships between leverage metrics and price are real — supply follows price (~8 day lag), liquidations accompany drawdowns, stETH spread reflected stress pre-Shanghai.
+- **The leverage topology IS transparent.** Liquidation walls can be mapped in real-time ($2.16B ETH-collateral across 11 protocols). Stablecoin supply tracks leverage. On-chain event logs provide complete liquidation history.
+- **Mechanical relationships between leverage metrics and price are real** — supply follows price (~8 day lag), liquidations accompany drawdowns, stETH spread reflected stress pre-Shanghai.
+- **Liquidation magnitude classifies stress events.** Extremely large liquidation days (≥97th percentile of trailing 180d) mark capitulation with positive forward returns (+2.36% median); moderately large days (90th-97th percentile) precede further declines (-3.31% median). Spread: 5.67pp, p=0.003. Survives regime-invariant reclassification, bear-market control, momentum control, and episode clustering.
+- **The leverage hierarchy creates temporal structure — but only across sufficiently different leverage tiers.** Perp OI drops (5-50x leverage) precede lending liquidation peaks (1.5-3x) by a corrected median of 37 hours. 16/17 episodes. Price falls 10.9% median between OI drop and lending peak — genuine early warning.
+- **Utilization classifies liquidation regimes** (inverted from hypothesis). High utilization → concentrated/capitulation; low utilization → distributed/cascade. p=0.001. Regime-predictive, not time-predictive.
 
-### What didn't hold
+### What was refuted
 
 - **Expansion signals don't lead.** Stablecoin supply (DAI+GHO+USDS) lags ETH price by ~8 days. The reflexive loop doesn't close on the expansion side — minted stablecoins disperse into DeFi rather than feeding back to spot.
 - **Contraction price signals get arbitraged.** stETH/ETH spread was a real stress indicator pre-Shanghai (r=-0.375 concurrent). Post-Shanghai redemption arbitrage destroyed it. Any signal based on a price spread closeable by faster participants will decay.
-- **Cross-correlation is the wrong tool.** The thesis describes regime transitions and thresholds, not linear continuous relationships.
+- **No cascade ordering within lending protocols.** Maker/Compound/Aave do not liquidate in a predictable sequence. Aave fires first most often (48%) due to volume dominance, not because of collateral ratio differences. The within-lending leverage gap (150% vs 120%) is too small to produce consistent temporal ordering.
+- **The concentration ratio is magnitude-based, not shape-based.** The original "temporal structure" framing was wrong. Shape-based classification (peak ratio) fails (p=0.37); magnitude-based (180d percentile) succeeds (p=0.003). This is a variant of the climactic volume pattern from traditional microstructure, measured on-chain.
 
-### What emerged: liquidation magnitude as capitulation classifier
+### Emergent structural insight: position heterogeneity determines signal quality
 
-The investigation's primary finding, refined through regime-invariance stress testing:
+The investigation's deepest finding spans multiple tests:
 
-**When daily liquidation volume crosses the 90th percentile, the magnitude of the spike relative to recent history classifies whether the stress is resolving or deepening.**
+1. **Perp vs lending (5-50x vs 1.5-3x):** Consistent temporal ordering. 37h median lead time. Leverage gap: 10-30x.
+2. **Maker vs Aave (150% vs 120%):** No consistent ordering. Leverage gap: <2x.
+3. **Utilization high vs low:** Classifies regime type (concentrated vs distributed) but doesn't create temporal structure.
 
-Original framing was "temporal structure" (spike vs sequence). Stress testing showed the signal is **magnitude-based**, not shape-based:
-- M1 (180d percentile) tests absolute magnitude and succeeds (p=0.003)
-- M2 (peak ratio) tests temporal shape and fails (p=0.37)
+**The pattern:** Temporal structure in liquidation cascades scales with the leverage gap between position types. When the gap is an order of magnitude (perps vs lending), forced liquidation ordering is architecturally determined and measurable. When the gap is small (within lending protocols), market noise dominates structural ordering. This is a general principle about when position heterogeneity creates exploitable temporal structure in forced-liquidation cascades.
 
-Best classifier (M1-P97: today's volume ≥97th percentile of trailing 180d):
-- **Concentrated** (extreme spike, n=38): median +2.36% 7d forward return, 39.5% negative
-- **Distributed** (moderate, n=75): median -3.31% 7d forward return, 68.0% negative
-- Spread: 5.67pp. Mann-Whitney p=0.0027.
+## Stress test results
 
-### Stress test results (Iteration 8)
+The magnitude classifier survived seven discriminant tests:
 
-The signal survived five discriminant tests:
-
-1. **Regime-invariant classification (A):** Replacing the original 7d-sum denominator with a 180d-window percentile *strengthened* the signal (spread 3.7pp → 5.7pp, p 0.076 → 0.003). Regime artifacts would weaken under regime-invariant normalization.
-
-2. **Threshold stability (B):** Spread is positive and significant from 91st through 99th percentile. Not threshold-dependent.
-
-3. **Within-regime control (C):** In bear markets (trailing 30d return ≤ 0), spread survives at +7.2pp, p=0.001. Bull markets have too few distributed events to test (n=5), consistent with structural interpretation.
-
-4. **Within-episode position (E):** Concentrated days cluster later in episodes (mean position 0.62 vs 0.42, p=0.006). Position-in-crash contributes to the spread — but doesn't explain it fully, because:
-
-5. **Trailing 7d return control (F):** Concentrated days actually have *deeper* prior 7d drawdowns (-13.2% vs -10.1%). Yet their forward returns are better. Excess return spread (forward minus trailing) is +10.9pp, p=0.0003. **Not mean-reversion.** The signal persists after removing the momentum component — concentrated days bounce disproportionately relative to their prior drawdown.
-
-### Utilization as regime classifier (Iteration 8, Investigation A)
-
-Aave v3 stablecoin supply APY (proxy for lending utilization) classifies which liquidation pattern follows, but in the **opposite** direction from the original hypothesis:
-- Higher utilization → concentrated (capitulation) liquidations. Median pre-event APY: 4.81%
-- Lower utilization → distributed (cascade) liquidations. Median pre-event APY: 3.69%
-- p=0.001. Monotonic: Q1 (low APY) = 64% distributed; Q4 (high APY) = 12% distributed.
-
-Interpretation: high utilization = crowded leverage = when a shock hits, many positions liquidate at once (concentrated spike, capitulation). Low utilization = sparse leverage = liquidations trickle across days (distributed, unresolved). This is regime-predictive (classifies which type) but not time-predictive (no temporal lead in cross-correlation).
-
-### Structural asymmetry
-
-Expansion and contraction are not symmetric:
-- **Expansion** is voluntary, multi-path, produces lagging or concurrent signals.
-- **Contraction** is forced, single-path (liquidation → sell collateral → price drop), produces classifiable system states.
-
-The thesis's value is concentrated on the contraction/fragility side.
-
-### What the signal is
-
-Revised claim: **"Extremely large liquidation days (≥97th percentile of trailing 180d) tend to mark capitulation with positive forward returns; moderately large days (90th-97th percentile) tend to precede further declines."**
-
-This is a variant of the climactic volume pattern from traditional microstructure, measured on-chain with precision. It's not purely mean-reversion (excess return test confirms). The on-chain advantage is measurement precision — exact liquidation volumes computed from event logs rather than estimated from exchange volume.
-
-The signal fires ~10 times/year for distributed events, ~4 times/year for concentrated events (at M1-P97). Independent episodes: ~27 over 4 years, of which ~5-6 are distributed-dominant. Small sample — the effect is large but the event count limits confidence.
+1. **Regime-invariant classification (A):** 180d-window percentile *strengthened* the signal (spread 3.7pp → 5.7pp, p 0.076 → 0.003).
+2. **Threshold stability (B):** Spread positive and significant from 91st through 99th percentile.
+3. **Within-regime control (C):** In bear markets, spread survives at +7.2pp, p=0.001.
+4. **Within-episode position (E):** Concentrated days cluster later in episodes (0.62 vs 0.42, p=0.006). Contributes to spread but doesn't explain it.
+5. **Trailing 7d return control (F):** Not mean-reversion. Excess return spread +10.9pp, p=0.0003.
+6. **False positive rate (G, perp lead):** 3.9x enrichment vs control periods. ~30% precision at 3% OI threshold. Signal has content but is noisy.
+7. **Price-level diagnostic (H, perp lead):** 10.9% median price decline between OI drop and lending peak confirms genuine early warning, not same-event measurement.
 
 ## Revised Thesis
 
-### Layer 1: Fragility Regime Detection
+### What this is: a fragility monitoring system, not a trading edge
 
-The on-chain leverage topology is legible and the mechanical relationships are real. The edge is not in predicting price from continuous metrics. It's in:
+The on-chain leverage topology is legible and the mechanical relationships are real. But the findings point toward a **monitoring tool** rather than a **trading signal**:
 
-1. **Classifying stress events by magnitude** — extremely large liquidation days (capitulation) have positive forward returns; moderate-but-elevated days precede further declines. The 180d-percentile classifier is the best-characterized version. Survives regime controls, momentum controls, and regime-invariant reclassification.
+**Why not a trading edge:**
+- The magnitude classifier fires ~10-15 times/year (distributed events). Of 27 independent episodes over 4 years, only ~5-6 are distributed-dominant. Sample size limits confidence for position sizing.
+- The perp lead signal has ~30% precision — usable for awareness, not for systematic trading.
+- The magnitude pattern is the climactic volume effect from traditional microstructure, measured on-chain with higher precision than exchange volume allows. The pattern is not novel; the measurement precision is the DeFi-specific contribution.
 
-2. **Mapping current fragility state** — liquidation walls show where forced selling sits relative to current price. Context that determines when magnitude classification matters most.
+**Why it works as a monitoring tool:**
+- Real-time computable from free public data (RPC event logs, Binance OI stream, DefiLlama yields API).
+- Three-layer classification: (1) utilization level classifies regime pre-conditions, (2) perp OI drop provides 37h early warning, (3) magnitude classifier determines whether the stress event is capitulation or continuation.
+- Structurally grounded — the leverage hierarchy principle (temporal ordering scales with leverage gap) provides a falsifiable framework for which signals to trust.
 
-3. **Utilization as pre-condition classifier** — lending utilization level predicts whether a liquidation event will be concentrated (capitulation) or distributed (cascade). Not a timing signal, but a regime classifier: low utilization + high liquidations = distributed pattern more likely.
+### Layer 1: Fragility regime detection
+
+1. **Pre-condition: utilization level.** High stablecoin lending APY (>5.5%) → liquidation events will be concentrated/capitulation. Low APY (<2.7%) → distributed/cascade more likely. Regime classifier, not timing signal.
+
+2. **Early warning: perp OI drop.** Hourly OI decline >3-4% on Binance ETHUSDT precedes peak lending liquidations by ~37h median. Noisy (~20 false alarms/year) but the enrichment ratio (3.9x) confirms structural content. Most valuable at higher thresholds (>4-5% OI drop, ~5 false alarms/year).
+
+3. **Classification: magnitude.** When lending liquidation volume crosses the 90th percentile, magnitude relative to trailing 180d determines forward returns. ≥97th percentile = capitulation (median +2.4% 7d). Below = continuation risk (median -3.3% 7d).
 
 ### Layer 2: Micro-Structural MEV (Evolution of Freya)
 
@@ -104,26 +88,24 @@ Unchanged from original assessment:
 
 ### Synthesis
 
-Layer 1's shape is different than originally envisioned:
-- **Not** a directional signal generator ("leverage is expanding, go long")
-- **Instead** a stress classifier ("this liquidation spike is capitulation, expect stabilization" vs "this is moderate distributed stress, expect continuation")
-- Actionable for: defensive positioning during distributed events, contrarian entry after capitulation events, options straddles during elevated-but-not-extreme days
-- The edge is measurement precision (on-chain liquidation volumes) applied to a known microstructure pattern (climactic volume), not a novel structural signal
+Layer 1 is a fragility monitoring system with three characterized components. Its value is in **situational awareness during stress events** — knowing whether current conditions are primed for cascade (low utilization), whether the cascade is beginning (perp OI dropping), and whether the current lending liquidation is climactic (magnitude classification). This is useful for risk management, defensive positioning, and timing of contrarian entries, but not for systematic directional trading.
 
-## Open Questions (updated)
+The investigation's structural contribution is the **position heterogeneity principle**: temporal ordering in liquidation cascades is measurable only when the leverage gap between position types is large (order of magnitude). This principle can guide which future signals are worth investigating (focus on wide leverage gaps, not incremental parameter differences).
+
+## Open Questions
 
 ### Answered
-- ~~What is the actual correlation strength between on-chain leverage metrics and subsequent price action?~~ → Expansion metrics lag. Contraction metrics are bimodal, classifiable by magnitude. Cross-correlation is the wrong frame.
-- ~~Are there existing tools/dashboards that aggregate this data?~~ → DefiLlama provides snapshots. The gap is in classification, not raw data.
-- ~~What's the minimum viable data pipeline?~~ → Liquidation events via RPC logs + ETH price. Concentration ratio computable from this alone.
-- ~~Does lending utilization predict liquidation regime?~~ → Yes, but inverted: high utilization → concentrated (capitulation), low → distributed (cascade). Regime-predictive, not time-predictive. p=0.001.
-- ~~Is the concentration ratio shape-based or magnitude-based?~~ → Magnitude-based. 180d percentile (magnitude) succeeds (p=0.003); peak ratio (shape) fails (p=0.37).
-- ~~Is the forward return spread just mean-reversion?~~ → No. Concentrated days have deeper prior drawdowns yet better forward returns. Excess return spread +10.9pp, p=0.0003.
+- ~~Correlation between on-chain leverage metrics and price?~~ → Expansion metrics lag. Contraction metrics bimodal, classifiable by magnitude.
+- ~~Existing tools/dashboards?~~ → DefiLlama provides snapshots. Gap is in classification, not raw data.
+- ~~Minimum viable data pipeline?~~ → Liquidation events via RPC + ETH price + Binance OI stream.
+- ~~Utilization predicts liquidation regime?~~ → Yes, inverted. p=0.001.
+- ~~Shape-based or magnitude-based?~~ → Magnitude. p=0.003 vs p=0.37.
+- ~~Mean-reversion?~~ → No. Excess return +10.9pp, p=0.0003.
+- ~~Protocol cascade within lending?~~ → No consistent ordering. Leverage gap too small.
+- ~~Perp → lending lead?~~ → Yes, 37h corrected median. 94% of episodes. Genuine warning (10.9% further decline after OI drop).
 
-### Open
-- **Protocol cascade sequencing (Plan C):** Do Maker/Compound liquidations systematically precede Aave? Architecturally determined, could provide hours of lead time. Zero cost — data exists.
-- **Perp liquidation as leading edge (Plan D):** Do perp DEX liquidation spikes precede lending protocol spikes? Higher leverage = earlier liquidation. Would test whether the magnitude signal has a faster upstream trigger.
-- **Cross-chain universality (Plan B):** Does the magnitude classifier work on L2 Aave liquidations? Tests mechanism universality vs L1-specific.
-- **Options IV overlay (Plan H):** Is the volatility expansion on capitulation days already priced? If IV spikes before liquidation events, the signal may be redundant for options strategies.
-- **Is the magnitude pattern DeFi-specific or generic?** Comparison to traditional-market climactic volume behavior would determine whether on-chain data provides genuine measurement edge or merely reproduces a known effect.
-- **Sample size:** 27 episodes, ~5-6 distributed-dominant. Effect is large but event count limits confidence. More data (pre-2022, L2s) would help.
+### Open (deprioritized)
+- **L2 universality:** Would the magnitude classifier work on L2 Aave liquidations? Increases sample but likely correlated with L1.
+- **Options IV overlay:** Is the volatility expansion already priced? Determines options strategy viability.
+- **Is the magnitude pattern DeFi-specific or generic?** Comparison to traditional climactic volume behavior. If identical → on-chain data provides precision, not novelty.
+- **Real-time monitor:** Most valuable remaining work. Would operationalize the three-layer system as a live tool.

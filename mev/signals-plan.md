@@ -73,7 +73,7 @@ _The investigation's core conclusions are established. The items below would ref
 - 36,237 events, $2.02B, Aave v2+v3 / Compound v2+v3 / Maker, 1,524 days
 - Best method: M1-P97 (180d window, ≥97th pctl). Spread +5.67pp, p=0.003.
 - Survives: regime-invariant reclassification, bear-market control, momentum control, episode clustering
-- Limitation: 27 independent episodes, ~5-6 distributed-dominant. May reduce to known climactic volume pattern.
+- Limitation: 27 independent episodes, ~5-6 distributed-dominant. This is the climactic volume pattern measured on-chain with higher precision than traditional exchange volume.
 
 ### ✦ Perp → Lending Lead — genuine early warning, noisy
 - Script: `perp_lead.py`, Data: `data/binance_oi_episodes.csv`, `data/perp_lead_results.txt`
