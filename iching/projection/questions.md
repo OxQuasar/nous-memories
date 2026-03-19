@@ -32,16 +32,12 @@ Quartic minimal polynomials x⁴ − 14x² + 8 and x⁴ − 7x² + 9. Proper fac
 
 Directed type subgraphs show H ≈ 0.06–0.24 at step 5 (vs max 1.58). Likely explanation: sparse out-degree distributions create de facto absorbing regions. Quick computation would settle it.
 
-## Open — New Directions (Different Investigation)
+## Open — New Directions
 
 ### Shift Spaces as Hypercube Edge Colorings
 
 The I Ching realizes the GMS as an edge coloring of Q₆ (constraint on transitions, not states). General question: given a shift of finite type (SFT), what is the minimum n such that the SFT's forbidden patterns can be realized as edge coloring of Q_n? What is the dark sector structure as a function of n? Connects to constrained coding theory and algebraic graph theory.
 
-### R2: Timescale Ratio Matching (Empirical)
+### Empirical Questions → moved to `empirical/questions.md`
 
-Do the spectral ratios {1, √2, φ} appear as characteristic timescale ratios in multi-process systems? Empirical survey question. The theoretical structure is complete; this asks whether nature exhibits the constraints.
-
-### R3: Regime Transition Statistics (Empirical)
-
-Does the GMS forbidden-pattern constraint hold in empirical regime-change data? Check whether consecutive 克 states are suppressed and whether the valve (克→生 absent) appears in real transition statistics.
+Timescale ratio matching, regime transition statistics, five-element prediction, inversion symmetry in natural transitions.

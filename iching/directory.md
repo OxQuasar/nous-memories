@@ -70,6 +70,10 @@ R282–R291. Phase 8: what is the minimal Markov partition projecting?
 - `findings.md` — R282–R291, `questions.md` — R1–R6, `plan.md`
 - Scripts: `dark_sector.py`, `logistic_map.py`, `composability.py`
 
+### `empirical/`
+No results yet. Asks whether nature exhibits the constraint class {GMS + complement + Z₅}.
+- `questions.md` — E1–E4: timescale ratio matching, regime transition statistics, five-element prediction, inversion symmetry in natural transitions
+
 ### `usage.md`
 The system as judgment instrument. Three-layer summary.
 

@@ -283,6 +283,268 @@ def section_c(ep_df: pd.DataFrame, out: list):
                (f", median 7d ret={simul['fwd_7d'].median()*100:+.3f}%" if len(simul) > 0 else ""))
 
 
+OI_CONTROL_CACHE = DATA_DIR / "binance_oi_control.csv"
+
+CONTROL_MONTHS = [
+    ("2024-09-01", "2024-09-30"),  # No lending episode in Sep 2024
+    ("2024-11-01", "2024-11-30"),  # Episode is Nov 12 (1 day) — mostly quiet
+    ("2025-07-01", "2025-07-31"),  # No episode in Jul 2025
+]
+
+
+def fetch_control_oi() -> pd.DataFrame:
+    """Fetch OI data for non-episode control months."""
+    if OI_CONTROL_CACHE.exists():
+        print(f"  Loading cached control OI from {OI_CONTROL_CACHE}")
+        return pd.read_csv(OI_CONTROL_CACHE, parse_dates=["datetime"])
+
+    all_dates = set()
+    for start, end in CONTROL_MONTHS:
+        d = pd.Timestamp(start)
+        e = pd.Timestamp(end)
+        while d <= e:
+            all_dates.add(d.strftime("%Y-%m-%d"))
+            d += pd.Timedelta(days=1)
+
+    all_dates = sorted(all_dates)
+    print(f"  Fetching {len(all_dates)} days of control OI data...")
+
+    frames = []
+    for i, date_str in enumerate(all_dates):
+        df = download_binance_metrics(date_str)
+        if df is not None:
+            frames.append(df)
+        time.sleep(0.1)
+
+    if not frames:
+        return pd.DataFrame()
+
+    oi = pd.concat(frames, ignore_index=True)
+    oi["datetime"] = pd.to_datetime(oi["create_time"], utc=True)
+    oi = oi.sort_values("datetime").reset_index(drop=True)
+    oi = oi[["datetime", "sum_open_interest", "sum_open_interest_value"]].copy()
+    oi.to_csv(OI_CONTROL_CACHE, index=False)
+    print(f"  Saved {len(oi)} rows to {OI_CONTROL_CACHE}")
+    return oi
+
+
+def load_raw_lending_events() -> pd.DataFrame:
+    """Load all raw lending events with sub-daily timestamps and USD volumes."""
+    price_h = pd.read_csv(DATA_DIR / "eth_price_1h.csv")
+    price_h["datetime"] = pd.to_datetime(price_h["datetime"], utc=True).dt.floor("h")
+    price_h = price_h.set_index("datetime").sort_index()
+
+    frames = []
+
+    # Aave (volume in ETH → needs price conversion)
+    aave = pd.read_csv(DATA_DIR / "liquidation_events_raw.csv")
+    aave["dt"] = pd.to_datetime(aave["timestamp"], unit="s", utc=True)
+    aave["hour"] = aave["dt"].dt.floor("h")
+    aave = aave.merge(price_h[["price"]].reset_index().rename(columns={"datetime": "hour"}),
+                       on="hour", how="left")
+    aave["volume_usd"] = aave["collateral_eth"] * aave["price"]
+    frames.append(aave[["dt", "hour", "volume_usd"]].dropna(subset=["volume_usd"]))
+
+    # Compound (volume already in USD)
+    comp = pd.read_csv(DATA_DIR / "liquidation_compound_raw.csv")
+    comp["dt"] = pd.to_datetime(comp["timestamp"], unit="s", utc=True)
+    comp["hour"] = comp["dt"].dt.floor("h")
+    frames.append(comp[["dt", "hour", "volume_usd"]])
+
+    # Maker (volume in ETH → needs price conversion)
+    maker = pd.read_csv(DATA_DIR / "liquidation_maker_raw.csv")
+    maker["dt"] = pd.to_datetime(maker["timestamp"], unit="s", utc=True)
+    maker["hour"] = maker["dt"].dt.floor("h")
+    maker = maker.merge(price_h[["price"]].reset_index().rename(columns={"datetime": "hour"}),
+                         on="hour", how="left")
+    maker["volume_usd"] = maker["volume_eth"] * maker["price"]
+    frames.append(maker[["dt", "hour", "volume_usd"]].dropna(subset=["volume_usd"]))
+
+    events = pd.concat(frames, ignore_index=True).sort_values("dt").reset_index(drop=True)
+    return events
+
+
+def section_g(daily: pd.DataFrame, episodes_2024: list, hourly_oi: pd.DataFrame, out: list):
+    """Test G: False positive rate — how often does OI drop >3% without a lending episode?"""
+    out.append("\n" + "=" * 60)
+    out.append("G. FALSE POSITIVE RATE")
+    out.append("=" * 60)
+
+    # 1. Count all >3% hourly OI drops in episode windows
+    episode_drops = hourly_oi[hourly_oi["oi_pct_change"] < -OI_DROP_THRESHOLD_PCT]
+    out.append(f"\n  Total hours with >{OI_DROP_THRESHOLD_PCT}% OI drop in episode windows: {len(episode_drops)}")
+
+    # 2. Fetch control period OI
+    print("Fetching control OI data...")
+    control_oi = fetch_control_oi()
+    if len(control_oi) == 0:
+        out.append("  ERROR: Could not fetch control OI data")
+        return
+
+    control_hourly = compute_hourly_oi_change(control_oi)
+    control_drops = control_hourly[control_hourly["oi_pct_change"] < -OI_DROP_THRESHOLD_PCT]
+
+    control_days = (control_hourly["datetime"].max() - control_hourly["datetime"].min()).total_seconds() / 86400
+    episode_days = (hourly_oi["datetime"].max() - hourly_oi["datetime"].min()).total_seconds() / 86400
+
+    out.append(f"  Control period: {control_days:.0f} days ({len(control_hourly)} hours)")
+    out.append(f"  Control drops >{OI_DROP_THRESHOLD_PCT}%: {len(control_drops)}")
+
+    # 3. False positive rate calculation
+    ep_rate = len(episode_drops) / episode_days if episode_days > 0 else 0
+    ctrl_rate = len(control_drops) / control_days if control_days > 0 else 0
+
+    out.append(f"\n  Drop rate (episode windows): {ep_rate:.2f} per day")
+    out.append(f"  Drop rate (control periods): {ctrl_rate:.2f} per day")
+
+    if ctrl_rate > 0:
+        enrichment = ep_rate / ctrl_rate
+        out.append(f"  Enrichment ratio: {enrichment:.1f}x (episode vs control)")
+    else:
+        enrichment = float("inf")
+        out.append(f"  Enrichment ratio: ∞ (no control drops)")
+
+    # 4. Estimate annualized false alarm rate
+    annual_false_alarms = ctrl_rate * 365
+    out.append(f"\n  Estimated annual false alarms (>{OI_DROP_THRESHOLD_PCT}% drop, no lending episode): {annual_false_alarms:.0f}")
+    out.append(f"  Actual lending episodes per year: ~{len(episodes_2024) / 2:.0f}")
+
+    if annual_false_alarms > 0:
+        precision = len(episodes_2024) / (len(episodes_2024) + annual_false_alarms * 2) * 100
+        out.append(f"  Rough precision estimate: ~{precision:.0f}%")
+    else:
+        out.append(f"  Precision: high (no false alarms in control period)")
+
+    # 5. Test at lower thresholds too
+    out.append(f"\n  Threshold sensitivity:")
+    out.append(f"  {'Thresh':>7s}  {'Ep drops':>9s}  {'Ctrl drops':>10s}  {'Ep/day':>7s}  {'Ctrl/day':>9s}  {'Enrich':>7s}")
+    out.append(f"  {'-'*55}")
+    for thresh in [1.0, 2.0, 3.0, 4.0, 5.0]:
+        n_ep = (hourly_oi["oi_pct_change"] < -thresh).sum()
+        n_ctrl = (control_hourly["oi_pct_change"] < -thresh).sum()
+        r_ep = n_ep / episode_days if episode_days > 0 else 0
+        r_ctrl = n_ctrl / control_days if control_days > 0 else 0
+        enrich = r_ep / r_ctrl if r_ctrl > 0 else float("inf")
+        e_str = f"{enrich:.1f}x" if enrich < 1000 else "∞"
+        out.append(f"  >{thresh:.0f}%  {n_ep:>9d}  {n_ctrl:>10d}  {r_ep:>7.2f}  {r_ctrl:>9.2f}  {e_str:>7s}")
+
+
+def section_h(daily: pd.DataFrame, episodes_2024: list, hourly_oi: pd.DataFrame, out: list):
+    """Test H: Corrected lead time using sub-daily lending timestamps + price diagnostic."""
+    out.append("\n" + "=" * 60)
+    out.append("H. CORRECTED LEAD TIME + PRICE DIAGNOSTIC")
+    out.append("=" * 60)
+
+    # Load raw lending events
+    print("Loading raw lending events for sub-daily timestamps...")
+    raw_events = load_raw_lending_events()
+
+    # Load hourly ETH price for price diagnostic
+    price_h = pd.read_csv(DATA_DIR / "eth_price_1h.csv")
+    price_h["datetime"] = pd.to_datetime(price_h["datetime"], utc=True).dt.floor("h")
+    price_h = price_h.set_index("datetime").sort_index()
+
+    out.append(f"  Raw lending events: {len(raw_events)}")
+
+    rows = []
+    out.append(f"\n  {'Start':<12s} {'Peak day':<12s}  {'Lend peak hr':>13s}  {'OI drop hr':>13s}  "
+               f"{'Corr lag':>9s}  {'P@OI':>8s}  {'P@Lend':>8s}  {'ΔP':>7s}")
+    out.append(f"  {'-'*95}")
+
+    for ep_idx in episodes_2024:
+        ep_start = daily.loc[ep_idx[0], "date"]
+        peak_idx = daily.loc[ep_idx, "total_usd"].idxmax()
+        peak_day = daily.loc[peak_idx, "date"]
+
+        # Find peak lending hour on peak day
+        day_start = peak_day
+        day_end = peak_day + pd.Timedelta(days=1)
+        day_events = raw_events[(raw_events["dt"] >= day_start) & (raw_events["dt"] < day_end)]
+
+        if len(day_events) > 0:
+            hourly_vol = day_events.groupby("hour")["volume_usd"].sum()
+            lending_peak_hour = hourly_vol.idxmax()
+        else:
+            lending_peak_hour = peak_day + pd.Timedelta(hours=12)  # fallback to noon
+
+        # Find OI drop (same method as before)
+        oi_spike = find_oi_spike(hourly_oi, peak_day)
+
+        if oi_spike is None:
+            rows.append({
+                "start": str(ep_start.date()), "peak_day": str(peak_day.date()),
+                "lending_peak_hour": lending_peak_hour,
+                "oi_drop_hour": pd.NaT, "corrected_lag_hours": np.nan,
+                "price_at_oi": np.nan, "price_at_lend": np.nan, "price_change_pct": np.nan,
+                "fwd_7d": daily.loc[ep_idx[0], "fwd_7d"],
+            })
+            out.append(f"  {str(ep_start.date()):<12s} {str(peak_day.date()):<12s}  "
+                       f"{str(lending_peak_hour)[:13]:>13s}  {'—':>13s}  {'no drop':>9s}  "
+                       f"{'—':>8s}  {'—':>8s}  {'—':>7s}")
+            continue
+
+        oi_drop_hour = oi_spike["first_drop_time"]
+        corr_lag = (lending_peak_hour - oi_drop_hour).total_seconds() / 3600
+
+        # Price at each point
+        oi_hour_floor = oi_drop_hour.floor("h")
+        lend_hour_floor = lending_peak_hour.floor("h") if hasattr(lending_peak_hour, "floor") else lending_peak_hour
+
+        price_at_oi = price_h.loc[oi_hour_floor, "price"] if oi_hour_floor in price_h.index else np.nan
+        price_at_lend = price_h.loc[lend_hour_floor, "price"] if lend_hour_floor in price_h.index else np.nan
+
+        if not np.isnan(price_at_oi) and not np.isnan(price_at_lend) and price_at_oi > 0:
+            price_change = (price_at_lend / price_at_oi - 1) * 100
+        else:
+            price_change = np.nan
+
+        rows.append({
+            "start": str(ep_start.date()), "peak_day": str(peak_day.date()),
+            "lending_peak_hour": lending_peak_hour,
+            "oi_drop_hour": oi_drop_hour, "corrected_lag_hours": corr_lag,
+            "price_at_oi": price_at_oi, "price_at_lend": price_at_lend,
+            "price_change_pct": price_change,
+            "fwd_7d": daily.loc[ep_idx[0], "fwd_7d"],
+        })
+
+        p_oi_str = f"${price_at_oi:,.0f}" if not np.isnan(price_at_oi) else "—"
+        p_lend_str = f"${price_at_lend:,.0f}" if not np.isnan(price_at_lend) else "—"
+        dp_str = f"{price_change:+.1f}%" if not np.isnan(price_change) else "—"
+
+        out.append(f"  {str(ep_start.date()):<12s} {str(peak_day.date()):<12s}  "
+                   f"{str(lending_peak_hour)[:13]:>13s}  {str(oi_drop_hour)[:13]:>13s}  "
+                   f"{corr_lag:>+8.1f}h  {p_oi_str:>8s}  {p_lend_str:>8s}  {dp_str:>7s}")
+
+    h_df = pd.DataFrame(rows)
+    corr_lags = h_df["corrected_lag_hours"].dropna()
+
+    out.append(f"\n  Corrected lead/lag statistics (n={len(corr_lags)}):")
+    if len(corr_lags) >= 3:
+        out.append(f"    Median corrected lag: {corr_lags.median():+.1f}h")
+        out.append(f"    Mean corrected lag: {corr_lags.mean():+.1f}h")
+        out.append(f"    Perps lead: {(corr_lags > 0).sum()} / {len(corr_lags)} ({100*(corr_lags > 0).mean():.1f}%)")
+
+    price_changes = h_df["price_change_pct"].dropna()
+    if len(price_changes) >= 3:
+        out.append(f"\n  Price change (OI drop → lending peak):")
+        out.append(f"    Median: {price_changes.median():+.1f}%")
+        out.append(f"    Mean: {price_changes.mean():+.1f}%")
+        neg_pct = (price_changes < 0).mean() * 100
+        out.append(f"    Price declined between OI drop and lending peak: {neg_pct:.0f}% of episodes")
+
+        if price_changes.median() < -1:
+            out.append(f"\n    → GENUINE WARNING: price typically fell {abs(price_changes.median()):.1f}% between")
+            out.append(f"      OI drop and lending peak. The OI drop fires while further decline is coming.")
+        elif abs(price_changes.median()) <= 1:
+            out.append(f"\n    → SAME EVENT: price is essentially flat ({price_changes.median():+.1f}%) between")
+            out.append(f"      OI drop and lending peak. Faster measurement of the same shock, not a warning.")
+        else:
+            out.append(f"\n    → LAGGING INDICATOR: price rose {price_changes.median():+.1f}% between OI drop")
+            out.append(f"      and lending peak. OI drop fires after the worst is over.")
+
+    return h_df
+
+
 def main():
     out = []
     out.append("PERP → LENDING TEMPORAL LEAD ANALYSIS")
@@ -350,34 +612,52 @@ def main():
     section_b(ep_df, out)
     section_c(ep_df, out)
 
-    # Verdict
+    # Discriminant tests
+    section_g(daily, episodes_2024, hourly_oi, out)
+    h_df = section_h(daily, episodes_2024, hourly_oi, out)
+
+    # Verdict (updated with discriminant test results)
     out.append("\n" + "=" * 60)
     out.append("VERDICT")
     out.append("=" * 60)
 
     lags = ep_df["lag_hours"].dropna()
-    if len(lags) >= 5:
+    corr_lags = h_df["corrected_lag_hours"].dropna() if h_df is not None else pd.Series(dtype=float)
+    price_changes = h_df["price_change_pct"].dropna() if h_df is not None else pd.Series(dtype=float)
+
+    if len(corr_lags) >= 5:
+        pct_lead = (corr_lags > 0).mean() * 100
+        med_lag = corr_lags.median()
+        med_price = price_changes.median() if len(price_changes) >= 3 else 0
+    elif len(lags) >= 5:
         pct_lead = (lags > 0).mean() * 100
         med_lag = lags.median()
-        if pct_lead > 65 and med_lag > 6:
-            out.append(f"\n  PERPS LEAD: {pct_lead:.0f}% of episodes, median {med_lag:+.0f}h.")
-            out.append(f"  Perp OI drops provide {abs(med_lag):.0f}h of lead time before lending liquidations.")
-        elif pct_lead < 35 and med_lag < -6:
-            out.append(f"\n  LENDING LEADS: perps follow lending by {abs(med_lag):.0f}h in most episodes.")
-        else:
-            out.append(f"\n  SIMULTANEOUS: median lag {med_lag:+.1f}h, {pct_lead:.0f}% perps-first.")
-            out.append(f"  No consistent temporal ordering between perp and lending liquidations.")
-            if abs(med_lag) < 12:
-                out.append(f"  The leverage hierarchy (perps 5-50x vs lending 1.5-3x) does not")
-                out.append(f"  create exploitable temporal structure at hourly resolution.")
+        med_price = 0
     else:
-        out.append(f"\n  INSUFFICIENT DATA: only {len(lags)} episodes with measurable lag.")
+        out.append(f"\n  INSUFFICIENT DATA")
+        med_lag = 0
+        pct_lead = 0
+        med_price = 0
+
+    if pct_lead > 65 and med_lag > 6:
+        out.append(f"\n  PERPS LEAD: {pct_lead:.0f}% of episodes, corrected median {med_lag:+.1f}h.")
+        if med_price < -1:
+            out.append(f"  Price typically fell {abs(med_price):.1f}% between OI drop and lending peak.")
+            out.append(f"  → GENUINE EARLY WARNING: further decline still coming when OI drop fires.")
+        elif abs(med_price) <= 1:
+            out.append(f"  Price essentially flat ({med_price:+.1f}%) between OI drop and lending peak.")
+            out.append(f"  → FASTER MEASUREMENT of the same shock, not an independent early warning.")
+        else:
+            out.append(f"  Price rose {med_price:+.1f}% between OI drop and lending peak.")
+            out.append(f"  → OI drop fires AFTER the worst of the price decline.")
+    elif pct_lead < 35:
+        out.append(f"\n  LENDING LEADS or SIMULTANEOUS.")
+    else:
+        out.append(f"\n  MIXED: {pct_lead:.0f}% perps-first, median {med_lag:+.1f}h.")
 
     out.append(f"\n  Proxy caveat: OI changes are an imperfect proxy for liquidations.")
     out.append(f"  Direct liquidation data (from Hyperliquid or Coinglass with API key)")
-    out.append(f"  would provide higher fidelity. The structural conclusion about")
-    out.append(f"  temporal ordering, however, is likely robust to proxy noise during")
-    out.append(f"  major stress episodes where forced closures dominate OI changes.")
+    out.append(f"  would provide higher fidelity.")
 
     result_text = "\n".join(out)
     RESULTS_FILE.write_text(result_text)

@@ -565,3 +565,83 @@ The leverage topology is transparent at the protocol level, but the positions wi
 
 - **Perp → lending temporal lead (Plan D):** Cross-venue leverage hierarchy (5-50x perps vs 1.5-3x lending) has a qualitatively wider leverage gap than cross-protocol (Maker vs Aave). This is the last structural test where the gap might be large enough to overcome position heterogeneity. Requires Hyperliquid API data — feasibility check needed before committing to full analysis (Hyperliquid launched late 2023, ~2 years overlap, ~15 of 27 episodes).
 - **Cross-collateral contagion (Plan E):** Whether multi-collateral distributed events predict worse outcomes than ETH-only events.
+
+---
+
+## Iteration 11 — Perp → Lending Temporal Lead (Plan Item D)
+
+**Date:** 2026-03-19
+
+### What was tested
+
+Whether perpetual futures liquidation activity precedes lending protocol liquidation activity during stress episodes. The hypothesis: higher-leverage instruments (perps at 5-50x) should liquidate before lower-leverage instruments (lending at 1.5-3x) because they hit thresholds at smaller price moves. This is the cross-venue leverage hierarchy test — structurally different from Plan C (cross-protocol within lending) which failed because the leverage gap between lending protocols was too narrow.
+
+- **Script:** `memories/mev/perp_lead.py`
+- **Data:** `memories/mev/data/perp_lead_results.txt`, `memories/mev/data/binance_oi_episodes.csv`
+
+### Data feasibility (Phase 1)
+
+Direct historical perp liquidation data is not freely available:
+- Hyperliquid: stats API returns 403, no public liquidation history endpoint
+- Coinglass: all liquidation endpoints require API key
+- Binance: removed public forceOrders endpoint; no liquidationSnapshot in data archive
+
+**Proxy used:** Binance ETHUSDT 5-minute open interest (OI) snapshots, available Dec 2021 → present. Large negative hourly OI changes during stress episodes are mechanically driven by forced position closures (liquidations). Threshold: >3% hourly OI drop. 92,157 rows of 5-min data fetched for the 17 episodes from 2024 onward (7,697 hourly data points).
+
+**Limitation:** OI changes include voluntary closures. During severe stress, forced closures dominate, but the proxy is noisy for milder events.
+
+### What was measured (Phase 2)
+
+**A. Episode alignment:** For each of 17 lending liquidation episodes (2024+), identified the first significant OI drop (>3% hourly) within ±48h of the lending peak day. Lending reference: midnight UTC of peak liquidation day.
+
+**B. Lead/lag statistics:**
+
+| Metric | Value |
+|---|---|
+| Episodes with perp OI drop preceding lending peak | 16/17 (94%) |
+| Median lead time | 23 hours |
+| Mean lead time | 24.4 hours |
+| P10 lead | 7 hours |
+| P25 lead | 9 hours |
+| P75 lead | 44 hours |
+| Only lending-leads episode | 2025-01-07 (lag = -1h, essentially simultaneous) |
+
+**C. Lag vs severity:**
+- Spearman correlation (lag vs 7d return): r=+0.33, p=0.20 — not significant
+- Simultaneous episodes (|lag| < 12h, n=7): median 7d return = -4.35%
+- Perps-lead episodes (>12h, n=10): median 7d return = -0.34%
+
+### Structural finding
+
+The leverage hierarchy creates measurable temporal structure: perp OI drops precede lending liquidation peaks by a median of 23 hours with 94% consistency. This is the structural signal that Plan C (protocol cascade within lending) failed to find. The leverage gap between perps (5-50x) and lending (1.5-3x) is wide enough to produce consistent ordering, whereas the Maker-Aave gap (both 1.5-3x effective) was not.
+
+This confirms the position-heterogeneity finding from Iteration 10: structural parameters only create temporal ordering when the parameter gap is large enough to dominate position diversity.
+
+### Vulnerabilities identified in review
+
+**1. False positive rate is unknown (existential concern).** The >3% hourly OI drop threshold and ±48h search window may produce high recall but low precision. A 48h window contains 96 hourly observations. If >3% OI drops occur frequently during volatile markets, finding one before any lending spike could approach base rate. The control test: count all >3% hourly OI drops in the full dataset, and compute what fraction fall within 48h before a lending episode.
+
+**2. Reference point inflates lead time.** Lending reference is midnight of peak day. Actual lending liquidations happen during the day. If peak lending events cluster around noon-6pm UTC, the true lead is 12-18h shorter. A 23h median could compress to 5-11h. Block-level lending timestamps exist and could provide a tighter reference.
+
+**3. Voluntary vs forced closures.** OI drops during moderate events may be predominantly voluntary de-risking (traders closing positions as price falls), not forced liquidations. If so, the "lead" is behavioral (sophisticated traders react faster) rather than mechanical (leverage hierarchy). A diagnostic: compute the ETH price at the OI drop time vs at the lending peak hour. If the OI drop happens at -5% from recent highs and lending peaks at -15%, there's genuine warning content (the further decline hasn't happened yet). If both happen at similar price levels, the OI drop is faster measurement of the same event.
+
+**4. Information asymmetry.** Even if the lead is real, OI data is public (Binance publishes it). The signal doesn't rely on private information — it relies on synthesizing OI movement with lending liquidation wall maps.
+
+### What was measured vs conjectured
+
+**Measured:**
+- Perp OI drops precede lending peaks in 16/17 episodes (94%), median 23h
+- Simultaneous episodes have worse 7d returns (-4.35%) than perps-lead episodes (-0.34%)
+- No significant correlation between lag magnitude and episode severity (p=0.20)
+
+**Conjectured:**
+- The lead time is inflated by the midnight reference point; true lead may be 5-11h
+- The false positive rate may be high, making the 94% consistency less meaningful than it appears
+- The signal's practical value is as a confirmation input within a monitoring system, not standalone edge
+- The leverage hierarchy (perps → lending) creates real temporal structure, but this is the structural finding, not a trading signal
+
+### What was not tested
+
+- **False positive rate control:** How many >3% OI drops occur outside of lending episodes? What is the precision of the signal?
+- **Price-level diagnostic:** ETH price at OI drop vs at lending peak — determines whether the lead provides genuine warning content or is just faster measurement of the same event
+- **Corrected lead time:** Using block-level lending timestamps instead of midnight reference
