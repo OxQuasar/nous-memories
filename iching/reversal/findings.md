@@ -1,7 +1,7 @@
 # Reversal: Findings
 
-> 19 iterations of the I Ching structural research program.
-> 87 results (R94–R180).
+> 19 iterations + Phase 9 Walsh identification.
+> 90 results (R94–R180, R254–R256).
 
 ---
 
@@ -168,6 +168,16 @@ V-shaped spectrum: d=1 (1.072) and d=6 (1.201) peaks, d=3–5 troughs. Holistic 
 **All algebraic groupings null:** Fano lines, 五行, basin — all p > 0.5 on raw centroids. Anti-clustering in residual space confirmed as artifact (Phase 8e).
 
 **Q1 status:** The ~16-dimensional opposition space is text-intrinsic and irreducibly non-algebraic as measured by current methods.
+
+### Phase 9 — Walsh Harmonic Identification (dynamics/ D1–D3)
+
+**R254: Weight-3 eigenspace identification.** [cross-model stable] The complement opposition decomposes across odd-weight Walsh eigenspaces: weight-3 carries ~65% of opposition energy (BGE-M3 and E5-large), with per-pair profile r ≈ 0.87 with full-space (p < 0.001). PR within weight-3 = 15.5–16.6, matching the R169 target of ~16.1. The ~16-dim manifold is the active core of the weight-3 Walsh eigenspace of Q₆ (dim 20). Cross-model mode ranking ρ = 0.920. Dominant mode: {0,2,5} (lines 1, 3, 6).
+
+**R255: Dimensional pressure.** [proven] Weight-3 is the largest complement-antisymmetric subspace of Q₆: dim C(6,3) = 20 vs 12 for weights 1+5. The "non-decomposability" of R147 is basis-relative — the manifold decomposes in the Walsh basis but not in any interpretationally natural basis (trigrams, bits, 五行, vocabulary, 象, syntax). Only 2/20 weight-3 modes are pure-trigram; the other 18 are cross-trigram 3-line interactions.
+
+**R256: Krawtchouk unification.** [proven] The Walsh spectral profile is the sufficient statistic for all mean pairwise statistics conditioned on Hamming distance (via Krawtchouk polynomials as zonal spherical functions). Confirmed to machine precision on both models. Retroactive compression: R156, R159, R163, and residual anti-smoothness are algebraic consequences of the spectral profile — four seemingly independent findings are projections of one 1.8pp weight-3 excess (33.6% vs 31.8% null, 97.9th %ile). Three levels of independent content: spectrum → modes → pairs.
+
+Scripts: `Q1/phase9_weight3_verification.py`, `Q1/phase9_krawtchouk_unification.py`
 
 ---
 

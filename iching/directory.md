@@ -1,188 +1,86 @@
 # I Ching Research — Directory
 
-## Program Overview
+~256 results across 20 workflows. See `trajectory.md` for the investigation arc.
 
-An investigation of the I Ching's algebraic structure, producing 252 results (1 retracted) across 13 workflows. Central finding: the 五行 assignment is a complement-respecting surjection F₂³ → Z₅ — the unique rigid point in an infinite family. The orbit formula Orbits(n,p) = ((p−3)/2)! × 2^{2^{n−1}−1−n} equals 1 if and only if (n,p) = (3,5).
-
-The thematic manifold has ~16 text-intrinsic opposition dimensions (cross-validated across 4 architecturally distinct models), irreducibly non-algebraic. The system organizes conceptual space for judgment under uncertainty — mathematical, not physical.
+Central finding: the 五行 assignment is the unique rigid complement-respecting surjection F₂³ → Z₅. The thematic manifold has ~16 text-intrinsic opposition dimensions, identified as the weight-3 Walsh eigenspace of Q₆.
 
 ---
 
-## Core Workflows (definitive)
+## Core Workflows
 
 ### `deep/`
-**The foundational exploration.** 9 iterations tracing from two axioms (binary substrate + two independent cycles) to the complete parameter derivation. Establishes: why 5 elements (smallest prime with two independent cycles), why 3 lines (dimensional forcing theorem), why this assignment (zero free parameters), why these compass arrangements (先天 = Z₂ optimum, 後天 = {2,3,5} triple junction), KW pairing uniqueness (basin-preservation maximum).
-- `exploration-log.md` — iteration-by-iteration record (R32–R42)
-- `open-questions.md` — complete results inventory (R1–R72)
-- `number-structure.md` — the {2, 3, 5} prime architecture
+Parameter derivation from two axioms. R1–R42.
+- `open-questions.md` — results inventory (R1–R72)
+- `number-structure.md` — {2, 3, 5} prime architecture
 
 ### `unification/`
-**The uniqueness theorem.** Three phases: (1) PG(2,F₂) framework — the Fano plane decorated with one compass, (2) (n,p) landscape — singleton-forcing, E=1 family, selection chain, (3) the uniqueness proof — orbit formula, Reed-Muller connection, 0.5-bit is presentational.
-- `unification.md` — primary document, Phase 3 status
-- `synthesis-3.md` — definitive account (519 lines, 15 theorems T1–T15, supersedes synthesis-1/2)
-- `synthesis-2.md` — Phase 2 account (landscape, eigenstructure)
-- `synthesis-1.md` — Phase 1 account (PG(2,F₂), 17 results)
-- `phase1-unification.md` — the (3,5) framework + I Ching mapping
+Uniqueness theorem: orbit formula = 1 iff (3,5). R43–R68.
+- `synthesis-3.md` — definitive account (T1–T15)
 
 ### `semantic-map/`
-**Text-algebra interface.** Bottom-up analysis of all textual layers. 89% of text is algebraically independent. Two bridges survive position control (CMH): 凶×basin (core, OR=4.25) and 吉×生体 (shell, OR=2.19). Commentary layers are non-algebraic: 大象 imagistic, 彖傳 binary-structural (Z₂), 小象 positional. Three historical registers map to three primes.
-- `findings.md` — complete findings
+Text-algebra interface. 89% independent. Two bridges survive position control. R in `findings.md`.
 
 ### `relations/`
-**Isolation proof.** Cross-domain investigation proving the (3,5) object doesn't generalize. Three-level specificity chain: char=2 required (theorem), |F_q|=2 required (GL Maximization), (n,p)=(3,5) required (orbit formula). All comparisons negative: genetic code (no equivariance), F₃/F₄ (many orbits), design theory (dead end). "Self-interpreting code" closed as verbal analogy.
-- `findings.md` — complete findings (R62–R68)
+Isolation proof: char=2, |F_q|=2, (3,5) all required. R62–R68.
 
 ### `kw-final/`
-**King Wen pair ordering.** Monte Carlo (50K orderings) under correct null model shows no metric discriminates KW. R41 corrected (basin clustering was artifact of wrong null). The ordering is **designed but not algebraically determined** — the unique point of human authorship. Principle is narrative (序卦傳), not algebraic.
-- `findings.md` — complete findings (R61)
+KW ordering is designed, not algebraically forced. R61.
 
 ### `i-summary/`
-**Final investigation + master summary.** Resolves Q4 (three-tier coupling, not just two bridges), Q5 (彖傳 anomaly detection), Q8 (no name in existing mathematics — definitive negative). Proves nuclear rank formula for all n ≥ 2. Characterizes (4,13) moduli space via Hamming syndrome structure.
-- `summary.md` — master summary of entire research program (through R77; see reversal/ and eastwest/ for R94–R214)
-- `exploration-log.md` — iteration record (R69–R72)
-- `findings.md` — complete findings
-- `work/` — computation scripts and proof documents
-- `work/proof_nuclear_rank.md` — formal proof of rank(M^k) = max(2, 2n−2k)
+Nuclear rank proof, (4,13) moduli space. R69–R72.
+- `summary.md` — master summary through R77
 
 ### `reversal/`
-**The inward turn.** 87 results (R94–R180) across 19 iterations, reversing the program's direction: from analyzing the object to inhabiting it. Four investigations, all closed.
-
-**Q1 — The Residual (R112–R170):** The 89% of text that algebra can't see is a smooth ~16-dimensional thematic manifold, cross-model validated (BGE-M3, E5-large, LaBSE). No clusters. The complement involution is the sole organizing principle — an antipodal map where each pair opposes along its own unique axis. Quadruple dissociation: algebra, vocabulary, 象 categories, and syntactic frames all return null against embedding geometry. The residual is sub-syntactic and non-decomposable. Near-neighbor differentiation and holistic composition produce a V-shaped Hamming spectrum. All algebraic groupings (Fano lines, 五行, basins, trigram decomposition) null against opposition direction.
-
-**Q2 — The Axioms (R73–R111, R171–R175):** The forcing chain has exactly one gap: composability (the group axiom). Without it, a bare 6-element set suffices. With it, F₂³ and (3,5) are forced. The gap is irreducible. Cross-culturally: binary converges (≥3 traditions), five-fold partially converges (China/India), dual-cycle surjection is unique to China.
-
-**Q3 — The Judgment Boundary (R140–R150):** Five judgment operations (analogy 40%, integration 19%, external 19%, weighting 17.5%, exception 5%), invariant across 梅花 and 火珠林. Three-phase sequence: read → assess → anchor. The system explicitly formalizes its own specification gap.
-
-**Resonance Test 3 (R176–R180):** {4,2,2,2,2} appears in climate data but structural predictions fail (0/83 cities). The structure is mathematical, not physical. T1+/T2−/T3−.
-
-- `findings.md` — complete findings (87 results, all tiers)
-- `exploration-log.md` — 19 iterations
-- `questions.md` — open/closed question tracker
-- `resonance-tests.md` — resonance test specifications
-- `Q1/` — residual analysis (8 phases, cached embeddings, scripts)
-- `Q2/` — axiom forcing chain (enumeration, proofs)
-- `Q2T2/` — cross-cultural convergence (Ifá counterfactual, branching landscape)
-- `Q3/` — judgment boundary (worked examples, 象 space analysis)
-- `T3/` — climate cycle test
+90 results (R94–R180, R254–R256). The inward turn.
+- **Q1:** ~16-dim thematic manifold, complement involution as sole organizing principle, quadruple dissociation. Phase 9: weight-3 Walsh eigenspace identification (R254–R256)
+- **Q2:** Forcing chain gap at composability (group axiom). Cross-cultural: binary converges, dual-cycle surjection unique to China
+- **Q3:** Five judgment operations, algorithm-judgment boundary
+- **T3:** {4,2,2,2,2} in climate but structural predictions fail. T1+/T2−/T3−
+- `Q1/` — cached embeddings (`embeddings_{bge-m3,e5-large,labse,sikuroberta}.npz`), scripts
 
 ### `eastwest/`
-**The golden ratio and 五行 across traditions.** 34 results (R181–R214, 1 retracted) across 12 iterations, investigating whether φ (golden ratio) and 五行 dual cycles share a deep connection. All questions closed.
-
-**Central verdict: "Address with conditional resonance, no bridge to text."** Two structurally independent routes produce φ at (3,5): Route A (cyclotomic, unconditional — all 240 surjections live in Q(√5)) and Route B (combinatorial, conditional — 96/240 surjections have φ in cube-edge partition via P₄∪P₄ paths). The convergence is unique at n=3 via the identity 2^{n-1}+1 = 2^n−3. Tested for textual correlates at three resolutions (torus cell, nuclear hex, cube edge) — all null.
-
-**The dimension threshold (R181–R182):** Binary encoding + dual cycles requires n ≥ 3. The Greek quaternary system (F₂²) is structurally locked out of dual-cycle dynamics: p ≤ 3 → single Hamiltonian cycle. Pentagon = Cay(Z₅,{±1}) = 生; Pentagram = Cay(Z₅,{±2}) = 克 — same graph, different readings (spectral vs adjacency). Neither tradition computed both.
-
-**Cross-architecture replication (R212–R213):** Tier 1b findings (complement anti-correlation R156, algebraic R² R157, Hamming V-shape R159) replicate on SikuRoBERTa (classical-Chinese BERT), architecturally distinct from the three prior multilingual sentence-transformers. R² two-band structure: 10.8–11.0% (multilingual) / 13.2% (domain-matched). Pair-level concordance reveals ~85% text-intrinsic geometry with ~15% architecture-dependent periphery (correlating with training-data cultural salience). Four-model consensus confirms "text-intrinsic" for opposition ranking.
-
-- `findings.md` — complete findings (R181–R213)
-- `exploration-log.md` — 12 iterations
-- `questions.md` — question tracker (all closed)
-- Scripts: `cyclotomic_probe.py`, `kw_sequence_probe.py`, `torus_coherence.py`, `differentiation_principle.py`, `hu_cell_validation.py`, `dynamics_probe.py`, `edge_type_decomposition.py`, `perturbation_directions.py`, `sikuroberta_replication.py`, `pair_concordance.py`
-- Cached embeddings: `reversal/Q1/embeddings_{bge-m3,e5-large,labse,sikuroberta}.npz`
+φ and dual cycles across traditions. R181–R214 (1 retracted).
+Two routes to φ at (3,5): cyclotomic (unconditional) and combinatorial (P₄∪P₄, conditional). No bridge to text at any resolution. Cross-architecture replication on SikuRoBERTa confirms ~85% text-intrinsic geometry.
 
 ### `fibo/`
-**Fibonacci structure, φ ubiquity, and the interface layer.** 37 results (R215–R252, R215 amended) across 14 LOGOS iterations + literature survey + analysis. Three phases: (1) Fibonacci parameter alignment localized to Carmichael's theorem (p≈0.3%). (2) Opposition manifold decomposition — ~16 dimensions irreducibly holistic. (3) φ across natural systems — three-mechanism decomposition and the interface layer characterization.
-
-**φ resolution (R244–R252):** φ's cross-system appearances decompose into three mechanisms: CF extremality (phyllotaxis, KAM), Z₅ representation theory (quasicrystals, Penrose tilings, I Ching 克 spectrum), and small-number density (I Ching parameters). The I Ching shares the Z₅ mechanism with five-fold quasicrystals — 生=pentagon, 克=pentagram, edge ratio=φ. φ enters at the metric/geometric layer (the operational interface, R248). The presentational package (φ + 1:2:3 ratio + P₄ eigenstructure) is a single unit constituting the system's interface architecture, the most spectrally structured of 8 possible types (R251), with φ in the destruction/risk channel (R252).
-
-- `findings.md` — complete findings (R215–R252)
-- `exploration-log.md` — 14 iterations
-- `questions.md` — question tracker (all resolved)
-- Scripts: `algebraic_simplicity.py`, `phi_dynamics.py`, `distance_profile.py`, `partial_and_permutation.py`, `d2d3_characterization.py`
+Fibonacci alignment, φ ubiquity, interface layer. R215–R252.
+Three φ mechanisms: CF extremality, Z₅ representation theory, small-number density. I Ching shares Z₅ mechanism with quasicrystals. Presentational package (φ + 1:2:3 + P₄) is the interface architecture.
 
 ### `dynamics/`
-**The I Ching as a map to dynamical space.** Phase 7 of the investigation arc. Entry point: the I Ching is representational — it models change-as-experienced. The text maps internal structure onto the dynamics of situations. The question is whether this map preserves structure, and whether the ~16-dimensional thematic manifold is a discretization of a real dynamical phase space. Open questions: Q11 (phase space discretization), Q12 (克/生/比和 as dynamical transition types), Q13 (φ in dynamics — KAM connection revisited), Q14 (formal definition of the map), Q15 (thematic manifold vs known dynamical structures).
-
-- `questions.md` — open questions (Q11–Q15)
-- `findings.md` — findings (none yet, priors listed)
+R253. Dynamical flow hypothesis negative (Laplacian anti-parallelism fails cross-model). Manifold results R254–R256 moved to reversal/Q1. The dynamics questions (Q11–Q15) are open — only one operationalization tested so far.
+- `questions.md` — Q11–Q15 (inverse methods, symbolic dynamics, external data all untested)
+- `d1_laplacian_walsh.py` — the one test that was run
 
 ### `usage.md`
-**The system as judgment instrument.** Synthesis of the reversal findings into a functional account: the I Ching as an instrument for judgment under uncertainty, not a model of physics. Covers the interface architecture (calendar → assessment vocabulary → judgment), the {4,2,2,2,2} cascade as interface property, the algorithm-judgment boundary, the five practitioner operations, and the three-layer summary (algebra constrains, interface translates, text provides terrain, practitioner navigates).
+The system as judgment instrument. Three-layer summary.
 
 ---
 
 ## Operational Atlases
 
 ### `atlas/`
-**Static 五行 atlas.** 64 hexagram profiles with all algebraic coordinates. Informational completeness: H(hexagram | full profile) = 0.0 bits. The {2,2,2,1,1} partition, torus geometry, constraint structure.
-- `atlas.json` — 64 hexagram profiles (primary data file, referenced by all workflows)
-- `transitions.json` — 互/變/palace transformation data
-- `constraints.json` — constraint structure
+64 hexagram profiles. `atlas.json` referenced by all workflows. Also `transitions.json`, `constraints.json`.
 
 ### `atlas-mh/`
-**梅花 (Meihua) operational atlas.** 384 states (64 hexagrams × 6 moving lines). Core projection (1+4+1). 8 arc types with perfect symmetry. 先天 parity wall (192/384 reachable). 体互 adversarial (63% 克-dominant). Two independent channels: text (present state) vs arc (trajectory). 18 domains, one engine.
-- `findings.md` — complete findings
-- `mh_states.json` — 384 state profiles
-- `mh_arcs.json` — arc/transition data
+梅花 atlas. 384 states. Core projection, 8 arc types, 体互 adversarial (63% 克-dominant).
 
 ### `atlas-hzl/`
-**火珠林 (Huozhulin) operational atlas.** Shell projection (3+3). 64 profiles × 5 seasons × 12 日辰 × 31 domains. Central finding: the {4,2,2,2,2} branch element distribution (substrate constraint, not design) cascades through every layer — Earth universality, anti-resonance theorem, 官鬼 deficit, 納音 overrepresentation. Shell ⊥ core proven at temporal level (MI=0). 用神 7-step protocol formalized. 31 domains → 8 clusters + 5 exceptions (2D taxonomy, zero residual). 梅花 computes a tangent vector; 火珠林 evaluates a local observable.
-- `findings.md` — complete findings (largest single document)
-- `ops-plan.md` — operational plan
-- `hzl_profiles.json` — 64 static profiles
-- `hzl_seasonal.json` — 320 seasonal states
-- `hzl_richen.json` — 768 日辰 interactions
-- `hzl_dongyao.json` — 384 transformations
-- `hzl_domains.json` — 31 domain bindings
-- `hzl_*.json` — additional data files (network, topology, diagnostics, protocols)
+火珠林 atlas. {4,2,2,2,2} cascade, shell ⊥ core, 用神 protocol, 31 domains → 8 clusters.
 
 ---
 
-## Earlier Investigations (superseded but historically significant)
+## Earlier Investigations
 
-### `kingwen/`
-**KW sequence analysis (15 studies).** The first systematic investigation of the King Wen ordering as a path through Z₂⁶. Established: perfect dimensional balance, even-Hamming preference, forward-backward ring symmetry, developmental priority in pair orientation. Superseded by `kw-final/` for the ordering question; structural results absorbed into `deep/`.
-- `1-timewave.md` through `15-bridges.md` — sequential study documents
-- `14-synthesis.md` — synthesis of studies 1–10
-
-### `opposition-theory/`
-**Opposition hypothesis (4 phases).** Tested whether the I Ching optimizes a unified opposition measure. The hypothesis was wrong — but led to the 9-pairing theorem (only 9 structurally coherent pairings exist under mirror-pair geometry, KW uses reversal). Lo Shu / He Tu / Fu Xi occupy distinct points in opposition space. Results fed into `spaceprobe/`.
-- `synthesis.md` — final synthesis
-- `phase4-shengke.md` — five-phase layer analysis
-- `loshu.md` — Lo Shu magic square connection
-
-### `spaceprobe/`
-**Trigram relational space.** Answered "what IS the 8-state structure?" — an 8-element set with three distinguished fixed-point-free involutions satisfying two axioms. Multiple coordinate systems (Fu Xi, Lo Shu/KW, He Tu) are faithful representations without being reducible to each other. Established the convergence-without-reduction principle.
-- `synthesis.md` — final synthesis
-- `doubles.md`, `invariants.md` — structural analysis
-- `sequence-characterization.md` — sequence properties
-
-### `attractors/`
-**互 attractor analysis.** Defines the three-layer onion (outer/shell/interface), proves 互 peels exactly one layer per application, characterizes the 4-element attractor {坤坤, 既濟, 未濟, 乾乾}. Basin as exact 互 invariant. Results absorbed into `unification/`.
-- `findings.md` — complete findings
-
-### `wuxing/`
-**五行 structural analysis (3 phases).** Initial characterization of the trigram→element assignment as geometry on Z₂³. The {2,2,2,1,1} partition, complement pairing structure, Fire/Water singletons as mutual complements. Results absorbed into `deep/` and `atlas/`.
-- `summary_findings.md` — summary
-- `01-03_findings.md` — phase findings
-
-### `jingshiyizhuan/`
-**京氏易傳 source text analysis.** Extracted and characterized the five layers 火珠林 dropped from the original Han dynasty system (氣候分數, 五星, 二十八宿, 建始, 積算). Central finding: all five are deterministic functions of (palace, rank) — H(fields | palace, rank) = 0.0 bits — 火珠林's compression was lossless. Discovered the universal 納甲 offset rule (+3 for upper trigrams, exception-free).
-- `findings.md` — unified findings
-- `01-04_findings.md` — phase findings
-
-### `huozhulin/`
-**火珠林 preliminary.** Initial 納甲 map, palace kernel, 六親 algebra. Superseded by `atlas-hzl/`.
-
-### `synthesis/`
-**Early cross-workflow synthesis.** Probe-based investigation (7 probes) establishing the two-bridge structure, two-projection theorem, and structured incompleteness principle. Results absorbed into `semantic-map/` and `unification/`. Data files still referenced by later workflows.
-- `findings.md` — synthesis findings
-- `probe1-7_results.md` — individual probe results
-
-### `logoswen/`
-**KW sequence investigation (LOGOS-driven).** Frame-walking analysis, algebraic decomposition. Superseded by `kw-final/`.
-- `synthesis-0.md`, `synthesis-1.md` — synthesis documents
-
-### `kwmapper/`
-**KW mapping + divination examples.** Practical divination worked examples using the structural framework.
-- `synthesis.md` — synthesis
-- `sy_divination_examples.md` — worked examples
-
----
-
-## Source Texts
-
-Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for full listing.
+`kingwen/` — KW as path through Z₂⁶ (15 studies). Superseded by `kw-final/`.
+`opposition-theory/` — 9-pairing theorem. Fed into `spaceprobe/`.
+`spaceprobe/` — Trigram relational space, convergence-without-reduction.
+`attractors/` — 互 three-layer onion, 4-element attractor. Absorbed into `unification/`.
+`wuxing/` — {2,2,2,1,1} partition. Absorbed into `deep/`.
+`jingshiyizhuan/` — 京氏易傳: 5 dropped layers all deterministic, compression lossless.
+`huozhulin/` — Preliminary. Superseded by `atlas-hzl/`.
+`synthesis/` — Early probes. Absorbed into `semantic-map/` and `unification/`.
+`logoswen/` — KW investigation. Superseded by `kw-final/`.
+`kwmapper/` — Worked divination examples.
 
 ---
 
@@ -190,26 +88,14 @@ Original Chinese source texts in `memories/texts/`. See `texts/directory.md` for
 
 | Question | Go to |
 |----------|-------|
-| What is the central result? | `unification/synthesis-3.md` |
-| Full results inventory | `deep/open-questions.md` (R1–R72), `reversal/findings.md` (R94–R180), `eastwest/findings.md` (R181–R214), `fibo/findings.md` (R215–R252) |
-| Master summary | `i-summary/summary.md` (R1–R77), `reversal/` for R94–R180, `eastwest/` for R181–R214, `fibo/` for R215–R245 |
-| How was it derived? | `deep/exploration-log.md` |
-| What do the texts say? | `semantic-map/findings.md` |
-| Why is it isolated? | `relations/findings.md` |
-| How does 火珠林 work? | `atlas-hzl/findings.md` |
-| How does 梅花 work? | `atlas-mh/findings.md` |
-| What about the KW ordering? | `kw-final/findings.md` |
-| The {2,3,5} prime architecture | `deep/number-structure.md` |
-| Nuclear rank proof | `i-summary/work/proof_nuclear_rank.md` |
-| What's in the 89% residual? | `reversal/findings.md` § Q1 |
-| What are the axioms? | `reversal/findings.md` § Q2 |
-| How does judgment work? | `reversal/findings.md` § Q3 |
-| What is the system *for*? | `usage.md` |
-| Cross-cultural comparison | `reversal/findings.md` § Q2 Test 2 |
-| φ and 五行 across traditions | `eastwest/findings.md` |
-| Cross-architecture replication | `eastwest/findings.md` § R212–R213 |
-| Fibonacci structure & φ ubiquity | `fibo/findings.md` |
-| φ interface layer & quasicrystal connection | `fibo/findings.md` § R246–R252 |
-| I Ching as dynamical map | `dynamics/questions.md` |
-| Source texts directory | `../texts/directory.md` |
-| Captain's log | `../agent_logs/iching_captain.md` |
+| Central result | `unification/synthesis-3.md` |
+| Full results | `deep/open-questions.md`, `reversal/findings.md`, `eastwest/findings.md`, `fibo/findings.md`, `dynamics/findings.md` |
+| Texts analysis | `semantic-map/findings.md` |
+| Isolation proof | `relations/findings.md` |
+| 火珠林 | `atlas-hzl/findings.md` |
+| 梅花 | `atlas-mh/findings.md` |
+| The 89% residual | `reversal/findings.md` § Q1 |
+| Axioms & forcing | `reversal/findings.md` § Q2 |
+| φ & Fibonacci | `fibo/findings.md` |
+| Dynamics | `dynamics/questions.md` |
+| Source texts | `../texts/directory.md` |

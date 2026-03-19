@@ -1682,3 +1682,39 @@ The reversal investigation began with one observation: the algebra explains ~11%
 The algebra constrains (11%). Judgment fills the rest (89%). The system was designed for situated assessment — organizing conceptual space for judgment under uncertainty, not modeling natural dynamics.
 
 All questions closed. Program complete.
+
+---
+
+## Phase 9: Walsh Harmonic Identification (from dynamics/ D2–D3)
+
+> Iterations below were originally part of the dynamics investigation. They address Q1 (manifold characterization), not dynamics.
+
+### Iteration 20: Weight-3 Walsh Eigenspace Verification (Probe D2)
+
+**Entry:** D1 (dynamics/) found eigenvalue-6 (weight-3) Walsh enrichment at 97.9th percentile, contributing 9× the net complement anti-correlation. Conjecture: the ~16-dim manifold (R169, PR = 16.1) ≈ the weight-3 Walsh eigenspace of Q₆ (dim 20).
+
+**Method:** Per-eigenspace contribution decomposition. Opposition strength profile correlation across odd eigenspaces. PR within weight-3 projection. Mode variance ranking across 20 weight-3 modes. Cross-model on E5-large.
+
+Script: `Q1/phase9_weight3_verification.py`
+
+**Results:**
+
+Weight-3 carries 64–65% of opposition energy (cross-model stable). Per-pair profile r ≈ 0.87 with full space (p < 0.001) — tracks *which* pairs oppose most, not just aggregate. PR within weight-3: 15.5 (BGE-M3) / 16.6 (E5-large), matching R169 target. Mode ranking ρ = 0.920 cross-model. Dominant mode: {0,2,5} (lines 1, 3, 6). Mode variance non-uniform (χ² at 1.2–2.3rd percentile).
+
+→ R254 (weight-3 identification), R255 (dimensional pressure, basis-relative decomposability)
+
+### Iteration 21: Krawtchouk Unification (Probe D3)
+
+**Entry:** Multiple prior findings (R156, R159, R163) all depend on Hamming distance. Krawtchouk polynomials are the zonal spherical functions of the Hamming association scheme — they give the exact relationship between Walsh spectral weights and distance-dependent statistics.
+
+**Method:** Krawtchouk prediction of Hamming spectrum from Walsh profile (zero free parameters). Laplacian anti-smoothness derivation. Residual structure test. Cross-model.
+
+Script: `Q1/phase9_krawtchouk_unification.py`
+
+**Results:**
+
+Dot product prediction r = +1.0000 (algebraic identity, both models). Cosine prediction r = 0.984/0.980 (per-pair norm variation accounts for gap). Residual RMS / signal range = 7.6–8.3%, smaller than 99.9–100% of null permutations. Laplacian anti-smoothness derived exactly from weight-3 enrichment. No systematic structure in Krawtchouk residual (all z < 0.4).
+
+Retroactive compression: R156, R159, R163, R253's anti-smoothness are algebraic consequences of the Walsh spectral profile — four findings → one 1.8pp anomaly. Three levels of independent content remain: spectrum → modes → pairs.
+
+→ R256 (Krawtchouk unification)
