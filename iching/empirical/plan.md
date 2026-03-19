@@ -92,7 +92,40 @@ This follows the traditional phase logic: growth → peak → stability → decl
 
 **Key question for E4:** Compare results across regions — does the grammar work for both Western and East Asian political systems?
 
-## Probe 4: Ecological Succession (E1, E2, E3)
+## Probe 4: 皇極經世 Dynasty Chronology (E2, E3)
+
+**Why here:** The data is in-house (`texts/huangjijingshi/`, files 2–6). Shao Yong's 元會運世 system provides ~3,400 years of year-by-year chronology (~2357 BCE to ~1060 CE) with each year assigned to the 60-year 甲子 sexagenary cycle. The 天干 (Heavenly Stems) carry 五行 assignments:
+
+| Stem pair | Element |
+|-----------|---------|
+| 甲乙 | 木 Wood |
+| 丙丁 | 火 Fire |
+| 戊己 | 土 Earth |
+| 庚辛 | 金 Metal |
+| 壬癸 | 水 Water |
+
+Shao Yong himself didn't use 五行 — his system is binary-dualistic (陰/陽). But the 天干/地支 assignments he recorded carry an implicit 五行 layer through the stem correspondences. This is an independent system layered on the same data.
+
+**The test:** At dynasty transitions (founding, collapse, conquest), what is the 五行 type of the transition year? Does the grammar predict anything about the character of the transition?
+
+**Steps:**
+1. Parse files 2–6: extract year, 甲子 label, ruler, dynasty, event annotations
+2. Assign 五行 to each year via its 天干 (甲/乙=木, 丙/丁=火, etc.)
+3. Identify all dynasty transitions (change of ruling house, not just succession within a dynasty)
+4. For each transition, record: 五行 of the last year of the old dynasty, 五行 of the first year of the new dynasty, transition type (比和/生/克)
+5. Also: for the years surrounding each transition (±5 years), compute the sequence of 五行 types
+6. Test E2: are 克-克 bigrams at dynasty transitions suppressed vs the base rate of the 天干 cycle?
+7. Test E3: after a 克-year transition, does the next transition avoid 生?
+
+**Null model:** The 天干 cycle is deterministic (10-year period), so 五行 repeats every 2 years (甲乙 both = 木, etc.). The null is: dynasty transitions are independent of the 天干 cycle. Test whether transition years cluster in particular 五行 types more than the 2/10 = 20% base rate for each element.
+
+**Advantage:** Data already available, no external sourcing needed. The mapping is mechanical (天干 → 五行, no interpretation). The chronology is structured and parseable.
+
+**Limitation:** ~15–20 dynasty transitions in 3,400 years. Small N. Better as a pilot/sanity check than a powered statistical test. Also: the 天干 cycle is periodic and uncorrelated with political events by construction (it's a calendar, not a causal system). Any signal would be surprising.
+
+**Secondary test:** Regardless of 五行, check whether Shao Yong's 元會運世 grid coordinates (which 運 and 世 a dynasty transition falls in) predict anything about dynasty duration or transition character. This tests his temporal hierarchy directly.
+
+## Probe 5: Ecological Succession (E1, E2, E3)
 
 **Mapping via traditional correspondences:**
 - 木 Wood → pioneer/growth phase (colonization, biomass increase)
@@ -105,15 +138,15 @@ This follows the traditional phase logic: growth → peak → stability → decl
 
 **Same tests as above.** Smaller sample size but the most natural alignment with the element qualities.
 
-## Probe 5: Cross-Domain Comparison (E4)
+## Probe 6: Cross-Domain Comparison (E4)
 
-**After Probes 1–4:** Compare effect sizes and constraint structure across climate, medicine, politics, and ecology.
+**After Probes 1–5:** Compare effect sizes and constraint structure across climate, medicine, politics, dynastic chronology, and ecology.
 
 **The key test:** Does the *same* grammar work across all domains when the traditional correspondences are used? If yes, the grammar is universal at the level of transition structure. If it works in some domains but not others, identify what distinguishes the domains where it works.
 
-## Probe 6: Decorrelation Test (E6)
+## Probe 7: Decorrelation Test (E6)
 
-**Use whichever dataset from Probes 1–4 has the longest transition sequences.**
+**Use whichever dataset from Probes 1–5 has the longest transition sequences.**
 
 Compute mutual information between transition type at step t and step t+k for k=1,2,3,4,5. Phase 8 predicts decorrelation at k≈2 (R288). If the data matches this, the single-step assessment regime is confirmed empirically.
 
@@ -121,12 +154,13 @@ Compute mutual information between transition type at step t and step t+k for k=
 
 ## Priority Order
 
-1. **Probe 1 (seasonal/climate)** — mapping is literal, zero ambiguity, large data, strong first test
-2. **Probe 2 (Chinese medicine)** — native domain, grammar was built for this, highest relevance but highest bias risk
-3. **Probe 3 (political)** — large dataset, traditional governance mapping, good for E4
-4. **Probe 4 (ecological)** — natural alignment with element qualities, smaller N
-5. **Probe 5 (cross-domain)** — depends on 1–4
-6. **Probe 6 (decorrelation)** — piggybacks on longest sequence from 1–4
+1. **Probe 4 (皇極經世 chronology)** — data in-house, mechanical mapping, no sourcing needed, good pilot
+2. **Probe 1 (seasonal/climate)** — mapping is literal, zero ambiguity, large data, strong first test
+3. **Probe 2 (Chinese medicine)** — native domain, grammar was built for this, highest relevance but highest bias risk
+4. **Probe 3 (political)** — large dataset, traditional governance mapping, good for E4
+5. **Probe 5 (ecological)** — natural alignment with element qualities, smaller N
+6. **Probe 6 (cross-domain)** — depends on 1–5
+7. **Probe 7 (decorrelation)** — piggybacks on longest sequence from 1–5
 
 ## What Would Change Our Understanding
 
