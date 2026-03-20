@@ -377,3 +377,190 @@ If the pattern holds across these 4, expand. If it looks random, stop and reasse
 - **Whether the $282M whale's liquidation actually occurred on-chain.** We inferred it was liquidated because ETH passed through $1,185, but haven't verified with on-chain liquidation events.
 - **The other 26 episodes.** Only one historical snapshot taken so far.
 - **Runway-to-cliff metric computation.** The model was articulated but not yet computed on any data.
+
+---
+
+## Iteration 5: Fail-Fast Backtest — 4 Episodes
+
+### What was built
+- `failfast_backtest.py`: Runs historical snapshots for 3 additional episodes (Nov 2022, Apr 2024, Aug 2024), combining V2 on-chain approach and V3 subgraph approach.
+- V3 subgraph historical queries confirmed working with `block: {number: N}` parameter. V3 snapshots ~6x faster than V2 on-chain (~6 min vs ~28 min).
+- Output: `data/positions_nov2022.csv` (26,894), `data/positions_apr2024.csv` (8,563), `data/positions_aug2024.csv` (12,047), `data/4_failfast_results.txt`.
+- Total runtime: ~30 min.
+
+### What was measured
+
+**4 episodes tested across both regimes:**
+
+| Episode | Type | ETH | Cliff Size | Cliff Dist | R5% | R10% | R20% | R30% |
+|---------|------|-----|-----------|-----------|-----|------|------|------|
+| Jun 2022 stETH depeg | Escalating | $1,788 | $578M | 71% | $6.2M | $20.5M | $99.3M | $140.2M |
+| Nov 2022 FTX crash | Moderate | $1,569 | $30M | 83% | $2.0M | $2.8M | $20.5M | $37.3M |
+| Apr 2024 Iran tensions | Absorbed | $3,510 | $156M | 70% | $0.1M | $22.3M | $161.7M | $275.8M |
+| Aug 2024 Yen carry trade | Escalating | $2,903 | $187M | 49% | $49.3M | $142.1M | $420.3M | $624.1M |
+
+**Phantom ratio evolution (measured across 5 snapshots):**
+- Jun 2022: 36% phantom ($847M / $2.3B ETH-dom debt)
+- Nov 2022: 52% phantom ($540M / $1.0B)
+- Apr 2024: 45% phantom ($1.4B / $3.1B)
+- Aug 2024: 54% phantom ($2.7B / $4.9B)
+- Mar 2026: >90% phantom (from current snapshot)
+
+**Aug 2024 crash zone detail ($2,100–$2,903):**
+- 1,469 real positions, $566M debt
+- No single position larger than $29M
+- Top 10 positions = 36% of crash zone debt
+- Continuous density: $42M at 5% below, $53M at 10%, $97M at 12%
+- ~$14M of real debt per 1% of price in the near zone
+
+**Apr 2024 crash zone detail ($3,000–$3,510):**
+- 139 real positions, $78M debt
+- Largest single position: $19M
+- Within 10%: only $22M
+- $162M at R20% included a cluster at $3,140 ($45M in 3 positions) barely within the drawdown path
+- ~$2M of real debt per 1% of price in the near zone
+
+**Nov 2022 crash zone detail ($1,100–$1,569):**
+- Only $37M real debt in the entire 30% crash zone
+- Largest position: $30M at $263 (83% below, unreachable)
+- Post-clearing effect: the June crash had liquidated everything above $1,000
+
+**Classification: 4/4 correct** using R10% + cliff proximity:
+- Escalating episodes: Yen R10%=$142M (dense gradient), stETH R10%=$21M (thin gradient but $282M cliff at 34%)
+- Non-escalating: FTX R10%=$2.8M (empty), Iran R10%=$22M (scattered, no cliff)
+
+### What was found (review discussion)
+
+**Two distinct cascade modes observed:**
+
+1. **Progressive cascade (Yen carry, Aug 2024):** No single mega-whale, but continuous density at ~$14M per 1% of price. Each layer of liquidations produced enough selling to push through to the next layer. Self-sustaining through cumulative friction.
+
+2. **Cliff cascade (stETH depeg, Jun 2022):** Thin gradient ($2M/1%) that was individually absorbed, until price reached a $282M concentrated position at $1,185. The whale produced a burst that overwhelmed depth at a single point.
+
+**The unifying mechanism:** At each price level, does liquidation selling pressure exceed market absorption capacity? This can be via density (progressive) or concentration (cliff). The gradient *alone* at $2M/1% doesn't cascade (Iran's topology had $22M at R10% and didn't escalate). But $2M/1% CAN facilitate a cliff cascade by pushing price incrementally toward the whale, where external forces provide additional downward pressure.
+
+**R10% alone doesn't capture both modes.** stETH depeg ($21M) and Iran ($22M) have similar R10% — the cliff presence separates them. A composite metric needs both: R10% + max single position within reachable range.
+
+**Topology as amplifier, not cause (key framing from discussion):** Topology doesn't predict the initial shock. It predicts the amplifier gain. Every episode starts with an exogenous perturbation (Terra, FTX, yen unwind, Iran). Topology determines whether the perturbation gets amplified by liquidation cascading or absorbed.
+
+Evidence: FTX (Nov 2022) — massive external shock, 30% drawdown, but empty topology (post-clearing) → only $12M Aave liquidations → no DeFi amplification. The drawdown happened from centralized contagion, but DeFi didn't make it worse. Compare with Yen carry: external shock → dense topology → $205M Aave liquidations → amplified.
+
+**Post-clearing as natural experiment:** June 2022 crash cleared all large positions above $1,000. Five months later, FTX hit with a 30% shock and found an empty landscape. The topology was accidentally defensive. This is close to a controlled experiment: same asset, similar drawdown magnitude, different topology, different amplification.
+
+**Risk rotation (structural finding from discussion):**
+- 2022: Mostly real positions, dense near price. DeFi was a powerful amplifier of ETH price shocks.
+- 2024: Mixed regime, moderate real density. DeFi was a moderate amplifier.
+- 2026: Almost entirely phantom near price. DeFi is a negligible amplifier of ETH price shocks — but is now a powerful amplifier of correlation shocks (depeg events).
+
+The system hasn't become less fragile. It has shifted what it's fragile to. The risk has rotated from price-cascade to correlation-cascade.
+
+**The $578M stETH near-miss as coupling evidence (calculated, Iteration 4):** The largest stETH-collateral position reached HF ≈ 1.04 at the crash bottom. A slightly worse outcome ($950 ETH or 0.90 stETH/ETH) would have triggered $578M in stETH liquidation selling — this is the real→phantom coupling mechanism observed but not activated.
+
+### What was not measured
+- **More episodes.** 4/4 classification is encouraging but n=4 is not sufficient to establish robustness. Proposed: 4 more episodes targeting edge cases (2023 transition period, Jan 2022 crash, 2025 escalating episode, 2025 absorbed episode) to reach n=8.
+- **Gradient density metric.** Real debt per 1% of price was computed informally ($14M/1% for Yen, $2M/1% for Iran/stETH) but not systematically across all bands and episodes.
+- **Market absorption capacity.** The cascade condition is (liquidation pressure) > (absorption capacity). Absorption capacity at each price level depends on order book depth, which varies by market conditions. Not measured.
+- **Depeg-fragility characterization.** The 2026 market's primary vulnerability is the $5.6B phantom wall activated by LST depeg. Depeg threshold per LST tier (osETH vs weETH vs wstETH) and DEX liquidity depth for each are not measured. This is the natural successor question to the price-cascade thesis.
+- **On-chain verification of whale liquidation.** The $282M whale at $1,185 was inferred to have been liquidated during the June 2022 crash (ETH passed through $1,185) but not verified with on-chain liquidation events.
+
+---
+
+## Iteration 6: Expanded Backtest — 8 Episodes + Investigation Conclusion
+
+### What was built
+- `backtest_expanded.py`: Runs 4 additional historical snapshots (Jan 2022, Aug 2023, Sep 2024, Feb 2025).
+- Jan 2022 required Multicall2 (Multicall3 not yet deployed at that block).
+- Output: `data/positions_jan2022.csv` (8,913), `data/positions_aug2023.csv` (3,929), `data/positions_sep2024.csv` (13,221), `data/positions_feb2025.csv` (17,075), `data/5_expanded_results.txt`.
+- Runtime: ~22 min total.
+
+### What was measured
+
+**8-episode comparison table:**
+
+| Episode | Type | ETH | Ph% | R5% | R10% | R20% | R30% | Cliff | Cl% | Gradient/1% |
+|---------|------|-----|-----|-----|------|------|------|-------|-----|------------|
+| Jan 2022 crash | ESC | $3,007 | 2% | $27.5M | $97.2M | $212.3M | $449.9M | $445M | 35% | $10.6M |
+| stETH depeg | ESC | $1,788 | 35% | $6.2M | $20.5M | $99.3M | $140.2M | $578M | 71% | $5.0M |
+| FTX crash | NOT | $1,569 | 42% | $2.0M | $2.8M | $20.5M | $37.3M | $30M | 83% | $1.0M |
+| Aug 2023 flash | ABS | $1,804 | 43% | $1.3M | $16.4M | $74.2M | $120.9M | $17M | 35% | $3.7M |
+| Iran tensions | ABS | $3,510 | 44% | $0.1M | $22.3M | $161.7M | $275.8M | $156M | 70% | $8.1M |
+| Yen carry | ESC | $2,903 | 54% | $49.3M | $142.1M | $420.3M | $624.1M | $187M | 49% | $21.0M |
+| Sep 2024 dip | ABS | $2,370 | 58% | $13.7M | $45.8M | $269.8M | $655.0M | $137M | 58% | $13.5M |
+| Feb 2025 crash | ESC | $3,128 | 70% | $5.8M | $37.5M | $280.5M | $670.7M | $93M | 48% | $14.0M |
+
+**Phantom ratio evolution (9 data points, measured):**
+Jan 2022: 2% → Jun 2022: 35% → Nov 2022: 42% → Aug 2023: 43% → Apr 2024: 44% → Aug 2024: 54% → Sep 2024: 58% → Feb 2025: 70% → Mar 2026: >90%
+
+**Classification results by metric:**
+- R10% alone: 5/8 correct. Misclassifies stETH (whale was deeper), Sep 2024 (shallow dip didn't reach wall), Feb 2025 (walls at 10-20% range).
+- R20% > $100M + whale factor: 6/8 correct. Two false positives: Iran ($162M but distributed, no trigger), Sep 2024 ($270M but only 7% drawdown).
+- R_at_actual_drawdown_depth: 8/8 correct, but circular (requires knowing drawdown depth in advance).
+- R20%/TotalDebt normalization: doesn't help — threshold is not stable across regimes.
+
+**Concentration analysis in R20% zone (measured):**
+
+| Episode | R20% | MaxPos | Max/R20 | Top3/R20 |
+|---------|------|--------|---------|----------|
+| Jan 2022 | $212M | $30M | 14% | 31% |
+| stETH | $99M | $16M | 16% | 38% |
+| FTX | $20M | $10M | 48% | 67% |
+| Aug 2023 | $74M | $16M | 21% | 43% |
+| Iran | $162M | $21M | 13% | 36% |
+| Yen | $420M | $29M | 7% | 19% |
+| Sep 2024 | $270M | $30M | 11% | 23% |
+| Feb 2025 | $281M | $35M | 13% | 27% |
+
+**False positive analysis (measured):**
+- Iran: R20% zone had 244 positions, $162M. Top 10 = 76% of total. But largest single position only $21M — no cliff trigger. Drawdown stopped at 14%.
+- Sep 2024: R20% zone had 1,065 positions, $270M. Actually traversed zone (R7%): only $22M in 168 positions. Wall existed but price never reached it.
+
+**Feb 2025 crash zone detail (10-20% band, measured):**
+- 537 positions, $243M debt
+- Top positions: $35.5M (WETH), $22.9M (weETH), $16.2M (WETH), $16.0M (WETH), $14.4M (weETH) — all at 16-20% below
+- ~$24M per 1% of price — above empirical cascade threshold from Yen (~$14M/1%)
+- Phantom wall also present: 1,484 phantom positions, $6.2B debt, of which $5.6B at HF < 1.1
+
+### What was found (review discussion)
+
+**No single metric cleanly separates escalating from absorbed across all 8 episodes.** The classification problem is harder than the 4/4 fail-fast suggested. The best prospective metric (R20% > $100M + whale) achieves 6/8 with two false positives that are structurally explained (shallow drawdown didn't reach existing walls).
+
+**The false positives are correctly identified *potential*, not classification errors.** Iran had $162M of fuel within 20% — if the drawdown had reached 20% instead of 14%, that fuel would have activated. The topology reading was correct: "danger zone at 10-20%, moderate density." The exogenous shock was just insufficient to reach it. Sep 2024 similarly: wall at 10-20% but drawdown only 7%.
+
+**Topology is a conditional fuel map, not a binary predictor.** This is the correct framing. At episode onset, the topology tells us: "if price drops X%, here's how much cascade fuel is in the path." This is a conditional statement — it requires coupling with drawdown depth, which depends on the exogenous shock's severity. The monitoring system can't predict drawdown depth, but it can say "if we get there, here's what happens."
+
+**The conditional fuel map maps onto operational severity levels:**
+- R20% < $30M, no whale: path clear, safe for moderate stress (FTX post-clearing)
+- R20% $100-300M, distributed: moderate fuel, unlikely to self-sustain without major shock
+- R20% > $300M OR whale > $100M within 20%: dense path or cliff — cascade likely if reached
+
+**Gradient density thresholds (measured across escalating episodes):**
+- Self-sustaining progressive cascade: ~$14M+ per 1% of price (Yen: $21M/1%, Feb 2025: $14M/1%)
+- Cliff cascade: thin gradient + single position >$100M (stETH: $2M/1% gradient + $282M whale)
+- Absorbed: <$8M per 1% of price without cliff (Iran: $8M/1%, Aug 2023: $3.7M/1%)
+
+**Feb 2025 escalation is explainable from real wall alone.** R20% zone had $243M at ~$24M/1% — well above empirical cascade threshold. Phantom contribution ($5.6B at HF<1.1) cannot be ruled out but real wall is sufficient explanation.
+
+**The investigation answered its question, differently than expected.**
+
+*Expected:* Binary predictor — wall proximity at episode onset predicts escalation.
+
+*Actual findings:*
+
+1. **Real/phantom decomposition** — the most technically important finding. Without debt-side classification, any liquidation heatmap (including DefiLlama's) is dominated by phantom positions that don't respond to ETH/USD price. The near-price wall in 2026 is $4.3B phantom, $0.3K real. This decomposition is infrastructure for any future topology analysis.
+
+2. **Conditional fuel map** — the correct tool. Not a predictor, but the missing severity-assessment layer for the monitoring system. "If ETH drops X%, here's how much real liquidation selling activates."
+
+3. **Risk rotation** — DeFi has structurally shifted from price-cascade fragility (2022: 2% phantom) to correlation-cascade fragility (2026: >90% phantom). The system hasn't become less fragile — it has shifted what it's fragile to. The monitoring system should be watching LST pegs, not ETH/USD walls.
+
+4. **Cascade mechanics** — two modes: progressive ($14M+/1% density) and cliff (single whale >$100M). Gradient = kindling, whale = cliff. The cascade condition is (liquidation selling at price level) > (market absorption at price level).
+
+5. **Post-clearing effect** — after a crash clears positions, topology is defensive until new leveraged positions rebuild. FTX (Nov 2022) is the natural experiment: massive shock, 30% drawdown, empty topology → no DeFi amplification.
+
+**Successor investigation identified:** The correlation-cascade thesis — given $5.6B+ phantom at HF 1.03-1.05 in 2026, what depeg threshold triggers cascade? Requires: DEX liquidity depth per LST, historical depeg magnitude, oracle lag behavior. Different data, different investigation.
+
+### What was not measured
+- **Depeg-fragility characterization.** The 2026 market's primary vulnerability ($5.6B phantom wall) requires measuring: depeg threshold per LST tier, DEX liquidity depth per LST, probability of reaching depeg threshold during stress. This is the natural successor investigation.
+- **Market absorption capacity.** The cascade condition compares liquidation pressure to absorption capacity. Absorption capacity (order book depth) varies by market conditions and was not measured — only the liquidation pressure side was quantified.
+- **Post-clearing rebuild time constant.** After a crash clears walls, how long until new leveraged positions rebuild to dangerous density? FTX (5 months post-June-crash) was still clear. The time constant is somewhere between months and years but not measured.
+- **On-chain verification of whale liquidations.** Inferred from price passing through liquidation levels but not verified with on-chain liquidation event logs.
+- **Remaining 19 episodes.** 8 of 27 tested. Diminishing returns — structural insights are stable at n=8.

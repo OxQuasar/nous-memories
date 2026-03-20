@@ -41,7 +41,7 @@ The 梅花易數 algorithm maps calendar numbers to trigrams via mod-8 arithmeti
 
 **M5: [answered]** Which topology governs transition detection from sequential data? → Neither topology produces detectable grammar. Bit-layer structure is tautological (functor property of WUXING_MAP, not data property). GMS/valve fail for all tested data sources. Q₃ is not an interval graph (R286-R287), so scalar discretization cannot access Q₃ adjacency. See findings §VII.
 
-**M6 (new from §VIII):** The 先天 cycle projects to a retrograde palindrome on Z₅ centered on 木. 木 is simultaneously the 互 kernel element (Fano line H), the palindrome center, and the b₀ yin/yang hinge. Is this triple alignment forced by some constraint, or is it a free choice of the 先天 ordering?
+**M6: [answered]** The 先天 cycle projects to a retrograde palindrome on Z₅ centered on 木. 木 is simultaneously the 互 kernel element (Fano line H), the palindrome center, and the b₀ yin/yang hinge. Is this triple alignment forced by some constraint, or is it a free choice of the 先天 ordering? → **Forced.** 木's pivot role in both 先天 (palindrome center) and 後天 (克/生 bridge) traces to Z₅=0, the identity of the 生 cycle. The parity bipartition mechanism (mod9 investigation, iteration 3) shows Z₅(0) is the unique element whose removal yields consecutive Z₅ residuals in both parity classes of Q₃, forcing 木 adjacency and 木-at-boundary in any directionally pure compass arrangement. See mod9/exploration-log §3, mod9/questions.md.
 
 ### Context
 

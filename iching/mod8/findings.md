@@ -510,4 +510,19 @@ The tradition places 先天 as the pattern "before heaven" — the template, the
 
 ### What remains at the boundary
 
-One question sits at the edge of this investigation: is there a natural system with 3-dimensional binary structure (not scalar discretization) where Q₃ adjacency is intrinsic and the grammar would apply to actual state transitions? This is the question of whether the grammar has any physical instantiation beyond the mathematical object itself.
+The structure is not temporal. Every attempt to embed Q₃ grammar in time has failed:
+- R286: Q₃ is not an interval graph — cannot be ordered on a line, and time is a line
+- M4: Grammar doesn't survive temporal sequencing
+- 8b: Calendar mapping returns null against historical events
+- R291: Multi-step prediction doesn't factorize — only single moments are informative
+- §VIII: 先天 projected onto Z₅ runs retrograde — time flows backward through the structure
+
+The calendar and compass are interfaces that pick a point in relational space. Neither time nor space is the native coordinate. The native coordinate is the Z₅ relation on Q₃ — a classification of how two 3-bit binary states relate.
+
+The question is not: *is there a dynamical system where Q₃ adjacency governs state transitions?*
+
+The question is: *what systems have three independent binary oppositions whose pairwise relations are typed by a 5-class cycle?*
+
+Any domain with three yes/no axes (active/passive, expanding/contracting, structured/fluid — or any three independent binary distinctions) instantiates Q₃. The 五行 grammar would then classify the 28 possible pairwise relations into 比和/生/克 types, with the GMS constraint (no consecutive destruction) and the valve (destruction→generation must pass through continuation) as structural predictions about which relational transitions are forbidden.
+
+This is typology, not dynamics. The I Ching classifies relational configurations, not temporal trajectories. The tradition uses time (calendar) and space (compass) as sampling mechanisms — ways to select a relational configuration — but the structure itself is pre-temporal and pre-spatial.

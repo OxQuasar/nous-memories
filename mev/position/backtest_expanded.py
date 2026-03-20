@@ -1,10 +1,11 @@
 """
-Historical position snapshots for fail-fast backtest.
+Expanded historical position snapshots — 4 additional episodes.
 
-3 episodes + comparison with existing June 2022 data:
-  - 2022-11-08 FTX crash (V2, moderate)
-  - 2024-04-12 Iran tensions (V3, absorbed)
-  - 2024-08-04 Yen carry trade (V3, escalating)
+New:
+  - 2022-01-21 Jan crash (V2, escalating)
+  - 2023-08-17 Aug flash crash (V3, absorbed)
+  - 2024-09-06 Sep dip (V3, absorbed)
+  - 2025-02-02 Feb crash (V3, escalating)
 """
 
 import csv
@@ -25,6 +26,8 @@ RPC_URL = (SCRIPT_DIR / "alchemy.txt").read_text().strip()
 API_KEY = (SCRIPT_DIR / "graph.txt").read_text().strip()
 
 MULTICALL3 = "0xcA11bde05977b3631167028862bE2a173976CA11"
+MULTICALL2 = "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696"
+MULTICALL3_DEPLOY_BLOCK = 14353601  # Mar 9, 2022
 
 # V2 contracts
 V2_LENDING_POOL = "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
@@ -53,12 +56,14 @@ RESERVE_BATCH = 700
 
 # --- Episodes ---
 EPISODES = {
-    "nov2022": {"block": 15921589, "eth_price": 1568.93, "version": "v2",
-                "label": "FTX crash", "type": "moderate", "csv": "positions_nov2022.csv"},
-    "apr2024": {"block": 19635810, "eth_price": 3510.35, "version": "v3",
-                "label": "Iran tensions", "type": "absorbed", "csv": "positions_apr2024.csv"},
-    "aug2024": {"block": 20451460, "eth_price": 2903.17, "version": "v3",
-                "label": "Yen carry trade", "type": "escalating", "csv": "positions_aug2024.csv"},
+    "jan2022": {"block": 14045592, "eth_price": 3006.58, "version": "v2",
+                "label": "Jan 2022 crash", "type": "escalating", "csv": "positions_jan2022.csv"},
+    "aug2023": {"block": 17930828, "eth_price": 1804.05, "version": "v3",
+                "label": "Aug 2023 flash", "type": "absorbed", "csv": "positions_aug2023.csv"},
+    "sep2024": {"block": 20687831, "eth_price": 2369.80, "version": "v3",
+                "label": "Sep 2024 dip", "type": "absorbed", "csv": "positions_sep2024.csv"},
+    "feb2025": {"block": 21755111, "eth_price": 3128.25, "version": "v3",
+                "label": "Feb 2025 crash", "type": "escalating", "csv": "positions_feb2025.csv"},
 }
 
 
@@ -74,7 +79,8 @@ def try_multicall(w3, calls, block):
                                             {"name": "returnData", "type": "bytes"}],
                              "name": "returnData", "type": "tuple[]"}],
                "stateMutability": "view", "type": "function"}]
-    mc = w3.eth.contract(address=Web3.to_checksum_address(MULTICALL3), abi=mc_abi)
+    mc_addr = MULTICALL3 if block >= MULTICALL3_DEPLOY_BLOCK else MULTICALL2
+    mc = w3.eth.contract(address=Web3.to_checksum_address(mc_addr), abi=mc_abi)
     for attempt in range(3):
         try:
             return mc.functions.tryAggregate(False, calls).call(block_identifier=block)
@@ -509,12 +515,16 @@ def analyze(positions, eth_price, label):
     # Top 5 real
     top5 = sorted(real_liq, key=lambda p: p["debt_usd"], reverse=True)[:5]
 
+    real_total = sum(p["debt_usd"] for p in real)
+    phantom_total = sum(p["debt_usd"] for p in phantom)
+    eth_dom_debt = real_total + phantom_total + sum(p["debt_usd"] for p in eth_dom if p["position_type"] == "mixed")
+    phantom_pct = phantom_total / eth_dom_debt * 100 if eth_dom_debt > 0 else 0
+
     metrics = {
         "label": label, "eth_price": eth_price,
         "total_borrowers": len(positions), "total_col": total_col, "total_debt": total_debt,
         "eth_dom_count": len(eth_dom), "real_count": len(real), "phantom_count": len(phantom),
-        "real_debt": sum(p["debt_usd"] for p in real),
-        "phantom_debt": sum(p["debt_usd"] for p in phantom),
+        "real_debt": real_total, "phantom_debt": phantom_total, "phantom_pct": phantom_pct,
         "cliff_size": cliff_size, "cliff_liq": cliff_liq, "cliff_dist": cliff_dist,
         "runway": runway, "gradient": gradient, "bands": bands, "top5": top5,
     }
@@ -571,16 +581,25 @@ if __name__ == "__main__":
         all_metrics.append(metrics)
         print(f"  Completed in {time.time() - t1:.0f}s")
 
-    # Load June 2022 data for comparison
+    # Load all prior episode data for full comparison table
+    prior_episodes = [
+        ("positions_june2022.csv", 1788.42, "stETH depeg", "escalating"),
+        ("positions_nov2022.csv", 1568.93, "FTX crash", "not_escalating"),
+        ("positions_apr2024.csv", 3510.35, "Iran tensions", "absorbed"),
+        ("positions_aug2024.csv", 2903.17, "Yen carry trade", "escalating"),
+    ]
     print(f"\n{'='*70}")
-    print("Loading June 2022 reference data")
+    print("Loading prior episode data")
     print(f"{'='*70}")
-    june_path = DATA_DIR / "positions_june2022.csv"
-    if june_path.exists():
-        with open(june_path) as f:
-            june_pos = []
+    prior_metrics = []
+    for csv_name, eth_p, label, ep_type in prior_episodes:
+        path = DATA_DIR / csv_name
+        if not path.exists():
+            continue
+        with open(path) as f:
+            pos = []
             for row in csv.DictReader(f):
-                june_pos.append({
+                pos.append({
                     "user": row["user"],
                     "collateral_usd": float(row["collateral_usd"]),
                     "eth_collateral_usd": float(row["eth_collateral_usd"]),
@@ -594,18 +613,19 @@ if __name__ == "__main__":
                     "eth_debt_fraction": float(row.get("eth_debt_fraction", 0)),
                     "position_type": row.get("position_type", "real"),
                 })
-        june_metrics = analyze(june_pos, 1788.42, "stETH depeg")
-        june_metrics["type"] = "escalating"
-        all_metrics.insert(0, june_metrics)
+        m = analyze(pos, eth_p, label)
+        m["type"] = ep_type
+        prior_metrics.append(m)
+    all_metrics = prior_metrics + all_metrics
 
     # Print comparison table
     print(f"\n{'='*70}")
-    print("COMPARISON TABLE")
+    print("FULL 8-EPISODE COMPARISON TABLE")
     print(f"{'='*70}")
-    hdr = f"{'Episode':<25s} {'Type':<12s} {'ETH':>8s} {'Cliff':>10s} {'Cliff%':>7s} {'Runway':>12s} {'R5%':>10s} {'R10%':>10s} {'R20%':>10s} {'R30%':>10s}"
+    hdr = f"{'Episode':<25s} {'Type':<14s} {'ETH':>8s} {'Ph%':>5s} {'R5%':>10s} {'R10%':>10s} {'R20%':>10s} {'R30%':>10s} {'Cliff':>10s} {'Cl%':>5s}"
     print(hdr)
     print("-" * len(hdr))
     for m in all_metrics:
-        print(f"{m['label']:<25s} {m['type']:<12s} ${m['eth_price']:>6,.0f} ${m['cliff_size']/1e6:>7.0f}M {m['cliff_dist']:>5.0f}% ${m['runway']/1e6:>9.0f}M ${m['bands'][5]/1e6:>7.1f}M ${m['bands'][10]/1e6:>7.1f}M ${m['bands'][20]/1e6:>7.1f}M ${m['bands'][30]/1e6:>7.1f}M")
+        print(f"{m['label']:<25s} {m['type']:<14s} ${m['eth_price']:>6,.0f} {m.get('phantom_pct',0):>4.0f}% ${m['bands'][5]/1e6:>7.1f}M ${m['bands'][10]/1e6:>7.1f}M ${m['bands'][20]/1e6:>7.1f}M ${m['bands'][30]/1e6:>7.1f}M ${m['cliff_size']/1e6:>7.0f}M {m['cliff_dist']:>4.0f}%")
 
     print(f"\nTotal runtime: {time.time() - t0:.0f}s")

@@ -1,149 +1,105 @@
 # Position Topology — Execution Plan
 
+## Status: COMPLETE (6 iterations, 8 episodes backtested)
+
+See `findings.md` for results summary, `signals-synthesis.md` for signal ranking, `exploration-log.md` for full evidence trail.
+
 ## Infrastructure
 
 | Resource | Endpoint | Verified |
 |---|---|---|
-| Alchemy RPC | `alchemy.txt` | ✅ Block 24,693,844 |
-| The Graph (Aave v3 Ethereum) | `graph.txt`, subgraph `Cd2gEDVeqnjBn1hSeqFMitw8Q1iiyV9FYUZkLNRcL87g` | ✅ Position data + historical block queries |
-| ETH price data | `../data/eth_price.csv` (daily + hourly, 2022-01 → 2026-03) | ✅ From flow phase |
-| Episode dates | `../data/liquidation_events_combined.csv` (27 episodes) | ✅ From flow phase |
+| Alchemy RPC | `alchemy.txt` | ✅ Block 24,693,844. Supports archive `eth_call` (free tier). |
+| The Graph (Aave v3 Ethereum) | `graph.txt`, subgraph `Cd2gEDVeqnjBn1hSeqFMitw8Q1iiyV9FYUZkLNRcL87g` | ✅ Position data + historical block queries via `block: {number: N}` |
+| The Graph (Aave v2 Ethereum) | N/A | ❌ Dead — legacy hosted service removed, no active indexers on decentralized network |
+| Aave v2 historical | Alchemy archive multicall (on-chain approach) | ✅ ~28 min per snapshot. Only path for 2022 data. |
+| ETH price data | `../data/eth_price_1h.csv` (hourly, 2022-01 → 2026-03) | ✅ |
+| Episode dates | `../data/liquidation_events_combined.csv` (27 episodes) | ✅ |
 
-Key discovery: The Graph supports `block: {number: N}` parameter on all queries. We can get position snapshots at any historical block without an archive node. This collapses Phase 1 and Phase 2 into a single pipeline.
+## Execution Status
 
-## Subgraph Schema (relevant fields)
+### Step 1: Current Snapshot ✅
+- `snapshot.py`: Aave v3 current positions via subgraph + on-chain multicall + oracle
+- 29,311 positions, $22.6B collateral, $13.2B debt
+- eMode handled via on-chain `getUserAccountData`
+- **Key discovery:** Apparent $4.3B wall at 5% below is phantom (ETH-loop strategies)
 
-**UserReserve**: `user.id`, `currentATokenBalance`, `currentTotalDebt`, `currentVariableDebt`, `usageAsCollateralEnabledOnUser`, `reserve.symbol`, `reserve.decimals`, `reserve.reserveLiquidationThreshold`, `reserve.price.priceInEth`, `reserve.baseLTVasCollateral`, `reserve.underlyingAsset`
+### Step 1b: Debt-Side Decomposition ✅
+- `decompose.py`: Classifies positions as real/phantom/mixed based on debt composition
+- Real wall within 20%: $73M. Phantom: $5.5B. Near-price zone is 99.99% phantom.
+- Two populations with opposite spatial signatures: phantom tight HF near price, real wide HF far from price.
 
-**Reserve**: `symbol`, `decimals`, `reserveLiquidationThreshold`, `baseLTVasCollateral`, `price.priceInEth`, `liquidityIndex`, `variableBorrowIndex`
+### Step 2: Density Map — SUPERSEDED
+- Original plan: bucket liquidation prices into bins. 
+- Replaced by the real/phantom decomposed fuel map computed inline during snapshot analysis.
+- Density maps computed per-episode in the backtest (Iterations 5-6).
 
-Pagination: max 1000 per query, use `id_gt` cursor. ~1000+ active borrowers currently.
+### Step 3: Maker/Sky Scan ✅ (added, not in original plan)
+- `maker_scan.py`: 852 active ETH vaults, $1.63B collateral, $516M debt
+- All Maker vaults are "real" by construction (DAI debt only)
+- Maker adds <10% to real wall at all proximity bands
+- **Decision:** Proceed Aave-only for historical backtest
 
-## Liquidation Price Math
+### Step 4: Historical Probe ✅
+- `historical_probe.py`: Aave v2 on-chain approach (borrower enumeration via getAssetTransfers + multicall)
+- June 2022 snapshot: found $282M whale at liq=$1,185, $605M real debt in crash zone
+- V2 subgraph dead → fully on-chain approach required for 2022 data
 
-For a single-collateral, single-debt position:
+### Step 5: Fail-Fast Backtest (4 episodes) ✅
+- `failfast_backtest.py`: Jun 2022, Nov 2022, Apr 2024, Aug 2024
+- 4/4 correct classification. Two cascade modes identified (progressive, cliff).
+- V3 subgraph historical queries confirmed working (~6x faster than V2 on-chain).
 
-```
-Health Factor = (collateral_USD * liquidation_threshold) / debt_USD
+### Step 6: Expanded Backtest (8 episodes) ✅
+- `backtest_expanded.py`: Added Jan 2022, Aug 2023, Sep 2024, Feb 2025
+- 6/8 prospective classification (R20% + whale), 8/8 with actual drawdown depth
+- Two false positives explained: shallow drawdowns didn't reach existing walls
+- **Conclusion:** Topology is a conditional fuel map, not a binary predictor
 
-HF < 1 → liquidatable
+### Step 7: Wall Dynamics — NOT EXECUTED
+- Original plan: daily snapshots during episodes to track wall movement
+- Not needed: the conditional fuel map framing answers the question differently. Wall stability matters less when topology is a severity gauge rather than a prediction.
 
-Liquidation price of ETH = (debt_USD * current_ETH_price) / (collateral_ETH * liquidation_threshold * current_ETH_price)
+## Risks (assessed)
 
-Simplified for ETH-collateral, stablecoin-debt:
-  liq_price = debt_USD / (collateral_ETH * liquidation_threshold)
-```
+1. **Subgraph balance staleness** — Acceptable. On-chain multicall used for ground-truth HF.
+2. **Multi-collateral complexity** — Handled via weighted threshold from on-chain `getUserAccountData`.
+3. **E-mode positions** — Resolved. On-chain HF correctly handles all 20+ eMode categories.
+4. **Oracle price divergence** — Used on-chain oracle prices for consistency.
+5. **Protocol coverage gap** — Tested. Maker adds <10% to real wall. Aave-only is representative.
+6. **V2 subgraph unavailability** — Not anticipated. Resolved with fully on-chain archive approach.
+7. **Phantom positions** — Not anticipated. The most important finding. Without debt-side decomposition, all analysis is misleading.
 
-Multi-collateral positions: sum weighted collateral across all reserves, sum all debt. Compute aggregate HF. Liquidation triggers when aggregate HF < 1, but the ETH liquidation price depends on how much of the collateral is ETH-correlated.
+## Success Criteria (assessed)
 
-Simplification for v1: focus on positions where ETH (or WETH/wstETH/stETH) is the dominant collateral asset. These are the positions whose liquidation prices move with ETH price. Stablecoin-collateral positions don't create ETH liquidation walls.
+- ✅ Step 1 produces a snapshot matching DefiLlama order of magnitude
+- ⚠️ Step 4 shows wall proximity has higher predictive power than flow-phase signals: **PARTIALLY MET.** Topology provides conditional severity assessment (what happens IF drawdown reaches X%), not binary prediction. Prospective classification: 6/8 (75%) with R20% + whale metric. This is useful but not a clean binary predictor.
+- ✅ Or: document why the thesis is wrong. **DONE.** The thesis was partially right (topology does determine cascade gain) but the framing was wrong (it's conditional on drawdown depth, not predictive of it). Additionally, the market has structurally rotated away from the risk surface the thesis described.
 
-## Execution
+## What Remains
 
-### Step 1: Current Snapshot (`snapshot.py`)
-Pull all active Aave v3 borrowers at current block. For each:
-- Fetch all userReserves with debt > 0
-- Fetch all userReserves with collateral > 0 and usageAsCollateralEnabled
-- Compute liquidation price using reserve parameters and oracle prices
-- Filter to ETH-correlated collateral positions
+### Not done (deprioritized, diminishing returns)
+- **Remaining 19 episodes.** 8 of 27 tested. Structural insights are stable. More episodes would tighten the 25% FP rate confidence interval but won't change the conditional fuel map conclusion.
+- **On-chain whale liquidation verification.** $282M whale inferred liquidated — not verified via on-chain events. Would strengthen the stETH narrative but doesn't change findings.
+- **Compound v3 topology.** Not scanned. Maker was tested and added <10%. Compound likely similar.
+- **Wall dynamics during episodes.** Superseded by conditional framing.
 
-Output: `../data/positions_current.csv` — `user, collateral_symbol, collateral_usd, debt_usd, health_factor, liq_price_usd, protocol`
+### Successor: Correlation-Cascade Investigation
 
-Validation: compare total liquidatable value and distribution against DefiLlama's stale snapshot ($2.16B total, $53.52M within -20%).
+The position topology investigation revealed that the current market's actual vulnerability is not ETH/USD price-cascade but LST depeg-cascade. $5.6B phantom positions at HF 1.03-1.05 activate on staking derivative depeg events, not ETH price drops.
 
-Estimated queries: ~10 pages × 1000 users = ~10 queries for users, + ~10 for reserves/prices. Well within free tier.
+**Question:** What depeg threshold triggers cascade activation for the $5.6B phantom wall?
 
-### Step 2: Density Map (`density.py`)
-From snapshot CSV, compute the liquidation density map:
-- Bucket liquidation prices into $50 bins
-- For each bin: count of positions, total collateral USD, largest single position
-- Identify walls (bins where single position > $50M or total > $200M)
-- Compute proximity metrics: distance from current price to nearest wall, total liquidatable within 5%/10%/20%
+**Required data (not collected here):**
+- DEX liquidity depth per LST (wstETH, weETH, osETH, rsETH) — how much selling before peg breaks
+- Historical staking derivative depeg magnitudes during stress events (stETH Jun 2022: 7%, others unknown)
+- Oracle lag behavior during rapid depeg — do Chainlink oracles update fast enough to trigger liquidations before arb restores peg?
+- Depeg contagion across LST tiers — does osETH cracking (thin liquidity) spread to weETH (medium) then wstETH (deep)?
 
-Output: `../data/density_current.csv` + visualization data. This is the "liquidation heatmap."
+**Conjectured LST fragility hierarchy:**
+- Tier 3 (osETH, tETH, ETHx): thin DEX liquidity, low depeg threshold, activate early, small absolute size (~$300M)
+- Tier 2 (weETH): medium liquidity, medium threshold, $1.5B+ in phantom positions
+- Tier 1 (wstETH): deep Curve/Balancer liquidity, high threshold, only cracks in severe systemic stress, $1.4B+ when it does
 
-### Step 3: Historical Snapshots (`historical.py`)
-For each of the 27 episode start dates from `liquidation_events_combined.csv`:
-1. Convert date → Ethereum block number (Alchemy `eth_getBlockByNumber` or Etherscan API)
-2. Query Aave v3 subgraph at that block: `users(block: {number: N})`
-3. Compute liquidation density map at that block
-4. Record: wall proximity, total liquidatable within 5%/10%/20%, largest wall size + distance
+**Connection to flow phase:** The real/phantom decomposition and cascade mechanics model provide the foundation. The flow phase's monitoring system (regime → early warning → classification) remains valid for the real-wall layer. The correlation-cascade investigation would add a parallel track for phantom-wall monitoring.
 
-Output: `../data/positions_historical.csv` — one row per episode with topology metrics at onset.
-
-Query budget: 27 episodes × ~15 queries each = ~400 queries. Well within 100K/month free tier.
-
-### Step 4: Backtest (`backtest.py`)
-Merge historical topology metrics with episode outcomes (escalated vs absorbed, from flow phase data):
-- Test: does wall proximity at episode onset predict escalation?
-- Binary classification: near wall (within 10%) → predict escalation. Far wall → predict absorption.
-- Measure: accuracy, precision, recall vs flow-phase baseline (32% FP rate)
-- Test wall size threshold: does $100M+ wall within 10% predict differently than $50M?
-- Test single-whale vs distributed wall: one position > 50% of wall vs many small positions
-
-Output: `../data/backtest_results.csv` + `findings.md`
-
-### Step 5: Wall Dynamics (if Step 4 validates)
-For 3-5 episodes where we have clear wall proximity:
-- Take daily snapshots during the episode (days 1-7)
-- Track: did the wall move? Did whales top up collateral? Did partial liquidations shrink it?
-- Quantify wall stability over the episode window
-
-This answers open question #1 from the thesis.
-
-## Query Patterns
-
-```graphql
-# All borrowers (paginated)
-{
-  users(first: 1000, where: {borrowedReservesCount_gt: 0, id_gt: $cursor}, orderBy: id) {
-    id
-    borrowedReservesCount
-  }
-}
-
-# Full position data for a batch of users
-{
-  userReserves(first: 1000, where: {user_in: [$addresses], currentTotalDebt_gt: "0"}) {
-    user { id }
-    currentATokenBalance
-    currentTotalDebt
-    usageAsCollateralEnabledOnUser
-    reserve {
-      symbol
-      decimals
-      underlyingAsset
-      reserveLiquidationThreshold
-      baseLTVasCollateral
-      price { priceInEth }
-    }
-  }
-}
-
-# Historical (add block parameter)
-{
-  userReserves(first: 1000, where: {...}, block: {number: 18000000}) { ... }
-}
-```
-
-## Risks
-
-1. **Subgraph balance staleness.** `currentATokenBalance` and `currentTotalDebt` reflect values at last indexing, not query time. Interest accrual creates drift. For positions held for months, this could be 1-5% off. Acceptable for wall detection (we care about $50M+ clusters, not exact amounts).
-
-2. **Multi-collateral complexity.** Users with ETH + WBTC + stETH as collateral have a blended liquidation price. First pass: treat each collateral asset independently. Refinement: compute weighted liquidation price per user.
-
-3. **E-mode positions.** Aave v3 E-mode allows higher LTV for correlated assets (e.g., ETH/stETH). These positions have different liquidation thresholds than standard mode. Must check E-mode category per user.
-
-4. **Oracle price divergence.** Aave uses Chainlink oracles which can deviate from market price during volatility. Liquidation prices should be computed against Aave's oracle price, not market price.
-
-5. **Protocol coverage gap.** Starting with Aave v3 only (~80% of lending). Compound v3 and Maker/Spark add the remaining 20%. Can extend in Step 3 if Aave-only results are promising but noisy.
-
-## Success Criteria
-
-- Step 1 produces a snapshot that roughly matches DefiLlama ($2B+ total, identifiable walls)
-- Step 4 shows wall proximity at episode onset has higher predictive power than any flow-phase signal (>70% accuracy on escalation prediction, vs 50-76% flow-phase range)
-- Or: Step 4 shows no relationship, in which case the thesis is wrong and we document why
-
-## Scope Control
-
-Start with Aave v3 Ethereum only. Do not add Compound/Maker/multi-chain until Step 4 results justify it. Each additional protocol is a separate engineering effort that should be motivated by a specific gap in the Aave-only results.
+This is a separate investigation with different data requirements. Create `mev/correlation/` when ready.

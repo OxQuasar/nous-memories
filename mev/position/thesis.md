@@ -25,64 +25,60 @@ The aggregate of all active positions forms a **liquidation density map**: at ea
 
 The map is fully readable on-chain. Every position's collateral, debt, and liquidation parameters are public contract state. The information exists — it's just not aggregated.
 
-## Hypothesis
+## Original Hypothesis
 
 **Proximity to dense liquidation walls at episode onset predicts escalation.** When a stress episode begins (distributed liquidation flow, detected by the existing monitoring system), the distance from current price to the nearest large liquidation cluster determines whether the episode will escalate:
 
 - **Near wall** (large cluster within 5-10% of current price): high escalation probability. Small further decline reaches the wall, triggers massive liquidation, produces the concentrated spike.
 - **Far wall** (nearest cluster >15-20% below): low escalation probability. The stress is moderate, positions being liquidated are small/scattered, market absorbs without cascading.
 
-This is the structural explanation for the two populations discovered in the flow phase:
-- Escalating episodes (76% hit rate) → wall was nearby
-- Non-escalating episodes (50%, noise) → wall was distant
+## Empirical Results (6 iterations, 8 episodes backtested)
 
-## What This Would Provide
+### The hypothesis is partially supported, with critical refinements
 
-If validated, wall proximity transforms the monitoring system from reactive classification to prospective risk assessment:
+**What was confirmed:**
+- Position topology does determine cascade dynamics. All 4 escalating episodes had significant real debt in the drawdown path; all non-escalating episodes had thin or empty paths. 8/8 correct classification when matched to actual drawdown depth.
+- Empty topology = no DeFi amplification. FTX (Nov 2022) is the natural experiment: 30% drawdown against empty topology (post-clearing) → only $12M in Aave liquidations. Same asset, severe shock, no cascade.
 
-| Layer | Current | With position topology |
+**What was wrong or incomplete:**
+
+1. **Binary prediction fails.** The best prospective binary metric (R20% > $100M + whale) achieves 6/8 (75%), with two false positives. These are episodes where walls existed but the drawdown was too shallow to reach them (Iran: 14% actual vs wall at 10-20%; Sep 2024: 7% actual vs wall at 10-20%). Topology tells you what's waiting; it doesn't tell you how deep the shock will push.
+
+2. **The correct framing is conditional, not predictive.** Topology is a severity gauge: "if the drawdown reaches X%, here's how much cascade fuel is in the path." This is the missing piece for the monitoring system — not a predictor layer, but a severity-assessment layer.
+
+3. **Most near-price "walls" are phantom.** The investigation's most important technical finding: positions with ETH-correlated collateral AND ETH-correlated debt (e.g., wstETH collateral / WETH debt) have no ETH/USD liquidation price. ETH/USD cancels from their health factor equation. Without debt-side decomposition, any liquidation heatmap is dominated by these phantom positions. In 2026, >99.99% of near-price debt is phantom.
+
+4. **Two cascade modes, not one.** "Wall proximity" is too simple. Cascades operate through two distinct mechanisms:
+   - **Progressive cascade**: continuous density of real debt through the price path (~$14M+ per 1% of price). Self-sustaining — each layer of liquidations pushes price into the next.
+   - **Cliff cascade**: thin gradient plus a single concentrated whale position. The gradient is absorbed individually until price reaches the whale, whose liquidation overwhelms market depth.
+
+5. **The risk surface has rotated.** DeFi fragility has shifted from ETH-price-cascade (2022: 2% phantom) to staking-derivative-depeg-cascade (2026: >90% phantom). The thesis described a mechanism that was real in 2022 but that the market has structurally moved away from. Today's equivalent question is about depeg thresholds, not ETH/USD walls.
+
+### Answers to Open Questions
+
+1. **How dynamic are walls?** Not directly tested (wall dynamics during episodes not measured). But the post-clearing effect shows walls are cleared by crashes and take months to rebuild. The FTX episode (5 months after June 2022 crash) found topology still empty.
+
+2. **Granularity required.** Yes, distribution matters enormously. Iran ($162M at R20%, distributed in small positions <$21M each) did not escalate. Yen carry ($420M at R20%, continuous density of $21M/1%) did escalate. The stETH episode ($99M at R20%, but one $282M whale at 34%) escalated via the cliff mechanism. Aggregate wall size alone is insufficient — need both density per unit of price and maximum single-position concentration.
+
+3. **Historical reconstruction feasibility.** Feasible but mixed: Aave v3 subgraph supports `block: {number: N}` queries (~6 min/snapshot). Aave v2 subgraph is dead; requires fully on-chain archive multicall approach (~28 min/snapshot). Alchemy free tier covers both.
+
+4. **Protocol coverage.** Aave-only is representative. Maker scan showed <10% contribution to real wall at all proximity bands. Cross-protocol pattern is consistent: borrowers taking real ETH/USD risk maintain wide HF margins (1.5+) on both Aave and Maker.
+
+## Revised Understanding
+
+The original thesis framed topology as a predictive layer. The empirical finding is that topology is a **conditional amplifier gauge**: it measures how much DeFi will amplify an exogenous shock at each drawdown depth. This is more nuanced and arguably more useful than a binary predictor, because it provides severity information that scales with the situation.
+
+The monitoring system architecture becomes:
+
+| Layer | Function | Signal |
 |---|---|---|
 | Regime (APY) | Attention routing | Unchanged |
 | Early warning (OI) | Alert, ~37h lead | Unchanged |
-| Classification (magnitude) | Same-day, after the fact | Unchanged |
-| **Escalation prediction** | **Cannot predict** | **Wall proximity at episode onset** |
+| Classification (magnitude) | Same-day identification | Unchanged |
+| **Topology (fuel map)** | **Severity assessment** | **"If drawdown reaches X%, cascade fuel is Y"** |
 
-The escalation layer fills the specific gap that five flow-domain investigations couldn't fill.
+The topology layer doesn't predict escalation — it tells you the stakes if the drawdown continues. Combined with the early warning layer (which detects that a drawdown has started), this provides: "a stress episode has started, and here's how much DeFi cascade fuel lies in its path."
 
-## Approach
+## Successor Question
 
-### Phase 1: Current snapshot
-Build a position scanner that reads active lending positions from Aave v3, Compound v3, and Maker and computes the liquidation density map. Validate against the existing one-time snapshot from flow phase iteration 3 ($2.16B, walls at $1,300-$1,600). Understand the data shape.
-
-### Phase 2: Historical reconstruction
-The hard part. To backtest wall proximity against the 27 historical episodes, we need position snapshots at each episode's start date. Options:
-- **Archive RPC** with historical `eth_call` (block-specific state queries)
-- **The Graph subgraphs** with time-travel queries
-- **Event replay** — reconstruct position state by replaying deposit/borrow/repay/liquidation events from genesis
-
-### Phase 3: Backtest
-For each of the 27 episodes: compute wall proximity at onset, test whether proximity predicts escalation (binary: did the episode produce a concentrated spike?). Small n but the hypothesis is specific and the test is clean.
-
-## Data Sources
-
-| Source | What it provides | Access |
-|---|---|---|
-| Aave v3 subgraph | Active positions, collateral, debt, LTV | The Graph, free |
-| Compound v3 contracts | Account state, collateral, borrows | Direct RPC |
-| Maker CDPManager | Vault collateral and debt (ilk-specific) | Direct RPC |
-| Protocol oracle contracts | Current price feeds used for liquidation calc | Direct RPC |
-| Archive RPC (Alchemy/Infura) | Historical state at specific blocks | Free tier may suffice |
-
-## What This Is Not
-
-This is not a trading system. The position map is public — anyone can read it. The value is completing the monitoring architecture with the missing escalation layer, not creating information asymmetry. The thesis from the flow phase stands: this is fragility detection, not directional prediction.
-
-## Open Questions
-
-1. **How dynamic are walls?** If whales actively manage positions (top up collateral as price drops), the map shifts faster than episodes develop. The wall you see at episode onset may not be there when price reaches it. How much do walls move during the 1-7 day episode window?
-
-2. **Granularity required.** Is it enough to know "there's $X within Y% below"? Or does the specific distribution matter (one whale vs many small positions at the same level)?
-
-3. **Historical reconstruction feasibility.** Can we get position state at specific historical blocks without running our own archive node? Subgraph time-travel queries and archive RPC free tiers need testing.
-
-4. **Protocol coverage.** Aave v3 dominates (~80% of lending volume). Is Aave-only sufficient, or do Compound/Maker walls matter for escalation prediction?
+The 2026 market's primary vulnerability is not ETH/USD walls (thin, distant) but the $5.6B phantom wall at HF 1.03-1.05. This activates on staking derivative depeg events, not ETH price drops. The natural successor investigation is the **correlation-cascade thesis**: what depeg threshold activates this wall, and what is the probability of reaching that threshold during stress?

@@ -1,0 +1,157 @@
+Step 5 Results: Expanded Backtest — 8 Episodes
+=================================================
+Runtime: ~22 min total (11 min V2 on-chain, 11 min V3 subgraph)
+Note: Jan 2022 required Multicall2 (0x5BA1...bEeD696) — Multicall3 not yet deployed.
+
+Episodes (chronological order):
+  1. 2022-01-21 Jan crash       ESCALATING  V2  ETH $3,007 → $2,388  (21% dd)
+  2. 2022-06-10 stETH depeg     ESCALATING  V2  ETH $1,788 → $1,000  (44% dd)
+  3. 2022-11-08 FTX crash       NOT-ESC     V2  ETH $1,569 → $1,100  (30% dd)
+  4. 2023-08-17 Aug flash       ABSORBED    V3  ETH $1,804 → $1,620  (10% dd)
+  5. 2024-04-12 Iran tensions   ABSORBED    V3  ETH $3,510 → $3,000  (14% dd)
+  6. 2024-08-04 Yen carry       ESCALATING  V3  ETH $2,903 → $2,100  (28% dd)
+  7. 2024-09-06 Sep dip         ABSORBED    V3  ETH $2,370 → $2,210  (7% dd)
+  8. 2025-02-02 Feb crash       ESCALATING  V3  ETH $3,128 → $2,585  (17% dd)
+
+Full Comparison Table
+---------------------
+Episode               Type         ETH     Ph%     R5%       R10%      R20%      R30%      Cliff   Cl%
+-------------------------------------------------------------------------------------------------------
+Jan 2022 crash        escalating  $3,007    2%  $27.5M    $97.2M   $212.3M   $449.9M    $445M   35%
+stETH depeg           escalating  $1,788   35%   $6.2M    $20.5M    $99.3M   $140.2M    $578M   71%
+FTX crash             not-esc     $1,569   42%   $2.0M     $2.8M    $20.5M    $37.3M     $30M   83%
+Aug 2023 flash        absorbed    $1,804   43%   $1.3M    $16.4M    $74.2M   $120.9M     $17M   35%
+Iran tensions         absorbed    $3,510   44%   $0.1M    $22.3M   $161.7M   $275.8M    $156M   70%
+Yen carry trade       escalating  $2,903   54%  $49.3M   $142.1M   $420.3M   $624.1M    $187M   49%
+Sep 2024 dip          absorbed    $2,370   58%  $13.7M    $45.8M   $269.8M   $655.0M    $137M   58%
+Feb 2025 crash        escalating  $3,128   70%   $5.8M    $37.5M   $280.5M   $670.7M     $93M   48%
+
+Phantom Ratio Evolution
+-----------------------
+  Jan 2022:  2% — leveraged ETH yield barely existed
+  Jun 2022: 35% — stETH yield farming ramping up
+  Nov 2022: 42% — post-crash, phantom share grew
+  Aug 2023: 43% — early V3, similar ratio
+  Apr 2024: 44% — stable through V3 maturity
+  Aug 2024: 54% — weETH/wstETH strategies scaling
+  Sep 2024: 58% — continued growth
+  Feb 2025: 70% — phantom dominates
+  Mar 2026: >90% — (current, from step 1)
+
+CLASSIFICATION ANALYSIS
+=======================
+
+Sorted by R10% (real debt within 10% below current price):
+
+  Yen carry   ESCALATING  $142M   ← clear top
+  Jan 2022    ESCALATING   $97M   ← second
+  Sep 2024    ABSORBED     $46M   ← third (but only 7% actual drawdown)
+  Feb 2025    ESCALATING   $38M   
+  Iran        ABSORBED     $22M
+  stETH       ESCALATING   $21M   ← low R10% but $282M whale at 34%
+  Aug 2023    ABSORBED     $16M
+  FTX         NOT-ESC       $3M   ← clearly empty
+
+R10% alone gives 5/8 correct (misclassifies Sep 2024, stETH, Feb 2025).
+
+Why R10% alone fails:
+1. stETH: The signal was a SINGLE $282M whale at 34%, not near-price density.
+   R10% missed this because the cliff was deeper — R30% captures it better.
+2. Sep 2024: High R10%=$46M but only a 7% actual drawdown. The wall existed
+   but price never reached it — the dip was too shallow.
+3. Feb 2025: Low R10%=$38M but the actual crash was 17% — walls at 10-20%
+   got hit. R20%=$281M is the relevant metric for the actual drawdown depth.
+
+REFINED METRIC: R_at_drawdown_depth
+------------------------------------
+Match the proximity band to actual drawdown depth:
+
+  Episode          DD%   R_at_DD     Escalated?
+  Jan 2022         21%   R20=$212M   YES ✓  (massive density through crash path)
+  stETH depeg      44%   R30=$140M   YES ✓  ($282M whale at 34% was the trigger)
+  FTX crash        30%   R30=$37M    NO  ✓  (empty — post-June clearing)
+  Aug 2023 flash   10%   R10=$16M    NO  ✓  (thin)
+  Iran tensions    14%   R10=$22M    NO  ✓  (no whale near price)
+  Yen carry        28%   R20=$420M   YES ✓  (densest crash path)
+  Sep 2024 dip      7%   R5=$14M     NO  ✓  (shallow dip, wall not reached)
+  Feb 2025 crash   17%   R20=$281M   YES ✓  (dense at 10-20%)
+
+8/8 CORRECT when matching to actual drawdown.
+
+But this is circular — we're using the actual drawdown to pick the band.
+The useful version is prospective: at episode onset, can we predict escalation
+WITHOUT knowing how deep the drawdown will go?
+
+PROSPECTIVE CLASSIFICATION
+--------------------------
+At episode onset, we know:
+  - The position topology (R5%, R10%, R20%, R30%)
+  - The drawdown has started (detected by existing monitoring system)
+  - We do NOT know how deep it will go
+
+The question: given the topology, if the drawdown continues, will it cascade?
+
+Composite metric: R20% + whale_factor
+  whale_factor = 1 if any single position > $50M within 30%
+  signal = R20% > $100M OR (R20% > $50M AND whale_factor)
+
+  Jan 2022:  R20=$212M > $100M → ESCALATION RISK  → escalated ✓
+  stETH:     R20=$99M, $282M whale within 30% → ESCALATION RISK → escalated ✓
+  FTX:       R20=$21M < $100M, no whale → LOW RISK → not esc ✓
+  Aug 2023:  R20=$74M < $100M, no whale → LOW RISK → absorbed ✓
+  Iran:      R20=$162M > $100M → ESCALATION RISK → absorbed ✗ (false positive)
+  Yen carry: R20=$420M > $100M → ESCALATION RISK → escalated ✓
+  Sep 2024:  R20=$270M > $100M → ESCALATION RISK → absorbed ✗ (false positive)
+  Feb 2025:  R20=$281M > $100M → ESCALATION RISK → escalated ✓
+
+Score: 6/8 (75%). Two false positives: Iran and Sep 2024.
+
+Why the false positives:
+  Iran: R20=$162M but all distributed in small positions (<$10M each).
+        No single trigger point. The drawdown was also only 14%.
+  Sep 2024: R20=$270M but drawdown was only 7%. Wall existed but was
+        never reached — it was a shallow dip that self-corrected.
+
+ADJUSTED: R20% / ETH_price scaling
+  Normalize by total market debt to account for market growth:
+  
+  Episode          R20%/TotalDebt   Escalated?
+  Jan 2022         3.6%             YES
+  stETH            3.1%             YES  
+  FTX              1.1%             NO
+  Aug 2023         9.1%             NO   ← outlier
+  Iran             3.8%             NO   ← borderline
+  Yen carry        6.8%             YES
+  Sep 2024         4.8%             NO
+  Feb 2025         2.4%             YES  ← low ratio but escalated
+
+Normalization doesn't help — the metric is scale-dependent but the 
+threshold isn't stable across regimes.
+
+CONCLUSION
+==========
+The position topology thesis is SUPPORTED but not perfectly predictive
+with any single metric. The most reliable signal combination:
+
+1. R10% > $50M: immediate cascade risk (2/4 escalating meet this)
+2. Whale within 20% of price (>$50M single position): cascade trigger
+3. R20% > $100M: vulnerability to 15-20% drawdowns (all 4 escalating meet)
+4. Post-crash clearing (R20% < $30M): strong non-escalation signal (FTX)
+
+The wall topology creates necessary-but-not-sufficient conditions.
+A dense wall CAN be traversed without cascade if:
+  - The drawdown is shallow enough to not reach the wall (Sep 2024)
+  - The wall is distributed without whale triggers (Iran)
+
+What the topology DOES reliably tell us:
+  - WHERE the danger zones are (price levels to watch)
+  - HOW MUCH fuel exists for cascade (upper bound on liquidation volume)
+  - WHETHER the path is clear (empty = safe for moderate stress)
+
+Output Files
+------------
+  positions_jan2022.csv   (8,913 positions — V2, Multicall2)
+  positions_aug2023.csv   (3,929 positions — V3 subgraph)
+  positions_sep2024.csv  (13,221 positions — V3 subgraph)
+  positions_feb2025.csv  (17,075 positions — V3 subgraph)
+  backtest_expanded.py

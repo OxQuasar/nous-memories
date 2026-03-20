@@ -94,8 +94,14 @@ M1–M5 complete, §VIII–IX new. Topological separation between 先天 divinat
 - Scripts: `m1_mod8_structure.py`, `m2a_cycle_landscape.py`, `gen_calendar_sequence.py`
 
 ### `mod9/`
-No results yet. 後天 divination system: mod-9 arithmetic on Lo Shu ordering with 9th center position.
-- `questions.md` — N1–N6: Lo Shu Z₅ projection, center state role, magic square constraints, flying star path, 爻辭 connection, structural gap assessment
+N1–N6 answered. Reframed: not mod-9 arithmetic (text corrects this), but Lo Shu spatial structure. 後天 compass cycle uniquely prograde (4:2), temporal inverse of 先天. Traditional 後天 uniquely determined (40320→1). 木 adjacency forced by parity bipartition. M6 resolved: 木's pivot traces to Z₅=0.
+- `exploration-log.md` — 3 iterations: Z₅ cycles, compass uniqueness (H2-segregation + directional purity), mediation check + 木 forcing chain
+- `questions.md` — N1–N6 answered, N7–N8 open (constraint economy, He Tu textual connection)
+
+### `domains/`
+No results yet. Reframed question: which domains have three independent binary oppositions whose pairwise relations follow the 五行 grammar? Typology, not dynamics.
+- `questions.md` — D1 (TCM 八纲辨证: cold/hot, deficiency/excess, exterior/interior), D2 (quantum 3-qubit measurement). TCM is strongest candidate: native domain, pre-existing three binary axes, 五行 already in use.
+- Markets binary axes: see `memories/markets/binary.md` — three binary market axes (trend, volatility, liquidity) → 8 regimes on Q₃ directly, no mod-8 intermediary.
 
 ### `empirical/`
 Probe 8a/8c complete. Framework for testing whether the grammar produces useful predictions in real systems.
