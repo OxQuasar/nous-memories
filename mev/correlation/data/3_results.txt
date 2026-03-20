@@ -1,0 +1,212 @@
+Step 3 Results: Chainlink Feed Timing + Oracle-Layer DEX Depth
+================================================================
+Date: 2026-03-20 | ETH price: $2,135
+
+PART A: CHAINLINK stETH/ETH FEED TIMING
+=========================================
+
+Feed: 0x86392dC19c0b719886221c78AB11eb8Cf5c52812
+Aggregator: 0xc9c8efa84eab332d1950e5ba0a913b090775825c
+Decimals: 18
+
+ROUND DATA (last 20 rounds)
+----------------------------
+Every single update in the last 20 rounds occurred at exactly 24.0h intervals.
+No deviation-triggered updates were observed — only heartbeat updates.
+
+  Update frequency: exactly 24.0h (heartbeat only)
+  Max deviation between rounds: 0.039%
+  Answer range: 0.99897 to 0.99992 (total spread: 0.095%)
+
+CRITICAL FINDING: The stETH/ETH Chainlink feed operates on a 24-hour
+heartbeat-only schedule. In the last 20 rounds, stETH/ETH has never
+deviated enough to trigger a deviation-based update (threshold likely
+0.5% or 1.0%). All updates occur at ~19:25-19:31 UTC daily.
+
+IMPLICATIONS FOR CASCADE SPEED
+-------------------------------
+During a real stETH DEX depeg:
+1. DEX price moves instantly (seconds)
+2. Chainlink feed DOES NOT UPDATE for up to 24 hours
+3. Aave oracle reads stale Chainlink price → HF remains artificially high
+4. No liquidations occur until the next heartbeat update
+
+But: if the deviation threshold is 0.5%, a genuine >0.5% stETH depeg on
+the Chainlink oracle network (not DEX) would trigger an early update. 
+However, Chainlink oracles aggregate reports from multiple node operators
+who may source prices from different DEXes — so there could be a 
+multi-minute lag between DEX depeg and oracle update.
+
+Worst case: if a depeg occurs right AFTER a heartbeat update, the oracle
+won't reflect it for ~24 hours. This creates a window where:
+- Positions SHOULD be liquidated but aren't
+- The depeg can deepen on DEX without triggering Aave liquidations
+- When the oracle finally updates, the depeg is worse → larger cascade
+
+Best case: depeg triggers deviation-threshold update within minutes. But
+this has never happened in recent history (no deviation updates in 20 rounds).
+
+The 24h heartbeat means the cascade loop speed is NOT governed by the
+Chainlink feed — instead, the cascade would be a delayed-onset event
+where DEX depeg accumulates for hours before Aave oracle catches up.
+
+
+PART B: ORACLE-FACING DEX DEPTH
+=================================
+
+stETH → WETH DEPTH (oracle-facing layer for wstETH)
+----------------------------------------------------
+Method: Paraswap aggregated quotes (same as Step 1)
+
+  Sell Amount  |  Depeg    | Route
+  10 ETH       |  0.000%   | UniswapV3+wstETH
+  100 ETH      |  0.001%   | UniswapV3+wstETH
+  500 ETH      |  0.004%   | UniswapV3+wstETH
+  1,000 ETH    |  0.008%   | UniswapV3+wstETH
+  2,000 ETH    |  0.047%   | CurveV1Factory+UniswapV3+wstETH
+  3,500 ETH    | 13.78%    | CurveV1Factory+UniswapV2+UniswapV3+wstETH
+  3,688 ETH    | NO ROUTE  |
+
+  Thresholds:
+    0.5% depeg: ~$4.4M of selling
+    1.0% depeg: ~$4.5M of selling (very steep cliff)
+    2.0% depeg: ~$4.7M of selling
+  Max DEX capacity: ~3,018 ETH ($6.4M)
+
+CLIFF STRUCTURE: stETH/ETH depth is smooth up to 2,000 ETH (0.05% depeg),
+then jumps to 13.8% depeg at 3,500 ETH. The cliff is even sharper than
+wstETH/WETH from Step 1 ($5.7M). Essentially ALL stETH DEX liquidity is
+concentrated in a narrow band that exhausts between $4.3M and $7.5M.
+
+COMPARISON WITH STEP 1 wstETH DATA:
+  - wstETH→WETH max capacity: ~$5.7M (from Step 1)
+  - stETH→WETH max capacity:  ~$6.4M (this step)
+  - These are OVERLAPPING pools (stETH routes through wstETH→WETH liquidity)
+  - The oracle layer and DEX layer break together — there is NO additional
+    buffer at the oracle-facing layer
+
+eETH → WETH DEPTH (oracle-facing layer for weETH)
+---------------------------------------------------
+  Sell Amount  |  Depeg    | Route
+  10 ETH       |  0.30%    | CurveV1StableNg
+  30 ETH       |  3.17%    | CurveV1StableNg+SushiSwap
+  34 ETH       |  5.77%    | CurveV1StableNg+SushiSwap
+  42 ETH       | 14.06%    | CurveV1StableNg+SushiSwap
+  45 ETH       | NO ROUTE  |
+
+  Thresholds:
+    0.5% depeg: ~$5K of selling (< $10K!)
+    1.0% depeg: ~$10K of selling
+    2.0% depeg: ~$27K of selling
+  Max DEX capacity: ~36 ETH ($77K)
+
+CATASTROPHIC FINDING: eETH has essentially ZERO DEX liquidity.
+$5,000 of selling produces 0.5% depeg. $27,000 produces 2% depeg.
+The pool exhausts at just 42 ETH ($90K).
+
+This means the weETH oracle pathway — if it relies on any eETH/ETH
+market price — is infinitely fragile. A single moderate sell could
+depeg eETH/ETH enough to affect weETH oracle pricing.
+
+However: the CAPO adapter for weETH uses getRate() on the weETH contract
+itself (which returns the protocol-level rate, not market price). So the
+oracle does NOT directly observe eETH/ETH DEX prices. This is a critical
+safety mechanism — the oracle reads protocol rates, not market rates.
+
+
+PART C: CAPO ORACLE FEED IDENTIFICATION
+==========================================
+
+PRICE COMPOSITION ANALYSIS
+---------------------------
+By decomposing each CAPO adapter's latestAnswer into components:
+  USD_price = effective_ratio × implied_market_feed × ETH/USD
+
+Token   | Ratio Provider         | Actual Ratio | Implied Feed | Structure
+--------|------------------------|-------------|-------------|-------------------------
+wstETH  | stETH contract         | 1.2283      | ~1.004      | ratio × stETH/ETH CL × ETH/USD
+weETH   | weETH contract         | 1.0907      | ~1.002      | ratio × (~1.0) × ETH/USD
+osETH   | StakeWise vault        | 1.0679      | ~1.002      | ratio × (~1.0) × ETH/USD
+
+All three implied market feeds are within 0.4% of 1.0.
+
+FEED STRUCTURES
+---------------
+1. wstETH: Uses a genuine Chainlink stETH/ETH feed (confirmed at
+   0x86392dC19c..., returning ~0.9999). The adapter computes:
+   price = cap(stEthPerToken()) × stETH/ETH_chainlink × ETH/USD
+
+   This means a genuine stETH depeg DOES flow through to wstETH pricing,
+   but only at the Chainlink feed's update frequency (24h heartbeat).
+
+2. weETH: Uses getRate() from the weETH contract (protocol-level rate).
+   The implied market feed is ~1.002, suggesting either:
+   (a) There IS a small eETH/ETH Chainlink feed very close to 1.0, or
+   (b) Direct ratio × ETH/USD with rounding/timing noise
+
+   Since eETH/ETH DEX liquidity is essentially zero ($77K), if there IS
+   an eETH/ETH Chainlink feed, it would be sourcing prices from an
+   extremely thin market.
+
+3. osETH: Uses convertToAssets(1e18) on the StakeWise vault (ERC4626 pattern).
+   Implied feed ~1.002. Same structure as weETH — likely ratio × ETH/USD.
+
+KEY FINDING: wstETH is the ONLY LST where a genuine DEX market feed
+(stETH/ETH Chainlink) sits in the oracle path. For weETH and osETH,
+the oracle reads protocol-level exchange rates, NOT market prices.
+
+IMPLICATIONS
+------------
+This creates an asymmetry in cascade vulnerability:
+
+- wstETH: A stETH DEX depeg → Chainlink stETH/ETH updates (with 24h lag) →
+  Aave oracle reflects depeg → liquidations trigger. BUT: the 24h lag means
+  the cascade has a delay fuse.
+
+- weETH/osETH: A DEX depeg DOES NOT directly affect the Aave oracle because
+  the oracle reads protocol rates, not market prices. Liquidations would only
+  trigger if:
+  (a) The protocol rate itself changes (slashing event), or
+  (b) A CAPO misconfiguration occurs (like the March 10 incident), or
+  (c) ETH/USD drops (standard liquidation, not phantom-specific)
+
+  This means the weETH/osETH cascade from Step 1 (DEX depth → depeg → liquidation)
+  may NOT actually work through the oracle path in the simple way we assumed.
+  The phantom positions are protected by the protocol-rate oracle, not exposed
+  to DEX market prices.
+
+  HOWEVER: during a genuine market stress event, protocol rates CAN deviate
+  from market rates (withdrawal queue delays, slashing), and arbitrageurs
+  selling LSTs on DEX would create real depeg pressure that eventually
+  manifests in protocol rates.
+
+
+REVISED CASCADE MODEL
+---------------------
+Given these findings, the cascade operates differently for each LST:
+
+wstETH cascade (delayed-onset):
+  1. Trigger: sell pressure on stETH DEX ($4.5M → 1% depeg)
+  2. Chainlink stETH/ETH: updates after up to 24h
+  3. Aave wstETH oracle: reflects depeg with ~24h lag
+  4. Liquidations: fire when oracle updates
+  5. Liquidated wstETH: sold on DEX, deepening depeg
+  6. Loop speed: one cycle per ~24h (slow but relentless)
+
+weETH/osETH cascade (protocol-rate dependent):
+  1. Trigger: market stress causes DEX depeg
+  2. Aave oracle: reads protocol rate, does NOT immediately reflect DEX depeg
+  3. Phantom positions: temporarily shielded by protocol-rate oracle
+  4. BUT: if protocol rate changes (slashing, queue delay), oracle updates instantly
+  5. Then: liquidations → DEX selling → deeper depeg
+
+The March 10 CAPO incident showed that a 2.85% oracle mispricing can
+trigger $27M of liquidations in 84 seconds. A genuine oracle update
+reflecting real depeg would trigger the same mechanism at the same speed.
+
+DATA FILES
+----------
+- chainlink_steth_eth_rounds.csv: 20 rounds with timestamps and gaps
+- steth_depth.csv: 19 rows of stETH→WETH depth data
+- eeth_depth.csv: 18 rows of eETH→WETH depth data
+- oracle_feeds.csv: CAPO feed parameters for 3 tokens

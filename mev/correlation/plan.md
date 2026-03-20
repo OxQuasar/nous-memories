@@ -16,6 +16,42 @@ Sub-questions:
 3. Do Chainlink oracles update fast enough to trigger liquidations during rapid depeg? (oracle lag)
 4. Does a depeg in one LST spread to others? (contagion across tiers)
 
+## Status — INVESTIGATION COMPLETE (2026-03-20)
+
+| Step | Status | Finding |
+|------|--------|---------|
+| 1. DEX Liquidity Depth | ✅ Done (iter 1) | Phase-transition cliffs, not curves. $21K–$13.9M capacity. Cascade ratios 20x–4,681x. |
+| 2. Historical Depeg Magnitudes | ⏭ Skipped | Moot for Aave — oracle doesn't watch DEX prices. Relevant only for cross-protocol hypothesis. |
+| 3. Oracle Lag Analysis | ✅ Done (iter 2–4) | **Core finding: No CAPO adapter uses market-price feeds.** All use `cap(protocol_rate) × ETH/USD`. Bytecode-verified. Chainlink stETH/ETH (24h heartbeat) exists but is NOT embedded in any adapter. |
+| 4. Phantom Wall Activation | ✅ Done (iter 2) | March 10 CAPO incident: 2.85% artificial depeg → 49 liquidations, 84s, $28.7M. $1.42B whale survived by 0.98%. |
+| 5. Transaction-Level Replay | ⏭ Skipped | March 10 incident IS the empirical replay. Mechanism documented. |
+| 6. Contagion Dynamics | ⏭ Skipped | Cross-LST DEX contagion blocked at Aave oracle. Cross-protocol contagion (Morpho/Euler) identified as open thread. |
+
+### Answer to the Original Question
+
+**DEX depegs do not trigger cascade activation for the phantom wall.** The Aave CAPO oracle architecture reads protocol-level exchange rates, not market prices. The reflexive cascade (depeg → liquidation → more selling → deeper depeg) is structurally blocked at the oracle layer.
+
+The phantom wall IS vulnerable through three different channels:
+1. **CAPO operational risk** — demonstrated March 10. Misconfigured snapshot → instant mass liquidation. weETH/osETH snapshots 2 years stale.
+2. **Protocol rate disruption** — validator slashing or smart contract exploit. Instant oracle propagation. Historically rare.
+3. **ETH/USD crash** — standard leverage risk, amplified by $5.6B concentrated phantom exposure.
+
+**One-sentence synthesis:** The system traded distributed market risk for concentrated operational risk.
+
+## Deliverables
+
+- `findings.md` — consolidated investigation document (8 sections, 248 lines)
+- `signals-synthesis.md` — signal ranking, composite monitor design, next steps
+- `exploration-log.md` — four-iteration log with model evolution
+- `data/` — 11 CSV files, 3 narrative results
+- `*.py` — 4 reproducible probe scripts
+
+## Open Threads (for future investigation)
+
+1. **Cross-protocol oracle survey** — do Morpho, Euler, Spark use market-price feeds for LSTs? The DEX cascade model may apply there.
+2. **CAPO monitoring pipeline** — build the composite monitor. weETH drift at 5.4% already exceeds March 10 incident magnitude.
+3. **Protocol rate disruption magnitude** — how much correlated slashing moves getRate() by 3-5%?
+
 ## Conjectured LST Fragility Hierarchy
 
 | Tier | Tokens | DEX Liquidity | Depeg Threshold | Phantom Exposure | Cascade Role |
@@ -26,7 +62,9 @@ Sub-questions:
 
 Hypothesis: cascade propagates upward through tiers. Tier 3 cracks → selling pressure → Tier 2 weakens → if severe enough → Tier 1 breaks → full phantom wall activation.
 
-## Execution
+**Post-investigation assessment:** This hierarchy describes DEX market structure accurately but is NOT the Aave cascade pathway. Aave's oracle doesn't watch DEX markets. The hierarchy may apply to protocols using market-price oracles (cross-protocol thread).
+
+## Execution (Original — retained for reference)
 
 ### Step 1: DEX Liquidity Depth per LST
 Map the on-chain liquidity available for each LST token. For each: how much selling (in USD) produces a 1%, 2%, 5% depeg from fair value?
@@ -136,4 +174,4 @@ Start with Step 1 (liquidity depth) — it's the most tractable and immediately 
 |-------|-----------------|---------------------|
 | Flow (17 iterations) | Monitoring system: regime → early warning → classification. Identified escalation prediction as unsolved. | Episode dates, liquidation event data |
 | Position (6 iterations) | Real/phantom decomposition. Conditional fuel map. Cascade mechanics (progressive + cliff). Risk rotation finding. | Phantom position inventory ($5.6B, per-LST breakdown, HF distribution) |
-| **Correlation** (this) | Depeg activation thresholds. Transaction-level cascade dynamics. Contagion model. Complete phantom-wall risk characterization. | — |
+| **Correlation (4 iterations)** | Oracle architecture (CAPO uses protocol rates, not market). CAPO operational risk (demonstrated March 10). DEX cliff structure. Vulnerability decomposition into 3 channels. | — |

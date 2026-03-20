@@ -1,0 +1,64 @@
+Step 3 — Real Liquidation Dynamics Analysis
+============================================
+
+Generated: 2026-03-20 UTC
+Script: memories/mev/dynamics/liquidation_dynamics.py
+Input: liquidations_full.csv (65,382 events) + eth_price.csv (daily)
+
+Output files:
+  - epoch_liquidation_summary.csv (22 rows: 11 epochs × 2 category filters)
+  - crash_spike_days.csv (28 rows: spike days + summaries across 6 crash epochs)
+
+Method:
+  USD estimation via debt-side: stablecoin debt → face value, WETH debt → × ETH price.
+  ~80% of debt is stablecoins, making this reliable.
+  Total liquidation volume: $2.47B (all categories), $1.37B (real ETH→stablecoin only).
+
+KEY FINDINGS
+============
+
+1. TEMPORAL CONCENTRATION — Liquidations are extremely spikey:
+   - In ALL crash epochs, 3 days account for 45-89% of total volume.
+   - 2024_consolidation: a SINGLE day (Aug 5 2024) produced $187M = 61.9% of epoch volume.
+   - 2026_crash: 3 days (Jan 31, Feb 5-6) produced 86.6% of volume.
+   - Spike days cluster around -8% to -18% daily price moves.
+
+2. LIQUIDATION INTENSITY IS ROUGHLY LINEAR (elasticity = 0.83):
+   - Log-log regression: volume ~ |price_drop|^0.83
+   - Not strongly convex or concave — no clear acceleration in larger crashes.
+   - BUT intensity per 1% varies enormously across epochs:
+     2022_bear_2: $29M/1% (lowest — FTX crash, markets already deleveraged)
+     2024_consolidation: $774M/1% (highest — yen carry unwind, heavily leveraged)
+     This 26× variation suggests leverage buildup matters more than crash magnitude.
+
+3. STRUCTURAL SHIFT IN LEVERAGE:
+   - 2022_bear_2 ($12M total, -42%) vs 2024_consolidation ($302M, -39%):
+     Similar % drops but 24× more liquidation volume in 2024.
+   - The system carries far more leverage in 2024-2026 than 2022.
+   - Intensity floor has risen: post-2024, even mild crashes trigger >$190M.
+
+4. COLLATERAL COMPOSITION SHIFT:
+   - 2022: WETH was 92-98% of real liquidation collateral (stETH just 2-8%)
+   - 2024_consolidation: wstETH surged to 32.8% of collateral (WETH dropped to 64%)
+   - 2025_q4_chop: wstETH became MAJORITY at 55.9% of real liquidation collateral
+   - 2026_crash: wstETH at 20.8%
+   This confirms the hypothesis: as LST adoption grew, "real" positions increasingly
+   use wstETH as collateral instead of WETH. The collateral is shifting from raw ETH
+   to yield-bearing ETH derivatives.
+
+5. 2025_CRASH had highest event count (8,262) and most users liquidated (4,162).
+   The -61% drawdown created a broad liquidation cascade.
+   First >$10M day came 49 days into the crash — slow bleed then spike.
+
+6. SPIKE TIMING PATTERN:
+   - 2022_bear_1: first >$10M day at day 20 (Jan 21, crypto winter onset)
+   - 2024_consolidation: first >$10M day at day 8 (rapid yen carry unwind)
+   - 2025_crash: first >$10M day at day 49 (slow bleed, then Feb 3 waterfall)
+   - 2026_crash: first >$10M day at day 45 (late-stage capitulation)
+   Slow-burn crashes have delayed spike onset; sudden deleveraging events spike early.
+
+7. POST-SPIKE RECOVERY EPOCHS show minimal liquidation activity:
+   - 2022_rally: $6.3M total (negligible after $229M crash)
+   - 2025_recovery: $22.3M total (after $315M crash)
+   - 2026_recovery: $0.95M total (after $193M crash)
+   Recoveries have ~95% less liquidation volume than crashes — asymmetric.

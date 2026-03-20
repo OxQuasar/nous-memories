@@ -1,0 +1,161 @@
+MULTI-EXCHANGE OI COMPARISON (Step 6a)
+============================================================
+
+Episodes: 17
+============================================================
+1. DATA AVAILABILITY
+============================================================
+
+  Binance: 7697 hourly records
+    Range: 2024-03-14 00:00:00+00:00 to 2026-02-09 00:00:00+00:00
+    Episodes covered: 17 / 17
+
+  Bybit: 7289 hourly records
+    Range: 2024-03-14 00:00:00+00:00 to 2026-02-08 00:00:00+00:00
+    Episodes covered: 17 / 17
+
+  OKX: 461 hourly records
+    Range: 2026-01-19 20:00:00+00:00 to 2026-02-08 00:00:00+00:00
+    Episodes covered: 1 / 17
+
+============================================================
+2. PER-EPISODE CASCADE ORDERING
+============================================================
+
+  Threshold: >3% hourly OI drop
+
+  Ep#  Start         Peak                   Binance             Bybit               OKX    Leader   Lead(h)
+  ---------------------------------------------------------------------------------------------------------
+    1  2024-03-16    2024-04-13         04-12 18:00                 —                 —   Binance      only
+    2  2024-04-30    2024-05-01                   —       04-29 00:00                 —     Bybit      only
+    3  2024-06-11    2024-07-05                   —       07-05 03:00                 —     Bybit      only
+    4  2024-08-02    2024-08-05         08-05 02:00       08-05 02:00                 —   Binance     +0.0h
+    5  2024-08-27    2024-09-06                   —                 —                 —         —         —
+    6  2024-10-03    2024-10-03                   —                 —                 —         —         —
+    7  2024-11-12    2024-11-12                   —       11-12 05:00                 —     Bybit      only
+    8  2024-12-05    2024-12-20                   —                 —                 —         —         —
+    9  2025-01-07    2025-02-03         02-03 14:00       02-03 02:00                 —     Bybit    +12.0h
+   10  2025-02-22    2025-03-10                   —       03-10 18:00                 —     Bybit      only
+   11  2025-03-30    2025-04-06         04-04 02:00       04-07 15:00                 —   Binance    +85.0h
+   12  2025-05-23    2025-05-25                   —                 —                 —         —         —
+   13  2025-06-21    2025-06-21                   —       06-21 22:00                 —     Bybit      only
+   14  2025-08-01    2025-08-01                   —                 —                 —         —         —
+   15  2025-09-16    2025-10-10         10-10 21:00       10-10 22:00                 —   Binance     +1.0h
+   16  2025-11-03    2025-11-04         11-04 20:00       11-04 22:00                 —   Binance     +2.0h
+   17  2026-01-20    2026-01-31         01-31 18:00       01-30 02:00       01-30 02:00     Bybit     +0.0h
+
+============================================================
+3. CASCADE ORDERING SUMMARY
+============================================================
+
+  Episodes with drops on 2+ exchanges: 6
+    Binance: leads 4/6 (67%), median lead +1.5h, mean +22.0h
+    Bybit: leads 2/6 (33%), median lead +6.0h, mean +6.0h
+
+  Lead time distribution (leader vs second):
+    Median: 1.5h
+    Mean: 16.7h
+    Min: 0.0h, Max: 85.0h
+    Simultaneous (<2h gap): 3/6 (50%)
+
+============================================================
+4. AGGREGATE vs SINGLE-EXCHANGE SIGNAL
+============================================================
+
+  Comparing >4% hourly OI drop signals:
+                           Binance   Aggregate
+         Episode drops          11           5
+         Control drops           1           1
+
+    Drop rate (ep/day)       0.034       0.016
+  Drop rate (ctrl/day)       0.011       0.011
+            Enrichment        3.1x        1.4x
+
+  Estimated annual false alarms:
+    Binance-only: 4
+    Aggregate: 4
+    → Same false alarm rate
+
+  Per-episode aggregate vs Binance-only signal timing:
+  Ep#  Start                 Bin drop          Agg drop      Δ(h)
+  ------------------------------------------------------------
+    1  2024-03-16         04-12 18:00                 —         —
+    2  2024-04-30                   —                 —         —
+    3  2024-06-11                   —                 —         —
+    4  2024-08-02         08-05 02:00       08-05 02:00     +0.0h
+    5  2024-08-27                   —                 —         —
+    6  2024-10-03                   —                 —         —
+    7  2024-11-12                   —                 —         —
+    8  2024-12-05                   —                 —         —
+    9  2025-01-07                   —                 —         —
+   10  2025-02-22                   —                 —         —
+   11  2025-03-30                   —                 —         —
+   12  2025-05-23                   —                 —         —
+   13  2025-06-21                   —                 —         —
+   14  2025-08-01                   —                 —         —
+   15  2025-09-16         10-10 21:00       10-10 21:00     +0.0h
+   16  2025-11-03                   —                 —         —
+   17  2026-01-20         01-31 18:00                 —         —
+
+  Aggregate vs Binance timing (positive = agg earlier):
+    Median: +0.0h
+    Aggregate earlier: 0/2
+    Same hour: 2/2
+    Binance earlier: 0/2
+
+============================================================
+5. CROSS-EXCHANGE CORRELATION
+============================================================
+
+  Overlapping hours: 7288
+  Pearson correlation (all hours): 0.495
+
+  When either drops >1%: 936 hours
+    Correlation: -0.144
+    Both drop >1%: 67 (7%)
+    Binance only: 316 (34%)
+    Bybit only: 553 (59%)
+    When Binance >1%: Bybit median +0.04%
+    When Bybit >1%: Binance median +0.05%
+
+  When either drops >3%: 80 hours
+    Correlation: 0.073
+    Both drop >3%: 2 (2%)
+    Binance only: 30 (38%)
+    Bybit only: 48 (60%)
+    When Binance >3%: Bybit median -0.10%
+    When Bybit >3%: Binance median -0.09%
+
+  Interpretation: OI drops are exchange-specific, not market-wide.
+  When one exchange drops >3%, the other is typically flat.
+  → Averaging dilutes the signal. Best signal = either-exchange OR gate.
+
+============================================================
+6. THRESHOLD SENSITIVITY (BINANCE vs AGGREGATE vs EITHER-OR)
+============================================================
+
+   Thresh   Bin ep   Bin ctrl   Bin enr   Agg ep   Agg ctrl   Agg enr   OR ep   OR ctrl   OR enr
+  -----------------------------------------------------------------------------------------------
+  >2%      100         19      1.5x       42          6      2.0x     284        51     1.6x
+  >3%       33          2      4.7x       16          2      2.3x      89        10     2.5x
+  >4%       11          1      3.1x        5          1      1.4x      35         6     1.7x
+  >5%        7          1      2.0x        4          1      1.1x      21         3     2.0x
+  >6%        3          1      0.9x        4          1      1.1x      10         2     1.4x
+
+============================================================
+VERDICT
+============================================================
+
+  CASCADE: Binance leads 4/6 episodes (67%), median 1.5h ahead.
+  Simultaneous (<2h gap): 3/6 (50%)
+  → Binance provides early warning; multi-exchange confirms.
+
+  CRITICAL FINDING: OI drops are exchange-specific, not market-wide.
+  Hourly OI % changes: Binance-Bybit correlation ~0.5 overall, negative during stress.
+  When one drops >3%, the other is typically flat (median ~0%).
+  → Averaging DILUTES the signal (enrichment drops from ~4.7x to ~2.3x at 3% threshold).
+  → Best multi-exchange signal = either-exchange OR gate (fire if ANY drops).
+  → Single-exchange (Binance) signal remains cleanest at >4% threshold.
+
+  OKX: Only ~2 months hourly history available (from Jan 2026).
+  → OKX adds minimal value for historical analysis.

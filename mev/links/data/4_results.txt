@@ -1,0 +1,17 @@
+## Task 4: Findings Synthesis
+
+### Output
+- `memories/mev/links/findings.md` — 221 lines, 8 sections
+
+### Structure
+1. Summary (4 sentences, core answers)
+2. The Amplification Mechanism (baseline model, residual gradient, coefficient, cascade timescale)
+3. Three Modes (ramp-phase, recovery suppression, exhaustion reversal + crash-chaining)
+4. Crash-by-Crash (summary table + per-crash narrative paragraphs)
+5. Correlation Regimes (VIX monotonic, rate time-confounded, rolling dynamics, borrow null)
+6. Causal Ordering (DeFi never first mover, 2025 Jan mystery, transmission timescales)
+7. Connection to Prior Phases (Flow, Position, Correlation, Dynamics)
+8. Open Questions (6 items with specific data needed)
+
+All quantities from exploration-log.md are cited with exact numbers.
+Measured vs inferred clearly distinguished throughout.

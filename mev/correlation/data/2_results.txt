@@ -1,0 +1,201 @@
+Step 2 Results: CAPO Incident Forensics & Oracle Composition
+================================================================
+Date: 2026-03-20
+
+PART A: MARCH 10 LIQUIDATION FORENSICS
+========================================
+
+INCIDENT TIMELINE
+-----------------
+- 2026-03-10 11:46:11 UTC: Chaos Labs' Edge Risk engine pushes snapshotRatio
+  update. AgentHub (BGD Labs) executes on-chain one block later via Chainlink
+  Automation. No manual review. No human in the loop.
+  
+  Execution tx: 0x32c64151469cf2202cbc9581139c6de7b34dae2012eba9daf49311265dfe5a1e
+  Block: 24626860
+
+- The CAPO oracle computes a capped exchange rate of ~1.1939 wstETH/stETH.
+  The actual market rate is ~1.228. This is a 2.85% undervaluation.
+
+- Cause: snapshotRatio was stale at ~1.1572. On-chain 3% growth cap per
+  MINIMUM_SNAPSHOT_DELAY period only allowed increase to ~1.1919.
+  But snapshotTimestamp was set to 7 days ago, so the system thought this
+  was the maximum possible growth. Configuration mismatch.
+
+- 2026-03-10 11:46:11 to 11:47:35 UTC (84 seconds): ALL 49 liquidation
+  events complete across both Aave Core and Prime pools.
+
+LIQUIDATION DATA
+----------------
+Source: On-chain eth_getLogs for LiquidationCall events
+
+Total liquidation events:     49
+  - Aave Core pool:           22 events
+  - Aave Prime pool:          27 events
+Unique users liquidated:      35
+Total wstETH seized:          10,938.59 wstETH
+Total WETH debt repaid:       12,943.60 WETH
+Approximate USD value:        ~$28.7M
+
+Top 5 liquidated users (by wstETH seized):
+  1. 0x4f962bb0... 5,327.96 wstETH (Core, 1 event)   ← single largest liquidation
+  2. 0x4bacce55... 1,874.48 wstETH (Core, 1 event)
+  3. 0xf82d8c60... 1,154.73 wstETH (Core, 1 event)
+  4. 0x6c92cd38...   945.94 wstETH (Prime, 2 events)
+  5. 0x1e2799e0...   792.24 wstETH (Prime, 1 event)
+
+Top liquidators:
+  1. 0xbd32122b... seized 5,327.96 wstETH (1 event, Core - took the big one)
+  2. 0xf0000223... seized 2,759.48 wstETH (5 events)
+  3. 0xb441dea8... seized 1,313.11 wstETH (2 events)
+  4. 0x36331e29... seized 1,285.71 wstETH (22 events - highest event count)
+  5. 0x1f2f10d1... seized   240.51 wstETH (5 events)
+
+CROSS-REFERENCE WITH POSITION SNAPSHOT
+---------------------------------------
+Of 35 liquidated users, 11 appear in our position snapshot.
+(Snapshot is from a different date, so many small positions may have
+opened/closed between snapshot and incident.)
+
+Matched liquidated positions (all phantom E-Mode wstETH/WETH loops):
+  User         | Snapshot HF | Snapshot Size | Outcome
+  0x4f962bb0...| 1.0593      | $15.2M        | LIQUIDATED (5,328 wstETH)
+  0x1e2799e0...| 1.0601      | $12.6M        | LIQUIDATED (792 wstETH)
+  0x5cede91b...| 1.0328      | $6.2M         | LIQUIDATED (126 wstETH)
+  0x4bacce55...| 1.0918      | $5.3M         | LIQUIDATED (1,874 wstETH)
+  0xf82d8c60...| 1.0457      | $3.2M         | LIQUIDATED (1,155 wstETH)
+  0x6cc243d2...| 1.0604      | $0.7M         | LIQUIDATED (240 wstETH)
+
+Key observation: All matched positions were phantom type (wstETH collateral,
+WETH debt) with HF between 1.01 and 1.09. A 2.85% artificial depeg was
+enough to push all of them below HF 1.0.
+
+MEGA-WHALE SURVIVAL ANALYSIS
+-----------------------------
+The $1B+ positions SURVIVED the 2.85% incident.
+Remaining safety margin (additional depeg needed to trigger liquidation):
+
+  User         | Size    | HF     | Collateral | Depeg to Liq | Status
+  0x9600a48e...| $1.42B  | 1.0398 | wstETH     | 3.83%        | SURVIVED (0.98% margin)
+  0xf0bb2086...| $1.26B  | 1.0541 | weETH      | 5.14%        | SURVIVED
+  0xef417fce...| $0.28B  | 1.0457 | weETH      | 4.37%        | SURVIVED
+  0x893aa69f...| $0.22B  | 1.0808 | wstETH     | 7.48%        | SURVIVED
+  0x58e70d8b...| $0.11B  | 1.0306 | weETH      | 2.97%        | SURVIVED (0.12% margin!)
+  0x3edc8427...| $0.11B  | 1.0483 | weETH      | 4.61%        | SURVIVED
+  0x60d2d94a...| $0.10B  | 1.3516 | wstETH     | 26.01%       | SURVIVED (safe)
+
+CRITICAL FINDING: The $1.42B wstETH whale (HF 1.0398) needs only 3.83%
+depeg to liquidate. The CAPO incident produced 2.85%. This position was
+0.98 percentage points from triggering a $1.42B liquidation cascade.
+
+The $0.11B weETH position at HF 1.0306 needs only 2.97% depeg — it was
+just 0.12% from being caught by the CAPO incident.
+
+PART B: ORACLE COMPOSITION TRACE
+=================================
+
+CAPO ARCHITECTURE
+-----------------
+Each LST's Aave price follows a composition chain:
+
+  token_rate (on-chain) → CAPO cap → × market_feed (Chainlink) → USD price
+
+The CAPO adapter:
+1. Reads the on-chain exchange rate (e.g., wstETH.stEthPerToken())
+2. Compares it against a stored snapshotRatio + maxGrowthRate constraint
+3. Uses min(actual_rate, capped_rate) for the price calculation
+4. Multiplies by the Chainlink ETH/USD feed
+
+This means CAPO can only REDUCE the reported price, never inflate it.
+It's a one-directional safety mechanism that can misfire downward.
+
+PER-TOKEN ORACLE DETAILS
+-------------------------
+
+wstETH CAPO Adapter: 0xe1d97bf61901b075e9626c8a2340a7de385861ef
+  Description: "Capped wstETH / stETH(ETH) / USD"
+  Ratio provider: 0xae7ab965... (Lido stETH contract)
+  Current price: $2,617.05
+  Snapshot ratio: 1.22828250 (post-fix value)
+  Snapshot timestamp: 2026-03-03 (set during fix)
+  Snapshot delay: 7 days
+  Max growth/sec: 3,427,475,262
+  Chainlink stETH/ETH: 0.99991556 (updated 2026-03-19)
+  Currently capped: No
+
+  During incident:
+    Stale snapshotRatio: ~1.1572
+    Max after 7 days of growth: ~1.1919 (= 1.1572 × 1.03)
+    Actual market rate: ~1.228
+    Capped price: 1.1919/1.228 = 97.06% of true value → 2.85% undervaluation
+
+weETH CAPO Adapter: 0x87625393534d5c102cadb66d37201df24cc26d4c
+  Description: "Capped weETH / eETH(ETH) / USD"
+  Ratio provider: 0xcd5fe23c... (weETH contract itself, getRate())
+  Current price: $2,321.16
+  Snapshot ratio: 1.03465688
+  Snapshot timestamp: 2024-03-26 (nearly 2 years old!)
+  Snapshot delay: 7 days
+  Max growth/sec: 2,870,766,009
+  Currently capped: No
+
+  Note: weETH's snapshot is from March 2024 but the actual rate (1.0907)
+  has grown 5.4% since then. The max growth rate appears configured to
+  accommodate this slow growth, so it hasn't capped. But a sudden spike
+  in eETH yield could trigger the same failure mode as wstETH.
+
+osETH CAPO Adapter: 0x2b86d519ef34f8adfc9349cdea17c09aa9db60e2
+  Description: "Capped osETH / ETH / USD"
+  Ratio provider: 0x2a261e60... (StakeWise vault)
+  Current price: $2,272.59
+  Snapshot ratio: 1.01444588
+  Snapshot timestamp: 2024-04-24 (also nearly 2 years old)
+  Snapshot delay: 7 days
+  Max growth/sec: 2,814,688,431
+  Currently capped: No
+
+KEY ORACLE FINDINGS
+-------------------
+
+1. CAPO IS DOWNWARD-ONLY RISK
+   CAPO can only cap prices DOWN, never UP. In a real LST depeg event,
+   CAPO would NOT intervene — it only fires when the exchange rate grows
+   too fast (upward). For actual depegs, the Chainlink feed and DEX prices
+   would flow through unimpeded.
+
+2. REAL DEPEG → CHAINLINK LATENCY IS THE BOTTLENECK
+   For a genuine DEX depeg event:
+   - DEX price moves instantly
+   - Chainlink stETH/ETH feed updates on deviation threshold (~0.5%) or
+     heartbeat (~24h). A 3% depeg would trigger deviation-based update.
+   - Aave oracle reads Chainlink → propagates to HF calculation
+   - Liquidation bots execute within 1-2 blocks of oracle update
+   
+   Estimated total latency: 2-12 blocks (24-144 seconds) from DEX depeg
+   to first liquidation. This is fast enough to catch positions.
+
+3. CAPO SNAPSHOT STALENESS IS A SYSTEMIC RISK
+   The weETH snapshot is from March 2024. If the CAPO agent misconfigures
+   this token the same way it did wstETH, a similar incident could occur.
+   All three tokens use 7-day snapshot delays with different max growth rates.
+
+4. THE 2.85% INCIDENT NEARLY TRIGGERED $1.42B CASCADE
+   The $1.42B wstETH position at HF 1.0398 would liquidate at 3.83% depeg.
+   The incident produced 2.85% artificial depeg. If the CAPO had used a
+   slightly staler ratio or the position was slightly more leveraged,
+   this would have triggered a $1.42B liquidation — on a 2.85% config error,
+   not a market event.
+
+5. WHAT A REAL 3% DEPEG WOULD TRIGGER
+   From our Step 1 data: wstETH has only $5.7M of DEX capacity.
+   A $4.7M sell produces 2% depeg. But the $1.42B whale liquidation would
+   dump ~$1.42B × 50% (max liq) = ~$710M of wstETH selling pressure.
+   
+   With $5.7M of DEX capacity, this is 124× the available liquidity.
+   The cascade would be self-reinforcing and unstoppable.
+
+DATA FILES
+----------
+- capo_liquidations_mar10.csv: 49 liquidation events (Core + Prime pools)
+- capo_position_overlap.csv: 11 cross-referenced positions
+- oracle_composition.csv: CAPO adapter parameters for wstETH, weETH, osETH

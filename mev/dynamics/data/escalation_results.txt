@@ -1,0 +1,148 @@
+ESCALATION PREDICTOR + 3-TIER SEVERITY + VELOCITY PROFILES
+============================================================
+============================================================
+TEST 1: ESCALATION PREDICTOR — CONTRACT vs USD OI
+============================================================
+
+  Episodes with ≥1 distributed day: 17
+  Escalated (mixed dist+conc): 11
+  Non-escalated (distributed-only): 6
+
+   Ep  Start          Sz  D  C   Esc   Contr OI     USD OI     Fwd7d
+  --------------------------------------------------------------------
+    1  2024-03-16      5  1  4   YES      -5.0%      -8.2%     -4.4%
+    2  2024-04-30      2  2  0    no      -2.3%      -5.0%     +0.7%
+    3  2024-06-11      7  6  1   YES      -2.6%      -6.2%     -1.0%
+    4  2024-08-02      3  1  2   YES      -5.7%      -6.6%    -13.2%
+    5  2024-08-27      3  2  1   YES      -1.4%      -2.4%     -0.5%
+    6  2024-10-03      1  1  0    no      -1.4%      -3.2%     +1.1%
+    7  2024-11-12      1  1  0    no      -2.9%      -5.2%     -5.4%
+    8  2024-12-05      5  3  2   YES      -2.3%      -4.6%     +2.5%
+    9  2025-01-07      6  2  4   YES      -3.2%      -7.0%     -4.4%
+   10  2025-02-22     11  8  3   YES      -2.5%      -4.8%    -20.2%
+   11  2025-03-30      5  3  2   YES      -3.6%      -9.5%    -13.3%
+   12  2025-05-23      2  2  0    no      -3.0%      -6.4%     -0.2%
+   13  2025-06-21      1  1  0    no      -2.0%      -6.8%     +6.9%
+   14  2025-08-01      5  5  0    no      -1.5%      -3.3%    +16.6%
+   15  2025-09-16      6  4  2   YES     -16.9%     -17.3%     -7.5%
+   16  2025-11-03      6  2  4   YES      -3.9%      -5.9%     -0.2%
+   17  2026-01-20      9  6  3   YES      -4.9%      -5.7%     +2.6%
+
+  --- CONTRACT OI Cross-Tab ---
+  OI-period episodes: 17
+
+                            Escalated   Not esc.   Total
+    OI drop >3%                     7          0       7
+    No OI drop                      4          6      10
+    Total                          11          6      17
+
+    With OI drop:    7/7 escalated (100.0%)
+    Without OI drop: 4/10 escalated (40.0%)
+
+    Fisher's exact: odds ratio=∞, p=0.0345
+    → SIGNIFICANT at 10% level.
+
+  --- USD OI Cross-Tab ---
+  OI-period episodes: 17
+
+                            Escalated   Not esc.   Total
+    OI drop >3%                    10          6      16
+    No OI drop                      1          0       1
+    Total                          11          6      17
+
+    With OI drop:    10/16 escalated (62.5%)
+    Without OI drop: 1/1 escalated (100.0%)
+
+    Fisher's exact: odds ratio=0.00, p=1.0000
+    → Not significant.
+
+============================================================
+TEST 2: 3-TIER SEVERITY ANALYSIS
+============================================================
+
+  Tier 1 (forced): n=4
+     Ep  Start         Peak                 Liq USD    7d Ret   OI drop    Min FR  Crash type
+    ------------------------------------------------------------------------------------------
+      4  2024-08-02    2024-08-05    $ 191,343,191    -13.2%     -5.7%  -0.0107%  macro/Yen carry
+      9  2025-01-07    2025-02-03    $ 171,304,681     -4.4%     -3.2%  -0.0251%  rotation→macro/2025 crash
+     15  2025-09-16    2025-10-10    $  29,101,458     -7.5%    -16.9%  -0.0131%  crypto-native/Q4 chop
+     17  2026-01-20    2026-01-31    $  72,733,056     +2.6%     -4.9%  -0.0164%  crypto-native/2026 crash
+
+  Tier 2 (voluntary): n=3
+     Ep  Start         Peak                 Liq USD    7d Ret   OI drop    Min FR  Crash type
+    ------------------------------------------------------------------------------------------
+      1  2024-03-16    2024-04-13    $  34,606,182     -4.4%     -5.0%  +0.0100%  crypto-native
+     11  2025-03-30    2025-04-06    $ 142,567,437    -13.3%     -3.6%  -0.0038%  macro/2025 crash continuation
+     16  2025-11-03    2025-11-04    $  29,548,006     -0.2%     -3.9%  +0.0005%  crypto-native/Q4 chop
+
+  Tier 3 (mild): n=10
+     Ep  Start         Peak                 Liq USD    7d Ret   OI drop    Min FR  Crash type
+    ------------------------------------------------------------------------------------------
+      2  2024-04-30    2024-05-01    $   9,508,050     +0.7%     -2.3%  -0.0001%  crypto-native
+      3  2024-06-11    2024-07-05    $  20,971,832     -1.0%     -2.6%  +0.0049%  crypto-native/rotation
+      5  2024-08-27    2024-09-06    $  17,502,626     -0.5%     -1.4%  -0.0011%  crypto-native
+      6  2024-10-03    2024-10-03    $   1,145,587     +1.1%     -1.4%  +0.0024%  crypto-native
+      7  2024-11-12    2024-11-12    $   3,102,888     -5.4%     -2.9%  +0.0100%  crypto-native/leverage
+      8  2024-12-05    2024-12-20    $   7,465,914     +2.5%     -2.3%  +0.0061%  crypto-native/rotation
+     10  2025-02-22    2025-03-10    $  44,197,777    -20.2%     -2.5%  -0.0042%  macro/2025 crash
+     12  2025-05-23    2025-05-25    $   2,660,135     -0.2%     -3.0%  -0.0007%  crypto-native
+     13  2025-06-21    2025-06-21    $   2,596,869     +6.9%     -2.0%  -0.0050%  crypto-native
+     14  2025-08-01    2025-08-01    $   6,167,295    +16.6%     -1.5%  -0.0037%  crypto-native
+
+                                 Tier 1      Tier 2      Tier 3
+  ------------------------------------------------------------
+  Count                               4           3          10
+  Med peak liq USD           $122,018,868  $34,606,182  $6,816,605
+  Mean peak liq USD          $116,120,596  $68,907,208  $11,531,897
+  Med 7d fwd return               -5.9%       -4.4%       +0.3%
+  Mean 7d fwd return              -5.6%       -6.0%       +0.1%
+  Med OI worst drop               -5.3%       -3.9%       -2.3%
+
+  --- Statistical Tests ---
+  Kruskal-Wallis (fwd_7d across 3 tiers): H=2.47, p=0.291
+  Kruskal-Wallis (peak_liq across 3 tiers): H=9.92, p=0.007
+  Mann-Whitney (Tier 1 < Tier 2 fwd_7d): U=6, p=0.571
+  → Not significant (n too small: 4 vs 3).
+
+============================================================
+TEST 3: 5-MIN OI VELOCITY PROFILES
+============================================================
+
+  Analyzing ±2h window at 5-min resolution around worst hourly OI drop.
+  Sharp cascade: >50% of total OI drop within first 30 min (6 bars)
+
+   Ep  Start         T  Worst time           4h Δ   Trough   T→min   30m%   60m%  Profile
+  ------------------------------------------------------------------------------------------
+    1  2024-03-16    2  2024-04-12 18:00    -8.7%    -8.8%    215m    15%    77%  gradual decline
+    4  2024-08-02    1  2024-08-05 02:00    -4.4%    -4.4%    240m    65%    78%  sharp cascade
+    9  2025-01-07    1  2025-02-03 14:00    -5.3%    -5.3%    240m    20%    59%  gradual decline
+   11  2025-03-30    2  2025-04-05 20:00    -3.4%    -3.7%    165m     1%   100%  gradual decline
+   15  2025-09-16    1  2025-10-10 22:00   -29.8%   -31.0%    165m    96%   100%  sharp cascade
+   16  2025-11-03    2  2025-11-04 20:00    -5.1%    -7.3%    220m    69%    75%  sharp cascade
+   17  2026-01-20    1  2026-01-31 19:00   -11.8%   -11.8%    240m    72%    93%  sharp cascade
+
+  --- Tier comparison ---
+                                 Tier 1      Tier 2
+  --------------------------------------------------
+  Count                               4           3
+  Median 30m concentration          69%         15%
+  Median trough depth             -8.5%       -7.3%
+  Sharp cascades                      3           1
+
+  Overall: 4 sharp cascades, 3 gradual declines out of 7 episodes
+
+============================================================
+VERDICT
+============================================================
+
+  Test 1: Contract OI dramatically improves escalation prediction
+  vs USD OI (which fires for nearly all episodes, giving no discrimination).
+  The key comparison is the Fisher's exact p-values above.
+
+  Test 2: 3-tier severity structure tested. Forced liquidation episodes
+  (contract OI drop + negative funding) should show worst outcomes.
+  Statistical significance limited by small n per tier.
+
+  Test 3: Velocity profiles distinguish forced vs voluntary OI drops.
+  Sharp cascades (>50% in 30min) suggest forced liquidation;
+  gradual declines suggest voluntary de-risking.

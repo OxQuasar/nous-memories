@@ -1,0 +1,14 @@
+## Task 1: TradFi + BTC Daily Data Pull
+
+### Output
+- File: `memories/mev/links/data/tradfi_daily.csv`
+- Script: `memories/mev/links/pull_tradfi.py`
+
+### Summary
+- 1539 rows, 2022-01-01 → 2026-03-19
+- 12 columns: eth_price, btc, eth_btc, sp500, vix, usdjpy, dxy, tnx, gold, fed_funds, yield_spread, cpi
+- All yfinance tickers pulled successfully (7 tickers, 1538 market days)
+- FRED: FEDFUNDS (50 monthly), T10Y2Y (1099 daily), CPIAUCSL (50 monthly)
+- Missing values: only 2 rows (Jan 1-2 2022, weekend before first market day) for market-based columns — 0.1%, well under 5% threshold
+- Forward-fill applied for weekends/holidays and monthly→daily expansion
+- eth_btc derived ratio computed (ETH/BTC)

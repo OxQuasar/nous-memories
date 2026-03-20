@@ -1,0 +1,82 @@
+Step 2 — Full Aave Liquidation Pull + Reserve-Price Lag
+========================================================
+
+Generated: 2026-03-20 UTC
+
+Scripts:
+  - reserve_price_lag.py (Task A)
+  - liquidation_pull.py (Task B)
+
+Output files:
+  - reserve_price_lag.csv (11 lag rows)
+  - liquidations_raw.csv (65,382 raw events)
+  - liquidations_full.csv (65,382 enriched events, 16 columns)
+  - block_timestamps.json (5,017 reference points, rest interpolated)
+  - liquidation_checkpoint.json (resume state)
+
+Task A: Reserve-Price Lag Results
+---------------------------------
+Reserve_change_ntv vs price_return: max |r| = 0.044 at lag=3
+Net_flow_ntv vs price_return: max |r| = 0.036 at lag=-5
+Both signals equally weak. Neither exchange reserve changes nor net flows
+have meaningful predictive power for daily price returns.
+
+Task B: Full Liquidation Pull Results
+-------------------------------------
+TOTALS:
+  65,382 liquidation events across Aave v2 + v3
+  v2: 41,264 events (63.1%)
+  v3: 24,118 events (36.9%)
+  Date range: 2022-01-14 to 2026-03-20
+
+CATEGORY BREAKDOWN:
+  real (ETH-like → stablecoin): 38,055 (58.2%)
+  phantom (LST → WETH):            161 (0.2%)
+  other:                         27,166 (41.5%)
+
+PHANTOM DETAIL (161 events total):
+  stETH → WETH:  108 (mostly v2)
+  wstETH → WETH:  47 (v3)
+  weETH → WETH:    3
+  rETH → WETH:     2
+  cbETH → WETH:    1
+
+TOP COLLATERAL (by event count):
+  WETH: 32,071 (49.1%) — dominant
+  stETH: 7,036 (10.8%) — Lido staked ETH
+  WBTC: 5,412 (8.3%)
+  LINK: 4,971 (7.6%)
+  USDC: 3,961 (6.1%) — stablecoin-on-stablecoin
+
+TOP DEBT:
+  USDC: 27,782 (42.5%)
+  USDT: 17,180 (26.3%)
+  DAI: 7,094 (10.9%)
+  WETH: 2,536 (3.9%)
+
+INFRASTRUCTURE:
+  19,395 unique liquidated users
+  570 unique liquidators (highly concentrated)
+
+KEY FINDINGS:
+1. Phantom liquidations are EXTREMELY rare (0.2% of all events).
+   LST→WETH positions rarely get liquidated because LST/ETH
+   price ratios stay tight (typically within 1-2%). The vast majority
+   of phantom positions survive crashes.
+
+2. The "other" category (41.5%) is dominated by non-ETH collateral
+   (LINK, WBTC, AAVE, UNI) liquidated against stablecoins. These
+   are real directional bets on altcoins, not phantom positions.
+
+3. Liquidator concentration: 570 liquidators for 65K events means
+   a small number of bots dominate the liquidation market.
+
+4. Old WETH-only pull found 27,702 events. Full pull found 65,382.
+   The WETH-only view captured 49% of collateral events — roughly
+   matching the 49.1% WETH share by event count.
+
+COMPARISON TO OLD PULL:
+  Old (WETH-only collateral): 27,702 events
+  New (all collateral): 65,382 events (2.36x more)
+  The additional events are mostly altcoin collateral (LINK, WBTC, AAVE)
+  liquidated against stablecoin debt — real directional positions.

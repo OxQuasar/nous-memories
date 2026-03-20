@@ -1,0 +1,101 @@
+Step 1 Results: DEX Liquidity Depth for LST Tokens
+====================================================
+Date: 2026-03-20 | ETH price: $2,136
+
+METHOD
+------
+Used Paraswap aggregator API to simulate sells of increasing sizes for each LST→WETH.
+Paraswap routes through ALL available DEX liquidity (Uniswap V3, Curve, Balancer, 
+SushiSwap, etc.) simultaneously, giving real-world aggregated depth. Adaptive bisection
+refinement used to find the exact liquidity cliff for each token.
+
+RESULTS — Sorted by cascade severity
+--------------------------------------
+
+Token    | DEX Capacity  | USD to 2% depeg | Phantom Exposure | Cascade Ratio
+---------|---------------|-----------------|------------------|---------------
+ETHx     | ~$21K         | EXHAUSTED <1%   | $100M            | ~4,681x
+cbETH    | ~$390K        | ~$260K          | $150M            | ~583x
+osETH    | ~$976K        | ~$388K          | $332M            | ~856x
+rETH     | ~$1.0M        | ~$547K          | $200M            | ~366x
+rsETH    | ~$2.0M        | EXHAUSTED <0.5% | $880M            | ~434x (at exhaust)
+wstETH   | ~$5.7M        | ~$4.7M          | $1,700M          | ~363x
+weETH    | ~$13.9M       | ~$11.3M         | $230M            | ~20x
+
+KEY FINDINGS
+------------
+
+1. EXTREME LIQUIDITY-EXPOSURE MISMATCH
+   Every LST has a cascade ratio >20x — the phantom exposure behind each token's
+   depeg threshold massively exceeds the selling needed to trigger it.
+   
+   Worst cases:
+   - ETHx: $100M of phantom exposure, $21K of DEX liquidity (4,681x)
+   - osETH: $332M phantom, <$1M DEX capacity (856x)
+   - cbETH: $150M phantom, $390K capacity (583x)
+   - rsETH: $880M phantom, $2M capacity — pool EXHAUSTS before reaching 1% depeg (434x)
+
+2. LIQUIDITY CLIFF STRUCTURE — NOT GRADUAL
+   Most tokens show a sharp cliff where the aggregator cannot find any route:
+   - weETH: smooth up to 5000 ETH (0.5% depeg), then jumps to 13.4% at 7500 ETH
+   - wstETH: smooth up to 2000 ETH (0.09% depeg), then jumps to 7.6% at 2750 ETH
+   - rsETH: smooth up to 950 ETH (0.44% depeg), then NO ROUTE at 969 ETH
+   - osETH: smooth up to 100 ETH (0.12% depeg), then 9.3% at 500 ETH
+   
+   This means DEX liquidity is concentrated in a narrow band. Once exhausted,
+   there is effectively NO remaining depth — price falls off a cliff.
+
+3. TIER 3 TOKENS ARE HAIR-TRIGGER CANARIES
+   - osETH: $388K of selling produces 2% depeg. $332M of phantom positions sit behind it.
+   - ETHx: $21K of selling exhausts ALL liquidity. $100M of phantom positions.
+   - These tokens would crack first in any LST selling event.
+
+4. wstETH IS NOT DEEP
+   Despite being the "bluest chip" LST, wstETH only has ~$5.7M of aggregated DEX
+   capacity. The Curve stETH/ETH pool (which used to hold >$1B) now has only ~$40M
+   TVL (~20K ETH per side). Most wstETH liquidity has migrated to lending protocols
+   (Aave, Spark), not DEXes.
+   
+   $4.7M of selling produces 2% depeg in wstETH. $1.7B of phantom exposure sits
+   behind it. Cascade ratio: 363x.
+
+5. weETH IS THE DEEPEST BUT STILL VULNERABLE  
+   weETH has the deepest DEX liquidity (~$13.9M via Curve StableNg + Uniswap V3).
+   $11.3M produces 2% depeg. But $230M of phantom positions sit at <1% depeg —
+   a 20x cascade ratio. This is the most "efficient" attacker target: the largest
+   phantom exposure relative to trigger cost.
+
+6. DEX ROUTING STRUCTURE
+   Small sells route through Uniswap V3 (concentrated liquidity, tight spread).
+   Larger sells add Curve pools. At the limit, the router adds SushiSwap, UniswapV2,
+   and token-specific unwrap paths (wstETH→stETH→Curve). This shows the liquidity
+   is fragmented — no single deep pool.
+
+IMPLICATION FOR CASCADE MECHANICS
+----------------------------------
+
+The cascade vulnerability is confirmed and quantified:
+
+A. TRIGGER COST: As little as $21K (ETHx) to $11.3M (weETH) to produce meaningful depeg
+B. ACTIVATION: Depeg triggers phantom position liquidations (HF drops below 1.0)
+C. AMPLIFICATION: Liquidations sell more LST collateral, deepening the depeg
+D. The cascade ratio (20x-4,681x) means the activated selling pressure vastly
+   exceeds the liquidity that absorbed the original trigger
+
+The self-sustaining cascade threshold: once the initial selling exhausts DEX
+liquidity (the cliff), liquidation selling has ZERO remaining depth to absorb it.
+Every subsequent liquidation directly moves the price toward zero.
+
+DATA FILES
+----------
+- lst_liquidity_depth.csv: 133 rows of detailed quote data per token/amount
+- lst_depth_summary.csv: per-token summary with thresholds and cascade ratios
+
+CAVEATS
+-------
+- Paraswap refuses quotes beyond ~33% price impact ("NO ROUTE"), so capacity may be
+  slightly higher than reported but with catastrophic slippage
+- These are instantaneous liquidity snapshots; real cascades unfold over minutes/hours
+  allowing JIT liquidity and arbitrageurs — but also allowing MORE panic selling
+- Phantom exposure numbers are from the position topology investigation; actual
+  exposure may shift as users adjust positions

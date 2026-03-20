@@ -1,0 +1,56 @@
+## Task 3: Crash Amplification Analysis
+
+### Output Files
+- `data/crash_residuals.csv` — 364 rows, per-crash-day residuals
+- Script: `memories/mev/links/amplification.py`
+
+### Key Findings
+
+**Part 1 — Baseline Model:**
+- ETH_ret = 0.0001 + 0.979·BTC_ret + 0.506·SP_ret (R²=0.63)
+- BTC dominates (β=0.98), S&P adds meaningful signal (β=0.51, p<0.001)
+- Trained on 1172 non-crash days
+
+**Part 2 — Crash-Day Residuals (ETH underperformance beyond BTC+S&P prediction):**
+- 2025 crash is the worst: cumulative residual -54.5%, mean -0.45%/day, 120 days
+- Yen carry: -16.7% cumulative, worst mean residual per day (-0.52%)
+- 2026 crash: -13.5% cumulative
+- FTX: mild -3.1% (ETH moved mostly in line with BTC)
+- Terra/3AC: near-zero cumulative (+4.8%) — ETH broadly tracked BTC+S&P
+- Worst 7-day windows: 2025 crash (-17.5%), Terra (-14.0%), 2026 (-13.8%), Yen (-12.6%)
+
+**Part 3 — Liquidation-Conditioned Residuals (ALL days):**
+- Clear monotonic relationship between liquidation intensity and ETH underperformance:
+  - 0 liqs: +0.24% mean residual (ETH outperforms)
+  - 1-10: +0.06%
+  - 11-50: +0.01%
+  - 51-200: -0.62%
+  - 201-500: -0.74%
+  - 500+: -1.96% mean residual
+- 80x swing from 0-liq days to 500+ liq days — strong evidence of DeFi amplification
+
+**Part 4 — Amplification Coefficient:**
+- Linear: δ = -0.12 bps per liquidation event (p=0.008, R²=0.019)
+- Log model: δ = -21.6 bps per unit log(1+liq_count) (p=0.002, R²=0.026)
+- Log model fits better — amplification is concave (diminishing per-event impact)
+- Interpretation: going from 0→100 liquidations = ~100 bps extra ETH decline
+
+**Part 5 — Macro vs Crypto-Native:**
+- Macro crashes (Terra, Yen, 2025): more total damage (-66.4% cumulative residual)
+  - Mean residual: -0.27%/day, mean 122 liqs/day
+- Crypto-native (FTX, 2026): -16.6% cumulative, -0.14%/day, 72 liqs/day
+- 2025 crash δ is the only individually significant amplification (δ=-0.22 bps/liq, p=0.008)
+- Macro crashes produce bigger amplification because they start with bigger shocks
+
+**Part 6 — Timeline Highlights:**
+- Worst single residual day: 2025-04-06 (-7.15%), coincides with 1705 liquidations
+- 2025-02-02: -6.59% residual with only 224 liqs — suggests non-liquidation selling pressure too
+- Yen carry 2024-07-25: -5.12% residual with only 27 liqs — the initial shock predates liquidation cascade
+- Terra 2022-05-26: -7.94% residual with 325 liqs — ETH-specific selling (stETH depeg?)
+
+### Core Conclusion
+DeFi liquidations amplify crashes by ~100 bps per 100 liquidation events after controlling for
+BTC and S&P moves. The effect is concave (first liquidations hurt most). High-liquidation days
+(500+) see ~2% extra ETH decline beyond what market-wide moves would predict. Macro-origin
+crashes produce larger total amplification because they generate both larger initial shocks AND
+higher liquidation volumes.

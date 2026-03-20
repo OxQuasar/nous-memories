@@ -1,0 +1,40 @@
+Step 1 — Exchange Flow Epoch Analysis Results
+===============================================
+
+Generated: 2026-03-20 UTC
+Script: memories/mev/dynamics/exchange_flow_epochs.py
+Input: exchange_flows.csv (1538 days), eth_price_1h.csv (resampled to daily)
+
+Output files:
+  - daily_flows.csv (1538 rows, 2022-01-01 to 2026-03-18)
+  - epoch_flow_summary.csv (11 epochs)
+  - flow_price_lag.csv (lags -5 to +5)
+
+Key Findings
+------------
+
+1. EXCHANGE RESERVE TREND:
+   - Reserves started at ~13.35M ETH (Jan 2022), peaked ~18.7M (mid-2025), now ~15.7M.
+   - Largest reserve increase: 2025_crash (+3.96M ETH, +29%) — massive inflows during crash.
+   - Largest reserve decrease: 2025_q4_chop (-4.2M ETH, -23%) — heavy withdrawals.
+
+2. NET FLOW PATTERNS BY REGIME:
+   - Bear markets show mixed signals: 2022_bear_1 had net inflow (selling), 2022_bear_2 had massive net outflow (+2.2M ETH).
+   - Bull runs: 2024_bull had net inflow (-906K ETH, reserves grew) — selling into strength.
+   - 2025_recovery: strong outflow (+3.2M ETH) — accumulation during recovery.
+   - 2025_q4_chop: strongest avg daily outflow (39.7K ETH/day) despite price decline — divergence.
+
+3. FLOW-PRICE CORRELATION WITHIN EPOCHS:
+   - Correlations are weak across all epochs (max |0.17|).
+   - 2022_bear_1: +0.17 (outflows on up days), 2024_bull: -0.16 (inflows on up days).
+   - No epoch shows a dominant same-day flow-price relationship.
+
+4. FLOW-PRICE LEAD/LAG (full dataset):
+   - All correlations extremely weak (|r| < 0.04).
+   - Slight positive at lag=-5 (0.036) and lag=+2 (0.036) — no actionable lead/lag signal.
+   - Net exchange flows do NOT predict short-term price returns at daily resolution.
+
+5. STRUCTURAL OBSERVATION:
+   - The disconnect between net flows and reserves (net_flow_ntv vs reserve_change_ntv)
+     suggests other mechanisms (staking, bridges, contract interactions) dominate reserve changes.
+   - Net flow is not a reliable standalone signal for price direction at daily frequency.

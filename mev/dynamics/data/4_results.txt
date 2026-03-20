@@ -1,0 +1,60 @@
+Step 4 — Protocol Metrics + Recharge Model Test
+=================================================
+
+Generated: 2026-03-20 UTC
+Script: memories/mev/dynamics/protocol_metrics.py
+Sources: DefiLlama API (aave-v2, aave-v3), eth_price.csv, epoch_liquidation_summary.csv
+
+Output files:
+  - protocol_metrics_daily.csv (1540 rows, 2022-01-01 to 2026-03-20)
+  - protocol_epoch_summary.csv (11 epochs with boundary values)
+
+KEY FINDINGS
+============
+
+1. RECHARGE MODEL — WEAK CORRELATION (r = 0.29):
+   Simple pre-crash borrowed_start (USD) vs total real liquidation volume: r = 0.289.
+   Pre-crash utilization is slightly better: r = 0.585 but n=6 is too small for significance.
+   Pre-crash leverage level alone does NOT predict liquidation volume.
+   
+   Why it fails:
+   - 2025_q4_chop had $24.1B borrowed (highest) but only $217M liquidated
+   - 2022_bear_1 had $6.0B borrowed (3rd lowest) but $229M liquidated
+   - The crash MAGNITUDE (how far price drops) matters as much as leverage level
+   - It's an interaction: leverage × crash_depth → liquidation volume
+
+2. AAVE GROWTH — PROTOCOL SCALED 4× IN 4 YEARS:
+   - Jan 2022: $8.5B TVL, $6.0B borrowed (v2 only)
+   - Mar 2026: $20.4B TVL, $13.3B borrowed (mostly v3)
+   - Peak: $32.8B TVL, $24.4B borrowed (Aug 2025, before Q4 chop)
+   - Borrowed in ETH terms: 1.6M ETH (2022) → 6.1M ETH (2026) = 3.8× real growth
+
+3. UTILIZATION DYNAMICS — TWO DISTINCT PATTERNS:
+   
+   a) Classic crashes (2022_bear_1, 2025_crash, 2025_q4_chop):
+      Utilization DROPS (-2 to -10pp). Borrowing falls faster than deposits.
+      Borrowers deleverage; depositors are stickier. This is healthy deleveraging.
+   
+   b) Anomalous crashes (2022_bear_2, 2024_consolidation):
+      Utilization RISES (+4 to +6pp). Deposits flee faster than borrowers.
+      2024_consolidation: borrowing actually INCREASED (+15.3%) during -39% crash!
+      This suggests forced refinancing or reluctance to close positions.
+
+4. 2024_CONSOLIDATION IS AN OUTLIER:
+   - Only crash where borrowing increased (+15.3%)
+   - Highest liquidation intensity ($774M per 1% of price decline)
+   - Single-day concentration: Aug 5 produced 62% of epoch volume
+   - Yen carry unwind was external shock hitting maximally leveraged positions
+
+5. DELEVERAGING ASYMMETRY:
+   - Bull recoveries add leverage fast: 2025_recovery +177% borrowed in 136 days
+   - Crashes remove leverage slower: 2025_crash -34% borrowed in 113 days
+   - Leverage rebuilds faster than it unwinds (contradicts the "fast deleverage" hypothesis)
+   - Exception: 2022_bear_1 deleveraged -69% (truly wiped the system)
+
+6. UTILIZATION EQUILIBRIUM:
+   - System gravitates toward 38-42% utilization
+   - Crashes pull it down slightly, recoveries push it back up
+   - The 2022_bear_1 was the only event that broke below 30%
+   - Post-2024, utilization stays remarkably stable even through crashes
+   - Avg crash Δutil = -0.9pp, avg bull Δutil = +1.1pp — nearly symmetric
