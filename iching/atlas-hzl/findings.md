@@ -2,6 +2,7 @@
 
 > The shell projection operationalized: 納甲 branches on all 6 lines, evaluated through 六親 against the palace element, gated by seasonal strength and 日辰.
 > All statistics are exhaustive enumerations over the relevant state spaces.
+> **Bit convention A:** b₀ = L1 (bottom), b₅ = L6 (top).
 
 **Epistemological key:**
 - **[proven]** — algebraically necessary, follows from definitions

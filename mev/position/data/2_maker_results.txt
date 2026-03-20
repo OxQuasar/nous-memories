@@ -1,0 +1,83 @@
+Step 2 Results: Maker/Sky ETH Vault Topology Scan
+==================================================
+Date: 2026-03-20
+ETH reference price: $2,202.39
+Source: On-chain via Multicall3 (CdpManager + Vat + Spot)
+Runtime: ~204s
+
+Vault Summary
+-------------
+Total CDPs ever created: 32,017
+ETH-related CDPs found: ~21,000
+Active ETH vaults (ink > 0, art > 0): 852
+
+Per-ilk breakdown:
+  ETH-A:      671 vaults  240,549 ETH ($530M)  $164M debt  (145% min ratio)
+  ETH-B:       26 vaults    8,076 ETH ($18M)    $8.1M debt  (130% min ratio)
+  ETH-C:      109 vaults  447,620 ETH ($986M)  $311M debt  (170% min ratio)
+  WSTETH-A:    23 vaults   18,650 ETH ($41M)   $20M debt   (150% min ratio)
+  WSTETH-B:    23 vaults   24,516 ETH ($54M)   $13M debt   (175% min ratio)
+  TOTAL:      852 vaults  739,411 ETH ($1.63B)  $516M debt
+
+All Maker ETH vaults are "real" by construction — debt is always DAI/USDS,
+never ETH. No phantom/looping positions are possible.
+
+Liquidation Price Distribution
+------------------------------
+  Within  5% below ($2,092-$2,202):    1 vault    $28K debt
+  Within 10% below ($1,982-$2,202):    3 vaults   $167K debt
+  Within 20% below ($1,762-$2,202):   27 vaults   $7.6M debt
+  Within 30% below ($1,542-$2,202):   69 vaults   $27.4M debt
+  Within 50% below ($1,101-$2,202):  163 vaults   $323M debt
+
+Key density clusters (bins with >$10M debt):
+  $1,400-$1,450:  $97M  (Vault 22025, 100k ETH, 36% below)
+  $1,300-$1,350: $157M  (Vault 28104, 138k ETH, 41% below)
+  $1,050-$1,100: $139M  (Vault 31214, 216k ETH, 52% below)
+  $1,650-$1,700:  $13M  (27191, smaller vaults, 25% below)
+  $1,150-$1,200:  $12M  (27271, 10k ETH, 47% below)
+
+Top 5 Vaults by Debt
+---------------------
+  1. Vault 31214: 216,345 ETH ($476M col), $135M debt, liq=$1,064 (52% below)
+  2. Vault 28104: 137,908 ETH ($304M col), $109M debt, liq=$1,340 (39% below)
+  3. Vault 22025: 100,394 ETH ($221M col),  $97M debt, liq=$1,400 (36% below)
+  4. Vault 30009:  55,000 ETH ($121M col),  $43M debt, liq=$1,343 (39% below)
+  5. Vault  7605:  54,850 ETH ($121M col),  $16M debt, liq=$433  (80% below)
+
+Maker vaults are extremely conservatively leveraged — the largest vaults
+are 36-52% below current price. No significant positions within 20%.
+
+Comparison: Maker vs Aave v3 Real Wall
+---------------------------------------
+  Band  |  Aave Real     |  Maker         |  Combined      | Maker %
+  ------|----------------|----------------|----------------|--------
+   5%   |  $312,790      |  $27,636       |  $340,426      |   8.1%
+  10%   |  $9,197,255    |  $166,951      |  $9,364,205    |   1.8%
+  20%   |  $72,726,140   |  $7,561,300    |  $80,287,441   |   9.4%
+  30%   |  $571,995,509  |  $27,381,042   |  $599,376,551  |   4.6%
+  50%   |  $1,573,314,487|  $322,517,762  |  $1,895,832,249|  17.0%
+
+Key Finding: Maker Does NOT Change the Near-Price Picture
+---------------------------------------------------------
+Maker adds only $28K within 5% and $167K within 10% — negligible.
+At 20%, Maker adds $7.6M to Aave's $73M (10% contribution).
+Maker only becomes significant at 50% below ($323M vs Aave's $1.57B).
+
+The combined real wall (Aave + Maker) within 20% of current price is
+$80M — still thin. The first meaningful concentration is at 30-50%
+below, where Aave contributes $1.0B and Maker adds $315M.
+
+Implication for Backtest
+------------------------
+Maker is not needed for the historical backtest of near-price walls.
+Its positions are too conservatively leveraged to matter at the
+5-20% stress episode scale. However, for deep-crash scenarios
+(>30% drop), Maker's three mega-vaults (31214, 28104, 22025) with
+$342M combined debt at $1,064-$1,400 could be significant.
+
+Decision: Proceed Aave-only for historical backtest. Maker's
+contribution at relevant proximity bands (<20%) is <10% of total.
+
+Output: memories/mev/position/data/maker_vaults.csv
+Columns: cdp_id, ilk, ink_eth, debt_dai, liq_price, mat

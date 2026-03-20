@@ -67,7 +67,7 @@ Three probes converged:
 **The theoretical arc is complete across 8 phases.** The I Ching is the unique rigid complement-respecting surjection F₂³ → Z₅ (Phase 1), existing only at (n,p) = (3,5) (Phase 2), with an 11%/89% algebra/text boundary (Phase 3), a ~16-dim thematic manifold inside that boundary (Phase 4), functioning as a judgment instrument (Phase 5), connected to wider mathematics through Route B (Phase 6), internally decomposed into two perpendicular axes with a complete forcing chain (Phase 7), and confirmed as the unique canonical edge typing of Q₆ — not projecting any external system (Phase 8).
 
 **What remains:**
-- Empirical: do natural systems exhibit the constraint class {GMS + complement + Z₅}? (timescale ratios, regime transition data — different investigation, different methods)
+- Empirical: do natural systems exhibit the constraint class {GMS + complement + Z₅}? Framework in `empirical/` with 10 probes. In-house probes first: 梅花易數 internal consistency (Probe 8a) and 皇極經世 chronology (Probe 4). The 梅花易數 provides a fully deterministic algorithm (date→hexagram→體用→五行 relation→prediction), 10 worked examples, 體用 decision rules for 18 domains, and the 納甲 line-level element assignment.
 - Refinements: Z₅ proximity inversion mechanism (R283), algebraic discriminants (R284), directed subgraph trapping (R289)
 - New direction: shift spaces as hypercube edge colorings — general theory of embedding shift constraints in Q_n
 

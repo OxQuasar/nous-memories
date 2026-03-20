@@ -2,6 +2,7 @@
 
 > The 梅花易數 interpretive framework projected onto the 384-state space (64 hexagrams × 6 動爻 positions).
 > All statistics are exhaustive enumerations, not samples. p-values test structural hypotheses against null distributions.
+> **Bit convention A:** b₀ = bottom line, b₂ = top line.
 
 **Epistemological key:** Each finding is marked:
 - **[proven]** — algebraically necessary, follows from definitions

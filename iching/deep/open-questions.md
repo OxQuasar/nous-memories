@@ -1,5 +1,7 @@
 # Open Questions
 
+> **Bit convention A:** b₀ = bottom line, b₂ = top line.
+
 ## Central thread
 
 Structure → incompleteness → curvature → specificity → meaning.

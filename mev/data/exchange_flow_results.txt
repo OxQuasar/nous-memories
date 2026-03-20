@@ -1,0 +1,124 @@
+EXCHANGE INFLOW/OUTFLOW AROUND LIQUIDATION EPISODES
+Source: CoinMetrics Community API | Asset: ETH
+Classification: M1-P97 | Episodes: 14d gap clustering
+
+Flow data: 2022-01-01 to 2026-03-18 (1538 days)
+Mean daily net flow: $-30.6M
+Median daily net flow: $-15.2M
+Z-score range: [-4.82, 4.27]
+Positive net flow = net inflow to exchanges = selling pressure
+
+============================================================
+TEST 1: FLOW SIGNATURE AROUND EPISODES (±7d)
+============================================================
+
+  Start        Size Type               Pre Z   Dur Z  Post Z      Net USD/d
+  ----------------------------------------------------------------------
+  2022-01-24      1 non-escalating     -0.07   -0.59   +0.31       $-121.1M
+  2022-02-11      2 non-escalating     -0.45   +0.41   -0.35       $+107.1M
+  2022-04-06      4 non-escalating     -0.02   +0.38   +0.40        $-44.9M
+  2022-05-05     17 escalating         +0.37   +0.09   -0.06        $+44.9M
+  2022-09-13      1 non-escalating     +0.17   +3.08   +0.52       $+806.0M
+  2022-11-08      2 non-escalating     +0.10   -2.84   -0.48       $-419.1M
+  2023-03-09      1 pure-concentrated   +0.17   -0.39   -0.70        $-37.5M
+  2023-06-14      1 pure-concentrated   +0.37   -0.21   -0.38        $-57.4M
+  2023-08-17      1 pure-concentrated   +0.04   +0.86   -0.85        $+27.4M
+  2023-12-20      5 escalating         +0.14   +0.06   +0.20         $-1.1M
+  2024-03-16      5 escalating         +0.92   -0.13   +0.03         $-6.7M
+  2024-04-30      2 non-escalating     -0.10   +0.09   +0.15         $-2.2M
+  2024-06-11      7 escalating         +0.16   +0.18   +0.74        $-27.9M
+  2024-08-02      3 escalating         +0.08   -0.60   -0.20        $-52.9M
+  2024-08-27      3 escalating         +0.22   +0.63   +0.05        $+84.6M
+  2024-10-03      1 non-escalating     -0.38   -0.26   -0.01        $-15.5M
+  2024-11-12      1 non-escalating     +0.16   +1.09   -0.18       $+227.6M
+  2024-12-05      5 escalating         -0.79   +0.01   -0.01         $-1.8M
+  2025-01-07      6 escalating         -0.01   +0.25   -1.37        $+33.4M
+  2025-02-22     11 escalating         -0.47   +0.29   -0.00        $+32.9M
+  2025-03-30      5 escalating         -0.05   +0.26   +0.41         $-2.2M
+  2025-05-23      2 non-escalating     -0.39   +0.90   +0.07       $+120.4M
+  2025-06-21      1 non-escalating     +0.30   -0.63   +0.26       $-190.7M
+  2025-08-01      5 non-escalating     -0.82   -0.11   -0.03       $-223.9M
+  2025-09-16      6 escalating         +0.36   +0.03   +0.29       $-213.0M
+  2025-11-03      6 escalating         -0.02   +0.38   -0.09        $-16.6M
+  2026-01-20      9 escalating         -0.39   -0.09   +0.03        $-36.8M
+
+  --- Group medians ---
+  Type                 n    Pre Z    Dur Z   Post Z    Net USD/d
+  -------------------------------------------------------
+  escalating          13    +0.08    +0.09    +0.03 $      -2.2M
+  non-escalating      11    -0.07    +0.09    +0.07 $     -15.5M
+  pure-concentrated    3    +0.17    -0.21    -0.70 $     -37.5M
+
+  --- Escalating vs Non-escalating (during-episode z-score) ---
+  Escalating:     n=13, median=+0.09
+  Non-escalating: n=11, median=+0.09
+  Mann-Whitney U=70, p=0.9538
+
+  --- Escalating vs Non-escalating (pre-episode z-score) ---
+  Escalating:     n=13, median=+0.08
+  Non-escalating: n=11, median=-0.07
+  Mann-Whitney U=90, p=0.2970
+
+============================================================
+TEST 2: FLOW ON DISTRIBUTED DAYS — TP vs FP
+============================================================
+
+  Distributed days with flow data: 75 / 75
+
+  Net flow z-score on event day:
+    True positive (decline):
+      n=51, z-score median=+0.31, mean=+0.13
+      Net flow median=$+28.9M, mean=$-11.4M
+    False positive (no decline):
+      n=24, z-score median=+0.25, mean=+0.11
+      Net flow median=$-18.0M, mean=$-31.2M
+
+  Mann-Whitney (z-score): U=584, p=0.7548
+  Spearman (z-score vs fwd_7d): r=0.057, p=0.6300
+  Mann-Whitney (raw net USD): U=660, p=0.5895
+
+============================================================
+TEST 3: ABSORPTION SIGNATURE — NET INFLOW COMPARISON
+============================================================
+
+  Prediction: non-escalating (absorbed) episodes should show
+  elevated net inflows (positive = buyers absorbing) vs escalating.
+
+  During-episode mean net flow (USD/day):
+    Escalating:     n=13, median=$-2.2M
+    Non-escalating: n=11, median=$-15.5M
+    Mann-Whitney U=76, p=0.8167
+
+  → Escalating episodes show HIGHER net inflows (more selling to exchanges)
+  → Consistent with: exchange selling pressure precedes/accompanies cascades
+
+============================================================
+TEST 4: FLOW TIMING RELATIVE TO CONCENTRATED SPIKE
+============================================================
+
+  Escalating episodes analyzed: 13
+
+  Peak net inflow day relative to first concentrated spike:
+
+  Ep Start         1st Conc    Peak Flow    Gap     Peak Net
+  ----------------------------------------------------------
+  2022-05-05     2022-05-12   2022-05-23   +11d $    +524.7M
+  2023-12-20     2023-12-20   2023-12-22    +2d $    +368.0M
+  2024-03-16     2024-03-16   2024-04-02   +17d $    +207.3M
+  2024-06-11     2024-07-05   2024-07-01    -4d $    +202.9M
+  2024-08-02     2024-08-04   2024-08-01    -3d $    +110.2M
+  2024-08-27     2024-09-06   2024-09-03    -3d $    +674.7M
+  2024-12-05     2024-12-09   2024-12-11    +2d $    +800.4M
+  2025-01-07     2025-01-13   2025-02-02   +20d $    +326.6M
+  2025-02-22     2025-02-25   2025-02-23    -2d $    +455.5M
+  2025-03-30     2025-04-06   2025-04-01    -5d $     +86.4M
+  2025-09-16     2025-09-22   2025-09-14    -8d $    +306.3M
+  2025-11-03     2025-11-04   2025-11-18   +14d $    +319.2M
+  2026-01-20     2026-01-31   2026-01-26    -5d $    +200.8M
+
+  Peak flow timing:
+    Before conc spike: 7
+    Same day:          0
+    After conc spike:  6
+    Median gap: -2.0 days
+  → Peak exchange inflow tends to PRECEDE concentrated spike

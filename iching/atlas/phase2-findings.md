@@ -1,5 +1,7 @@
 # Atlas Phase 2 — Findings
 
+> **Bit convention A:** b₀ = L1 (bottom), b₅ = L6 (top). Trigrams: b₀ = bottom line, b₂ = top line.
+
 ## Iteration 1: Cross-hexagram Network (II.E)
 
 ### Complement pairs on Z₅×Z₅

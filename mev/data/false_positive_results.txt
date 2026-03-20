@@ -1,0 +1,187 @@
+FALSE POSITIVE ANATOMY — DISTRIBUTED EPISODES
+Classification: M1-P97 (180d window, ≥97th pctl → concentrated)
+
+Total days: 1539
+High-liquidation days: 113
+  Concentrated: 38
+  Distributed:  75
+  Distributed with fwd_7d: 75
+  → True positives (decline): 51 (68.0%)
+  → False positives (no decline): 24 (32.0%)
+
+============================================================
+TEST 1: POSITION WITHIN EPISODE
+============================================================
+
+  False positives (fwd_7d ≥ 0): n=24
+  True positives  (fwd_7d < 0): n=51
+
+  Episode position (0=start, 1=end):
+    False pos: n=24, median=+50.00%, mean=+50.68%
+    True pos: n=51, median=+40.00%, mean=+41.38%
+    Mann-Whitney U=700, p=0.3156
+
+  Single-day episode distributed days: 12
+    Fwd 7d: median=-4.79%, %neg=58.3%
+
+============================================================
+TEST 2: TRAILING DRAWDOWN MAGNITUDE
+============================================================
+
+  --- Trailing 7d return ---
+    False pos: n=24, median=-10.15%, mean=-10.00%
+    True pos: n=51, median=-7.97%, mean=-8.61%
+    Mann-Whitney U=554, p=0.5137
+
+  --- Trailing 14d return ---
+    False pos: n=24, median=-9.47%, mean=-9.30%
+    True pos: n=51, median=-9.01%, mean=-8.97%
+    Mann-Whitney U=609, p=0.9773
+
+  --- By trailing 7d drawdown bucket ---
+    Extreme (<-15%): n=16, fwd_7d median=-7.80%, %neg=81.2%
+    Moderate (-15% to 0): n=50, fwd_7d median=-0.64%, %neg=62.0%
+    Positive (≥0): n=9, fwd_7d median=-5.38%, %neg=77.8%
+
+============================================================
+TEST 3: VOLUME PERCENTILE RANK (180d window)
+============================================================
+
+  Percentile rank within 180d window:
+    False pos: n=24, median=+93.55, mean=+92.20
+    True pos: n=51, median=+91.79, mean=+91.45
+    Mann-Whitney U=712, p=0.2608
+
+  --- By 180d percentile bin ---
+    P90-P93: n=18, fwd_7d median=-0.84%, %neg=66.7%
+    P93-P95: n=16, fwd_7d median=-4.53%, %neg=62.5%
+    P95-P97: n=18, fwd_7d median=-2.51%, %neg=61.1%
+
+  Spearman correlation (pctl_180d vs fwd_7d): r=0.096, p=0.4113
+
+============================================================
+TEST 4: UTILIZATION REGIME (APY)
+============================================================
+
+  Distributed days with APY data: 51 / 75
+
+  APY at time of event:
+    False pos: n=16, median=+4.57, mean=+5.50
+    True pos: n=35, median=+3.95, mean=+4.77
+    Mann-Whitney U=332, p=0.2958
+
+  --- Split by APY median (4.15%) ---
+    Low APY: n=25, fwd_7d median=-3.31%, %neg=72.0%
+    High APY: n=26, fwd_7d median=-0.84%, %neg=65.4%
+
+  --- Split at APY=2.7% ---
+    APY < 2.7%: n=4, fwd_7d median=-6.49%, %neg=75.0%
+    APY ≥ 2.7%: n=47, fwd_7d median=-1.01%, %neg=68.1%
+
+  Spearman correlation (APY vs fwd_7d): r=0.245, p=0.0834
+
+============================================================
+TEST 5: PRIOR EPISODE RECENCY
+============================================================
+
+  Days since prior high-liquidation day:
+    False pos: n=23, median=+7.00, mean=+12.48
+    True pos: n=51, median=+4.00, mean=+12.25
+    Mann-Whitney U=656, p=0.4109
+
+  --- Same episode (≤14d gap) vs fresh episode ---
+    Same episode: n=53, fwd_7d median=-3.48%, %neg=67.9%
+    Fresh episode: n=21, fwd_7d median=-1.49%, %neg=71.4%
+
+============================================================
+TEST 6: OPEN INTEREST CONFIRMATION (2024-03+)
+============================================================
+
+  OI data starts: 2024-03-14
+  Distributed days in OI period: 50
+  With OI data in ±48h window: 50
+
+  Max hourly OI drop within ±48h:
+    False pos: n=16, median=-3.92%, mean=-4.11%
+    True pos: n=34, median=-4.86%, mean=-5.35%
+    Mann-Whitney U=356, p=0.0806
+
+  --- >3% hourly OI drop present ---
+    With >3% OI drop: n=41, fwd_7d median=-3.31%, %neg=70.7%
+    Without: n=9, fwd_7d median=-1.01%, %neg=55.6%
+
+  Cross-tab:
+                            FP (≥0)    TP (<0)
+    OI drop >3%                  12         29
+    No OI drop                    4          5
+
+============================================================
+2026-01-20 EPISODE DETAIL
+============================================================
+
+  Date         Regime               LiqUSD   P180d  Trail7d  Trail14d    Fwd7d    APY  MaxOIdrop
+  ------------------------------------------------------------------------------------------
+  2026-01-20   distributed    $  3,821,916    94.8   -11.9%    -10.5%    +2.6%   3.67     -4.29%
+  2026-01-29   distributed    $  1,093,271    88.9    -4.4%    -14.8%   -32.9%   3.06     -4.08%
+  2026-01-31   concentrated   $ 72,733,056   100.0   -17.8%    -26.6%   -14.3%   2.87     -5.73%
+  2026-02-01   distributed    $  9,540,662    96.1   -19.9%    -32.6%    -4.8%   2.93     -5.73%
+  2026-02-02   distributed    $  8,212,188    95.5   -19.5%    -26.0%    -9.8%   2.83     -5.73%
+  2026-02-03   distributed    $  2,130,878    90.9   -26.4%    -24.5%    -9.2%   2.71     -3.67%
+  2026-02-04   distributed    $  1,307,100    89.6   -29.5%    -29.6%    -8.1%   2.43     -8.10%
+  2026-02-05   concentrated   $ 46,814,768    99.4   -32.9%    -35.8%    +2.9%   2.36     -8.10%
+  2026-02-06   concentrated   $ 27,072,064    97.4   -23.3%    -29.8%    -1.1%   2.33     -8.10%
+
+============================================================
+SYNTHESIS: FALSE POSITIVE CHARACTERISTICS
+============================================================
+
+  Total distributed days (M1-P97) with fwd data: 75
+  True positives (fwd_7d < 0):  51 (68%)
+  False positives (fwd_7d ≥ 0): 24 (32%)
+
+  --- Trait prevalence (FP% vs TP%) ---
+  Trait that separates: present in ≥60% of one group, <30% of other
+
+  Trait                        FP%    TP%     n
+  ---------------------------------------------
+  trail_7d < -15%            12.5%  25.5%    75
+  trail_7d < -20%            12.5%   9.8%    75
+  trail_7d ≥ 0                8.3%  13.7%    75
+  trail_30d > 0 (bull)       34.8%  25.5%    74
+
+  --- Combined filter: OI drop + bear context (2024-03+) ---
+
+  Filter                                 n   %neg  Med fwd7d
+  ----------------------------------------------------------
+  No filter (baseline)                  50  68.0%     -1.55%
+  OI drop >3%                           41  70.7%     -3.31%
+  Bear (trail_30d ≤ 0)                  36  69.4%     -3.83%
+  OI drop + bear                        31  71.0%     -3.31%
+  OI drop + extreme trail (<-15%)        6 100.0%     -6.44%
+
+  --- All false positive distributed days ---
+  Date            Fwd7d  Trail7d    Price
+  2022-01-24      +9.6%   -23.9% $  2,448
+  2022-02-24      +9.1%    -9.8% $  2,600
+  2022-04-11      +1.7%   -14.5% $  3,012
+  2022-04-12      +2.1%   -11.8% $  3,038
+  2022-05-26      +1.6%   -10.1% $  1,808
+  2022-05-27      +3.3%   -12.2% $  1,725
+  2022-06-18     +26.6%   -35.8% $    983
+  2022-11-09      +8.0%   -25.7% $  1,121
+  2024-04-02      +6.5%    -8.7% $  3,292
+  2024-04-30      +0.7%    -6.6% $  2,998
+  2024-06-14      +1.4%    -5.8% $  3,475
+  2024-06-24      +3.1%    -5.1% $  3,340
+  2024-07-08     +15.1%   -12.1% $  3,025
+  2024-10-03      +1.1%   -10.6% $  2,353
+  2024-12-05      +2.5%    +5.5% $  3,787
+  2025-01-08      +3.1%    -1.1% $  3,323
+  2025-03-12      +7.7%   -14.7% $  1,905
+  2025-06-21      +6.9%    -9.7% $  2,284
+  2025-08-01     +16.6%    -6.9% $  3,458
+  2025-08-08     +10.5%   +16.6% $  4,030
+  2025-08-19     +12.2%   -10.2% $  4,120
+  2025-09-25     +14.6%   -14.8% $  3,903
+  2025-10-17      +2.2%    -0.3% $  3,847
+  2026-01-20      +2.6%   -11.9% $  2,938

@@ -1,5 +1,7 @@
 # 火珠林 Algebraic Structure — Complete Findings
 
+> **Bit convention A:** b₀ = L1 (bottom), b₅ = L6 (top).
+
 ## Central Question
 
 Does 火珠林 access the same information as 梅花 through different coordinates, or genuinely different information?

@@ -1,5 +1,7 @@
 # The Number Structure: 2, 3, 5
 
+> **⚠ Bit convention B:** This file uses b₀ = top line, b₂ = bottom line (震=100, 艮=001). This is the 先天 binary counter convention, opposite to the project standard (Convention A: b₀ = bottom, 震=001). The two conventions differ by bit-reversal; all results are isomorphism-invariant. See `directory.md`.
+
 The hexagram system rests on three prime numbers. Each generates a different kind of structure. Their interactions produce the system's architecture.
 
 ---

@@ -1,5 +1,7 @@
 # The Algebraic Structure of the I Ching's 五行 System: A Complete Account
 
+> **Bit convention A:** b₀ = bottom line, b₂ = top line. See `directory.md` for project standard.
+
 ## Overview
 
 The hexagram system of the *Yijing* is the structure determined by three ingredients:

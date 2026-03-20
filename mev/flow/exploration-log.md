@@ -730,3 +730,395 @@ The review discussion reached consensus on:
 - The magnitude classifier is the climactic volume pattern, not a novel DeFi-specific mechanism
 - The perp → lending lead's value is as a confirmation input within a monitoring system, not standalone edge
 - The conjunction of all three layers (utilization + perp OI + magnitude) may produce better precision than any single signal, but this has not been tested
+
+---
+
+## Iteration 13 — False Positive Anatomy of Distributed Days
+
+**Date:** 2026-03-19
+
+### What was tested
+
+What distinguishes the ~32% of distributed liquidation days (M1-P97) where 7d forward return is positive (the signal fails). Six candidate traits were tested for separation power between true positives (51 days, 7d return < 0) and false positives (24 days, 7d return ≥ 0).
+
+- **Script:** `memories/mev/false_positive_anatomy.py`
+- **Data:** `memories/mev/data/false_positive_results.txt`
+- **Dataset:** Same `liquidation_events_combined.csv`, 75 distributed days under M1-P97 classification with forward return data
+
+### What was measured
+
+**Test 1 — Position within episode:**
+FP median position 0.50, TP median 0.40. Mann-Whitney p=0.316. Not significant — false positive distributed days do not cluster at distinct episode positions.
+
+**Test 2 — Trailing drawdown magnitude:**
+Trailing 7d: FP median -10.15%, TP median -7.97%, p=0.514. Trailing 14d: FP median -9.47%, TP median -9.01%, p=0.977. Not significant — prior drawdown depth does not distinguish FP from TP.
+
+**Test 3 — Volume percentile rank within 180d window:**
+FP median 93.55 pctl, TP median 91.79 pctl, p=0.261. Spearman r=0.096, p=0.411 (percentile vs forward return). Not significant — position within the P90-P97 band does not predict outcome. No gradient.
+
+**Test 4 — Utilization APY (2023-02+, n=51):**
+FP median APY 4.57%, TP median 3.95%, p=0.296. Not significant as a group comparison. Marginal Spearman r=0.245, p=0.083 — higher APY weakly associated with worse signal (more false positives). Low APY (<median 4.15%): 72% hit rate. High APY: 65.4%.
+
+**Test 5 — Prior episode recency:**
+FP median 7 days since prior high-liq day, TP median 4 days, p=0.411. Not significant.
+
+**Test 6 — OI confirmation (2024-03+, n=50):**
+Best individual predictor. FP max OI drop median -3.92%, TP median -4.86%, p=0.081. With >3% OI drop present: 70.7% hit rate (n=41). Without: 55.6% hit rate (n=9).
+
+**Combined filters (2024-03+ period, n=50):**
+
+| Filter | n | %neg | Median fwd 7d |
+|---|---|---|---|
+| No filter (baseline) | 50 | 68.0% | -1.55% |
+| OI drop >3% | 41 | 70.7% | -3.31% |
+| Bear (trail 30d ≤ 0) | 36 | 69.4% | -3.83% |
+| OI drop + bear | 31 | 71.0% | -3.31% |
+| OI drop + extreme trail (<-15%) | 6 | 100% | -6.44% |
+
+**2026-01-20 episode detail:** First day (Jan 20) was false positive: +2.6% fwd, moderate drawdown (-11.9% trail 7d), APY 3.67%, OI drop -4.29%. After the concentrated spike on Jan 31 ($72.7M, 100th percentile), subsequent distributed days (Feb 1-4) were all true positives with deeper drawdowns and lower APY.
+
+### What these results mean
+
+**The ~32% false positive rate is largely irreducible within on-chain lending features.** No single trait meets the separation threshold (≥60%/≤30% prevalence split). The 97th percentile threshold is already doing most of the classification work available in this data domain. The remaining false positives depend on factors outside on-chain lending data.
+
+**OI confirmation is the best marginal filter** but the improvement is modest (68% → 71%). The reframe: distributed events *with* perp OI confirmation represent cross-leverage-tier cascade (systematic stress); those *without* may be lending-only (idiosyncratic, e.g., single whale liquidation). This connects to the position heterogeneity principle — cross-tier confirmation identifies when the stress involves multiple leverage layers.
+
+**Utilization APY direction is counterintuitive within distributed days.** Higher APY weakly predicts worse signal quality. Interpretation: high APY + distributed classification means the day is moderate-sized in a high-activity environment — closer to market noise that happened to cross the P90 threshold. The 180d trailing window adapts to regime shifts slower than utilization moves.
+
+### Architecture reframe from review
+
+The review discussion produced a reframe of the three-layer monitoring architecture:
+
+**Prior framing:** Three independent layers — utilization classifies regime, OI provides early warning, magnitude classifies resolution. Each contributes to accuracy.
+
+**Revised framing:** Utilization is **attention routing**, not accuracy filtering. It determines which type of event to expect (distributed vs concentrated), but does not improve classification accuracy within the distributed class. The operational architecture is hierarchical: utilization sets the prior → OI confirms cross-tier involvement → magnitude classifies resolution. Layers 2 and 3 are the active components; Layer 1 is context.
+
+This demotes the conjunction test (#4 on the open list) — if utilization doesn't improve distributed accuracy, testing the three-layer conjunction is less valuable than originally estimated.
+
+### What was measured vs conjectured
+
+**Measured:**
+- 75 distributed days: 51 TP (68%), 24 FP (32%)
+- Six traits tested: episode position (p=0.316), trailing drawdown (p=0.514/0.977), volume percentile (p=0.261), utilization APY (p=0.296), prior episode recency (p=0.411), OI confirmation (p=0.081)
+- No single trait cleanly separates FP from TP
+- OI confirmation is best marginal filter: 68% → 71% hit rate
+- Extreme combined filter (OI drop + trail <-15%): 6/6 decline, but n too small to trust
+- 2026-01-20 episode: pre-concentrated day was FP, post-concentrated days were all TP
+
+**Conjectured:**
+- The ~32% FP rate is structurally expected for non-climactic volume signals, consistent with ~60-70% hit rates for comparable patterns in traditional microstructure
+- The irreducibility boundary drawn is the information limit of on-chain lending data for this signal — improvement requires a different data class (exchange flows, options IV, direct perp liquidations)
+- Utilization's role is attention routing (which classifier to weight), not accuracy filtering
+- Post-concentrated distributed days may have higher TP rates than pre-concentrated ones (concentrated spike as cascade confirmation, not resolution) — the episode arc hypothesis
+
+### What was not tested
+
+- **Episode arc effect:** Whether distributed days *following* a concentrated spike within the same episode have different hit rates than distributed days *preceding* one. Prediction: post-concentrated distributed should have higher TP rate (the concentrated spike confirms the cascade, remaining distributed flow is mechanical late-deleveraging of near-threshold positions). The 2026-01-20 episode is consistent with this but n=1. Testable with existing data across the 12 mixed episodes.
+- **Exchange flow absorption signal:** Whether CEX net inflows distinguish absorbed (FP) from cascading (TP) distributed events. If off-chain liquidity is the absorption mechanism, it should be visible in exchange flow data. Testable with CoinMetrics community data.
+- **Options IV timing:** Whether Deribit IV spikes before, during, or after the perp OI drop — determines whether the information lives in a faster layer.
+- **Utilization-conditioned magnitude threshold:** Adjusting the P90 gate for APY regime to reduce false triggers in high-utilization environments. Low priority — marginal effect size (p=0.083).
+
+---
+
+## Iteration 14 — Episode Arc Probe: Pre vs Post Concentrated Distributed Days
+
+**Date:** 2026-03-19
+
+### What was tested
+
+Whether distributed days occurring *before* vs *after* the first concentrated spike within mixed episodes (M1-P97) have different hit rates. Pre-registered prediction: post-concentrated distributed should have higher TP rate (concentrated spike = cascade confirmation, remaining flow is mechanical late-deleveraging). 13 mixed episodes, 53 distributed days within them, plus 22 distributed days in non-mixed episodes.
+
+- **Script:** `memories/mev/false_positive_anatomy.py` (extended)
+- **Data:** `memories/mev/data/episode_arc_results.txt`
+- **Dataset:** Same `liquidation_events_combined.csv`, M1-P97 classification, 14-day gap episode clustering
+
+### What was measured
+
+| Group | n | %decline | Median fwd_7d |
+|---|---|---|---|
+| All distributed (M1-P97) | 75 | 68.0% | -3.31% |
+| Pre-concentrated (mixed eps) | 26 | 80.8% | -7.48% |
+| Post-concentrated (mixed eps) | 27 | 70.4% | -4.70% |
+| Non-mixed episodes | 22 | 50.0% | +0.34% |
+
+Mann-Whitney pre vs post: U=272, p=0.163. Not significant at these sample sizes.
+
+Trailing drawdown context: pre-concentrated median trail_7d = -5.86%, post-concentrated median trail_7d = -13.81%. Pre-concentrated days have moderate prior drawdowns; post-concentrated have deep ones (the spike itself caused the drawdown). Yet pre-concentrated predicts better — ruling out mean-reversion as the driver.
+
+### The prediction was wrong — and why
+
+The pre-registered prediction (post-concentrated > pre-concentrated TP rate) was wrong. Pre-concentrated is stronger: 80.8% vs 70.4%.
+
+The error was treating the concentrated spike as an information event ("confirms the cascade is real") when it's primarily a physical event ("clears the most extreme positions from the book"). After clearing, the remaining position field is less stressed, so distributed flow has less predictive content. Pre-spike distributed flow is running in a hot feedback loop (maximum stress, positions accumulating near thresholds); post-spike is running in a cooler one (most extreme positions already cleared).
+
+General principle: in systems with feedback (price → liquidation → more price decline), an event's *effect on the feedback loop* matters more than its *informational content*. The concentrated spike breaks the feedback loop by clearing extreme positions.
+
+### The structural finding: non-mixed episode distributed days are noise
+
+**Distributed days in episodes that never produce a concentrated spike have a 50.0% hit rate and median fwd_7d of +0.34%.** Essentially coin-flip — no signal.
+
+The 68% overall hit rate for all distributed days is a blend of two populations:
+- Escalating episodes (mixed, containing concentrated spikes): ~76% hit rate (53 days)
+- Non-escalating episodes (never reach concentrated): ~50% hit rate (22 days)
+
+Back-calculation confirms: 0.7 × 0.76 + 0.3 × 0.50 ≈ 68%, matching the observed overall rate.
+
+**The distributed signal's value comes from being part of an episode that will escalate to a concentrated spike, not from distributed flow per se.** The "irreducible 32% FP rate" from iteration 13 is not irreducible — it's a mixture of two populations with different base rates. The problem is classifying which population you're in at the time of the distributed day.
+
+### Measurement concern: forward-window contamination
+
+Many pre-concentrated distributed days have the first concentrated spike within their 7-day forward return window. The 80.8% hit rate may partly measure "the concentrated spike is coming and it causes decline" rather than "distributed flow independently predicts decline." The claim that pre-concentrated is the strongest sub-signal requires checking how many pre-concentrated days have the concentrated spike inside the 7d window, and what the hit rate is for the subset where the gap exceeds 7 days.
+
+The non-mixed episode finding (50% = noise) is unaffected by this concern.
+
+### What was measured vs conjectured
+
+**Measured:**
+- Pre-concentrated distributed: n=26, 80.8% decline, median -7.48%
+- Post-concentrated distributed: n=27, 70.4% decline, median -4.70%
+- Non-mixed episode distributed: n=22, 50.0% decline, median +0.34%
+- Pre vs post Mann-Whitney p=0.163
+- Pre-concentrated trailing drawdown shallower than post (-5.86% vs -13.81%), yet forward returns worse — not mean-reversion
+- Mixture decomposition: 0.7 × 0.76 + 0.3 × 0.50 ≈ 68%, consistent with observed overall rate
+
+**Conjectured:**
+- The concentrated spike's primary effect is physical (clears positions, breaks feedback loop), not informational (confirms cascade)
+- The 80.8% pre-concentrated rate is likely inflated by forward-window contamination — some fraction of the decline is caused by the concentrated spike itself falling within the 7d return measurement
+- Non-escalating episodes are events where lending stress was moderate enough that the market absorbed it without cascading — the 50% rate is the consequence, not an artifact
+- OI confirmation at episode onset may predict escalation (episode reaches concentrated), not just improve day-level hit rate — this would reframe OI from marginal day-level filter (+3pp) to episode-level classifier
+
+### What was not tested
+
+- **Forward-window contamination check:** Among pre-concentrated days, how many have the first concentrated spike within 7 days? What is the hit rate for the subset where the gap exceeds 7 days? Determines whether pre-concentrated distributed flow has independent predictive content or is mechanically contaminated.
+- **OI as escalation predictor:** For each episode beginning with distributed days, does a >3% OI drop within ±48h of episode onset predict whether the episode will subsequently produce a concentrated spike? Episode-level binary classification. Small n (~10-12 episodes in OI data period).
+- **Exchange flow absorption signal:** Whether CEX net inflows distinguish escalating from non-escalating episodes. The non-mixed/50% finding predicts that non-escalating episodes should show evidence of off-chain absorption (elevated inflows).
+
+---
+
+## Iteration 15 — Forward-Window Contamination Check + OI Escalation Predictor
+
+**Date:** 2026-03-19
+
+### What was tested
+
+Two follow-up tests from the episode arc probe (iteration 14): (A) whether the pre-concentrated 80.8% hit rate is an artifact of forward-window contamination (concentrated spike falling inside the 7d return measurement), and (B) whether OI drops at episode onset predict whether the episode will escalate to produce a concentrated spike.
+
+- **Script:** `memories/mev/false_positive_anatomy.py` (extended)
+- **Data:** `memories/mev/data/arc_followup_results.txt`
+- **Dataset:** Same `liquidation_events_combined.csv` + `binance_oi_episodes.csv`
+
+### What was measured
+
+**Test A — Forward-window contamination:**
+
+Of 26 pre-concentrated distributed days, 21 have the first concentrated spike within their 7-day forward return window (gap ≤7 days). Only 5 have clean forward windows (gap >7 days).
+
+| Group | n | %decline | Median fwd_7d |
+|---|---|---|---|
+| Contaminated (spike ≤7d away) | 21 | 90.5% | -10.65% |
+| Clean (spike >7d away) | 5 | 40.0% | +1.45% |
+| Non-mixed baseline | 22 | 50.0% | +0.34% |
+
+The clean subset (40%) is indistinguishable from the non-mixed baseline (50%). The pre-concentrated signal is almost entirely explained by the concentrated spike's price impact falling inside the measurement window. No independent predictive content detectable.
+
+**Test B — OI as episode escalation predictor:**
+
+Among 17 episodes with OI data (2024-03+), 15 had a >3% hourly OI drop near episode onset. The threshold fires for nearly every episode regardless of escalation.
+
+| | Escalated | Not escalated | Total |
+|--|-----------|---------------|-------|
+| OI drop >3% | 9 | 6 | 15 |
+| No OI drop | 2 | 0 | 2 |
+
+Fisher's exact p=0.515. No magnitude separation either — non-escalating episodes show OI drops of -3.2% to -6.8%, fully overlapping the escalating range.
+
+### What these results mean
+
+**The pre-concentrated signal is a measurement artifact.** The 80.8% hit rate from iteration 14 was driven by the concentrated spike itself falling within the 7d forward return window. Distributed flow before a concentrated spike does not independently predict decline — it co-occurs with the spike, and the spike drives the measured return.
+
+**OI does not predict episode escalation.** The >3% hourly OI drop fires for 15 of 17 episodes, both escalating and non-escalating. The cross-tier cascade framing from iteration 13 (OI confirmation = systematic stress) was analytically elegant but not supported as an operational classifier. The iteration 13 finding of 68→71% hit rate improvement with OI was likely noise.
+
+### Revised decomposition of the distributed signal
+
+The 68% overall hit rate for distributed days is an honest forecast (the correct base rate for a monitoring system) but the causal interpretation must be revised:
+
+| Group | n | %decline | Status |
+|---|---|---|---|
+| Pre-concentrated (contaminated) | 21 | 90.5% | Artifact — spike drives return |
+| Pre-concentrated (clean) | 5 | 40.0% | No signal (n too small, consistent with baseline) |
+| Post-concentrated | 27 | 70.4% | **Clean signal** — no contamination |
+| Non-mixed episodes | 22 | 50.0% | **Noise** — coin-flip |
+
+**Post-concentrated distributed (70.4%, n=27) is the only clean sub-signal above baseline.** It's uncontaminated because the concentrated spike is behind it, not ahead. Mechanically: the spike clears extreme positions but leaves near-threshold positions that continue unwinding — aftershock prediction after the earthquake.
+
+**Non-mixed episode distributed days (50%) are noise.** Moderate lending stress that the market absorbed without cascading.
+
+### Revised interpretation of the magnitude classifier
+
+The magnitude classifier's contribution is narrower than originally framed:
+
+1. **Concentrated spike itself** — capitulation marker, positive forward return (+2.36% median). This finding is unaffected by the contamination analysis.
+2. **Post-spike distributed flow** — aftershock prediction. After a concentrated spike, distributed flow signals 70% chance of further decline as near-threshold positions continue unwinding.
+3. **Stand-alone distributed flow** (no episode context) — at or near baseline. Not an independent predictor of price direction.
+
+The original claim "distributed events predict further declines with 68% hit rate" is correct as a statistical fact but misleading as a causal claim. The revised claim: "distributed flow is episode-context-dependent — meaningful after a concentrated spike (aftershock, 70%), noise without one (50%)."
+
+The 68% remains the honest base rate for a monitoring system because the forward-window contamination is part of the natural data-generating process — in real-time, a distributed day that's actually pre-concentrated *will* see the spike within 7 days, so the 90% contaminated rate is the real outcome.
+
+### Progressive sharpening across iterations 13-15
+
+| Iteration | Claim | Status after probing |
+|---|---|---|
+| 13 | 32% FP rate is irreducible within lending features | Revised — it's two populations, not irreducible noise |
+| 14 | Pre-concentrated distributed is strongest sub-signal (81%) | Refuted — forward-window artifact |
+| 14 | Non-mixed episodes are noise (50%) | Confirmed — robust, no contamination concern |
+| 14 | Post-concentrated is the feedback-loop-cooling aftershock | Confirmed — 70.4%, clean measurement |
+| 13 | OI confirmation improves hit rate 68→71% | Weakened — OI fires for nearly everything, improvement likely noise |
+| 15 | OI predicts episode escalation | Refuted — Fisher's p=0.515, threshold too common |
+
+### What was measured vs conjectured
+
+**Measured:**
+- 21/26 pre-concentrated days have concentrated spike within 7d forward window
+- Clean pre-concentrated subset (n=5): 40% hit rate, indistinguishable from 50% baseline
+- OI escalation predictor: 15/17 episodes have >3% OI drop regardless of escalation, Fisher's p=0.515
+- Post-concentrated distributed (n=27, 70.4%) confirmed as only clean sub-signal above baseline
+
+**Conjectured:**
+- The 68% overall rate is an honest forecast but mechanistically driven by proximity to concentrated spikes, not by distributed flow independently predicting decline
+- The iteration 13 OI finding (68→71%) was likely noise given OI fires for nearly every episode
+- Escalation prediction may require position-level monitoring (price proximity to large liquidation thresholds) rather than aggregate flow metrics — a different analytical mode than the statistical program conducted here
+- The statistical probing of the distributed signal has reached natural diminishing returns — further refinement within the same data domain is unlikely to produce new findings
+
+### What was not tested
+
+- **Liquidation wall proximity as escalation predictor:** Whether price proximity to large lending liquidation thresholds at episode onset predicts escalation. The most structurally grounded candidate — the concentrated spike literally is a large position getting liquidated. But requires position-level snapshot data and faces dynamic management challenges (collateral top-ups, partial repayments). Different analytical mode from aggregate flow statistics.
+- **Exchange flow absorption signal:** Whether CEX net inflows distinguish escalating from non-escalating episodes. Still testable with CoinMetrics data.
+- **Post-concentrated distributed — further characterization:** Whether the 70.4% hit rate varies by distance from the concentrated spike, episode severity, or market regime. n=27 limits subdivision.
+
+---
+
+## Iteration 16 — Exchange Inflow/Outflow Around Liquidation Episodes
+
+**Date:** 2026-03-19
+
+### What was tested
+
+Whether daily CEX exchange flows (CoinMetrics Community API, free tier) distinguish escalating from non-escalating liquidation episodes, and whether they separate true positive from false positive distributed days. Four tests designed around specific predictions from the episode arc findings.
+
+- **Script:** `memories/mev/exchange_flows.py`
+- **Data:** `memories/mev/data/exchange_flows.csv` (raw), `memories/mev/data/exchange_flow_results.txt`
+- **Source:** CoinMetrics Community API, ETH metrics: FlowInExNtv/USD, FlowOutExNtv/USD, SplyExNtv. 1,538 daily observations, 2022-01-01 to 2026-03-18.
+- **Derived metrics:** Net flow (USD) = inflow − outflow (positive = selling pressure). Rolling 30d z-score.
+
+### What was measured
+
+**Test 1 — Flow signature around episodes (±7d window):**
+Escalating (mixed) episodes: median during-episode z-score = +0.09 (n=13). Non-escalating (distributed-only): median = +0.09 (n=11). Mann-Whitney p=0.954. Pre-episode z-scores: escalating +0.08, non-escalating -0.07, p=0.297. No separation in any window.
+
+**Test 2 — Distributed TP vs FP flow:**
+TP distributed days: median z-score +0.31 (n=51). FP distributed days: median +0.25 (n=24). Mann-Whitney p=0.755. Spearman r=0.057, p=0.630. Raw net USD also fails (p=0.590). Zero discriminating power.
+
+**Test 3 — Absorption signature:**
+Prediction: non-escalating (absorbed) episodes should show elevated net inflows (buyers absorbing stress). Result: escalating episodes median net flow -$2.2M/day, non-escalating -$15.5M/day. Mann-Whitney p=0.817. Weak wrong-direction trend. The absorption-via-exchange-buying hypothesis is not supported.
+
+**Test 4 — Flow timing relative to concentrated spike:**
+Peak daily net inflow relative to first concentrated spike: before in 7/13 episodes, after in 6/13. Median gap: -2.0 days. Essentially coin flip. No reliable timing relationship.
+
+### What these results mean
+
+**Daily exchange flow data adds no signal to the liquidation classification system.** All four tests are null — not marginal, not directional, but genuinely flat. Exchange flows do not distinguish escalating from non-escalating episodes, do not separate TP from FP distributed days, do not confirm the absorption hypothesis, and do not provide timing information around concentrated spikes.
+
+### Why flow data fails on the escalation question
+
+The escalation question — "will this moderate stress event hit a large concentrated position?" — is a **topology question**, not a flow question. It depends on where large lending positions sit relative to current price and whether price declines far enough to reach them. No aggregate flow metric captures position topology. Flow data measures the *consequences* of escalation (more selling, more exchange activity) and cannot predict escalation because consequences only become visible once escalation is already underway.
+
+This explains the consistent null results across three data domains tested against the escalation prediction:
+- On-chain lending features (iteration 13): six traits tested, none separate FP from TP
+- OI/perp data (iteration 15): doesn't predict escalation at episode level (fires for 15/17 episodes)
+- Exchange flows (this iteration): no signal at all
+
+All three are flow-based or aggregate metrics. The only structurally grounded escalation predictor — liquidation wall proximity (price distance to large position thresholds) — is position-level data, a different analytical class.
+
+### Operational conclusion
+
+The 68% base rate for distributed days is what the monitoring system gets. The 50/70 decomposition (non-escalating = noise, post-concentrated = aftershock) is analytically informative — it explains why the system works when it works and fails when it fails — but it is not operationally accessible without the concentrated spike as a classifier.
+
+The monitoring system's core output is the binary classification: "was today's liquidation spike capitulation (concentrated, positive forward return) or continuation (distributed, 68% negative)?" The post-concentrated aftershock signal (70%) provides marginally higher confidence after a capitulation event has already occurred but the operational delta is small (+2pp over baseline).
+
+### What was measured vs conjectured
+
+**Measured:**
+- Four tests, all null: episode-level flow signature (p=0.954), TP/FP flow (p=0.755), absorption signature (p=0.817), flow timing (7/13 before, 6/13 after)
+- Daily exchange flows provide zero discriminating power for the liquidation classification system
+- Both escalating and non-escalating episodes show weak net outflows during stress
+
+**Conjectured:**
+- The escalation question is a topology question (position locations), not a flow question (aggregate activity) — explains why all flow-based tests fail
+- Daily resolution being too coarse is the less likely explanation — Tests 1-3 show no directional lean that finer granularity could amplify
+- The absorption mechanism (if it exists) may be structurally invisible to on-chain flow data — could operate through derivatives settlement, internal exchange transfers, or OTC desks
+
+### What was not tested
+
+- **Hourly exchange flow data:** Requires CoinMetrics Pro (paid). Could rescue Test 4 (flow timing) but unlikely to rescue Tests 1-3 given the absence of directional signal at daily level.
+- **Per-exchange breakdown:** Whether specific exchanges (Binance, Coinbase) show different flow signatures during stress events. Requires CoinMetrics Pro.
+- **Liquidation wall proximity as escalation predictor:** Parked as a different analytical mode (position-level monitoring vs aggregate flow statistics).
+
+---
+
+## Iteration 17 — Options IV Timing Probe (Deribit DVOL)
+
+**Date:** 2026-03-19
+
+### What was tested
+
+Whether ETH implied volatility (Deribit DVOL index) spikes before, during, or after concentrated lending liquidation spikes. The position heterogeneity principle predicted options (effective 10-100x via delta) should react before perps (5-50x). Three tests: IV level around concentrated spikes, IV timing relative to concentrated spikes, and IV timing relative to OI drops.
+
+- **Script:** `memories/mev/iv_timing.py`
+- **Data:** `memories/mev/data/eth_iv_history.csv` (raw), `memories/mev/data/iv_timing_results.txt`
+- **Source:** Deribit public API (`get_volatility_index_data`), no auth required. ETH DVOL daily, 2022-01-01 to 2026-03-19, 1,539 observations. DVOL range: 30.7–153.9, median 68.4.
+
+### What was measured
+
+**Test 1 — IV level around concentrated spikes:**
+IV rises on 84.2% of concentrated days (baseline 43.8%). Median DVOL change (spike day vs 7d prior): +4.4 on concentrated days vs -0.6 baseline. Mann-Whitney p≈0.0000. Strong contemporaneous relationship — but both IV and liquidations respond to the same price crash. Not new information.
+
+**Test 2 — IV timing relative to concentrated spike:**
+Peak IV within ±7d of first concentrated spike across 13 escalating episodes: before spike in 1, same day in 5, after in 7. Median gap: +1.0 days. **IV peaks after the concentrated spike, not before.** The options market reacts to the cascade, not anticipates it.
+
+**Test 3 — IV vs OI timing (2024-03+ episodes, n=11):**
+IV peak vs OI trough: IV leads in 3, same day in 4, IV lags in 4. Median gap: 0.0 days. IV and OI are roughly co-temporal. IV does not provide earlier information than OI. Both tend to peak/trough slightly after the concentrated spike (median +1.0d for both).
+
+### What these results mean
+
+**IV does not provide early warning.** The original plan question was: "Does Deribit IV spike before, during, or after the perp OI drop? Is the vol expansion already priced?" Answer: during/after. Not priced ahead. This closes the "faster layer" hypothesis — options are not a faster signal than perps despite higher effective leverage.
+
+**The information sequence is:** lending stress → OI drop ≈ IV spike → resolution. Neither derivative market provides warning that precedes the on-chain lending signal itself.
+
+### Refinement of the position heterogeneity principle
+
+The principle predicted options should react before perps due to higher effective leverage. This prediction failed. The explanation: **the principle applies to forced position closures, not to market pricing responses.**
+
+- **Perp OI drops** are position events — forced liquidations closing positions. Governed by leverage thresholds.
+- **IV changes** are pricing responses — market makers adjusting via delta hedging in response to realized volatility. Governed by pricing mechanisms, not leverage thresholds.
+
+The principle's domain: temporal ordering in *forced liquidation cascades* scales with the leverage gap between position types. It does not extend to pricing mechanisms (IV, spreads, funding rates) which have their own timing dynamics independent of leverage structure.
+
+This boundary condition prevents misapplication: without it, one would predict options should lead everything and waste time testing it. With it, one knows to only look for leverage-gap ordering among forced position events across tiers.
+
+### Observation: post-capitulation vol-selling window
+
+IV peaks ~1 day after the concentrated spike, while concentrated spikes tend to have positive forward returns (+2.36% median). This means IV is elevated and likely to revert precisely when the directional outlook turns favorable. This is a potential vol-selling window — but it uses the concentrated spike (from lending data) as the trigger, not IV as the signal. A trading implementation observation, not a new signal finding.
+
+### What was measured vs conjectured
+
+**Measured:**
+- IV rises on 84.2% of concentrated days, median change +4.4 vs -0.6 baseline (p≈0.0000)
+- Peak IV lags concentrated spike by median +1.0 days (1 before, 5 same day, 7 after)
+- IV peak and OI trough are co-temporal (median gap 0.0 days)
+- IV does not provide earlier information than OI
+
+**Conjectured:**
+- The position heterogeneity principle applies to forced closures only, not to market pricing responses — this explains why options don't lead despite higher effective leverage
+- The vol-selling window (elevated IV + positive forward return post-spike) is a potential trading implementation detail, not tested as a strategy
+- The information sequence (lending → OI ≈ IV → resolution) suggests the on-chain lending signal is the primary source, with derivative markets responding to rather than anticipating the cascade

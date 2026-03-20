@@ -1,0 +1,3817 @@
+{
+  "description": "Complete 梅花 calendar cycle: 8 day-residues × 12 hours = 96 readings",
+  "formula": {
+    "upper": "(Y+M+D) mod 8, 0→8",
+    "lower": "(Y+M+D+H) mod 8, 0→8",
+    "moving_line": "(Y+M+D+H) mod 6, 0→6"
+  },
+  "bit_convention": "A: b₀=bottom(bit2 in string), b₂=top(bit0 in string). Binary strings written top-mid-bot.",
+  "xiantian_map": {
+    "1": {
+      "name": "乾",
+      "binary": "111",
+      "element": "金"
+    },
+    "2": {
+      "name": "兌",
+      "binary": "011",
+      "element": "金"
+    },
+    "3": {
+      "name": "離",
+      "binary": "101",
+      "element": "火"
+    },
+    "4": {
+      "name": "震",
+      "binary": "001",
+      "element": "木"
+    },
+    "5": {
+      "name": "巽",
+      "binary": "110",
+      "element": "木"
+    },
+    "6": {
+      "name": "坎",
+      "binary": "010",
+      "element": "水"
+    },
+    "7": {
+      "name": "艮",
+      "binary": "100",
+      "element": "土"
+    },
+    "8": {
+      "name": "坤",
+      "binary": "000",
+      "element": "土"
+    }
+  },
+  "summary": {
+    "total_readings": 96,
+    "favorable": 57,
+    "unfavorable": 39,
+    "favorable_pct": 59.38,
+    "undirected_counts": {
+      "生": 38,
+      "克": 41,
+      "比和": 17
+    },
+    "directed_counts": {
+      "体生用": 19,
+      "用生体": 19,
+      "体克用": 21,
+      "用克体": 20,
+      "比和": 17
+    },
+    "q3_edges": 40,
+    "q3_edge_ke_count": 20
+  },
+  "sequence": [
+    {
+      "day_residue": 0,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 0,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 1,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "兌",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 2,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 3,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "震",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "震",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "震",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "震",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "震",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 4,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "震",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "巽",
+        "element": "木",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 5,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "坎",
+        "element": "水",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 6,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 1,
+      "shift": 1,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "艮",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坤",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 2,
+      "shift": 2,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "艮",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "乾",
+        "element": "金"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 3,
+      "shift": 3,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 4,
+      "shift": 4,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "離",
+        "element": "火",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体生用",
+        "undirected": "生",
+        "favorable": false,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 5,
+      "shift": 5,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 4,
+        "name": "震",
+        "binary": "001",
+        "element": "木"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "震",
+        "element": "木",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "101",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 6,
+      "shift": 6,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 5,
+        "name": "巽",
+        "binary": "110",
+        "element": "木"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "艮",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "巽",
+        "element": "木"
+      },
+      "relation": {
+        "directed": "用克体",
+        "undirected": "克",
+        "favorable": false,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "010",
+        "bit_layer": "bit₁"
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 7,
+      "shift": 7,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 6,
+        "name": "坎",
+        "binary": "010",
+        "element": "水"
+      },
+      "moving_line": 2,
+      "ti": {
+        "name": "艮",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "坎",
+        "element": "水"
+      },
+      "relation": {
+        "directed": "体克用",
+        "undirected": "克",
+        "favorable": true,
+        "z5_distance": 2
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "110",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 8,
+      "shift": 8,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "moving_line": 3,
+      "ti": {
+        "name": "艮",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 0,
+        "is_edge": false,
+        "xor_mask": "000",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 9,
+      "shift": 1,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 8,
+        "name": "坤",
+        "binary": "000",
+        "element": "土"
+      },
+      "moving_line": 4,
+      "ti": {
+        "name": "坤",
+        "element": "土",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "比和",
+        "undirected": "比和",
+        "favorable": true,
+        "z5_distance": 0
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "100",
+        "bit_layer": "bit₂"
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 10,
+      "shift": 2,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 1,
+        "name": "乾",
+        "binary": "111",
+        "element": "金"
+      },
+      "moving_line": 5,
+      "ti": {
+        "name": "乾",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 2,
+        "is_edge": false,
+        "xor_mask": "011",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 11,
+      "shift": 3,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 2,
+        "name": "兌",
+        "binary": "011",
+        "element": "金"
+      },
+      "moving_line": 6,
+      "ti": {
+        "name": "兌",
+        "element": "金",
+        "position": "lower"
+      },
+      "yong": {
+        "name": "艮",
+        "element": "土"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 3,
+        "is_edge": false,
+        "xor_mask": "111",
+        "bit_layer": null
+      }
+    },
+    {
+      "day_residue": 7,
+      "hour": 12,
+      "shift": 4,
+      "upper": {
+        "position": 7,
+        "name": "艮",
+        "binary": "100",
+        "element": "土"
+      },
+      "lower": {
+        "position": 3,
+        "name": "離",
+        "binary": "101",
+        "element": "火"
+      },
+      "moving_line": 1,
+      "ti": {
+        "name": "艮",
+        "element": "土",
+        "position": "upper"
+      },
+      "yong": {
+        "name": "離",
+        "element": "火"
+      },
+      "relation": {
+        "directed": "用生体",
+        "undirected": "生",
+        "favorable": true,
+        "z5_distance": 1
+      },
+      "q3": {
+        "hamming_distance": 1,
+        "is_edge": true,
+        "xor_mask": "001",
+        "bit_layer": "bit₀"
+      }
+    }
+  ]
+}

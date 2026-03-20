@@ -1,7 +1,7 @@
 # Dynamics Investigation — Findings
 
 > Entry point: the I Ching as a representational map to the dynamics of situational change.
-> Questions Q11–Q15 in `questions.md`.
+> Questions Q11–Q15 in `questions.md`. **Bit convention A:** b₀ = bottom line, b₂ = top line.
 
 ## Results
 

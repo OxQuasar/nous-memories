@@ -1,0 +1,78 @@
+Step 1 Results: Aave v3 Position Snapshot
+==========================================
+Date: 2026-03-20 (block ~24695255)
+ETH reference price: $2,202.39
+
+Data Pipeline
+-------------
+- Source: The Graph subgraph + Aave v3 on-chain multicall (Alchemy RPC)
+- On-chain getUserAccountData via Multicall3 for accurate HF (handles all eMode categories)
+- Subgraph userReserves for collateral asset breakdown
+- On-chain oracle for asset prices (USD, 8 decimals)
+- Runtime: ~875s
+
+Position Summary
+----------------
+Total borrowers: 43,735
+Positions with debt: 29,311
+Total collateral USD: $22,562,723,239
+Total debt USD: $13,175,482,196
+
+ETH-dominant positions: 15,897
+  Collateral: $14,071,671,684
+  Debt: $8,582,721,272
+
+Health Factor Distribution
+--------------------------
+  HF < 1.0:    784 positions  $134 debt (all dust — correct behavior)
+  HF < 1.1:  3,291 positions  $7,172,733,025 debt
+  HF < 1.25: 5,644 positions  $7,839,235,399 debt
+  HF < 1.5: 10,441 positions  $9,340,308,849 debt
+  HF < 2.0: 17,434 positions  $11,407,311,806 debt
+
+Liquidation Price Distribution (ETH-dominant only)
+---------------------------------------------------
+Already above current: 732 positions, $494,942 debt (dust)
+Within  5% below: 1,057 positions  $3,784,468,197 debt
+Within 10% below: 1,430 positions  $5,447,902,500 debt
+Within 20% below: 2,281 positions  $5,581,708,301 debt
+Within 30% below: 3,715 positions  $6,199,376,830 debt
+Within 50% below: 7,743 positions  $7,348,007,789 debt
+
+Key observation: $3.8B of ETH-collateralized debt has liquidation prices
+within just 5% below current ETH price ($2,092-$2,202). This is dominated
+by two mega-whales with HF ~1.04-1.05.
+
+Top 10 Positions by Collateral
+-------------------------------
+1. $1.42B collateral (wstETH), $1.30B debt, HF=1.040, liq=$2,118
+2. $1.26B collateral (weETH),  $1.13B debt, HF=1.054, liq=$2,089
+3. $554M  collateral (wstETH), $87M debt,   HF=5.083, liq=$0 (safe)
+4. $508M  collateral (weETH),  $89M debt,   HF=4.569, liq=$482
+5. $321M  collateral (WETH),   $128M debt,  HF=2.081, liq=$1,061
+6. $297M  collateral (WETH),   $123M debt,  HF=2.003, liq=$1,103
+7. $281M  collateral (WETH),   $143M debt,  HF=1.633, liq=$1,352
+8. $279M  collateral (weETH),  $254M debt,  HF=1.046, liq=$2,106
+9. $257M  collateral (cbBTC),  $119M debt,  HF=1.695, N/A (BTC)
+10.$223M  collateral (cbBTC),  $93M debt,   HF=1.869, N/A (BTC)
+
+Critical Wall: Two mega-whales (positions #1 and #2) hold $2.68B combined
+collateral with liquidation prices at $2,089-$2,118 — only 4-5% below
+current ETH price. Position #8 ($279M) is at $2,106. Together these three
+positions represent a $2.7B liquidation wall at ~$2,100.
+
+Validation
+----------
+DefiLlama stale snapshot (ETH~$3,782): $2.16B total liquidatable (all protocols)
+Our Aave v3 only: $13.2B debt, $22.6B collateral
+Ratio is reasonable — DefiLlama showed liquidatable-at-specific-bins, not total debt.
+
+eMode Handling
+--------------
+Used on-chain getUserAccountData for ground-truth HFs. This correctly accounts
+for all 20+ eMode categories (ETH correlated, sUSDe stablecoins, rsETH, LBTC/WBTC,
+PT tokens, etc.). Without eMode, the top whale would show HF=0.88 (incorrect).
+
+Output: memories/mev/position/data/positions_current.csv
+Columns: user, collateral_usd, eth_collateral_usd, debt_usd, health_factor,
+         liq_price_usd, eth_dominant, largest_collateral_symbol

@@ -1,5 +1,7 @@
 # Atlas — Complete 五行 Map of Hexagram Space: Final Findings
 
+> **Bit convention A:** b₀ = L1 (bottom), b₅ = L6 (top). Trigrams: b₀ = bottom line, b₂ = top line.
+
 ## Data Files
 
 | File | Contents |

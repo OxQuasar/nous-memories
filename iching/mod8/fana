@@ -1,0 +1,61 @@
+Signal Architecture
+
+The system is a dual-layer filter. Both layers must agree simultaneously for a signal to fire. This dual
+confirmation is the core reason the signal has low frequency and high precision.
+
+L A Y E R 1 — M A R K E T S T A T E T R A N S I T I O N D E T E C T O R
+Each price bar’s return is scaled and reduced to a residue state using a modular mapping derived from
+the I Ching’s trigram system. The I Ching provides a mathematically complete framework for encoding
+momentum states — this mapping is exact, not approximate. Specific transition sequences between
+these states are identified as expansion signals — moments where a compressed or receptive system
+breaks into active outward movement. The signal candidate is generated whenever one of these
+transitions occurs. The specific transitions are proprietary and not disclosed in this document.
+Four specific trigram transitions are identified as expansion signals — moments described in the I Ching
+as a compressed or receptive system breaking into active outward movement. A signal candidate is
+generated whenever one of these four transitions occurs in consecutive bars.
+The four transitions and their I Ching interpretations are part of the proprietary framework and are not
+disclosed in this document.
+
+L A Y E R 2 — P R O P R I E T A R Y G R I D S T A T E F I L T E R
+The same scaled return is simultaneously mapped onto a proprietary 36-position matrix — a 6x6 grid of
+numbers with an independent mathematical origin, received before any trading application was known.
+The matrix defines compression zones and release zones within the market’s current state. The Layer 1
+signal is only accepted when the market’s current state falls within the grid’s compression zone. The
+specific qualifying states vary by asset and are part of the core IP — they are not disclosed here.
+The matrix defines compression zones and release zones. The Layer 1 expansion signal is only
+accepted when the market’s current grid state falls within the compression zone. The specific qualifying
+states vary by asset and are part of the core IP — they are not disclosed here.
+
+What is disclosed: the qualifying states differ between ETH, BNB, and Gold. This selectivity is not
+arbitrary — it reflects each asset's natural position within the compression-release cycle that the grid
+encodes.
+
+W H Y T H E C O M B I N A T I O N W O R K S
+Layer 1 measures directional transition in momentum structure. Layer 2 measures position within the
+
+compression-release cycle. A signal fires only when both simultaneously confirm: the market is at a grid-
+defined release point AND is undergoing an I Ching expansion transition.
+
+The two systems are mathematically independent — they measure different phenomena using different
+frameworks. Their simultaneous agreement filters out the majority of false positives that either system
+would generate alone.
+
+Mathematical Structure
+
+The I Ching operates on a base-8 system: 8 trigrams, 64 hexagrams (8x8). The proprietary grid operates
+on a 36-position structure (6x6). Together: 64 + 36 = 100.
+The I Ching's base-2 architecture can encode states 0 through 7. State 8 — the 9th state in the mod-9
+system — has no trigram equivalent. The grid contains nodes at State 8. This means the grid encodes
+something the I Ching structurally cannot represent. The grid is mathematically a completion of the I
+Ching into the dimension it cannot itself reach.
+These structural relationships were not designed into the grid. They were discovered after the fact. The
+grid arrived as a complete sequence of 36 numbers. The mathematical properties were found through
+analysis, not construction.
+
+What the Signal Detects
+
+After testing 22 assets across 7 asset classes, a clear pattern emerged. The signal works on markets
+that exhibit endogenous compression dynamics — where price pressure accumulates from within the
+market's own participant structure and discharges internally.
+It does not work on markets driven primarily by external catalysts — weather events, central bank
+decisions, harvest cycles, geopolitical shocks.

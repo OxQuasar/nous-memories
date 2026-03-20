@@ -1,172 +1,167 @@
-# Empirical Investigation — Plan
+# Empirical Plan — Probe 8: 梅花易數
 
-## The Core Test
+**Source:** `texts/meihuajingshu/` (vol1–vol5, appendix)
 
-Apply the 五行 grammar to real transition data and check whether it predicts anything. The grammar: three transition types (continuation/generation/destruction), a forbidden bigram (no consecutive destruction), and a one-way valve (destruction → generation blocked). If these constraints hold in data the grammar wasn't fitted to, it's capturing real structure.
+The 梅花易數 is the operational manual for the 五行 grammar. It provides a fully deterministic algorithm (date → hexagram → 體用 → 五行 relation → prediction), 10 worked examples, decision rules for 18 domains, seasonal modulation tables, and the 納甲 line-level element assignment. Everything is in-house. Zero external dependencies.
 
-## The Mapping Problem — Solved by the Tradition
-
-The tradition provides explicit correspondence tables mapping phenomena to the five elements. Each element governs specific domains:
-
-| Element | Season | Direction | Phase | Quality | Body | Emotion |
-|---------|--------|-----------|-------|---------|------|---------|
-| 木 Wood | Spring | East | Growth/rising | Expansive | Liver | Anger |
-| 火 Fire | Summer | South | Peak/fullness | Radiant | Heart | Joy |
-| 土 Earth | Late summer | Center | Transition/stability | Settling | Spleen | Worry |
-| 金 Metal | Autumn | West | Decline/contraction | Condensing | Lungs | Grief |
-| 水 Water | Winter | North | Dormancy/storage | Flowing down | Kidneys | Fear |
-
-These aren't metaphors — they're classification rules used operationally in Chinese medicine, agriculture, military strategy, and governance for millennia. The trigram correspondences are equally fixed (乾/兌=金, 離=火, 震/巽=木, 坎=水, 坤/艮=土).
-
-**This changes the methodology.** We don't need to invent a 5-category classification per domain. We use the traditional correspondences as the mapping, then test whether the grammar's constraints hold. The mapping is given *a priori* by the system itself — not fitted to data.
-
-**Three strategies, now:**
-
-**Strategy A (strongest):** Use the traditional correspondences directly. Classify states by the 五行 rules the tradition provides. Test grammar constraints. No degrees of freedom in the mapping.
-
-**Strategy B (robustness check):** Run all 120 permutations of the 5-type assignment anyway. Check whether the traditional assignment outperforms random permutations. If it does, the specific traditional mapping matters. If all permutations work equally well, the constraint is generic to Z₅ cycle structure.
-
-**Strategy C (new domains):** For domains the tradition doesn't explicitly address, use the qualitative logic: identify which states correspond to growth, peak, stability, decline, dormancy. This has degrees of freedom but is constrained by the traditional definitions.
+`plan-ideas.md` has other probe ideas (climate, medicine, politics, ecology, cross-domain).
 
 ---
 
-## Probe 1: Seasonal / Climate Transitions (E1, E2, E3)
+## TODO
 
-**Why first:** The mapping is literally given — 木=spring, 火=summer, 土=late summer, 金=autumn, 水=winter. Zero ambiguity.
+### Next empirical test: source with date resolution
 
-**States:** Seasonal climate regimes, defined by temperature/precipitation thresholds.
+8b established the resolution boundary: the grammar requires relational input (体 + 用) at temporal resolution finer than year-level. The 梅花 date formula demands year+month+day+hour. The 皇極經世 provides only year (0.9% of entries mention months). The grammar is untestable with this data.
 
-**Data source:** Long-run climate station data (GHCN-D, ~100+ years at many stations). Or: paleoclimate proxy data for longer timescales.
+**What would enable the test:**
+- A historical source with events dated to month+day (e.g. 《資治通鑒》 has many day-level dates in Chinese calendar format)
+- A dataset of divination records with full timestamps and recorded outcomes
+- Modern time-series data discretized via the 梅花 mod-8 algorithm (→ connects to mod8/ investigation)
 
-**Steps:**
-1. Define 5 seasonal regimes by temperature thresholds (the tradition assigns specific temperature qualities to each element)
-2. Extract regime transition sequence at each station
-3. Classify transitions as 比和/生/克 by cycle distance
-4. Test E2: are out-of-order transitions (e.g. summer directly to winter = 克-克 equivalent) suppressed?
-5. Test E3: does the valve hold? After a disruptive transition (e.g. unseasonable cold snap = 克), does the system pass through a neutral phase before resuming the generative cycle?
+**What the test would look like:**
+1. Convert full dates (year+month+day+hour) to 梅花 hexagrams via the algorithm
+2. Compute 体用 五行 relation → favorable/unfavorable prediction
+3. Compare against independently classified event outcomes
+4. Run 120-permutation control
 
-**Why this is a strong first test:** Climate *should* follow the generative cycle (spring→summer→late summer→autumn→winter = 木→火→土→金→水 = pure 生 sequence). Deviations from this cycle are precisely the 克 transitions. The question becomes: when the cycle is disrupted, do the disruptions follow the grammar's constraints?
+This is parked until a suitable data source is identified.
 
-**Limitation:** Seasonal cycles are largely periodic and forced by orbital mechanics. The grammar's constraints may hold trivially. The real test is in the *anomalies* — when seasons arrive out of order, do the forbidden patterns hold?
+### Q-卦辭: 吉 Depletion in Hexagram Judgments
 
-## Probe 2: Chinese Medical Case Data (E1, E2, E3)
+Probe 7a found standalone 吉 absent from the 24 kernel lines (p=0.0006). Does this extend to the 卦辭 (hexagram-level judgments)?
 
-**Why second:** The mapping is native — Chinese medicine classifies organ systems, symptoms, and disease progressions by 五行. The grammar was *designed for* this domain.
+**Method:**
+1. Extract 卦辭 for the 4 kernel hexagrams (坤, 剥, 夬, 乾)
+2. Check for standalone 吉 vs 元吉 vs 利 vs 凶
+3. Compare rates against the other 60 hexagrams
 
-**States:** 五行 organ system diagnoses (木=liver system, 火=heart system, 土=spleen system, 金=lung system, 水=kidney system).
-
-**Data source:** Published case series from Chinese medical journals, or clinical databases from TCM hospitals. Disease progression records showing sequential organ involvement.
-
-**Steps:**
-1. Extract sequential diagnoses: which organ system is primary at each clinical visit
-2. Classify transitions by 五行 cycle distance
-3. Test E2: is consecutive 克 (e.g. liver→spleen→lung, two successive overcoming transitions) suppressed?
-4. Test E3: after a 克 transition, does the patient pass through a 比和 or 生 phase before another 克?
-5. Test E1: are 生 transitions (e.g. liver→heart, mother-to-child) associated with better prognosis than 克 transitions?
-
-**Why this matters:** This is the domain where the grammar has been applied longest. If it fails here, it fails everywhere. If it works here but nowhere else, it's domain-specific (which would still be significant — it would mean the grammar captures something real about disease progression in the organ systems it was designed for).
-
-**Bias risk:** TCM practitioners *use* 五行 theory to classify and treat. The data may reflect practitioner behavior (treating according to the grammar) rather than natural disease dynamics. Need to separate: does the grammar predict disease progression *before treatment*, not after treatment guided by the grammar?
-
-## Probe 3: Political Regime Transitions (E1, E2, E3, E4)
-
-**Why third:** Large dataset, and the traditional correspondences provide a mapping through the governance tradition.
-
-**States:** Political regime types. The traditional mapping via governance theory:
-- 木 Wood → emerging/revolutionary regimes (growth, new order rising)
-- 火 Fire → expansionist/peak-power regimes (dominance, full expression)
-- 土 Earth → consolidating/stable regimes (institutional, bureaucratic)
-- 金 Metal → contracting/declining regimes (rigidity, loss of vitality)
-- 水 Water → collapsed/dormant regimes (chaos, power vacuum, latency)
-
-This follows the traditional phase logic: growth → peak → stability → decline → dormancy → growth.
-
-**Data source:** Polity V (~170 countries, 1800–present) or V-Dem.
-
-**Steps:**
-1. Map Polity scores to 5 phases using the traditional quality definitions (not arbitrary score bins)
-2. Extract year-to-year transitions where the phase changes
-3. Classify as 比和/生/克
-4. Test E2, E3
-5. Strategy B robustness: run all 120 permutations, check if traditional ordering outperforms
-
-**Key question for E4:** Compare results across regions — does the grammar work for both Western and East Asian political systems?
-
-## Probe 4: 皇極經世 Dynasty Chronology (E2, E3)
-
-**Why here:** The data is in-house (`texts/huangjijingshi/`, files 2–6). Shao Yong's 元會運世 system provides ~3,400 years of year-by-year chronology (~2357 BCE to ~1060 CE) with each year assigned to the 60-year 甲子 sexagenary cycle. The 天干 (Heavenly Stems) carry 五行 assignments:
-
-| Stem pair | Element |
-|-----------|---------|
-| 甲乙 | 木 Wood |
-| 丙丁 | 火 Fire |
-| 戊己 | 土 Earth |
-| 庚辛 | 金 Metal |
-| 壬癸 | 水 Water |
-
-Shao Yong himself didn't use 五行 — his system is binary-dualistic (陰/陽). But the 天干/地支 assignments he recorded carry an implicit 五行 layer through the stem correspondences. This is an independent system layered on the same data.
-
-**The test:** At dynasty transitions (founding, collapse, conquest), what is the 五行 type of the transition year? Does the grammar predict anything about the character of the transition?
-
-**Steps:**
-1. Parse files 2–6: extract year, 甲子 label, ruler, dynasty, event annotations
-2. Assign 五行 to each year via its 天干 (甲/乙=木, 丙/丁=火, etc.)
-3. Identify all dynasty transitions (change of ruling house, not just succession within a dynasty)
-4. For each transition, record: 五行 of the last year of the old dynasty, 五行 of the first year of the new dynasty, transition type (比和/生/克)
-5. Also: for the years surrounding each transition (±5 years), compute the sequence of 五行 types
-6. Test E2: are 克-克 bigrams at dynasty transitions suppressed vs the base rate of the 天干 cycle?
-7. Test E3: after a 克-year transition, does the next transition avoid 生?
-
-**Null model:** The 天干 cycle is deterministic (10-year period), so 五行 repeats every 2 years (甲乙 both = 木, etc.). The null is: dynasty transitions are independent of the 天干 cycle. Test whether transition years cluster in particular 五行 types more than the 2/10 = 20% base rate for each element.
-
-**Advantage:** Data already available, no external sourcing needed. The mapping is mechanical (天干 → 五行, no interpretation). The chronology is structured and parseable.
-
-**Limitation:** ~15–20 dynasty transitions in 3,400 years. Small N. Better as a pilot/sanity check than a powered statistical test. Also: the 天干 cycle is periodic and uncorrelated with political events by construction (it's a calendar, not a causal system). Any signal would be surprising.
-
-**Secondary test:** Regardless of 五行, check whether Shao Yong's 元會運世 grid coordinates (which 運 and 世 a dynasty transition falls in) predict anything about dynasty duration or transition character. This tests his temporal hierarchy directly.
-
-## Probe 5: Ecological Succession (E1, E2, E3)
-
-**Mapping via traditional correspondences:**
-- 木 Wood → pioneer/growth phase (colonization, biomass increase)
-- 火 Fire → peak productivity (canopy closure, maximum energy throughput)
-- 土 Earth → climax/stable phase (nutrient cycling, equilibrium)
-- 金 Metal → senescence/decline (standing dead, nutrient lock-up)
-- 水 Water → disturbance/reset (flood, fire, clearing — dormancy before regrowth)
-
-**Data source:** Regime Shifts Database (RSDB) or long-term ecological research (LTER) sites.
-
-**Same tests as above.** Smaller sample size but the most natural alignment with the element qualities.
-
-## Probe 6: Cross-Domain Comparison (E4)
-
-**After Probes 1–5:** Compare effect sizes and constraint structure across climate, medicine, politics, dynastic chronology, and ecology.
-
-**The key test:** Does the *same* grammar work across all domains when the traditional correspondences are used? If yes, the grammar is universal at the level of transition structure. If it works in some domains but not others, identify what distinguishes the domains where it works.
-
-## Probe 7: Decorrelation Test (E6)
-
-**Use whichever dataset from Probes 1–5 has the longest transition sequences.**
-
-Compute mutual information between transition type at step t and step t+k for k=1,2,3,4,5. Phase 8 predicts decorrelation at k≈2 (R288). If the data matches this, the single-step assessment regime is confirmed empirically.
+Small N (4 hexagrams), data in atlas.json. Quick test that strengthens or bounds the 7a finding.
 
 ---
-
-## Priority Order
-
-1. **Probe 4 (皇極經世 chronology)** — data in-house, mechanical mapping, no sourcing needed, good pilot
-2. **Probe 1 (seasonal/climate)** — mapping is literal, zero ambiguity, large data, strong first test
-3. **Probe 2 (Chinese medicine)** — native domain, grammar was built for this, highest relevance but highest bias risk
-4. **Probe 3 (political)** — large dataset, traditional governance mapping, good for E4
-5. **Probe 5 (ecological)** — natural alignment with element qualities, smaller N
-6. **Probe 6 (cross-domain)** — depends on 1–5
-7. **Probe 7 (decorrelation)** — piggybacks on longest sequence from 1–5
 
 ## What Would Change Our Understanding
 
-- **E2 positive across domains:** The forbidden-pattern constraint is a real feature of natural transitions when classified by the traditional correspondences. The grammar captures something about how destructive change works.
-- **E2 negative everywhere:** The constraint is specific to the algebraic structure, not to nature. The grammar is self-consistent but not empirically descriptive.
-- **E2 positive only in native domains (medicine, seasonal):** The grammar captures domain-specific structure in the systems it was designed for, but doesn't generalize.
-- **E3 positive (valve holds):** Destruction genuinely requires a cooling-off period before generation. Most surprising and practically significant finding.
-- **Traditional mapping outperforms random permutations (Strategy B):** The specific element assignments matter — it's not just any Z₅ cycle, it's *this* Z₅ cycle applied to *these* correspondences.
-- **E6 matches R288:** Single-step prediction outperforms multi-step, confirming the system is designed for immediate assessment, not trajectory forecasting.
+- **Date-resolution test significant:** The grammar predicts event character from full timestamps. Would require careful confound examination.
+- **Date-resolution test null:** Grammar's resolution boundary is below the 梅花 date formula. The system is algebraically coherent but empirically inert.
+
+---
+
+## DONE
+
+### 8a: Internal Consistency of Worked Examples ✓
+
+**Result:** 10/10 examples fully consistent. Every example passes all 5 mechanical checks (arithmetic, hexagram identity, 互, 變, 体用 assignment). Gate passed.
+
+**Derived findings:**
+- 8a.1: 192/384 parity constraint applies to date formula only; other 先天 methods break parity lock
+- 8a.2: 6 stable_neutral states = kernel of 五行 map on even-parity fiber = RG attractor + predecessors
+- 8a.3: Practitioner process separates into position selection (mechanizable) and semantic interpretation (requires context)
+- 8a.4: When 五行 saturates (all-比和), system falls through to Z₂ counting
+- 8a.5: 象 imagery reinforces but never contradicts the 五行 signal (N=10, pedagogical)
+
+See `probe_8a_results.md` for full verification.
+
+---
+
+### 8c: 體用 Decision Rules as Formal Grammar ✓
+
+**Result:** 4+1 invariant structure. Four relations domain-invariant, 体克用 is the single free parameter with three modes (competition/manifestation/nurture).
+
+**Key findings:**
+- 8c.1: 4+1 structure — 用克体 always −, 体生用 always −, 用生体 always +, 比和 always +, 体克用 domain-dependent
+- 8c.2: 生 is context-free (creator depletes regardless), 克 is context-dependent (destroyer's welfare depends on target) → maps to dynamics valve
+- 8c.3: 4-layer override hierarchy (base template → domain mode → external omens → 体用 abandonment)
+- 8c.4: Adversarial-first ordering REFUTED for templates (was narrative exposition artifact)
+- 8c.5: 0/17 domains reference hexagram names — naming is practitioner lore, not system architecture
+- 8c.6: 天時 (weather) is a structurally different system — frequency model vs relational model
+- 8c.7: 象 tables are vocabulary (lexicon), not protocol (deterministic lookup)
+
+See `probe_8c_results.md` for full 18-domain table.
+
+---
+
+### 8c-ext: Arc Symmetry Under Domain Templates ✓
+
+**Result:** Complement-Z₅ involution generates R=B invariance at the interpretation level — same algebraic structure as the dynamics valve.
+
+**Key findings:**
+- 8c-ext.1: R=B (rescued=betrayed) is INVARIANT under all valence templates — theorem of complement involution σ
+- 8c-ext.2: I=D (improving=deteriorating) holds only under competition; breaks under manifestation/nurture
+- 8c-ext.3: Competition template is the unique favorable maximum; domain specialization can only narrow the favorable space
+- 8c-ext.4: All 6 stable_neutral states survive under every template (absolute)
+- 8c-ext.5: Arc reclassification scales with template distance: 32% (manifestation), 47% (nurture), 72% (nurture-full)
+
+See `probe_8c_ext_results.md`.
+
+---
+
+### 8c-ext2: Symmetry Theorem ✓
+
+**Result:** Three-tier symmetry theorem proven empirically across 16 alphabets.
+
+**Key findings:**
+- 8c-ext2.1: R=B holds for any positive (a,b); I=D holds iff alphabet is symmetric; stable_neutral invariance is absolute
+- 8c-ext2.2: Two I=D counts: 34 (a=b) and 52 (a≠b), gap = 18 boundary states
+- 8c-ext2.3: I=D breaks exactly at V(体克用) ≤ 0 — the manifestation boundary
+- 8c-ext2.4: Competition template is simultaneously maximum-symmetry and maximum-favorability — unique structural optimum
+- 8c-ext2.5: R=B count = 56 absolutely invariant, from Z₅ QR structure × bit-flip geometry × {2,2,2,1,1} partition
+- 8c-ext2.6: Complement-Z₅ unifies dynamics (valve), interpretation (R=B), and combinatorics (count=56) — three levels, one algebraic fact
+
+See `probe_8c_ext2_results.md`.
+
+---
+
+### 8b: 皇極經世 Event Catalogue ✓ (NULL)
+
+**Result:** 1111 events parsed from vol 6. All tests return null (p=0.42–0.91). Event character is completely independent of position in the 10-year stem cycle. The canonical 五行 ordering is not special among all 120 permutations.
+
+**Key findings:**
+- 8b.1: 1111 events extracted, 天干 distribution perfectly uniform (132/stem), no selection bias by cycle position
+- 8b.2: Consecutive 天干 produce only 比和 and 生, never 克 — the 天干 cycle IS the 生 cycle. E2/E3 structurally untestable at year resolution.
+- 8b.3: All statistical tests null (χ²=1.96–4.05, p=0.42–0.91, Cramér's V < 0.064)
+- 8b.4: 120-permutation control — all permutations produce identical χ², no ordering is special
+- 8b.5: Z₅ orbit invariance proven — 12/60 relation uniformity forced by group theory, independent of 地支→五行 distribution
+- 8b.6: Approach B blocked — only 0.9% of entries mention months
+
+**Resolution boundary established:** The grammar requires relational input (体+用) at finer-than-year temporal resolution. Year-level 天干 gives one element, not a relation.
+
+See `probe_8b_test_results.md`, `hjjs_events.json`.
+
+---
+
+### 8d: Seasonal Modulation ✓ (BLOCKED)
+
+**Result:** Blocked by 8b null. No year-level signal to modulate. Requires finer temporal resolution data.
+
+---
+
+### 8e: 納甲 Under Complement-Z₅ ✓
+
+**Result:** Complement-Z₅ holds at trigram-element level (梅花) but FAILS at line-element level (火珠林 納甲). Clean structural boundary between the two systems.
+
+**Key findings:**
+- 8e.1: σ produces 4 different Z₅ shifts {0,1,3,4} across complement pairs. Only 2/32 hexagram pairs have uniform 6-line shift.
+- 8e.2: Root cause — 地支→五行 has non-uniform fibers ({4,2,2,2,2}). Arithmetic in Z₁₂ becomes non-arithmetic in Z₅ after projection.
+- 8e.3: 艮↔兌 is the unique fully consistent pair — coincidence of starting offsets, not structural.
+- 8e.4: 24 alternative start tables achieve full consistency, none includes historical values. System not designed for complement consistency at branch level.
+- 8e.5: Corrected 京氏 rule makes consistency worse (3/8 → 2/8).
+- 8e.6: 納甲 is not a group homomorphism. It's affine in Z₁₂ then non-linear projection to Z₅.
+
+See `probe_8e_results.md`.
+
+---
+
+### 7a: Kernel Hexagrams in the Semantic Manifold ✓
+
+**Result:** The 4 algebraic kernel hexagrams (Earth/Metal pairs where bit-flip preserves element) are completely depleted of standalone 吉 in the 爻辞 (0/24 vs 106/360, p=0.0006). Effect is a threshold at the 變卦 level, not a gradient.
+
+**Key findings:**
+- 7a.1: Kernel hexagrams are individually center-ward in semantic space (z=−1.52) but NOT mutually clustered (p=0.455)
+- 7a.2: Standalone 吉 absent (0/24, p=0.0006). All other valence markers at baseline rates — including 元吉, 利, 无咎, 凶.
+- 7a.3: Threshold, not gradient — 2 Wood hexagrams with main+互=比和 but no 變=比和 lines have baseline 吉 rates (0.167). The discriminant is bit-flip geometry from 8a.3.
+- 7a.4: The single 吉 near the kernel is 坤 L5 黃裳元吉 — superlative form, not standalone.
+
+**Cross-temporal correspondence:** The algebraic kernel (梅花, ~1000 CE) picks out hexagrams whose original texts (~1000 BCE) independently encode diagnostic silence through 吉-withdrawal. Local exception to the 89%/11% global independence.
+
+See `probe_7a_results.md`.

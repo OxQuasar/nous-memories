@@ -1,5 +1,7 @@
 # 五行 Structural Analysis — Findings
 
+> **Bit convention A:** b₀ = bottom line, b₂ = top line.
+
 ## 1. The 五行 Assignment
 
 The traditional 五行 (Wuxing) system assigns each of the 8 trigrams to one of 5 elements. Using the encoding b₀=bottom line, b₂=top line:

@@ -1,5 +1,7 @@
 # 互 Attractor Probe — Complete Findings
 
+> **Bit convention A:** b₀ = L1 (bottom), b₅ = L6 (top). Trigrams: b₀ = bottom line, b₂ = top line.
+
 ## 1. The 互 Projection: Definition and Dimensional Reduction
 
 ### Definition

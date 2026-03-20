@@ -1,5 +1,7 @@
 # Unification Synthesis: The Hexagram System as PG(2,2) Decorated with One Compass
 
+> **Bit convention A:** b₀ = bottom line, b₂ = top line. See `directory.md` for project standard.
+
 ## Overview
 
 The hexagram system of the *Yijing* is the structure determined by:

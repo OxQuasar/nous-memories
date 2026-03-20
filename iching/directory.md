@@ -8,6 +8,18 @@ Central finding: the 五行 assignment is the unique rigid complement-respecting
 
 ---
 
+## Bit Convention
+
+**Project standard (Convention A):** b₀ = bottom line, b₂ = top line (trigrams); b₀ = L1 (bottom), b₅ = L6 (top) (hexagrams). Little-endian: index matches traditional reading order (bottom-up).
+
+Trigram encodings: 震=001, 艮=100, 巽=110, 兌=011, 離=101, 坎=010, 乾=111, 坤=000.
+
+**Exception — Convention B (big-endian, top=MSB):** Used in `spaceprobe/q3/` and `deep/number-structure.md` (uses 震=100, 艮=001). Convention B makes the 先天 sequence a clean binary counter {7,6,5,4,3,2,1,0}. The two conventions differ by bit-reversal (a Q₃ automorphism); all graph-theoretic results are invariant.
+
+**Bridge:** The 先天 permutation σ = bit-reversal ∘ complement maps Convention A ↔ Convention B. Documented in `mod8/findings.md` and `mod8/questions.md`.
+
+---
+
 ## Core Workflows
 
 ### `deep/`
@@ -73,9 +85,23 @@ R282–R291. Phase 8: what is the minimal Markov partition projecting?
 - Scripts: `dark_sector.py`, `logistic_map.py`, `composability.py`
 - Empirical questions moved to `empirical/`
 
+### `mod8/`
+M1–M5 complete, §VIII–IX new. Topological separation between 先天 divination (Z₈) and algebra (Q₃). Z₅ retrograde palindrome centered on 木. 先天 vs 後天 as temporal inverses on Z₅.
+- `findings.md` — §I–IX: bit-layer decomposition, mod-8 cycle, Q₃ floor theorem, landscape, 體用 distribution, grammar survival (fails), topology in data (tautological), Z₅ palindrome geometry, 先天/後天 temporal inversion
+- `questions.md` — M1–M5 answered, M6 open (木 triple alignment: forced or free?)
+- `plan.md` — M3–M5 done, M6 open
+- `mh-calendar-sequence.json` — complete 96-reading cycle (8 day-residues × 12 hours)
+- Scripts: `m1_mod8_structure.py`, `m2a_cycle_landscape.py`, `gen_calendar_sequence.py`
+
+### `mod9/`
+No results yet. 後天 divination system: mod-9 arithmetic on Lo Shu ordering with 9th center position.
+- `questions.md` — N1–N6: Lo Shu Z₅ projection, center state role, magic square constraints, flying star path, 爻辭 connection, structural gap assessment
+
 ### `empirical/`
-No results yet. Asks whether nature exhibits the constraint class {GMS + complement + Z₅}.
-- `questions.md` — E1–E4: timescale ratio matching, regime transition statistics, five-element prediction, inversion symmetry in natural transitions
+Probe 8a/8c complete. Framework for testing whether the grammar produces useful predictions in real systems.
+- `questions.md` — E1–E6: transition character, forbidden-pattern constraint, valve asymmetry, cross-domain generality, scale invariance, decorrelation timescale
+- `plan.md` — Probe 8 (a–e): 梅花易數 internal consistency, mechanical divination for historical events, 體用 decision rules, seasonal modulation, 納甲 structure. All in-house.
+- `plan-ideas.md` — Other probe ideas (climate, medicine, politics, ecology, 皇極經世, cross-domain, decorrelation). Requires external data.
 
 ### `usage.md`
 The system as judgment instrument. Three-layer summary.

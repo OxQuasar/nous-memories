@@ -1,5 +1,7 @@
 # Synthesis Findings
 
+> **Bit convention A:** b₀ = bottom line, b₂ = top line.
+
 ## Central Thread
 
 Structure → incompleteness → curvature → specificity → meaning.
