@@ -64,16 +64,18 @@ At (3, 5): the eight trigrams are F₂³, the five phases are Z₅. The traditio
 
 | Trigram | Binary | Phase | Z₅ |
 |---------|--------|-------|-----|
-| 坤 Kūn | 000 | Earth | 0 |
-| 艮 Gèn | 100 | Earth | 0 |
-| 震 Zhèn | 001 | Wood | 1 |
-| 巽 Xùn | 110 | Wood | 1 |
-| 坎 Kǎn | 010 | Water | 2 |
-| 離 Lí | 101 | Fire | 3 |
-| 兌 Duì | 011 | Metal | 4 |
-| 乾 Qián | 111 | Metal | 4 |
+| 震 Zhèn | 001 | Wood | 0 |
+| 巽 Xùn | 110 | Wood | 0 |
+| 離 Lí | 101 | Fire | 1 |
+| 坤 Kūn | 000 | Earth | 2 |
+| 艮 Gèn | 100 | Earth | 2 |
+| 兌 Duì | 011 | Metal | 3 |
+| 乾 Qián | 111 | Metal | 3 |
+| 坎 Kǎn | 010 | Water | 4 |
 
-Fiber partition: {2, 2, 2, 1, 1} — Earth, Wood, Metal each have 2 trigrams; Water, Fire each have 1. This is shape A with three types: {坤,艮} are type 0 (both → 0), {坎} and {離} are type 1 (singletons), {乾,兌} and {震,巽} share negation pairs as type 2.
+Z₅ values satisfy complement equivariance: f(x⊕111) = −f(x) mod 5. Wood = 0 is forced (self-complementary pair: 2w ≡ 0 mod 5 ⟹ w = 0). The 生-cycle is stride 1 (0→1→2→3→4), the 克-cycle is stride 2 (0→2→4→1→3).
+
+Fiber partition: {2, 2, 2, 1, 1} — Wood, Earth, Metal each have 2 trigrams; Fire, Water each have 1. This is shape A with three types: {震,巽} are type 0 (both → 0), {坎} and {離} are type 1 (singletons), {坤,艮} and {乾,兌} share negation pairs as type 2.
 
 ---
 
