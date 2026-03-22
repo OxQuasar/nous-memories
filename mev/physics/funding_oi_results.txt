@@ -1,0 +1,111 @@
+======================================================================
+FUNDING SETTLEMENT → OI CLOSURE CLUSTERING
+======================================================================
+
+## Sample sizes per funding rate bin
+
+          < -1bps: n=  11  mean_fr=-1.60bps  median_fr=-1.53bps
+       -1bps to 0: n= 113  mean_fr=-0.25bps  median_fr=-0.14bps
+        0 to 3bps: n= 980  mean_fr=+0.80bps  median_fr=+0.82bps
+           > 3bps: n=  33  mean_fr=+3.96bps  median_fr=+3.58bps
+
+## OI change (%) by funding bin and time window
+
+              Bin |   Window |     Mean |   Median |      Std |    N
+  ------------------------------------------------------------
+          < -1bps |     0-4h |  -1.3524 |  -0.7889 |   3.3843 |   11
+          < -1bps |     4-8h |  +0.0770 |  +0.1463 |   1.4769 |   11
+       -1bps to 0 |     0-4h |  -0.2720 |  -0.0681 |   1.9791 |  113
+       -1bps to 0 |     4-8h |  -0.3219 |  -0.0324 |   3.4395 |  113
+        0 to 3bps |     0-4h |  +0.0567 |  +0.0075 |   1.7324 |  980
+        0 to 3bps |     4-8h |  +0.0090 |  -0.0035 |   1.8150 |  980
+           > 3bps |     0-4h |  -0.5684 |  -0.5351 |   1.3131 |   33
+           > 3bps |     4-8h |  +0.2376 |  +0.0607 |   1.5357 |   33
+
+## Pre-settlement OI change (-2h to 0h) by bin
+
+          < -1bps: mean=+0.4358%  median=+0.2629%  n=11
+       -1bps to 0: mean=+0.1733%  median=+0.0026%  n=111
+        0 to 3bps: mean=+0.0138%  median=+0.0087%  n=966
+           > 3bps: mean=+0.0799%  median=+0.1391%  n=32
+
+## Statistical tests: OI change 0-4h
+
+  Negative vs Positive funding (all):
+    Mann-Whitney U (one-sided, neg < pos): U=57235.0, p=0.053266
+    Welch t-test (two-sided): t=-2.022, p=0.045051
+    Neg mean=-0.3678%, Pos mean=+0.0364%
+
+  Deeply negative vs Deeply positive:
+    Mann-Whitney U (one-sided): U=158.0, p=0.266515
+    Deep neg mean=-1.3524%, Deep pos mean=-0.5684%
+
+## Within deeply-negative: 0-4h vs 4-8h OI change
+
+  0-4h: mean=-1.3524%, median=-0.7889%
+  4-8h: mean=+0.0770%, median=+0.1463%
+  Mann-Whitney (0-4h < 4-8h): U=45.0, p=0.162318
+
+## Price-conditional: OI change 0-4h when price is falling vs rising
+
+          < -1bps:  price_falling: mean=-0.6389% (n=5)  price_rising: mean=-1.9469% (n=6)
+       -1bps to 0:  price_falling: mean=-0.4585% (n=63)  price_rising: mean=-0.0370% (n=50)
+        0 to 3bps:  price_falling: mean=-0.2450% (n=475)  price_rising: mean=+0.3437% (n=504)
+           > 3bps:  price_falling: mean=-1.0573% (n=19)  price_rising: mean=+0.0239% (n=13)
+
+  Test: negative funding + price falling vs negative funding + price rising
+    Neg+falling: mean=-0.4718% (n=68)
+    Neg+rising:  mean=-0.2416% (n=56)
+    Mann-Whitney (falling < rising): U=1726.0, p=0.186405
+
+  Test: negative funding + price falling vs POSITIVE funding + price falling
+    Neg+falling: mean=-0.4718% (n=68)
+    Pos+falling: mean=-0.2762% (n=494)
+    Mann-Whitney: U=16281.0, p=0.340965
+    → If significant: funding adds signal beyond price movement alone
+
+======================================================================
+SUMMARY & INTERPRETATION
+======================================================================
+
+1. DIRECTIONAL SIGNAL EXISTS BUT IS WEAK STATISTICALLY
+   - After negative funding, OI drops -0.37% in 0-4h vs +0.04% after positive funding.
+   - Welch t-test is marginal (p=0.045), Mann-Whitney borderline (p=0.053).
+   - The deeply negative bin (n=11) shows a large effect (-1.35%) but sample is tiny
+     and not significant vs deeply positive (p=0.27).
+
+2. FRONT-LOADING PATTERN IN DEEPLY NEGATIVE
+   - After deeply negative funding: 0-4h mean=-1.35%, 4-8h mean=+0.08%.
+   - The closure is concentrated in the first 4h window, with mild reversal after.
+   - However p=0.16 — not significant given n=11. Suggestive but not conclusive.
+
+3. NO PREEMPTIVE CLOSING
+   - Pre-settlement OI change for deeply negative: +0.44% (OI was INCREASING
+     before settlement). Traders are not closing ahead of negative funding charges.
+
+4. PRICE DOMINATES, FUNDING ADDS LITTLE
+   - Price-conditional analysis: negative funding + price falling (-0.47%) vs
+     positive funding + price falling (-0.28%) → p=0.34, not significant.
+   - Within negative funding, price falling vs rising: p=0.19, not significant.
+   - Price direction explains most of the OI change; funding sign adds minimal
+     additional predictive power.
+
+5. SURPRISING: DEEPLY POSITIVE FUNDING ALSO SHOWS OI DROPS
+   - > 3bps funding: 0-4h OI change = -0.57%. This is OPPOSITE to what the
+     hypothesis predicts. High positive funding should not cause OI closure.
+   - Interpretation: deeply positive funding often occurs during extreme rallies
+     followed by mean-reversion. The OI drop likely reflects profit-taking / 
+     forced unwinding of overleveraged longs, not a funding-rate-driven effect.
+   - This suggests OI changes are driven by price dynamics, not funding mechanics.
+
+CONCLUSION:
+The hypothesis — that negative funding settlements cause clustered OI closure in
+0-4h — has a directional signal but is NOT statistically robust. The effect is:
+  (a) Marginal significance in broad negative vs positive comparison
+  (b) Not significant in the extreme tails (n too small)
+  (c) Not significant after conditioning on price direction
+  (d) Confounded by the fact that deeply positive funding shows similar OI drops
+
+The dominant driver of OI changes is price movement, not funding settlement timing.
+Negative funding is a lagging indicator of conditions that also cause OI drops,
+not a causal driver of them.

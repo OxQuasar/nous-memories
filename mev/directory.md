@@ -73,17 +73,36 @@ Connected DeFi mechanics to macro markets. Pulled S&P, VIX, USD/JPY, DXY, yields
 
 **Key files:** `findings.md`, `signals-synthesis.md` (composite signal design), `exploration-log.md`, 3 scripts, 8 data files including `tradfi_daily.csv`.
 
-## `crosschain/` — Phase 6: Cross-Chain Flows (plan only, not executed)
+## `crosschain/` — Phase 6: Cross-Chain Flows (4 iterations)
 THORChain Midgard API investigation of directional cross-chain swap flows, arb activity, and price transmission.
 
-**From API probe:**
+**Findings:**
 - During crashes, THORChain shows BTC net selling ($600M-1.4B/day) and ETH net buying ($300M-1B/day) — rotation, not uniform flight to safety.
 - Arb share jumps from ~50% (calm) to 86-91% (crash). Mechanically clean: volatile prices → AMM lags CEX → arbs correct.
 - USDC accumulation pre-crash, then selling on crash day (dip buying).
+- All directional flow signals dead (BTC→ETH rotation is persistent baseline, flight-to-safety inverted, momentum is depth artifact).
+- Found arb correction mechanism (ratio ≈1.0, scales with profit opportunity) and BTC-ETH hourly correlation as crash-type classifier (clear-direction vs contested). No predictive power.
 
-**Planned:** 6 steps — data pull (20 pools, 49 months), flow mapping, flow-price correlation, arb analysis, hourly/weekly short-timeframe dynamics, synthesis.
+**Key files:** `findings.md`, `signals-synthesis.md`, `plan.md`, 4 scripts, 8 data files.
 
-**Key files:** `plan.md`
+## `physics/` — Phase 7: Physical Latency in Markets (4 iterations, complete)
+Markets are fast at pricing information but slow at moving atoms. Tested which physical processes create exploitable timing windows and which are arbitraged despite their latency. Produced the crash lifecycle model connecting all prior phases.
+
+**Findings:**
+- **Informational timing gets arbitraged.** Funding settlement (known schedule, visible rates) produces no exploitable OI clustering. Both funding extremes show OI drops — regime symptom, not cause. Deprioritizes margin call cycles (same category).
+- **Oracle-gated threshold batching, not cascade.** Within-day liquidations are simultaneous batch events (67% same-block) triggered by discrete Chainlink oracle price updates (~0.5-1% deviation threshold). Burstiness B=0.77, 21/21 spike days reject uniform null. Mega-bursts up to 377 events = extreme positional herding within one oracle step.
+- **Self-reinforcement exists but magnitude uncertain.** Hourly price resolution insufficient to separate liquidation-driven acceleration from velocity clustering and liquidity thinning. Best estimate: second-order positive feedback.
+- **ETF flows classify cascade type.** Outflows accompany multi-day clusters; terminal days show flow reversal. Acts as cascade-type classifier (multi-day vs isolated), not predictor. ETF outflows necessary but not sufficient — also requires position density at next price level.
+- **January 2025 mystery partially resolved.** +$5.3B BTC ETF inflows in Jan 2025 — the -11.2% ETH residual was NOT ETF-driven. Brief ETH→BTC rotation visible.
+
+**Crash Lifecycle Model (phase output):**
+1. Trigger: external (macro → ETF) or endogenous (position breach)
+2. Within-day: oracle-gated threshold batching (~7.6 min inter-burst gap)
+3. Feedback: second-order positive, magnitude uncertain
+4. Inter-day extension: requires both external pressure (ETF outflows) AND position density at next level
+5. Termination: flow reversal + position cluster exhaustion
+
+**Key files:** `plan.md` (status table), `exploration-log.md` (4 iterations + consolidation), `signals-synthesis.md` (ranked signals + composite), 4 scripts, 1 data file (`data/etf_daily_flows.csv`), 9 plots.
 
 ---
 
@@ -96,8 +115,13 @@ Each phase answered the question left open by its predecessor:
 3. **Correlation** → "Oracle architecture blocks the depeg cascade; real risk is operational"
 4. **Dynamics** → "System has two independent components; crashes are externally initiated"
 5. **Links** → "DeFi amplifies macro shocks via three distinct modes"
-6. **Cross-chain** → "Where does money actually go during crashes?" (pending)
+6. **Cross-chain** → "Flows don't predict, but arb mechanics characterize crash type in real time"
+7. **Physics** → "Crash lifecycle is oracle-gated batching + external pressure. Informational timing is arbitraged; physical latency persists."
 
-## Structural Principle
+## Structural Principles
 
-Position heterogeneity determines signal quality. Temporal ordering in forced-liquidation cascades scales with the leverage gap between position types. Requires ≥10x gap to produce consistent ordering. Governs forced closures only — pricing mechanisms (IV, spreads, funding rates) follow their own timing dynamics.
+**Position heterogeneity determines signal quality.** Temporal ordering in forced-liquidation cascades scales with the leverage gap between position types. Requires ≥10x gap to produce consistent ordering. Governs forced closures only — pricing mechanisms (IV, spreads, funding rates) follow their own timing dynamics.
+
+**Physical processes create measurable lead time. Information doesn't.** The contract OI signal works not because it contains private information (it's public data) but because it measures a physical process — position unwinding — that takes time regardless of who knows about it. Signals based on information content get arbitraged; signals based on physical latency persist.
+
+**The system produces classifiers, not predictors.** Across phases 6 and 7, the recurring pattern is regime classification (BTC-ETH correlation classifies crash type; ETF flow sign classifies cascade duration) rather than event prediction. The 27h OI signal from Phase 1 remains the only tested predictive signal.

@@ -1,0 +1,196 @@
+======================================================================
+COLLATERAL CHAIN PROPAGATION — BURST DETECTION
+======================================================================
+
+## Inter-event interval distribution (all spike days)
+
+  Total intervals: 11309
+  Mean: 139.8s  Median: 0.0s
+  Std: 1075.4s
+  Same-block (Δt=0): 7528 (66.6%)
+  P10: 0.0s
+  P25: 0.0s
+  P50: 0.0s
+  P75: 12.0s
+  P90: 120.0s
+  P95: 444.0s
+  P99: 2843.4s
+
+## Inter-block interval distribution (unique blocks only)
+
+  Total block transitions: 3781
+  Mean: 418.1s  Median: 36.0s
+  Std: 1828.3s
+  P10: 12.0s
+  P25: 12.0s
+  P50: 36.0s
+  P75: 171.0s
+  P90: 768.0s
+  P95: 1692.0s
+  P99: 7903.2s
+
+## Events per block
+
+  Mean: 2.98  Median: 1  Max: 35
+  Blocks with >1 event: 1872 / 3803 (49.2%)
+
+  Coefficient of variation (inter-block): 4.373 (exponential=1.0)
+  → Overdispersed (bursty)
+
+## Burst detection across gap thresholds
+
+   Threshold |  Bursts | Med size |  Med gap |  Med dur | Single%
+  -----------------------------------------------------------------
+        60s |    1458 |      2.0 |     300s |      27s |   44.0%
+       120s |    1130 |      2.0 |     456s |      60s |   40.9%
+       300s |     737 |      3.0 |     828s |     157s |   35.1%
+       600s |     486 |      3.0 |    1338s |     422s |   30.9%
+
+## Per-spike-day burst statistics (gap=120s)
+
+          Date | Events | Bursts | Med size | Max size |  Med gap |  Med dur |  Null p
+  -------------------------------------------------------------------------------------
+    2022-01-21 |    311 |     58 |      2.0 |       37 |     467s |      56s |  0.0000
+    2022-01-22 |    313 |     61 |      2.0 |       48 |     606s |      34s |  0.0000
+    2022-05-11 |    248 |     45 |      3.0 |       32 |     302s |      43s |  0.0000
+    2022-05-12 |    494 |     84 |      2.0 |       49 |     483s |      22s |  0.0000
+    2022-06-13 |    927 |    110 |      2.5 |       60 |     362s |      52s |  0.0000
+    2022-06-14 |    355 |     69 |      1.0 |       77 |     522s |      74s |  0.0000
+    2022-11-09 |     83 |     37 |      1.0 |        7 |     630s |      36s |  0.0000
+    2024-08-05 |   1545 |    103 |      2.0 |      377 |     294s |     108s |  0.0000
+    2025-02-03 |    665 |     65 |      3.0 |      324 |     372s |      84s |  0.0000
+    2025-02-28 |    514 |     40 |      2.0 |      112 |     696s |      66s |  0.0000
+    2025-03-10 |    718 |     63 |      2.0 |      171 |     384s |      72s |  0.0000
+    2025-04-06 |   1090 |     78 |      3.0 |      171 |     396s |      84s |  0.0000
+    2025-04-07 |    958 |     70 |      2.0 |      281 |     372s |      84s |  0.0000
+    2025-10-10 |    214 |     18 |      2.0 |      154 |     984s |      36s |  0.0000
+    2025-11-04 |    375 |     40 |      2.0 |       87 |     720s |      12s |  0.0000
+    2025-11-16 |     80 |     13 |      1.0 |       31 |    1458s |      24s |  0.0000
+    2025-11-20 |    103 |     21 |      1.0 |       19 |     744s |      24s |  0.0000
+    2025-11-21 |    268 |     26 |      1.0 |      114 |    1176s |      36s |  0.0000
+    2026-01-31 |    749 |     48 |      1.0 |      208 |     588s |      66s |  0.0000
+    2026-02-05 |    952 |     49 |      3.0 |      223 |     726s |      48s |  0.0000
+    2026-02-06 |    337 |     16 |      1.0 |      208 |     852s |      36s |  0.0000
+
+## Collateral composition of bursts (gap=120s)
+
+  Total bursts: 1114
+                  WETH-only:  947 ( 85.0%)
+          mixed-WETH+wstETH:  126 ( 11.3%)
+           mixed-WETH+other:   21 (  1.9%)
+                wstETH-only:   16 (  1.4%)
+                 other-only:    3 (  0.3%)
+                mixed-other:    1 (  0.1%)
+
+  Multi-event bursts only (n=661):
+                  WETH-only:  513 ( 77.6%)
+          mixed-WETH+wstETH:  126 ( 19.1%)
+           mixed-WETH+other:   21 (  3.2%)
+                mixed-other:    1 (  0.2%)
+
+## Burst size distribution (gap=120s)
+
+  Size   1:  453 bursts
+  Size   2:  176 bursts
+  Size   3:   87 bursts
+  Size   4:   51 bursts
+  Size   5:   48 bursts
+  Size   6:   34 bursts
+  Size   7:   35 bursts
+  Size   8:   21 bursts
+  Size   9:   12 bursts
+  Size  10:   12 bursts
+  Size  11:    9 bursts
+  Size  12:   10 bursts
+  Size  13:   12 bursts
+  Size  14:   10 bursts
+  Size  15:    6 bursts
+  ... (81 distinct sizes total)
+
+  Mean burst size: 10.1
+  Max burst size: 377
+  Fraction single-event: 40.7%
+
+## Burstiness metric (Goh-Barabási)
+
+  B = (σ-μ)/(σ+μ) = (1075.4-139.8)/(1075.4+139.8) = 0.7699
+  → Bursty (B>0)
+
+## Oracle update alignment
+
+  2024-08-05: No oracle updates found in queried range
+  2025-04-06: No oracle updates found in queried range
+  2025-04-07: No oracle updates found in queried range
+
+======================================================================
+SUMMARY & INTERPRETATION
+======================================================================
+
+1. LIQUIDATIONS ARE STRONGLY BURSTY — TWO-SCALE STRUCTURE
+   - 67% of consecutive liquidations occur in the SAME BLOCK (Δt=0s).
+     Multiple positions hit the same price threshold simultaneously.
+   - Inter-block: median gap = 36s (3 blocks), but mean = 418s.
+     CV = 4.37 (exponential = 1.0) → extreme overdispersion.
+   - Burstiness B = 0.63 (raw events B = 0.77). Both strongly bursty.
+   - Two timescales: intra-burst (seconds, same or adjacent blocks)
+     and inter-burst (minutes to tens of minutes of quiet).
+
+2. BURST STRUCTURE IS UNIVERSAL
+   - 21/21 spike days reject the uniform null at p < 0.001.
+   - The clustering is NOT explained by random event timing.
+   - Max burst sizes are enormous: up to 377 events in a single burst
+     (2024-08-05), 324 (2025-02-03), 281 (2025-04-07).
+   - These mega-bursts contain ~25-50% of the day's total events.
+
+3. COLLATERAL-TYPE HOMOGENEITY WITHIN BURSTS
+   - 78% of multi-event bursts contain ONLY WETH collateral.
+   - 19% contain WETH + wstETH (both ETH-correlated).
+   - Only 3% mix in non-ETH collateral.
+   - This supports cascade propagation: a price drop triggers multiple
+     WETH-collateralized positions at similar health factors. wstETH
+     positions follow if wstETH price also updates.
+
+4. CHARACTERISTIC GAP BETWEEN BURSTS
+   - Median inter-burst gap: 456s (7.6 min) at 120s threshold.
+   - This is consistent with Chainlink ETH/USD heartbeat (~3600s
+     at rest, but during volatility updates can be every few minutes
+     on 1% deviation trigger).
+   - The burst→gap→burst pattern suggests: oracle update → batch of
+     liquidations → wait for next oracle update → next batch.
+
+5. ORACLE ALIGNMENT (INCONCLUSIVE)
+   - Chainlink AnswerUpdated events could not be fetched due to Alchemy
+     free-tier block range limits (10 blocks per query).
+   - The hypothesis that burst boundaries align with oracle updates
+     remains untested but is strongly suggested by the gap structure.
+   - A paid RPC endpoint or archive node would resolve this.
+
+6. VERDICT: CASCADE MODEL WITH ORACLE-GATED WAVES
+   The data strongly fits the cascade model:
+   (a) Extreme burstiness (B=0.63-0.77), far from Poisson
+   (b) 21/21 days reject uniform null
+   (c) Bursts are collateral-type homogeneous (78% single-type)
+   (d) Characteristic inter-burst gaps (~5-8 min) consistent with
+       oracle update cadence during volatility
+
+   The physical process: oracle price update → health factor check →
+   batch liquidation of positions at similar thresholds → wait for
+   next oracle update. The per-link propagation time is NOT block-by-
+   block cascade (liquidation A causes B), but rather oracle-gated
+   batching (oracle update causes A, B, C, D simultaneously).
+
+   This is an important distinction: the cascade is driven by discrete
+   price feed updates, not by liquidation→price impact→liquidation
+   chains. The "propagation delay" is the oracle update interval,
+   not the time for one liquidation to cause the next.
+
+7. IMPLICATIONS
+   - The 5-7 day cascade timescale (dynamics phase) is NOT a chain
+     of individual liquidations. It's repeated oracle-gated batch
+     events over days.
+   - Within each batch: multiple positions hit simultaneously
+     (same block). The relevant timescale for arbitrage is the
+     oracle update interval, not the liquidation execution time.
+   - For prediction: watching oracle deviation triggers gives advance
+     warning of the next liquidation burst. The number of positions
+     near health factor 1.0 determines burst size.

@@ -1,5 +1,18 @@
 # Cross-Chain Flows — Execution Plan
 
+## Status
+
+| Step | Status | Key Result |
+|------|--------|------------|
+| 1. Full Data Pull | ✅ Done | 27,740 swap rows (19 pools), 5,840 depth rows, 1,460 TVL rows. Mar 2022 → Mar 2026. |
+| 2. Flow Mapping | ✅ Done | Four-signal decomposition (organic/trade/synth/secured). flow_metrics.csv + cross_pool_daily.csv. |
+| 3. Flow-Price Correlation | ✅ Done (negative) | No predictive signal at daily or 7-day resolution. r ≈ -0.05 daily, 7-day momentum is depth-regime artifact. |
+| 4. Arbitrage Activity | ✅ Done | Arb correction ratio ≈ 1.0; precision scales with profit opportunity; dislocations mean-revert <1hr. |
+| 5. Short-Timeframe Dynamics | ✅ Done (hourly) | 5 crash episodes at hourly resolution. BTC-ETH correlation separates crash regimes. 5-min not pulled. |
+| 6. Synthesis | ✅ Done | findings.md written. No tradeable signal found; mechanism characterization complete. |
+
+**Overall: Investigation complete.** Original questions answered (mostly negative for prediction). See `findings.md` for full results, `signals-synthesis.md` for signal ranking, `exploration-log.md` for methodology.
+
 ## Question
 
 Where does money go during crypto stress events? Do cross-chain flow patterns predict, coincide with, or lag price movements? Is there arbitrage opportunity in cross-chain price dislocations during volatility?

@@ -24,45 +24,7 @@ The prior phases mapped the static structure (position topology, oracle architec
 
 ## Execution
 
-### Step 6: OI Leading Signal Refinement
-
-The flow phase established that Binance ETHUSDT open interest drops (>4% hourly) precede Aave lending liquidation peaks by a corrected median of 37 hours, with 94% consistency (16/17 episodes) and 10.9% median further price decline after signal fires. Current limitations: Binance-only, OI proxy includes voluntary closures, 30% precision at 3% threshold (~5 false alarms/year at 4%).
-
-**6a. Multi-exchange OI coverage**
-
-Binance OI is one exchange. Test whether aggregating OI across exchanges (Bybit, OKX, Deribit) produces a cleaner signal. Binance 5-min OI snapshots are available via their data archive. Other exchanges: check Bybit public API (`/v5/market/open-interest`), OKX (`/api/v5/public/open-interest`), Deribit (`/public/get_book_summary_by_currency`).
-
-- Pull multi-exchange OI for the same 17 episodes (2024+)
-- Compare single-exchange vs aggregate OI signal: does aggregate reduce false positives?
-- Test whether one exchange consistently leads others (exchange-level cascade ordering)
-
-**6b. Crash-type conditioned signal quality**
-
-Links phase showed macro crashes produce 2× daily amplification and 4× cumulative damage vs crypto-native. Does the OI signal behave differently?
-
-- Split the 17 episodes by crash catalyst type (macro vs crypto-native vs rotation)
-- Compare lead time, precision, and price-decline-after-signal across types
-- Test: does the OI signal fire earlier for macro crashes (cross-market transmission) vs crypto-native (direct leverage)
-- Interaction: OI signal + VIX level. Does high VIX + OI drop have higher precision than OI drop alone?
-
-**6c. Voluntary vs forced closure decomposition**
-
-The core proxy weakness: OI drops include voluntary de-risking. Two approaches:
-
-1. **Funding rate diagnostic.** During forced liquidations, funding rate should spike (longs liquidated → forced selling → price drops → negative funding). During voluntary closures, funding rate may not spike. Cross-reference OI drops with concurrent funding rate changes. Binance funding rate is available at 8h intervals via API.
-
-2. **OI drop velocity profile.** Forced liquidation cascades should produce sharper, more concentrated OI drops (cascade dynamics). Voluntary de-risking should produce more gradual OI decline. Compare the 5-min OI profile shape of true positive episodes vs false positive episodes.
-
-**6d. Signal conjunction test**
-
-The flow phase proposed but never tested the three-layer conjunction: utilization (pre-condition) → perp OI (early warning) → magnitude (classification). Test it now with full dynamics data:
-
-- Define trigger: Aave utilization >40% AND OI drop >4% in same 48h window
-- Compare precision vs OI-only: does the utilization pre-condition filter reduce false positives?
-- Add VIX conditioning from links phase: utilization >40% AND OI drop >4% AND VIX >22
-- Report precision, recall, and lead time for each conjunction variant
-
-**Output:** `data/oi_signal_refined.csv`, findings integrated into exploration log
+No active steps. All planned steps complete or deferred.
 
 ---
 
@@ -99,6 +61,24 @@ Combine all layers into per-epoch narratives and cross-epoch patterns.
 
 **Output:** `findings.md`, `exploration-log.md`
 
+### Step 6: OI Leading Signal Refinement ✅
+
+Refined the flow phase's OI leading signal across four sub-investigations. Original plan had 6a-6d; 6b and 6d were superseded during investigation by higher-value tests.
+
+**6a. Multi-exchange OI coverage** — Bybit and OKX OI pulled. OI drops are exchange-specific, not market-wide (Binance-Bybit correlation goes negative during stress). Aggregating dilutes signal (enrichment 4.7x → 2.3x). Binance-only is the cleanest single signal. OKX has insufficient history.
+
+**Contract OI validation** — The flow phase's 37h lead / 94% consistency was measured on USD OI (contaminated by price). Contract OI (cleaner metric): 27h lead, 82% consistency, 7.9x enrichment at >3% with ~2 false alarms/year. Contract OI detects "traders closing positions," USD OI detects "price dropping."
+
+**Escalation predictor** — Contract OI >3% predicts episode escalation: Fisher's p=0.0345. All 7/7 episodes with contract-OI drops escalated vs 4/10 without. Resolves the flow phase iteration 15 failure (p=0.515 on USD OI).
+
+**6c. Voluntary vs forced decomposition** — 3-tier structure: Tier 1 (forced: OI drop + negative funding, 4 eps, $122M median peak liq), Tier 2 (voluntary: OI drop + normal funding, 3 eps, $35M), Tier 3 (mild: no OI drop, 10 eps, $7M). Kruskal-Wallis p=0.007 on peak liquidation. Velocity profiles directionally confirm (Tier 1 median 69% 30m concentration vs Tier 2 15%) but n too small for significance.
+
+**6b/6d superseded.** 6b (crash-type conditioning) absorbed into 3-tier analysis — no clean pattern by crash type. 6d (conjunction test) replaced by escalation predictor — contract OI >3% alone achieves the filtering that conjunction was designed for; utilization homeostasis at 38-42% makes it a non-discriminating gate.
+
+**Key insight:** The 3-tier structure classifies mechanism (how stress propagates), not outcome (how far price falls). Outcome = mechanism × leverage state × macro context. Episode 10 (-20.2% fwd return, no OI drop) defines the structural blind spot: lending stress from direct price decline without perp participation.
+
+**Output:** `multi_exchange_oi.py`, `contract_oi_validation.py`, `escalation_test.py`, `data/6a_results.txt`, `data/contract_oi_results.txt`, `data/escalation_results.txt`, `data/bybit_oi_*.csv`, `data/okx_oi_*.csv`, `data/binance_funding_*.csv`
+
 ---
 
 ## Key Questions
@@ -111,7 +91,7 @@ Combine all layers into per-epoch narratives and cross-epoch patterns.
 | 4 | Exchange flow as leading indicator | ✅ Answered: No | Max |r| < 0.04 at all lags. Measurement gap makes data fundamentally incomplete. |
 | 5 | Post-crash topology | Partially answered | User turnover 5-57%. Full topology requires deferred Step 3. |
 | 6 | 2026 crash specifically | ✅ Answered | $5.6B phantom wall survived. $1.42B whale survived. $193M real liquidations, 87% in top 3 days. |
-| 7 | OI signal refinement | Open | Multi-exchange, crash-type conditioning, voluntary/forced decomposition, conjunction test. |
+| 7 | OI signal refinement | ✅ Answered | Contract OI (not USD OI) is the correct metric. 27h lead, 7.9x enrichment, ~2 false alarms/year. Predicts escalation (p=0.0345). 3-tier mechanism classification (forced/voluntary/mild) validated at p=0.007. Exchange-specific, not market-wide. Structural blind spot: events where lending stress bypasses perp layer (1/17 episodes). |
 
 ## Infrastructure
 

@@ -130,7 +130,7 @@ Steps 1-3 require classifying transition character only (no time-series data). S
 
 ## D4: Market Regimes — Explicit Predictions
 
-**Status: computed** (`market_regime_predictions.py`)
+**Status: tested** (`market_regime_predictions.py`, `market_regime_data.py`, `market_regime_diagnostics.py`, `market_partition_test.py`, `market_gms_test.py`)
 
 Three binary market axes: trend (down=0/up=1), volatility (low=0/high=1), liquidity (scarce=0/abundant=1). Eight regimes on Q₃.
 
@@ -169,17 +169,81 @@ Forbidden: any two consecutive steps along either path. All involve a vol flip i
 
 P(克→克) under uniform random walk: 0.3333 at P₄-internal vertices (Quiet decline, Grinding rally, Correction, Euphoria), 0.2222 at P₄-endpoints (Panic, Short squeeze, Slow bleed, Healthy bull). Average: 0.2778. GMS predicts 0.
 
-### Questions
+### Questions — Empirical Evidence
 
-**D4.1:** Are market regime transitions predominantly single-axis? (M1 prerequisite — must hold before any grammar test applies)
+**D4.1: Are market regime transitions predominantly single-axis?**
 
-**D4.2:** Is volatility the uniformly disruptive axis? (Axis-selection test: all vol flips should be empirically "hard" transitions)
+**Tested.** Data: BTC 1-second datalog 2025-07-21 to 2026-02-20 (18.6M rows). Resampled to 1h bars (5,160 bars).
 
-**D4.3:** Are 克→克 bigrams suppressed? (GMS test on sequential regime data)
+| Metric | Value |
+|--------|-------|
+| M1 (Q₃ edge fraction among non-self, 1h) | 0.789 |
+| Q₃ edges (single-axis) | 2,065 (40.0%) |
+| Self-loops | 2,540 (49.2%) |
+| Multi-axis jumps | 554 (10.7%) |
 
-**D4.4:** Does the valve hold after 克 transitions?
+**Result: YES.** 79% of non-self transitions are single-axis at 1h resolution. M1 increases at shorter timescales (0.44 at 8h → 0.79 at 1h), confirming that multi-axis jumps at longer bars are sequential single-axis flips that shorter bars resolve. The Q₃ adjacency structure is empirically relevant.
 
-**D4.5:** Which axis assignment is correct? (If volatility is NOT pure-克, try the other two assignments: trend or liquidity as pure-克)
+**Axis note:** The original liquidity proxy (`spread_bps_1m`) was degenerate (>97% zeros). `volume_since_last` had MI=0.346 with volatility, collapsing Q₃ to Q₂. The final axis uses `ob100_ratio_1m` (top-100 order book ratio): MI=0.0025 with vol, min vertex count=143, entropy=2.995 (near-uniform). Axes are genuinely independent.
+
+**D4.2: Is volatility the uniformly disruptive axis?**
+
+**Tested.** Edge-level partition test using two observables (regime persistence at destination, volatility ratio) across all 12 Q₃ edges, 2,065 traversals at 1h.
+
+**Result: NO.** The Z₅ typing does not predict behavioral differentiation between edges.
+
+*Level 1 (partition existence):* Persistence FAILS (max/median ratio 1.52, threshold 2.0). Vol ratio PASSES (ratio 2.32) but is confounded — vol-axis flips mechanically change vol.
+
+*Level 2 (canonical assignment):* FAILS on both observables. The volatility axis (pure-克, predicted uniform) has the LARGEST within-axis range. The trend axis (mixed, predicted bimodal) has the SMALLEST range. Opposite of prediction.
+
+*Within-axis type comparison (controls for axis confound):*
+- Trend axis (2克 + 2生): persistence p=0.226, |log(vol_ratio)| p=0.444 — no significant type effect
+- Liquidity axis (2比和 + 2生): persistence p=0.853, |log(vol_ratio)| p=0.411 — no significant type effect
+
+*Effect size (η²):* Axis identity explains 2.4–3.0× more variance than Z₅ type. Neither explains much (<10% of total), but the comparison is consistent: which axis flips matters more than the algebraic type of the flip.
+
+*Type-pooled means (opposite of grammar prediction for persistence):*
+
+| Type | Persistence | Vol ratio |
+|------|------------|-----------|
+| 比和 | 1.81 ± 0.06 | 1.008 ± 0.007 |
+| 生 | 1.99 ± 0.05 | 1.017 ± 0.006 |
+| 克 | 2.10 ± 0.07 | 1.031 ± 0.011 |
+
+Grammar predicted 克 = low persistence (destabilizing). Observed: 克 = highest persistence.
+
+**D4.3: Are 克→克 bigrams suppressed?**
+
+**Tested.** GMS bigram test on 2,065 Q₃ edges (1h bars). Two framings, three null models.
+
+**Result: NO — 克→克 is ENHANCED, not suppressed.** This is the opposite of the GMS prediction.
+
+| Framing | Observed 克→克 | Expected (independence) | Ratio | Permutation p |
+|---------|---------------|------------------------|-------|---------------|
+| A (temporal adjacency) | 93 | 63.8 | 1.46 | 1.0000 |
+| B (Q₃ walk) | 222 | 156.2 | 1.42 | 1.0000 |
+
+p=1.0000 means in all 10,000 permutation shuffles, the observed count was higher than the shuffled count. 克→克 is significantly more common than chance, not less.
+
+Under the vertex-conditional null (Null B), expected=219.0 for Framing B (ratio 1.014). The enhancement is almost fully explained by graph topology: vertices at P₄-internal positions (000, 001, 110, 111) have P(next Q₃ edge is 克) ≈ 0.38–0.49, so once you take a 克 step you're likely at a high-克-probability vertex.
+
+75 of 222 克→克 bigrams (34%) fall on the P₄ paths — the sequences the GMS specifically forbids. They are not suppressed.
+
+**D4.4: Does the valve hold after 克 transitions?**
+
+**Not separately tested.** Since 克→克 is enhanced rather than suppressed (D4.3), the valve — which is a stronger constraint than GMS — cannot hold. If consecutive 克 transitions were forbidden, there could be no valve violation. Since they are positively correlated, the valve is falsified by implication.
+
+**D4.5: Which axis assignment is correct?**
+
+**Moot.** The Z₅ typing fails to predict behavioral differentiation regardless of axis assignment (D4.2). The partition test checked the canonical assignment and found no signal. Since the edge-type distribution {比和=2, 生=4, 克=6} is invariant under all axis permutations (D3 Result 1), testing other axis assignments would produce the same edge types on different axes but the same null result: axis identity dominates over Z₅ type.
+
+### What was established
+
+1. Q₃ adjacency IS empirically relevant for BTC market regimes at 1h resolution (M1=0.79)
+2. Three genuinely independent binary axes can be constructed (MI=0.0025)
+3. The Z₅ grammar does NOT transfer to this domain — no edge-type behavioral differentiation, no 克→克 suppression
+4. Physical axis identity (which axis flips) explains more behavioral variance than algebraic Z₅ typing
+5. The 克→克 enhancement (1.42×) is explained by graph topology (vertex-conditional transition probabilities), not by any grammar effect
 
 ---
 
@@ -195,15 +259,14 @@ P(克→克) under uniform random walk: 0.3333 at P₄-internal vertices (Quiet 
 
 ## Execution Priority
 
-1. **D4 (Markets)** — three well-defined binary axes, testable with data, no bias from practitioners using the system. Axis-selection test (Step 1-3) is cheap. Elevated by the structural invariance results.
-2. **D1 (TCM)** — native domain, pre-existing mapping, highest relevance, but bias risk from practitioners using the system
+1. ~~**D4 (Markets)** — COMPLETE. Negative result across all tests.~~
+2. **D1 (TCM)** — native domain, pre-existing mapping, highest relevance, but bias risk from practitioners using the system. Now the primary remaining candidate.
 3. **D2 (Quantum)** — algebraically exact, no bias risk, but likely physically empty
 4. **Other domains** — require constructing the three binary axes, which introduces researcher degrees of freedom
 
 ## What Would Change Our Understanding
 
-- **D4 axis-type alignment holds:** Some market axis is uniformly disruptive, another never disruptive. The complement-Z₅ structure applies to a system with no historical connection to the tradition. This would be genuine discovery.
-- **D4 GMS holds:** Consecutive destructive regime transitions are suppressed. The grammar constrains a financial system.
-- **D4 shows nothing:** The grammar is specific to its native Q₃ (the I Ching's own trigram space) and does not transfer to other Q₃ instantiations.
-- **D1 mapping exists and grammar holds:** The 五行 system was designed as a relational typology for the 八纲 diagnostic space.
-- **D1 mapping exists but grammar fails:** The 五行 and 八纲 share vocabulary but not structure.
+- **D4 outcome: shows nothing.** The grammar does not transfer to BTC market regimes. All five predictions tested (D4.1–D4.5) are either falsified or moot. The Q₃ adjacency structure is empirically valid, but the Z₅ typing on top of it adds no predictive power. This is consistent with the grammar being specific to its native Q₃ (the I Ching's trigram space) and not a universal property of binary-axis systems.
+- **D1 mapping exists and grammar holds:** Would still be significant. TCM's 八纲 is the native domain — the grammar could work there even if it doesn't transfer to markets.
+- **D1 mapping exists but grammar fails:** Would narrow the grammar to the I Ching's own internal structure — a classification system without domain transfer.
+- **D4 negative strengthens the "typological not dynamical" conclusion from the mod-8 investigation.** The grammar classifies static relational configurations between the 8 trigrams. Temporal sequences of regime transitions are a different kind of object — the grammar was not designed for temporal prediction.

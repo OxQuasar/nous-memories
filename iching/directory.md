@@ -99,9 +99,16 @@ N1–N6 answered. Reframed: not mod-9 arithmetic (text corrects this), but Lo Sh
 - `questions.md` — N1–N6 answered, N7–N8 open (constraint economy, He Tu textual connection)
 
 ### `domains/`
-No results yet. Reframed question: which domains have three independent binary oppositions whose pairwise relations follow the 五行 grammar? Typology, not dynamics.
-- `questions.md` — D1 (TCM 八纲辨证: cold/hot, deficiency/excess, exterior/interior), D2 (quantum 3-qubit measurement). TCM is strongest candidate: native domain, pre-existing three binary axes, 五行 already in use.
-- Markets binary axes: see `memories/markets/binary.md` — three binary market axes (trend, volatility, liquidity) → 8 regimes on Q₃ directly, no mod-8 intermediary.
+D4 market test complete (7 iterations). Q₃ adjacency real (M1=0.79), but Z₅ typing adds nothing — axis identity dominates, GMS falsified (克→克 enhanced 1.42×). Root cause: S₃ broken by asymmetric physical axes. Domain criterion sharpened: need axes of similar kind, and S₃-breaking pattern matching {2,2,2,1,1}.
+- `findings.md` — D3 algebraic invariants (edge-count, axis-type alignment theorem via (3/5)=-1), D4 market results (all steps, GMS falsified, memoryless walk)
+- `questions.md` — D1 (TCM), D2 (quantum). D4 (markets) complete.
+- `plan.md` — Market test protocol (executed). TCM and quantum parked.
+- Markets binary axes: see `memories/markets/binary.md`
+- Scripts: `q3_edge_orbits.py`, `market_regime_predictions.py`, `market_regime_data.py`, `market_regime_diagnostics.py`, `market_partition_test.py`, `market_gms_test.py`
+
+### `tcm/`
+No results yet. Study plan for how Chinese medicine applies 五行 theory. Primary remaining candidate for Z₅ grammar testing.
+- `plan.md` — 4 phases (understand 八纲, understand clinical 五行, map the structure, assess testability), 17 questions (T1–T17). Start with 梅花易數 medical domain extraction, then external TCM sources.
 
 ### `empirical/`
 Probe 8a/8c complete. Framework for testing whether the grammar produces useful predictions in real systems.

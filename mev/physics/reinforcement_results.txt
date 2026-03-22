@@ -1,0 +1,184 @@
+======================================================================
+SELF-REINFORCEMENT TEST — BURST ACCELERATION
+======================================================================
+
+## Deviation threshold D = 0.5%
+
+  Valid gaps (price velocity > 0.1%/h): 1045
+  Observed gap:  median=444s, mean=1261s
+  Expected gap:  median=1266s, mean=2517s
+
+  Ratio (observed/expected):
+    Median: 0.388
+    Mean:   0.976
+    P10: 0.058
+    P25: 0.146
+    P50: 0.388
+    P75: 0.937
+    P90: 2.040
+
+  Wilcoxon signed-rank on log(obs/exp) vs 0:
+    W=84464, p=0.000000
+    median log(ratio) = -0.9466
+  One-sample t-test on log(obs/exp) vs 0:
+    t=-23.076, p=0.000000
+    mean log(ratio) = -0.9910
+  → Ratio < 1: SELF-REINFORCEMENT detected (gaps shorter than price-velocity-alone predicts)
+
+## Deviation threshold D = 1.0%
+
+  Valid gaps (price velocity > 0.1%/h): 1045
+  Observed gap:  median=444s, mean=1261s
+  Expected gap:  median=2533s, mean=5034s
+
+  Ratio (observed/expected):
+    Median: 0.194
+    Mean:   0.488
+    P10: 0.029
+    P25: 0.073
+    P50: 0.194
+    P75: 0.469
+    P90: 1.020
+
+  Wilcoxon signed-rank on log(obs/exp) vs 0:
+    W=22789, p=0.000000
+    median log(ratio) = -1.6397
+  One-sample t-test on log(obs/exp) vs 0:
+    t=-39.216, p=0.000000
+    mean log(ratio) = -1.6842
+  → Ratio < 1: SELF-REINFORCEMENT detected (gaps shorter than price-velocity-alone predicts)
+
+## Intra-day acceleration (D=0.5%)
+
+          Date |  Gaps |    Rho |        p |  1st half |  2nd half |    Trend
+  ---------------------------------------------------------------------------
+    2022-01-21 |    56 | -0.156 |   0.2500 |     0.780 |     0.544 |  ↓ accel
+    2022-01-22 |    54 | +0.203 |   0.1403 |     0.436 |     0.610 |  ↑ decel
+    2022-05-11 |    44 | -0.453 |   0.0020 |     0.369 |     0.145 |  ↓ accel
+    2022-05-12 |    81 | -0.150 |   0.1824 |     0.533 |     0.611 |   → flat
+    2022-06-13 |   109 | -0.117 |   0.2239 |     0.297 |     0.195 |  ↓ accel
+    2022-06-14 |    68 | +0.144 |   0.2429 |     0.614 |     0.779 |  ↑ decel
+    2022-11-09 |    36 | -0.256 |   0.1321 |     0.906 |     0.532 |  ↓ accel
+    2024-08-05 |   102 | -0.068 |   0.4942 |     0.202 |     0.343 |  ↑ decel
+    2025-02-03 |    64 | -0.139 |   0.2728 |     0.452 |     0.276 |  ↓ accel
+    2025-02-28 |    32 | -0.341 |   0.0565 |     0.573 |     0.162 |  ↓ accel
+    2025-03-10 |    52 | -0.693 |   0.0000 |     0.529 |     0.070 |  ↓ accel
+    2025-04-06 |    69 | +0.054 |   0.6588 |     0.324 |     0.158 |  ↓ accel
+    2025-04-07 |    60 | +0.319 |   0.0131 |     0.179 |     0.272 |  ↑ decel
+    2025-10-10 |    17 | -0.020 |   0.9405 |     0.791 |     0.571 |  ↓ accel
+    2025-11-04 |    38 | -0.510 |   0.0011 |     1.211 |     0.475 |  ↓ accel
+    2025-11-16 |    11 | +0.464 |   0.1509 |     0.396 |     0.608 |  ↑ decel
+    2025-11-20 |    20 | -0.189 |   0.4237 |     0.733 |     0.633 |   → flat
+    2025-11-21 |    25 | +0.057 |   0.7855 |     0.545 |     0.568 |   → flat
+    2026-01-31 |    47 | -0.387 |   0.0072 |     0.719 |     0.139 |  ↓ accel
+    2026-02-05 |    46 | +0.108 |   0.4737 |     0.728 |     0.795 |   → flat
+    2026-02-06 |    14 | +0.288 |   0.3182 |     0.264 |     0.861 |  ↑ decel
+
+  Mean Spearman ρ across days: -0.088
+  Days with ρ < 0 (acceleration): 13/21
+
+## Liquidation volume per spike day (ETH-equivalent)
+
+          Date | Events |       WETH |     wstETH |     ETH eq |         USD eq |    Price |   Return
+  -----------------------------------------------------------------------------------------------
+    2022-01-21 |    311 |     9689.5 |        0.0 |     9689.5 | $  24,443,170 | $   2523 |   -17.8%
+    2022-01-22 |    313 |     6064.0 |        0.0 |     6064.0 | $  14,482,868 | $   2388 |    -5.3%
+    2022-05-11 |    248 |     8012.4 |        0.0 |     8012.4 | $  16,585,508 | $   2070 |   -11.7%
+    2022-05-12 |    494 |    14887.7 |        0.0 |    14887.7 | $  29,279,681 | $   1967 |    -5.0%
+    2022-06-13 |    927 |    13710.9 |        0.0 |    13710.9 | $  16,529,821 | $   1206 |   -17.6%
+    2022-06-14 |    355 |    43691.4 |        0.0 |    43691.4 | $  51,426,228 | $   1177 |    -2.4%
+    2022-11-08 |     32 |      661.2 |        0.0 |      661.2 | $     882,274 | $   1334 |   -14.4%
+    2022-11-09 |     83 |     8463.7 |        0.0 |     8463.7 | $   9,490,901 | $   1121 |   -16.0%
+    2024-08-05 |   1545 |    55967.1 |    21636.8 |    80849.4 | $ 199,644,306 | $   2469 |    -8.9%
+    2025-02-03 |    665 |    29577.8 |      684.0 |    30364.4 | $  87,430,391 | $   2879 |    +1.6%
+    2025-02-28 |    514 |     9768.7 |     1403.0 |    11382.1 | $  25,209,462 | $   2215 |    -3.0%
+    2025-03-10 |    718 |     8907.5 |     3590.8 |    13037.0 | $  24,589,812 | $   1886 |    -5.8%
+    2025-04-06 |   1090 |    19600.6 |     3339.2 |    23440.6 | $  36,548,369 | $   1559 |   -13.3%
+    2025-04-07 |    958 |    20788.2 |     2567.9 |    23741.3 | $  37,448,830 | $   1577 |    +1.2%
+    2025-10-10 |    214 |     6496.3 |     4924.2 |    12159.1 | $  46,921,327 | $   3859 |   -11.7%
+    2025-11-04 |    375 |     4933.3 |    10630.0 |    17157.8 | $  56,139,248 | $   3272 |    -8.6%
+    2025-11-16 |     80 |      335.4 |     5881.2 |     7098.8 | $  21,620,315 | $   3046 |    -3.8%
+    2025-11-20 |    103 |     2605.3 |     3529.7 |     6664.4 | $  19,116,600 | $   2868 |    -4.9%
+    2025-11-21 |    268 |     4442.9 |     3952.1 |     8987.9 | $  24,443,134 | $   2720 |    -5.2%
+    2026-01-31 |    749 |    25294.9 |     1321.1 |    26814.1 | $  65,070,921 | $   2427 |   -10.2%
+    2026-02-05 |    952 |    23901.5 |     3881.5 |    28365.2 | $  53,567,294 | $   1888 |   -11.1%
+    2026-02-06 |    337 |    12791.6 |    12711.1 |    27409.4 | $  56,789,836 | $   2072 |    +9.7%
+
+  Total ETH-equivalent seized: 422,652.3 ETH
+  Total USD-equivalent seized: $917,660,293
+
+======================================================================
+SUMMARY & INTERPRETATION
+======================================================================
+
+1. STRONG SELF-REINFORCEMENT SIGNAL
+   - Median observed/expected ratio = 0.39 at D=0.5% (0.19 at D=1.0%).
+   - Burst gaps arrive ~2.5x sooner than hourly price velocity alone predicts.
+   - Wilcoxon p ≈ 0 (W=84464, n=1045): the effect is not random noise.
+   - Interpretation: price velocity during liquidation bursts is FASTER than
+     the background hourly rate — consistent with liquidation selling adding
+     to the price decline and accelerating oracle trigger crossings.
+
+2. IMPORTANT CAVEAT: RESOLUTION ARTIFACT
+   - Price velocity is measured from hourly data; burst gaps are sub-hour.
+   - If price drops accelerate during the liquidation-active hours (which
+     they do — that's why it's a spike day), the hourly average underestimates
+     the instantaneous velocity during the active window.
+   - This means the "expected gap" is overestimated (velocity too low),
+     which mechanically pushes the ratio below 1.
+   - The ratio < 1 partially reflects "price moves faster during crash hours
+     than the daily/hourly average" rather than proving that liquidations
+     themselves accelerate the decline.
+   - To truly separate self-reinforcement from velocity clustering, we'd
+     need minute-level price data to compute velocity at the same timescale
+     as the burst gaps.
+
+3. INTRA-DAY ACCELERATION: MODERATE EVIDENCE
+   - 13/21 days show negative Spearman ρ (ratio decreases over time).
+   - 4/21 are statistically significant at p<0.01: 2022-05-11, 2025-03-10,
+     2025-11-04, 2026-01-31.
+   - Mean ρ = -0.088: weak but consistent trend toward acceleration.
+   - The strongest case: 2025-03-10 (ρ=-0.69, p<0.0001), where the ratio
+     drops from 0.53 (1st half) to 0.07 (2nd half). This 7x acceleration
+     is consistent with liquidity thinning as the day progresses.
+   - Counter-examples: 2025-04-07 (ρ=+0.32, p=0.013) shows deceleration,
+     possibly reflecting a reversal/recovery within the day.
+
+4. LIQUIDATION VOLUME IS SIGNIFICANT
+   - Total ETH-equivalent seized across spike days: 422,652 ETH ($918M).
+   - Largest single day: 2024-08-05 with 80,849 ETH ($200M) seized.
+   - For context: daily ETH spot volume on major CEXs is typically $5-15B.
+     A $200M forced sell in concentrated bursts represents 1-4% of daily
+     volume — enough for meaningful price impact, especially given that the
+     selling is concentrated in burst windows, not spread over 24 hours.
+
+5. VERDICT: SELF-REINFORCEMENT EXISTS BUT MAGNITUDE IS UNCERTAIN
+   The ratio < 1 signal is statistically overwhelming (p ≈ 0), but we cannot
+   cleanly separate two effects:
+   (a) TRUE SELF-REINFORCEMENT: liquidation selling → price impact → faster
+       oracle triggers → more liquidations (positive feedback loop).
+   (b) VELOCITY CLUSTERING: price drops faster during crash hours due to
+       panic selling, margin calls, and general deleveraging — liquidations
+       happen to cluster in these fast-price-movement hours but don't
+       meaningfully CAUSE the price acceleration.
+
+   The intra-day acceleration (ratio decreasing over time on 13/21 days)
+   provides weak additional evidence for (a), since liquidity thinning over
+   the course of a cascade day would amplify the self-reinforcing component.
+
+   Best estimate: both effects contribute. The liquidation selling likely
+   adds 10-30% to the price decline velocity during burst windows (based on
+   the volume fraction analysis: $200M forced selling into $5B daily
+   volume ≈ 2-4% instantaneous impact, amplified by burst concentration).
+
+6. IMPLICATIONS
+   - The cascade is partially self-reinforcing, not purely externally driven.
+   - Prediction value: once a cascade starts, the rate of liquidation volume
+     gives information about acceleration. If early bursts are large, the
+     gap narrowing pattern (ratio shrinking) means subsequent bursts arrive
+     sooner than a naive oracle-cadence model would predict.
+   - For the 5-7 day macro cascade timescale: within-day self-reinforcement
+     creates larger single-day drawdowns than would occur without
+     liquidations, but the multi-day propagation is likely driven by
+     different mechanisms (institutional decision-making, margin calls on
+     banking schedules, etc.).
